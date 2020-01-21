@@ -14,7 +14,7 @@
 /////	*****  SAPC BLOCK  *****
 /////
 /////	For Evaluations, this is referred to as: SAPC-7
-/////	Somers Advanced Perceptual Contrast v0.97 beta
+/////	Somers Advanced Perceptual Contrast v0.97 beta PSEUDOCODE
 /////	Copyright © 2019 by Andrew Somers
 /////	Licensed to the W3C Per Collaborator Agreement
 /////	SIMPLE VERSION — This Version Is Stripped Of Extensions:
@@ -340,8 +340,12 @@ function RGBColor(color_string) {
 
 	// returns rgb() value string
 	this.toRGB = function () {
-		return 'rgb(' + this.r + ', ' + this.g + ', ' + this.b + ')';
+		return 'rgb(' + this.r + ',' + this.g + ',' + this.b + ')';
 	}
+
+	// returns rgb() value string
+	this.toRGB2 = 'rgb(' + this.r + ', ' + this.g + ', ' + this.b + ')';
+
 
 	// returns hex string
 	this.toHex = function () {
@@ -372,6 +376,9 @@ function RGBColor(color_string) {
 	}
 
 
+	this.toY = function () {
+		return 	Math.pow(this.r/255.0, sRGBtrc) * Rco + Math.pow(this.g/255.0, sRGBtrc) * Gco + Math.pow(this.b/255.0, sRGBtrc) * Bco;
+	}
 
 	// help and test
 
