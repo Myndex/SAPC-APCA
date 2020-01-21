@@ -30,3 +30,11 @@ These are a simple running iplementation of SAPC in plain vanilla JS and HTML5.
 
 As mentioned elsewhere, this should be considered experimental as it is not part of any *current* standard.
 
+Please let me know of any problems, ideas, comments, etc. 
+
+Thank you!
+
+Andrew Somers
+(User Myndex)
+
+There is more about this project on my main site, https://www.myndex.com/WEB/Perception
