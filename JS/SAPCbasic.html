@@ -1,0 +1,334 @@
+<?xml version="1.1" encoding="utf-8"?>
+<!DOCTYPE html>
+<head>
+<title>SAPC Contrast Demo</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Spectral:200,300,400,500,600,700,800|IBM+Plex+Serif:100|Playfair+Display:700,800,900&display=swap" rel="stylesheet">
+
+	<style>
+	
+		#BGresult, #textResult {
+			margin: 10px;
+			width: 180px;
+			height: 60px;
+		}
+
+		#BGresult-wrap, #textResult-wrap {
+			position: relative; 
+			margin: 10px auto;
+			width: 200px;
+			height: 80px;
+			border: 3px solid #222;
+			border-radius: 7px;		
+			background-color: #777
+		}
+
+		body {
+			padding: 24px;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 15px;
+		}
+	
+
+
+		.codeBlock { margin: 0 0 0 10px; padding: 0; white-space: nowrap; overflow: hidden; }
+		code { margin: 0; padding: 0; }
+		
+
+		#contrast {
+			position: relative; 
+			float: right; 
+			margin: 24px 12px; 
+			padding: 8px; 
+			width: 280px; 
+			border-radius: 16px; 
+			border: 8px solid black; 
+			color: #30A; 
+			background-color: #DDB;
+			box-shadow: inset 2px 2px 5px #248;
+			}
+		
+		#contrastLabel {position: relative; margin: 4px 0; text-align: center; font-size: 28px; font-weight: 400;}
+
+		#contrastResult {position: relative; margin: 8px 0; text-align: center; padding: 10px; font-size: 54px; font-weight: 700;}		
+		
+		#inputArea, #demoArea { 
+			position: relative; 
+			margin: 16px auto; 
+			padding: 8px 48px; 
+			max-width: 820px;
+			height: 260px;
+			clear: both;
+			border-radius: 16px; 
+			border: 8px solid black; 
+			color: #123; 
+			background-color: #DDD; 
+			box-shadow: 2px 2px 5px #69B;
+
+			}
+			
+		#demoArea { 
+			height: 240px;
+			font-weight: 500; 			
+			background-color: #FDA; 
+			}		
+			
+		input, .input { 
+			position: relative; 
+			margin: 0 auto; 
+			text-align: center; 
+			font-size: 24px; 
+			font-weight: 400; 
+			background-color: #DD9;}
+		
+		h1, h2, h3 { 
+			position: relative; 
+			margin: 4px; auto; 
+			text-align: center; 
+			color: #30A;
+			}
+
+
+		#sansSamples {
+			position: relative; 
+			max-width: 1200px; 
+			margin: 36px; 
+			padding: 0; 
+			white-space: nowrap; 
+			overflow: hidden;  
+			border-radius: 24px;
+			}
+		
+		#serifSamples {
+			position: relative; 
+			max-width: 1200px; 
+			margin: 36px; 
+			padding: 0; 
+			white-space: nowrap; 
+			overflow: hidden;  
+			font-family: 'Spectral', serif;
+			border-radius: 24px;
+			}
+		
+		.serifPlay { font-family: 'Playfair Display', serif; }
+		.serifIBM {	font-family: 'IBM Plex Serif', serif; }
+		
+		.sample25{margin: 0px; padding: 0px 30px; font-size: 96px; font-weight: 900; color: inherit;}
+
+		.sample40{margin: 0px; padding: 10px 30px; font-size: 72px; font-weight: 700; color: inherit;}
+		.sample50{margin: 0px; padding: 10px 30px; font-size: 48px; font-weight: 600; color: inherit;}
+		.sample60{margin: 0px; padding: 10px 30px; font-size: 44px; font-weight: 400; color: inherit;}
+		.sample70{margin: 0px; padding: 10px 30px; font-size: 40px; font-weight: 300; color: inherit;}
+		.sample80{margin: 0px; padding: 10px 30px; font-size: 48px; font-weight: 200; color: inherit;}
+		.sample90{margin: 0px; padding: 10px 30px; font-size: 36px; font-weight: 200; color: inherit;}
+		.sample100{margin: 0px; padding: 10px 30px; font-size: 24px; font-weight: 200; color: inherit;}
+		.sample120{margin: 0px; padding: 10px 30px; font-size: 36px; font-weight: 100; color: inherit;}
+		
+		.pad0 {padding: 0 30px;}
+		
+		.L40{font-size: 48px; font-weight: 800;}
+		.L50{font-size: 32px; font-weight: 700;}
+		.L60{font-size: 16px; font-weight: 700;}
+		.L70{font-size: 24px; font-weight: 400;}
+		.L70b{font-size: 12px; font-weight: 700;}
+		.L80a{font-size: 24px; font-weight: 300;}
+		.L80{font-size: 16px; font-weight: 400;}
+		.L80b{font-size: 12px; font-weight: 500;}
+		.L90{font-size: 14px; font-weight: 400;}
+		.L90b{font-size: 21px; font-weight: 300;}
+		.L100{font-size: 18px; font-weight: 300;}
+		.L100b{font-size: 12px; font-weight: 400;}
+		.L120{font-size: 18px; font-weight: 200;}
+		.L120b{font-size: 12px; font-weight: 300;}
+		
+		hr { margin: -2px 0; padding: 0; border: 16px solid #FFF; }
+		
+	</style>
+	
+	<script src="SAPCsRGB.js"></script>
+	
+	<script>
+	
+		function getBGColor(s) {
+			var BGcolor = new RGBColor(s);
+			if (BGcolor.ok) {
+			
+				document.getElementById('BGresult').style.backgroundColor
+					= 'rgb(' + BGcolor.r + ', ' + BGcolor.g + ', ' + BGcolor.b + ')';				document.getElementById('sansSamples').style.backgroundColor
+					= 'rgb(' + BGcolor.r + ', ' + BGcolor.g + ', ' + BGcolor.b + ')';document.getElementById('serifSamples').style.backgroundColor
+					= 'rgb(' + BGcolor.r + ', ' + BGcolor.g + ', ' + BGcolor.b + ')';
+					
+				document.getElementById('BGresult-text').innerHTML =
+					'<code><b>HEX:</b> ' + BGcolor.toHex()
+					  + ' <b>sRGB:</b> ' + BGcolor.toRGB()
+					  + '<br><b>Decimal:</b> rgb( ' + BGcolor.toDec()[0].toPrecision(2)
+					  + ', ' + BGcolor.toDec()[1].toPrecision(2)
+					  + ', ' + BGcolor.toDec()[2].toPrecision(2)
+					  + ' )<br><b>Lin:</b> R ' + BGcolor.Rlin().toPrecision(3)
+					  + '&nbsp; G ' + BGcolor.Glin().toPrecision(3)
+					  + '&nbsp; B ' + BGcolor.Blin().toPrecision(3)
+					  + '<br><b>Luminance:</b> Y ' + BGcolor.toY().toPrecision(3) + '</code>'
+					  ;
+			} else {
+				document.getElementById('BGresult-text').innerHTML = 'Invalid Color';
+				document.getElementById('BGresult').style.backgroundColor
+					= 'rgb(255, 255, 255)';
+			}
+		}
+
+		function getTextColor(s) {
+			var textColor = new RGBColor(s);
+			if (textColor.ok) {
+			
+				document.getElementById('textResult').style.backgroundColor
+					= 'rgb(' + textColor.r + ', ' + textColor.g + ', ' + textColor.b + ')';
+				document.getElementById('sansSamples').style.color
+					= 'rgb(' + textColor.r + ', ' + textColor.g + ', ' + textColor.b + ')';
+				document.getElementById('serifSamples').style.color
+					= 'rgb(' + textColor.r + ', ' + textColor.g + ', ' + textColor.b + ')';	
+					
+				document.getElementById('textResult-text').innerHTML =
+					'<code><b>HEX:</b> ' + textColor.toHex()
+					  + ' <b>sRGB:</b> ' + textColor.toRGB()
+					  + '<br><b>Decimal:</b> rgb( ' + textColor.toDec()[0].toPrecision(2)
+					  + ', ' + textColor.toDec()[1].toPrecision(2)
+					  + ', ' + textColor.toDec()[2].toPrecision(2)
+					  + ' )<br><b>Lin:</b> R ' + textColor.Rlin().toPrecision(3)
+					  + '&nbsp; G ' + textColor.Glin().toPrecision(3)
+					  + '&nbsp; B ' + textColor.Blin().toPrecision(3)
+					  + '<br><b>Luminance:</b> Y ' + textColor.toY().toPrecision(3) + '</code>'
+					  ;
+			} else {
+				document.getElementById('textResult-text').innerHTML = 'Invalid Color';
+				document.getElementById('textResult').style.backgroundColor = 'rgb(255, 255, 255)';
+			}
+		}
+
+
+
+		function showHelp() {
+			var color = new RGBColor('');
+			document.getElementById('help').innerHTML = '';
+			document.getElementById('help').appendChild(color.getHelpXML());
+		}
+		
+		
+	</script>
+</head>
+
+<body onLoad="document.getElementById('inputBG').focus(); document.getElementById('inputText').focus(); document.getElementById('inputBG').focus(); testContrast(); ">
+
+	<div id="demoArea"> 
+	
+		<div id="contrast">        
+			<div id="contrastLabel">SAPC Contrast</div>
+			<div id="contrastResult">NaN</div>
+        </div>
+       
+        <h1 style="text-align: left; ">SAPC Visual Contrast Demo</h1>
+
+        <div class="">
+			This is the Basic SAPC contrast method using JavaScript. 
+			<br>Just type in color values as #hex, rgb(), or HTML name 
+			<br>then navigate away from the input field by either
+			<br>pressing TAB or clicking elsewhere on the page.
+			<br>
+			<br>Scroll down for a set of type samples in 
+			<br>sans and serif fonts. On the left is the level, 
+			<br>as in "L80". This means that row wants to see
+			<br>at least 80% contrast (positive or negative).
+        </div>
+    </div>           
+
+
+	<div id="inputArea">        
+		<div style="position: relative; float: left;">
+			<h3>ENTER BACKGROUND COLOR
+			</h3>
+			<form id="colorForm" name="colorForm" onsubmit="getBGColor(this.elements[0].value); getTextColor(this.elements[1].value); return false;">
+				<div class="input">
+					<input
+						id="inputBG"
+						type="text"
+						value="#BA9"
+						onblur="getBGColor(this.value); testContrast();">
+				</div>
+		
+			<div id="BGresult-wrap"><div id="BGresult"></div></div>
+			<div class="codeBlock" id="BGresult-text"></div>
+	   </div>
+	
+        
+		<div style="position: relative; float: right;">
+			<h3>ENTER TEXT COLOR
+			</h3>
+				<div class="input">
+					<input
+						id="inputText"
+						type="text"
+						value="#319"
+						onblur="getTextColor(this.value); testContrast();">
+				</div>
+			</form>
+			<div id="textResult-wrap"><div id="textResult"></div></div>
+			<code id="textResult-text"></code>
+	
+		</div>
+	</div>
+	<br>
+
+	<h1>Minimum Size Type Examples for Testing Various Levels</h1>
+	
+       <div id="sansSamples">
+			<div class="sample25">L25 • 96px 900wt &T</div><hr>
+			<div class="sample40">L40 • 72px 700wt &T<span class="L40"> • 48px 800wt </span></div><hr>
+			<div class="sample50">L50 • 48px 600wt & AT<span class="L50"> • 32px 700wt & ATOMsized</span></div><hr>
+			<div class="sample60">L60 • 44px 400wt & IcyATOMsized <span class="L60"> • 16px 700wt & IcyATOMsizedgap</span></div><hr>
+			<div class="sample70">L70 • 40px 300wt & ATOMsized<span class="L70"> • 24px 400wt & ATOMsized</span><span class="L70b"> •• 12px 700wt & IcyATOM</span></div><hr>
+			<div class="sample80">L80 • 48px 200wt &T<span class="L80a"> • 24px 300wt & ATOMs</span><span class="L80"> • 16px 400wt & ATOMs</span><span class="L80b"> •• 12px 500wt & IcyATOM</span></div><hr>
+			<div class="sample90">L90 • 36px 200wt & ATOMsizedgap<span class="L90b"> • 21px 300wt & ATOMsized</span><span class="L90"> •• 14px 400wt & IcyATOM</span></div><hr>
+			<div class="sample100">L100 • 24px 200wt & IcyATOMsizedgap<span class="L100"> • 18px 300weight & IcyATOMsizedgap</span><span class="L100b"> •• 12px 400weight & IcyATOMsizedgap</span></div><hr>
+			<div class="sample120">L120 • 36px 100wt & IcyATOMsizedgap<span class="L120"> • 18px 200wt & IcyATOMsizedgap</span><span class="L120b"> •• 12px 300wt & IcyATOM</span></div>
+        </div>
+
+       <div id="serifSamples">
+			<div class="sample25 serifPlay pad0">L25 • 96px 900wt &T</div><hr>
+			<div class="sample40 serifPlay pad0">L40 • 72px 700wt &T<span class="L40 serifPlay"> • 48px 800wt </span></div><hr>
+			<div class="sample50 pad0">L50 • 48px 600wt & AT<span class="L50 serifPlay"> • 32px 700wt & ATOMsized</span></div><hr>
+			<div class="sample60 pad0">L60 • 44px 400wt & IcyATOMsized <span class="L60 serifPlay"> • 16px 700wt & IcyATOMsizedgap</span></div><hr>
+			<div class="sample70 pad0">L70 • 40px 300wt & ATOMsized<span class="L70"> • 24px 400wt & ATOMsized</span><span class="L70b"> •• 12px 700wt & IcyATOM</span></div><hr>
+			<div class="sample80 pad0">L80 • 48px 200wt &T<span class="L80a"> • 24px 300wt & ATOMs</span><span class="L80"> • 16px 400wt & ATOMs</span><span class="L80b"> •• 12px 500wt & IcyATOM</span></div><hr>
+			<div class="sample90 pad0">L90 • 36px 200wt & ATOMsizedgap<span class="L90b"> • 21px 300wt & ATOMsized</span><span class="L90"> •• 14px 400wt & IcyATOM</span></div><hr>
+			<div class="sample100 pad0">L100 • 24px 200wt & IcyATOMsizedgap<span class="L100"> • 18px 300weight & IcyATOMsizedgap</span><span class="L100b"> •• 12px 400weight & IcyATOMsizedgap</span></div><hr>
+			<div class="sample120 pad0"><span class="serifIBM">L120 • 36px 100wt & IcyATOMsizedgap</span><span class="L120"> • 18px 200wt & IcyATOMsizedgap</span><span class="L120b"> •• 12px 300wt & IcyATOM</span></div>
+        </div>        
+      
+      
+
+
+
+<div style="font-size: 12px;">The page and code is Copyright © 2020 by Andrew Somers.
+<br>Licensed to the W3.org per their cooperative agreement. 
+<br>Otherwise under the MIT license. 
+<br>Repository: <a href="https://github.com/Myndex/SAPC/tree/master/JS">https://github.com/Myndex/SAPC/tree/master/JS</a>
+<br>Color value input parsing based substantially on rgbcolor.js by
+<br>Stoyan Stefanov <sstoo@gmail.com> used per MIT license.
+<br>
+This project is part of the <a href="https://www.myndex.com/WEB/Perception">Myndex Web Perception Experiment.
+</a>
+<br><br>
+    <span onclick="testContrast()" style="cursor: pointer; text-decoration: underline">Manual Refresh</span>
+
+    <span onclick="showHelp()" style="cursor: pointer; text-decoration: underline">help?</span>
+    <div id="help"></div>
+<script>
+	function testContrast() {
+		var BG = new RGBColor(document.getElementById('inputBG').value);
+		var txt = new RGBColor(document.getElementById('inputText').value);
+		
+		document.getElementById('contrastResult').innerHTML =  SAPCbasic(BG.Rlin(),BG.Glin(),BG.Blin(),txt.Rlin(),txt.Glin(),txt.Blin());
+	}
+</script>		
+</body>
+</html>
