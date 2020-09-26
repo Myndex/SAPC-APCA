@@ -1,12 +1,16 @@
 ////////////////////////////////////////////////////////////////////////////////
 /////	Functions to parse color values and determine SAPC contrast
 /////	REQUIREMENTS: ECMAScript 6 - ECMAScript 2015
-/////	SAPC tool version 0.97 by Andrew Somers
+/////	
+/////	SAPC (Advanced Perceotual Contrast) tool 
+/////	•••• Version 0.97b by Andrew Somers ••••
 /////	https://www.myndex.com/WEB/Perception
-/////	Color value input parsing based substantially on rgbcolor.js by
+/////	
+/////	Input Form Parsing:
+/////	Color value input parsing based on rgbcolor.js by
 /////	Stoyan Stefanov <sstoo@gmail.com>
 /////	His site: http://www.phpied.com/rgb-color-parser-in-javascript/
-/////	MIT license
+/////	rgbcolor.js is MIT license
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -14,9 +18,9 @@
 /////	*****  SAPC BLOCK  *****
 /////
 /////	For Evaluations, this is referred to as: SAPC-7
-/////	Somers Advanced Perceptual Contrast v0.97 beta PSEUDOCODE
-/////	Copyright © 2019 by Andrew Somers
-/////	Licensed to the W3C Per Collaborator Agreement
+/////	Somers S-LUV Advanced Perceptual Contrast v0.97b beta
+/////	Copyright © 2019-2020 by Andrew Somers. All Rights Reserved.
+/////	SAPC/APCA is Licensed to the W3C Per Collaborator Agreement
 /////	SIMPLE VERSION — This Version Is Stripped Of Extensions:
 /////		• No Color Vision Module
 /////		• No Spatial Frequency Module
@@ -27,18 +31,20 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-///// CONSTANTS USED IN THIS VERSION ///////////////////////////////////////////
+///// CONSTANTS USED IN VERSION 0.97b //////////////////////////////////////////
 
 	const sRGBtrc = 2.218;	// Gamma for sRGB linearization. 2.223 could be used instead
-							// 2.218 sets unity with the piecewise sRGB at #777
+				// 2.218 sets unity with the piecewise sRGB at #777
+                                // Sept 2020 note: a higher gamma of 2.4 or 2.5 may provide
+                                // a more accurate model of real world environments
 
 	const Rco = 0.2126;		// sRGB Red Coefficient
 	const Gco = 0.7156;		// sRGB Green Coefficient
 	const Bco = 0.0722;		// sRGB Blue Coefficient
 
-	const scaleBoW = 161.8;	// Scaling for dark text on light (phi * 100)
-	const scaleWoB = 161.8;	// Scaling for light text on dark — same as BoW, but
-							// this is separate for possible future use.
+	const scaleBoW = 161.8;         // Scaling for dark text on light (phi * 100)
+	const scaleWoB = 161.8;         // Scaling for light text on dark — same as BoW, but
+					// this is separate for possible future use.
 
 	const normBGExp = 0.38;		// Constants for Power Curve Exponents.
 	const normTXTExp = 0.43;	// One pair for normal text,and one for REVERSE
@@ -96,13 +102,13 @@ function SAPCbasic(Rbg,Gbg,Bbg,Rtxt,Gtxt,Btxt) {
 }
 
 //////////////////////////////////////////////////////////////
-///// END OF SAPC BLOCK 			//////////////////////////
+///// END OF SAPC BLOCK             //////////////////////////
 //////////////////////////////////////////////////////////////
 
 
 
 //////////////////////////////////////////////////////////////
-///// sRGB INPUT FORM BLOCK 		//////////////////////////
+///// sRGB INPUT FORM BLOCK (Based on rgbcolor.js)  //////////
 //////////////////////////////////////////////////////////////
 
 
@@ -290,7 +296,7 @@ function RGBColor(color_string) {
 		},
 		{
 			re: /^(\w{2})(\w{2})(\w{2})$/,
-			example: ['#00ff00', '336699'],
+			example: ['#0F0', '369'],
 			process: function (bits){
 				return [
 					parseInt(bits[1], 16),
@@ -301,7 +307,7 @@ function RGBColor(color_string) {
 		},
 		{
 			re: /^(\w{1})(\w{1})(\w{1})$/,
-			example: ['#fb0', 'f0f'],
+			example: ['#FB0', 'F0F'],
 			process: function (bits){
 				return [
 					parseInt(bits[1] + bits[1], 16),
@@ -335,19 +341,17 @@ function RGBColor(color_string) {
 	this.b = (this.b < 0 || isNaN(this.b)) ? 0 : ((this.b > 255) ? 255 : this.b);
 
 
+	// get a variety of things that need to be gotten
 
-	// some getters
-
-	// returns rgb() value string
+	// toRGB — returns rgb() value string
 	this.toRGB = function () {
 		return 'rgb(' + this.r + ',' + this.g + ',' + this.b + ')';
 	}
 
-	// returns rgb() value string
+	// toRGB2 — returns rgb() value string
 	this.toRGB2 = 'rgb(' + this.r + ', ' + this.g + ', ' + this.b + ')';
 
-
-	// returns hex string
+	// toHEX — returns hex string
 	this.toHex = function () {
 		var r = this.r.toString(16);
 		var g = this.g.toString(16);
@@ -358,12 +362,13 @@ function RGBColor(color_string) {
 		return '#' + r + g + b;
 	}
 
-	// returns decimal array for R, G, and B
+	// toDec — returns decimal array for R, G, and B
 	this.toDec = function () {
 		return [this.r/255.0,this.g/255.0,this.b/255.0];
 	}
 
-	// these return linearized R, G, or B
+
+	// Rlin — these return linearized R, G, or B
 
 	this.Rlin = function () {
 		return Math.pow(this.r/255.0, sRGBtrc);
@@ -376,22 +381,41 @@ function RGBColor(color_string) {
 	}
 
 
+	// RlinCo — these return linearized R, G, or B but adjusted with sRGB coefficients
+
+	this.RlinCo = function () {
+		return Rco * Math.pow(this.r/255.0, sRGBtrc);
+	}
+	this.GlinCo = function () {
+		return Gco * Math.pow(this.g/255.0, sRGBtrc);
+	}
+	this.BlinCo = function () {
+		return Bco * Math.pow(this.b/255.0, sRGBtrc);
+	}
+
+
+	// toY — This returns linear Y (luminance)
+
 	this.toY = function () {
 		return 	Math.pow(this.r/255.0, sRGBtrc) * Rco + Math.pow(this.g/255.0, sRGBtrc) * Gco + Math.pow(this.b/255.0, sRGBtrc) * Bco;
 	}
 
+	
 	// help and test
 
 	this.getHelpXML = function () {
 
 	var examples = new Array();
-	// add regexps
-	for (var i = 0; i < color_defs.length; i++) {
-		var example = color_defs[i].example;
-		for (var j = 0; j < example.length; j++) {
-			examples[examples.length] = example[j];
-		}
-	}
+
+// add regexps
+//	for (var i = 0; i < color_defs.length; i++) {
+//		var example = color_defs[i].example;
+//		for (var j = 0; j < example.length; j++) {
+//			examples[examples.length] = example[j];
+//		}
+//	}
+//
+
 	// add type-in colors
 	for (var sc in simple_colors) {
 		examples[examples.length] = sc;
@@ -406,14 +430,14 @@ function RGBColor(color_string) {
 				var example_div = document.createElement('div');
 				example_div.style.cssText =
 				'margin: 3px; '
-				+ 'border: 1px solid black; '
+				+ 'border: 1px solid #777; '
 				+ 'background:' + list_color.toHex() + '; '
 				+ 'color:' + list_color.toHex()
 				;
 				example_div.appendChild(document.createTextNode('test'));
 				var list_item_value = document.createTextNode(
-					' ' + examples[i] + ' -> ' + list_color.toRGB() + ' -> ' + list_color.toHex() +
-					' -> Rlin:' + list_color.Rlin().toPrecision(3) + ' Glin:' + list_color.Glin().toPrecision(3) + 
+					' ' + examples[i] + '  ⇨  ' + list_color.toY().toPrecision(2)  + ' Y  ⇨  ' + list_color.toHex() + ' ⇨ ' + list_color.toRGB() +
+					' ⇨ Rlin:' + list_color.Rlin().toPrecision(3) + ' Glin:' + list_color.Glin().toPrecision(3) + 
 					' Blin:' + list_color.Blin().toPrecision(3)
 				);
 				list_item.appendChild(example_div);
@@ -428,6 +452,6 @@ function RGBColor(color_string) {
 }
 
 //////////////////////////////////////////////////////////////
-///// END sRGB INPUT FORM BLOCK 		//////////////////////
+///// END sRGB INPUT FORM BLOCK         //////////////////////
 //////////////////////////////////////////////////////////////
 
