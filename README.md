@@ -1,5 +1,6 @@
-# SAPC
+# SAPC/APCA
 ### SAPC Algorithm _(S-LAB Advanced Perceptual Contrast)_
+### APCA _Advanced Perceptual Contrast Algorithm_
 
 This is a set of contrast assessment methods for predicting perceived contrast between sRGB colors on a computer monitor. It is intended as an assessment method for standard relating to content for computer displays and mobile devices.
 
@@ -49,6 +50,5 @@ This is a set of contrast assessment methods for predicting perceived contrast b
 
 The initial code here will be plain vanilla Javascript, PHP 5.5, and OpenOffice Calc spreadsheet, as those cover the most likely use cases. Many of the available inputs to the functions can remain at their defaults, thought these extra inputs can be used in more specialized situations (such as creating content specifcally for daylight/outdoors, or specificaly for dark nights, etc.).
 
-## IMPORTANT: AT this time, this code is not used in any approved or active standard.
-It or a version like it will be used in the not too distant future. Nevertheless, the values generated right now will not match the values of other incompatible standards, so do not attempt to use this code for an unapproved or incompatible standard. It is at present to be considered experimental and for research only.
-
+### THIS IS BETA
+Being developed for use with future web standards for accessibility.
