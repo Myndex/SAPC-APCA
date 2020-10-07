@@ -1,6 +1,8 @@
 # SAPC/APCA
+![](images/Myndex_eye_cielab.jpg)
 ### SAPC Algorithm _(S-LAB Advanced Perceptual Contrast)_
 ### APCA _Advanced Perceptual Contrast Algorithm_
+
 
 This is a set of contrast assessment methods for predicting perceived contrast between sRGB colors on a computer monitor. It is intended as an assessment method for standard relating to content for computer displays and mobile devices.
 
