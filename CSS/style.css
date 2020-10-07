@@ -1,42 +1,58 @@
-
 /* ************************************************************* */
 /* ************************************************************* */
 /* *****   FONT IMPORTS                                   ****** */
 /* ************************************************************* */
 /* ************************************************************* */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+/* *****   The following only imports capitals for .dropCapSimple  ****** */
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&text=%26ABCDEFGHIJKLMNOPQRSTUVWXYZ&display=swap');
+/* *****   The following only imports the playfair ampersand for .ampSamp  ****** */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&text=%26&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap')
-
-@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap")
-
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700,800,900&display=swap")
-
+@import url("/FONTS/HelveticaNeueLT/HelveticaNeueLT_normal.css");
 
 /* ************************************************************* */
 /* ************************************************************* */
-/* *****   BEGIN STYLE SHEET                              ****** */
+/* *****   BEGIN STYLE SHEET — SAPC/APCA TOOL             ****** */
 /* ************************************************************* */
 /* ************************************************************* */
 
-
+* { box-sizing: border-box; }
 
 body {
 	margin: 0;
 	padding: 0;
 	font-size: 16px;
 	line-height: 1.3;
-	font-family: Roboto, Montserrat, Helvetica, Arial, sans-serif;
-	background-color: #215;
+	font-family: Montserrat, HelveticaNeueLT, Helvetica, Arial, sans-serif;
+	background-color: #B4A254;
 	}
+
+main {
+	position: relative;
+	padding: 0;
+	margin: 0 auto;
+	}	/* Primary Generic content container */
+
+.wrapper {		/* Content wrapper - Can optionally include header or footer. */
+	position: relative;
+	width: 100vw;
+	max-width: 1024px;  /* set this width per site needs, ideally in the responsive section!
+					 		NEW : setup for 1024  1000 + 12 + 12 borders */
+	margin: 0 auto;
+	overflow: hidden;
+	background-color: #FFF;
+	border: 12px solid #30A;
+	}	
 	
 footer {
-	margin: 36px 0 0 0;
+	margin: 0;
 	padding: 2em;
-	color: #FFF;
-	background-color: #215;
+	color: #D93;
+	background-color: #103;
 	}	
-footer a {color: #DEF;}
+footer a {color: #DB3;}
 	
 	
 /*
@@ -235,18 +251,28 @@ a:active button {
 */
 
 /* ************************************************************* */
+/* ************************************************************* */
+/* *****    PURE CSS BUTTONS AND CONTROLS   ******************** */
+/* ************************************************************* */
+/* ************************************************************* */
+
+
+/* ************************************************************* */
 /* *****  GLOSSY BLUE GLOW BUTTON  ***************************** */
 /* ************************************************************* */
 
 
-.myndexButton, button.myndexButton, nav .myndexButton, .myndexButton.a:link {
-	display:inline-block;
+.myndexButton {
+	display: block;
+	position: relative;
+	max-width: 65%;
+	margin: 0 auto 1em;
 	cursor:pointer;
+	padding: 0.66em 1.5em;
 	color: #FFF;
-	font-family: Montserrat, "Roboto", Avenir, Helvetica, Arial, Verdana,"sans-serif";
+	font-family: Montserrat, HelveticaNeueLT, Avenir, Helvetica, Arial, Verdana,"sans-serif";
 	font-size: 1.5em;
 	font-weight: 500;
-	padding: 0.66em 1.5em;
 	text-decoration: none;
 	text-shadow: 0.06em  0.06em  0.1em #40F;
 
@@ -270,7 +296,7 @@ a:active button {
 	border: 0.17em solid #0619C4;
 }
 
-.myndexButton:hover, button.myndexButton:hover, nav .myndexButton:hover, .myndexButton.a:hover {
+.myndexButton:hover {
 	color: #DEF;
 
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #193BB3), color-stop(1, #F9F0FF));
@@ -289,15 +315,23 @@ a:active button {
 	border: 0.17em solid #2222FF;
 }
 
-.myndexButton:active, button.myndexButton:active, nav .myndexButton:active, .myndexButton.a:active {
+.myndexButton:active {
 	position:relative;
 	top: 0.17em;
-	font-family: Montserrat, "Roboto", Avenir, Helvetica, Arial, Verdana,"sans-serif";
+	font-family: Montserrat, HelveticaNeueLT, Avenir, Helvetica, Arial, Verdana,"sans-serif";
 	font-size:  1.5em;
 	font-weight: 500;
 	color: #FFF;
 }
 
+
+.myndexButton.buttonRow {
+	display: inline-block;
+	max-width: 50%;
+	margin: 0.75em 0.75em 1em;
+	}	
+
+.myndexButton.queryButton {max-width: 400px; font-size: 16px;}
 
 /* ***** Visual Readability Table ***** */
 /* ***** Visual Readability Table ***** */
@@ -305,6 +339,7 @@ a:active button {
 
 .visReadTable {
 	margin: 0 auto;
+	overflow: scroll;
 	border-collapse: collapse;
 	font-size: 1.125em;
 	}
@@ -313,11 +348,11 @@ a:active button {
 
 .visReadTable td { 
 	padding: 4px 6px;
-	border: 2px solid #CCA;
+	border: 2px solid #BAD;
 	}
 	
 .visReadTable th, .visReadTable th.fsize {
-	font-weight: 600; 
+	font-weight: 500; 
 	background-color: #FFA;
 	}
 
@@ -325,7 +360,12 @@ a:active button {
 
 .visReadTable th.tableTitle {
 	font-size: 1.3em;
-	background-color: #EE9;
+	background-color: #EEF;
+	}
+.APCAtable th.tableTitle {
+	font-size: 1.3em;
+	color: #fff;
+	background-color: #206;
 	}
 	
 .visReadTable td.vBot, .visReadTable th.vBot, .visReadTable th .vBot, .vBot { 
@@ -335,28 +375,55 @@ a:active button {
 	background-color: #DDB;
 	}
 
+.APCAtable th.weight {font-size: 1.3em; padding: 0 1px;}
+.APCAtable th.weight7, .APCAtable th.weight8, .APCAtable th.weight9
+{padding: 0 6px;}
+.APCAtable th.weight div {font-size: 0.7em; margin: -0.3em 0 0; padding: 0 1px;}
+
 .visReadTable th.weight1 { font-weight: 100; background-color: #FFF;}
-.visReadTable th.weight2 { font-weight: 200; background-color: #F8F8F8;}
-.visReadTable th.weight3 { font-weight: 300; background-color: #F0F0F0;}
-.visReadTable th.weight4 { font-weight: 400; background-color: #EAEAEA;}
-.visReadTable th.weight5 { font-weight: 500; background-color: #E2E2E2;}
-.visReadTable th.weight6 { font-weight: 600; background-color: #DBDBDB;}
-.visReadTable th.weight7 { font-weight: 700; background-color: #D4D4D4;}
-.visReadTable th.weight8 { font-weight: 800; background-color: #CDCDCD;}
-.visReadTable th.weight9 { font-weight: 900; background-color: #C4C4C4;}
+.visReadTable th.weight2 { font-weight: 200; background-color: #F4F4F4;}
+.visReadTable th.weight3 { font-weight: 300; background-color: #EAEAEA;}
+.visReadTable th.weight4 { font-weight: 400; background-color: #E2E2E2;}
+.visReadTable th.weight5 { font-weight: 500; background-color: #DADADA;}
+.visReadTable th.weight6 { font-weight: 600; background-color: #D0D0D0;}
+.visReadTable th.weight7 { font-weight: 700; background-color: #C6C6C6;}
+.visReadTable th.weight8 { font-weight: 800; background-color: #BBB;}
+.visReadTable th.weight9 { font-weight: 900; background-color: #AFAFAF;}
 
 
 .visReadTable td:first-child { font-weight: 600;}
 
+.APCAtable {text-align: center;}
+.APCAtable .underWeight {
+	font-size: 1.5em;
+	line-height: 0.7;
+	color: var(--faded-red);
+	color: #c0272d;
+	background-color: #F883; 	
+	}
+.underWeightSpan {
+	font-size: 1.5em;
+	line-height: 0.7;
+	color: var(--faded-red);
+	color: #c0272d;
+	}	
+.APCAtable .keyValue, .keyVal80, .keyVal60{
+	font-weight: bold;
+	background-color: var(--cloudy-subtle);
+	background-color: #d0e1f1; 
+	}
 
 td.keyVal12, td.keyVal10 {
 	font-weight: 800;
 	}
-td.keyVal08 {
+.APCAtable td.keyVal100{
 	font-weight: 700;
 	}
-td.keyVal07 {
-	font-weight: 600;
+.APCAtable td.keyVal80, td.keyVal08 {
+	font-weight: 700;
+	}
+.APCAtable td.keyVal60, td.keyVal07 {
+	font-weight: 700;
 	}
 td.keyVal06 {
 	font-weight: 600;
@@ -368,37 +435,117 @@ td.keyVal04 {
 	font-weight: 400;
 	}
 	
-
 td.keyVal04 { color: #804; background-color: #DB63;}
 td.keyVal05 { color: #602; background-color: #A2B3;}
 td.keyVal06 { color: #411; background-color: #48F4;}
-td.keyVal07 { color: #033; background-color: #2DA5;}
-td.keyVal08 { color: #022; background-color: #2F6;}
+.APCAtable td.keyVal60, td.keyVal07 { color: #032; background-color: #2DA5;}
+.APCAtable td.keyVal80, td.keyVal08  { color: #022; background-color: #2F68;}
+.APCAtable td.keyVal100 { color: #040;}
+
 td.keyVal10 { color: #000; background-color: #8F0A;}
 td.keyVal12 { color: #220; background-color: #EF08;}
-
 
 	/* provide some minimal visual accomodation for IE8 and below */
 	/* Define the background color for all the ODD background rows  */
 .visReadTable tr, .visReadTable tr:nth-child(odd) { 
 	color: #308;
-	background-color: #FFD;
+	background-color: #F0FFFF;
 	}
 	
 	/* Define the background color for all the EVEN background rows  */
 .visReadTable tr:nth-child(even) {
 	color: #204;
-	background-color: #EED;
+	background-color: #E0EEFF;
 	}
 
 td.do-not, .do-not {
 	font-size: 1.6em;
 	font-weight: bold;
 	line-height: 0.2;
-	vertical-align: middle;
 	color: #E00; 
 	background-color: #E993;
 	}
+
+div.overflowScroll {
+	overflow: scroll;
+	}
+
+
+/* ************************************************************* */
+/* *****  ORNAMENTATION  *************************************** */
+/* ************************************************************* */
+
+
+/* ************************************************************* */
+/* *****   DROP CAP (from AMS)   ******************************* */
+/* ************************************************************* */
+
+
+.dropCap::first-letter,
+.dropCap p:first-child::first-letter,
+.dropCap:first-child::first-letter,
+p.dropCap::first-letter,
+div.dropCap::first-letter
+	{  /* Call it as a class  dropCap (this one has a box) ***/
+	float: left;
+			/* BOX -- sizes below are relative to drop cap size */
+	margin: -0.15em 0.05em -0.13em -0.25em;
+	padding: 0.03em 0.12em;	/* Box Padding */
+	height: 1em; 	/* Box Height */
+
+	font-size: 2.5em;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1em; /* height  of drop cap above line - bigger numbers make it LOWER*/
+	color: #50C;
+	font-family:  "Trirong", "Baskerville", "Didot", "Bodini", Times, serif;
+
+	text-shadow:
+	-0.02em -0.02em 0.03em #DEF,
+	0.02em 0.02em 0.02em #00B,
+	-0.02em 0.02em 0.02em #00B,
+	0.02em 0.02em 0.03em #003,
+	0.07em 0.07em 0.11em #44A;
+
+	border-radius: 0.18em;
+	background-color: #ACF7;
+
+	box-shadow:
+	inset 0.03em 0.03em 0.06em #DEF,
+	inset -0.03em -0.03em 0.06em #789,
+	0.03em 0.03em 0.06em #44A;
+	}
+
+
+
+.dropCapSimple::first-letter,
+.dropCapSimple p:first-child::first-letter,
+.dropCapSimple:first-child::first-letter,
+p.dropCapSimple::first-letter,
+div.dropCapSimple::first-letter
+	{  /* Call it as a class  dropCapSimple ***/
+	float: left;
+			/* BOX -- sizes below are relative to drop cap size */
+	margin: 0em 0.14em -0.2em -0.315em;
+	height: 1em; 	/* Box Height */
+
+	font-size: 3.2em;
+	font-weight: 700;
+	font-style: italic;
+	line-height: 0.7; /* height  of drop cap above line - bigger numbers make it LOWER*/
+	color: #309;
+	font-family:  "Lobster Two", "Trirong", "Baskerville", "Didot", "Bodini", Times, serif;
+
+	text-shadow:
+	-0.02em -0.02em 0.04em #BCD,
+	0.02em -0.02em 0.02em #30BB,
+	-0.02em 0.02em 0.02em #30BB,
+	0.02em 0.02em 0.03em #006,
+	0.07em 0.07em 0.08em #44AB;
+	}
+
+
+
 
 /* ************************************************************* */
 /* *****  ORDERED LISTS   ************************************** */
@@ -410,13 +557,13 @@ td.do-not, .do-not {
 
 ul, ol {
 	font-size: 1.2em;
-	line-height: 1.1em;
+	line-height: 1.3;
 	margin: 0.8em 1.2em 1.6em 1em;
-	font-weight: normal;
+	font-family: Montserrat, HelveticaNeueLT, Helvetica, Arial, sans-serif;
+	font-weight: 500;
 	font-style: normal;
 	color: #104;
-	text-shadow:
-				-0.01em -0.01em 0.015em #AAF,
+	text-shadow-x: -0.01em -0.01em 0.015em #AAF,
 				0.01em 0.01em 0.013em #008;
 	}
 
@@ -427,133 +574,30 @@ ul li {
 	list-style: square;
 	}
 
-.faq ul li {
-	font-size: 0.9em;
-	font-weight: bold;
-	line-height: 1em;
-	margin: 1em 1.1em 1em 0em;
-	text-shadow:
-				0.06em 0.06em 0.12em #69B;
-	}
-
-.faq ul li::before {
-	margin-left: -1em;
-	font-weight: bold;
-	content: '•   ' }
-
-.faq ul li span {
-	font-style: normal;
-	font-weight: normal;
-
-	color: #44A;
-	line-height: 1em;
-	margin: 1em 1.1em 1em 0em;
-	text-shadow:
-	0.01em 0.01em 0.03em #248;
-	}
-
-
-/* ************************************************************* */
-/* *******   SAPC TOOL SPECIFIC  ******************************* */
-/* ************************************************************* */
-
-
-code { margin: 0; padding: 0; }
-
-.codeBlock {
-	width: 320px;
-	margin: 12px 0; 
-	padding: 8px 12px; 
-	white-space: nowrap; 
-	overflow: hidden; 
-	border-radius: 12px;
-	color: #00B;
-	background-color: #4FD8; 
-	box-shadow: inset 1px 1px 3px #C8FA,
-				inset 2px 2px 6px #248A,
-				inset -5px -5px 8px #205A,
-				4px 4px 8px #205A;			
-	}
-
-
-#contrast {
-	position: relative; 
-	float: right; 
-	margin: 24px 12px; 
-	padding: 8px; 
-	width: 280px; 
-	border-radius: 16px; 
-	border: 6px solid #40B; 
-	color: #30A; 
-	background-color: #6FF; 
-	box-shadow: inset 1px 1px 3px #C8FA,
-				inset 2px 2px 6px #248A,
-				inset 8px 8px 12px #84BA,
-				inset -5px -5px 8px #205A,
-				4px 4px 8px #205A;			
-	}
-
-#contrastLabel {
-	position: relative; 
-	margin: 4px 0; 
-	text-align: center; 
-	font-size: 28px; 
-	font-weight: 400;
-	}
-
-#contrastResult {
-	position: relative;
-	margin: 8px 0;
-	text-align: center; 
-	padding: 10px; 
-	font-size: 54px; 
-	font-weight: 700;
-	}		
-
-#inputArea, #demoArea { 
-	position: relative; 
-	margin: 16px auto; 
-	padding: 8px 18px; 
-	max-width: 840px;
-	height: 300px;
-	clear: both;
-	border-radius: 16px; 
-	border: 8px solid #309; 
-	color: #00A; 
-	background-color: #E2E2AA; 
-	box-shadow: 2px 2px 5px #69B;
-	}
-	
-#demoArea { 
-	height: 280px;
-	font-weight: 500; 			
-	background-color: #E8F4FF; 
-	}		
-#demoArea p {
-	font-family: Roboto, Montserrat, Helvetica, Arial, sans-serif;
-	font-size: 18px; 
-	font-weight: 400; 		
-	}	
-	
-input, .input { 
-	max-width: 8em;
-	position: relative; 
-	margin: 0 auto; 
-	text-align: center; 
-	font-size: 24px; 
-	font-weight: 400; 
-	background-color: #DFD;
-	}
 
 .explainer {
-	position: relative; 
-	margin: 4px auto; 		
-	max-width: 720px;
+	position: relative;
+	margin: 0 auto;
+	padding: 1.5em 1em;
+	max-width: 820px;
+	width: 96vw;
+	margin: 4px auto;
+	line-height: 1.3;
+	color: #008;
+	background-color: #FFD;
+	border-radius: 16px;
+	box-shadow: inset 0.2em 0.2em 0.6em 0.1em #CBA;
 	}
 	
-.explainer ul, .explainer ol, .explainer li, .explainer p {	
-	font-family: Roboto, Helvetica, Arial, sans-serif;
+.explainer ul, .explainer ol {	
+	margin: 8px auto; 		
 	font-size: 18px;
+	max-width: 640px;	
+	}
+	
+.explainer li, .explainer p {	
+	margin: 0.6em auto; 		
+	max-width: 540px;	
 	}
 
 h1, h2, h3 { 
@@ -563,15 +607,1007 @@ h1, h2, h3 {
 	color: #30A;
 	}
 	
-hr { margin: -2px 0; padding: 0; border: 16px solid #FFF;}
+h1.mastHead {font-size: 2.4em; font-weight: 300; letter-spacing: 0.2em;}	
+	
+	
+	
+hr { width: 75%; margin: 24px auto; border: 2px solid #BBF; }
 
+
+.faq ul li {
+	margin: 1em 1.1em 1em 0em;
+	line-height: 1em;
+	font-size: 0.9em;
+	font-weight: bold;
+	text-shadow: 0.06em 0.06em 0.12em #69B;
+	}
+.faq ul li::before {
+	margin-left: -1em;
+	font-weight: bold;
+	content: '•   ';
+	}
+.faq ul li span {
+	margin: 1em 1.1em 1em 0em;
+	line-height: 1em;
+	font-style: normal;
+	font-weight: normal;
+	color: #44A;
+	text-shadow: 0.01em 0.01em 0.03em #248;
+	}
+
+
+/* ************************************************************* */
+/* *******   SAPC TOOL SPECIFIC  ******************************* */
+/* ************************************************************* */
+
+code { margin: 0; padding: 0; }
+
+.codeBlock {
+	width: 280px;
+	margin: 16px 0 0; 
+	padding: 8px 12px; 
+	white-space: nowrap; 
+	overflow: hidden;
+	border: 1px solid #008;
+	border-radius: 12px;
+	font-size: 14px;
+	color: #009;
+	background-color: #0E9; 
+	box-shadow: inset 1px 1px 3px #DFD9,
+				inset 0px 0px 6px 4px #0088,
+				inset 2px 2px 6px #AF8A,
+				inset -5px -5px 8px #5056,
+				4px 4px 8px #2958;			
+	}
+
+
+#contrast {
+	box-sizing: border-box;
+	position: relative; 
+	
+/*	float: right; 
+	margin: 24px 12px; 
+	padding: 8px; 
+	width: 280px; 
+	border-radius: 16px; 
+	border: 6px solid #40B; 
+	
+	margin: 6px auto; 
+	border: 1px solid #40B;	*/
+
+	width: 170px; 
+	margin: 0 auto 1em;	
+	border-radius: 1.2em; 
+	z-index: 2;
+	padding: 1.2em 0.6em 0.8em;
+	
+	color: #30A; 
+	background-color: #6FF;
+	text-shadow: -1px -1px 1px #DEF6,
+				1px 1px 1px #3086,
+				0 0 8px #82B8;
+	box-shadow: inset 1px 1px 3px #C8FA,
+				inset 2px 2px 6px #248A,
+				inset 3px 3px 8px #84BA,
+				inset -5px -5px 8px #205A,
+				4px 4px 8px #205A;			
+	}
+#contrast::before {
+	content: '';
+	position: absolute;
+	/* specify the value of border width here */
+	top: 1em;
+	right: 1em;
+	bottom: 1em;
+	left: 1em;
+	/* --- */
+	border-radius: .5em;
+	z-index: -1;
+	background-color: #6FF;
+	box-shadow: 0.2em 0.15em 0.3em 0.1em rgba(200,220,255,0.45),
+				-0.1em -0.15em 0.5em 0.1em rgba(0,0,20,0.66),
+				inset 0 0 0.5em #A8D,
+				 0 0 1em #023,
+				inset 0.2em 0.2em 0.5em #043;
+	}
+#contrast::after {
+ 	content: '';
+	margin: -0.87em;
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	bottom: 1em;
+	left: 1em;
+	z-index: -2;
+	padding: 0em;
+	border: none;
+	border-radius: 1em;
+	box-shadow: inset 0.2em 0.2em 0.4em 0.02em rgba(180,200,255,0.55),
+					-0.1em -0.1em 0.1em 0.02em rgba(255,255,255,0.5),
+					-0.05em -0.05em 0.1em 0.05em rgba(180,200,255,0.1),
+				inset 0 0 0.3em 0.1em rgba(0,0,10,0.3),
+						 0.25em 0.25em 0.3em 0.08em rgba(0,0,10,0.3),
+				inset -0.3em -0.3em 0.3em 0.08em rgba(90,80,200,0.5),
+				inset -0.7em -0.7em 0.8em 0.4em rgba(10,10,80,0.8),
+						0.1em 0.1em 0.2em 0.05em rgba(0,0,20,0.5);
+	}
+	
+	
+#contrastLabel {
+	position: relative; 
+	margin: 4px auto; 
+	text-align: center; 
+	font-size: 20px; 
+	font-weight: 400;
+	}
+#contrastResult {
+	position: relative;
+	margin: 4px auto;
+	text-align: center; 
+	padding: 2px; 
+	font-size: 36px; 
+	font-weight: 700;
+	}		
+
+
+
+#inputArea, #demoArea { 
+	position: relative; 
+	margin: 16px auto; 
+	padding: 8px 16px; 
+	width: 100%;
+	border-radius: 16px; 
+	border: 8px solid #309; 
+	color: #00A; 
+	background-color: #E2E2AA; 
+	box-shadow: 2px 2px 5px #69B;
+	}
+#demoArea { 
+	width: 96vw;
+	max-width: 840px;
+	margin: 24px auto; 	
+	font-weight: 500; 			
+	background-color: #E8F4FF; 
+	box-shadow: inset 2px 2px 5px #69B;	
+	}		
+#demoArea p {
+	font-family:  Montserrat, HelveticaNeueLT, Helvetica, Arial, sans-serif;
+	font-size: 18px; 
+	font-weight: 400; 		
+	}	
+
+.inputLeft {
+	position: relative;
+	float: left;
+	}
+.inputRight {
+	position: relative;
+	float: right;
+	}
+
+
+
+input { 
+	/* box-sizing: border-box; */
+	appearance: none;
+	max-width: 240px;	
+	position: relative; 
+	margin: 2px auto; 
+	padding: 2px;
+	text-align: center; 
+	font-size: 24px; 
+	font-weight: 400; 
+	color: #123; 
+	background-color: #EEA; 
+	border: 1px solid #40B; 
+	border-radius: 6px; 
+	box-shadow: inset 2px 2px 5px #553;
+	}
+input:focus { 
+	border-color: #66F; 
+	color: #123; 
+	background-color: #FFD; 
+	box-shadow: inset 2px 2px 5px #46A;
+	}
+.textInput {
+	max-width: 240px;
+	position: relative; 
+	margin: 0 auto; 
+	text-align: center; 
+	}
+
+
+/* These must be after the inputs */
+
+#BGresult, #textResult {
+	appearance: none;
+	width: 80%;
+	height: 63%;
+	position: relative;
+	margin: 8% 10%;
+	padding: 6% 10%;
+	border: none;
+	border-radius: 6px;
+	box-shadow: none;
+	}
+
+#BGresult-wrap, #textResult-wrap {
+	appearance: none;
+	position: relative; 
+	margin: 12px auto;
+	width: 200px;
+	height: 90px;
+	border: 2px solid #804;
+	border-color: #111 #EEE #EEE #111;
+	border-radius: 12px;		
+	background-color: #808080;
+	}
+
+.queryClear { display: none; font-size: 1em; }	
+	
+	
+.textBox {
+	width: 80vw;
+	max-width: 640px; 
+	margin: 0 auto 2em;
+	}	
+
+.gammaOverflow {
+	overflow: scroll;
+	Margin: 2.5em auto; 
+	padding: 0.5em 32px; 
+	min-width: 500px; 
+	max-width: 749px; 
+	color: #000; 
+	background: #777;
+	font-size: 1rem; 
+	font-weight: bold; 
+	border: 8px solid #000; 
+	border-radius: 1em;
+	}
+
+.gammaContainer {
+	padding: 2em 1em;
+	background: #808080;
+	}
+
+
+.levelsLegendTitle {
+	margin: 24px auto 0;
+	padding: 8px;
+	text-align: center;
+	font-size: 1.1em;
+	font-weight: 500;
+	}	
+.levelsLegend {
+	box-sizing: border-box;	
+	display: inline-block;
+	height: 56px;
+	padding: 16px 12px;
+	background-color: #BCD;
+	border-radius: 12px;
+	box-shadow: inset 3px 3px 6px #0008;		
+	}
+.level4, .level3, .level2, .level1, .level0 {
+	box-sizing: border-box;
+	height: 36px;
+	margin: 8px 8px 0;
+	padding: 4px 12px;
+	font-family: Montserrat, HelveticaNeueLT, Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	opacity: 1;
+	border-radius: 8px;
+	box-shadow: inset -3px -3px 6px #0006,
+						3px 3px 6px #777;					
+	}
+	
+.level1, .level0 {
+	color: #fff;
+	background-color: #D00;
+	font-weight: 700;
+	box-shadow: inset 1px 1px 3px #F77, 
+				inset -3px -3px 6px #811,
+						3px 3px 6px #866;			
+	text-shadow:  	1px 1px 1px #F77, 
+					-1px -1px 1px #822;	
+	}
+	
+.level2 {
+	color: #FFF8E0;
+	background-color: #F60;
+	font-weight: 700;
+	box-shadow: inset 1px 1px 3px #FA4, 
+				inset -3px -3px 6px #831,
+						3px 3px 6px #886;			
+	text-shadow:  	1px 1px 1px #F85, 
+					-1px -1px 1px #A30;	
+	}
+	
+.level3 {
+	color: #800;
+	background-color: #FD1;
+	font-weight: 600;
+	box-shadow: inset 1px 1px 3px #FEA, 
+				inset -3px -3px 6px #861,
+						3px 3px 6px #874;		
+	text-shadow:  	1px 1px 1px #FE8, 
+					-1px -1px 1px #CA0;	
+	}
+	
+.level4 {
+	color: #070;
+	background-color: #CFE;
+	font-weight: 500;
+	box-shadow: inset 1px 1px 3px #DFF, 
+				inset -3px -3px 6px #387,
+						3px 3px 6px #687;		
+	text-shadow:  	1px 1px 1px #DFF, 
+					-1px -1px 1px #9CB;	
+	}		
+/* ********   PRACTICE TABLE   *************************/
+
+.objectModel2 {
+	position: relative;
+	z-index: 2;
+	padding: 2em;
+	max-width: 94vw;
+	margin: 1em auto;
+	background-color: #060;
+	background-image: url('/images/textures/woodA.jpg');
+	background-size: cover;
+	border: 0.3em solid #440;
+	/* border-color: #932 #a95555 #a34242 #932;   */
+	border-radius: 2em;
+	box-shadow: inset 0.1em 0.2em 0.4em 0.02em rgba(255,255,255,0.3),
+				inset -0.1em -0.2em 0.4em 0.06em rgba(0,0,20,0.5),
+				inset 1.2em 1.2em 0.8em 0.3em rgba(20,0,128,0),
+				0.6em 0.6em 1.3em #224;
+	}
+ 
+ 
+.objectModel2::before {
+	content: '';
+	position: absolute;
+	/* specify the value of border width here */
+	top: 1.5em;
+	right: 1.5em;
+	bottom: 1.5em;
+	left: 1.5em;
+	/* --- */
+	border-radius: 1em;
+	box-sizing: border-box;
+	z-index: -1;
+	background-color: #5C9;
+	box-shadow: 0.2em 0.15em 0.3em 0.1em rgba(220,220,255,0.45),
+				-0.1em -0.15em 0.5em 0.1em rgba(0,0,20,0.66),
+				inset 0 0 1em #28F, 
+				 0 0 1em #023, 
+				inset 0.4em 0.4em 0.9em #043;
+	}
+ 
+ 
+
+/*********** TRENDY FRAMED AREA IN CSS —— LINK LIST STYLES  *************/
+
+
+.objectModel {
+	width: 100vw;
+	max-width: 840px;
+	position: relative;
+	z-index: 2;
+	padding: 2em 2.2em 1.2em;
+	margin: 0 auto 1em;
+	background-color: #62A;
+	border: 0.1em solid #60C;
+	/* background-image: url('/images/textures/woodA.jpg');
+	background-size: cover;
+	border-color: #932 #a95555 #a34242 #932;   */
+	border-radius: 1.3em;
+	box-shadow: inset 0.1em 0.2em 0.4em 0.02em rgba(255,255,255,0.3),
+				inset -0.1em -0.2em 0.4em 0.06em rgba(0,0,20,0.5),
+				inset 1.2em 1.2em 0.8em 0.3em rgba(20,0,128,0),
+				0.6em 0.6em 1.3em #224;
+	}
+
+.objectModel::before {
+	content: '';
+	position: absolute;
+	/* specify the value of border width here */
+	top: 1em;
+	right: 1em;
+	bottom: 1em;
+	left: 1em;
+	/* --- */
+	border-radius: .5em;
+	box-sizing: border-box;
+	z-index: -1;
+	background-color: #E2E2AA;
+	box-shadow: 0.2em 0.15em 0.3em 0.1em rgba(220,220,255,0.45),
+				-0.1em -0.15em 0.5em 0.1em rgba(0,0,20,0.66),
+				 0 0 1em #023,
+				inset 0.2em 0.2em 0.6em #459;
+	}
+
+ .objectModel .railing, .objectModel::after {
+ 	content: '';
+	margin: -0.87em;
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	bottom: 1em;
+	left: 1em;
+	z-index: -2;
+	padding: 0em;
+	border: none;
+	border-radius: 1em;
+	box-shadow: inset 0.2em 0.2em 0.4em 0.02em rgba(180,200,255,0.55),
+					-0.1em -0.1em 0.1em 0.02em rgba(255,255,255,0.5),
+					-0.05em -0.05em 0.1em 0.05em rgba(180,200,255,0.1),
+				inset 0 0 0.3em 0.1em rgba(0,0,10,0.3),
+						 0.25em 0.25em 0.3em 0.08em rgba(0,0,10,0.3),
+				inset -0.3em -0.3em 0.3em 0.08em rgba(90,80,200,0.5),/* lower lip brightener*/
+				inset -0.7em -0.7em 0.8em 0.4em rgba(10,10,80,0.8),
+						0.1em 0.1em 0.2em 0.05em rgba(0,0,20,0.5);
+	}
+
+
+	.h1Query, section .h1Query, .h2Query, section .h2Query,
+	.h3Query, section .h3Query {
+		margin: 16px 60px 0;
+		text-align: left;
+		font-size: 2.6em;
+		font-weight: 400;		
+		}
+	.h2Query, section .h2Query   {	margin: 0 60px 16px; color: #206; font-size: 1.8em; font-weight: 300;	}
+	.h3Query, section .h3Query   {	margin: 0 20px 16px;  font-size: 1.3em; font-weight: 500;	}
+
+
+/* ********************************* */
+/******** DEMO CRITICAL FONTS ********/
+/* ********************************* */
+	/* NOTE: the needed fonts are
+		loaded on the HTML pgse */
+
+
+	div.examples {
+		position: relative; 
+		max-width: 1280px; 
+		margin: 0 auto; 	
+		}
+
+	#sansSamples, #serifSamples {
+		position: relative; 
+		vertical-align: bottom;
+		max-width: 1200px; 
+		margin: 12px 24px 12px; 
+		white-space: nowrap; 
+		overflow: hidden;  
+		border-radius: 24px;
+		}
+
+	#sansSamples {
+		font-family: HelveticaNeueLT, Helvetica, Arial, sans-serif;	
+		}
+	#serifSamples {
+		font-family: 'Trirong', serif;
+		}
+		
+	#sansSamples hr, #serifSamples hr {
+		height: 24px;
+		color: #FFF;
+		background-color: #FFF;
+		border-color: #FFF;
+		}
+	#sansSamples .spacer, #serifSamples .spacer {
+		padding: 0;
+		height: 48px;
+		color: #000;
+		background-color: #FFF;
+		}
+	#sansSamples .spacer .currentContrast, #serifSamples .spacer .currentContrast{
+		display: inline-block;
+		box-sizing: border-box;
+		margin: 24px 24px 8px;
+		padding: 4px 35px 0px;
+		height: 32px;
+		font-family: Montserrat, HelveticaNeueLT, Helvetica, Arial, sans-serif;
+		font-size: 18px;
+		color: #000;
+		opacity: 1;
+		border-radius: 8px;
+		background-color: #FFF;
+		box-shadow: inset -3px -3px 6px #0006;					
+		}
+		
+
+	#ampSamp {
+		position: relative; 
+		max-width: 180px;
+		margin: 6px auto 16px;
+		padding: 0;
+		font-size: 84px;
+		font-weight: 700;
+		text-align: center;
+		line-height: 1;
+		white-space: nowrap; 
+		overflow: hidden;  
+		font-family: 'Playfair Display', serif;
+		border: 6px solid #777;
+		border-radius: 24px;
+		box-shadow: 4px 4px 10px #226;			
+		}			
+	.montFont {
+		margin: 0 0 -12px;
+		padding: 10px 0 0;
+		font-family: Montserrat, HelveticaNeueLT, Helvetica, Arial, sans-serif;
+		font-size: 18px;
+		font-weight: 300;
+		}
+	.helvetiFont {
+		margin: px 0 0;
+		padding: 0 0 10px;
+		font-family: HelveticaNeueLT, Helvetica, Arial, sans-serif;
+		font-size: 12px;
+		font-weight: 700;
+		}
+		
+		
+/*		
+@media  (max-width: 477.99px) {
+		
+	}
+		
+@media  (min-width: 478px) and (max-width: 619.99px)  {
+		
+	}
+
+@media (min-width: 620px) and (max-width: 679.99px) {
+			
+	}
+
+*/
+
+		
+
+/* ************************************************************* */
+/* *****   MEDIA QUERIES   ************************************* */
+/* ************************************************************* */
+
+/* ************************************************************* */
+/* *****   MEDIA QUERIES   ************************************* */
+/* ************************************************************* */
+
+/* ************************************************************* */
+/* *****   MEDIA QUERIES   ************************************* */
+/* ************************************************************* */
+
+
+@media (max-width: 477.99px) {
+
+	body { font-size: 16px; }
+	
+	.wrapper {	
+		width: 100vw;
+		overflow: hidden;
+		border: none;
+		}	
+	h1.mastHead {
+		font-size: 2em;
+		font-weight: 500;
+		letter-spacing: 0;
+		}
+	
+	.myndexButton {
+		padding: 0.34em 0.9em;
+		max-width: 100vw;
+		font-family: HelveticaNeueLT, Helvetica, Arial, Verdana,"sans-serif";
+		font-size: 1em;
+		}
+	.myndexButton.buttonRow {
+		display: inline-block;
+		max-width: 75%;
+		font-size: 1.2em;		
+		margin: 1.2em 1.2em 1.5em;
+		}
+	.myndexButton.queryButton {
+		max-width: 500px; 
+		margin: 1em; 
+		padding: 0.6em; 
+		font-size: 16px;
+		}
+		
+	.queryClear { display: none }	
+	.queryHide { display: none }	
+	
+	.inputLeft, .inputRight {
+		float: none;
+		width: 90vw;	
+		margin: 0 auto;
+		}
+	input {
+		width: 60vw;
+		}		
+			
+	.objectModel {
+		width: 100vw;
+		padding: 5vw;
+		box-shadow: none;
+		}
+		
+	#BGresult-wrap, #textResult-wrap {
+		margin: 8px auto;
+		width: 80vw;
+		max-width: 240px;
+		height: 36vw;
+		max-height: 108px;
+		border-radius: 8px;		
+		}
+	#ampSamp {
+		display: block;
+		float: none;
+		margin: 0 auto 32px; 
+		width: 68vw; 
+		max-width: 200px;
+		font-size: 84px;	
+		}		
+	.codeBlock { display: none }
+	
+	#contrast {
+		display: block;
+		float: none; 
+		margin: 0 auto 16px; 
+		width: 70vw; 
+		max-width: 220px;
+		}	
+	.gammaOverflow {
+		overflow: scroll;
+		Margin: 2.5em 0; 
+		padding: 0.5em 32px; 
+		min-width: 500px; 
+		width: 100vw; 
+		}
+	.gammaContainer { padding:0;}
+
+	.levelsLegendTitle {
+		margin: 0.75em auto 0;
+		padding: 0.25em;
+		font-size: 14px;
+		}	
+	.levelsLegend {
+		height: 36px;	
+		padding: 6px;
+		}
+	.level4, .level3, .level2, .level1, .level0 {
+		margin:  2px;
+		height: 20px;
+		padding: 3px 4px;
+		font-size: 12px;
+		}
+	.h1Query, section .h1Query, .h2Query, section .h2Query   {
+		margin: 1.2vw auto -4px;
+		text-align: center;
+		font-size: 7.5vw;
+		font-weight: normal;	
+		}
+	.h2Query, section .h2Query   {	font-size: 5vw; }
+	#sansSamples, #serifSamples {
+		max-width: 1000px;
+		margin: 12px 0 12px 24px; 
+		overflow: scroll;  
+		}	
+	#sansSamples .spacer, #serifSamples .spacer {
+		width: 1350px;
+		overflow: scroll;  
+		}
+	.h1Query, section .h1Query,
+	.h2Query, section .h2Query,
+	.h3Query, section .h3Query {
+		margin: 1.2vw auto -4px;
+		text-align: center;
+		font-size: 7.5vw;
+		font-weight: 400;		
+		}
+	.h2Query, section .h2Query { margin: 0 auto 2vw; color: #206; font-size: 5vw; font-weight: 300; }
+	.h3Query, section .h3Query { margin: 0 auto 1vw; font-size: 4vw; font-weight: 500; }		
+	}
+
+@media (min-width: 478px) and (max-width: 619.99px) {
+
+	body { font-size: 16px; }
+	
+	.wrapper {	
+		width: 100vw;
+		overflow: hidden;
+		border: none;
+		}	
+		
+	h1.mastHead {
+		font-size: 2.3em; 
+		font-weight: 400; 
+		letter-spacing: 0.1em;
+		}
+	
+	.myndexButton {
+		padding: 0.4em 0.8em;
+		max-width: 75vw;
+		font-family: HelveticaNeueLT, Helvetica, Arial, Verdana, "sans-serif";
+		font-size: 1em;
+		}
+	.myndexButton.buttonRow {
+		display: inline-block;
+		max-width: 60%;
+		margin: 1em 1em 1.25em;
+		}
+	.myndexButton.queryButton {
+		max-width: 500px; 
+		margin: 1em; 
+		padding: 0.6em; 
+		font-size: 18px;
+		}
+	
+	.objectModel {
+		width: 100vw;
+		padding: 5vw 4vw;
+		box-shadow: none;
+		}
+	#ampSamp {
+		display: block;
+		float: left;
+		margin: 0 0 16px 6vw; 
+		width: 35vw; 
+		font-size: 84px;	
+		}		
+	.queryClear {display: block; clear: both; Margin: 0; line-height: 0;}	
+	.queryClear::before, .queryClear::after
+		{
+		content: " "; /* 1 */
+		display: table; /* 2 */
+		}
+	.queryClear::after { clear: both; }
+	
+	.queryHide { display: none }	
+	
+	.inputLeft, .inputRight { max-width: 38vw; }
+	.inputLeft { margin-left: 4vw; }
+	.inputRight { margin-right: 4vw; }
+
+	input {	max-width: 32vw; }	
+		
+	.codeBlock { display: none }
+	
+	#contrast {
+		float: right; 
+		margin: 0 5.5vw 16px 0; 
+		width: 35vw; 
+		}	
+	.gammaOverflow {
+		overflow: scroll;
+		Margin: 2.5em 0; 
+		padding: 0.5em 32px; 
+		min-width: 500px; 
+		width: 100vw; 
+		}	
+	.gammaContainer {
+		padding:0;
+		}	
+	
+
+	.levelsLegendTitle {
+		margin: 0.75em auto 0;
+		padding: 0.25em;
+		}	
+	.levelsLegend {
+		height: 40px;
+		padding: 8px 6px;
+		}
+	.level4, .level3, .level2, .level1, .level0 {
+		margin:  8px 4px 0;
+		height: 24px;
+		padding: 4px 6px;
+		font-size: 16px;
+		}
+	#sansSamples, #serifSamples {
+		max-width: 1000px;
+		margin: 12px 0 12px 24px; 
+		overflow: scroll;  
+		}	
+	#sansSamples .spacer, #serifSamples .spacer {
+		width: 1350px;
+		overflow: scroll;  
+		}			
+	.h1Query, section .h1Query,
+	.h2Query, section .h2Query,
+	.h3Query, section .h3Query {
+		margin: 1.2vw 3vw;
+		text-align: left;
+		font-size: 6vw;
+		font-weight: 400;		
+		}
+	.h2Query, section .h2Query { margin: 0 3vw 2vw; color: #206; font-size: 4vw; font-weight: 300; }
+	.h3Query, section .h3Query { margin: 0 0 1vw; font-size: 3.5vw; font-weight: 500; }	
+	}
+
+
+@media (min-width: 620px) and (max-width: 859.99px) {
+
+	body { font-size: 16px; }
+	
+	.wrapper {	
+		width: 100vw;
+		overflow: hidden;
+		border: 6px solid #30A;
+		}	
+	
+	h1.mastHead {
+		font-size: 2.4em; 
+		font-weight: 300; 
+		letter-spacing: 0.1em;
+		}	
+	.objectModel {
+		width: 100vw;
+		box-shadow: none;
+		left: -6px;
+		}
+	
+	.myndexButton {
+		padding: 0.44em 1.1em;
+		max-width: 65vw;
+		font-family: HelveticaNeueLT, Helvetica, Arial, Verdana,"sans-serif";
+		font-size: 1.2em;
+		}
+	.myndexButton.buttonRow {
+		display: inline-block;
+		max-width: 60%;
+		margin: 1em 1em 1.25em;
+		}
+	.myndexButton.queryButton {
+		max-width: 350px;
+		margin: 0.5em 1em; 
+		padding: 0.6em; 
+		font-size: 16px;
+		}
+		
+	.queryClear { display: none }	
+	.queryHide { display: none }	
+	
+	.inputLeft, .inputRight {max-width: 32vw;}
+	input {	max-width: 26vw;}	
+			
+	.codeBlock {
+		max-width: 32vw;
+		margin: 12px 0 0; 
+		padding: 6px 8px; 
+		border-radius: 10px;
+		font-size: 12px;
+		}
+	#ampSamp {
+		width: 22vw;
+		font-size: 72px;	
+		}		
+	#contrast {
+		width: 21vw; 
+		}		
+	#contrastLabel {
+		font-size: 2.2vw; 
+		font-weight: 400;
+		}
+	#contrastResult {
+		font-size: 4.4vw; 
+		font-weight: 700;
+		}
+	#sansSamples, #serifSamples {
+		max-width: 1000px;
+		margin: 12px 24px 12px; 
+		overflow: scroll;  
+		}	
+	#sansSamples .spacer, #serifSamples .spacer {
+		width: 1350px;
+		overflow: scroll;  
+		}
+	.h1Query, section .h1Query,
+	.h2Query, section .h2Query,
+	.h3Query, section .h3Query {
+		margin: 0.5vw 4vw;
+		text-align: left;
+		font-size: 5vw;
+		font-weight: 400;		
+		}
+	.h2Query, section .h2Query { margin: 0 4vw 2vw; color: #206; font-size: 3vw; font-weight: 300; }
+	.h3Query, section .h3Query { margin: 0 0 2vw; font-size: 2.4vw; font-weight: 500; }		
+	}
+
+/* ************************************************************* */
+/* *****   END MEDIA QUERIES   ********************************* */
+/* ************************************************************* */
 
 
 
 /* ************************************************************* */
+/* *****   Alignments and clear fix etc.   ********************* */
+/* ************************************************************* */
+
+.centered {
+	position: relative;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	}
+
+article h1, article h2,  article h3,
+article h1 a, article h2 a,  article h3 a
+	{
+	text-align: center;
+	}
+
+.left, .leftCol {
+	text-align: left;
+	float: left;
+	background-position: left;
+	background-size: contain;
+	background-repeat: no-repeat;
+	}
+
+.right, .rightCol {
+	text-align: left;
+	float: right;
+	background-position: right;
+	background-size: contain;
+	background-repeat: no-repeat;
+	}
+
+.leftCol, .rightCol {
+	Position: Relative;
+	height: 100%;
+	}
+
+.leftText {	text-align: left; }
+
+.rightText{ text-align: right; }
+
+/* ************************************************************* */
+/* ************************************************************* */
+/**
+ * CLEARFIX for modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* ************************************************************* */
+/* ************************************************************* */
+
+
+.clrf:before, .clear:before, .clearfix:before,
+.clrf:after, .clear:after, .clearfix:after
+	{
+    content: " "; /* 1 */
+    display: table; /* 2 */
+	}
+
+.clrf:after, .clear:after, .clearfix:after { clear: both; }
+
+/****	For IE 6/7 only
+		Include this rule to trigger hasLayout and contain floats.
+****/
+.clrf, .clear, .clearfix {*zoom: 1;}
+
+
+
+/* ************************************************************* */
+/* ------------------------------------------------------------- */
+/* ************************************************************* */
+/* ************************************************************* */
+/* ------------------------------------------------------------- */
+/* ************************************************************* */
+/* ************************************************************* */
 /* **********                                     ************** */
 /* **********         T I N Y    T R I M          ************** */
-/* **********             (ABRIDGED)              ************** */
+/* **********                                     ************** */
 /* ************************************************************* */
 /* **********                                     ************** */
 /* **********  TRIM CLASSES  —  Myndex TinyTrim™  ************** */
@@ -581,6 +1617,449 @@ hr { margin: -2px 0; padding: 0; border: 16px solid #FFF;}
 /* **********         All Rights Reserved         ************** */
 /* **********                                     ************** */
 /* ************************************************************* */
+/* ************************************************************* */
+/* ------------------------------------------------------------- */
+/* ************************************************************* */
+/* ************************************************************* */
+/* ------------------------------------------------------------- */
+/* ************************************************************* */
+
+
+	/* ********************************* */
+	/********	REFERENCE GUIDE	  ********/
+	/* ********************************* */
+
+/*
+	FIRST LETTER:
+
+.a or .un	all:
+.al		align, alias for text-align (ta)
+.d or .ds 	display: (see display section)
+
+.fl		float
+.c or .cl	clear
+
+.w	0	width
+.h	0	height
+
+.m	0	margin
+.ma	0	margin set vertical numeric and auto for horizontal
+	.mt .mr .mb .ml  top right bottom left
+.p	0	padding (also position settings)
+	.pt .pr .pb .pl  top right bottom left
+
+.p or .po position settings (abs, rel etc)
+.po	0	position adjust
+.z	0	z-index
+
+.b	0	border
+	/// .bt .br .bb .bl  top right bottom left ///
+.br	0	border radius
+.f		font
+.ff		font-family
+.fs	0	font-size (.fs no numeric is font style)
+.fw	0	font-weight
+.ft	or .fs	font-style
+.fd or .td	text-decoration (font decoration is an alias) aka underline
+
+.bs		box-shadow
+.bsi	inset box-shadow
+.ts		text-shadow
+
+.tt		text-transform
+.t or .ta	text-align
+.tl		text-align-last
+.ti		text-indent
+
+.v		visibility or vertical align
+.va		vertical align for initial, inherit, others as alias
+.ws		white-space
+
+.o		overflow
+.to		text overflow
+
+
+2ND/3RD LETTER:
+
+	i	initial
+	h	inherit
+
+	a	auto, absolute
+	o	oblique
+	it	italic
+NoLetter	normal
+	b	both, bold
+	br bolder
+	lr	lighter
+	l	left, light, lowercase, length
+	r	right, relative
+	j	justify (.tj, .taj, .tlj)
+	c	center, capitalize, clip
+
+	s	scroll, string, start
+	e	end
+	t	top
+	xt	text-top
+	m	middle
+	b	bottom
+	xb	text-bottom
+
+	p	pre
+	pl	pre-line
+	pw	pre-wrap
+
+	bl	baseline
+	n	none, hidden, nowrap
+	h	hidden, also hid and hi
+	v	visible also vis
+	u	unset or uppercase
+
+	NO 2ND/3RD LETTER: 	NORMAL
+
+	LAST LETTER (AFTER NUMBERS)
+
+	p	px
+	r	rem
+
+nothing	em or unitless
+
+****************************** */
+
+/* *****   CONFLICT ISSUES
+.p - padding and position
+.br - border right and border radius
+.clr -was used as clear fix, scan all docs
+
+*/
+
+
+/* **** 	TO DO   ****
+
+max-width: none|length|initial|inherit;
+min-width: length|initial|inherit;
+
+max-height: none|length|initial|inherit;
+min-height: length|initial|inherit;
+
+cursor: value;
+
+
+COMPLETE:
+
+** width: auto|value|initial|inherit;
+** height: auto|length|initial|inherit;
+ ---   add more units
+
+** vertical-align: baseline|length|sub|super|top|text-top|middle|bottom|text-bottom|initial|inherit;
+** visibility: visible|hidden|collapse|initial|inherit;
+** z-index: auto|number|initial|inherit;
+** overflow: visible|hidden|scroll|auto|initial|inherit;
+** white-space: normal|nowrap|pre|pre-line|pre-wrap|initial|inherit;
+** text-overflow: clip|ellipsis|string|initial|inherit;
+** text-transform: none|capitalize|uppercase|lowercase|initial|inherit;
+** text-align: left|right|center|justify|initial|inherit;
+** text-align-last: auto|left|right|center|justify|start|end|initial|inherit;
+** text-indent: length|initial|inherit;
+
+*/
+
+
+/****   UNSETS   ****/
+
+.ai, .uni {all: initial;}
+.ah, .unh {all: inherit;}
+.au, .uns {all: unset;}
+
+
+/****  DISPLAY  ****************
+
+	.d or .ds display
+	b block
+	c content, cell (tc), or container (ruby)
+	f flow
+	fr flow-root
+	fx flex
+	g grid or group
+	i inline
+	ib inline-block
+	ih inherit
+	it initial
+	l list-item
+	m column
+	n, no  = none
+	p caption
+	r ruby or row or run-in
+	rb ruby base
+	rt ruby text
+	ry ruby
+
+********************************/
+
+/**************************************************/
+/***************      SPECIALS      ***************/
+/**************************************************/
+
+.aa {
+	-webkit-font-smoothing: auto;
+	-moz-osx-font-smoothing: auto;
+	font-smooth: auto;
+	}
+
+.aaa {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smooth: always;
+	}
+
+/**************************************************/
+/**********    DISPLAY and VISIBILITY    **********/
+/**************************************************/
+
+/**** ds global values  ****/
+.dsi	{ display: initial; }
+.dsh	{ display: inherit; }
+.dsu	{ display: unset; }
+
+/**** d  display-box  values  ****/
+.dc 	{ display: contents; }
+.dn  	{ display: none; }
+
+/**** d display-outside values  ****/
+.db		{ display: block; }
+.di		{ display: inline; }
+.dr		{ display: run-in; }
+
+/**** d  display-legacy  values  ****/
+.dib	{ display: inline-block; }
+.dif	{ display: inline-flex; }
+.dig	{ display: inline-grid; }
+.dit	{ display: inline-table; }
+
+/**** d  display-inside  values  ****/
+.df		{ display: flow; }
+.dfr	{ display: flow-root; }
+.dt		{ display: table; }
+.dfx	{ display: flex; }
+.dg		{ display: grid; }
+.dry	{ display: ruby; }
+
+/**** ds  display-outside  plus  display-inside  values  ****/
+.dsbf	{ display: block flow; }
+.dsit	{ display: inline table; }
+.dfxr	{ display: flex run-in; }
+
+/**** dl  display-list-item  values  ****/
+.dl		{ display: list-item; }
+.dlb	{ display: list-item block; }
+.dli	{ display: list-item inline; }
+.dlf	{ display: list-item flow; }
+.dlfr	{ display: list-item flow-root; }
+.dlbf	{ display: list-item block flow; }
+.dlbfr	{ display: list-item block flow-root; }
+
+.dflb	{ display: flow list-item block; }
+
+/**** dt  display-internal  values  ****/
+.dtrg	{ display: table-row-group; }
+.dthg	{ display: table-header-group; }
+.dtfg	{ display: table-footer-group; }
+.dtr	{ display: table-row; }
+.dtc	{ display: table-cell; }
+.dtmg	{ display: table-column-group; }
+.dtm	{ display: table-column; }
+.dtp	{ display: table-caption; }
+
+.drb	{ display: ruby-base; }
+.drt	{ display: ruby-text; }
+.drbc	{ display: ruby-base-container; }
+.drtc	{ display: ruby-text-container; }
+
+
+
+/****   VISIBILITY    ****/
+
+.vi {visibility: initial;}
+.vh {visibility: inherit;}
+.vv, .vis, .vvis .sho .show{visibility: visible;}
+.vn, .vhi, .vhid .hid .hide {visibility: hidden;}
+.vc {visibility: collapse;}
+
+
+/****   overflow and wrap   ****/
+
+.oi {overflow: initial;}
+.oh {overflow: inherit;}
+.oa {overflow: auto;}
+.ou {overflow: unset;}
+.ov, .ovis {overflow: visible;}
+.on, .ohi, .ohid {overflow: hidden;}
+.oc {overflow: clip;}
+.os {overflow: scroll;}
+
+.toi {text-overflow: initial;}
+.toh {text-overflow: inherit;}
+.toc {text-overflow: clip;}
+.toe {text-overflow: ellipsis;}
+
+.wsi 	{white-space: initial;}
+.wsh 	{white-space: inherit;}
+.ws 	{white-space: normal;}
+.wsn	{white-space: nowrap;}
+.wsp 	{white-space: pre;}
+.wspl	{white-space: pre-line;}
+.wspw 	{white-space: pre-wrap;}
+
+
+/******************************************/
+/**********    ELEMENT SIZE    ************/
+/******************************************/
+
+/********* TO DO: Responsive Sizing *********/
+
+/****   sizes   ****/
+
+/**** w  width   ****/
+
+.wi {width: initial;}
+.wh {width: inherit;}
+.wa {width: auto;}
+.wu {width: unset;}
+
+/**** w_p  width in px   ****/
+
+.w1p  {width: 10px;}
+.w2p  {width: 20px;}
+.w3p  {width: 30px;}
+.w4p  {width: 40px;}
+.w5p  {width: 50px;}
+.w6p  {width: 60px;}
+.w7p  {width: 70px;}
+.w8p  {width: 80px;}
+.w9p  {width: 90px;}
+.w10p {width: 100px;}
+.w11p {width: 110px;}
+.w12p {width: 120px;}
+.w13p {width: 130px;}
+.w14p {width: 140px;}
+.w15p {width: 150px;}
+.w16p {width: 160px;}
+.w17p {width: 170px;}
+.w18p {width: 180px;}
+.w19p {width: 190px;}
+.w20p {width: 200px;}
+.w21p {width: 210px;}
+.w22p {width: 220px;}
+.w23p {width: 230px;}
+.w24p {width: 240px;}
+.w25p {width: 250px;}
+.w30p {width: 300px;}
+.w35p {width: 350px;}
+.w40p {width: 400px;}
+.w45p {width: 450px;}
+.w50p {width: 500px;}
+.w55p {width: 550px;}
+.w60p {width: 600px;}
+.w65p {width: 650px;}
+.w70p {width: 700px;}
+
+/**** w  width as percentage  ****/
+
+.w05 {width: 5%;}
+.w10 {width: 10%;}
+.w15 {width: 15%;}
+.w20 {width: 20%;}
+.w25 {width: 25%;}
+.w30 {width: 30%;}
+.w35 {width: 35%;}
+.w40 {width: 40%;}
+.w45 {width: 45%;}
+.w50 {width: 50%;}
+.w55 {width: 55%;}
+.w60 {width: 60%;}
+.w65 {width: 65%;}
+.w70 {width: 70%;}
+.w75 {width: 75%;}
+.w80 {width: 80%;}
+.w85 {width: 85%;}
+.w90 {width: 90%;}
+.w95 {width: 95%;}
+.w100 {width: 100%;}
+.w105 {width: 105%;}
+.w110 {width: 110%;}
+.w115 {width: 115%;}
+.w120 {width: 120%;}
+
+
+/**** h  height  ****/
+
+.hi {height: initial;}
+.hh {height: inherit;}
+.ha {height: auto;}
+.hu {height: unset;}
+
+/**** h_p  height as px  ****/
+
+.h1p  {height: 10px;}
+.h2p  {height: 20px;}
+.h3p  {height: 30px;}
+.h4p  {height: 40px;}
+.h5p  {height: 50px;}
+.h6p  {height: 60px;}
+.h7p  {height: 70px;}
+.h8p  {height: 80px;}
+.h9p  {height: 90px;}
+.h10p {height: 100px;}
+.h11p {height: 110px;}
+.h12p {height: 120px;}
+.h13p {height: 130px;}
+.h14p {height: 140px;}
+.h15p {height: 150px;}
+.h16p {height: 160px;}
+.h17p {height: 170px;}
+.h18p {height: 180px;}
+.h19p {height: 190px;}
+.h20p {height: 200px;}
+.h21p {height: 210px;}
+.h22p {height: 220px;}
+.h23p {height: 230px;}
+.h24p {height: 240px;}
+.h25p {height: 250px;}
+.h30p {height: 300px;}
+.h35p {height: 350px;}
+.h40p {height: 400px;}
+.h45p {height: 450px;}
+.h50p {height: 500px;}
+.h55p {height: 550px;}
+.h60p {height: 600px;}
+.h65p {height: 650px;}
+.h70p {height: 700px;}
+
+/**** h  height as percentage  ****/
+
+.h05 {height: 5%;}
+.h10 {height: 10%;}
+.h15 {height: 15%;}
+.h20 {height: 20%;}
+.h25 {height: 25%;}
+.h30 {height: 30%;}
+.h35 {height: 35%;}
+.h40 {height: 40%;}
+.h45 {height: 45%;}
+.h50 {height: 50%;}
+.h55 {height: 55%;}
+.h60 {height: 60%;}
+.h65 {height: 65%;}
+.h70 {height: 70%;}
+.h75 {height: 75%;}
+.h80 {height: 80%;}
+.h85 {height: 85%;}
+.h90 {height: 90%;}
+.h95 {height: 95%;}
+.h100 {height: 100%;}
+.h105 {height: 105%;}
+.h110 {height: 110%;}
+.h115 {height: 115%;}
+.h120 {height: 120%;}
 
 
 /******************************************/
@@ -620,6 +2099,363 @@ hr { margin: -2px 0; padding: 0; border: 16px solid #FFF;}
 .clb {clear: both;}
 
 /* clf - clear fix, setup earlier */
+
+/******************************************/
+/**********    POSITION ADJUST    *********/
+/******************************************/
+
+/****  pot  position top in px ****/
+
+.pot-9p {top: -09px;}
+.pot-8p {top: -08px;}
+.pot-7p {top: -07px;}
+.pot-6p {top: -06px;}
+.pot-5p {top: -05px;}
+.pot-4p {top: -04px;}
+.pot-3p {top: -03px;}
+.pot-2p {top: -02px;}
+.pot-1p {top: -01px;}
+.pot0p, .pot00p {top: 0;}
+.pot1p, .pot01p {top: 01px;}
+.pot2p, .pot02p {top: 02px;}
+.pot3p, .pot03p {top: 03px;}
+.pot4p, .pot04p {top: 04px;}
+.pot5p, .pot05p {top: 05px;}
+.pot6p, .pot06p {top: 06px;}
+.pot7p, .pot07p {top: 07px;}
+.pot8p, .pot08p {top: 08px;}
+.pot9p, .pot09p {top: 09px;}
+.pot10p {top: 10px;}
+.pot11p {top: 11px;}
+.pot12p {top: 12px;}
+.pot13p {top: 13px;}
+.pot14p {top: 14px;}
+.pot15p {top: 15px;}
+.pot16p {top: 16px;}
+.pot17p {top: 17px;}
+.pot18p {top: 18px;}
+.pot19p {top: 19px;}
+.pot20p {top: 20px;}
+.pot21p {top: 21px;}
+.pot22p {top: 22px;}
+.pot23p {top: 23px;}
+.pot24p {top: 24px;}
+.pot25p {top: 25px;}
+
+/****  por  position right in px ****/
+
+.por-9p {right: -09px;}
+.por-8p {right: -08px;}
+.por-7p {right: -07px;}
+.por-6p {right: -06px;}
+.por-5p {right: -05px;}
+.por-4p {right: -04px;}
+.por-3p {right: -03px;}
+.por-2p {right: -02px;}
+.por-1p {right: -01px;}
+.por0p, .por00p {right: 0;}
+.por1p, .por01p {right: 01px;}
+.por2p, .por02p {right: 02px;}
+.por3p, .por03p {right: 03px;}
+.por4p, .por04p {right: 04px;}
+.por5p, .por05p {right: 05px;}
+.por6p, .por06p {right: 06px;}
+.por7p, .por07p {right: 07px;}
+.por8p, .por08p {right: 08px;}
+.por9p, .por09p {right: 09px;}
+.por10p {right: 10px;}
+.por11p {right: 11px;}
+.por12p {right: 12px;}
+.por13p {right: 13px;}
+.por14p {right: 14px;}
+.por15p {right: 15px;}
+.por16p {right: 16px;}
+.por17p {right: 17px;}
+.por18p {right: 18px;}
+.por19p {right: 19px;}
+.por20p {right: 20px;}
+.por21p {right: 21px;}
+.por22p {right: 22px;}
+.por23p {right: 23px;}
+.por24p {right: 24px;}
+.por25p {right: 25px;}
+
+/**** pob  position bottom in px ****/
+
+.pob-9p {bottom: -09px;}
+.pob-8p {bottom: -08px;}
+.pob-7p {bottom: -07px;}
+.pob-6p {bottom: -06px;}
+.pob-5p {bottom: -05px;}
+.pob-4p {bottom: -04px;}
+.pob-3p {bottom: -03px;}
+.pob-2p {bottom: -02px;}
+.pob-1p {bottom: -01px;}
+.pob0p, .pob00p {bottom: 0;}
+.pob1p, .pob01p {bottom: 01px;}
+.pob2p, .pob02p {bottom: 02px;}
+.pob3p, .pob03p {bottom: 03px;}
+.pob4p, .pob04p {bottom: 04px;}
+.pob5p, .pob05p {bottom: 05px;}
+.pob6p, .pob06p {bottom: 06px;}
+.pob7p, .pob07p {bottom: 07px;}
+.pob8p, .pob08p {bottom: 08px;}
+.pob9p, .pob09p {bottom: 09px;}
+.pob10p {bottom: 10px;}
+.pob11p {bottom: 11px;}
+.pob12p {bottom: 12px;}
+.pob13p {bottom: 13px;}
+.pob14p {bottom: 14px;}
+.pob15p {bottom: 15px;}
+.pob16p {bottom: 16px;}
+.pob17p {bottom: 17px;}
+.pob18p {bottom: 18px;}
+.pob19p {bottom: 19px;}
+.pob20p {bottom: 20px;}
+.pob21p {bottom: 21px;}
+.pob22p {bottom: 22px;}
+.pob23p {bottom: 23px;}
+.pob24p {bottom: 24px;}
+.pob25p {bottom: 25px;}
+
+/**** pol  position left in px ****/
+
+.pol-9p {left: -09px;}
+.pol-8p {left: -08px;}
+.pol-7p {left: -07px;}
+.pol-6p {left: -06px;}
+.pol-5p {left: -05px;}
+.pol-4p {left: -04px;}
+.pol-3p {left: -03px;}
+.pol-2p {left: -02px;}
+.pol-1p {left: -01px;}
+.pol0p, .pol00p {left: 0;}
+.pol1p, .pol01p {left: 01px;}
+.pol2p, .pol02p {left: 02px;}
+.pol3p, .pol03p {left: 03px;}
+.pol4p, .pol04p {left: 04px;}
+.pol5p, .pol05p {left: 05px;}
+.pol6p, .pol06p {left: 06px;}
+.pol7p, .pol07p {left: 07px;}
+.pol8p, .pol08p {left: 08px;}
+.pol9p, .pol09p {left: 09px;}
+.pol10p {left: 10px;}
+.pol11p {left: 11px;}
+.pol12p {left: 12px;}
+.pol13p {left: 13px;}
+.pol14p {left: 14px;}
+.pol15p {left: 15px;}
+.pol16p {left: 16px;}
+.pol17p {left: 17px;}
+.pol18p {left: 18px;}
+.pol19p {left: 19px;}
+.pol20p {left: 20px;}
+.pol21p {left: 21px;}
+.pol22p {left: 22px;}
+.pol23p {left: 23px;}
+.pol24p {left: 24px;}
+.pol25p {left: 25px;}
+
+
+/****  pot  position top ****/
+
+.pot-9 {top: -0.9em;}
+.pot-8 {top: -0.8em;}
+.pot-7 {top: -0.7em;}
+.pot-6 {top: -0.6em;}
+.pot-5 {top: -0.5em;}
+.pot-4 {top: -0.4em;}
+.pot-3 {top: -0.3em;}
+.pot-2 {top: -0.2em;}
+.pot-1 {top: -0.1em;}
+.pot, .pot0, .pot00 {top: 0;}
+.pot1, .pot01 {top: 0.1em;}
+.pot2, .pot02 {top: 0.2em;}
+.pot3, .pot03 {top: 0.3em;}
+.pot4, .pot04 {top: 0.4em;}
+.pot5, .pot05 {top: 0.5em;}
+.pot6, .pot06 {top: 0.6em;}
+.pot7, .pot07 {top: 0.7em;}
+.pot8, .pot08 {top: 0.8em;}
+.pot9, .pot09 {top: 0.9em;}
+.pot10 {top: 1.0em;}
+.pot11 {top: 1.1em;}
+.pot12 {top: 1.2em;}
+.pot13 {top: 1.3em;}
+.pot14 {top: 1.4em;}
+.pot15 {top: 1.5em;}
+.pot16 {top: 1.6em;}
+.pot17 {top: 1.7em;}
+.pot18 {top: 1.8em;}
+.pot19 {top: 1.9em;}
+.pot20 {top: 2.0em;}
+.pot21 {top: 2.1em;}
+.pot22 {top: 2.2em;}
+.pot23 {top: 2.3em;}
+.pot24 {top: 2.4em;}
+.pot25 {top: 2.5em;}
+
+/****  por  position right ****/
+
+.por-9 {right: -0.9em;}
+.por-8 {right: -0.8em;}
+.por-7 {right: -0.7em;}
+.por-6 {right: -0.6em;}
+.por-5 {right: -0.5em;}
+.por-4 {right: -0.4em;}
+.por-3 {right: -0.3em;}
+.por-2 {right: -0.2em;}
+.por-1 {right: -0.1em;}
+.por, .por0, .por00 {right: 0;}
+.por1, .por01 {right: 0.1em;}
+.por2, .por02 {right: 0.2em;}
+.por3, .por03 {right: 0.3em;}
+.por4, .por04 {right: 0.4em;}
+.por5, .por05 {right: 0.5em;}
+.por6, .por06 {right: 0.6em;}
+.por7, .por07 {right: 0.7em;}
+.por8, .por08 {right: 0.8em;}
+.por9, .por09 {right: 0.9em;}
+.por10 {right: 1.0em;}
+.por11 {right: 1.1em;}
+.por12 {right: 1.2em;}
+.por13 {right: 1.3em;}
+.por14 {right: 1.4em;}
+.por15 {right: 1.5em;}
+.por16 {right: 1.6em;}
+.por17 {right: 1.7em;}
+.por18 {right: 1.8em;}
+.por19 {right: 1.9em;}
+.por20 {right: 2.0em;}
+.por21 {right: 2.1em;}
+.por22 {right: 2.2em;}
+.por23 {right: 2.3em;}
+.por24 {right: 2.4em;}
+.por25 {right: 2.5em;}
+
+/**** pob  position bottom ****/
+
+.pob-9 {bottom: -0.9em;}
+.pob-8 {bottom: -0.8em;}
+.pob-7 {bottom: -0.7em;}
+.pob-6 {bottom: -0.6em;}
+.pob-5 {bottom: -0.5em;}
+.pob-4 {bottom: -0.4em;}
+.pob-3 {bottom: -0.3em;}
+.pob-2 {bottom: -0.2em;}
+.pob-1 {bottom: -0.1em;}
+.pob, .pob0, .pob00 {bottom: 0;}
+.pob1, .pob01 {bottom: 0.1em;}
+.pob2, .pob02 {bottom: 0.2em;}
+.pob3, .pob03 {bottom: 0.3em;}
+.pob4, .pob04 {bottom: 0.4em;}
+.pob5, .pob05 {bottom: 0.5em;}
+.pob6, .pob06 {bottom: 0.6em;}
+.pob7, .pob07 {bottom: 0.7em;}
+.pob8, .pob08 {bottom: 0.8em;}
+.pob9, .pob09 {bottom: 0.9em;}
+.pob10 {bottom: 1.0em;}
+.pob11 {bottom: 1.1em;}
+.pob12 {bottom: 1.2em;}
+.pob13 {bottom: 1.3em;}
+.pob14 {bottom: 1.4em;}
+.pob15 {bottom: 1.5em;}
+.pob16 {bottom: 1.6em;}
+.pob17 {bottom: 1.7em;}
+.pob18 {bottom: 1.8em;}
+.pob19 {bottom: 1.9em;}
+.pob20 {bottom: 2.0em;}
+.pob21 {bottom: 2.1em;}
+.pob22 {bottom: 2.2em;}
+.pob23 {bottom: 2.3em;}
+.pob24 {bottom: 2.4em;}
+.pob25 {bottom: 2.5em;}
+
+/**** pol  position left ****/
+
+.pol-9 {left: -0.9em;}
+.pol-8 {left: -0.8em;}
+.pol-7 {left: -0.7em;}
+.pol-6 {left: -0.6em;}
+.pol-5 {left: -0.5em;}
+.pol-4 {left: -0.4em;}
+.pol-3 {left: -0.3em;}
+.pol-2 {left: -0.2em;}
+.pol-1 {left: -0.1em;}
+.pol,  .pol0, .pol00 {left: 0;}
+.pol1, .pol01 {left: 0.1em;}
+.pol2, .pol02 {left: 0.2em;}
+.pol3, .pol03 {left: 0.3em;}
+.pol4, .pol04 {left: 0.4em;}
+.pol5, .pol05 {left: 0.5em;}
+.pol6, .pol06 {left: 0.6em;}
+.pol7, .pol07 {left: 0.7em;}
+.pol8, .pol08 {left: 0.8em;}
+.pol9, .pol09 {left: 0.9em;}
+.pol10 {left: 1.0em;}
+.pol11 {left: 1.1em;}
+.pol12 {left: 1.2em;}
+.pol13 {left: 1.3em;}
+.pol14 {left: 1.4em;}
+.pol15 {left: 1.5em;}
+.pol16 {left: 1.6em;}
+.pol17 {left: 1.7em;}
+.pol18 {left: 1.8em;}
+.pol19 {left: 1.9em;}
+.pol20 {left: 2.0em;}
+.pol21 {left: 2.1em;}
+.pol22 {left: 2.2em;}
+.pol23 {left: 2.3em;}
+.pol24 {left: 2.4em;}
+.pol25 {left: 2.5em;}
+
+
+
+/**** z  Z-INDEX    ****/
+
+.zi {z-index: initial;}
+.zh {z-index: inherit;}
+.zu {z-index: unset;}
+.za {z-index: auto;}
+
+.z-9, .z09 {z-index: -9;}
+.z-8, .z08 {z-index: -8;}
+.z-7, .z07 {z-index: -7;}
+.z-6, .z06 {z-index: -6;}
+.z-5, .z05 {z-index: -5;}
+.z-4, .z04 {z-index: -4;}
+.z-3, .z03 {z-index: -3;}
+.z-2, .z02 {z-index: -2;}
+.z-1, .z01 {z-index: -1;}
+.z, .z0, .z00 {z-index: 0;}
+.z1 {z-index: 1;}
+.z2 {z-index: 2;}
+.z3 {z-index: 3;}
+.z4 {z-index: 4;}
+.z5 {z-index: 5;}
+.z6 {z-index: 6;}
+.z7 {z-index: 7;}
+.z8 {z-index: 8;}
+.z9 {z-index: 9;}
+.z10 {z-index: 10;}
+.z20 {z-index: 20;}
+.z30 {z-index: 30;}
+.z40 {z-index: 40;}
+.z50 {z-index: 50;}
+.z60 {z-index: 60;}
+.z70 {z-index: 70;}
+.z80 {z-index: 80;}
+.z90 {z-index: 90;}
+.z100 {z-index: 100;}
+.z200 {z-index: 200;}
+.z300 {z-index: 300;}
+.z400 {z-index: 400;}
+.z500 {z-index: 500;}
+.z600 {z-index: 600;}
+.z700 {z-index: 700;}
+.z800 {z-index: 800;}
+.z900 {z-index: 900;}
+
 
 
 
@@ -961,9 +2797,209 @@ hr { margin: -2px 0; padding: 0; border: 16px solid #FFF;}
 .pl24 {padding-left: 2.4em;}
 .pl25 {padding-left: 2.5em;}
 
+
+
+/******************************************/
+/**********        BORDERS       **********/
+/******************************************/
+
+.bi {border: initial;}
+.bh {border: inherit;}
+.b, .bn {border: none;}
+
+.bri {border-radius: initial;}
+.brh {border-radius: inherit;}
+.br, .brn {border-radius: 0;}
+
+/****  b__p  border in px ****/
+
+.b1p, .b01p {border:  1px solid #000;}
+.b2p, .b02p {border:  2px solid #000;}
+.b3p, .b03p {border:  3px solid #000;}
+.b4p, .b04p {border:  4px solid #000;}
+.b5p, .b05p {border:  5px solid #000;}
+.b6p, .b06p {border:  6px solid #000;}
+.b7p, .b07p {border:  7px solid #000;}
+.b8p, .b08p {border:  8px solid #000;}
+.b9p, .b09p {border:  9px solid #000;}
+.b10p {border: 10px solid #000;}
+.b11p {border: 11px solid #000;}
+.b12p {border: 12px solid #000;}
+.b13p {border: 13px solid #000;}
+.b14p {border: 14px solid #000;}
+.b15p {border: 15px solid #000;}
+.b16p {border: 16px solid #000;}
+.b17p {border: 17px solid #000;}
+.b18p {border: 18px solid #000;}
+.b19p {border: 19px solid #000;}
+.b20p {border: 20px solid #000;}
+.b21p {border: 21px solid #000;}
+.b22p {border: 22px solid #000;}
+.b23p {border: 23px solid #000;}
+.b24p {border: 24px solid #000;}
+.b25p {border: 25px solid #000;}
+
+/****  br__p  border radius in px ****/
+
+.br1p, .br01p {border-radius:  1px;}
+.br2p, .br02p {border-radius:  2px;}
+.br3p, .br03p {border-radius:  3px;}
+.br4p, .br04p {border-radius:  4px;}
+.br5p, .br05p {border-radius:  5px;}
+.br6p, .br06p {border-radius:  6px;}
+.br7p, .br07p {border-radius:  7px;}
+.br8p, .br08p {border-radius:  8px;}
+.br9p, .br09p {border-radius:  9px;}
+.br10p {border-radius: 10px;}
+.br11p {border-radius: 11px;}
+.br12p {border-radius: 12px;}
+.br13p {border-radius: 13px;}
+.br14p {border-radius: 14px;}
+.br15p {border-radius: 15px;}
+.br16p {border-radius: 16px;}
+.br17p {border-radius: 17px;}
+.br18p {border-radius: 18px;}
+.br19p {border-radius: 19px;}
+.br20p {border-radius: 20px;}
+.br21p {border-radius: 21px;}
+.br22p {border-radius: 22px;}
+.br23p {border-radius: 23px;}
+.br24p {border-radius: 24px;}
+.br25p {border-radius: 25px;}
+
+/****  b  border in em ****/
+
+.b0, .b00 {border: none;}
+.b1, .b01 {border: 0.1em solid #000;}
+.b2, .b02 {border: 0.2em solid #000;}
+.b3, .b03 {border: 0.3em solid #000;}
+.b4, .b04 {border: 0.4em solid #000;}
+.b5, .b05 {border: 0.5em solid #000;}
+.b6, .b06 {border: 0.6em solid #000;}
+.b7, .b07 {border: 0.7em solid #000;}
+.b8, .b08 {border: 0.8em solid #000;}
+.b9, .b09 {border: 0.9em solid #000;}
+.b10 {border: 1.0em solid #000;}
+.b11 {border: 1.1em solid #000;}
+.b12 {border: 1.2em solid #000;}
+.b13 {border: 1.3em solid #000;}
+.b14 {border: 1.4em solid #000;}
+.b15 {border: 1.5em solid #000;}
+.b16 {border: 1.6em solid #000;}
+.b17 {border: 1.7em solid #000;}
+.b18 {border: 1.8em solid #000;}
+.b19 {border: 1.9em solid #000;}
+.b20 {border: 2.0em solid #000;}
+.b21 {border: 2.1em solid #000;}
+.b22 {border: 2.2em solid #000;}
+.b23 {border: 2.3em solid #000;}
+.b24 {border: 2.4em solid #000;}
+.b25 {border: 2.5em solid #000;}
+
+/****  br  border radius in em ****/
+
+.br0, .br00 {border-radius: 0;}
+.br1, .br01 {border-radius: 0.1em;}
+.br2, .br02 {border-radius: 0.2em;}
+.br3, .br03 {border-radius: 0.3em;}
+.br4, .br04 {border-radius: 0.4em;}
+.br5, .br05 {border-radius: 0.5em;}
+.br6, .br06 {border-radius: 0.6em;}
+.br7, .br07 {border-radius: 0.7em;}
+.br8, .br08 {border-radius: 0.8em;}
+.br9, .br09 {border-radius: 0.9em;}
+.br10 {border-radius: 1.0em;}
+.br11 {border-radius: 1.1em;}
+.br12 {border-radius: 1.2em;}
+.br13 {border-radius: 1.3em;}
+.br14 {border-radius: 1.4em;}
+.br15 {border-radius: 1.5em;}
+.br16 {border-radius: 1.6em;}
+.br17 {border-radius: 1.7em;}
+.br18 {border-radius: 1.8em;}
+.br19 {border-radius: 1.9em;}
+.br20 {border-radius: 2.0em;}
+.br21 {border-radius: 2.1em;}
+.br22 {border-radius: 2.2em;}
+.br23 {border-radius: 2.3em;}
+.br24 {border-radius: 2.4em;}
+.br25 {border-radius: 2.5em;}
+
+/************************************************************************/
+
+/************************************************************************/
+
+/************************************************************************/
 /************************************************************************/
 /********************    FONT METRICS and STYLES     ********************/
 /************************************************************************/
+/************************************************************************/
+
+/************************************************************************/
+
+/************************************************************************/
+
+/****  f  font  ****/
+
+.fi	{ font: initial; }
+.fh	{ font: inherit; }
+
+
+/********************************************************************/
+/***********************  ff  FONT FAMILY  **************************/
+/********************************************************************/
+/*****   KeyWords: FonFam  FFM  FnF  fonts  myfon  mynfon   *********/
+/********************************************************************/
+
+
+/******** ff SANS-SERIF  ********/
+
+.ffh { font-family: HelveticaNeueLT, Helvetica, Arial, sans-serif; }
+.ffo { font-family: Optima, Calibri, Candara, sans-serif; }
+.ffa { font-family: Avenir, Candara, HelveticaNeueLT, Helvetica, Arial, sans-serif; }
+.fft { font-family: "Trebuchet MS", Tahoma, Futura, Geneva, sans-serif; }
+.ffv { font-family: Verdana, Tahoma, Geneva, sans-serif; }
+
+/******** ff SANS-SERIF Condensed or Extended  ********/
+
+.ffc { font-family: Oswald, HelveticaNeueLTcond, "Avenir Neue Condensed"; }
+.ffe { font-family: Michroma, Syncopate, HelveticaNeueLText; }
+
+/******** ffd DISPLAY  (fonts where the 'normal' is Heavy) ********/
+
+.ffdr { font-family: Rockwell, "Arial Black", Impact, sans-serif; }
+.ffda { font-family: "Arial Black", Rockwell, Impact, sans-serif; }
+.ffdi { font-family: Impact, "Arial Black", sans-serif; }
+
+/******** ffs SERIF  ********/
+
+.ffst { font-family: TimesLTStd, "Times New Roman", Times, serif; }
+.ffsb { font-family: BaskervilleMTPro, Baskerville, Palatino, "Palatino Linotype", serif; }
+.ffsg { font-family: Garamond, BaskervilleMTPro, Baskerville, Palatino, "Palatino Linotype", serif; }
+.ffsp { font-family: "Palatino Linotype", Palatino, Garamond, BaskervilleMTPro, serif; }
+.ffsd { font-family: Didot, Georgia, BaskervilleMTPro, Baskerville, serif; }
+
+/******** ffm MONO  ********/
+
+.ffma { font-family: Monaco, "Fira Code", Menlo, "Andale Mono", Consolas, monospace; }
+.ffmc { font-family: "Courier New", Courier, monospace; }
+.ffmm { font-family: Menlo, "Lucida Console", Monaco, monospace; }
+.ffma { font-family: "Andale Mono", Consolas, monospace; }
+
+/******** ffc CURSIVE  ********/
+
+.ffca { font-family: 'Apple Chancery', cursive; }
+.ffcc { font-family: Chalkduster, 'Bradley Hand', cursive; }
+.ffcb { font-family: 'Bradley Hand', Chalkduster, cursive; }
+
+/******** fff FASTASY  ********/
+
+.fffp { font-family: papyrus, fantasy; }
+.fffc { font-family: herculanum, fantasy; }
+.fffh { font-family: 'Henny Penny', fantasy; }
+.fffl { font-family: Luminari, fantasy; }
+.ffft { font-family: Trattatello, fantasy; }
+
 
 /**********************************************/
 /************  fs  FONT SIZING  ***************/
@@ -1114,66 +3150,6 @@ hr { margin: -2px 0; padding: 0; border: 16px solid #FFF;}
 
 .fdn, .tdn, .normal {text-decoration: none;}
 
-/****  lh  line height   ****/
-.lhi {line-height: initial;}
-.lhh {line-height: inherit;}
-.lh  {line-height: normal;}
-
-/****  lh  unitless line height   ****/
-
-.lh1, .lh01 {line-height: 0.1;}
-.lh2, .lh02 {line-height: 0.2;}
-.lh3, .lh03 {line-height: 0.3;}
-.lh4, .lh04 {line-height: 0.4;}
-.lh5, .lh05 {line-height: 0.5;}
-.lh6, .lh06 {line-height: 0.6;}
-.lh7, .lh07 {line-height: 0.7;}
-.lh8, .lh08 {line-height: 0.8;}
-.lh9, .lh09 {line-height: 0.9;}
-.lh10 {line-height: 1.0;}
-.lh11 {line-height: 1.1;}
-.lh12 {line-height: 1.2;}
-.lh13 {line-height: 1.3;}
-.lh14 {line-height: 1.4;}
-.lh15 {line-height: 1.5;}
-.lh16 {line-height: 1.6;}
-.lh17 {line-height: 1.7;}
-.lh18 {line-height: 1.8;}
-.lh19 {line-height: 1.9;}
-.lh20 {line-height: 2.0;}
-.lh21 {line-height: 2.1;}
-.lh22 {line-height: 2.2;}
-.lh23 {line-height: 2.3;}
-.lh24 {line-height: 2.4;}
-.lh25 {line-height: 2.5;}
-
-/****  lh__p  line height in px  ****/
-
-.lh1p, .lh01p {line-height: 1px;}
-.lh2p, .lh02p {line-height: 2px;}
-.lh3p, .lh03p {line-height: 3px;}
-.lh4p, .lh04p {line-height: 4px;}
-.lh5p, .lh05p {line-height: 5px;}
-.lh6p, .lh06p {line-height: 6px;}
-.lh7p, .lh07p {line-height: 7px;}
-.lh8p, .lh08p {line-height: 8px;}
-.lh9p, .lh09p {line-height: 9px;}
-.lh10p {line-height: 10px;}
-.lh11p {line-height: 11px;}
-.lh12p {line-height: 12px;}
-.lh13p {line-height: 13px;}
-.lh14p {line-height: 14px;}
-.lh15p {line-height: 15px;}
-.lh16p {line-height: 16px;}
-.lh17p {line-height: 17px;}
-.lh18p {line-height: 18px;}
-.lh19p {line-height: 19px;}
-.lh20p {line-height: 20px;}
-.lh21p {line-height: 21px;}
-.lh22p {line-height: 22px;}
-.lh23p {line-height: 23px;}
-.lh24p {line-height: 24px;}
-.lh25p {line-height: 25px;}
 
 
 /*****************************************************/
@@ -1221,6 +3197,53 @@ hr { margin: -2px 0; padding: 0; border: 16px solid #FFF;}
 .vam,  .vm {vertical-align: middle;}
 .vab,  .vb {vertical-align: bottom;}
 .vaxb, .vxb{vertical-align: text-bottom;}
+
+
+/**** ti  Text indents  ****/
+
+.tii {text-indent: initial;}
+.tih {text-indent: inherit;}
+
+.ti-9 {text-indent: -0.9em;}
+.ti-8 {text-indent: -0.8em;}
+.ti-7 {text-indent: -0.7em;}
+.ti-6 {text-indent: -0.6em;}
+.ti-5 {text-indent: -0.5em;}
+.ti-4 {text-indent: -0.4em;}
+.ti-3 {text-indent: -0.3em;}
+.ti-2 {text-indent: -0.2em;}
+.ti-1 {text-indent: -0.1em;}
+
+.ti0  {text-indent: 0;}
+
+.ti1  {text-indent: 0.1em;}
+.ti2  {text-indent: 0.2em;}
+.ti3  {text-indent: 0.3em;}
+.ti4  {text-indent: 0.4em;}
+.ti5  {text-indent: 0.5em;}
+.ti6  {text-indent: 0.6em;}
+.ti7  {text-indent: 0.7em;}
+.ti8  {text-indent: 0.8em;}
+.ti9  {text-indent: 0.9em;}
+.ti10 {text-indent: 1.0em;}
+.ti11 {text-indent: 1.1em;}
+.ti12 {text-indent: 1.2em;}
+.ti13 {text-indent: 1.3em;}
+.ti14 {text-indent: 1.4em;}
+.ti15 {text-indent: 1.5em;}
+.ti16 {text-indent: 1.6em;}
+.ti17 {text-indent: 1.7em;}
+.ti18 {text-indent: 1.8em;}
+.ti19 {text-indent: 1.9em;}
+.ti20 {text-indent: 2.0em;}
+.ti21 {text-indent: 2.1em;}
+.ti22 {text-indent: 2.2em;}
+.ti23 {text-indent: 2.3em;}
+.ti24 {text-indent: 2.4em;}
+.ti25 {text-indent: 2.5em;}
+
+
+
 
 
 
@@ -1335,6 +3358,10 @@ M: Medium light
 .bgPb { background-color: #DEE;}
 .bgLb { background-color: #ACE;}
 .bgMb { background-color: #79B;}
+
+/* ************************************************************* */
+/* *****   END OF TinyTrim™   ********************************** */
+/* ************************************************************* */
 
 /* ************************************************************* */
 /* *****   END OF SHEET   ************************************** */
