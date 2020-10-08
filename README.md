@@ -1,14 +1,14 @@
 ## Change Notice October 07, 2020
 To any “early adopting” developers: there have been some minor changes in some constants, but also a bigger optional change that allows measuring very low contrasts, under the 15% clip in the initial beta. The low contrast extention adds complexity, and is not needed — at least for the First Draft of WCAG 3.  **However:**
 
-# ~ ~ _IMPORTANT: const VALUE CHANGE ~ ~ (Oct. 06, 20)_
+# _IMPORTANT: const VALUE CHANGE_
 ### Priority: HIGH — Affects Results
 If you are not interested in the low-contrast extension, then there is just one change that is important:
-### — Change the const **blkClmp** from 1.75 to **1.33** —
-This affects the results whenever the darker color is less than #2c2c28.
+Change the `const` **`blkClmp`** from `1.75` to **`1.33`**
+This affects the results whenever the darker color is less than `#2c2c28`.
 
-	const blkClmp = 1.75;	// OLD Exponent for the soft black clamp curve
-	const blkClmp = 1.33;	// NEW Exponent for the soft black clamp curve
+	`const blkClmp = 1.75;	// OLD Exponent for the soft black clamp curve`
+	`const blkClmp = 1.33;	// NEW Exponent for the soft black clamp curve`
 
 
 ## _SAPC -> APCA_
