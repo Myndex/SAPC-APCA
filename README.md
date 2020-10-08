@@ -4,7 +4,9 @@ To any “early adopting” developers: there have been some minor changes in so
 # _IMPORTANT: const VALUE CHANGE_
 ### Priority: HIGH — Affects Results
 If you are not interested in the low-contrast extension, then there is just one change that is important:
+
 Change the `const` **`blkClmp`** from `1.75` to **`1.33`**
+
 This affects the results whenever the darker color is less than `#2c2c28`.
 
 	`const blkClmp = 1.75;	// OLD Exponent for the soft black clamp curve`
