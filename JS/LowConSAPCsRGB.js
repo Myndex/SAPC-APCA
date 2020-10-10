@@ -3,16 +3,16 @@
 /////	REQUIREMENTS: ECMAScript 6 - ECMAScript 2015
 /////	
 /////	Advanced Perceptual Contrast Algorithm
+/////	*** WITH Low Contrast Extention ***
 /////
 /////	SAPC/APCA tool 
-/////	•••• Version 0.97d by Andrew Somers ••••
+/////	•••• Version 0.97d—LowCon by Andrew Somers ••••
 /////	https://www.myndex.com/WEB/Perception
 /////	
-/////	Input Form Parsing:
-/////	Color value input parsing based on rgbcolor.js by
+/////	Input Form Parsing Thanks:
+/////	Color value input parsing based partly on rgbcolor.js by
 /////	Stoyan Stefanov <sstoo@gmail.com> twitter: @stoyanstefanov
-/////	From: http://www.phpied.com/rgb-color-parser-in-javascript/
-/////	rgbcolor.js is MIT license
+/////	
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -22,7 +22,6 @@
 /////	For Evaluations, this is referred to as: SAPC-7
 /////	Somers S-LUV Advanced Perceptual Contrast v0.97d beta
 /////	Copyright © 2019-2020 by Andrew Somers. All Rights Reserved.
-/////	SAPC/APCA is Licensed to the W3C Per Collaborator Agreement
 /////	SIMPLE VERSION — This Version Is Stripped Of Extensions:
 /////		• No Color Vision Module
 /////		• No Spatial Frequency Module
