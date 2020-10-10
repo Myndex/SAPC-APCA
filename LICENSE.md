@@ -28,7 +28,7 @@ _________________
 
 All Other Files in this Repositiory that do not have "APCA" specifically in the filename are licensed under the AGPL v3 license. 
 
-EXAMPLE: APCAsRGB.js is licensed to the W3 under their cooperative agreements above. However LowConSAPCsRGB.js is licensed under AGPL v3. Licensing information in the head of each document.
+**EXAMPLE:** *APCAsRGB.js* is licensed to the W3 under their cooperative agreements above. However *LowConSAPCsRGB.js* is licensed under AGPL v3. Licensing information in the head of each document.
 
 ### The AGPU v3 License
 ```
