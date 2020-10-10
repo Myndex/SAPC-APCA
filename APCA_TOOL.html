@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+  <!--ALL PAGES ON THIS SITE ARE COPYRIGHT © 1997-2020 by MYNDEX, ALL RIGHTS RESERVED
+NO IMAGES, DOCUMENTS SOUNDS OR OTHER ITEMS NOT OTHERWISE SPECIFIED MAY BE USED FOR ANY PURPOSE
+WITHOUT THE THE EXPRESS WRITTEN CONSENT OF MYNDEX AND IT'S SUBSIDIARIES-->
+
+<meta charset="utf-8">
+
+	<title>APCA Contrast Demo</title>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="canonical" href="https://www.myndex.com/SAPC/" />
+
+
+	<META NAME="Description" CONTENT="The SAPC/APCA Advanced Perceptual Contrast Algorithim. Beta Release.">
+	<META NAME="Keywords" CONTENT="Myndex, Research and Development, RnD, R&D, Engineer, Engineering, Systems Engineer, Industrial Design, Solidworks, FEA, CADCAM, drafting, 3D modeling, prototyping, software development, database development, IT">
+
+	<meta property="fb:app_id" content="227594707878157" />
+
+	<meta property="og:title" content="Myndex&trade; Perception Research" />
+	<meta property="og:description" content="The SAPC/APCA Advanced Perceptual Contrast Algorithim. Beta Release." />
+
+	<meta property="og:type" content="web app" />
+	<meta property="og:url" content="https://www.myndex.com/SAPC/" />
+	<meta property="og:site_name" content="Myndex&trade; SAPC/APCA Tool" />
+
+	<meta property="og:image" content="https://www.myndex.com/images/Myndex_eye_cielab.jpg" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta property="og:image:width" content="534" />
+	<meta property="og:image:height" content="534" />
+
+	<link rel="apple-touch-icon" sizes="60x60" href="/images/favicons2020/apple-touch-icon-60x60.png?ver=fav20">
+	<link rel="apple-touch-icon" sizes="76x76" href="/images/favicons2020/apple-touch-icon-76x76.png?ver=fav20">
+	<link rel="apple-touch-icon" sizes="120x120" href="/images/favicons2020/apple-touch-icon-120x120.png?ver=fav20">
+	<link rel="apple-touch-icon" sizes="152x152" href="/images/favicons2020/apple-touch-icon-152x152.png?ver=fav20">
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons2020/apple-touch-icon-180x180.png?ver=fav20">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons2020/favicon-32x32.png?ver=fav20">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicons2020/favicon-16x16.png?ver=fav20">
+	<link rel="manifest" href="/images/favicons2020/site.webmanifest?ver=fav20">
+	<link rel="mask-icon" href="/images/favicons2020/safari-pinned-tab.svg?ver=fav20" color="#3300aa">
+	<link rel="shortcut icon" href="/images/favicons2020/favicon.ico?ver=fav20">
+	<meta name="msapplication-TileColor" content="#3300aa">
+	<meta name="msapplication-config" content="/images/favicons2020/browserconfig.xml?ver=fav20">
+	<meta name="theme-color" content="#3300aa">
+
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+	<link href='https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;600;700;900&family=Jost:wght@100;200;300;400;600;700;900&family=K2D:wght@100;200;300;400;600;700;800&family=Kanit:wght@100;200;300;400;600;700;900&family=Bitter:wght@100;200;300;400;600;700;900&family=Petrona:wght@100;200;300;400;600;700;900&family=Taviraj:wght@100;200;300;400;600;700;900&family=Trirong:wght@100;200;300;400;600;700;900&text=%26IcyATOMsizedgapxwtLN0123456789&display=swap' rel='stylesheet'>
+
+    
+<style>
+		/* This is the optional HTML Color Name listing at the end */
+		#rgbcolor-examples li {
+			padding: 0;
+			font-size: 14px;
+			font-weight: 300;
+			color: #ABC;
+			}
+		#rgbcolor-examples li div span {
+			font-size: 18px;
+			font-weight: 400;
+			color: inherit;
+			}				
+		#rgbcolor-examples li div {
+			display: inline-block;
+			width: 360px;
+			height: 160px;
+			padding: 10px 16px;
+			margin: 2px auto;
+			line-height: 0.85;
+			font-size: 28px;
+			font-weight: 700;				
+			border: 8px solid #777;
+			border-radius: 16px;
+			}				
+
+	/* Font Sample Classes */
+	.sample25{height: 144px; padding: 16px 0 0 24px; font-size: 96px; font-weight: 900; color: inherit;}
+	.sample40{height: 128px; padding: 16px 0 0 24px; font-size: 72px; font-weight: 700; color: inherit;}
+	.sample50{height: 96px; padding: 16px 0 0 24px; font-size: 48px; font-weight: 600; color: inherit;}
+	.sample60{height: 96px; padding: 16px 0 0 24px; font-size: 48px; font-weight: 400; color: inherit;}
+	.sample70{height: 96px; padding: 16px 0 0 24px; font-size: 48px; font-weight: 200; color: inherit;}
+	.sample80{height: 72px; padding: 16px 0 0 24px; font-size: 36px; font-weight: 200; color: inherit;}
+	.sample90{height: 72px; padding: 16px 0 0 24px; font-size: 30px; font-weight: 200; color: inherit;}
+	.sample100{height: 96px; padding: 16px 0 0 24px; font-size: 48px; font-weight: 100; color: inherit;}
+	.sample120{height: 72px; padding: 16px 0 0 24px; font-size: 36px; font-weight: 100; color: inherit;}
+
+	.pad0 {padding: 0 30px;}
+
+	.L40{font-size: 48px; font-weight: 900;}
+	.L50{font-size: 36px; font-weight: 700;}
+	.L60{font-size: 22px; font-weight: 700;}
+	.L70{font-size: 36px; font-weight: 300;}
+	.L70a{font-size: 28px; font-weight: 400;}
+	.L70b{font-size: 18px; font-weight: 600;}
+	.L80{font-size: 24px; font-weight: 300;}
+	.L80a{font-size: 16px; font-weight: 400;}
+	.L80b{font-size: 14px; font-weight: 600;}
+	.L90{font-size: 14px; font-weight: 400;}
+	.L90b{font-size: 21px; font-weight: 300;}
+	.L100{font-size: 28px; font-weight: 200;}
+	.L100a{font-size: 20px; font-weight: 300;}
+	.L100b{font-size: 14px; font-weight: 400;}
+	.L120{font-size: 24px; font-weight: 200;}
+	.L120a{font-size: 16px; font-weight: 300;}
+
+</style>
+	
+	<script src="JS/APCAsRGB.js"></script>
+
+<script>
+
+//////////////////////////////////////////////////////////////
+//////////// PAGE MAIN FUNCTIONS /////////////////////////////
+//////////////////////////////////////////////////////////////
+
+
+function getCSScolor(sRGB, type) {  
+		// Call to primary pre-process
+		// Returns RGBColor OBJECT if good.
+		
+	var thisColor = new RGBColor(sRGB);
+	
+// DOC:  RGBColor(color_string,sRGBtrc = 2.218,Rco = 0.2126,Gco = 0.7156,Bco = 0.0722)
+
+	if (thisColor.ok) {
+	
+			// Creates an HTML string that contains a lot of 
+			// information about the color.
+		var colorReport = '<code><b>CSS ' + thisColor.toHex3() + ' • ' + thisColor.toRGB()
+				  + '<br>Luminance (0-100): ' + thisColor.toY100().toPrecision(7) + ' Y'
+				  + '<br>Cleaned: ' + thisColor.cleaned + ' </b><br><span class="fs09"><b>Dec:</b> rgb( ' + thisColor.toDec()[0].toPrecision(3)
+				  + ', ' + thisColor.toDec()[1].toPrecision(3)
+				  + ', ' + thisColor.toDec()[2].toPrecision(3)
+				  + ' )' /* <br><span class="fs09"><b>Lin N:</b> R '
+				  + thisColor.Rlin().toPrecision(3)
+				  + '&nbsp; G ' + thisColor.Glin().toPrecision(3)
+				  + '&nbsp; B ' + thisColor.Blin().toPrecision(3)  */
+				  + '<br><b>Lin Y:</b> Y<sub>R</sub>' + thisColor.RlinCo().toPrecision(3)
+				  + '&nbsp;Y<sub>G</sub>' + thisColor.GlinCo().toPrecision(3)
+				  + '&nbsp;Y<sub>B</sub>' + thisColor.BlinCo().toPrecision(3)
+				  + '</b></span></span></code>' ;
+
+		switch (type) {
+			case 'BG':
+
+				document.getElementById('BGY').value = 'Debug-this.toY: ' + thisColor.toY();
+				// document.getElementById('BGYvalue').innerHTML = document.getElementById('BGY').value;
+
+			//  Clear Error warning colors
+				document.getElementById('inputBG').style.backgroundColor = '#DFA';
+				document.getElementById('BGresult-wrap').style.backgroundColor = '#808080';
+
+			// Set the input element and result element values to match	
+				document.getElementById('inputBG').value = thisColor.cleaned;
+				document.getElementById('BGresult').value = thisColor.toHex2();
+				
+			// Set the CSS BG colors
+				document.getElementById('BGresult').style.backgroundColor = 
+				document.getElementById('ampSamp').style.backgroundColor = 			
+				document.getElementById('sansSamples').style.backgroundColor = 
+				document.getElementById('serifSamples').style.backgroundColor = thisColor.toHex2();
+				
+			// Report results to the results window to show info about the color
+				document.getElementById('BGresult-text').innerHTML = colorReport;
+				
+			break;
+
+			case 'txt':
+
+				document.getElementById('textY').value = 'Debug-this.toY: ' + thisColor.toY();
+				//document.getElementById('textYvalue').innerHTML = document.getElementById('textY').value;
+			
+			//  Clear Error warning colors
+				document.getElementById('inputText').style.backgroundColor = '#DFA';
+				document.getElementById('textResult-wrap').style.backgroundColor = '#808080';
+
+			// Set the input element and result element values to match				
+				document.getElementById('inputText').value = thisColor.cleaned;
+				document.getElementById('textResult').value = thisColor.toHex2();
+				
+			// Set the CSS text colors  	//Background for result: it is the patch
+				document.getElementById('textResult').style.backgroundColor = 				
+				document.getElementById('textResult').style.Color = 			
+				document.getElementById('ampSamp').style.color = 
+				document.getElementById('sansSamples').style.color = 
+				document.getElementById('serifSamples').style.color = thisColor.toHex2();
+				
+			// Report results to the results window to show info about the color
+				document.getElementById('textResult-text').innerHTML = colorReport;
+			
+			break;
+
+			case 'page':
+		// Reserved for future use	
+			break;
+			}
+			
+			return thisColor;
+
+	} else {  // else when the color is an invalid entry.
+		switch (type) { // Set error warning colors
+			case 'BG':		
+				document.getElementById('inputBG').style.backgroundColor = '#F9A';
+				document.getElementById('BGresult-wrap').style.backgroundColor = '#D00';
+				//document.getElementById('BGY').value = 2;
+			break;
+			
+			case 'txt':		
+				document.getElementById('inputText').style.backgroundColor = '#F9A';
+				document.getElementById('textResult-wrap').style.backgroundColor = '#D00';
+				//document.getElementById('textY').value = 2;
+			break;	
+			
+			return 0;
+			}	
+		}
+	}
+	
+
+
+
+//////////////////////////////////////////////////////////////
+/////////  PAGE UTILITY FUNCTIONS  ///////////////////////////
+//////////////////////////////////////////////////////////////
+	
+	
+	function showHelp() {  // For the HTML Color Names Display
+		var color = new RGBColor('');
+		document.getElementById('help').innerHTML = '';
+		document.getElementById('help').appendChild(color.getHelpXML());
+		}
+
+	function swapColors() {
+		var BGtemp = document.getElementById('inputBG').value;
+	
+		document.getElementById("inputBG").value = document.getElementById('inputText').value;
+		document.getElementById("inputText").value = BGtemp;
+	
+		getCSScolor(document.getElementById('inputBG').value,'BG');
+		getCSScolor(document.getElementById('inputText').value, 'txt');
+		
+		testContrast();
+		}
+	
+	function getColorURL() {
+		const urlParams = new URLSearchParams(window.location.search);
+
+		document.getElementById("BGresult").value = document.getElementById("inputBG").value = urlParams.has('BG') ? urlParams.get('BG') : '80F'; // Default BG Color 80F
+		document.getElementById("textResult").value = document.getElementById("inputText").value = urlParams.has('txt') ? urlParams.get('txt') : 'DEF'; // Default BG Color DEF
+
+		getCSScolor(document.getElementById('inputBG').value,'BG');
+		getCSScolor(document.getElementById('inputText').value, 'txt');
+		
+		testContrast();
+		}
+
+	function createColorURL() {
+		var url = window.location.pathname;
+		var filename = url.substring(url.lastIndexOf('/')+1);
+				// alert(filename);
+		document.getElementById("colorURL").href = "https://www.myndex.com/SAPC/" + filename + "?BG=" + getCSScolor(document.getElementById('inputBG').value,'BG').toHex() + "&txt=" + getCSScolor(document.getElementById('inputText').value,'txt').toHex();
+		}
+		
+</script>
+</head>
+
+
+<!--	********	********   Begin Body	********	********	-->
+<!--	********	********   Begin Body	********	********	-->
+<!--	********	********   Begin Body	********	********	-->
+
+
+
+<!--	********	********   Begin Body	********	********	-->
+<!--	********	********   Begin Body	********	********	-->
+<!--	********	********   Begin Body	********	********	-->
+
+
+
+<!--	********	********   Begin Body	********	********	-->
+<!--	********	********   Begin Body	********	********	-->
+<!--	********	********   Begin Body	********	********	-->
+
+
+<body onLoad="getColorURL();">
+
+<main class="wrapper">
+
+	<h1 class="mastHead"  style="">APCA&nbsp;VISUAL CONTRAST&nbsp;DEMO</h1>
+
+	<div id="inputAreaCanvas" class="objectModel">        
+		<form id="colorForm" name="colorForm">
+		<div class="inputLeft" style="">
+			<h3 class="fs11"><span class="fw7 fs12">BACKGROUND</span><span class="queryHide"> COLOR</span></h3>
+			
+				<div class="textInput">
+					<input
+						id="inputBG"
+						type="text"
+						value=""
+						onfocus="this.select();"
+						onclick="this.focus(); this.select();"
+					onkeyup="getCSScolor(this.value,'BG'); testContrast();"
+					onblur="getCSScolor(this.value,'BG'); testContrast();">
+				</div>
+		
+			<div id="BGresult-wrap">
+				<input type="color" id="BGresult"
+				onchange="getCSScolor(this.value,'BG'); document.getElementById('inputBG').value = this.value; testContrast();"></input>
+			</div>
+			<input id="BGY" name="BGY" type="hidden" value=0>
+			<div class="codeBlock" id="BGresult-text"></div>
+		
+		</div>
+                
+		<div class="inputRight" style="">
+			<h3 class="fs11"><span class="fw7 fs12">TEXT</span> COLOR</h3>
+				<div class="textInput">
+					<input
+						id="inputText"
+						type="text"
+						value=""
+						onfocus="this.select();"
+						onclick="this.focus(); this.select();"
+						onkeyup="getCSScolor(this.value,'txt'); testContrast();"
+						onblur="getCSScolor(this.value,'txt'); testContrast();">
+				</div>
+			
+			
+			<div id="textResult-wrap">
+				<input type="color" id="textResult"
+				onchange="getCSScolor(this.value,'txt'); document.getElementById('inputText').value = this.value; testContrast();"></input>
+			</div>	
+			<input id="textY" name="textY" type="hidden" value=0>
+			<div class="codeBlock" id="textResult-text"></div>
+		</div>
+		</form>
+		
+		
+		<div class="" onclick="swapColors()" id="ampSamp"><div class="montFont" >EXAMPLE</div>&<div class="helvetiFont">Click To Swap</div>
+		</div>
+
+		<div id="contrast" class="">        
+			<div id="contrastLabel">SAPC/APCA<br>CONTRAST</div>
+			<div id="contrastResult" style="font-size:1.6em;">"cookie"</div>
+		</div>
+		<div class="queryClear"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </div>
+			
+	</div> <!--	********	Close Input Area	********	-->
+
+	
+	<div id="demoArea"> 
+	        <h1 style="text-align: center;">SAPC/APCA Visual&nbsp;Contrast — Beta&nbsp;0.97d</h1>
+        <div class="textBox" style="">
+			<p>Click on a color patch above to use the HTML5 color-picker (modern browsers). Otherwise enter color values in the text-box as a three or six digit hex value, the '#' is not necessary. Other valid entries are integer rgb(r,g,b) or an HTML color name.
+		</div>	
+		<a id="colorURL" class="myndexButton centered" style="" onclick="createColorURL()" href=>
+			Click Here to Generate<br>a URL of This Color Pair.</a>
+	
+    </div>  <!--	********	Close Demo Results Area	********	-->         	
+
+<section class="explainer">
+
+	<h1 class="h1Query" style="">Accessible Contrast </h1>
+	<h2 class="h2Query">Relative to Font Size and Weight</h2>	
+
+	<ul>
+		<li>Cross index reference font size (in CSS px) to CSS weight. 
+		<li>Reference fonts for comparison include Helvetica Neue, Helvetica, K2D, Fira Sans, Kanit, and Arial.
+		<li>APCA Contrast Percentage must meet or exceed the value listed. 
+		<li>For light text on a dark background the APCA tool will show a negative percentage. Simply use the absolute (positive) value. For example, if the APCA value is -58%, use 58%. 	
+		<li>A<span class="underWeightSpan"> &osol; </span>indicates that a larger font size (or heavier font weight) must be used. 
+	</ul>
+
+<div  style="overflow: scroll;">
+<table class="TFtable visReadTable APCAtable">
+	<tbody>
+		<tr>
+			<th colspan="10" class="tableTitle" style="height: 2em; font-size: 1.5em;">APCA CONTRAST LOOKUP TABLE</th>
+		</tr>
+		<tr>
+			<th class="tableTitle">&nbsp;</th>
+			<th colspan="9" class="tableTitle" style="font-size: 1.1em; letter-spacing: 0.25em;">Reference Font Weight</th>
+		</tr>
+		<tr>
+			<th class="tableTitle" style="font-size: 1em;">Font<br>Size</th>
+			<th class="weight weight1">100</th>
+			<th class="weight weight2">200</th>
+			<th class="weight weight3">300</th>
+			<th class="weight weight4">400<div class="">Normal</div></th>
+			<th class="weight weight5">500</th>
+			<th class="weight weight6">600</th>
+			<th class="weight weight7">700<div>Bold</div></th>
+			<th class="weight weight8">800</th>
+			<th class="weight weight9">900</th>
+		</tr>
+		<tr>
+			<td>12px</td>
+			<td class="underWeight">⊘</td>
+			<td class="underWeight">⊘</td>
+			<td class="underWeight">⊘</td>
+			<td>110%</td>
+			<td class="keyVal100">100%</td>
+			<td>90%</td>
+			<td class="keyVal80">80%</td>
+			<td class="keyVal80">80%</td>
+			<td class="keyVal80">80%</td>
+		</tr>
+		<tr>
+			<td>14px</td>
+			<td class="underWeight">⊘</td>
+			<td class="underWeight">⊘</td>
+			<td class="underWeight">⊘</td>
+			<td class="keyVal100">100%</td>
+			<td>90%</td>
+			<td class="keyVal80">80%</td>
+			<td>75%</td>
+			<td>75%</td>
+			<td>75%</td>
+		</tr>
+		<tr>
+			<td>16px</td>
+			<td class="underWeight">⊘</td>
+			<td class="underWeight">⊘</td>
+			<td>110%</td>
+			<td>90%</td>
+			<td class="keyVal80">80%</td>
+			<td>75%</td>
+			<td>70%</td>
+			<td>70%</td>
+			<td>70%</td>
+		</tr>
+		<tr>
+			<td>18px</td>
+			<td class="underWeight">⊘</td>
+			<td class="underWeight">⊘</td>
+			<td class="keyVal100">100%</td>
+			<td class="keyVal80">80%</td>
+			<td>75%</td>
+			<td>70%</td>
+			<td>67%</td>
+			<td>65%</td>
+			<td>65%</td>
+		</tr>
+		<tr>
+			<td>20px</td>
+			<td class="underWeight">⊘</td>
+			<td>120%</td>
+			<td>95%</td>
+			<td>78%</td>
+			<td>72%</td>
+			<td>67%</td>
+			<td>65%</td>
+			<td class="keyVal60">60%</td>
+			<td class="keyVal60">60%</td>
+		</tr>
+		<tr>
+			<td>22px</td>
+			<td class="underWeight">⊘</td>
+			<td>110%</td>
+			<td>85%</td>
+			<td>77%</td>
+			<td>71%</td>
+			<td>65%</td>
+			<td>62%</td>
+			<td>57%</td>
+			<td>57%</td>
+		</tr>
+		<tr>
+			<td>24px</td>
+			<td class="underWeight">⊘</td>
+			<td class="keyVal100">100%</td>
+			<td class="keyVal80">80%</td>
+			<td>75%</td>
+			<td>70%</td>
+			<td>65%</td>
+			<td class="keyVal60">60%</td>
+			<td>55%</td>
+			<td>55%</td>
+		</tr>
+		<tr>
+			<td>26px</td>
+			<td class="underWeight">⊘</td>
+			<td>97%</td>
+			<td>79%</td>
+			<td>72%</td>
+			<td>67%</td>
+			<td>62%</td>
+			<td>59%</td>
+			<td>54%</td>
+			<td>54%</td>
+		</tr>
+		<tr>
+			<td>28px</td>
+			<td class="underWeight">⊘</td>
+			<td>90%</td>
+			<td>77%</td>
+			<td>70%</td>
+			<td>65%</td>
+			<td class="keyVal60">60%</td>
+			<td>57%</td>
+			<td>53%</td>
+			<td>53%</td>
+		</tr>
+		<tr>
+			<td>32px</td>
+			<td class="underWeight">⊘</td>
+			<td>85%</td>
+			<td>76%</td>
+			<td>67%</td>
+			<td>62%</td>
+			<td>57%</td>
+			<td>53%</td>
+			<td>50%</td>
+			<td>48%</td>
+		</tr>
+		<tr>
+			<td>36px</td>
+			<td>120%</td>
+			<td class="keyVal80">80%</td>
+			<td>75%</td>
+			<td>65%</td>
+			<td class="keyVal60">60%</td>
+			<td>55%</td>
+			<td>50%</td>
+			<td>48%</td>
+			<td>46%</td>
+		</tr>
+		<tr>
+			<td>42px</td>
+			<td>110%</td>
+			<td>77%</td>
+			<td>73%</td>
+			<td>62%</td>
+			<td>57%</td>
+			<td>52%</td>
+			<td>48%</td>
+			<td>46%</td>
+			<td>42%</td>
+		</tr>
+		<tr>
+			<td>48px</td>
+			<td class="keyVal100">100%</td>
+			<td>75%</td>
+			<td>70%</td>
+			<td class="keyVal60">60%</td>
+			<td>55%</td>
+			<td>50%</td>
+			<td>45%</td>
+			<td>42%</td>
+			<td>40%</td>
+		</tr>
+		<tr>
+			<td>60px</td>
+			<td>90%</td>
+			<td>73%</td>
+			<td>65%</td>
+			<td>57%</td>
+			<td>52%</td>
+			<td>46%</td>
+			<td>42%</td>
+			<td>40%</td>
+			<td>40%</td>
+		</tr>
+		<tr>
+			<td>72px</td>
+			<td class="keyVal80">80%</td>
+			<td>70%</td>
+			<td class="keyVal60">60%</td>
+			<td>55%</td>
+			<td>50%</td>
+			<td>44%</td>
+			<td>40%</td>
+			<td>40%</td>
+			<td>40%</td>
+		</tr>
+		<tr>
+			<td>96px</td>
+			<td>70%</td>
+			<td class="keyVal60">60%</td>
+			<td>55%</td>
+			<td>50%</td>
+			<td>45%</td>
+			<td>40%</td>
+			<td>40%</td>
+			<td>40%</td>
+			<td>40%</td>
+		</tr>
+		<tr>
+			<td>120px</td>
+			<td class="keyVal60">60%</td>
+			<td>55%</td>
+			<td>50%</td>
+			<td>47%</td>
+			<td>43%</td>
+			<td>40%</td>
+			<td>40%</td>
+			<td>40%</td>
+			<td>40%</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+	<ul>
+		<li>Values shown are for common sans-serif fonts (e.g., Helvetica, Arial, Verdana, Calibri, Trebuchet).
+		<li>Many serif fonts should use values for the row above (e.g., Times, Georgia, Cambria, Courier).
+		<li>Decorative, unusual, and very thin fonts should be avoided for columns of body text. 	
+		<li>Due to the vast variety of font designs, designers should visually compare an unusual font to a standard font such as Helvetica, using the size and weight of Helvetica that most closesly matches the appearance of the tested font as a guide.
+		<li>Designers are cautioned that bypassing default font smoothing can drastically reduce contrast for small or thin fonts. For instance, the use of "webkit-font-smoothing: antialiasing" is strongly discouraged.	
+	</ul>
+
+</section> <!--	********	Close Guidlines Section		********	-->
+
+<hr style="">
+
+<section  class="explainer"> 
+	<h1 style="color: #206;">The Science Behind SAPC/APCA</h1>
+	<h3 class="h3Query" style="text-align: center;"><b>A</b>dvanced <b>P</b>erceptual <b>C</b>ontrast <b>A</b>lgorithm</h3>
+
+	<div>
+		<p class="dropCapSimple">For a brief overview and explanation of the SAPC math and methods, take a look at <a id="" href="/WEB/WCAG_CE17polarity">Experiment Results CE17</a>, one of the polarity experiments. The discussion includes graphs comparing SAPC to other contrast methods, and related discussions.</p>
+		<p>Also, as spatial frequency is one of the most important predictors of contrast perception and readability, see <a id="" href="/WEB/WCAG_CE14weight">Experiment Results CE14-weight</a> for further explanations.</p>
+		<p><span class="fw6">The "TL;DR" is:</span > like all human perceptions, color and contrast are extremely context dependent. In terms of readability, there is a "critical contrast" level, and that level is more dependent on spatial frequency, which relates to font weight, than a given color pair. </p>
+		<p>To accurately predict contrast perception, the Spatial <em>(font weight & size)</em>, color <em>(perceived lightness difference between text and background)</em>, and context <em>(ambient light, surroundings, intended purpose of the text)</em> all need to be taken into account.</p>
+	<h3 class="h3Query" style="text-align: center;">What is the Contrast of This Page?</h3>
+		<p>Most of this page is set at over 120%. Large headlines are about 122%, and the text you are reading now is set at 132%. The less important text-block in the footer is about -98%. To help differentiate between dark text on a light background and light text on dark, the math reports the latter as a negative value. But for purposes of the font lookup table, ignore the minus sign and use the absolute value.</p>
+		
+		
+		<a id="" href="/WEB/Perception">
+		<button class="myndexButton queryButton fll" style="">
+		<div class="fll" style="padding: 0.4em 4px; font-family: 'Palatino', 'Georgia','Bookman', 'Times New Roman','Times','serif'; letter-spacing: 0.01em; line-height: 0.2; font-size: 2em; font-style: normal;">&Delta;&gamma; &nbsp;
+		</div>
+		Myndex Perception Research Experimental Results Listing
+		</button></a>
+	
+		<a id="" href="/CVD/">
+		<button class="myndexButton queryButton flr" style="padding: 0.3em;">
+		<img class="fll " style="margin: 0.3em; padding: 0" src="/CVD/faviconMasterSmall.jpg"  height="40">
+		<div class="flr" style="margin: 0.3em; padding:0;" >Myndex&nbsp;Color&nbsp;Vision <br>Deficiency&nbsp;Simulator</div></button></a> 
+	
+	<div class="clearfix"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </div>
+	
+	</div>
+</section> <!--	********	Close Science Links Section		********	-->
+
+<hr class="clb" style="">
+
+<section> 
+	<div class="explainer">
+	<h1 class="h1Query" >Minimum Type Size</h1><h2 class="h2Query">Examples for Various Levels</h2>
+
+		<p class="dropCapSimple">Here are a set of type samples using the above selected colors. The first is the standard sans-serif Helvetica Neue, a very common font that was used as the reference font for many of the perception experiments. The initial serif font sample shown is Trirong. The samples here (other than Helvetica) can be found on Google fonts.
+
+		<p>On the left of each sample line is the level, as in "L80". L80 means
+		the fonts on that row are the minimum weight at that size for 80% APCA contrast (positive or negative). This (and the above chart) are based on the standard font "Helvetica" but as should be clear when choosing other fonts, the variation in weight is enough to change perceived contrast. 
+		
+		<p>At the end of each sample section you can select alternate test fonts. You'll notice there are substantial differences in font weight, especially noticeable in the very light and thin fonts. Designers and developers should be aware of these differences, as adjust to compensate for differences relative to a reference standard font.
+
+		<p>It is further advised to test fonts on various major browsers, as each browser renders fonts differently, especially thin fonts and fonts with poor hinting. For instance, the sample font "JOST" renders differently in Safari, Chrome, Opera, and Firefox. On MacOS, while Safari and Firefox maintain some legibility in the very thin 100 weight Jost, the thin versions of Jost  literally disappear in Chrome and Opera.
+	</div>
+	
+		<div class="levelsLegendTitle">Conformance Level Color Codes<br>
+		<div class="levelsLegend"><span class="level4">Level 4</span><span class="level3">Level 3</span><span class="level2">Level 2</span><span class="level1">Level 1/0</span></div>
+		</div>
+	
+	<div class="examples">
+		<h1 class="h1Query">SANS SERIF FONT SAMPLES</h1>
+		
+		<div id="sansSamples">
+			<div class="sample25">L25 §  NON-Text Item</div>
+				<div class="spacer"><span class="currentContrast" id="sansL40"></span></div>
+			<div class="sample40">L40 & 72px 700wt AT<span class="L40"> & 48px 900wt IcyATOM</span></div>
+				<div class="spacer"><span class="currentContrast" id="sansL50"></span></div>
+			<div class="sample50">L50 & 48px 600wt ATOMsized<span class="L50"> & 32px 700wt ATOMsized</span></div>
+				<div class="spacer"><span class="currentContrast" id="sansL60"></span></div>
+			<div class="sample60">L60 & 48px 400wt IcyATOMsized <span class="L60"> & 22px 700wt IcyATOMsizedgap</span></div>
+				<div class="spacer"><span class="currentContrast" id="sansL70"></span></div>
+			<div class="sample70">L70 & 48px 200wt<span class="L70"> & 36px 300wt ATOM</span><span class="L70a"> & 28px 400wt ATOM</span><span class="L70b"> & 18px 600wt IcyATOM</span></div>
+				<div class="spacer"><span class="currentContrast" id="sansL80"></span></div>
+			<div class="sample80">L80 & 36px 200wt ATOMsized<span class="L80"> & 24px 300wt  IcyATOMsized</span><span class="L80a"> & 16px 400wt ATOMsizedgap</span><span class="L80b"> & 14px 600wt & IcyATOMsizedgap</span></div>
+				<div class="spacer"><span class="currentContrast" id="sansL100"></span></div>
+			<div class="sample100">L100 & 48px 100wt ATOM <span class="L100">28px 200wt IcyATOM</span><span class="L100a"> & 20px 300wt IcyATOMsized</span><span class="L100b"> & 12px 400wt & IcyATOMsizedgap</span></div>
+				<div class="spacer"><span class="currentContrast" id="sansL120"></span></div>
+			<div class="sample120">L120 & 36px 100wt IcyATOMsizedgap<span class="L120"> & 24px 200wt IcyATOMsizedgap</span><span class="L120a"> & 16px 300wt IcyATOM</span></div>
+		</div>
+		<div class="alc mt00">
+			<h2 class="h2Query">Sans Serif Font Selectors § <span id="sansLabel" class="fs09 fw5">Current: HelveticaNeueLT</span></h2>
+		
+			<button class="myndexButton buttonRow" onclick="document.getElementById('sansSamples').style.fontFamily = 'Fira Sans','sans-serif'; document.getElementById('sansLabel').innerHTML = 'Current: Fira Sans';">Fira Sans</button>
+		
+			<button class="myndexButton buttonRow" onclick="document.getElementById('sansSamples').style.fontFamily = 'Jost','sans-serif'; document.getElementById('sansLabel').innerHTML = 'Current: Jost';">Jost</button>
+
+			<button class="myndexButton buttonRow " onclick="document.getElementById('sansSamples').style.fontFamily = 'K2D','sans-serif'; document.getElementById('sansLabel').innerHTML = 'Current: K2D';">K2D</button>
+
+			<button class="myndexButton buttonRow " onclick="document.getElementById('sansSamples').style.fontFamily = 'Kanit','sans-serif'; document.getElementById('sansLabel').innerHTML = 'Current: Kanit';">Kanit</button>		
+		
+			<button class="myndexButton buttonRow" onclick="document.getElementById('sansSamples').style.fontFamily = 'Montserrat','sans-serif'; document.getElementById('sansLabel').innerHTML = 'Current: Montserrat';">Montserrat</button>	
+		
+			<button class="myndexButton buttonRow" onclick="document.getElementById('sansSamples').style.fontFamily = 'HelveticaNeueLT', 'Helvetica', 'Arial', 'sans-serif'; document.getElementById('sansLabel').innerHTML = 'Current: HelveticaNeueLT';">HelveticaNeueLT (Reference)</button>			
+		</div>	
+		
+	<hr style="">
+
+		<h1 class="h1Query">SERIF FONT SAMPLES</h1>
+		
+		<div id="serifSamples">
+			<div class="sample40 ">L40 & 72px 700wt AT<span class="L40"> & 48px 900wt IcyATOM</span></div>
+				<div class="spacer"><span class="currentContrast" id="serifL50"></span></div>
+			<div class="sample50 ">L50 & 48px 600wt & ATOMsized <span class="L50"> & 32px 700wt ATOMsized</span></div>
+				<div class="spacer"><span class="currentContrast" id="serifL60"></span></div>
+			<div class="sample60 ">L60 & 48px 400wt IcyATOMsized <span class="L60"> & 22px 700wt IcyATOMsizedgap</span></div>
+				<div class="spacer"><span class="currentContrast" id="serifL70"></span></div>
+			<div class="sample70 ">L70 & 48px 200wt<span class="L70"> & 36px 300wt ATOM</span><span class="L70a"> & 28px 400wt ATOM</span><span class="L70b"> & 18px 600wt IcyATOM</span></div>
+				<div class="spacer"><span class="currentContrast" id="serifL80"></span></div>
+			<div class="sample80">L80 & 36px 200wt ATOMsized<span class="L80"> & 24px 300wt  IcyATOMsized</span><span class="L80a"> & 16px 400wt ATOMsizedgap</span><span class="L80b"> & 14px 600wt IcyATOMsizedgap</span></div>
+				<div class="spacer"><span class="currentContrast" id="serifL100"></span></div>
+			<div class="sample100">L100 & 48px 100wt ATOM <span class="L100">28px 200wt IcyATOM</span><span class="L100a"> & 20px 300wt IcyATOMsized</span><span class="L100b"> & 12px 400wt IcyATOMsizedgap</span></div>
+		</div>
+	
+		<div class="alc">
+			<h2 class="h2Query">Serif Font Selectors § <span id="serifLabel" class="fs09 fw5">Current: Trirong</span></h2>
+		
+			<button class="myndexButton buttonRow" onclick="document.getElementById('serifSamples').style.fontFamily = 'Bitter','sans-serif';document.getElementById('serifLabel').innerHTML = 'Current: Bitter';">Bitter</button>
+		
+			<button class="myndexButton buttonRow" onclick="document.getElementById('serifSamples').style.fontFamily = 'Petrona','sans-serif';document.getElementById('serifLabel').innerHTML = 'Current: Petrona';">Petrona</button>
+
+			<button class="myndexButton buttonRow" onclick="document.getElementById('serifSamples').style.fontFamily = 'Taviraj','sans-serif';document.getElementById('serifLabel').innerHTML = 'Current: Taviraj';">Taviraj</button>
+
+			<button class="myndexButton buttonRow" onclick="document.getElementById('serifSamples').style.fontFamily = 'Trirong','sans-serif';document.getElementById('serifLabel').innerHTML = 'Current: Trirong';">Trirong</button>				
+		</div>
+		
+	<hr style="">
+
+	</div>
+</section> <!--	********	Close Examples Area		********	-->
+
+<div class="gammaContainer" style="Margin: 0;">
+	<h1 class="cW">MONITOR ADJUSTMENT AFFECTS PERCEIVED CONTRAST</h1>
+	 
+	 <div class="centered gamma gammaOverflow" style="">sRGB gamma target. Adjust the monitor so that the square appears uniform (i.e. not pyramids). Note also it is important that the image be at 100% and not scaled - make sure your browser says "actual size". If the square "looks like a pyramid" that indicates your monitor is not calibrated to the sRGB transfer curve (sometimes called gamma).<br>
+	 <img src="/images/articles/18_PercentGrey_440x440mid-22Gamma.png">
+	 </div>
+</div>
+
+<footer>
+	<a id="" href="/CVD/"><button class="myndexButton flr mr20"><img class="fll " style="margin: 0 0.6em 0 0; padding: 0" src="/CVD/faviconMasterSmall.jpg"  height="60"><div class="flr" style="margin: 0.2em; padding:0;" >Myndex&nbsp;Color&nbsp;Vision <br>Deficiency&nbsp;Simulator</div></button></a>       
+        
+	<div style="font-size: 12px;">The page and code is Copyright &copy; 2019 – 2020 by Andrew Somers.
+		<br>APCA Licensed to the W3.org per their cooperative agreement. 
+		<br>Repository: <a href="https://github.com/Myndex/SAPC-APCA/">https://github.com/Myndex/SAPC-APCA/</a>
+		<br>Color value input parsing based partly on rgbcolor.js by
+		<br>Stoyan Stefanov <sstoo@gmail.com> used per MIT license.
+		<br>This project is part of the <a href="https://www.myndex.com/WEB/Perception">Myndex Web Perception Experiment.</a>
+		
+		<br><br><br>
+
+		<span onclick="showHelp()" style="font-size: 1.5em; cursor: pointer; text-decoration: underline">Click Here for a list of HTML color names.</span>
+		
+		<div id="help"></div>
+		<br><br><br>
+	</div>
+
+	<div class="copyright fs07 lh10">Copyright &copy; 2019 – <?php echo date("Y"); ?> by MTI.  All Rights Reserved. • Server.07 •<br>
+				<i>"Myndex" and the Myndex Eye Logo are trademarks of Myndex Technologies.</i><br>
+	</div>
+</footer>
+
+<script>
+
+//////////////////////////////////////////////////////////////
+/////////  TEST CONTRAST FUNCTION  ///////////////////////////
+//////////////////////////////////////////////////////////////
+
+function testContrast() {
+		var BG = new RGBColor(document.getElementById('BGresult').value);
+		var txt = new RGBColor(document.getElementById('textResult').value);
+
+		if (BG.ok && txt.ok) {	
+			
+			document.getElementById('contrastResult').innerHTML = APCAbasic(BG,txt);
+
+			} else { document.getElementById('contrastResult').innerHTML = '<div class="fs06 cR">INVALID<br>COLOR</div>'; }
+						
+			var contrast = parseFloat(document.getElementById('contrastResult').innerHTML);
+			var absContrast = Math.abs(contrast);
+			
+			document.getElementById('sansL40').innerHTML = 
+			document.getElementById('sansL50').innerHTML = 
+			document.getElementById('sansL60').innerHTML = 
+			document.getElementById('sansL70').innerHTML = 
+			document.getElementById('sansL80').innerHTML = 
+			document.getElementById('sansL100').innerHTML = 
+			document.getElementById('sansL120').innerHTML = 
+			document.getElementById('serifL50').innerHTML = 
+			document.getElementById('serifL60').innerHTML = 
+			document.getElementById('serifL70').innerHTML = 
+			document.getElementById('serifL80').innerHTML = 
+			document.getElementById('serifL100').innerHTML = 'Current Contrast: ' + contrast +'%';
+
+			var level1 = "color: #fff; background-color: #C00; font-weight: 700;";
+			var level2 = "color: #FFF8E0; background-color: #F60; font-weight: 700;";
+			var level3 = "color: #800; background-color: #FD1; font-weight: 600;";
+			var level4 = "color: #070; background-color: #CFE; font-weight: 500;";			
+
+// Matrix of Conformance Level Values
+document.getElementById('sansL40').style.cssText = (absContrast < 35) ? level1 : (absContrast < 39) ? level2 : (absContrast < 40) ? level3 : level4;
+document.getElementById('sansL50').style.cssText = (absContrast < 40) ? level1 : (absContrast < 48) ? level2 : (absContrast < 50) ? level3 : level4;
+document.getElementById('sansL60').style.cssText = (absContrast < 48) ? level1 : (absContrast < 57) ? level2 : (absContrast < 60) ? level3 : level4;
+document.getElementById('sansL70').style.cssText = (absContrast < 56) ? level1 : (absContrast < 65) ? level2 : (absContrast < 70) ? level3 : level4;
+document.getElementById('sansL80').style.cssText = (absContrast < 65) ? level1 : (absContrast < 74) ? level2 : (absContrast < 80) ? level3 : level4;
+document.getElementById('sansL100').style.cssText = (absContrast < 79) ? level1 : (absContrast < 90) ? level2 : (absContrast < 100) ? level3 : level4;
+document.getElementById('sansL120').style.cssText = (absContrast < 90) ? level1 : (absContrast < 105) ? level2 : (absContrast < 120) ? level3 : level4;
+document.getElementById('serifL50').style.cssText = (absContrast < 43) ? level1 : (absContrast < 48) ? level2 : (absContrast < 50) ? level3 : level4;
+document.getElementById('serifL60').style.cssText = (absContrast < 51) ? level1 : (absContrast < 57) ? level2 : (absContrast < 60) ? level3 : level4;
+document.getElementById('serifL70').style.cssText = (absContrast < 58) ? level1 : (absContrast < 66) ? level2 : (absContrast < 70) ? level3 : level4;
+document.getElementById('serifL80').style.cssText = (absContrast < 67) ? level1 : (absContrast < 75) ? level2 : (absContrast < 80) ? level3 : level4;
+document.getElementById('serifL100').style.cssText = (absContrast < 82) ? level1 : (absContrast < 92) ? level2 : (absContrast < 100) ? level3 : level4;
+
+	}
+</script>
+
+</body>
+</html>
