@@ -108,7 +108,7 @@ function APCAbasic(BG,txt) {
 		}
 	}
 		//  Hard clamp output at 12% to eliminate noise
-	return (outputContrast > 0.12) ? (outputContrast * 100).toFixed(1) + "%" : polarity + "LOW";		
+	return (outputContrast > 0.12 || outputContrast < -0.12) ? (outputContrast * 100).toFixed(1) + "%" : polarity + "LOW";		
 }
 
 //////////////////////////////////////////////////////////////
