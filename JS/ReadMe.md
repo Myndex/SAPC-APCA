@@ -8,7 +8,7 @@ These are based on iteration SAPC-7, developed through a lengthy series of exper
 The APCA version is the version licensed to the W3 for use in accessibility standards.
 
 ## LowConSAPCsRGB.js
-The SAPC version(s) are AGPL v3, with various such as the Low Contrast extention that enables measuring low contrasts down to about 1 or 2 Percent.
+The SAPC version(s) are AGPL v3, with various added or experimental freatures such as the Low Contrast extention that enables measuring low contrasts down to about 1 or 2 Percent. These versions are not necessarrly compliant with the emerging accessibility conformance model.
 
 ### PLANNED:
 #### Adds for SAPC:
