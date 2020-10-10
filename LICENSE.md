@@ -10,10 +10,9 @@ ______________
 
 ## APCA FILES:
 
-All Files in this Repository that have "**APCA**" in the filename are licensed to the W3.org under their cooperative license agreement(s)L 
+All Files in this Repository that have "**APCA**" in the filename are licensed to the W3.org under their cooperative license agreement(s):
 
-Reports with "**APCA**" in the filename in this Repository are licensed by Contributors
-under the
+Reports with "**APCA**" in the filename in this Repository are licensed under the
 [W3C Software and Document License](http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document).
 
 Contributions to Specifications with "**APCA**" in the filename are made under the
@@ -29,8 +28,9 @@ _________________
 
 All Other Files in this Repositiory that do not have "APCA" specifically in the filename are licensed under the AGPL v3 license. 
 
-EXAMPLE: APCAsRGB.js is licensed to the W3 under their cooperative agreement, and is available per their doc- license. However LowConSAPCsRGB.js is licensed under AGPL v3. Licensing information in the head of each document.
+EXAMPLE: APCAsRGB.js is licensed to the W3 under their cooperative agreements above. However LowConSAPCsRGB.js is licensed under AGPL v3. Licensing information in the head of each document.
 
+### The AGPU v3 License
 ```
                     GNU AFFERO GENERAL PUBLIC LICENSE
                        Version 3, 19 November 2007
