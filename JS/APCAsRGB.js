@@ -1,12 +1,16 @@
 ////////////////////////////////////////////////////////////////////////////////
-/////	Functions to parse color values and determine SAPC/APCA contrast
-/////	REQUIREMENTS: ECMAScript 6 - ECMAScript 2015
-/////	
 /////	Advanced Perceptual Contrast Algorithm
-/////	Version as Licensed to W3 for WCAG 3 use
+/////	Version as Licensed to W3 under Collaborative Agreement
+/////
+/////	Functions to parse color values and determine APCA contrast
+/////	Copyright © 2019-2020 by Andrew Somers. All Rights Reserved.
+/////	CONTACT: For SAPC/APCA Please use the ISSUES tab at:
+/////	https://github.com/Myndex/SAPC-APCA/
+/////
+/////	REQUIREMENTS: ECMAScript 6 - ECMAScript 2015
 /////
 /////	APCA tool — W3 Version
-/////	•••• Version 0.97d by Andrew Somers ••••
+/////	•••• Version 0.97e by Andrew Somers ••••
 /////	https://www.myndex.com/WEB/Perception
 /////	
 /////	Input Form Parsing Thanks:
@@ -20,7 +24,7 @@
 /////	*****  APCA BLOCK  *****
 /////
 /////	Based on the SAPC-7 Methods and Maths
-/////	(S-LUV Advanced Perceptual Contrast) v0.97d beta
+/////	(S-LUV Advanced Perceptual Contrast) v0.97e beta
 /////	Copyright © 2019-2020 by Andrew Somers. All Rights Reserved.
 /////	APCA is Licensed to the W3C Per Collaborator Agreement
 /////	SIMPLE VERSION — This Version Is Stripped Of Extensions:
@@ -34,7 +38,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-///// CONSTANTS USED IN VERSION 0.97d //////////////////////////////////////////
+///// CONSTANTS USED IN VERSION 0.97e //////////////////////////////////////////
 
 	var sRGBtrc = 2.218;	// Gamma for sRGB linearization. 2.223 could be used instead
 				// 2.218 sets unity with the piecewise sRGB at #777
