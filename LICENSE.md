@@ -1,4 +1,4 @@
-### All Materialcs Copyright (c) 2019-2020 by Andrew Somers. All Rights Reserved.
+### All Files Copyright (c) 2019-2020 by Andrew Somers. All Rights Reserved.
 
 # — LICENSE —
 
