@@ -84,7 +84,6 @@ The content on this page is licensed under the AGPL v3 license -->
 //////////// PAGE MAIN FUNCTIONS /////////////////////////////
 //////////////////////////////////////////////////////////////
 
-
 function getCSScolor(sRGB, type) {  
 		// Call to primary pre-process
 		// Returns RGBColor OBJECT if good.
@@ -98,17 +97,17 @@ function getCSScolor(sRGB, type) {
 			// Creates an HTML string that contains a lot of 
 			// information about the color.
 		var colorReport = '<code><b>CSS ' + thisColor.toHex3() + ' • ' + thisColor.toRGB()
-				  + '<br>Luminance (0-100): ' + thisColor.toY100().toPrecision(7) + ' Y'
-				  + '<br>Cleaned: ' + thisColor.cleaned + ' </b><br><span class="fs09"><b>Dec:</b> rgb( ' + thisColor.toDec()[0].toPrecision(3)
-				  + ', ' + thisColor.toDec()[1].toPrecision(3)
-				  + ', ' + thisColor.toDec()[2].toPrecision(3)
-				  + ' )' /* <br><span class="fs09"><b>Lin N:</b> R '
-				  + thisColor.Rlin().toPrecision(3)
-				  + '&nbsp; G ' + thisColor.Glin().toPrecision(3)
-				  + '&nbsp; B ' + thisColor.Blin().toPrecision(3)  */
-				  + '<br><b>Lin Y:</b> Y<sub>R</sub>' + thisColor.RlinCo().toPrecision(3)
-				  + '&nbsp;Y<sub>G</sub>' + thisColor.GlinCo().toPrecision(3)
-				  + '&nbsp;Y<sub>B</sub>' + thisColor.BlinCo().toPrecision(3)
+				  + '<br>Luminance (0-100): ' + parseFloat(thisColor.toY100().toPrecision(8).substr(0,9)) + ' Y</b>'
+				  + '<br><span class="dib fs09 lh10"><b>Dec:</b> rgb(' + thisColor.toDec()[0].toPrecision(4).substr(0,7)
+				  + ',' + thisColor.toDec()[1].toPrecision(4).substr(0,7)
+				  + ',' + thisColor.toDec()[2].toPrecision(4).substr(0,7)
+				  + ')<span class=" fs09 "><br><b>Lin N:</b> R '
+				  + thisColor.Rlin().toPrecision(5).substr(0,8)
+				  + '&nbsp;G ' + thisColor.Glin().toPrecision(5).substr(0,8)
+				  + '&nbsp;B ' + thisColor.Blin().toPrecision(5).substr(0,8)
+				  + '<br><b>Lin Y:</b> Y<sub>R</sub>' + thisColor.RlinCo().toPrecision(5).substr(0,8)
+				  + '&nbsp;Y<sub>G</sub>' + thisColor.GlinCo().toPrecision(5).substr(0,8)
+				  + '&nbsp;Y<sub>B</sub>' + thisColor.BlinCo().toPrecision(5).substr(0,8)
 				  + '</b></span></span></code>' ;
 
 		switch (type) {
