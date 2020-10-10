@@ -1,12 +1,17 @@
 ////////////////////////////////////////////////////////////////////////////////
+/////	SAPC — SLuv Advanced Perceptual Contrast Algorithm
+/////	*** WITH Low Contrast Extention ***
 /////	Functions to parse color values and determine SAPC/APCA contrast
+/////	Copyright © 2019-2020 by Andrew Somers. All Rights Reserved.
+/////	LICENSE: GNU AGPL v3  https://www.gnu.org/licenses/
+/////	CONTACT: For SAPC/APCA Please use the ISSUES tab at:
+/////	https://github.com/Myndex/SAPC-APCA/
+/////
 /////	REQUIREMENTS: ECMAScript 6 - ECMAScript 2015
 /////	
-/////	Advanced Perceptual Contrast Algorithm
-/////	*** WITH Low Contrast Extention ***
 /////
-/////	SAPC/APCA tool 
-/////	•••• Version 0.97d—LowCon by Andrew Somers ••••
+/////	SAPC Method and Algorithim 
+/////	•••• Version 0.97e — LowCon by Andrew Somers ••••
 /////	https://www.myndex.com/WEB/Perception
 /////	
 /////	Input Form Parsing Thanks:
@@ -17,10 +22,10 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 /////
-/////	*****  SAPC/APCA BLOCK  *****
+/////	*****  SAPC BLOCK  *****
 /////
 /////	For Evaluations, this is referred to as: SAPC-7
-/////	Somers S-LUV Advanced Perceptual Contrast v0.97d beta
+/////	S-LUV Advanced Perceptual Contrast v0.97e beta
 /////	Copyright © 2019-2020 by Andrew Somers. All Rights Reserved.
 /////	SIMPLE VERSION — This Version Is Stripped Of Extensions:
 /////		• No Color Vision Module
@@ -32,7 +37,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-///// CONSTANTS USED IN VERSION 0.97d //////////////////////////////////////////
+///// CONSTANTS USED IN VERSION 0.97e //////////////////////////////////////////
 
 	var sRGBtrc = 2.218;	// Gamma for sRGB linearization. 2.223 could be used instead
 				// 2.218 sets unity with the piecewise sRGB at #777
