@@ -1,8 +1,15 @@
-## Change Notice October 07, 2020
-To any “early adopting” developers: there have been some minor changes in some constants, but also a bigger optional change that allows measuring very low contrasts, under the 15% clip in the initial beta. The low contrast extention adds complexity, and is not needed — at least for the First Draft of WCAG 3.  **However:**
+## Change Notice October 10, 2020
+Split the "APCA" version from the "SAPC" version. The APCA is intended for the forthcoming W3 accessibility standards (Silve/WCAG 3). The SAPC is the research version, which may not be in conformance due to experimental variations.
 
-# _IMPORTANT: const VALUE CHANGE_
-### Priority: HIGH — Affects Results
+### CURRENT VERSION: Beta 0.97e
+
+**IMPORTANT:** If you are making a tool to predict contrast for the new W3 standards for Visual Contrast, **use only the APCA files.**
+
+
+## October 07, 2020
+To any “early adopting” developers: 
+### _IMPORTANT: const VALUE CHANGE_
+**Priority: HIGH — Affects Results**
 If you are not interested in the low-contrast extension, then there is just one change that is important:
 
 Change the `const` **`blkClmp`** from `1.75` to **`1.33`**
@@ -12,9 +19,9 @@ This affects the results whenever the darker color is less than `#2c2c28`.
 	`const blkClmp = 1.75;	// OLD Exponent for the soft black clamp curve`
 	`const blkClmp = 1.33;	// NEW Exponent for the soft black clamp curve`
 
-
 ## _SAPC -> APCA_
-Also just FYI, SAPC is the research name, and APCA is the release name in the new Working Draft of Silver/WCAG 3.
+Also just FYI, SAPC is the research name and SAPC is licensed under AGPL v3. 
+APCA is the release name in the new Working Draft of Silver/WCAG 3, and licensed to the W3 per their collaborative agreements.
 
 Please feel free post issues or comments.
 
@@ -31,16 +38,18 @@ This is a set of contrast assessment methods for predicting perceived contrast b
 ### FEATURES
 
 * Spectral weighting of luminance based on sRGB coefficients.
-* Additional weighting for RED and GREEN to enhnance contrast for accomodating Color Vision Deficiencies, particularly Protanopia and Deuteranopia. 
 * Weighting for normal and reverse polarity (dark text on light background vs light text on dark.)
 * Estimation and weighting of light adaptation for perceptual uniformity in a common "standard oberver" model.
-* Incorporates Spatial Frequency & stimulus size in predictions.
-* Considers Bartleson Breneman surround effects, simultaneous contrast, and local adaptation.
+* Considers Bartleson Breneman surround effects, simultaneous contrast, and local adaptation based on a pre-estimation model.
+* Spatial frequency considerations using a font weight lookup table.
 
+### FEATURES IN DEVELOPMENT
+* Additional weighting for RED/GREEN/BLUE to enhnance contrast for accomodating Color Vision Deficiencies, glare, and provide better design guidance.
+* Incorporate Spatial Frequency & stimulus size in predictions.
+* Calculate multi-way contrasts and total effective page luminances for dynamic calculation of surround effects, simultaneous contrast, and local adaptation.
+* Calculate the effect of opacities.
 
 ![](images/APCAbetaPanel.png)
-
-
 
 
 ### S-Luv/S-Lab
