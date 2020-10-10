@@ -2,50 +2,16 @@
 <html lang="en-US">
 <head>
 
-  <!--ALL PAGES ON THIS SITE ARE COPYRIGHT © 1997-2020 by MYNDEX, ALL RIGHTS RESERVED
-NO IMAGES, DOCUMENTS SOUNDS OR OTHER ITEMS NOT OTHERWISE SPECIFIED MAY BE USED FOR ANY PURPOSE
-WITHOUT THE THE EXPRESS WRITTEN CONSENT OF MYNDEX AND IT'S SUBSIDIARIES-->
+  <!--ALL PAGES ON THIS SITE ARE COPYRIGHT © 1997-2020 by ANDREW SOMERS, ALL RIGHTS RESERVED
+The content on this page is licensed under the AGPL v3 license -->
 
 <meta charset="utf-8">
 
-	<title>SAPC Contrast Demo</title>
+	<title>SAPC LoCon Extension Demo</title>
     
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	
 	<link rel="canonical" href="https://www.myndex.com/SAPC/FullRange" />
-
-
-	<META NAME="Description" CONTENT="The SAPC/APCA Advanced Perceptual Contrast Algorithim. Beta Release.">
-	<META NAME="Keywords" CONTENT="Myndex, Research and Development, RnD, R&D, Engineer, Engineering, Systems Engineer, Industrial Design, Solidworks, FEA, CADCAM, drafting, 3D modeling, prototyping, software development, database development, IT">
-
-	<meta property="fb:app_id" content="227594707878157" />
-
-	<meta property="og:title" content="Myndex&trade; Perception Research" />
-	<meta property="og:description" content="The SAPC/APCA Advanced Perceptual Contrast Algorithim. Beta Release." />
-
-	<meta property="og:type" content="web app" />
-	<meta property="og:url" content="https://www.myndex.com/SAPC/FullRange" />
-	<meta property="og:site_name" content="Myndex&trade; SAPC/APCA Tool" />
-
-	<meta property="og:image" content="https://www.myndex.com/images/Myndex_eye_cielab.jpg" />
-	<meta property="og:image:type" content="image/jpeg" />
-	<meta property="og:image:width" content="534" />
-	<meta property="og:image:height" content="534" />
-
-	<link rel="apple-touch-icon" sizes="60x60" href="/images/favicons2020/apple-touch-icon-60x60.png?ver=fav20">
-	<link rel="apple-touch-icon" sizes="76x76" href="/images/favicons2020/apple-touch-icon-76x76.png?ver=fav20">
-	<link rel="apple-touch-icon" sizes="120x120" href="/images/favicons2020/apple-touch-icon-120x120.png?ver=fav20">
-	<link rel="apple-touch-icon" sizes="152x152" href="/images/favicons2020/apple-touch-icon-152x152.png?ver=fav20">
-	<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons2020/apple-touch-icon-180x180.png?ver=fav20">
-	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons2020/favicon-32x32.png?ver=fav20">
-	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicons2020/favicon-16x16.png?ver=fav20">
-	<link rel="manifest" href="/images/favicons2020/site.webmanifest?ver=fav20">
-	<link rel="mask-icon" href="/images/favicons2020/safari-pinned-tab.svg?ver=fav20" color="#3300aa">
-	<link rel="shortcut icon" href="/images/favicons2020/favicon.ico?ver=fav20">
-	<meta name="msapplication-TileColor" content="#3300aa">
-	<meta name="msapplication-config" content="/images/favicons2020/browserconfig.xml?ver=fav20">
-	<meta name="theme-color" content="#3300aa">
-
 
     <link rel="stylesheet" href="CSS/style.css">
 
@@ -109,7 +75,7 @@ WITHOUT THE THE EXPRESS WRITTEN CONSENT OF MYNDEX AND IT'S SUBSIDIARIES-->
 	.L120a{font-size: 16px; font-weight: 300;}
 
 </style>
-	
+	<!-- This Page Requires beta 0.97e of the following file. -->
 	<script src="JS/LowConSAPCsRGB.js"></script>
 
 <script>
@@ -223,43 +189,6 @@ function getCSScolor(sRGB, type) {
 	
 
 
-/* *********  Non functioning screen shot functions
-
-	function screenshot() { 
-			html2canvas(document.querySelector('inputAreaCanvas'), {
-				onrendered: function(canvas) {
-					theCanvas = canvas;
-				   document.body.appendChild(canvas);
-	   document.querySelector("#SAPCscreenshot").attr("src", canvas.toDataURL());
-
-					canvas.toBlob(function(blob) {
-						saveAs(blob, "Dashboard.png"); 
-					});
-				}
-			});
-		}    
-
-	function getScreenshot(){
-	  var content = document.querySelectorAll("inputAreaCanvass")[0];
-	  setTimeout(function(){captureScreenshot()},10);
-	  function captureScreenshot() {
-		html2canvas(content, {
-			onrendered: function(canvas) {
-				var newImg = document.createElement("img");
-				newImg.src = canvas.toDataURL();
-				var newAnchor = document.createElement("a");
-				newAnchor.href = newImg.src;
-				newAnchor.download = "screenshot.png";
-				newAnchor.id="screenshot";
-				document.body.appendChild(newAnchor);
-				newAnchor.click();
-			}
-		});
-	  }
-	}
-****************** */	
-	
-
 //////////////////////////////////////////////////////////////
 /////////  PAGE UTILITY FUNCTIONS  ///////////////////////////
 //////////////////////////////////////////////////////////////
@@ -328,7 +257,7 @@ function getCSScolor(sRGB, type) {
 <main class="wrapper">
 
 	<h1 class="mastHead"  style="">SAPC&nbsp;VISUAL CONTRAST&nbsp;DEMO</h1>
-
+x
 	<div id="inputAreaCanvas" class="objectModel">        
 		<form id="colorForm" name="colorForm">
 		<div class="inputLeft" style="">
@@ -382,7 +311,7 @@ function getCSScolor(sRGB, type) {
 		</div>
 
 		<div id="contrast" class="">        
-			<div id="contrastLabel">SAPC/APCA<br>CONTRAST</div>
+			<div id="contrastLabel">SAPC w/LC<br>CONTRAST</div>
 			<div id="contrastResult" style="font-size:1.6em;">"cookie"</div>
 		</div>
 		<div class="queryClear"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </div>
@@ -391,7 +320,7 @@ function getCSScolor(sRGB, type) {
 
 	
 	<div id="demoArea"> 
-	        <h1 style="text-align: center;">SAPC/APCA Visual&nbsp;Contrast — Beta&nbsp;0.97d</h1>
+	        <h1 style="text-align: center;">SAPC Visual&nbsp;Contrast — Beta&nbsp;0.97e</h1>
         <div class="textBox" style="">
 			<p>Click on a color patch above to use the HTML5 color-picker (modern browsers). Otherwise enter color values in the text-box as a three or six digit hex value, the '#' is not necessary. Other valid entries are integer rgb(r,g,b) or an HTML color name.
 		</div>	
@@ -408,8 +337,8 @@ function getCSScolor(sRGB, type) {
 	<ul>
 		<li>Cross index reference font size (in CSS px) to CSS weight. 
 		<li>Reference fonts for comparison include Helvetica Neue, Helvetica, K2D, Fira Sans, Kanit, and Arial.
-		<li>APCA Contrast Percentage must meet or exceed the value listed. 
-		<li>For light text on a dark background the APCA tool will show a negative percentage. Simply use the absolute (positive) value. For example, if the APCA value is -58%, use 58%. 	
+		<li>SAPC Contrast Percentage must meet or exceed the value listed. 
+		<li>For light text on a dark background the SAPC tool will show a negative percentage. Simply use the absolute (positive) value. For example, if the APCA value is -58%, use 58%. 	
 		<li>A<span class="underWeightSpan"> &osol; </span>indicates that a larger font size (or heavier font weight) must be used. 
 	</ul>
 
@@ -434,6 +363,18 @@ function getCSScolor(sRGB, type) {
 			<th class="weight weight7">700<div>Bold</div></th>
 			<th class="weight weight8">800</th>
 			<th class="weight weight9">900</th>
+		</tr>
+		<tr>
+			<td>10px</td>
+			<td class="underWeight">⊘</td>
+			<td class="underWeight">⊘</td>
+			<td class="underWeight">⊘</td>
+			<td class="underWeight">⊘</td>
+			<td class="underWeight">⊘</td>
+			<td class="underWeight">⊘</td>
+			<td class="underWeight">⊘</td>
+			<td class="underWeight">⊘</td>
+			<td class="underWeight">⊘</td>
 		</tr>
 		<tr>
 			<td>12px</td>
@@ -642,7 +583,6 @@ function getCSScolor(sRGB, type) {
 	</tbody>
 </table>
 </div>
-
 	<ul>
 		<li>Values shown are for common sans-serif fonts (e.g., Helvetica, Arial, Verdana, Calibri, Trebuchet).
 		<li>Many serif fonts should use values for the row above (e.g., Times, Georgia, Cambria, Courier).
@@ -787,12 +727,12 @@ function getCSScolor(sRGB, type) {
 <footer>
 	<a id="" href="/CVD/"><button class="myndexButton flr mr20"><img class="fll " style="margin: 0 0.6em 0 0; padding: 0" src="/CVD/faviconMasterSmall.jpg"  height="60"><div class="flr" style="margin: 0.2em; padding:0;" >Myndex&nbsp;Color&nbsp;Vision <br>Deficiency&nbsp;Simulator</div></button></a>       
         
-	<div style="font-size: 12px;">The page and code is Copyright &copy; 2019 – <?php echo date("Y"); ?> by Andrew Somers.
-		<br>Licensed to the W3.org per their cooperative agreement. 
-		<br>Some material under the MIT license. 
-		<br>Repository: <a href="https://github.com/Myndex/SAPC/">https://github.com/Myndex/SAPC/</a>
-		<br>Color value input parsing based in part on rgbcolor.js by
-		<br>Stoyan Stefanov <sstoo@gmail.com> used per MIT license.
+	<div style="font-size: 12px;">Copyright &copy; 2019 – 2020 by Andrew Somers. All Rights Reserved.
+		<br>Licensed under the AGPL v3 license 
+		<br>APCA Specific Elements Licensed to W3 Per Collaborator Agreement
+		<br>Repository: <a href="https://github.com/Myndex/SAPC-APCA/">https://github.com/Myndex/SAPC-APCA/</a>
+		<br>Color value input parsing based partly on rgbcolor.js by
+		<br>Stoyan Stefanov sstoo@gmail.com used per MIT license.
 		<br>This project is part of the <a href="https://www.myndex.com/WEB/Perception">Myndex Web Perception Experiment.</a>
 		
 		<br><br><br>
@@ -803,9 +743,6 @@ function getCSScolor(sRGB, type) {
 		<br><br><br>
 	</div>
 
-	<div class="copyright fs07 lh10">Copyright &copy; 2019 – <?php echo date("Y"); ?> by MTI.  All Rights Reserved. • Server.07 •<br>
-				<i>"Myndex" and the Myndex Eye Logo are trademarks of Myndex Technologies.</i><br>
-	</div>
 </footer>
 
 <script>
