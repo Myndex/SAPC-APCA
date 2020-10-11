@@ -1,6 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 /////	SAPC — SLuv Advanced Perceptual Contrast Algorithm
-/////	*** WITH Low Contrast Extention ***
+/////	       *** WITH Low Contrast Extention ***
+/////
 /////	Functions to parse color values and determine SAPC/APCA contrast
 /////	Copyright © 2019-2020 by Andrew Somers. All Rights Reserved.
 /////	LICENSE: GNU AGPL v3  https://www.gnu.org/licenses/
@@ -11,7 +12,7 @@
 /////	
 /////
 /////	SAPC Method and Algorithim 
-/////	•••• Version 0.97e — LowCon by Andrew Somers ••••
+/////	•••• Version 0.97f — LowCon by Andrew Somers ••••
 /////	https://www.myndex.com/WEB/Perception
 /////	
 /////	Input Form Parsing Thanks:
@@ -25,7 +26,7 @@
 /////	*****  SAPC BLOCK  *****
 /////
 /////	For Evaluations, this is referred to as: SAPC-7
-/////	S-LUV Advanced Perceptual Contrast v0.97e beta
+/////	S-LUV Advanced Perceptual Contrast
 /////	Copyright © 2019-2020 by Andrew Somers. All Rights Reserved.
 /////	SIMPLE VERSION — This Version Is Stripped Of Extensions:
 /////		• No Color Vision Module
@@ -37,54 +38,101 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-///// CONSTANTS USED IN VERSION 0.97e //////////////////////////////////////////
+///// CONSTANTS USED IN VERSION 0.97f with LowCon Extension ////////////////////
 
-	var sRGBtrc = 2.218;	// Gamma for sRGB linearization. 2.223 could be used instead
-				// 2.218 sets unity with the piecewise sRGB at #777
+	const sRGBtrc = 2.218;	
+		// Transfer Curve (aka "Gamma") for sRGB linearization.
+		// 2.223 or other values could be used instead
+		// 2.218 sets unity with the piecewise sRGB at #777
+		// Simple power curve vs piecewise described in docs
 				
+	const Rco = 0.2126;		// sRGB Red Coefficient (standard)
+	const Gco = 0.7156;		// sRGB Green Coefficient (standard)
+	const Bco = 0.0722;		// sRGB Blue Coefficient (standard)
 
-	var Rco = 0.2126;		// sRGB Red Coefficient
-	var Gco = 0.7156;		// sRGB Green Coefficient
-	var Bco = 0.0722;		// sRGB Blue Coefficient
+	const scaleBoW = 1.618;		// Scaling for dark text on light (phi)
+	const scaleWoB = 1.618;		// Scaling for light text on dark — same as
+								// BoW, but separated for possible future use.
 
-	var scaleBoW = 1.618;         // Scaling for dark text on light (phi * 100)
-	var scaleWoB = 1.618;         // Scaling for light text on dark — same as BoW, but
-								  // this is separate for possible future use.
-
-	var normBGExp = 0.38;		// Constants for Power Curve Exponents.
-	var normTXTExp = 0.43;		// One pair for normal text,and one for REVERSE
-	var revBGExp = 0.5;			// FUTURE: These will eventually be dynamic
-	var revTXTExp = 0.43;		// as a function of light adaptation and context
+	const normBGExp = 0.38;		// Constants for Power Curve Exponents.
+	const normTXTExp = 0.43;	// One pair for normal text,and one for REVERSE
+	const revBGExp = 0.5;		// FUTURE: These will eventually be dynamic
+	const revTXTExp = 0.43;		// as a function of light adaptation and context
 
 	const blkThrs = 0.02;	// Level that triggers the soft black clamp
 	const blkClmp = 1.33;	// Exponent for the soft black clamp curve
 
-	// Experimental locCon Soft Clamp B
+	const loConThresh = 0.4;	// Threshold level for the loCon extension
+								// Set to 0.0 to turn off loCon action
+	const clipLevel = 0.0095;	// Output clip level. If loCon is not used
+								// This needs to be set to 0.12 at least
+	
+	
+/////  locCon Soft Clamp function (Model B)  ///////////////////////////////////
+
+	// The below constants replaced by parameters, 
+	// left here for documentation purposes.
+	//const adaptCos = 2.8; // cosine factor — sets shape/amplitude of curve
+	//const adaptCosRev = 2.6; // cosine factor for WoB
+	//const adaptOffset = 0.6; // Offset trim
+	//const adaptOffsetRev = 0.53;
+	//const adaptThresh = 0.4; // Threshold for ramping in
+	//const maxAdjust = 0.095; // clamp on maximum adjustment
+	//const maxAdjustRev = 0.11;
+
+	// All function parameters require positive values incl. SAPC
+
+function loConRamp(
+				SAPC, 
+				hiY = 1.0,
+				adaptThresh = 0.4,
+				adaptCos = 2.8,
+				adaptOffset = 0.6,
+				maxAdjust = 0.095
+				) {
+
+	const adaptLo = 0.1;  // lower limit of input adjustment and scale factor
 	const adaptExp = 0.25; // Luminance Adjust
-	const adaptCos = 2.8; // cosine factor
-	const adaptCosRev = 2.6; // cosine factor for WoB
-	const adaptInv = 2.0;
-	const adaptFact = 1.0;
-	const adaptOffset = 0.6;
-	const adaptOffsetRev = 0.53;
-	const adaptThresh = 0.4; 
-	const adaptLo = 0.1;
-	const maxAdjust = 0.095;
-	const maxAdjustRev = 0.11;
-	
-	
-///// Basic Bare Bones SAPC Function //////////////////////////////
+	const adaptInv = 2.0; // Inverts shape of adjustment curve
 
+	return Math.max(0, SAPC -
+			Math.min(maxAdjust,
+				Math.max(0, 
+					(
+					(adaptInv -
+						Math.abs(
+							Math.cos(
+								Math.pow(hiY,adaptExp)
+								* adaptCos
+							)
+						)
+					) - adaptOffset
+					)
+				) * 
+				Math.max(0,
+					Math.min(adaptLo,
+						((adaptThresh - SAPC)/(adaptThresh - adaptLo))
+						* adaptLo
+					)
+				)
+			)
+		);
+}
+	
+///// Basic SAPC Function with Low Contrast Extension //////////////////////////
 
-// This requires Y as a 0-1.0 value, sent as an object.
+// This requires linear luminance Y as a 0-1.0 value, sent as an object.
 
 function SAPCbasic(BG,txt) {
 
-	var	SAPC = 0.0;
-	var outputContrast = 0.0;		
+	var	SAPC = 0.0; // For holding raw SAPC values
+	var outputContrast = 0.0; // For weighted final values
+	var polarity = "";  // for indicating "LOW" polarity
 	
-	// Absent the color module, we are only concerned with Y at this point
-	
+		// Absent the color module, we are only concerned with Y at this point
+		// For the color and some other modules, we would need the separate
+		// RGB values, opacity value, etc.
+
 	var	Ybg = BG.toY();
 	var	Ytxt = txt.toY();
 
@@ -95,31 +143,20 @@ function SAPCbasic(BG,txt) {
 	// Finally scale for easy to remember percentages
 	// Note that reverse (white text on black) intentionally
 	// returns a negative number
-	
-	
+		
 	if ( Ybg >= Ytxt ) {	///// For normal polarity, black text on white
 
 			// soft clamp darkest input color if near black.
 		Ytxt = (Ytxt > blkThrs) ? Ytxt : Ytxt + Math.abs(Ytxt - blkThrs) ** blkClmp;
 		
-		if (Ytxt >= Ybg ) { // Hard clamp to 0 for reversals
-		
+		if (Ytxt >= Ybg ) { // Hard clip to 0 for black level reversals
 			return "Error"
-		
 		} else {
-		
+				// Calculate raw SAPC value
 			SAPC = ( Ybg ** normBGExp - Ytxt ** normTXTExp ) * scaleBoW;
-		    
-		    // Experimental locCon Clamp B
-			if (SAPC >= adaptThresh) {
-				outputContrast = SAPC
-				
-			} else {
-				
-				outputContrast = Math.max(0, SAPC - Math.min(maxAdjust, Math.max(0, ((adaptInv - Math.abs(Math.cos( Math.pow(Ybg,adaptExp) * adaptCos))) * adaptFact - adaptOffset)) * Math.max(0, Math.min(adaptLo, ((adaptThresh - SAPC)/(adaptThresh - adaptLo)) * adaptLo))));
-			}
-			//  Hard clamp output at 2% 
-			return (outputContrast > 0.02) ? (outputContrast * 100).toFixed(1) + "%" : "LOW";
+
+				// Apply low contrast ramp-out if under threshold
+			outputContrast = (SAPC >= loConThresh) ? SAPC : outputContrast = loConRamp(SAPC,Ybg,loConThresh);
 		}
 		
 	} else {	///// For reverse polarity, white text on black
@@ -130,23 +167,20 @@ function SAPCbasic(BG,txt) {
 			return "-Error"
 		} else {
 			SAPC = ( Ybg ** revBGExp - Ytxt ** revTXTExp ) * scaleWoB;
+			polarity = "-"; // for indicating "LOW" polarity
 
-		    // Experimental locCon Clamp B
-		    SAPC = SAPC * -1;
-			if (SAPC >= adaptThresh) {
-				outputContrast = SAPC
-			} else {
-				outputContrast = Math.max(0, SAPC - Math.min(maxAdjustRev, Math.max(0, ((adaptInv - Math.abs(Math.cos( Math.pow(Ytxt,adaptExp) * adaptCosRev))) * adaptFact - adaptOffsetRev)) * Math.max(0, Math.min(adaptLo, ((adaptThresh - SAPC)/(adaptThresh - adaptLo)) * adaptLo))));
-			}
-
-			return (outputContrast > 0.02) ? (outputContrast * -100).toFixed(1) + "%" : "-LOW";
+				// Note polarity flip going in and out of loConRamp()
+			outputContrast = (SAPC <= -loConThresh) ? SAPC : outputContrast = -loConRamp(-SAPC,Ytxt,loConThresh,2.6,0.53,0.11);
 		}
 	}
+		//  Hard clip output at clipLevel to eliminate noise and return string
+	return (outputContrast > clipLevel || outputContrast < -clipLevel) ? (outputContrast * 100).toFixed(2) + "%" : polarity + "LOW";		
 }
 
 //////////////////////////////////////////////////////////////
 ///// END OF SAPC BLOCK //////////////////////////////////////
 //////////////////////////////////////////////////////////////
+
 
 
 
