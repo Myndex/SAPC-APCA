@@ -13,7 +13,7 @@ Same as above, but does not include the color object class for input parsing.
 This APCA function takes sRGB encoded integer values 0-255. Useful if you already have good input parsing.
 
 ## LowConSAPCsRGB.js
-The SAPC version(s) are AGPL v3, with various added or experimental freatures such as the Low Contrast extention that enables measuring low contrasts down to about 1 or 2 Percent. These versions are not necessarrly compliant with the emerging accessibility conformance model.
+The SAPC version(s) are AGPL v3, with various added or experimental freatures such as the Low Contrast extension that enables measuring low contrasts down to about 1 or 2 Percent. These versions are not necessarily compliant with the emerging accessibility conformance model.
 
 ### PLANNED:
 #### Adds for SAPC:
@@ -24,10 +24,12 @@ The SAPC version(s) are AGPL v3, with various added or experimental freatures su
 5. Add support for opacity calculation
 
 ## INPUT FORMS
-The input forms are based in part on Stoyan Stefanov's RGBColor.js which you can see here: http://www.phpied.com/rgb-color-parser-in-javascript/
+The text input forms are based partly on Stoyan Stefanov's RGBColor.js which you can see here: http://www.phpied.com/rgb-color-parser-in-javascript/
 This object was chosen as it handles direct input of 3 digit or 6 digit Hex, sRGB int values, or HTML color names. 
 
-For SAPC we adding in functionality including returning sRGB values as decimal 0.0 to 1.0, different flavors of hex, "cleaned" input for user covienience, adding in methods to return Y, as well as various other linearized values. In the HTML form, we've added sliders/pickers with dynamic feedback (if supported by the browser/system).
+For SAPC we added functionality including returning sRGB values as decimal 0.0 to 1.0, different flavors of hex, "cleaned" input for user convenience, added methods to linearize sRGB and return Y, as well as various other linearized values.
+
+On the HTML page the input forms use local page JS functions for dynamic auto update, and we've added HTML5 sliders/pickers — some browsers such as Safari support dynamic updates using these. YMMV.
 
 ### PLANNED:
 #### Adds for the input object:
@@ -35,7 +37,7 @@ For SAPC we adding in functionality including returning sRGB values as decimal 0
 2. Add support for LAB or LUV type spaces for input and return
 
 ## SAMPLE HTML & CSS
-These are a simple running iplementation of SAPC in plain vanilla JS and HTML5.
+These are a simple running implementation of SAPC in plain vanilla JS and HTML5.
 
 Please let me know of any problems, ideas, comments, etc. 
 
