@@ -1,10 +1,14 @@
-## Change Notice October 10, 2020
-Split the "APCA" version from the "SAPC" version. The APCA is intended for the forthcoming W3 accessibility standards (Silver/WCAG 3). The SAPC is the research version, which may not be in conformance due to experimental variations.
-
-### CURRENT VERSION: Beta 0.97e
+### CURRENT VERSION: Beta 0.97f as of Oct 11
 
 **IMPORTANT:** If you are making a tool to predict contrast for the new W3 standards for Visual Contrast, **use only the APCA files.**
 
+
+## Change Notice October 11, 2020
+Code cleanup in the JS files. The loConRamp moved to a separate function.
+HTML files have an improved UX for the manual color entry fields.
+
+## Change Notice October 10, 2020
+Split the "APCA" version from the "SAPC" version. The APCA is intended for the forthcoming W3 accessibility standards (Silver/WCAG 3). The SAPC is the research version, which may not be in conformance due to experimental variations.
 
 ## October 07, 2020
 To any “early adopting” developers: 
