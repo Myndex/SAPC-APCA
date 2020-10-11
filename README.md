@@ -3,7 +3,7 @@ Files that are intended for supporting the Silver/WCAG 3 conformance model all h
 
 ## Change Notices:
 If you have been using any files from this repository, be sure to read the file "ImportantChangeNotices.md" for critical updates that may affect results.
-
+### CURRENT VERSION: Beta 0.97e
 -----
 
 # SAPC/APCA
