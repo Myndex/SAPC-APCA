@@ -75,7 +75,8 @@ THIS CONTENT IS LICENSED TO THE W3.org PER THEIR COOPERATIVE AGREEMENTS -->
 	.L120a{font-size: 16px; font-weight: 300;}
 
 </style>
-	<!-- This Page needs beta version 0.97e of the following file -->
+
+	<!-- This Page needs beta version 0.97e or greater of the following file -->
 	<script src="JS/APCAsRGB.js"></script>
 
 <script>
@@ -114,9 +115,6 @@ function getCSScolor(sRGB, type) {
 		switch (type) {
 			case 'BG':
 
-				document.getElementById('BGY').value = 'Debug-this.toY: ' + thisColor.toY();
-				// document.getElementById('BGYvalue').innerHTML = document.getElementById('BGY').value;
-
 			//  Clear Error warning colors
 				document.getElementById('inputBG').style.backgroundColor = '#DFA';
 				document.getElementById('BGresult-wrap').style.backgroundColor = '#808080';
@@ -137,9 +135,6 @@ function getCSScolor(sRGB, type) {
 			break;
 
 			case 'txt':
-
-				document.getElementById('textY').value = 'Debug-this.toY: ' + thisColor.toY();
-				//document.getElementById('textYvalue').innerHTML = document.getElementById('textY').value;
 			
 			//  Clear Error warning colors
 				document.getElementById('inputText').style.backgroundColor = '#DFA';
@@ -173,13 +168,11 @@ function getCSScolor(sRGB, type) {
 			case 'BG':		
 				document.getElementById('inputBG').style.backgroundColor = '#F9A';
 				document.getElementById('BGresult-wrap').style.backgroundColor = '#D00';
-				//document.getElementById('BGY').value = 2;
 			break;
 			
 			case 'txt':		
 				document.getElementById('inputText').style.backgroundColor = '#F9A';
 				document.getElementById('textResult-wrap').style.backgroundColor = '#D00';
-				//document.getElementById('textY').value = 2;
 			break;	
 			
 			return 0;
@@ -187,7 +180,6 @@ function getCSScolor(sRGB, type) {
 		}
 	}
 	
-
 
 
 //////////////////////////////////////////////////////////////
@@ -232,6 +224,25 @@ function getCSScolor(sRGB, type) {
 		document.getElementById("colorURL").href = "https://www.myndex.com/SAPC/" + filename + "?BG=" + getCSScolor(document.getElementById('inputBG').value,'BG').toHex() + "&txt=" + getCSScolor(document.getElementById('inputText').value,'txt').toHex();
 		}
 		
+		// Entry Key Cleanup for better UX with auto-enter
+	function entryKeys(colorString,type,e) {
+		if (
+			(
+				(e.which >= 48 && e.which <= 57 && event.shiftKey == false) ||
+				(e.which >= 65 && e.which <= 90) ||
+				(e.which >= 96 && e.which <= 105)
+			) ||
+			e.which === 13 ||
+			e.which === 17 ||
+			(e.which >= 91 && e.which <= 93) ||
+			(e.which === 48 && event.shiftKey == true)			
+		) {
+			getCSScolor(colorString,type);
+			testContrast();		
+		}
+	}
+				
+
 </script>
 </head>
 
@@ -269,10 +280,9 @@ function getCSScolor(sRGB, type) {
 						id="inputBG"
 						type="text"
 						value=""
-						onfocus="this.select();"
-						onclick="this.focus(); this.select();"
-					onkeyup="getCSScolor(this.value,'BG'); testContrast();"
-					onblur="getCSScolor(this.value,'BG'); testContrast();">
+						onclick="this.select();"
+						onkeyup="entryKeys(this.value,'BG',event);"
+						onblur="getCSScolor(this.value,'BG'); testContrast();">
 				</div>
 		
 			<div id="BGresult-wrap">
@@ -291,9 +301,8 @@ function getCSScolor(sRGB, type) {
 						id="inputText"
 						type="text"
 						value=""
-						onfocus="this.select();"
-						onclick="this.focus(); this.select();"
-						onkeyup="getCSScolor(this.value,'txt'); testContrast();"
+						onclick="this.select();"
+						onkeyup="entryKeys(this.value,'txt',event);"
 						onblur="getCSScolor(this.value,'txt'); testContrast();">
 				</div>
 			
@@ -321,7 +330,7 @@ function getCSScolor(sRGB, type) {
 
 	
 	<div id="demoArea"> 
-	        <h1 style="text-align: center;">APCA Visual&nbsp;Contrast — Beta&nbsp;0.97e</h1>
+	        <h1 style="text-align: center;">APCA Visual&nbsp;Contrast — Beta&nbsp;0.97f</h1>
         <div class="textBox" style="">
 			<p>Click on a color patch above to use the HTML5 color-picker (modern browsers). Otherwise enter color values in the text-box as a three or six digit hex value, the '#' is not necessary. Other valid entries are integer rgb(r,g,b) or an HTML color name.
 		</div>	
