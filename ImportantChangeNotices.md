@@ -1,5 +1,5 @@
 ## Change Notice October 10, 2020
-Split the "APCA" version from the "SAPC" version. The APCA is intended for the forthcoming W3 accessibility standards (Silve/WCAG 3). The SAPC is the research version, which may not be in conformance due to experimental variations.
+Split the "APCA" version from the "SAPC" version. The APCA is intended for the forthcoming W3 accessibility standards (Silver/WCAG 3). The SAPC is the research version, which may not be in conformance due to experimental variations.
 
 ### CURRENT VERSION: Beta 0.97e
 
