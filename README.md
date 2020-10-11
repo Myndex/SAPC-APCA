@@ -18,13 +18,13 @@ This is a set of contrast assessment methods for predicting perceived contrast b
 
 * Spectral weighting of luminance based on sRGB coefficients.
 * Weighting for normal and reverse polarity (dark text on light background vs light text on dark.)
-* Estimation and weighting of light adaptation for perceptual uniformity in a common "standard oberver" model.
+* Estimation and weighting of light adaptation for perceptual uniformity in a common "standard observer" model.
 * Considers Bartleson Breneman surround effects, simultaneous contrast, and local adaptation based on a pre-estimation model.
-* Spatial frequency considerations using a font weight lookup table.
+* Spatial frequency considerations for font weight as part of calculations and defined in a lookup table.
 
 ### FEATURES IN DEVELOPMENT
-* Additional weighting for RED/GREEN/BLUE to enhnance contrast for accomodating Color Vision Deficiencies, glare, and provide better design guidance.
-* Incorporate Spatial Frequency & stimulus size in predictions.
+* Additional weighting for RED/GREEN/BLUE to enhance contrast for accommodating Color Vision Deficiencies, glare, and provide better design guidance.
+* Incorporate Spatial Frequency & stimulus size directly in predictions (no lookup table).
 * Calculate multi-way contrasts and total effective page luminances for dynamic calculation of surround effects, simultaneous contrast, and local adaptation.
 * Calculate the effect of opacities.
 
@@ -33,7 +33,7 @@ This is a set of contrast assessment methods for predicting perceived contrast b
 
 ### S-Luv/S-Lab
 
-* S-Luv, is a L<sup>s</sup> u<sup>s</sup>v<sup>s</sup>-type colorspace for modeling vision and visual impairment perception of emmissive displays and devices. 
+* S-Luv, is a L<sup>s</sup> u<sup>s</sup>v<sup>s</sup>-type colorspace for modeling vision and visual impairment perception of emissive displays and devices. 
     * S-Luv is built around the concept of a standard-observer/standard-environment model.
         * the standard observers for visual acuity (VA) are grouped as: 
             * 20/40 and better (near normal), 
@@ -41,14 +41,14 @@ This is a set of contrast assessment methods for predicting perceived contrast b
             * 20/80 to 20/200 (Low Vision)
         * The standard observers for contrast sensitivity (CSF) are
             * Pelli Robson 2 (normal, 1% threshold)  
-            * Pelli Robson 1.5 (impiared, 3% threshold)  
+            * Pelli Robson 1.5 (impaired, 3% threshold)  
             * Pelli Robson 1 (Low Vision, 10% threshold)
         * The standard observers for Color Vision Deficiency are
             * A Protanope (no red cones)
             * A Deuteranope (no green cones)
             * Both Protan and Deutan are addressed at the same time.
             * The standard observers for contrast sensitivity are (under revision / TBD)
-        * It is important to remember that VA and CSF are the theshold levels between legible and not legible, but do not specify the idea readability conditions.
+        * It is important to remember that VA and CSF are the threshold levels between legible and not legible, but do not specify the idea readability conditions.
             
 ### SAPC Standard Observer Monitor (preliminary)
 
@@ -71,7 +71,7 @@ This is a set of contrast assessment methods for predicting perceived contrast b
 
 ### IMPLEMENTATIONS
 
-At the moment, the code here will is plain vanilla Javascript. As this develops we hope to include PHP 5.5, and OpenOffice Calc spreadsheet, as those cover the most likely use cases. Many of the available inputs to the functions can remain at their defaults, thought these extra inputs can be used in more specialized situations (such as creating content specifcally for daylight/outdoors, or specificaly for dark nights, etc.).
+At the moment, the code here will is plain vanilla Javascript. As this develops we hope to include PHP 5.5, and OpenOffice Calc spreadsheet, as those cover the most likely use cases. Many of the available inputs to the functions can remain at their defaults, thought these extra inputs can be used in more specialized situations (such as creating content specifically for daylight/outdoors, or specifically for dark nights, etc.).
 
 ### THIS IS BETA
-Being developed for use with future web standards for accessibility. Those are under separate repositiories.
+Being developed for use with future web standards for accessibility. Those are under separate repositories.
