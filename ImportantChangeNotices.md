@@ -4,6 +4,8 @@
 
 
 ## Change Notice October 11, 2020
+Added "APCAsRGBonly.js — this is the APCA algorithim only, suitable if you already have color parsing and just want to add the ACPA function. This version takes sRGB encoded 8 bit intergers from 0-255.
+
 Code cleanup in the JS files. The loConRamp moved to a separate function.
 HTML files have an improved UX for the manual color entry fields.
 
