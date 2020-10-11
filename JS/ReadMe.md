@@ -7,6 +7,11 @@ These are based on iteration SAPC-7, developed through a lengthy series of exper
 ## APCAsRGB.js
 The APCA version is the version licensed to the W3 for use in accessibility standards.
 
+## APCAsRGBonly.js
+Same as above, but does not include the color object class for input parsing.
+
+This APCA function takes sRGB encoded integer values 0-255. Useful if you already have good input parsing.
+
 ## LowConSAPCsRGB.js
 The SAPC version(s) are AGPL v3, with various added or experimental freatures such as the Low Contrast extention that enables measuring low contrasts down to about 1 or 2 Percent. These versions are not necessarrly compliant with the emerging accessibility conformance model.
 
