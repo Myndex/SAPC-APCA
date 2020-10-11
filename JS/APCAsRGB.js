@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////////
-/////	Advanced Perceptual Contrast Algorithm
+/////	     Advanced Perceptual Contrast Algorithm 0.97f
 /////	Version as Licensed to W3 under Collaborative Agreement
 /////
 /////	Functions to parse color values and determine APCA contrast
@@ -9,8 +9,8 @@
 /////
 /////	REQUIREMENTS: ECMAScript 6 - ECMAScript 2015
 /////
-/////	APCA tool — W3 Version
-/////	•••• Version 0.97e by Andrew Somers ••••
+/////	        APCA tool — W3 Version
+/////	•••• Version 0.97f by Andrew Somers ••••
 /////	https://www.myndex.com/WEB/Perception
 /////	
 /////	Input Form Parsing Thanks:
@@ -24,7 +24,7 @@
 /////	*****  APCA BLOCK  *****
 /////
 /////	Based on the SAPC-7 Methods and Maths
-/////	(S-LUV Advanced Perceptual Contrast) v0.97e beta
+/////	(S-LUV Advanced Perceptual Contrast)
 /////	Copyright © 2019-2020 by Andrew Somers. All Rights Reserved.
 /////	APCA is Licensed to the W3C Per Collaborator Agreement
 /////	SIMPLE VERSION — This Version Is Stripped Of Extensions:
@@ -38,31 +38,33 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-///// CONSTANTS USED IN VERSION 0.97e //////////////////////////////////////////
+///// CONSTANTS USED IN VERSION 0.97f //////////////////////////////////////////
 
-	var sRGBtrc = 2.218;	// Gamma for sRGB linearization. 2.223 could be used instead
-				// 2.218 sets unity with the piecewise sRGB at #777
+	const sRGBtrc = 2.218;	
+		// Transfer Curve (aka "Gamma") for sRGB linearization.
+		// 2.223 or other values could be used instead
+		// 2.218 sets unity with the piecewise sRGB at #777
+		// Simple power curve vs piecewise described in docs
 				
+	const Rco = 0.2126;		// sRGB Red Coefficient (standard)
+	const Gco = 0.7156;		// sRGB Green Coefficient (standard)
+	const Bco = 0.0722;		// sRGB Blue Coefficient (standard)
 
-	var Rco = 0.2126;		// sRGB Red Coefficient
-	var Gco = 0.7156;		// sRGB Green Coefficient
-	var Bco = 0.0722;		// sRGB Blue Coefficient
+	const scaleBoW = 1.618;		// Scaling for dark text on light (phi)
+	const scaleWoB = 1.618;		// Scaling for light text on dark — same as
+								// BoW, but separated for possible future use.
 
-	var scaleBoW = 1.618;         // Scaling for dark text on light (phi * 100)
-	var scaleWoB = 1.618;         // Scaling for light text on dark — same as BoW, but
-								  // this is separate for possible future use.
-
-	var normBGExp = 0.38;		// Constants for Power Curve Exponents.
-	var normTXTExp = 0.43;		// One pair for normal text,and one for REVERSE
-	var revBGExp = 0.5;			// FUTURE: These will eventually be dynamic
-	var revTXTExp = 0.43;		// as a function of light adaptation and context
+	const normBGExp = 0.38;		// Constants for Power Curve Exponents.
+	const normTXTExp = 0.43;	// One pair for normal text,and one for REVERSE
+	const revBGExp = 0.5;		// FUTURE: These will eventually be dynamic
+	const revTXTExp = 0.43;		// as a function of light adaptation and context
 
 	const blkThrs = 0.02;	// Level that triggers the soft black clamp
 	const blkClmp = 1.33;	// Exponent for the soft black clamp curve
 
+	const clipLevel = 0.12;  // Output clip level. At least 0.1 to remove noise
 	
-///// Basic Bare Bones APCA Function //////////////////////////////
-
+///// Basic APCA Function /////////////////////////////////////////////////////
 
 // This requires Y as a 0-1.0 value for BG and txt, passed as an object.
 // Returns a string indicating the APCA contrast value (i.e. 80%)
@@ -107,8 +109,8 @@ function APCAbasic(BG,txt) {
 			polarity = "-";
 		}
 	}
-		//  Hard clamp output at 12% to eliminate noise
-	return (outputContrast > 0.12 || outputContrast < -0.12) ? (outputContrast * 100).toFixed(1) + "%" : polarity + "LOW";		
+		//  Hard clip output at clipLevel to eliminate noise and return string
+	return (outputContrast > clipLevel || outputContrast < -clipLevel) ? (outputContrast * 100).toFixed(1) + "%" : polarity + "LOW";		
 }
 
 //////////////////////////////////////////////////////////////
