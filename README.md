@@ -51,6 +51,15 @@ There is a working version with examples and reference material on [the author's
 ![](images/APCAbetaPanel.png)][SAPCsite]
 
 [SAPCsite]: https://www.myndex.com/SAPC/
+
+           
+-----
+## Miscellaneous
+
+There is an informal and unofficial repository of information on vision, contrast, design, impairments, and readability at the [Visual Contrast Subgroup Wiki].
+
+[Visual Contrast Subgroup Wiki]:https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup
+
 ### S-Luv/S-Lab
 
 * S-Luv, is a L<sup>s</sup> u<sup>s</sup>v<sup>s</sup>-type colorspace for modeling vision and visual impairment perception of emissive displays and devices. 
@@ -69,13 +78,7 @@ There is a working version with examples and reference material on [the author's
             * Both Protan and Deutan are addressed at the same time.
             * The standard observers for contrast sensitivity are (under revision / TBD)
         * It is important to remember that VA and CSF are the threshold levels between legible and not legible, but do not specify the idea readability conditions.
-            
------
-## Miscellaneous
-
-There is an informal and unofficial repository of information on vision, contrast, design, impairments, and readability at the [Visual Contrast Subgroup Wiki].
-
-[Visual Contrast Subgroup Wiki]:https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup
+ 
 
 ### SAPC Standard Observer Monitor (preliminary)
 These are preliminary thoughts for a standard observer model. In particular, some further research and empirical studies that sample how users tend to set their monitor's brightness/contrast and the effect on the resultant display gamma/TRC.
