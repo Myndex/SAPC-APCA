@@ -41,9 +41,9 @@ The image of the lookup table below is used with the contrast value output from 
 - Reference fonts for comparison include Helvetica Neue, Helvetica, K2D, Fira Sans, Kanit, and Arial.
 - APCA Contrast Percentage must meet or exceed the value listed.
 - For light text on a dark background the APCA tool will show a negative percentage. Simply use the absolute (positive) value. For example, if the APCA value is -58%, use 58%.
-- A ⊘ indicates that a larger font size (or heavier font weight) must be used.
+- A **⊘** indicates that a larger font size (or heavier font weight) must be used.
 
-![](images/APCAlookupTable2020-10-11.png)]
+![](images/APCAlookupTable2020-10-11.png)
 
 
 ### [LIVE VERSION][SAPCsite]
