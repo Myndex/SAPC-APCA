@@ -1,7 +1,11 @@
-### CURRENT VERSION: Beta 0.97f as of Oct 11
-
+### As of Oct 12, 2020 11:35 GMT
+# CURRENT VERSION: Beta 0.97g
 **IMPORTANT:** If you are making a tool to predict contrast for the new W3 standards for Visual Contrast, **use only the APCA files.**
 
+## Change Notice October 12, 2020  0.97g
+**Fixed constant** for Green coefficient — should be: `const Gco = 0.7152;` and not 0.7156 (lingering typo does not materially affect results but was nevertheless wrong.)
+
+ALSO: Changed all power functions from the shorthand `**` to the more standard `Math.pow()` for better compatibility.
 
 ## Change Notice October 11, 2020
 Added "APCAsRGBonly.js — this is the APCA algorithim only, suitable if you already have color parsing and just want to add the ACPA function. This version takes sRGB encoded 8 bit intergers from 0-255.
