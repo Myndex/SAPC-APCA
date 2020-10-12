@@ -2,13 +2,17 @@
 Files that are intended for supporting the Silver/WCAG 3 conformance model all have **APCA** in the file name. Files with SAPC in the name are part of ongoing research and should NOT be used for developing conformance tools.
 
 ## Change Notices:
-If you have been using any files from this repository, be sure to read the file "ImportantChangeNotices.md" for critical updates that may affect results.
+If you have been using any files from this repository, be sure to read the file "[ImportantChangeNotices.md]" for critical updates that may affect results.
 ### CURRENT VERSION: Beta 0.97g (Oct 12, 2020, 11:35 GMT)
+[ImportantChangeNotices.md]:ImportantChangeNotices.md
+
+Recent changes to constants: **blkClmp is now** `const blkClmp = 1.33;` and **Gco** is now `const Gco = 0.7152;` The latter was due to a typo that migrated its way from one of the development models in MatLab, which has a number of small errors in their standard sRGB libraries apparently.
+
 -----
 
 # SAPC/APCA
 ![](images/Myndex_eye_cielab.jpg)
-### SAPC Algorithm _(S-LUV Advanced Perceptual Contrast)_
+## SAPC _(S-LUV Advanced Perceptual Contrast)_
 ### APCA _Advanced Perceptual Contrast Algorithm_
 
 
@@ -28,9 +32,25 @@ This is a set of contrast assessment methods for predicting perceived contrast b
 * Calculate multi-way contrasts and total effective page luminances for dynamic calculation of surround effects, simultaneous contrast, and local adaptation.
 * Calculate the effect of opacities.
 
-![](images/APCAbetaPanel.png)
+----- 
+
+## LOOKUP TABLE
+The image of the lookup table below is used with the contrast value output from APCA to indicate a minimum font size and weight.
+
+- Cross index reference font size (in CSS px) to CSS weight.
+- Reference fonts for comparison include Helvetica Neue, Helvetica, K2D, Fira Sans, Kanit, and Arial.
+- APCA Contrast Percentage must meet or exceed the value listed.
+- For light text on a dark background the APCA tool will show a negative percentage. Simply use the absolute (positive) value. For example, if the APCA value is -58%, use 58%.
+- A ⊘ indicates that a larger font size (or heavier font weight) must be used.
+
+![](images/APCAlookupTable2020-10-11.png)]
 
 
+### [LIVE VERSION][SAPCsite]
+There is a working version with examples and reference material on [the author's site:
+![](images/APCAbetaPanel.png)][SAPCsite]
+
+[SAPCsite]: https://www.myndex.com/SAPC/
 ### S-Luv/S-Lab
 
 * S-Luv, is a L<sup>s</sup> u<sup>s</sup>v<sup>s</sup>-type colorspace for modeling vision and visual impairment perception of emissive displays and devices. 
@@ -50,7 +70,15 @@ This is a set of contrast assessment methods for predicting perceived contrast b
             * The standard observers for contrast sensitivity are (under revision / TBD)
         * It is important to remember that VA and CSF are the threshold levels between legible and not legible, but do not specify the idea readability conditions.
             
+-----
+## Miscellaneous
+
+There is an informal and unofficial repository of information on vision, contrast, design, impairments, and readability at the [Visual Contrast Subgroup Wiki].
+
+[Visual Contrast Subgroup Wiki]:https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup
+
 ### SAPC Standard Observer Monitor (preliminary)
+These are preliminary thoughts for a standard observer model. In particular, some further research and empirical studies that sample how users tend to set their monitor's brightness/contrast and the effect on the resultant display gamma/TRC.
 
 * The standard environmental model is a desktop sRGB LCD screen calibrated for 
    * Max White (#FFF) Luminance no less than 160cd/m^2 
@@ -71,7 +99,7 @@ This is a set of contrast assessment methods for predicting perceived contrast b
 
 ### IMPLEMENTATIONS
 
-At the moment, the code here will is plain vanilla Javascript. As this develops we hope to include PHP 5.5, and OpenOffice Calc spreadsheet, as those cover the most likely use cases. Many of the available inputs to the functions can remain at their defaults, thought these extra inputs can be used in more specialized situations (such as creating content specifically for daylight/outdoors, or specifically for dark nights, etc.).
+At the moment, this is plain vanilla Javascript. As this develops we hope to include PHP 5.5, and OpenOffice Calc spreadsheet, as those cover the most likely use cases. Many of the available inputs to the functions can remain at their defaults, thought these extra inputs can be used in more specialized situations (such as creating content specifically for daylight/outdoors, or specifically for dark nights, etc.).
 
 ### THIS IS BETA
 Being developed for use with future web standards for accessibility. Those are under separate repositories.
