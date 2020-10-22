@@ -1,12 +1,12 @@
 ## Important: 
 Files that are intended for supporting the Silver/WCAG 3 conformance model all have **APCA** in the file name. Files with SAPC in the name are part of ongoing research and should NOT be used for developing conformance tools.
 
-## Change Notices:
-If you have been using any files from this repository, be sure to read the file "[ImportantChangeNotices.md]" for critical updates that may affect results.
-### CURRENT VERSION: Beta 0.97g (Oct 12, 2020, 11:35 GMT)
+# CURRENT VERSION: Beta 0.97h
+## (Oct 21, 2020, 04:00 GMT)
+### Change Notices:
 [ImportantChangeNotices.md]:ImportantChangeNotices.md
 
-Recent changes to constants: **blkClmp is now** `const blkClmp = 1.33;` and **Gco** is now `const Gco = 0.7152;` The latter was due to a typo that migrated its way from one of the development models in MatLab, which has a number of small errors in their standard sRGB libraries apparently.
+If you have been using any files from this repository, be sure to read the file "[ImportantChangeNotices.md]" for critical updates that may affect results.
 
 -----
 
