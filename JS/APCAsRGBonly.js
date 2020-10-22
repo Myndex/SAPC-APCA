@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////////
-/////        Advanced Perceptual Contrast Algorithm 0.97g
+/////        Advanced Perceptual Contrast Algorithm 0.97h
 /////   Version as Licensed to W3 under Collaborative Agreement
 /////
 /////   Function to determine APCA contrast
@@ -15,7 +15,7 @@
 /////   This version uses Math.pow() instead of ** for better compatibility
 /////
 /////           APCA tool — W3 Version
-/////   •••• Version 0.97g by Andrew Somers ••••
+/////   •••• Version 0.97h by Andrew Somers ••••
 /////   https://www.myndex.com/WEB/Perception
 /////
 ////////////////////////////////////////////////////////////////////////////////
@@ -39,7 +39,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
-///// CONSTANTS USED IN VERSION 0.97g //////////////////////////////////////////
+///// CONSTANTS USED IN VERSION 0.97h //////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
     const sRGBtrc = 2.218;
@@ -67,7 +67,7 @@
     const clipLevel = 0.12;  // Output clip level. At least 0.1 to remove noise
 
 ////////////////////////////////////////////////////////////////////////////////
-/////  Basic APCA Function  ////////////////////////////////////////////////////
+/////  Basic APCA Function With sRGB 8bit Inputs ///////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
 // Send the function sRGB values as integers 0-255
@@ -78,7 +78,7 @@
 // Default parameters set to white BG and black text
 
 
-function APCAbasic(BGr=255,BGg=255,BGb=255,txtr=0,txtg=0,txtb=0) {
+function APCAonly(BGr=255,BGg=255,BGb=255,txtr=0,txtg=0,txtb=0) {
 
     var outputContrast = 0.0;
     var polarity = "";
@@ -126,7 +126,7 @@ function APCAbasic(BGr=255,BGg=255,BGb=255,txtr=0,txtg=0,txtb=0) {
         }
     }
     // Hard clip output to clipLevel to eliminate noise, and return string
-    return (outputContrast > clipLevel || outputContrast < -clipLevel) ? (outputContrast * 100).toFixed(1) + "%" : polarity + "LOW";
+    return (outputContrast > clipLevel || outputContrast < -clipLevel) ? (outputContrast * 100).toFixed(1) + "" : polarity + "LOW";
 }
 
 ////////////////////////////////////////////////////////////////////////////////
