@@ -1,6 +1,17 @@
-### As of Oct 12, 2020 11:35 GMT
-# CURRENT VERSION: Beta 0.97g
+### As of Oct 22, 2020 04:00 GMT
+# CURRENT VERSION: Beta 0.97h
 **IMPORTANT:** If you are making a tool to predict contrast for the new W3 standards for Visual Contrast, **use only the APCA files.**
+
+## Change Notice October 21, 2020  0.97h
+**Changes in the .JS files** mainly centered around adding new methods and also adding new parsing, including for alpha channels.
+
+New input feature: you only need to enter 2 hex digits to get a color, and it auto updates as you add more - 3,4,6,8 - if wen you enter two, such as e9, you are returned #e9e9e9. helpful for quickly toggling through greys.
+
+New color object data returns include L* and methods for returning alpha data.
+
+**Changes in the .HTML files**
+
+Remember there's a lot of useful JS in the HTML documents as well, and the latest in terms of the new multi-level scoring model. The font samples section is subtantially cleaned up and revised to reflect the latest guidlines.
 
 ## Change Notice October 12, 2020  0.97g
 **Fixed constant** for Green coefficient — should be: `const Gco = 0.7152;` and not 0.7156 (lingering typo does not materially affect results but was nevertheless wrong.)
