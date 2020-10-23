@@ -1,6 +1,11 @@
 ### As of Oct 22, 2020 04:00 GMT
-# CURRENT VERSION: Beta 0.97h
+# CURRENT VERSION: Beta 0.97h (JS 0.97h2 Oct 23)
 **IMPORTANT:** If you are making a tool to predict contrast for the new W3 standards for Visual Contrast, **use only the APCA files.**
+
+## Change Notice October 22, 2020  0.97h2
+Only applies to the JS files with the input parsing.
+Fixed the "Zero Hex Bug" thanks to Mitch @mfishma issue #5 for pointing it out! 
+
 
 ## Change Notice October 21, 2020  0.97h
 **Changes in the .JS files** mainly centered around adding new methods and also adding new parsing, including for alpha channels.
