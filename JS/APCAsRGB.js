@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////////
-/////        Advanced Perceptual Contrast Algorithm 0.97h
+/////        Advanced Perceptual Contrast Algorithm 0.97h2
 /////   Version as Licensed to W3 under Collaborative Agreement
 /////
 /////   Functions to parse color values and determine APCA contrast
@@ -10,7 +10,7 @@
 /////   This version uses Math.pow() instead of ** for better compatibility
 /////
 /////           APCA tool — W3 Version
-/////   •••• Version 0.97h by Andrew Somers ••••
+/////   •••• Version 0.97h2 by Andrew Somers ••••
 /////   https://www.myndex.com/WEB/Perception
 /////
 /////   Thanks to Stoyan Stefanov for the input parsing object in rgbcolor.js
@@ -188,10 +188,13 @@ function RGBColor(color_string) {
             example: ['fe', '73'],
             process: function (bits){
                 return [
+                    parseInt(bits[1], 16),
+                    parseInt(bits[1], 16),
                     parseInt(bits[1], 16)
                 ];
             }
         },
+
 
         {
             re: /^([0-9|a-f]{1})([0-9|a-f]{1})([0-9|a-f]{1})$/,
@@ -258,9 +261,9 @@ function RGBColor(color_string) {
         if (bits) {
 			var channel = processor(bits);
             this.r = channel[0];
-            (channel[1]) ? this.g = channel[1] : this.g = channel[0];
-            (channel[2]) ? this.b = channel[2] : this.b = channel[0];
-            (channel[3]) ? this.a = channel[3] : this.a = '' ;
+            this.g = channel[1];
+            this.b = channel[2];
+            (isNaN(channel[3])) ? this.a = '' : this.a = channel[3];
             this.ok = true;
         }
     }
