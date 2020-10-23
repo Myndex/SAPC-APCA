@@ -1,8 +1,8 @@
 ## Important: 
 Files that are intended for supporting the Silver/WCAG 3 conformance model all have **APCA** in the file name. Files with SAPC in the name are part of ongoing research and should NOT be used for developing conformance tools.
 
-# CURRENT VERSION: Beta 0.97h
-## (Oct 21, 2020, 04:00 GMT)
+# CURRENT VERSION: Beta 0.97h (JS 0.97h2)
+## (Oct 23, 2020, 17:00 GMT)
 ### Change Notices:
 [ImportantChangeNotices.md]:ImportantChangeNotices.md
 
