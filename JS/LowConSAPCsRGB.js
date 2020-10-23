@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////////
-/////   SAPC — SLuv Advanced Perceptual Contrast Algorithm 0.97h
+/////   SAPC — SLuv Advanced Perceptual Contrast Algorithm 0.97h2
 /////          *** WITH Low Contrast Extention ***
 /////
 /////   Functions to parse color values and determine SAPC/APCA contrast
@@ -11,7 +11,7 @@
 /////   This version uses Math.pow() instead of ** for better compatibility
 /////
 /////   SAPC Method and Algorithim
-/////   •••• Version 0.97h — LowCon by Andrew Somers ••••
+/////   •••• Version 0.97h2 — LowCon by Andrew Somers ••••
 /////   https://www.myndex.com/WEB/Perception
 /////
 /////   Thanks to Stoyan Stefanov for the input parsing object in rgbcolor.js
@@ -238,12 +238,14 @@ function RGBColor(color_string) {
                 ];
             }
         },
-        
+
         {
             re: /^([0-9|a-f]{2})$/,
             example: ['fe', '73'],
             process: function (bits){
                 return [
+                    parseInt(bits[1], 16),
+                    parseInt(bits[1], 16),
                     parseInt(bits[1], 16)
                 ];
             }
@@ -313,9 +315,9 @@ function RGBColor(color_string) {
         if (bits) {
 			var channel = processor(bits);
             this.r = channel[0];
-            (channel[1]) ? this.g = channel[1] : this.g = channel[0];
-            (channel[2]) ? this.b = channel[2] : this.b = channel[0];
-            (channel[3]) ? this.a = channel[3] : this.a = '' ;
+            this.g = channel[1];
+            this.b = channel[2];
+            (isNaN(channel[3])) ? this.a = '' : this.a = channel[3];
             this.ok = true;
         }
     }
