@@ -69,13 +69,13 @@ RETURN METHODS:
         - this.toAlphaKungPow returns 0.0-1.0 with INVERSE sRGBtrc applied
     - this.toRlinCo(), toGlinCo(), toBlinCo() returns 0.0-1.0, linearized BUT ALSO applying the coefficients
         - Thus .toRlinCo() + .toGlinCo() + .toBlinCo() =  Y  however:
-    - toY() — This returns linear Y (luminance)
-    - toY()100 — This returns linear Y (luminance) as 0.0-100.0
-    - toY(places)100str — This returns linear Y (luminance) as a string toPrecision(places)
+    - this.toY() — This returns linear Y (luminance)
+    - this.toY()100 — This returns linear Y (luminance) as 0.0-100.0
+    - this.toY(places)100str — This returns linear Y (luminance) as a string toPrecision(places)
 - L* returns
-    - toLstar(refY) — This returns Perceptual Lightness L* as in LAB 
+    - this.toLstar(refY) — This returns Perceptual Lightness L* as in LAB 
         - Optional refY is whitepoint (default is 1.0)
-    - toLstarStr(refY,places) — Perceptual Lightness L* as a string toPrecision(places)
+    - this.toLstarStr(refY,places) — Perceptual Lightness L* as a string toPrecision(places)
         
 On the HTML page the input forms use local page JS functions for dynamic auto update, and we've added HTML5 sliders/pickers — some browsers such as Safari support dynamic updates using these. YMMV.
 
