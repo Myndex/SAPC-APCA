@@ -29,13 +29,13 @@ This object was chosen as it handled direct input of 3 or 6 digit Hex, sRGB int,
 
 For SAPC we added functionality such as alpha, decimal, linearization, Y, more hex, rgb() variants, "cleaned" input, and adding more. Currently the variables and methods:
 
-OBJECT VARIABLES:
+### OBJECT VARIABLES:
 - this.cleaned is the input string stripped of spaces, #, junk, and set to lowercase.
     - not stripped is (),. as those are needed for rgb(0,0,0)
 - Main variables are INT clamped 0-255 as this.r this.g this.b this.a
     - If alpha is not present this.a is set to ''
 
-INPUT METHODS:
+### INPUT METHODS:
 - Alpha channel support with auto detection.
     - Available as this.a (0-255) when exists
     - this.toAlphaPow applies the sRGB inverse power curve (linearize)
@@ -47,7 +47,7 @@ INPUT METHODS:
         - Side note it can return as either 3 or 6
     - Six or eight digit hex
 
-RETURN METHODS:
+### RETURN METHODS:
 - Hex returns
     - this.toHex() — returns plain 6 or 8 char hex string no hash # or 0x
     - this.toHex2() — returns 6 char hex string WITH hash # and ignoring alpha
