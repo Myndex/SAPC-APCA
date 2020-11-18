@@ -82,68 +82,59 @@ Basic APCA Math Pseudocode
 In the sRGB colorspace, using CSS color values as integers, with a background color sRGB<sub>bg</sub> and a text color sRGB<sub>txt</sub> convert each channel to decimal 0.0-1.0 by dividing by 255, then linearize the gamma encoded RGB channels by applying a simple exponent. 
 
 
-**R<sub>linbg**</sub> = (sR<sub>bg</sub>/255.0) ^ 2.218
-**G<sub>linbg**</sub> = (sG<sub>bg</sub>/255.0) ^ 2.218
-**B<sub>linbg**</sub> = (sB<sub>bg</sub>/255.0) ^ 2.218
+	Rlinbg = (sRbg/255.0) ^ 2.218
+	Glinbg = (sGbg/255.0) ^ 2.218
+	Blinbg = (sBbg/255.0) ^ 2.218
 
-**R<sub>lintxt**</sub> = (sR<sub>txt</sub>/255.0) ^ 2.218
-**G<sub>lintxt**</sub> = (sG<sub>txt</sub>/255.0) ^ 2.218
-**B<sub>lintxt**</sub> = (sB<sub>txt</sub>/255.0) ^ 2.218
+	Rlintxt = (sRtxt/255.0) ^ 2.218
+	Glintxt = (sGtxt/255.0) ^ 2.218
+	Blintxt = (sBtxt/255.0) ^ 2.218
 
 Then find the relative luminance (*Y*) of each color by applying the sRGB/Rec709 spectral coefficients and summing together.
 
-**Y<sub>bg**</sub> = 0.2126 * R<sub>linbg</sub> + 0.7156 * G<sub>linbg</sub> + 0.0722 * B<sub>linbg</sub>
+	Ybg = 0.2126 * Rlinbg + 0.7156 * Glinbg + 0.0722 * Blinbg
 
-**Y<sub>txt**</sub> = 0.2126 * R<sub>lintxt</sub> + 0.7156 * G<sub>lintxt</sub> + 0.0722 * B<sub>lintxt</sub>
+	Ytxt = 0.2126 * Rlintxt + 0.7156 * Glintxt + 0.0722 * Blintxt
 
 ### Predicted Contrast
 
 The Predicted Visual Contrast (*APCA*) between a foreground color and a background color is calculated by:
 
 
-<code>
-//  Define Constants for Basic APCA Version:
+	//  Define Constants for Basic APCA Version:
 
-sRGBtrc = 2.218;	// Linearization exponent**
+	sRGBtrc = 2.218;	// Linearization exponent
 
-normBGExp = 0.38;	// Constants for Power Curve Exponents.
+	normBGExp = 0.38;	// Constants for Power Curve Exponents.
+	normTXTExp = 0.43;	// One pair for normal text, dark text on light BG
+	revBGExp = 0.5;		// and one for reverse, light text on dark BG
+	revTXTExp = 0.43;
 
-normTXTExp = 0.43;	// One pair for normal text, dark text on light BG
+	scale = 1.618;          // Scale output for easy to remember levels
 
-revBGExp = 0.5;		// and one for reverse, light text on dark BG
-
-revTXTExp = 0.43;
-
-scale = 1.618;          // Scale output for easy to remember levels
-
-blkThrs = 0.02;		// Level that triggers the soft black clamp
-
-blkClmp = 1.33;		// Exponent for the soft black clamp curve
+	blkThrs = 0.02;		// Level that triggers the soft black clamp
+	blkClmp = 1.33;		// Exponent for the soft black clamp curve
 
 
 
-//  Calculate Predicted Contrast and return a string for the result
+	//  Calculate Predicted Contrast and return a string for the result
 
-if Y<sub>bg</sub> > Y<sub>txt</sub> then {
+	if Ybg > Ytxt then {
 
-Y<sub>txt</sub> = (Y<sub>txt</sub> > blkThrs) ? Y<sub>txt</sub> :
-Y<sub>txt</sub> + abs(Y<sub>txt</sub> - blkThrs) ^ blkClmp;
-    
-APCA = ( Y<sub>bg</sub> ^ normBGExp - Y<sub>txt</sub> ^ normTXTExp ) * scale;
-    
-return (APCA < 0.12 ) ? "LOW" : str(APCA * 100) + " Lc";
-    
-  } else {
+		Ytxt = (Ytxt > blkThrs) ? Ytxt : Ytxt + abs(Ytxt - blkThrs) ^ blkClmp;
+	
+		APCA = ( Ybg ^ normBGExp - Ytxt ^ normTXTExp ) * scale;
+	
+		return (APCA < 0.12 ) ? "LOW" : str(APCA * 100) + " Lc";
+	
+	} else {
   
-Y<sub>bg</sub> = (Y<sub>bg</sub> > blkThrs) ? Y<sub>bg</sub> : 
-Y<sub>bg</sub> + abs(Y<sub>bg</sub> - blkThrs) ^ blkClmp;
-    
-APCA = ( Y<sub>bg</sub> ^ revBGExp - Y<sub>txt</sub> ^ revTXTExp ) * scale;
-    
-return (APCA > -0.12 ) ? "-LOW" : str(APCA * 100) + " Lc";
-    
-}
-</code>
+		Ybg = (Ybg > blkThrs) ? Ybg : Ybg + abs(Ybg - blkThrs) ^ blkClmp;
+	
+		APCA = ( Ybg ^ revBGExp - Ytxt ^ revTXTExp ) * scale;
+	
+		return (APCA > -0.12 ) ? "-LOW" : str(APCA * 100) + " Lc";
+	}
 
 *Notes:*
 
