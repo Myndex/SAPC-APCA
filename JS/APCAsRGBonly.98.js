@@ -1,8 +1,8 @@
 ////////////////////////////////////////////////////////////////////////////////
-/////        Advanced Perceptual Contrast Algorithm 0.97h
+/////        Advanced Perceptual Contrast Algorithm 0.98
 /////   Version as Licensed to W3 under Collaborative Agreement
 /////
-/////   Function to determine APCA contrast
+/////   Function to determine APCA contrast, basic version
 /////   The function takes sRGB values as integers 0-255.
 /////   This file only contains the basic APCA function.
 /////   There is no input parsing or validation of the input values.
@@ -12,10 +12,8 @@
 /////   CONTACT: For SAPC/APCA Please use the ISSUES tab at:
 /////   https://github.com/Myndex/SAPC-APCA/
 /////
-/////   This version uses Math.pow() instead of ** for better compatibility
-/////
 /////           APCA tool — W3 Version
-/////   •••• Version 0.97h by Andrew Somers ••••
+/////   •••• Version 0.98 by Andrew Somers ••••
 /////   https://www.myndex.com/WEB/Perception
 /////
 ////////////////////////////////////////////////////////////////////////////////
@@ -28,7 +26,7 @@
 /////   (S-LUV Advanced Perceptual Contrast)
 /////   Copyright © 2019-2020 by Andrew Somers. All Rights Reserved.
 /////   APCA is Licensed to the W3C Per Collaborator Agreement
-/////   SIMPLE VERSION — This Version Is Stripped Of Extensions:
+/////   SIMPLE VERSION:
 /////       • No Low Contrast Module
 /////       • No Color Vision Module
 /////       • No Spatial Frequency Module
@@ -39,7 +37,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
-///// CONSTANTS USED IN VERSION 0.97h //////////////////////////////////////////
+///// GLOBAL CONSTANTS USED IN VERSION 0.98  ///////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
     const sRGBtrc = 2.218;
@@ -64,7 +62,7 @@
     const blkThrs = 0.02;   // Level that triggers the soft black clamp
     const blkClmp = 1.33;   // Exponent for the soft black clamp curve
 
-    const clipLevel = 0.12;  // Output clip level. At least 0.1 to remove noise
+    const clipLevel = 0.12;  // Output clip level. At least 0.12 to remove noise
 
 ////////////////////////////////////////////////////////////////////////////////
 /////  Basic APCA Function With sRGB 8bit Inputs ///////////////////////////////
@@ -109,6 +107,8 @@ function APCAonly(BGr=255,BGg=255,BGb=255,txtr=0,txtg=0,txtb=0) {
         Ytxt = (Ytxt > blkThrs) ? Ytxt : Ytxt + Math.pow(Math.abs(Ytxt - blkThrs), blkClmp);
 
         if (Ytxt > Ybg ) {    // Error catch for black colors that reverse
+/* // Alternate return for numeric only returns   /* off   //* on
+            return 0.0; //  */
             return "Error"
         } else {
                 // Calculate the APCA contrast value and scale
@@ -119,12 +119,21 @@ function APCAonly(BGr=255,BGg=255,BGb=255,txtr=0,txtg=0,txtb=0) {
         Ybg = (Ybg > blkThrs) ? Ybg : Ybg + Math.pow(Math.abs(Ybg - blkThrs), blkClmp);
 
         if (Ybg > Ytxt ) {
+/* // Alternate return for numeric only returns   /* off   //* on
+            return -0.0;    //  */
             return "-Error"
         } else {
             outputContrast = ( Math.pow(Ybg, revBGExp) - Math.pow(Ytxt, revTXTExp) ) * scaleWoB;
             polarity = "-";  // For reporting polarity of LOW returns
         }
     }
+    
+/*  // Alternate return for numeric values instead of string  /* off   //* on
+
+    return (outputContrast > clipLevel || outputContrast < -clipLevel) ?
+            outputContrast * 100 : outputContrast * 0.0;
+//  */
+
     // Hard clip output to clipLevel to eliminate noise, and return string
     return (outputContrast > clipLevel || outputContrast < -clipLevel) ? (outputContrast * 100).toFixed(1) + "" : polarity + "LOW";
 }

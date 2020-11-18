@@ -1,6 +1,9 @@
-### As of Oct 22, 2020 04:00 GMT
-# CURRENT VERSION: Beta 0.97h (JS 0.97h2 Oct 23)
+### As of Nov 18, 2020 08:00 GMT
+# CURRENT VERSION: Beta 0.98
 **IMPORTANT:** If you are making a tool to predict contrast for the new W3 standards for Visual Contrast, **use only the APCA files.**
+
+## Change Notice November 18, 2020 08:00 GMT
+IMPORTANT: Major reworking of the input objects, adding new methods including a complete CIE suite, piecewise sRGB processing, and much more. This file is _INCOMPATIBLE WITH ALL PREVIOUS VERSIONS_ due to new features, naming, and organizing of properties and methods.
 
 ## Change Notice October 22, 2020  0.97h2
 Only applies to the JS files with the input parsing.
