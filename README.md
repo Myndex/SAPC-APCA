@@ -16,10 +16,11 @@ If you have been using any files from this repository, be sure to read the file 
 ### APCA _Advanced Perceptual Contrast Algorithm_
 
 
-This is a set of contrast assessment methods for predicting perceived contrast between sRGB colors on a computer monitor. It is intended as an assessment method for standard relating to content for computer displays and mobile devices.
+This is a set of contrast assessment methods for predicting perceived contrast between sRGB colors on a computer monitor. It has been developed as an assessment method for W3 WCAG3 accessibility standards relating to content for computer displays and mobile devices.
 
 ### FEATURES
 
+* NEW in v0.98: Incorporates Spatial Frequency & Stimulus Size directly in predictions (i.e. provides direct indication of minimum font size andf weight).
 * Spectral weighting of luminance based on sRGB coefficients.
 * Weighting for normal and reverse polarity (dark text on light background vs light text on dark.)
 * Estimation and weighting of light adaptation for perceptual uniformity in a common "standard observer" model.
@@ -28,24 +29,26 @@ This is a set of contrast assessment methods for predicting perceived contrast b
 
 ### FEATURES IN DEVELOPMENT
 * Additional weighting for RED/GREEN/BLUE to enhance contrast for accommodating Color Vision Deficiencies, glare, and provide better design guidance.
-* Incorporate Spatial Frequency & stimulus size directly in predictions (no lookup table).
+* <s>Incorporate Spatial Frequency & stimulus size directly in predictions (no lookup table).</s> DONE! New for 0.98
 * Calculate multi-way contrasts and total effective page luminances for dynamic calculation of surround effects, simultaneous contrast, and local adaptation.
 * Calculate the effect of opacities.
 
 ----- 
 
-### [LIVE VERSION][SAPCsite]
-There is a working version with examples and reference material on [the author's site:
-![](images/APCAFontSelect.png)][SAPCsite]
+### [LIVE VERSION][APCAsite]
+There is a working version with examples and reference material on [the APCA site:
+![](images/APCAFontSelect.png)][APCAsite]
 
-[SAPCsite]: https://www.myndex.com/SAPC/
+[APCAsite]: https://www.myndex.com/APCA/
 
            
 -----
 
 ## IMPLEMENTATIONS
 
-At the moment, what is here is plain vanilla Javascript. As this develops we intend to include PHP 5.5, and OpenOffice Calc spreadsheet, as those cover the most likely use cases. Many of the available inputs to the functions can remain at their defaults, thought these extra inputs can be used in more specialized situations (such as creating content specifically for daylight/outdoors, or specifically for dark nights, etc.).
+The libraries are plain vanilla Javascript. As this develops we intend to include PHP 5.5, and OpenOffice Calc spreadsheet, as those cover the most likely use cases. Many of the available inputs to the functions can remain at their defaults, thought these extra inputs can be used in more specialized situations (such as creating content specifically for daylight/outdoors, or specifically for dark nights, etc.). 
+
+A plain language walkthrough, LaTeX math, and pseudocode are below:
 
 
 ### APCA Math
@@ -144,7 +147,18 @@ The Predicted Visual Contrast (*APCA*) between a foreground color and a backgrou
 
 *The "^" character is the exponentiation operator.*
 
+
+
 * * * * *
+
+
+## Miscellaneous
+
+There is an informal and unofficial repository of information on vision, contrast, design, impairments, and readability at the [Visual Contrast Subgroup Wiki].
+
+[Visual Contrast Subgroup Wiki]: https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup
+
+The author's website includes further background, including select experimental results and white-papers at https://www.myndex.com/WEB/Perception
 
 Glossary
 --------
@@ -175,12 +189,6 @@ Glossary
 
 
 -----
-
-## Miscellaneous
-
-There is an informal and unofficial repository of information on vision, contrast, design, impairments, and readability at the [Visual Contrast Subgroup Wiki].
-
-[Visual Contrast Subgroup Wiki]: https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup
 
 ### S-Luv/S-Lab
 
