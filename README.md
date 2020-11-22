@@ -57,27 +57,35 @@ APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math
 
 ### The simplified steps are:
 
--   Convert the sRGB background and text colors to luminance Ybg and Ytxt
-    -   Convert from 8 bit integer to decimal 0.0-1.0
-    -   Linearize (remove gamma) by applying a ^2.218 exponent
-    -   Apply sRGB coefficients and sum to **Y**
-    -   ![](images/sRGBcoefficients.png)
-    -   We will call these Ytext and Ybackground
--   Determine if Ytext or Ybackground is brighter (higher luminence, for contrast polarity)
--   Soft-clamp only the darkest color and only if it is less than **0.02 Y**
-    - **Soft Clamp:** subtract the darker color **Y** from 0.02
-    - Then apply a ^1.33 exponent to the result
-    - Then add that result back to the Y of the darker color
-        - (0.02 - Y)^1.33 + Y
--   Apply power curve exponents to both colors for perceptual contrast
-    -   For dark text on a light background, use ^0.43 for Ytext and ^0.39 for Ybackground
-    -   For light text on a dark background, use ^0.43 for Ytext and ^0.5 for Ybackground
--   Subtract Ytext from Ybackground, then multiply by phi (1.618) to scale the output contrast value
-    - Always subtract the Ytext value from the Ybackground value. 
-    - For light text on a dark background, this will generate a negative number. 
-    - This is intentional, so that negative values only apply to light text on dark BGs, and positive values only apply to dark text on a light BG.  
--   If the result is between -0.12 and 0.12, then set contrast as 0. Otherwise multiply by 100.     
-	- L<sup>c</sup><sub>contrast</sub> = (Ybackground - Ytext) * 1.618 * 100
+
+
+- Convert the sRGB background and text colors to luminance: Y<sub>background</sub> and Y<sub>text</sub>
+    - Convert from 8 bit integer to decimal 0.0-1.0
+    - Linearize (remove gamma) by applying a ^2.218 exponent
+    - Apply sRGB coefficients and sum to **Y**
+        - Y = (R/255)<sup>^2.218</sup> * 0.2126 + (G/255)<sup>^2.218</sup> * 0.7152 + (B/255)<sup>^2.218</sup> * 0.0722
+    - We will call these Y<sub>text</sub> and Y<sub>background</sub>
+- Determine if Y<sub>text</sub> or Y<sub>background</sub> is brighter (higher luminence, for contrast polarity)
+    - Soft-clamp only the darkest color and **only** if it is less than **0.02 Y**
+        - **Soft Clamp:** subtract the darker color **Y** from 0.02
+        - Then apply a ^1.33 exponent to the result
+        - Then add that result back to the Y of the darker color
+            - (0.02 - Y)<sup>^1.33</sup> + Y
+- Apply power curve exponents to both colors for perceptual contrast
+    - For dark text on a light background, use ^0.43 for Y<sub>text</sub> and ^0.38 for Y<sub>background</sub>
+    - For light text on a dark background, use ^0.43 for Y<sub>text</sub> and ^0.5 for Y<sub>background</sub>
+- Subtract Y<sub>text</sub> from Y<sub>background</sub>, then multiply by phi (1.618) to scale the contrast value
+    - Always subtract the Y<sub>text</sub> value from the Y<sub>background</sub> value. 
+        - For light text on a dark background, this will generate a negative number. 
+        - This is intentional, so that negative values only apply to light text on dark BGs, and positive values only apply to dark text on a light BG.  
+
+**For dark text on a lighter background:**
+- If the result is less than 0.12, then set contrast as 0. Otherwise multiply by 100.     
+    - L<sup>c</sup><sub>contrast</sub> = (Y<sub>background</sub><sup>^0.38</sup> - Y<sub>text</sub><sup>^0.43</sup>) * 1.618 * 100
+    
+**For light text on a darker background:**
+- If the result is greater than -0.12 (closer to 0), then set contrast as 0. Otherwise multiply by 100.     
+    - L<sup>c</sup><sub>contrast</sub> = (Y<sub>background</sub><sup>^0.5</sup> - Y<sub>text</sub><sup>^0.43</sup>) * 1.618 * 100
 	
 	
 Please see the [APCA GitHub Repository](https://github.com/Myndex/SAPC-APCA) for the latest code and methods, at <https://github.com/Myndex/SAPC-APCA>.
