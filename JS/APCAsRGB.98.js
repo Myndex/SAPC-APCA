@@ -212,7 +212,7 @@ function APCAcontrast(BG,TXT,places=1) {
 //  */
             // return string
     return (outputContrast > clipLevel || outputContrast < -clipLevel) ?
-           (outputContrast * 100).toFixed(places) + "" : polarity + "LOW";
+           (outputContrast * 100).toFixed(places) + " Lc" : polarity + "LOW";
 
 } // Close APCAcontrast() 
 
