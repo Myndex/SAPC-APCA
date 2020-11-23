@@ -135,7 +135,7 @@ function APCAonly(BGr=255,BGg=255,BGb=255,txtr=0,txtg=0,txtb=0) {
 //  */
 
     // Hard clip output to clipLevel to eliminate noise, and return string
-    return (outputContrast > clipLevel || outputContrast < -clipLevel) ? (outputContrast * 100).toFixed(1) + "" : polarity + "LOW";
+    return (outputContrast > clipLevel || outputContrast < -clipLevel) ? (outputContrast * 100).toFixed(1) + " Lc" : polarity + "LOW";
 }
 
 ////////////////////////////////////////////////////////////////////////////////
