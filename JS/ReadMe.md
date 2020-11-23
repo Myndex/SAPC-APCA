@@ -1,11 +1,11 @@
-# APCA/SAPC JS Function Documentation
+# APCA/SAPC JS Library Documentation
 
 This is a set of JS functions/objects to determine a contrast value for a color pair, using the SAPC/APCA methods. 
 
 These are based on research iteration SAPC-7c, developed through a lengthy series of experiments and investigations. They all have a soft black clamp for the darker color, and a basic set of constants for the power curve exponents to predict an etimated perceptual contrast under common use case envirnments. These are active beta and are receiving updates and changes regularly.
 
 -----
-## APCAsRGBonly.js — SIMPLE QUICK START
+## [APCAsRGBonly.98.js](APCAsRGBonly.98.js) — SIMPLE QUICK START
 The APCA version is the version licensed to the W3/WAI for use in accessibility standards.
 
 If you want to dive in fast, or you want the bare basics, this is the file for you. This does not come with the input parsing and processing functions of the larger files — it is the base APCA algorithim only, with no extensions. Send it two RGB colors and it returns a contrast value.
@@ -28,7 +28,7 @@ If you don't want a string return, optionally there are some comment switches th
 If you need input string parsing of hex and HTML named colors, rgb(123,123,123), CIE LAB LCh processing, etc. then use one of the files below, or add the companion project [SeeLab](https://github.com/Myndex/SeeLab).
 
 -----
-## APCAsRGB.98.js
+## [APCAsRGB.98.js](APCAsRGB.98.js)
 This file includes the sRGB string input parsing and CIE processing functions, and lots of comments on usage. _The Font Select extension is not incorporated in this file yet_, at present that exists in the HTML file, but will be moved here soon. 
 
 ### Basic API
@@ -42,6 +42,7 @@ In this version, the APCAcontrast() algorithm expects to see linear **Y** passed
     console.log(contrastResult) // expected: '101.6 Lc'
 ### Regarding Results
 The expected result is a string **`'101.6 Lc'`** though if desired, comment switches allow setting a numeric only return.
+
 **IMPORTANT:** if you swap the colors so TXT is `'eea'` and BG is `'darkslateblue'` then the reported contrast would be **`'-108.8 Lc'`**. This is because reverse (light text on dark) reports as negative to make it clear and not to be confused with outputs for normal (dark text on light BG.) We perceive light text on a dark BG differently than dark text on light, and APCA accomodates that difference in perception.
 
 ### Input Parsing and sRGB Processing
@@ -51,16 +52,16 @@ This JS file includes [SeeLab](https://github.com/Myndex/SeeLab) input color str
 
 The RGB tuples are available as INTs ` this.r .g .b ` so for the background, ` BG.r==238, BG.g==238, BG.b==170 ` but are also available via additional methods or properties ` BG.hex ` returns `'eeeeaa'` and ` BG.rgb ` returns `'rgb(238,238,170)'` and there are many more, including CIE spaces like LABLCh. Details in the file comments, and summarized below.
 
-## APCAsRGB.98.min.js
+## [APCAsRGB.98.min.js](APCAsRGB.98.min.js)
 MiniMe version — identical to the above but minimized.
 
 -----
-## SAPCsRGB.98.js
+## [SAPCsRGB.98.js](SAPCsRGB.98.js)
 The SAPC version(s) are AGPL v3, with various added or experimental features such as the Low Contrast extension that enables measuring low contrasts down to about 1 or 2 Percent. These versions are not necessarily completely compliant with the emerging accessibility conformance model and shold not be used for building conformance tools. There are here for experimental and reearch purposes.
 
 The SAPC version also has additional methods and experimental features.
 
-## SAPCsRGB.98.min.js
+## [SAPCsRGB.98.min.js](SAPCsRGB.98.min.js)
 MiniMe version.
 
 -----
@@ -69,7 +70,7 @@ Also available separately at [my SeeLab Repoitory](https://github.com/Myndex/See
 
 ### TOTALLY REVISED for version 0.98 !
 
-Some Variables, Properties, and Method **names have been changed**. Everything is reorganized and optimized. Added functionality such as CIE XYZ, xyY, LAB, LUV, LCh processing, alpha, decimal, linearization, Y, more hex, rgb() variants, "cleaned" input etc. Thanks to Stoyan Stefanov for his input data parsing idea from his RGBColor.js
+Some Variables, Properties, and Method **names have been changed**. Everything is reorganized and optimized. Added functionality such as CIE XYZ, xyY, LAB, LUV, LCh processing, alpha, decimal, linearization, Y, more hex, rgb() variants, "cleaned" input etc. Thanks to Stoyan Stefanov for his input data parsing idea from his RGBColor.js, and thanks to BruceLindbloom.com for the extensive CIE math and knowledge.
 
 ### SWITCHABLE SECTIONS 
 - Allow you to turn off whole sections you might not need before minifying.
@@ -103,7 +104,7 @@ Some Variables, Properties, and Method **names have been changed**. Everything i
 - L* returns
         
 ## THE SAMPLE HTML & CSS FILES
-These are a simple running implementation of SAPC in plain vanilla JS and HTML5, close to what is on myndex.com/APCA/ On the HTML page the input forms use local page JS functions for the new **Font Select Extension**. This will eventually be moved to these JS pages, but for now the arrays and methods are in the HTML files.
+[APCAindex.html](../APCAindex.html) is a simple running implementation of APCA in plain vanilla JS and HTML5, and is what is on myndex.com/APCA/ On the HTML page the input forms use local page JS functions for the new **Font Select Extension**. This will eventually be moved to these JS pages, but for now the arrays and methods are in the HTML files.
 
 
 Please let me know of any problems, ideas, comments, etc.
