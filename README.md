@@ -1,8 +1,12 @@
-## Important: 
-Files that are intended for supporting the Silver/WCAG 3 conformance model all have **APCA** in the file name. Files with SAPC in the name are part of ongoing research and should NOT be used for developing conformance tools.
-
-# CURRENT VERSION: Beta 0.98
+# APCA CURRENT VERSION: Beta 0.98
 ## (Nov 18, 2020, 08:00 GMT)
+
+## NEW - Documentation and Quick Start
+See the [JS Documentation \(the ReadMe.md in the JS folder\)](JS/ReadMe.md) for information on using the API, which file is best suited for your needs, and a QuickStart tutorial.
+
+## Important: 
+Files that are intended for supporting the Silver/WCAG 3 conformance model all have **APCA** in the file name. Files with SAPC in the name are part of ongoing research and should _NOT_ be used for developing conformance tools.
+
 ### Change Notices:
 [ImportantChangeNotices.md]: ImportantChangeNotices.md
 
@@ -11,15 +15,14 @@ If you have been using any files from this repository, be sure to read the file 
 -----
 
 # SAPC/APCA
-![](images/Myndex_eye_cielabWide.png)
+[![](images/Myndex_eye_cielabWide.png)](https://www.myndex.com/WEB/Perception)
 ## SAPC _(S-LUV Advanced Perceptual Contrast)_
 ### APCA _Advanced Perceptual Contrast Algorithm_
 
 
-This is a set of contrast assessment methods for predicting perceived contrast between sRGB colors on a computer monitor. It has been developed as an assessment method for W3 WCAG3 accessibility standards relating to content for computer displays and mobile devices.
+This is a set of contrast assessment methods for predicting perceived contrast between sRGB colors on a computer monitor. It has been developed as an assessment method for W3 Silver/WCAG3 accessibility standards relating to content for computer displays and mobile devices.
 
 ### FEATURES
-
 * NEW in v0.98: Incorporates Spatial Frequency & Stimulus Size directly in predictions (i.e. provides direct indication of minimum font size andf weight).
 * Spectral weighting of luminance based on sRGB coefficients.
 * Weighting for normal and reverse polarity (dark text on light background vs light text on dark.)
@@ -36,28 +39,26 @@ This is a set of contrast assessment methods for predicting perceived contrast b
 ----- 
 
 ### [LIVE VERSION][APCAsite]
-There is a working version with examples and reference material on [the APCA site:
-![](images/APCAFontSelect.png)][APCAsite]
+There is a working version with examples and reference material on [the APCA site][APCAsite]
+
+[![](images/APCAFontSelect.png)][APCAsite]
 
 [APCAsite]: https://www.myndex.com/APCA/
 
-           
 -----
 
 ## IMPLEMENTATIONS
-
-The libraries are plain vanilla Javascript. As this develops we intend to include PHP 5.5, and OpenOffice Calc spreadsheet, as those cover the most likely use cases. Many of the available inputs to the functions can remain at their defaults, thought these extra inputs can be used in more specialized situations (such as creating content specifically for daylight/outdoors, or specifically for dark nights, etc.). 
+The libraries are plain vanilla Javascript. Planned adds include PHP, OpenOffice Calc (spreadsheet), and Python, as those cover the most likely use cases. Many of the available inputs to the functions can remain at their defaults, though these extra inputs can be used in more specialized situations (such as creating content specifically for daylight/outdoors, or specifically for dark nights, etc.). 
 
 A plain language walkthrough, LaTeX math, and pseudocode are below:
 
+-----
 
 ### APCA Math
 
 APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math assumes the use of the web standard sRGB colorspace.
 
-### The simplified steps are:
-
-
+### The Plain English Steps Are:
 
 - Convert the sRGB background and text colors to luminance: Y<sub>background</sub> and Y<sub>text</sub>
     - Convert from 8 bit integer to decimal 0.0-1.0
@@ -87,9 +88,8 @@ APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math
 - If the result is greater than -0.12 (closer to 0), then set contrast as 0. Otherwise multiply by 100.     
     - L<sup>c</sup><sub>contrast</sub> = (Y<sub>background</sub><sup>^0.5</sup> - Y<sub>text</sub><sup>^0.43</sup>) * 1.618 * 100
 	
-	
-Please see the [APCA GitHub Repository](https://github.com/Myndex/SAPC-APCA) for the latest code and methods, at <https://github.com/Myndex/SAPC-APCA>.
 
+-----
 
 Basic APCA Math in LaTeX
 ---------------
@@ -97,12 +97,12 @@ Basic APCA Math in LaTeX
 ![](images/700px-APCA_Math.png)
 
 
+-----
 
 Basic APCA Math Pseudocode
 --------------------------
 
 In the sRGB colorspace, using CSS color values as integers, with a background color sRGB<sub>bg</sub> and a text color sRGB<sub>txt</sub> convert each channel to decimal 0.0-1.0 by dividing by 255, then linearize the gamma encoded RGB channels by applying a simple exponent. 
-
 
 	Rlinbg = (sRbg/255.0) ^ 2.218
 	Glinbg = (sGbg/255.0) ^ 2.218
@@ -167,13 +167,12 @@ The Predicted Visual Contrast (*APCA*) between a foreground color and a backgrou
 *The "^" character is the exponentiation operator.*
 
 
-
 * * * * *
 
 
 ## Miscellaneous
 
-There is an informal and unofficial repository of information on vision, contrast, design, impairments, and readability at the [Visual Contrast Subgroup Wiki].
+There is an informal and unofficial repository of information on vision, contrast, design, impairments, and readability at the [Visual Contrast Subgroup Wiki] which includes "Whitepaper In Progress" materials.
 
 [Visual Contrast Subgroup Wiki]: https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup
 
@@ -203,8 +202,6 @@ Glossary
 -   **Visual Acuity** — acuity refers to the ability of the eye's optics to focus light onto the photoreceptors on the back of the eye.
     -   Poor acuity is usually understood as blurry vision or an inability to focus.
 -   **Spatial Frequency** — in a practical sense, this refers to the weight of a font, or the stroke width. A thinner font or narrower stroke width is a higher spatial frequency than a bolder or thicker stroke. Higher spatial frequencies require more luminance contrast to be visible than lower frequencies, such as a very bold large headline.
-
-
 
 
 -----
