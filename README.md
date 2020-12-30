@@ -1,3 +1,24 @@
+## PRE-RELEASE CONSTANTS:
+This are the **NEW** (December 30, 2020) candidate constants for the exponents, a key critical aspect of APCA. I'm putting them here as pre release as they will alter results and in a good way, making the contrast prediction significantly more accurate particularly for dark colors. I'm placing them here for any early adopters to get a look, and please comment in teh issues tab if you have any thoughts or issues.  I am calling these the 0.98charlie constants, but the next full build will be a bit, as I am also tweaking and adding features.
+
+These constants are at the head of the JS file. 
+
+### Revised Constants v0.98c:
+
+    const sRGBtrc = 2.45;
+
+    const normBGExp = 0.66;   
+    const normTXTExp = 0.61;  
+    const revBGExp = 0.64;   
+    const revTXTExp = 0.66;
+
+    const blkThrs = 0.03; 
+    const blkClmp = 1.7;  
+
+These substantially improve tracking of contrast perception especially for low contrasts and dark color pairs, and along with some upcoming code tweaks will provide a wider range as well. Enjoy!
+
+---
+
 # APCA CURRENT VERSION: Beta 0.98
 ## (Nov 18, 2020, 08:00 GMT)
 
