@@ -1,6 +1,9 @@
 ## PRE-RELEASE CONSTANTS:
 This are the **NEW** (December 30, 2020) candidate constants for the exponents, a key critical aspect of APCA. I'm putting them here as pre release as they will alter results and in a good way, making the contrast prediction significantly more accurate particularly for dark colors. I'm placing them here for any early adopters to get a look, and please comment in teh issues tab if you have any thoughts or issues.  I am calling these the 0.98charlie constants, but the next full build will be a bit, as I am also tweaking and adding features.
 
+To see these constants in action, visit: https://www.myndex.com/SAPC/  (the old constants are still on the APCA link)
+
+
 These constants are at the head of the JS file. 
 
 ### Revised Constants v0.98c:
@@ -19,7 +22,7 @@ These substantially improve tracking of contrast perception especially for low c
 
 ---
 
-# APCA CURRENT VERSION: Beta 0.98
+## APCA CURRENT VERSION: Beta 0.98
 ## (Nov 18, 2020, 08:00 GMT)
 
 ## NEW - Documentation and Quick Start
@@ -62,6 +65,9 @@ This is a set of contrast assessment methods for predicting perceived contrast b
 ### [LIVE VERSION][APCAsite]
 There is a working version with examples and reference material on [the APCA site][APCAsite]
 
+NOTE: The APCA site is using the old (pre 98charlie) constants, but wil be revised after the constants undergo further evaluation.
+
+
 [![](images/APCAFontSelect.png)][APCAsite]
 
 [APCAsite]: https://www.myndex.com/APCA/
@@ -75,7 +81,7 @@ A plain language walkthrough, LaTeX math, and pseudocode are below:
 
 -----
 
-### APCA Math
+### APCA Math (new 0.98c constants)
 
 APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math assumes the use of the web standard sRGB colorspace.
 
@@ -83,38 +89,38 @@ APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math
 
 - Convert the sRGB background and text colors to luminance: Y<sub>background</sub> and Y<sub>text</sub>
     - Convert from 8 bit integer to decimal 0.0-1.0
-    - Linearize (remove gamma) by applying a ^2.218 exponent
+    - Linearize (remove gamma) by applying a ^2.45 exponent
     - Apply sRGB coefficients and sum to **Y**
-        - Y = (R/255)<sup>^2.218</sup> * 0.2126 + (G/255)<sup>^2.218</sup> * 0.7152 + (B/255)<sup>^2.218</sup> * 0.0722
+        - Y = (R/255)<sup>^2.45</sup> * 0.2126 + (G/255)<sup>^2.45</sup> * 0.7152 + (B/255)<sup>^2.45</sup> * 0.0722
     - We will call these Y<sub>text</sub> and Y<sub>background</sub>
 - Determine if Y<sub>text</sub> or Y<sub>background</sub> is brighter (higher luminence, for contrast polarity)
     - Soft-clamp only the darkest color and **only** if it is less than **0.02 Y**
-        - **Soft Clamp:** subtract the darker color **Y** from 0.02
-        - Then apply a ^1.33 exponent to the result
+        - **Soft Clamp:** subtract the darker color **Y** from 0.03
+        - Then apply a ^1.7 exponent to the result
         - Then add that result back to the Y of the darker color
-            - (0.02 - Y)<sup>^1.33</sup> + Y
+            - (0.03 - Y)<sup>^1.7</sup> + Y
 - Apply power curve exponents to both colors for perceptual contrast
-    - For dark text on a light background, use ^0.43 for Y<sub>text</sub> and ^0.38 for Y<sub>background</sub>
-    - For light text on a dark background, use ^0.43 for Y<sub>text</sub> and ^0.5 for Y<sub>background</sub>
+    - For dark text on a light background, use ^0.61 for Y<sub>text</sub> and ^0.66 for Y<sub>background</sub>
+    - For light text on a dark background, use ^0.66 for Y<sub>text</sub> and ^0.64 for Y<sub>background</sub>
 - Subtract Y<sub>text</sub> from Y<sub>background</sub>, then multiply by phi (1.618) to scale the contrast value
-    - Always subtract the Y<sub>text</sub> value from the Y<sub>background</sub> value. 
+    - **Always** subtract the Y<sub>text</sub> value from the Y<sub>background</sub> value. 
         - For light text on a dark background, this will generate a negative number. 
         - This is intentional, so that negative values only apply to light text on dark BGs, and positive values only apply to dark text on a light BG.  
 
 **For dark text on a lighter background:**
-- If the result is less than 0.12, then set contrast as 0. Otherwise multiply by 100.     
-    - L<sup>c</sup><sub>contrast</sub> = (Y<sub>background</sub><sup>^0.38</sup> - Y<sub>text</sub><sup>^0.43</sup>) * 1.618 * 100
+- If the result is less than 0.05, then set contrast as 0. Otherwise multiply by 100.     
+    - L<sup>c</sup><sub>contrast</sub> = (Y<sub>background</sub><sup>^0.66</sup> - Y<sub>text</sub><sup>^0.61</sup>) * 1.618 * 100
     
 **For light text on a darker background:**
-- If the result is greater than -0.12 (closer to 0), then set contrast as 0. Otherwise multiply by 100.     
-    - L<sup>c</sup><sub>contrast</sub> = (Y<sub>background</sub><sup>^0.5</sup> - Y<sub>text</sub><sup>^0.43</sup>) * 1.618 * 100
+- If the result is greater than -0.05 (closer to 0), then set contrast as 0. Otherwise multiply by 100.     
+    - L<sup>c</sup><sub>contrast</sub> = (Y<sub>background</sub><sup>^0.64</sup> - Y<sub>text</sub><sup>^0.66</sup>) * 1.618 * 100
 	
 
 -----
 
 Basic APCA Math in LaTeX
 ---------------
-
+(this has not been updated with the new constants yet)
 ![](images/700px-APCA_Math.png)
 
 
@@ -125,13 +131,13 @@ Basic APCA Math Pseudocode
 
 In the sRGB colorspace, using CSS color values as integers, with a background color sRGB<sub>bg</sub> and a text color sRGB<sub>txt</sub> convert each channel to decimal 0.0-1.0 by dividing by 255, then linearize the gamma encoded RGB channels by applying a simple exponent. 
 
-	Rlinbg = (sRbg/255.0) ^ 2.218
-	Glinbg = (sGbg/255.0) ^ 2.218
-	Blinbg = (sBbg/255.0) ^ 2.218
+	Rlinbg = (sRbg/255.0) ^ 2.45
+	Glinbg = (sGbg/255.0) ^ 2.45
+	Blinbg = (sBbg/255.0) ^ 2.45
 
-	Rlintxt = (sRtxt/255.0) ^ 2.218
-	Glintxt = (sGtxt/255.0) ^ 2.218
-	Blintxt = (sBtxt/255.0) ^ 2.218
+	Rlintxt = (sRtxt/255.0) ^ 2.45
+	Glintxt = (sGtxt/255.0) ^ 2.45
+	Blintxt = (sBtxt/255.0) ^ 2.45
 
 Then find the relative luminance (*Y*) of each color by applying the sRGB/Rec709 spectral coefficients and summing together.
 
@@ -146,44 +152,43 @@ The Predicted Visual Contrast (*APCA*) between a foreground color and a backgrou
 
 	//  Define Constants for Basic APCA Version:
 
-	sRGBtrc = 2.218;	// Linearization exponent
+	sRGBtrc = 2.45;	// Linearization exponent
 
-	normBGExp = 0.38;	// Constants for Power Curve Exponents.
-	normTXTExp = 0.43;	// One pair for normal text, dark text on light BG
-	revBGExp = 0.5;		// and one for reverse, light text on dark BG
-	revTXTExp = 0.43;
+	normBGExp = 0.66;	// Constants for Power Curve Exponents.
+	normTXTExp = 0.61;	// One pair for normal text, dark text on light BG
+	revBGExp = 0.64;		// and one for reverse, light text on dark BG
+	revTXTExp = 0.66;
 
 	scale = 1.618;          // Scale output for easy to remember levels
 
-	blkThrs = 0.02;		// Level that triggers the soft black clamp
-	blkClmp = 1.33;		// Exponent for the soft black clamp curve
+	blkThrs = 0.03;		// Level that triggers the soft black clamp
+	blkClmp = 1.7;		// Exponent for the soft black clamp curve
 
-
+	// Soft clamp very dark colors
+	
+		Ytxt = (Ytxt > blkThrs) ? Ytxt : Ytxt + a((blkThrs - Ytxt) ^ blkClmp);
+		Ybg = (Ybg > blkThrs) ? Ybg : Ybg + ((blkThrs - Ybg) ^ blkClmp);
 
 	//  Calculate Predicted Contrast and return a string for the result
 
 	if Ybg > Ytxt then {
 
-		Ytxt = (Ytxt > blkThrs) ? Ytxt : Ytxt + abs(Ytxt - blkThrs) ^ blkClmp;
-	
 		APCA = ( Ybg ^ normBGExp - Ytxt ^ normTXTExp ) * scale;
 	
-		return (APCA < 0.12 ) ? "LOW" : str(APCA * 100) + " Lc";
+		return (APCA < 0.05 ) ? "LOW" : str(APCA * 100) + " Lc";
 	
 	} else {
   
-		Ybg = (Ybg > blkThrs) ? Ybg : Ybg + abs(Ybg - blkThrs) ^ blkClmp;
-	
 		APCA = ( Ybg ^ revBGExp - Ytxt ^ revTXTExp ) * scale;
 	
-		return (APCA > -0.12 ) ? "-LOW" : str(APCA * 100) + " Lc";
+		return (APCA > -0.05 ) ? "-LOW" : str(APCA * 100) + " Lc";
 	}
 
 *Notes:*
 
-*Predicted contrast less than 12% is clamped to zero to simplify the math.* 
+*Piecewise linearization is not used, as the combination of exponents used throughout better models actual display performance and contrast perception  * \
 
-*We will use the simple exponent, and not the piecewise sRGB transfer curve, as we are emulating display gamma and not performing image processing.*
+*Predicted contrast less than 5% is clamped to zero to simplify the math and reduce noise. * 
 
 *The "^" character is the exponentiation operator.*
 
