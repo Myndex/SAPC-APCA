@@ -8,7 +8,8 @@ These constants are at the head of the JS file.
 
 ### Revised Constants v0.98c:
 
-    const sRGBtrc = 2.45;
+    const sRGBtrc = 2.45; // NOTE: the name for this variable is going to change in the next revision,
+                          // as it is not just for the TRC but is part of the total model.
 
     const normBGExp = 0.66;   
     const normTXTExp = 0.61;  
