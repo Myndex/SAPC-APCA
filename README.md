@@ -1,5 +1,5 @@
 ## PRE-RELEASE CONSTANTS:
-This are the **NEW** (December 30, 2020) candidate constants for the exponents, a key critical aspect of APCA. I'm putting them here as pre release as they will alter results and in a good way, making the contrast prediction significantly more accurate particularly for dark colors. I'm placing them here for any early adopters to get a look, and please comment in teh issues tab if you have any thoughts or issues.  I am calling these the 0.98charlie constants, but the next full build will be a bit, as I am also tweaking and adding features.
+These are the **NEW** (December 30, 2020) candidate constants for the exponents, a key critical aspect of APCA. I'm putting them here as pre release as they will alter results and in a good way, making the contrast prediction significantly more accurate particularly for dark colors. I'm placing them here for any early adopters to get a look, and please comment in thr issues tab if you have any thoughts or issues.  I am calling these the **0.98charlie** constants, but the next full build will be a bit, as I am also tweaking and adding features.
 
 To see these constants in action, visit: https://www.myndex.com/SAPC/  (the old constants are still on the APCA link)
 
@@ -65,7 +65,7 @@ This is a set of contrast assessment methods for predicting perceived contrast b
 ### [LIVE VERSION][APCAsite]
 There is a working version with examples and reference material on [the APCA site][APCAsite]
 
-NOTE: The APCA site is using the old (pre 98charlie) constants, but wil be revised after the constants undergo further evaluation.
+NOTE: **The APCA site is using the old (pre 98charlie) constants**, useful if you want to comapre; APCA will be revised after the constants undergo further evaluation.
 
 
 [![](images/APCAFontSelect.png)][APCAsite]
