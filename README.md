@@ -1,5 +1,5 @@
 ## PRE-RELEASE CONSTANTS:
-These are the **NEW** (December 30, 2020) candidate constants for the exponents, a key critical aspect of APCA. I'm putting them here as pre release as they will alter results and in a good way, making the contrast prediction significantly more accurate particularly for dark colors. I'm placing them here for any early adopters to get a look, and please comment in thr issues tab if you have any thoughts or issues.  I am calling these the **0.98charlie** constants, but the next full build will be a bit, as I am also tweaking and adding features.
+These are the **NEW** (January 6, 2021) candidate constants for the exponents, a key critical aspect of APCA. I'm putting them here as pre release as they will alter results and in a good way, making the contrast prediction significantly more accurate particularly for dark colors. I'm placing them here for any early adopters to get a look, and please comment in the issues tab if you have any thoughts or issues.  I am calling these the **0.98Delta** constants, but the next full build will be a bit, as I am also tweaking and adding features.
 
 To see these constants in action, visit: https://www.myndex.com/SAPC/  (the old constants are still on the APCA link)
 
@@ -8,18 +8,10 @@ These constants are at the head of the JS file.
 
 ### Revised Constants v0.98c:
 
-    const sRGBtrc = 2.45; // NOTE: the name for this variable is going to change in the next revision,
-                          // as it is not just for the TRC but is part of the total model.
+C constants withdrawn.
+Stand By.... The D series constants will be available soon....
 
-    const normBGExp = 0.66;   
-    const normTXTExp = 0.61;  
-    const revBGExp = 0.64;   
-    const revTXTExp = 0.66;
-
-    const blkThrs = 0.03; 
-    const blkClmp = 1.7;  
-
-These substantially improve tracking of contrast perception especially for low contrasts and dark color pairs, and along with some upcoming code tweaks will provide a wider range as well. Enjoy!
+These substantially improve tracking of contrast perception especially for low contrasts and dark color pairs, and along with some upcoming code tweaks will provide a wider range as well.
 
 ---
 
@@ -82,7 +74,13 @@ A plain language walkthrough, LaTeX math, and pseudocode are below:
 
 -----
 
-### APCA Math (new 0.98c constants)
+### Lookup Table — D
+
+[![](images/FontChartD.png)]
+
+
+
+### APCA Math (new 0.98d-trial constants)
 
 APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math assumes the use of the web standard sRGB colorspace.
 
@@ -90,9 +88,9 @@ APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math
 
 - Convert the sRGB background and text colors to luminance: Y<sub>background</sub> and Y<sub>text</sub>
     - Convert from 8 bit integer to decimal 0.0-1.0
-    - Linearize (remove gamma) by applying a ^2.45 exponent
+    - Linearize (remove gamma) by applying a ^2.4 exponent
     - Apply sRGB coefficients and sum to **Y**
-        - Y = (R/255)<sup>^2.45</sup> * 0.2126 + (G/255)<sup>^2.45</sup> * 0.7152 + (B/255)<sup>^2.45</sup> * 0.0722
+        - Y = (R/255)<sup>^2.4</sup> * 0.2126 + (G/255)<sup>^2.4</sup> * 0.7152 + (B/255)<sup>^2.4</sup> * 0.0722
     - We will call these Y<sub>text</sub> and Y<sub>background</sub>
 - Determine if Y<sub>text</sub> or Y<sub>background</sub> is brighter (higher luminence, for contrast polarity)
     - Soft-clamp only the darkest color and **only** if it is less than **0.02 Y**
@@ -101,20 +99,20 @@ APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math
         - Then add that result back to the Y of the darker color
             - (0.03 - Y)<sup>^1.7</sup> + Y
 - Apply power curve exponents to both colors for perceptual contrast
-    - For dark text on a light background, use ^0.61 for Y<sub>text</sub> and ^0.66 for Y<sub>background</sub>
-    - For light text on a dark background, use ^0.66 for Y<sub>text</sub> and ^0.64 for Y<sub>background</sub>
-- Subtract Y<sub>text</sub> from Y<sub>background</sub>, then multiply by phi (1.618) to scale the contrast value
+    - For dark text on a light background, use ^0.44 for Y<sub>text</sub> and ^0.42 for Y<sub>background</sub>
+    - For light text on a dark background, use ^0.5 for Y<sub>text</sub> and ^0.52 for Y<sub>background</sub>
+- Subtract Y<sub>text</sub> from Y<sub>background</sub>, raise to power of phi, then multiply by phi (1.618) to scale the contrast value
     - **Always** subtract the Y<sub>text</sub> value from the Y<sub>background</sub> value. 
         - For light text on a dark background, this will generate a negative number. 
         - This is intentional, so that negative values only apply to light text on dark BGs, and positive values only apply to dark text on a light BG.  
 
 **For dark text on a lighter background:**
-- If the result is less than 0.05, then set contrast as 0. Otherwise multiply by 100.     
-    - L<sup>c</sup><sub>contrast</sub> = (Y<sub>background</sub><sup>^0.66</sup> - Y<sub>text</sub><sup>^0.61</sup>) * 1.618 * 100
+- If the result is less than 0.002, then set contrast as 0. Otherwise multiply by 100.     
+    - L<sup>c</sup><sub>contrast</sub> = (Y<sub>background</sub><sup>^0.42</sup> - Y<sub>text</sub><sup>^0.44</sup>) * 1.618 * 100
     
 **For light text on a darker background:**
-- If the result is greater than -0.05 (closer to 0), then set contrast as 0. Otherwise multiply by 100.     
-    - L<sup>c</sup><sub>contrast</sub> = (Y<sub>background</sub><sup>^0.64</sup> - Y<sub>text</sub><sup>^0.66</sup>) * 1.618 * 100
+- If the result is greater than -0.002 (closer to 0), then set contrast as 0. Otherwise multiply by 100.     
+    - L<sup>c</sup><sub>contrast</sub> = (Y<sub>background</sub><sup>^0.52</sup> - Y<sub>text</sub><sup>^0.5</sup>) * 1.618 * 100
 	
 
 -----
@@ -122,79 +120,80 @@ APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math
 Basic APCA Math in LaTeX
 ---------------
 (this has not been updated with the new constants yet)
-![](images/700px-APCA_Math.png)
+![](images/TempDmath.png)
 
 
 -----
 
-Basic APCA Math Pseudocode
+Basic SAPC Math Pseudocode
 --------------------------
 
-In the sRGB colorspace, using CSS color values as integers, with a background color sRGB<sub>bg</sub> and a text color sRGB<sub>txt</sub> convert each channel to decimal 0.0-1.0 by dividing by 255, then linearize the gamma encoded RGB channels by applying a simple exponent. 
+In the sRGB colorspace, using CSS color values as integers, with a background color sRGB<sub>bg</sub> and a text color sRGB<sub>txt</sub> convert each channel to decimal 0.0-1.0 by dividing by 255, then linearize the gamma encoded RGB channels by applying a simple exponent. 2.4 is used here as it best emulates the typical display to eye trc.
 
-	Rlinbg = (sRbg/255.0) ^ 2.45
-	Glinbg = (sGbg/255.0) ^ 2.45
-	Blinbg = (sBbg/255.0) ^ 2.45
+	Rlinbg = (sRbg/255.0) ^ 2.4
+	Glinbg = (sGbg/255.0) ^ 2.4
+	Blinbg = (sBbg/255.0) ^ 2.4
 
-	Rlintxt = (sRtxt/255.0) ^ 2.45
-	Glintxt = (sGtxt/255.0) ^ 2.45
-	Blintxt = (sBtxt/255.0) ^ 2.45
+	Rlintxt = (sRtxt/255.0) ^ 2.4
+	Glintxt = (sGtxt/255.0) ^ 2.4
+	Blintxt = (sBtxt/255.0) ^ 2.4
 
 Then find the relative luminance (*Y*) of each color by applying the sRGB/Rec709 spectral coefficients and summing together.
 
-	Ybg = 0.2126 * Rlinbg + 0.7156 * Glinbg + 0.0722 * Blinbg
+	Ybg = 0.2126 * Rlinbg + 0.7152 * Glinbg + 0.0722 * Blinbg
 
-	Ytxt = 0.2126 * Rlintxt + 0.7156 * Glintxt + 0.0722 * Blintxt
+	Ytxt = 0.2126 * Rlintxt + 0.7152 * Glintxt + 0.0722 * Blintxt
 
 ### Predicted Contrast
 
-The Predicted Visual Contrast (*APCA*) between a foreground color and a background color is calculated by:
+The Predicted Visual Contrast (*SAPC*) between a foreground color and a background color is calculated by:
 
 
-	//  Define Constants for Basic APCA Version:
+	//  Define Constants for Basic SAPC Version:
 
-	sRGBtrc = 2.45;	// Linearization exponent
-
-	normBGExp = 0.66;	// Constants for Power Curve Exponents.
-	normTXTExp = 0.61;	// One pair for normal text, dark text on light BG
-	revBGExp = 0.64;		// and one for reverse, light text on dark BG
-	revTXTExp = 0.66;
+	trcExpon = 2.4;			// Linearization exponent
+					
+	normBGexp = 0.42;		// Constants for Power Curve Exponents.
+	normTXTexp = 0.44;		// One pair for normal text, dark text on light BG
+	revBGexp = 0.52;		// and one for reverse, light text on dark BG
+	revTXTexp = 0.5;
 
 	scale = 1.618;          // Scale output for easy to remember levels
 
-	blkThrs = 0.03;		// Level that triggers the soft black clamp
-	blkClmp = 1.7;		// Exponent for the soft black clamp curve
+	blkThrs = 0.03;			// Level that triggers the soft black clamp
+	blkClmp = 1.7;			// Exponent for the soft black clamp curve
+	loClip = 0.0005;
 
 	// Soft clamp very dark colors
 	
 		Ytxt = (Ytxt > blkThrs) ? Ytxt : Ytxt + a((blkThrs - Ytxt) ^ blkClmp);
 		Ybg = (Ybg > blkThrs) ? Ybg : Ybg + ((blkThrs - Ybg) ^ blkClmp);
 
-	//  Calculate Predicted Contrast and return a string for the result
+	// Calculate Predicted Contrast and return a string for the result
 
 	if Ybg > Ytxt then {
 
-		APCA = ( Ybg ^ normBGExp - Ytxt ^ normTXTExp ) * scale;
+		SAPC = ( Ybg^normBGexp - Ytxt^normTXTexp )^scale;
 	
-		return (APCA < 0.05 ) ? "LOW" : str(APCA * 100) + " Lc";
+		return (SAPC < loClip ) ? "LOW" : str(SAPC * scale * 100) + " Lc";
 	
 	} else {
   
-		APCA = ( Ybg ^ revBGExp - Ytxt ^ revTXTExp ) * scale;
+		SAPC = ( Ytxt^revTXTexp - Ybg^revBGexp )^scale;
 	
-		return (APCA > -0.05 ) ? "-LOW" : str(APCA * 100) + " Lc";
+		return (SAPC < loClip ) ? "-LOW" : str(SAPC * scale * -100) + " Lc";
 	}
 
 *Notes:*
 
-*Piecewise linearization is not used, as the combination of exponents used throughout better models actual display performance and contrast perception  * \
+*Piecewise linearization is not used, as the combination of exponents used throughout better models actual display performance and contrast perception.*
 
-*Predicted contrast less than 5% is clamped to zero to simplify the math and reduce noise. * 
+*Predicted contrast less than 5% is clamped to zero to simplify the math and reduce noise.* 
 
 *The "^" character is the exponentiation operator.*
 
 
-* * * * *
+*****
 
 
 ## Miscellaneous
