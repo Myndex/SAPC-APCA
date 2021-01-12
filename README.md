@@ -1,5 +1,5 @@
 ## PRE-RELEASE CONSTANTS:
-We have **NEW** (January 11, 2021) candidate constants for the exponents, a key critical aspect of APCA. I'm putting them here as pre-release as they will alter results and in a good way, making the contrast prediction significantly more accurate particularly for dark colors. I'm placing them here for any early adopters to get a look, and please comment in the issues tab if you have any thoughts or issues.  I am calling these the **0.98Delta** constants.
+We have **NEW** (January 11, 2021) candidate constants for the exponents, a key critical aspect of APCA. IThey will be here soon as pre-release as they will alter results and in a good way, making the contrast prediction significantly more accurate particularly for dark colors. I'm placing them here for any early adopters to get a look, and please comment in the issues tab if you have any thoughts or issues.  I am calling these the **0.98Delta** constants.
 
 To see some versions of these constants in action, visit: https://www.myndex.com/SAPC/  (the old constants are still on the [**APCA**][APCAsite] link)
 
