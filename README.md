@@ -1,22 +1,28 @@
 ## PRE-RELEASE CONSTANTS:
-These are the **NEW** (January 6, 2021) candidate constants for the exponents, a key critical aspect of APCA. I'm putting them here as pre release as they will alter results and in a good way, making the contrast prediction significantly more accurate particularly for dark colors. I'm placing them here for any early adopters to get a look, and please comment in the issues tab if you have any thoughts or issues.  I am calling these the **0.98Delta** constants, but the next full build will be a bit, as I am also tweaking and adding features.
+We have **NEW** (January 11, 2021) candidate constants for the exponents, a key critical aspect of APCA. I'm putting them here as pre-release as they will alter results and in a good way, making the contrast prediction significantly more accurate particularly for dark colors. I'm placing them here for any early adopters to get a look, and please comment in the issues tab if you have any thoughts or issues.  I am calling these the **0.98Delta** constants.
 
-To see these constants in action, visit: https://www.myndex.com/SAPC/  (the old constants are still on the APCA link)
+To see some versions of these constants in action, visit: https://www.myndex.com/SAPC/  (the old constants are still on the [**APCA**][APCAsite] link)
 
 
-These constants are at the head of the JS file. 
+These constants are typically at the head of the JS file, those files are note yet updated here as the constants are under evaluation.
 
-### Revised Constants v0.98c:
+### Revised Constants v0.98d:
 
 C constants withdrawn.
-Stand By.... The D series constants will be available soon....
+Stand By.... The D series constants will be available soon....... 
 
 These substantially improve tracking of contrast perception especially for low contrasts and dark color pairs, and along with some upcoming code tweaks will provide a wider range as well.
 
 ---
+## SAPC CURRENT VERSION: 0.98D under revision/eval. 
+On hold while the new constants and modified math are evaluated. Coming very soon!
+
 
 ## APCA CURRENT VERSION: Beta 0.98
-## (Nov 18, 2020, 08:00 GMT)
+## (Nov 18, 2020, 08:00 GMT) 
+To be replaced as soon as the D series constants are evaluated.
+
+-----
 
 ## NEW - Documentation and Quick Start
 See the [JS Documentation \(the ReadMe.md in the JS folder\)](JS/ReadMe.md) for information on using the API, which file is best suited for your needs, and a QuickStart tutorial.
