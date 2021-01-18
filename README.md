@@ -1,22 +1,27 @@
 ## PRE-RELEASE CONSTANTS:
-We have **NEW** (January 11, 2021) candidate constants for the exponents, a key critical aspect of APCA. IThey will be here soon as pre-release as they will alter results and in a good way, making the contrast prediction significantly more accurate particularly for dark colors. I'm placing them here for any early adopters to get a look, and please comment in the issues tab if you have any thoughts or issues.  I am calling these the **0.98Delta** constants.
+As of today,  (January 17, 2021) we have a new set of candidate constants for the exponents, a key critical aspect of APCA. These substantially improve tracking of contrast perception especially for low contrasts and dark color pairs, make the contrast prediction significantly more accurate, and along with some upcoming code tweaks will provide a wider range as well.
 
-To see some versions of these constants in action, visit: https://www.myndex.com/SAPC/  (the old constants are still on the [**APCA**][APCAsite] link)
+I'm _not_ going to post them here by themselves, as implementation requires a number of changes to the algorithim.
 
+### Revised Constants v0.98d12c:
 
-These constants are typically at the head of the JS file, those files are note yet updated here as the constants are under evaluation.
+**To see the D12c version of the constants**, visit: https://www.myndex.com/SAPC/  _(the old constants are still on the [**APCA**][APCAsite] link)_
 
-### Revised Constants v0.98d:
+***About the New Constants and Upcoming Code Change***
 
-C constants withdrawn.
-Stand By.... The D series constants will be available soon....... 
+* Superior tracking in low contrast, approaching clinical levels for threshold contrasts.
+* All previous levels have been rescaled. Essentially "down 20" such that what was Lc80 is now Lc60, and so forth.
+* All lookup tables (visible and in the code) have been updated to match.
+* There is a new elegant scaling method that helps acheive all this.
+* While the basic model and concept is the same, the algorithim has enough changes that just replacing the constants will not work, and will have unpredictible results. I will post a canonical version here later this week after some futher evaluations, but of course feel free to look at the myndex.com/SAPC/ link to see what's up. 
+* It's spread between the HTML and the JS file for now, I will integrate soon.
 
-These substantially improve tracking of contrast perception especially for low contrasts and dark color pairs, and along with some upcoming code tweaks will provide a wider range as well.
+***ALSO*** The SAPC version has a "research mode" that has some useful contrast related utilities.
 
 ---
+
 ## SAPC CURRENT VERSION: 0.98D under revision/eval. 
 On hold while the new constants and modified math are evaluated. Coming very soon!
-
 
 ## APCA CURRENT VERSION: Beta 0.98
 ## (Nov 18, 2020, 08:00 GMT) 
