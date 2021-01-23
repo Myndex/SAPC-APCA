@@ -1,35 +1,51 @@
-## PRE-RELEASE CONSTANTS:
-As of today,  (January 17, 2021) we have a new set of candidate constants for the exponents, a key critical aspect of APCA. These substantially improve tracking of contrast perception especially for low contrasts and dark color pairs, make the contrast prediction significantly more accurate, and along with some upcoming code tweaks will provide a wider range as well.
+# SAPC/APCA CURRENT VERSION: 0.98D Constants: D12d
+## January 23, 2021, 10:30 GMT
 
-I'm _not_ going to post them here by themselves, as implementation requires a number of changes to the algorithim.
+## NEW CONSTANTS and NEW MATH:
+As of today,  (January 23, 2021) we have a new set of constants for the exponents, a key critical aspect of APCA, plus a new scaling method, and other revised code as the result of some recent breakthrough experiments. These substantially improve tracking of contrast perception, and better predicts for low contrasts and dark color pairs.
 
-### Revised Constants v0.98d12c:
+## It's Alive!
+The "new improved" SAPC and APCA are now live to play with. There have been some substantial changes and I'm excited to share:
 
-**To see the D12c version of the constants**, visit: https://www.myndex.com/SAPC/  _(the old constants are still on the [**APCA**][APCAsite] link)_
+## What and Where
+**The basic simple version[ is the APCA page,](https://www.myndex.com/APCA/)** it includes the new scaling and the dynamic font matrix. The is the official WCAG3/Silver support version.
 
-***About the New Constants and Upcoming Code Change***
+**The development version[ is the SAPC page,](https://www.myndex.com/SAPC/)** and this version includes the new RESEARCH MODE, which has some different tools you can activate to investigate the nature of a color or colors, including a simplified version of the middle contrast experiment - on the SAPC app it's called "split contrast mode".
 
-* Superior tracking in low contrast, approaching clinical levels for threshold contrasts.
-* All previous levels have been rescaled. Essentially "down 20" such that what was Lc80 is now Lc60, and so forth.
-* All lookup tables (visible and in the code) have been updated to match.
-* There is a new elegant scaling method that helps acheive all this.
-* While the basic model and concept is the same, the algorithim has enough changes that just replacing the constants will not work, and will have unpredictible results. I will post a canonical version here later this week after some futher evaluations, but of course feel free to look at the myndex.com/SAPC/ link to see what's up. 
-* It's spread between the HTML and the JS file for now, I will integrate soon.
+## The New SAPC/APCA at a Glance
+- **Now substantially more accurate** in terms of perceptual uniformity — twice as accurate to perception as the APCA I released last year.
 
-***ALSO*** The SAPC version has a "research mode" that has some useful contrast related utilities.
+- **Uniformity Described:** For the majority of the range, doubling or halving the L<sup>c</sup> contrast number equates to a doubling or halving of the perceived contrast. (Based on the empirical data from the 2020 "Middle Contrast" experiments.)
 
----
+- **New Code and Constants:** If you have been working with the code, it has changed, and there are a whole new set of constants. I have not posted it here on GitHub yet, but you can see it in the live sites.
 
-## SAPC CURRENT VERSION: 0.98D under revision/eval. 
-On hold while the new constants and modified math are evaluated. Coming very soon!
+- **Rescaled Output:** This new version sets the levels a little differently, so what was 80 is now about 60, and so on.
+    - **Rescaled lookup tables:** — to adjust to the newly scaled output, both the visual lookups, and the arrays in the code are updated to give accurate font minimums.
 
-## APCA CURRENT VERSION: Beta 0.98
-## (Nov 18, 2020, 08:00 GMT) 
-To be replaced as soon as the D series constants are evaluated.
+- **Full range is now standard** implemented via a new method that brings in the uniformity (doubling/halving). 
+    - And by full range, I mean all the way to zero, including a smooth crossing over zero. 
+    - While 8 bit monitors are too low in resolution for actual clinical accuracy, we are now measuring down to clinical threshold values. 
+
+- Some of the changes have "improved" the accuracy of saturated colors, particularly red and blue, at least in terms of readability guidelines. 
+    - APCA is not specifically addressing the Helmholtz–Kohlrausch effect, as the focus for APCA is on readability, and chroma contrast does not help readability (in some cases it hinders it) — luminance contrast is the key for readability.
+    - I do have a separate color module, but not releasing it at the moment as it is more about aesthetics, not readability, and solving the readability issue was the key goal, which I believe is achieved. 
+
+- **Research Mode!** On the SAPC site only, there is a button under the font display for "Research Mode" which activates some additional tools for investigating colors and contrast.
+
+Comments welcome of course. 
+
+Thank you!
+
+Andy
+
+_Andrew Somers
+W3 Invited Expert
+Myndex Color Science Researcher
+Inventor of SAPC and APCA_
 
 -----
 
-## NEW - Documentation and Quick Start
+## Documentation and Quick Start
 See the [JS Documentation \(the ReadMe.md in the JS folder\)](JS/ReadMe.md) for information on using the API, which file is best suited for your needs, and a QuickStart tutorial.
 
 ## Important: 
@@ -94,6 +110,11 @@ A plain language walkthrough, LaTeX math, and pseudocode are below:
 
 APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math assumes the use of the web standard sRGB colorspace.
 
+### The current D12d constants are:
+    Exponents:  	mainTRC: 2.4	normBG: 0.55	normTXT: 0.58	revTXT: 0.57	revBG: 0.62
+    NEW Scalers:	sclExpn1: 0.618	offset: -0.0618	sclExpn2: 1.618	Final Scale: 1.3247
+    Clamps:     	blkThrs: 0.03	blkClmp: 1.45	whtThrs: 0.9	whtClmp: 1.33	loClip: 0.001	YdeltaMin: 0.0005
+
 ### The Plain English Steps Are:
 
 - Convert the sRGB background and text colors to luminance: Y<sub>background</sub> and Y<sub>text</sub>
@@ -109,21 +130,12 @@ APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math
         - Then add that result back to the Y of the darker color
             - (0.03 - Y)<sup>^1.7</sup> + Y
 - Apply power curve exponents to both colors for perceptual contrast
-    - For dark text on a light background, use ^0.44 for Y<sub>text</sub> and ^0.42 for Y<sub>background</sub>
-    - For light text on a dark background, use ^0.5 for Y<sub>text</sub> and ^0.52 for Y<sub>background</sub>
-- Subtract Y<sub>text</sub> from Y<sub>background</sub>, raise to power of phi, then multiply by phi (1.618) to scale the contrast value
+    - For dark text on a light background, use ^0.55 for Y<sub>text</sub> and ^0.58 for Y<sub>background</sub>
+    - For light text on a dark background, use ^0.57 for Y<sub>text</sub> and ^0.62 for Y<sub>background</sub>
+- Subtract Y<sub>text</sub> from Y<sub>background</sub>, raise to power of 1/phi, subtract phi/100, raise to power of phi, then multiply by plastic (1.3247) to scale the contrast value
     - **Always** subtract the Y<sub>text</sub> value from the Y<sub>background</sub> value. 
         - For light text on a dark background, this will generate a negative number. 
         - This is intentional, so that negative values only apply to light text on dark BGs, and positive values only apply to dark text on a light BG.  
-
-**For dark text on a lighter background:**
-- If the result is less than 0.002, then set contrast as 0. Otherwise multiply by 100.     
-    - L<sup>c</sup><sub>contrast</sub> = (Y<sub>background</sub><sup>^0.42</sup> - Y<sub>text</sub><sup>^0.44</sup>) * 1.618 * 100
-    
-**For light text on a darker background:**
-- If the result is greater than -0.002 (closer to 0), then set contrast as 0. Otherwise multiply by 100.     
-    - L<sup>c</sup><sub>contrast</sub> = (Y<sub>background</sub><sup>^0.52</sup> - Y<sub>text</sub><sup>^0.5</sup>) * 1.618 * 100
-	
 
 -----
 
@@ -135,7 +147,7 @@ Basic APCA Math in LaTeX
 
 -----
 
-Basic SAPC Math Pseudocode
+Basic SAPC Math Pseudocode  DO NOT USE THIS IS NOT UPDATED
 --------------------------
 
 In the sRGB colorspace, using CSS color values as integers, with a background color sRGB<sub>bg</sub> and a text color sRGB<sub>txt</sub> convert each channel to decimal 0.0-1.0 by dividing by 255, then linearize the gamma encoded RGB channels by applying a simple exponent. 2.4 is used here as it best emulates the typical display to eye trc.
