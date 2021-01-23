@@ -38,9 +38,9 @@ Thank you!
 
 Andy
 
-_Andrew Somers
-W3 Invited Expert
-Myndex Color Science Researcher
+_Andrew Somers<br>
+W3 Invited Expert<br>
+Myndex Color Science Researcher<br>
 Inventor of SAPC and APCA_
 
 -----
