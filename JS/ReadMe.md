@@ -2,9 +2,14 @@
 
 This is a set of JS functions/objects to determine a contrast value for a color pair, using the SAPC/APCA methods. 
 
-These are based on research iteration SAPC-7c, developed through a lengthy series of experiments and investigations. They all have a soft black clamp for the darker color, and a basic set of constants for the power curve exponents to predict an etimated perceptual contrast under common use case envirnments. These are active beta and are receiving updates and changes regularly.
+These are based on research iteration SAPC-7c, developed through a lengthy series of experiments and investigations. They all have a soft black clamp for the darker color, and a basic set of constants for the power curve exponents to predict an estimated perceptual contrast under common use case envirnments. These are active beta and are receiving updates and changes regularly.
 
 -----
+
+## IMPORTANT: The files here are all under revision due to substantial changes January 22, 2021 — for the time being, check out the live sites. I'll get the code organized and here as soon as practical. 
+
+-----
+
 ## [APCAsRGBonly.98.js](APCAsRGBonly.98.js) — SIMPLE QUICK START
 The APCA version is the version licensed to the W3/WAI for use in accessibility standards.
 
