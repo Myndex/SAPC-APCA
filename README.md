@@ -6,6 +6,8 @@
 ### NEW CONSTANTS and NEW MATH:
 As of today,  (January 23, 2021) we have a new set of constants for the exponents, a key critical aspect of APCA, plus a new scaling method, and other revised code as the result of some recent breakthrough experiments. These substantially improve tracking of contrast perception, and better predicts for low contrasts and dark color pairs.
 
+**It is NOT here yet**, let me clean up the leftover development gack and get the files in order, but if you want instant gratification.....
+
 ### It's Alive!
 The "new improved" SAPC and APCA are now live to play with. There have been some substantial changes and I'm excited to share:
 
