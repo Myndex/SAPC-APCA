@@ -1,13 +1,15 @@
-# SAPC/APCA CURRENT VERSION: 0.98D Constants: D12d
-## January 23, 2021, 10:30 GMT
+# THE REVOLUTION WILL BE READABLE™
 
-## NEW CONSTANTS and NEW MATH:
+## SAPC/APCA CURRENT VERSION: 0.98D Constants: D12d
+### January 23, 2021, 10:30 GMT
+
+### NEW CONSTANTS and NEW MATH:
 As of today,  (January 23, 2021) we have a new set of constants for the exponents, a key critical aspect of APCA, plus a new scaling method, and other revised code as the result of some recent breakthrough experiments. These substantially improve tracking of contrast perception, and better predicts for low contrasts and dark color pairs.
 
-## It's Alive!
+### It's Alive!
 The "new improved" SAPC and APCA are now live to play with. There have been some substantial changes and I'm excited to share:
 
-## What and Where
+### What and Where
 **The basic simple version[ is the APCA page,](https://www.myndex.com/APCA/)** it includes the new scaling and the dynamic font matrix. The is the official WCAG3/Silver support version.
 
 **The development version[ is the SAPC page,](https://www.myndex.com/SAPC/)** and this version includes the new RESEARCH MODE, which has some different tools you can activate to investigate the nature of a color or colors, including a simplified version of the middle contrast experiment - on the SAPC app it's called "split contrast mode".
@@ -147,7 +149,8 @@ Basic APCA Math in LaTeX
 
 -----
 
-Basic SAPC Math Pseudocode  DO NOT USE THIS IS NOT UPDATED
+##DO NOT USE THIS IS NOT UPDATED
+Basic SAPC Math Pseudocode  
 --------------------------
 
 In the sRGB colorspace, using CSS color values as integers, with a background color sRGB<sub>bg</sub> and a text color sRGB<sub>txt</sub> convert each channel to decimal 0.0-1.0 by dividing by 255, then linearize the gamma encoded RGB channels by applying a simple exponent. 2.4 is used here as it best emulates the typical display to eye trc.
