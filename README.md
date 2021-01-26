@@ -1,7 +1,9 @@
 # _THE REVOLUTION WILL BE READABLE™_
 
-## SAPC/APCA CURRENT VERSION: 0.98D Constants: D12e
-### January 25, 2021
+## SAPC/APCA CURRENT VERSION: 0.98e Constants: d12e
+### January 26, 2021  10:41 GMT
+
+JS File: APCAonly.98e_d12e.js
 
 ### NEW CONSTANTS and NEW MATH:
 As of today,  (January 25, 2021) we have a new set of constants for the exponents, a key critical aspect of APCA, plus a new scaling method, and other revised code as the result of some recent breakthrough experiments. These substantially improve tracking of contrast perception, and better predicts for low contrasts and dark color pairs.
