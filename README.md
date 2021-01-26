@@ -145,8 +145,9 @@ APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math
 
 Basic APCA Math in LaTeX
 ---------------
-(this has not been updated with the new constants yet)
-![](images/TempDmath.png)
+LATEST VERSION — SAPC-8d12e
+
+![](images/APCAmathSAPC-8d12e.png)
 
 
 -----
