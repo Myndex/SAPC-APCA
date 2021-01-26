@@ -1,10 +1,10 @@
 # _THE REVOLUTION WILL BE READABLE™_
 
-## SAPC/APCA CURRENT VERSION: 0.98D Constants: D12d
-### January 23, 2021, 10:30 GMT
+## SAPC/APCA CURRENT VERSION: 0.98D Constants: D123
+### January 25, 2021
 
 ### NEW CONSTANTS and NEW MATH:
-As of today,  (January 23, 2021) we have a new set of constants for the exponents, a key critical aspect of APCA, plus a new scaling method, and other revised code as the result of some recent breakthrough experiments. These substantially improve tracking of contrast perception, and better predicts for low contrasts and dark color pairs.
+As of today,  (January 25, 2021) we have a new set of constants for the exponents, a key critical aspect of APCA, plus a new scaling method, and other revised code as the result of some recent breakthrough experiments. These substantially improve tracking of contrast perception, and better predicts for low contrasts and dark color pairs.
 
 **It is NOT here yet**, let me clean up the leftover development gack and get the files in order, but if you want instant gratification.....
 
@@ -89,7 +89,7 @@ This is a set of contrast assessment methods for predicting perceived contrast b
 ### [LIVE VERSION][APCAsite]
 There is a working version with examples and reference material on [the APCA site][APCAsite]
 
-NOTE: **The APCA site is using the old (pre 98charlie) constants**, useful if you want to comapre; APCA will be revised after the constants undergo further evaluation.
+NOTE: **The APCA site is now using current constants**, if you want to comapre the current to the old, you can add the word "legacy" to the URL to see legacy mode.
 
 
 [![](images/APCAFontSelect.png)][APCAsite]
@@ -107,17 +107,19 @@ A plain language walkthrough, LaTeX math, and pseudocode are below:
 
 ### Lookup Table — D
 
-[![](images/FontChartD.png)]
+[![](images/APCAtable98d12c.png)]
+
+[![](images/APCAtable98d12clegend.png)]
 
 
-### APCA Math (new 0.98d-trial constants)
+### APCA Math (new 0.98d12e constants)
 
 APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math assumes the use of the web standard sRGB colorspace.
 
 ### The current D12d constants are:
-    Exponents:  	mainTRC: 2.4	normBG: 0.55	normTXT: 0.58	revTXT: 0.57	revBG: 0.62
-    NEW Scalers:	sclExpn1: 0.618	offset: -0.0618	sclExpn2: 1.618	Final Scale: 1.3247
-    Clamps:     	blkThrs: 0.03	blkClmp: 1.45	whtThrs: 0.9	whtClmp: 1.33	loClip: 0.001	YdeltaMin: 0.0005
+    Exponents:	mainTRC: 2.4		normBG: 0.55		normTXT: 0.58	revTXT: 0.57	revBG: 0.62
+    Scalers:	loConThresh: 0.078	loConOffset: 0.06	Scale: 1.25
+    Clamps:	blkThrs: 0.03		blkClmp: 1.45		loClip: 0.001	YdeltaMin: 0.0005
 
 ### The Plain English Steps Are:
 
@@ -130,16 +132,16 @@ APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math
 - Determine if Y<sub>text</sub> or Y<sub>background</sub> is brighter (higher luminence, for contrast polarity)
     - Soft-clamp only the darkest color and **only** if it is less than **0.02 Y**
         - **Soft Clamp:** subtract the darker color **Y** from 0.03
-        - Then apply a ^1.7 exponent to the result
+        - Then apply a ^1.45 exponent to the result
         - Then add that result back to the Y of the darker color
-            - (0.03 - Y)<sup>^1.7</sup> + Y
+            - (0.03 - Y)<sup>^1.45</sup> + Y
 - Apply power curve exponents to both colors for perceptual contrast
-    - For dark text on a light background, use ^0.55 for Y<sub>text</sub> and ^0.58 for Y<sub>background</sub>
+    - For dark text on a light background, use ^0.58 for Y<sub>text</sub> and ^0.55 for Y<sub>background</sub>
     - For light text on a dark background, use ^0.57 for Y<sub>text</sub> and ^0.62 for Y<sub>background</sub>
-- Subtract Y<sub>text</sub> from Y<sub>background</sub>, raise to power of 1/phi, subtract phi/100, raise to power of phi, then multiply by plastic (1.3247) to scale the contrast value
+- Subtract Y<sub>text</sub> from Y<sub>background</sub>, multiply by 1.25 and subtract the offset to scale the contrast value
     - **Always** subtract the Y<sub>text</sub> value from the Y<sub>background</sub> value. 
         - For light text on a dark background, this will generate a negative number. 
-        - This is intentional, so that negative values only apply to light text on dark BGs, and positive values only apply to dark text on a light BG.  
+        - This is intentional, so that negative values indicate light text on dark BGs, and positive values only indicate dark text on a light BG.  
 
 -----
 
@@ -152,7 +154,6 @@ LATEST VERSION — SAPC-8d12e
 
 -----
 
-##DO NOT USE THIS IS NOT UPDATED
 Basic SAPC Math Pseudocode  
 --------------------------
 
@@ -169,57 +170,115 @@ In the sRGB colorspace, using CSS color values as integers, with a background co
 Then find the relative luminance (*Y*) of each color by applying the sRGB/Rec709 spectral coefficients and summing together.
 
 	Ybg = 0.2126 * Rlinbg + 0.7152 * Glinbg + 0.0722 * Blinbg
-
 	Ytxt = 0.2126 * Rlintxt + 0.7152 * Glintxt + 0.0722 * Blintxt
 
-### Predicted Contrast
+After then, the run through the APCA algorithim. A full pseudocode function is below:
 
-The Predicted Visual Contrast (*SAPC*) between a foreground color and a background color is calculated by:
+------ 
 
+### APCA Predicted Contrast PSEUDOCODE  0.98d12e
 
-	//  Define Constants for Basic SAPC Version:
+The Predicted Visual Contrast (*SAPC*) between a foreground color and a background color is calculated as shown in this pseudocode function. The above processes to create Y ARE included in the function below, which expects to receive 6 parameters for the RGB components as integers 0-255.
 
-	trcExpon = 2.4;			// Linearization exponent
+	/////  PSEUDOCODE for Basic APCA Version 0.98d12e  /////
+
+			/////  Define Constants  /////
+			
+		const trcExpon = 2.4,   // Linearization exponent
+
+		Rco = 0.2126,
+		Gco = 0.7152,
+		Bco = 0.0722,
 					
-	normBGexp = 0.42;		// Constants for Power Curve Exponents.
-	normTXTexp = 0.44;		// One pair for normal text, dark text on light BG
-	revBGexp = 0.52;		// and one for reverse, light text on dark BG
-	revTXTexp = 0.5;
+		normBGexp = 0.55,       // Constants for Power Curve Exponents.
+		normTXTexp = 0.58,      // One pair for normal text, dark text on light BG
+		revTXTexp = 0.57,       // and a pair for reverse, light text on dark BG
+		revBGexp = 0.62,        
 
-	scale = 1.618;          // Scale output for easy to remember levels
+		scale = 1.25,           // Scale output for easy to remember levels
 
-	blkThrs = 0.03;			// Level that triggers the soft black clamp
-	blkClmp = 1.7;			// Exponent for the soft black clamp curve
-	loClip = 0.0005;
+		blkThrs = 0.03,         // Level that triggers the soft black clamp
+		blkClmp = 1.45,         // Exponent for the soft black clamp curve
 
-	// Soft clamp very dark colors
+		YdeltaMin: 0.0005,      // Clamp & discard very small ∆Y and illegal levels
 	
-		Ytxt = (Ytxt > blkThrs) ? Ytxt : Ytxt + a((blkThrs - Ytxt) ^ blkClmp);
-		Ybg = (Ybg > blkThrs) ? Ybg : Ybg + ((blkThrs - Ybg) ^ blkClmp);
-
-	// Calculate Predicted Contrast and return a string for the result
-
-	if Ybg > Ytxt then {
-
-		SAPC = ( Ybg^normBGexp - Ytxt^normTXTexp )^scale;
+		loConThresh: 0.078,     // Part of loCon model D for smoothing out
+		loConFactor: 12.82051282051282, // magic number of 1 / 0.078,
+		loConOffset: 0.06,      // near threshold contrast levels
 	
-		return (SAPC < loClip ) ? "LOW" : str(SAPC * scale * 100) + " Lc";
+		loClip = 0.001;         // Final "clean up" clip for output.
+
+
+	function (Rbg, Gbg, Bbg, Rtxt, Gtxt, Btxt) {
 	
-	} else {
+			// Define variables
+		var SAPC;
+	
+		// We are only concerned with Y at this point
+		// Ybg and Ytxt: divide sRGB to 0.0-1.0 range, linearize, 
+		// and then apply the standard coefficients and sum to Y.
+
+		var Ybg =   pow(Rbg/255.0, trcExpon) * Rco +
+					pow(Gbg/255.0, trcExpon) * Gco +
+					pow(Bbg/255.0, trcExpon) * Bco;
+
+		var Ytxt =  pow(Rtxt/255.0, trcExpon) * Rco +
+					pow(Gtxt/255.0, trcExpon) * Gco +
+					pow(Btxt/255.0, trcExpon) * Bco;
+	
+
+			// Soft clamp very dark colors
+		Ytxt = (Ytxt > blkThrs) ? Ytxt : Ytxt + pow((blkThrs - Ytxt), blkClmp);
+		Ybg = (Ybg > blkThrs) ? Ybg : Ybg + pow((blkThrs - Ybg), blkClmp);
+
+			/////  Return 0 Early for extremely low ∆Y  /////
+		if( abs(Ybg - Ytxt) < YdeltaMin ) { return 0.0 }
+
+
+			// Calculate Predicted Contrast and return the result
+			// Ybg and Ytxt all have different exponents depending on
+			// polarity (light text on dark vs dark text on light)
+	
+		if ( Ybg > Ytxt ) {
+
+			SAPC = ( pow(Ybg, normBGexp) - pow(Ytxt, normTXTexp) ) * scale;
+	
+					// Return shown here as nested ternary statement
+			return  ( SAPC < loClip ) ? 0.0 :
+					( SAPC < loConThresh ) ?
+					  SAPC - ( SAPC * loConFactor ) * loConOffset :
+					  SAPC - loConOffset;
+		} else {
   
-		SAPC = ( Ytxt^revTXTexp - Ybg^revBGexp )^scale;
+			SAPC = ( pow(Ybg, revBGexp) - pow(Ytxt, revTXTexp) ) * scale;
 	
-		return (SAPC < loClip ) ? "-LOW" : str(SAPC * scale * -100) + " Lc";
-	}
+					// Here the return is shown as an if statement
+					// but is very similar in operation to the ternary
+					// version shown above. A key difference though
+					// involves the reversed polarity.
+					// Keep in mind that in this section, SAPC is negative
+					// and will return a negative value to indicate
+					// that text is lighter than the background.
+				
+			if ( SAPC > -loClip ) {
+				return 0.0;
+			} else if ( SAPC > -loConThresh ) {
+				return 100 * ( SAPC - ( SAPC * loConThresh ) * loConRollout );
+			} else {
+				return 100 * ( SAPC + loConRollout );
+			}
+		}
+	}   
+
+	// Because this is a pseudocode example, it has not been specifically tested
+	// But is based on the working JS code.
+
 
 *Notes:*
 
 *Piecewise linearization is not used, as the combination of exponents used throughout better models actual display performance and contrast perception.*
 
-*Predicted contrast less than 5% is clamped to zero to simplify the math and reduce noise.* 
-
-*The "^" character is the exponentiation operator.*
-
+*Predicted contrast less than 0.1% is clamped to zero to reduce noise.* 
 
 *****
 
