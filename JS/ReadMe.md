@@ -6,33 +6,35 @@ These are based on research iteration SAPC-7c, developed through a lengthy serie
 
 -----
 
-## IMPORTANT: The files here are all under revision due to substantial changes January 22, 2021 — for the time being, check out the live sites. I'll get the code organized and here as soon as practical. 
-
------
-
-## [APCAsRGBonly.98.js](APCAsRGBonly.98.js) — SIMPLE QUICK START
+## [APCAonly.98e_d12e.js](APCAonly.98e_d12e.js) — SIMPLE QUICK START
 The APCA version is the version licensed to the W3/WAI for use in accessibility standards.
 
 If you want to dive in fast, or you want the bare basics, this is the file for you. This does not come with the input parsing and processing functions of the larger files — it is the base APCA algorithim only, with no extensions. Send it two RGB colors and it returns a contrast value.
 
-This APCA function takes two sRGB encoded colors, with each channel a separated integer value 0-255. This assumes you already have input parsing/clamping 0-255.
+This APCA function takes two sRGB encoded colors, where each color is a number in RGB order, (i.e. 0x00RRGGBB).
 
 ### API
-The API for "APCAonly.98.js" is trivially simple. Send it 8bit integer sRGB values for BACKGROUND and TEXT, and it returns a string with the APCA contrast result.
+The API for "APCAonly.98...." is trivially simple. Send it sRGB values for BACKGROUND and TEXT, and it returns a float with the APCA contrast result.
 
-**`var contrastString = APCAonly(BGr,BGg,BGb,TXTr,TXTg,TXTb)`**
+**`var contrast = APCAcontrast(background,text)`**
 
-Each parameter input must be 0-255 and sRGB encoded. A string is returned, which will be a value such as **`'89.4 Lc'`** or **`'-102.3 Lc'`** or **`'LOW'`**. Negative values mean light text and a dark background, positive values mean dark text and a light background.
+Each parameter input must be an sRGB encoded number. White is either the integer 16777216 or the hex 0xffffff. A float is returned with a positive or negative value. Negative values mean light text and a dark background, positive values mean dark text and a light background. 60.0, or -60.0 is a contrast "sort of like" the old WCAG 2's 4.5:1.
 
 ### IMPORTANT: Do Not Mix Up Text and Background inputs.
 **APCA is polarity dependent, and correct results require that the BG and TXT are processed via the correct inputs.**
+
+
+
+-----
+## The Files Below are Under Revision, but will be back soon!
+
 
 If you don't want a string return, optionally there are some comment switches that can enable returns of numeric values instead of a string - just add a slash to enable:
 ` ( /* is off   //* is on ) `.
  
 If you need input string parsing of hex and HTML named colors, rgb(123,123,123), CIE LAB LCh processing, etc. then use one of the files below, or add the companion project [SeeLab](https://github.com/Myndex/SeeLab).
 
------
+
 ## [APCAsRGB.98.js](APCAsRGB.98.js)
 This file includes the sRGB string input parsing and CIE processing functions, and lots of comments on usage. _The Font Select extension is not incorporated in this file yet_, at present that exists in the HTML file, but will be moved here soon. 
 
