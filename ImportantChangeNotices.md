@@ -1,8 +1,8 @@
-### As of Jan 27, 2020 23:00 GMT
+### As of Jan 28, 2021 02:00 GMT
 # CURRENT VERSION: Beta 98e_d12e
 **IMPORTANT:** If you are making a tool to predict contrast for the new W3 standards for Visual Contrast, **use only the APCA files.**
 
-## Change Notice January 27, 2020 23:00 GMT
+## Change Notice January 28, 2021 02:00 GMT
 The new version of the basic APCA javascript file is uploaded, and the main directory readme.md has been updated with the lastest maths and code examples. Variable names and values have changed. The key constants are now:
 
     Exponents:	mainTRC: 2.4	normBG: 0.55	normTXT: 0.58	revTXT: 0.57	revBG: 0.62
