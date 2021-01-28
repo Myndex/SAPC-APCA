@@ -118,10 +118,9 @@ A plain language walkthrough, LaTeX math, and pseudocode are below:
 
 APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math assumes the use of the web standard sRGB colorspace.
 
-### The current D12d constants are:
-    Exponents:	mainTRC: 2.4		normBG: 0.55		normTXT: 0.58	revTXT: 0.57	revBG: 0.62
-    Scalers:	loConThresh: 0.078	loConOffset: 0.06	Scale: 1.25
-    Clamps:	blkThrs: 0.03		blkClmp: 1.45		loClip: 0.001	YdeltaMin: 0.0005
+    Exponents:	mainTRC: 2.4	normBG: 0.55	normTXT: 0.58	revTXT: 0.57	revBG: 0.62
+    Scalers:	loConThresh: 0.078	loConFactor: 12.82051282051282		loConOffset: 0.06	Scale: 1.25
+    Clamps:	blkThrs: 0.03	blkClmp: 1.45	loClip: 0.001	deltaYmin: 0.0005
 
 ### The Plain English Steps Are:
 
@@ -202,7 +201,7 @@ The Predicted Visual Contrast (*SAPC*) between a foreground color and a backgrou
 		blkThrs = 0.03,         // Level that triggers the soft black clamp
 		blkClmp = 1.45,         // Exponent for the soft black clamp curve
 
-		YdeltaMin: 0.0005,      // Clamp & discard very small ∆Y and illegal levels
+		deltaYmin: 0.0005,      // Clamp & discard very small ∆Y and illegal levels
 	
 		loConThresh: 0.078,     // Part of loCon model D for smoothing out
 		loConFactor: 12.82051282051282, // magic number of 1 / 0.078,
@@ -234,7 +233,7 @@ The Predicted Visual Contrast (*SAPC*) between a foreground color and a backgrou
 		Ybg = (Ybg > blkThrs) ? Ybg : Ybg + pow((blkThrs - Ybg), blkClmp);
 
 			/////  Return 0 Early for extremely low ∆Y  /////
-		if( abs(Ybg - Ytxt) < YdeltaMin ) { return 0.0 }
+		if( abs(Ybg - Ytxt) < deltaYmin ) { return 0.0 }
 
 
 			// Calculate Predicted Contrast and return the result
@@ -247,9 +246,9 @@ The Predicted Visual Contrast (*SAPC*) between a foreground color and a backgrou
 	
 					// Return shown here as nested ternary statement
 			return  ( SAPC < loClip ) ? 0.0 :
-					( SAPC < loConThresh ) ?
-					  SAPC - ( SAPC * loConFactor ) * loConOffset :
-					  SAPC - loConOffset;
+				( SAPC < loConThresh ) ?
+				( SAPC - SAPC * loConFactor * loConOffset)) * 100 :
+				( SAPC - loConOffset) * 100;
 		} else {
   
 			SAPC = ( pow(Ybg, revBGexp) - pow(Ytxt, revTXTexp) ) * scale;
@@ -265,15 +264,15 @@ The Predicted Visual Contrast (*SAPC*) between a foreground color and a backgrou
 			if ( SAPC > -loClip ) {
 				return 0.0;
 			} else if ( SAPC > -loConThresh ) {
-				return 100 * ( SAPC - ( SAPC * loConThresh ) * loConRollout );
+				return 100 * ( SAPC - SAPC * loConFactor * loConOffset );
 			} else {
-				return 100 * ( SAPC + loConRollout );
+				return 100 * ( SAPC + loConOffset );
 			}
 		}
 	}   
 
 	// Because this is a pseudocode example, it has not been specifically tested
-	// But is based on the working JS code.
+	// But is based on the working JS code. (variable names corrected jan 27 2021)
 
 
 *Notes:*
@@ -288,8 +287,9 @@ The Predicted Visual Contrast (*SAPC*) between a foreground color and a backgrou
 
     ////////////////////////////////////////////////////////////////////////////////
     /** @preserve
+    /////                *** APCA VERSION for W3 and WCAG 3 ***
     /////
-    /////   SAPC - S-Luv Advanced Perceptual Contrast - Beta Algorithm 0.98e (d12e)
+    /////   SAPC - S-Luv Advanced Perceptual Contrast - Beta Algorithm 0.98e_d12e
     /////                *** With the NEW SmoothScale extension ***
     /////              *** Optimized for the Font Select Extension ***
     /////
@@ -302,7 +302,7 @@ The Predicted Visual Contrast (*SAPC*) between a foreground color and a backgrou
     ////////////////////////////////////////////////////////////////////////////////
     /////
     /////                        SAPC Method and APCA Algorithm
-    /////          •••• Version 0.98e with SmoothScale™ by Andrew Somers ••••
+    /////          •••• Version 0.98e_d12e with SmoothScale™ by Andrew Somers ••••
     /////
     /////   GITHUB: https://github.com/Myndex/SAPC-APCA
     /////   DEVELOPER SITE: https://www.myndex.com/WEB/Perception
@@ -317,7 +317,7 @@ The Predicted Visual Contrast (*SAPC*) between a foreground color and a backgrou
     /////
     ////////////////////////////////////////////////////////////////////////////////
 
- 
+
     ////////////////////////////////////////////////////////////////////////////////
     /////
     /////   *****  SAPC BLOCK  *****
@@ -351,12 +351,34 @@ The Predicted Visual Contrast (*SAPC*) between a foreground color and a backgrou
     ////////////////////////////////////////////////////////////////////////////////
 
 
-
-
     ////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////
     /////  BEGIN SAPC/APCA CONTRAST BLOCK  \//////////////////////////////////////
     ////                                    \////////////////////////////////////
+
+
+    ////////////////////////////////////////////////////////////////////////////
+    ///// SAPC Function with SmoothScale  \////////////////////////////////////
+    ////                                   \//////////////////////////////////
+    ///
+
+    ///// *** Polarity is Important: do not mix up background and text *** /////
+
+    /////  Input value must be integer in RGB order (RRGGBB for 0xFFFFFF)  /////
+
+                /////  DO NOT use a Y from any other method  /////
+
+
+    function APCAcontrast (background, text) {
+
+        let Rbg = (background & 0xFF0000) >> 16,
+            Gbg = (background & 0x00FF00) >> 8,
+            Bbg = (background & 0x0000FF);
+
+        let Rtxt = (text & 0xFF0000) >> 16,
+            Gtxt = (text & 0x00FF00) >> 8,
+            Btxt = (text & 0x0000FF);
+
 
             /////  MAGICAL NUMBERS  ///////////////////////////////
 
@@ -386,7 +408,7 @@ The Predicted Visual Contrast (*SAPC*) between a foreground color and a backgrou
 
       const blkThrs = 0.03,         // Level that triggers the soft black clamp
             blkClmp = 1.45,         // Exponent for the soft black clamp curve
-            YdeltaMin = 0.0005,     // Lint trap
+            deltaYmin = 0.0005,     // Lint trap
             scaleBoW = 1.25,        // Scaling for dark text on light
             scaleWoB = 1.25,        // Scaling for light text on dark
             loConThresh = 0.078,    // Threshold for new simple offset scale
@@ -395,36 +417,12 @@ The Predicted Visual Contrast (*SAPC*) between a foreground color and a backgrou
             loClip = 0.001;         // Output clip (lint trap #2)
 
 
-
-
-    ////////////////////////////////////////////////////////////////////////////
-    ///// SAPC Function with SmoothScale  \////////////////////////////////////
-    ////                                   \//////////////////////////////////
-    ///
-
-    ///// *** Polarity is Important: do not mix up background and text *** /////
-
-                    /////  Number must be 8bit RGB order  /////
-
-                /////  DO NOT use a Y from any other method  /////
-
-
-    function APCAcontrast (background, text) {
-    
-        let Rbg = (background & 0xFF0000) >> 16,
-            Gbg = (background & 0x00FF00) >> 8,
-            Bbg = (background & 0x0000FF);
-
-        let Rtxt = (text & 0xFF0000) >> 16,
-            Gtxt = (text & 0x00FF00) >> 8,
-            Btxt = (text & 0x0000FF);
-
             // We are only concerned with Y at this point
             // Ybg and Ytxt: divide sRGB to 0.0-1.0 range, linearize, 
             // and then apply the standard coefficients and sum to Y.
             // Note that the Y we create here is unique and designed
             // exclusively for SAPC. Do not use Y from other methods.
-        
+    
         let Ybg =   Math.pow(Rbg/255.0, mainTRC) * Rco +
                     Math.pow(Gbg/255.0, mainTRC) * Gco +
                     Math.pow(Bbg/255.0, mainTRC) * Bco;
@@ -432,13 +430,13 @@ The Predicted Visual Contrast (*SAPC*) between a foreground color and a backgrou
         let Ytxt =  Math.pow(Rtxt/255.0, mainTRC) * Rco +
                     Math.pow(Gtxt/255.0, mainTRC) * Gco +
                     Math.pow(Btxt/255.0, mainTRC) * Bco;
-    
+
         let SAPC = 0.0;             // For holding raw SAPC values
         let outputContrast = 0.0;   // For weighted final values
-    
+
 
         ///// TUTORIAL  /////
-    
+
         // Take Y and soft clamp black, return 0 for very close luminances
         // determine polarity, and calculate SAPC raw contrast
         // Then apply the output scaling 
@@ -460,7 +458,7 @@ The Predicted Visual Contrast (*SAPC*) between a foreground color and a backgrou
 
 
             /////   Return 0 Early for extremely low ∆Y (lint trap #1) /////
-        if(Math.abs(Ybg - Ytxt) < YdeltaMin){ return 0.0 }
+        if(Math.abs(Ybg - Ytxt) < deltaYmin){ return 0.0 }
 
 
 
@@ -469,19 +467,19 @@ The Predicted Visual Contrast (*SAPC*) between a foreground color and a backgrou
         if ( Ybg > Ytxt ) {     // For normal polarity, black text on white
 
                 ///// Calculate the SAPC contrast value and scale
-            
+        
             SAPC = ( Math.pow(Ybg, normBG) - Math.pow(Ytxt, normTXT) ) * scaleBoW;
 
-                ///// NEW! SAPC SmoothScale™
-               // Low Contrast Smooth Scale Rollout to prevent polarity reversal
-              // and also a low clip for very low contrasts (lint trap #2)
-             // much of this is for very low contrasts, less than 10
-            // therefore for most reversing needs, only loConOffset is important
+                    ///// NEW! SAPC SmoothScale™
+                   // Low Contrast Smooth Scale Rollout to prevent polarity reversal
+                  // and also a low clip for very low contrasts (lint trap #2)
+                 // much of this is for very low contrasts, less than 10
+                // therefore for most reversing needs, only loConOffset is important
             outputContrast = ( SAPC < loClip ) ? 0.0 :
                              ( SAPC < loConThresh ) ?
                                SAPC - SAPC * loConFactor * loConOffset :
                                SAPC - loConOffset;
-                 
+             
 
         } else {     // For reverse polarity, light text on dark
                     // WoB should always return negative value.
