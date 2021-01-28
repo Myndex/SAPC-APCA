@@ -1,7 +1,7 @@
 # _THE REVOLUTION WILL BE READABLE™_
 
 ## SAPC/APCA CURRENT VERSION: 0.98e Constants: d12e
-### January 26, 2021  10:41 GMT
+### January 28, 2021  02:13 GMT
 
 JS File: APCAonly.98e_d12e.js
 
