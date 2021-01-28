@@ -6,9 +6,13 @@
 The new version of the basic APCA javascript file is uploaded, and the main directory readme.md has been updated with the lastest maths and code examples. Variable names and values have changed. The key constants are now:
 
     Exponents:	mainTRC: 2.4	normBG: 0.55	normTXT: 0.58	revTXT: 0.57	revBG: 0.62
-    Scalers:	Scale: 1.25	loConThresh: 0.078	loConFactor: 12.82051282051282		loConOffset: 0.06
-    Clamps:	blkThrs: 0.03	blkClmp: 1.45	loClip: 0.001	deltaYmin: 0.0005
+    Scalers:	Scale: 1.25	loConThresh: 0.078	loConOffset: 0.06	loConFactor: 12.82051282051282
+    Clamps:  	blkThrs: 0.03	blkClmp: 1.45	loClip: 0.001	deltaYmin: 0.0005
+Also changed the R,G,B coefficients to the less rounded matrix versions for better future compatibility.
 
+    Rco = 0.2126729;
+    Gco = 0.7151522;
+    Bco = 0.0721750;
 
 ## Change Notice January 2021 General
 Substantial code changes, including math and scaling. Literally all constants have changed. Typicall the "equevelent colors" will be indicated 20 lower (more or less). The main takeawy here though is what was 100 is now 80, what was 80 is now 60 and what was 60 is now 40.
