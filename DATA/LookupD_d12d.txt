@@ -1,0 +1,47 @@
+////////////////////////////////////////////////////////////////////////////////
+///// TAB DELIMITED TABLE //////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+		APCA CONTRAST LOOKUP TABLE for 0.98d (d12d)
+Font			Reference Font Weight
+Weight:	100	200	300	400	500	600	700	800	900
+Font
+Size			APCA Contrast Value (Lc)
+10px	⊘	⊘	⊘	©§™	©§™	©§™	©§™	⊘	⊘
+11px	⊘	⊘	⊘	©§™	©§™	©§™	©§™	⊘	⊘
+12px	⊘	⊘	©§™	©§™	×100	×90	×80	⊘	⊘
+14px	⊘	⊘	©§™	100	90	80	60	×60	⊘
+16px	⊘	⊘	100	90	80	60	55	×50	×50
+18px	⊘	⊘	90	80	60	55	50	×40	×40
+24px	⊘	100	80	60	55	50	40	38	×35
+30px	⊘	90	70	55	50	40	38	35	30
+36px	⊘	80	60	50	40	38	35	30	25
+48px	100	70	55	40	38	35	30	25	>20
+60px	90	60	50	38	35	30	25	>20	>20
+72px	80	55	40	35	30	25	>20	>20	>20
+96px	70	50	35	30	25	>20	>20	>20	>20
+120px	60	40	30	25	>20	>20	>20	>20	>20
+
+////////////////////////////////////////////////////////////////////////////////
+
+⊘	means no text this size or weight (decorative only)
+©§™	means this size/weight can only be used for non-content like copyrights
+x	as in x100 means do not use for columns of body text
+>20	Hard cut off for text, only non-text below this value.
+
+No content text less than 12px.
+No text less than 10px (only copyright/legal/byline etc)
+No content text over 120px.
+
+In-between values may be interpolated. Linear interpolation is approved provided that it is between immediately adjacent levels, and always rounded up (ceiling). Fonts may be rounded up to the nearest 0.5px when less than 24px, or to the nearest 1px for larger fonts.
+
+GENERAL GUIDELINES on APCA LEVELS
+
+100 • For extremely thin fonts, also 100 is a suggested maximum for very large and bold fonts, and large areas of color.
+80 • Preferred level for columns of body text. Also, can be used for any text where readability is important.
+60 • The minimum level recommended for content text, that is, text you want people to read. "Sort of" like the old 4.5:1 in WCAG2.
+40 • The minimum level for larger text such as headlines, and large text that should be readable fluently. "Sort of" like the old 3:1 in WCAG2.
+20 • The absolute minimum for any text, including text for spot reading. Large non-text content can be below this however.
+10 • The absolute minimum for any non-text that needs to be discernible, but does not include fine details, such as buttons. Designers should treat anything below this level as invisible, as it will not be visible for many users.
+
+////////////////////////////////////////////////////////////////////////////////
