@@ -1,6 +1,22 @@
-### As of Nov 18, 2020 08:00 GMT
-# CURRENT VERSION: Beta 0.98
+### As of Jan 27, 2020 23:00 GMT
+# CURRENT VERSION: Beta 98e_d12e
 **IMPORTANT:** If you are making a tool to predict contrast for the new W3 standards for Visual Contrast, **use only the APCA files.**
+
+## Change Notice January 27, 2020 23:00 GMT
+The new version of the basic APCA javascript file is uploaded, and the main directory readme.md has been updated with the lastest maths and code examples. Variable names and values have changed. The key constants are now:
+
+    Exponents:	mainTRC: 2.4	normBG: 0.55	normTXT: 0.58	revTXT: 0.57	revBG: 0.62
+    Scalers:	Scale: 1.25	loConThresh: 0.078	loConFactor: 12.82051282051282		loConOffset: 0.06
+    Clamps:	blkThrs: 0.03	blkClmp: 1.45	loClip: 0.001	deltaYmin: 0.0005
+
+
+## Change Notice January 2021 General
+Substantial code changes, including math and scaling. Literally all constants have changed. Typicall the "equevelent colors" will be indicated 20 lower (more or less). The main takeawy here though is what was 100 is now 80, what was 80 is now 60 and what was 60 is now 40.
+
+80: The general target for columns of body text.
+
+60: The general traget for most content text.
+
 
 ## Change Notice November 18, 2020 08:00 GMT
 IMPORTANT: Major reworking of the input objects, adding new methods including a complete CIE suite, piecewise sRGB processing, and much more. This file is _INCOMPATIBLE WITH ALL PREVIOUS VERSIONS_ due to new features, naming, and organizing of properties and methods.
