@@ -502,6 +502,17 @@ The Predicted Visual Contrast (*SAPC*) between a foreground color and a backgrou
     ///////////////////////////////////////////////////////////////////////////////\
 
 
+## TESTING YOUR IMPLEMENTATION
+
+If you've implemented the code and want a quick sanity check, Here are four keystone checks with no rounding, where the first colos is TEXT and the4 second color is BACKGROUND:
+
+    #888 vs #fff •  66.89346308821438
+    #aaa vs #000 • -60.438571788907524
+    #def vs #123 • -98.44863435731266
+    #123 vs #234 •   1.276075977788573
+
+Those should exercise the important constants.
+
 
 ## Miscellaneous
 
