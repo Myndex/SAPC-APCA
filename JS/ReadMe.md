@@ -2,12 +2,12 @@
 
 This is a set of JS functions/objects to determine a contrast value for a color pair, using the SAPC/APCA methods. 
 
-These are based on research iteration SAPC-7c, developed through a lengthy series of experiments and investigations. They all have a soft black clamp for the darker color, and a basic set of constants for the power curve exponents to predict an estimated perceptual contrast under common use case envirnments. These are active beta and are receiving updates and changes regularly.
+These are based on research iteration SAPC-8, developed through a lengthy series of experiments and investigations. They all have a soft black clamp for the darker color, and a basic set of constants for the power curve exponents to predict an estimated perceptual contrast under common use case environments. These are active beta and are receiving updates and changes regularly.
 
 -----
 
 ## [APCAonly.98e_d12e.js](APCAonly.98e_d12e.js) — SIMPLE QUICK START
-The APCA version is the version licensed to the W3/WAI for use in accessibility standards.
+The APCA version is the version licensed to the W3/AGWG for use in accessibility standards, WCAG 3.
 
 If you want to dive in fast, or you want the bare basics, this is the file for you. This does not come with the input parsing and processing functions of the larger files — it is the base APCA algorithim only, with no extensions. Send it two RGB colors and it returns a contrast value.
 
@@ -18,16 +18,37 @@ The API for "APCAonly.98...." is trivially simple. Send it sRGB values for BACKG
 
 **`var contrast = APCAcontrast(background,text)`**
 
-Each parameter input must be an sRGB encoded number. White is either the integer 16777216 or the hex 0xffffff. A float is returned with a positive or negative value. Negative values mean light text and a dark background, positive values mean dark text and a light background. 60.0, or -60.0 is a contrast "sort of like" the old WCAG 2's 4.5:1.
+Each parameter input must be an sRGB encoded number. White is either the integer 16777216 or the hex 0xffffff. A float is returned with a positive or negative value. Negative values mean light text and a dark background, positive values mean dark text and a light background. 60.0, or -60.0 is a contrast "sort of like" the old WCAG 2's 4.5:1. NOTE: the total range is now less than ± 115, so output can be rounded to a **signed INT** but DO NOT output absolute value as a visible result.
 
 ### IMPORTANT: Do Not Mix Up Text and Background inputs.
 **APCA is polarity dependent, and correct results require that the BG and TXT are processed via the correct inputs.**
 
-
+**PENDING CHANGE:** The current order in parameters is APCAcontrast(background,text) — expect this order to change to text, background in the next version(s). This is because there will be additional background colors in a near future version, as in APCAcontrast(text, BGlocal, BGsurround, BGpage...) and the intention is to follow visible layer order as a stack from top to bottom.
 
 -----
-## The Files Below are Under Revision, but will be back soon!
 
+## TESTING YOUR IMPLEMENTATION
+
+If you've implemented the code and want a quick sanity check, Here are four keystone checks with no rounding, where the first color is TEXT and the4 second color is BACKGROUND:
+
+    TEXT vs BACKGROUND • EXPECTED RESULT d12e
+    #888 vs #fff •  66.89346308821438
+    #aaa vs #000 • -60.438571788907524
+    #def vs #123 • -98.44863435731266
+    #123 vs #234 •   1.276075977788573
+
+Those should exercise the important constants.
+
+-----
+## Where Did All The Files Go???
+They'll be back soon... Maybe... I plan on publishing packages through **npm**, and am re-structuring things to that end.
+
+Everything is plain vanilla JS, and the files _are_ available as used on the live sites. Those are being updated often enough through the end of February 2021, that I cannot reasonably update files here and hope to stay in sync. Once things are more sorted with packages, that should be solved. I do intend to keep the simple basic APCAonly.js posted here in sync as the canonical of the underlying math. The lookup tables are undergoing studies right now, so will not ber placed here till those are concluded. Again, the interim lookups are in the HTML file on the live sites.
+
+Sorry for any inconvienience, and please do leave an issue for questions or problems.
+
+
+### The Files Below are Temporarily Offline
 
 If you don't want a string return, optionally there are some comment switches that can enable returns of numeric values instead of a string - just add a slash to enable:
 ` ( /* is off   //* is on ) `.
