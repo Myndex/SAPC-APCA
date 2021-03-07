@@ -1,3 +1,6 @@
+### February 25 2021:
+G series evaluation constants are up for live review at https://www.myndex.com/SAPC/ this is not considered the "current version" just another eval, though these constants are "heir apparent".
+
 ### As of Jan 28, 2021 02:00 GMT
 # CURRENT VERSION: Beta 98e_d12e
 **IMPORTANT:** If you are making a tool to predict contrast for the new W3 standards for Visual Contrast, **use only the APCA files.**
