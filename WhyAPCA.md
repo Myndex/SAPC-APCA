@@ -73,8 +73,11 @@ Andy
 
 
 _Andrew Somers_
+
 _W3 AGWG Invited Expert_
+
 _Myndex Color Science Researcher_
+
 _Inventor, SAPC and APCA_
 
 ### _THE REVOLUTION WILL BE READABLE_
