@@ -6,6 +6,10 @@ See the [JS Documentation \(the ReadMe.md in the JS folder\)](JS/ReadMe.md) for 
 See [WHY APCA](WhyAPCA.md) for a brief explaination of the important differences vs the old 1.4.3 guidelines.
 
 ## SAPC/APCA CURRENT VERSION: 0.98e Constants: d12e
+
+### FEBRARY 25, 2021
+A set of the G series evaluation constants are up for live review at the [SAPC dev site](https://www.myndex.com/SAPC/) this site also has a "research mode" with interactive experiments you can try out. 
+
 ### January 28, 2021  02:13 GMT
 
 JS File: APCAonly.98e_d12e.js
