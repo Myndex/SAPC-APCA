@@ -3,6 +3,8 @@
 ## APCA Documentation and Quick Start
 See the [JS Documentation \(the ReadMe.md in the JS folder\)](JS/ReadMe.md) for information on using the API, which file is best suited for your needs, and a QuickStart tutorial.
 
+See [WHY APCA](WhyAPCA.md) for a brief explaination of the important differences vs the old 1.4.3 guidelines.
+
 ## SAPC/APCA CURRENT VERSION: 0.98e Constants: d12e
 ### January 28, 2021  02:13 GMT
 
