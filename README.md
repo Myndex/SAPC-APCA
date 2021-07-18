@@ -5,7 +5,7 @@ See the [JS Documentation \(the ReadMe.md in the JS folder\)](JS/ReadMe.md) for 
 
 See [WHY APCA](WhyAPCA.md) for a brief explaination of the important differences vs the old 1.4.3 guidelines.
 
-## SAPC/APCA CURRENT VERSION: 0.98e Constants: d12e
+## SAPC/APCA CURRENT VERSION: 0.98G Constants: 4g
 
 ### FEBRARY 25, 2021
 A set of the G series evaluation constants are up for live review at the [SAPC dev site](https://www.myndex.com/SAPC/) this site also has a "research mode" with interactive experiments you can try out. 
@@ -123,13 +123,17 @@ A plain language walkthrough, LaTeX math, and pseudocode are below:
 [![](images/APCAtable98d12clegend.png)]
 
 
-### APCA Math (new 0.98d12e constants)
+### APCA Math (new 0.98G 4g constants)
 
 APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math assumes the use of the web standard sRGB colorspace.
 
-    Exponents:	mainTRC: 2.4	normBG: 0.55	normTXT: 0.58	revTXT: 0.57	revBG: 0.62
-    Scalers:	loConThresh: 0.078	loConFactor: 12.82051282051282		loConOffset: 0.06	Scale: 1.25
-    Clamps:	blkThrs: 0.03	blkClmp: 1.45	loClip: 0.001	deltaYmin: 0.0005
+    Exponents:	mainTRC: 2.4	normBG: 0.56	normTXT: 0.57	revTXT: 0.62	revBG: 0.65
+    Scalers:	loBoWthresh: 0.035991	loBoWfactor: 27.7847239587675		loBoWoffset: 0.027	Scale: 1.14
+    Clamps:	blkThrs: 0.022	blkClmp: 1.414	loClip: 0.001	deltaYmin: 0.0005
+
+
+## NOTICE: SOME OF THE CODE BELOW IS USING EARLIER CONSTANTS
+### Update is pendeding. The current constants are the 0.98G 4g constants.
 
 ### The Plain English Steps Are:
 
@@ -157,7 +161,7 @@ APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math
 
 Basic APCA Math in LaTeX
 ---------------
-LATEST VERSION — SAPC-8d12e
+OLD VERSION — SAPC-8d12e — DO NOT USE (update pending)
 
 ![](images/APCAmathSAPC-8d12e.png)
 
@@ -515,10 +519,14 @@ The Predicted Visual Contrast (*SAPC*) between a foreground color and a backgrou
 
 If you've implemented the code and want a quick sanity check, Here are four keystone checks with no rounding, where the first colos is TEXT and the4 second color is BACKGROUND:
 
-    #888 vs #fff •  66.89346308821438
-    #aaa vs #000 • -60.438571788907524
-    #def vs #123 • -98.44863435731266
-    #123 vs #234 •   1.276075977788573
+    Test Values for the 0.98G 4g constants:
+
+    #888 vs #fff • 63.056469930209424
+    #aaa vs #0 • -56.24113336839742
+    #def vs #123 • -93.06770049484275
+    #123 vs #234 • 1.7512243099356113
+
+
 
 Those should exercise the important constants.
 
