@@ -1,4 +1,5 @@
 # APCA/SAPC JS Library Documentation
+### Updated Oct 1, 2021 for 0.98G-4g
 
 This is a set of JS functions/objects to determine a contrast value for a color pair, using the SAPC/APCA methods. 
 
@@ -6,42 +7,62 @@ These are based on research iteration SAPC-8, developed through a lengthy series
 
 -----
 
-## [APCAonly.98e_d12e.js](APCAonly.98e_d12e.js) — SIMPLE QUICK START
-The APCA version is the version licensed to the W3/AGWG for use in accessibility standards, WCAG 3.
+## [APCA_0_98G_4g_minimal.js](APCA_0_98G_4g_minimal.js) — SIMPLE QUICK START
+This APCA version is the version licensed to the W3/AGWG for use with web content accessibility standards, WCAG 3.
 
-If you want to dive in fast, or you want the bare basics, this is the file for you. This does not come with the input parsing and processing functions of the larger files — it is the base APCA algorithim only, with no extensions. Send it two RGB colors and it returns a contrast value.
+If you want to dive in fast, or you want the bare basics, this is the file for you. This only comes with the most basic color input parsing, and does not containt the automated lookup tables or advanced CIE processing. It is the base APCA algorithim only, with no bells or whistles. Send it two RGB numeric colors and it returns a numeric L<sup>c</sup> contrast value.
 
-This APCA function takes two sRGB encoded colors, where each color is a number in RGB order, (i.e. 0x00RRGGBB).
+This APCA function takes two sRGB encoded colors, where each color is an integer in RGB order, (i.e. 0xRRGGBB or 16777216).
 
 ### API
-The API for "APCAonly.98...." is trivially simple. Send it sRGB values for BACKGROUND and TEXT, and it returns a float with the APCA contrast result.
+The API for "APCA_0_98G_4g_minimal" is trivially simple. Send text and background sRGB numeric values to the sRGBtoY() function, and send the resulting text-Y and background-Y to the APCAcontrast function, it returns a float with the numeric L<sup>c</sup> contrast result.
 
-**`var contrast = APCAcontrast(background,text)`**
+**` let contrast_Lc = APCAcontrast( sRGBtoY(textColor) , sRGBtoY(backgroundColor) ); `**
 
-Each parameter input must be an sRGB encoded number. White is either the integer 16777216 or the hex 0xffffff. A float is returned with a positive or negative value. Negative values mean light text and a dark background, positive values mean dark text and a light background. 60.0, or -60.0 is a contrast "sort of like" the old WCAG 2's 4.5:1. NOTE: the total range is now less than ± 115, so output can be rounded to a **signed INT** but DO NOT output absolute value as a visible result.
+Each parameter input must be an 8bit per channel integer (or 0x) sRGB encoded color. White is either the integer 16777216 or the hex 0xffffff. A float is returned with a positive or negative value. Negative values mean light text and a dark background, positive values mean dark text and a light background. 60.0, or -60.0 is a contrast "sort of like" the old WCAG 2's 4.5:1. NOTE: the total range is now less than ± 115, so output can be rounded to a **signed INT** but DO NOT output absolute value as a visible result because negative polarity colors should return a negative number.
 
 ### IMPORTANT: Do Not Mix Up Text and Background inputs.
 **APCA is polarity dependent, and correct results require that the BG and TXT are processed via the correct inputs.**
 
-**PENDING CHANGE:** The current order in parameters is APCAcontrast(background,text) — expect this order to change to text, background in the next version(s). This is because there will be additional background colors in a near future version, as in APCAcontrast(text, BGlocal, BGsurround, BGpage...) and the intention is to follow visible layer order as a stack from top to bottom.
+**PARAMETER CHANGE:** The order in parameters is APCAcontrast(text,background) — THIS IS THE REVERSE OF THE PREVIOUS VERSIONS. This is because there will be additional background colors in a near future version, such as` APCAcontrast(text, BGlocal, BGsurround, BGpage...) ` and the intention is to follow visible layer order, as a stack from top to bottom.
 
 -----
 
-## TESTING YOUR IMPLEMENTATION
+## TESTING YOUR IMPLEMENTATION • APCA 0.98 G-4g
 
-If you've implemented the code and want a quick sanity check, Here are four keystone checks with no rounding, where the first color is TEXT and the4 second color is BACKGROUND:
+If you've implemented the code and want a quick sanity check,
+Here are four keystone checks with no rounding, where the
+first color is TEXT and the second color is BACKGROUND.
 
-    TEXT vs BACKGROUND • EXPECTED RESULT d12e
-    #888 vs #fff •  66.89346308821438
-    #aaa vs #000 • -60.438571788907524
-    #def vs #123 • -98.44863435731266
-    #123 vs #234 •   1.276075977788573
+Each pair of colors is there twice, so you can just swop 
+the pair to check polarity. And obviously rounding is
+turned off for this check, however for production
+you may round to a signed integer. 
+
+    TEXT vs BKGND •  EXPECTED RESULT for 0.98 G-4g
+    
+    #888 vs #fff  •  63.056469930209424
+    #fff vs #888  • -68.54146436644962  
+    
+    #aaa vs #000  • -56.24113336839742
+    #000 vs #aaa  • 58.146262578561334
+    
+    #def vs #123  • -93.06770049484275
+    #123 vs #def  •  91.66830811481631
+    
+    #123 vs #234  •   1.7512243099356113
+    #234 vs #123  •  -1.6349191031377903
+
 
 Those should exercise the important constants.
 
 -----
+
+-----
+
+-----
 ## Where Did All The Files Go???
-They'll be back soon... Maybe... I plan on publishing packages through **npm**, and am re-structuring things to that end.
+They'll be back soon... I plan on publishing packages through **npm**, and am re-structuring things to that end.
 
 Everything is plain vanilla JS, and the files _are_ available as used on the live sites. Those are being updated often enough through the end of February 2021, that I cannot reasonably update files here and hope to stay in sync. Once things are more sorted with packages, that should be solved. I do intend to keep the simple basic APCAonly.js posted here in sync as the canonical of the underlying math. The lookup tables are undergoing studies right now, so will not ber placed here till those are concluded. Again, the interim lookups are in the HTML file on the live sites.
 
@@ -49,6 +70,8 @@ Sorry for any inconvienience, and please do leave an issue for questions or prob
 
 
 ### The Files Below are Temporarily Offline
+
+### UNDER CONSTRUCTION  ...  NOTHING TO SEE HERE  ...  MOVE ALONG 
 
 If you don't want a string return, optionally there are some comment switches that can enable returns of numeric values instead of a string - just add a slash to enable:
 ` ( /* is off   //* is on ) `.
@@ -65,7 +88,7 @@ In this version, the APCAcontrast() algorithm expects to see linear **Y** passed
     var BG  = new RGBcolor('#EEA');
     var TXT = new RGBcolor('Dark Slate Blue');
     
-    var contrastResult = APCAcontrast(BG,TXT);
+    var contrastResult = APCAcontrast( ..... );
     
     console.log(contrastResult) // expected: '101.6 Lc'
 ### Regarding Results
