@@ -113,6 +113,8 @@ A plain language walkthrough, LaTeX math, and pseudocode are below:
 
 ### Font Use Lookup Table
 
+Font lookup tables are under evaluation. Will post fresh one soon!
+
 [![](images/APCAtable98G4g.png)]
 
 [![](images/APCAtable98G4glegend.png)]
@@ -322,7 +324,7 @@ function APCAcontrast (txtY,bgY) {
 
 ## TESTING YOUR IMPLEMENTATION
 
-If you've implemented the code and want a quick sanity check, Here are four keystone checks with no rounding, where the first colos is TEXT and the4 second color is BACKGROUND:
+If you've implemented the code and want a quick sanity check, Here are some keystone checks with no rounding. The first color is **TEXT** and the second color is **BACKGROUND**:
 
 ```
 Test Values for the 0.98G 4g constants, normal and reverse values for each color pair.
@@ -343,7 +345,7 @@ First number is TEXT second number is BACKGROUND.
     #234 vs #123  •  -1.6349191031377903
 ```
 
-Those should exercise the important constants.
+These exercise all the important constants.
 
 -----
 ## Miscellaneous
@@ -378,7 +380,7 @@ Those should exercise the important constants.
 
 
 ### SAPC Standard Observer Monitor and Environment
-These are the preliminary SAPC standard observer model. In particular, some further research and empirical studies that sample how users tend to set their monitor's brightness/contrast and the effect on the resultant display gamma/TRC are needed.
+this is the SAPC standard observer model. In particular, some further research and empirical studies that sample how users tend to set their monitor's brightness/contrast and the effect on the resultant display gamma/TRC are needed.
 
 _**The standard environmental model shall comprise**_
 * A desktop sRGB LCD screen that is

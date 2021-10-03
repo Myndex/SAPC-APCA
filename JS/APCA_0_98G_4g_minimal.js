@@ -31,7 +31,7 @@
 /////   Acknowledgments and Thanks To:
 /////   • This project references the research and work of Dr.Lovie-Kitchin, 
 /////     Dr.Legge, Dr.Arditi, M.Fairchild, R.Hunt, M.Stone, Dr.Poynton, 
-/////     L.Arend, M.Luo, E.Burns, R.Blackwell, J.Barton, M.Brettel, and many 
+/////     L.Arend, M.Luo, E.Burns, R.Blackwell, P.Barton, M.Brettel, and many 
 /////     others — see refs at https://www.myndex.com/WEB/WCAG_CE17polarity
 /////   • Bruce Bailey of USAccessBoard for his encouragement, ideas, & feedback
 /////   • Chris Lilley of W3 for his early and continued comments & feedback.
@@ -45,7 +45,7 @@
 /////   *****  SAPC BLOCK  *****
 /////
 /////   For Evaluations, refer to this as: SAPC-8, v0.98 G-series constant 4g
-/////            SAPC • S-LUV Advanced Perceptual Contrast
+/////            SAPC • S-LUV Advanced Predictive Color
 /////
 /////   SIMPLE VERSION — Only the basic APCA contrast predictor.
 /////
