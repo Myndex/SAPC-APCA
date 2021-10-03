@@ -3,24 +3,21 @@
 ## APCA Documentation and Quick Start
 See the [JS Documentation \(the ReadMe.md in the JS folder\)](JS/ReadMe.md) for information on using the API, which file is best suited for your needs, and a QuickStart tutorial.
 
-See [WHY APCA](WhyAPCA.md) for a brief explaination of the important differences vs the old 1.4.3 guidelines.
+See [WHY APCA](WhyAPCA.md) for a brief explaination of the important differences for WCAG 3 vs the old WCAG 2.x/1.4.3 guidelines.
 
 ## SAPC/APCA CURRENT VERSION: 0.98G Constants: 4g
 
-### FEBRARY 25, 2021
-A set of the G series evaluation constants are up for live review at the [SAPC dev site](https://www.myndex.com/SAPC/) this site also has a "research mode" with interactive experiments you can try out. 
+### October 1, 2021
+The base APCA with the 0.98G-4g constants is in the JS folder. 
 
-### January 28, 2021  02:13 GMT
+JS File: APCA_0_98G_4g_minimal.js
 
-JS File: APCAonly.98e_d12e.js
+And the [SAPC dev site](https://www.myndex.com/SAPC/) has a live demo with a "research mode" and interactive experiments you can try out. 
 
 ### NEW CONSTANTS and NEW MATH:
-As of today,  (January 25, 2021) we have a new set of constants for the exponents, a key critical aspect of APCA, plus a new scaling method, and other revised code as the result of some recent breakthrough experiments. These substantially improve tracking of contrast perception, and better predicts for low contrasts and dark color pairs.
+(October 1, 2021) the 0.98G-4g math and constants have been in use now for months, and by all accounts are working well as expected. The revised code is available in the JS folder. The present version improves tracking of contrast perception. (Doubling or halving the L<sup>c</sup> value results in a perceived doubling or halving of contrast.) Also, smoother results for low contrasts and dark color pairs.
 
-Only the pseudocode and LaTeX math below are updated — I'll get ready to go JS files here soon... let me clean up the leftover development gack and get the files in order, but if you want instant gratification.....
-
-### It's Alive!
-The "new improved" SAPC and APCA are now live to play with. There have been some substantial changes and I'm excited to share:
+SAPC and APCA are live to play with. 
 
 ### What and Where
 **The basic simple version[ is the APCA page,](https://www.myndex.com/APCA/)** it includes the new scaling and the dynamic font matrix. The is the official WCAG3/Silver support version.
@@ -28,14 +25,15 @@ The "new improved" SAPC and APCA are now live to play with. There have been some
 **The development version[ is the SAPC page,](https://www.myndex.com/SAPC/)** and this version includes the new RESEARCH MODE, which has some different tools you can activate to investigate the nature of a color or colors, including a simplified version of the middle contrast experiment - on the SAPC app it's called "split contrast mode".
 
 ## The New SAPC/APCA at a Glance
-- **Now substantially more accurate** in terms of perceptual uniformity — twice as accurate to perception as the APCA I released last year.
+- **Now substantially more accurate** in terms of perceptual uniformity — twice as accurate to perception as the APCA we released in 2020.
 
 - **Uniformity Described:** For the majority of the range, doubling or halving the L<sup>c</sup> contrast number equates to a doubling or halving of the perceived contrast. (Based on the empirical data from the 2020 "Middle Contrast" experiments.)
 
-- **New Code and Constants:** If you have been working with the code, it has changed, and there are a whole new set of constants. I have not posted it here on GitHub yet, but you can see it in the live sites.
+- **New Code and Constants:** If you have been working with the code, it has changed, and there are a whole new set of constants. Whagt was posted here today (Octover 1 2021) is what has been tested on the laive sites for several months.
 
-- **Rescaled Output:** This new version sets the levels a little differently, so what was 80 is now about 60, and so on.
+- **Rescaled Output:** This new version sets the levels a little differently, so what was 80 is now about 60, what was 90 is now 75, etc.
     - **Rescaled lookup tables:** — to adjust to the newly scaled output, both the visual lookups, and the arrays in the code are updated to give accurate font minimums.
+    - NOTE: the auto mated lookup tables are not posted here, but are live on the APCA site.
 
 - **Full range is now standard** implemented via a new method that brings in the uniformity (doubling/halving). 
     - And by full range, I mean all the way to zero, including a smooth crossing over zero. 
@@ -73,13 +71,12 @@ If you have been using any files from this repository, be sure to read the file 
 
 -----
 
-# SAPC/APCA
+# What is SAPC/APCA?
 [![](images/Myndex_eye_cielabWide.png)](https://www.myndex.com/WEB/Perception)
-## SAPC _(S-LUV Advanced Perceptual Contrast)_
-### APCA _Advanced Perceptual Contrast Algorithm_
 
+## APCA is the _Advanced Perceptual Contrast Algorithm_
 
-This is a set of contrast assessment methods for predicting perceived contrast between sRGB colors on a computer monitor. It has been developed as an assessment method for W3 Silver/WCAG3 accessibility standards relating to content for computer displays and mobile devices.
+APCA is a set of contrast assessment methods for predicting perceived contrast between sRGB colors on a computer monitor. It has been developed as an assessment method for W3 Silver/WCAG3 accessibility standards relating to content for computer displays and mobile devices.
 
 ### FEATURES
 * NEW in v0.98: Incorporates Spatial Frequency & Stimulus Size directly in predictions (i.e. provides direct indication of minimum font size andf weight).
@@ -87,20 +84,18 @@ This is a set of contrast assessment methods for predicting perceived contrast b
 * Weighting for normal and reverse polarity (dark text on light background vs light text on dark.)
 * Estimation and weighting of light adaptation for perceptual uniformity in a common "standard observer" model.
 * Considers Bartleson Breneman surround effects, simultaneous contrast, and local adaptation based on a pre-estimation model.
-* Spatial frequency considerations for font weight as part of calculations and defined in a lookup table.
+* Spatial frequency considerations for font weight as part of calculations and further defined in a lookup table.
+* Lookup table can be customised for different languages/character sets.
 
 ### FEATURES IN DEVELOPMENT
-* Additional weighting for RED/GREEN/BLUE to enhance contrast for accommodating Color Vision Deficiencies, glare, and provide better design guidance.
-* <s>Incorporate Spatial Frequency & stimulus size directly in predictions (no lookup table).</s> DONE! New for 0.98
-* Calculate multi-way contrasts and total effective page luminances for dynamic calculation of surround effects, simultaneous contrast, and local adaptation.
-* Calculate the effect of opacities.
+Soon to be discussed
 
 ----- 
 
 ### [LIVE VERSION][APCAsite]
 There is a working version with examples and reference material on [the APCA site][APCAsite]
 
-NOTE: **The APCA site is now using current constants**, if you want to comapre the current to the old, you can add the word "legacy" to the URL to see legacy mode.
+NOTE: **The APCA site is using the current G constants**, if you want to compare the current to the old, you can add the word "legacy" to the URL to see legacy mode, which is the 2019/2020 version of APCA.
 
 
 [![](images/APCAFontSelect.png)][APCAsite]
@@ -110,17 +105,17 @@ NOTE: **The APCA site is now using current constants**, if you want to comapre t
 -----
 
 ## IMPLEMENTATIONS
-The libraries are plain vanilla Javascript. Planned adds include PHP, OpenOffice Calc (spreadsheet), and Python, as those cover the most likely use cases. Many of the available inputs to the functions can remain at their defaults, though these extra inputs can be used in more specialized situations (such as creating content specifically for daylight/outdoors, or specifically for dark nights, etc.). 
+The libraries are plain vanilla Javascript. Planned adds include PHP, <s>OpenOffice Calc (spreadsheet)</s> DONE!, and Python, as those cover the most likely use cases. Many of the available inputs to the functions can remain at their defaults, though these extra inputs can be used in more specialized situations (such as creating content specifically for daylight/outdoors, or specifically for dark nights, etc.). 
 
 A plain language walkthrough, LaTeX math, and pseudocode are below:
 
 -----
 
-### Lookup Table — D
+### Font Use Lookup Table
 
-[![](images/APCAtable98d12c.png)]
+[![](images/APCAtable98G4g.png)]
 
-[![](images/APCAtable98d12clegend.png)]
+[![](images/APCAtable98G4glegend.png)]
 
 
 ### APCA Math (new 0.98G 4g constants)
@@ -128,12 +123,13 @@ A plain language walkthrough, LaTeX math, and pseudocode are below:
 APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math assumes the use of the web standard sRGB colorspace.
 
     Exponents:	mainTRC: 2.4	normBG: 0.56	normTXT: 0.57	revTXT: 0.62	revBG: 0.65
-    Scalers:	loBoWthresh: 0.035991	loBoWfactor: 27.7847239587675		loBoWoffset: 0.027	Scale: 1.14
+    
     Clamps:	blkThrs: 0.022	blkClmp: 1.414	loClip: 0.001	deltaYmin: 0.0005
-
-
-## NOTICE: SOME OF THE CODE BELOW IS USING EARLIER CONSTANTS
-### Update is pendeding. The current constants are the 0.98G 4g constants.
+    
+    sRGB:       sRco = 0.2126729    sGco = 0.7151522    sBco = 0.0721750
+    
+    Scalers:	Scale: 1.14	loBoWthresh: 0.035991	loBoWfactor: 27.7847239587675	loBoWoffset: 0.027	
+    
 
 ### The Plain English Steps Are:
 
@@ -143,395 +139,293 @@ APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math
     - Apply sRGB coefficients and sum to **Y**
         - Y = (R/255)<sup>^2.4</sup> * 0.2126 + (G/255)<sup>^2.4</sup> * 0.7152 + (B/255)<sup>^2.4</sup> * 0.0722
     - We will call these Y<sub>text</sub> and Y<sub>background</sub>
-- Determine if Y<sub>text</sub> or Y<sub>background</sub> is brighter (higher luminence, for contrast polarity)
-    - Soft-clamp only the darkest color and **only** if it is less than **0.02 Y**
-        - **Soft Clamp:** subtract the darker color **Y** from 0.03
-        - Then apply a ^1.45 exponent to the result
+- Determine if Y<sub>text</sub> or Y<sub>background</sub> is brighter (higher luminance, for contrast polarity)
+    - Soft-clamp the colors but **only** if it is less than **0.022 Y**
+        - **Soft Clamp:** subtract the color **Y** from 0.022 
+        - Then apply a ^1.414 exponent to the result
         - Then add that result back to the Y of the darker color
-            - (0.03 - Y)<sup>^1.45</sup> + Y
+            - clampedY = ( 0.022 - Y )<sup>^1.414</sup> + Y
 - Apply power curve exponents to both colors for perceptual contrast
-    - For dark text on a light background, use ^0.58 for Y<sub>text</sub> and ^0.55 for Y<sub>background</sub>
-    - For light text on a dark background, use ^0.57 for Y<sub>text</sub> and ^0.62 for Y<sub>background</sub>
-- Subtract Y<sub>text</sub> from Y<sub>background</sub>, multiply by 1.25 and subtract the offset to scale the contrast value
-    - **Always** subtract the Y<sub>text</sub> value from the Y<sub>background</sub> value. 
+    - For dark text on a light background, use ^0.57 for Y<sub>text</sub> and ^0.56 for Y<sub>background</sub>
+    - For light text on a dark background, use ^0.62 for Y<sub>text</sub> and ^0.65 for Y<sub>background</sub>
+- Subtract Y<sub>text</sub> from Y<sub>background</sub>
+    - **Always** subtract the Y<sub>text</sub> value from the Y<sub>background</sub> value ( BG - TXT )
         - For light text on a dark background, this will generate a negative number. 
         - This is intentional, so that negative values indicate light text on dark BGs, and positive values only indicate dark text on a light BG.  
+- Multiply by the scale 1.14
+    - THEN if the absolute value is less than threshold 0.035991 return "contrast too low"
+    - ELSE if positive, subtract the offset 0.027 and then multiply by 100 for Lc
+    - ELSE if negative, add the offset 0.027 and then multiply by 100 for Lc
+- Finally: compare the Lc value to the font lookup table for the language being used to determine the minimum font size and weight. 
 
 -----
 
 Basic APCA Math in LaTeX
 ---------------
-OLD VERSION — SAPC-8d12e — DO NOT USE (update pending)
+0.98G-4g (coming soon)
 
-![](images/APCAmathSAPC-8d12e.png)
+![](images/APCAmathSAPC-0.98G-4g.png)
 
 
 -----
 
-Basic SAPC Math Pseudocode  
---------------------------
-
-In the sRGB colorspace, using CSS color values as integers, with a background color sRGB<sub>bg</sub> and a text color sRGB<sub>txt</sub> convert each channel to decimal 0.0-1.0 by dividing by 255, then linearize the gamma encoded RGB channels by applying a simple exponent. 2.4 is used here as it best emulates the typical display to eye trc.
-
-	Rlinbg = (sRbg/255.0) ^ 2.4
-	Glinbg = (sGbg/255.0) ^ 2.4
-	Blinbg = (sBbg/255.0) ^ 2.4
-
-	Rlintxt = (sRtxt/255.0) ^ 2.4
-	Glintxt = (sGtxt/255.0) ^ 2.4
-	Blintxt = (sBtxt/255.0) ^ 2.4
-
-Then find the relative luminance (*Y*) of each color by applying the sRGB/Rec709 spectral coefficients and summing together.
-
-	Ybg = 0.2126 * Rlinbg + 0.7152 * Glinbg + 0.0722 * Blinbg
-	Ytxt = 0.2126 * Rlintxt + 0.7152 * Glintxt + 0.0722 * Blintxt
-
-After then, the run through the APCA algorithim. A full pseudocode function is below:
-
------- 
-
-### APCA Predicted Contrast PSEUDOCODE  0.98d12e
-
-The Predicted Visual Contrast (*SAPC*) between a foreground color and a background color is calculated as shown in this pseudocode function. The above processes to create Y ARE included in the function below, which expects to receive 6 parameters for the RGB components as integers 0-255.
-
-	/////  PSEUDOCODE for Basic APCA Version 0.98d12e  /////
-
-			/////  Define Constants  /////
-			
-		const trcExpon = 2.4,   // Linearization exponent
-
-		Rco = 0.2126,
-		Gco = 0.7152,
-		Bco = 0.0722,
-					
-		normBGexp = 0.55,       // Constants for Power Curve Exponents.
-		normTXTexp = 0.58,      // One pair for normal text, dark text on light BG
-		revTXTexp = 0.57,       // and a pair for reverse, light text on dark BG
-		revBGexp = 0.62,        
-
-		scale = 1.25,           // Scale output for easy to remember levels
-
-		blkThrs = 0.03,         // Level that triggers the soft black clamp
-		blkClmp = 1.45,         // Exponent for the soft black clamp curve
-
-		deltaYmin: 0.0005,      // Clamp & discard very small ∆Y and illegal levels
-	
-		loConThresh: 0.078,     // Part of loCon model D for smoothing out
-		loConFactor: 12.82051282051282, // magic number of 1 / 0.078,
-		loConOffset: 0.06,      // near threshold contrast levels
-	
-		loClip = 0.001;         // Final "clean up" clip for output.
-
-
-	function (Rbg, Gbg, Bbg, Rtxt, Gtxt, Btxt) {
-	
-			// Define variables
-		var SAPC;
-	
-		// We are only concerned with Y at this point
-		// Ybg and Ytxt: divide sRGB to 0.0-1.0 range, linearize, 
-		// and then apply the standard coefficients and sum to Y.
-
-		var Ybg =   pow(Rbg/255.0, trcExpon) * Rco +
-					pow(Gbg/255.0, trcExpon) * Gco +
-					pow(Bbg/255.0, trcExpon) * Bco;
-
-		var Ytxt =  pow(Rtxt/255.0, trcExpon) * Rco +
-					pow(Gtxt/255.0, trcExpon) * Gco +
-					pow(Btxt/255.0, trcExpon) * Bco;
-	
-
-			// Soft clamp very dark colors
-		Ytxt = (Ytxt > blkThrs) ? Ytxt : Ytxt + pow((blkThrs - Ytxt), blkClmp);
-		Ybg = (Ybg > blkThrs) ? Ybg : Ybg + pow((blkThrs - Ybg), blkClmp);
-
-			/////  Return 0 Early for extremely low ∆Y  /////
-		if( abs(Ybg - Ytxt) < deltaYmin ) { return 0.0 }
-
-
-			// Calculate Predicted Contrast and return the result
-			// Ybg and Ytxt all have different exponents depending on
-			// polarity (light text on dark vs dark text on light)
-	
-		if ( Ybg > Ytxt ) {
-
-			SAPC = ( pow(Ybg, normBGexp) - pow(Ytxt, normTXTexp) ) * scale;
-	
-					// Return shown here as nested ternary statement
-			return  ( SAPC < loClip ) ? 0.0 :
-				( SAPC < loConThresh ) ?
-				( SAPC - SAPC * loConFactor * loConOffset)) * 100 :
-				( SAPC - loConOffset) * 100;
-		} else {
-  
-			SAPC = ( pow(Ybg, revBGexp) - pow(Ytxt, revTXTexp) ) * scale;
-	
-					// Here the return is shown as an if statement
-					// but is very similar in operation to the ternary
-					// version shown above. A key difference though
-					// involves the reversed polarity.
-					// Keep in mind that in this section, SAPC is negative
-					// and will return a negative value to indicate
-					// that text is lighter than the background.
-				
-			if ( SAPC > -loClip ) {
-				return 0.0;
-			} else if ( SAPC > -loConThresh ) {
-				return 100 * ( SAPC - SAPC * loConFactor * loConOffset );
-			} else {
-				return 100 * ( SAPC + loConOffset );
-			}
-		}
-	}   
-
-	// Because this is a pseudocode example, it has not been specifically tested
-	// But is based on the working JS code. (variable names corrected jan 27 2021)
-
-
-*Notes:*
-
-*Piecewise linearization is not used, as the combination of exponents used throughout better models actual display performance and contrast perception.*
-
-*Predicted contrast less than 0.1% is clamped to zero to reduce noise.* 
-
-*****
-
 ## Basic Javascript:
+In lieu of a pseudocode, here's the most basic JS version:
 
-    ////////////////////////////////////////////////////////////////////////////////
-    /** @preserve
-    /////                *** APCA VERSION for W3 and WCAG 3 ***
-    /////
-    /////   SAPC - S-Luv Advanced Perceptual Contrast - Beta Algorithm 0.98e_d12e
-    /////                *** With the NEW SmoothScale extension ***
-    /////              *** Optimized for the Font Select Extension ***
-    /////
-    /////   Functions to parse color values and determine SAPC/APCA contrast
-    /////   Copyright © 2019-2021 by Andrew Somers. All Rights Reserved.
-    /////   LICENSE: GNU AGPL v3  https://www.gnu.org/licenses/
-    /////   CONTACT: For SAPC/APCA Please use the ISSUES tab at:
-    /////   https://github.com/Myndex/SAPC-APCA/
-    // */
-    ////////////////////////////////////////////////////////////////////////////////
-    /////
-    /////                        SAPC Method and APCA Algorithm
-    /////          •••• Version 0.98e_d12e with SmoothScale™ by Andrew Somers ••••
-    /////
-    /////   GITHUB: https://github.com/Myndex/SAPC-APCA
-    /////   DEVELOPER SITE: https://www.myndex.com/WEB/Perception
-    /////
-    /////   Thanks To: 
-    /////   • This project references the research and work of Dr.Legge, Dr.Arditi,
-    /////     Dr.Lovie-Kitchin, M.Fairchild, R.Hunt, M.Stone, Dr.Poynton, L.Arend, &
-    /////     many others — see refs at https://www.myndex.com/WEB/WCAG_CE17polarity
-    /////   • Stoyan Stefanov for his input parsing idea, Twitter @stoyanstefanov
-    /////   • Bruce Bailey of USAccessBoard for his encouragement, ideas, & feedback
-    /////   • Chris Loiselle of Oracle for getting us back on track in a pandemic
-    /////
-    ////////////////////////////////////////////////////////////////////////////////
+```
+///////////////////////////////////////////////////////////////////////////////
+/////
+/////    APCA - Advanced Perceptual Contrast Algorithm
+/////           Beta 0.98G-4g • contrast function only
+/////           DIST: GH SE Revision date: Oct 1, 2021
+/////    Function to parse color values and determine Lc contrast
+/////    Copyright © 2019-2021 by Andrew Somers. All Rights Reserved.
+/////    LICENSE: APCA version to be licensed under W3 cooperative agrmnt.
+/////
+///////////////////////////////////////////////////////////////////////////////
+/////
+/////    USAGE:
+/////        Use sRGBtoY(color) to convert sRGB to Luminance (Y)
+/////        Then send Y-text and Y-background to APCAcontrast(Text, BG)
+/////
+/////    Lc = APCAcontrast( sRGBtoY(TEXTcolor) , sRGBtoY(BACKGNDcolor) );
+/////
+/////    Live Demonstrator at https://www.myndex.com/APCA/
+/////
+////////////////////////////////////////////////////////////////////////////////
+/////
+/////               DISCLAIMER AND LIMITATIONS OF USE
+/////     APCA is an embodiment of certain suprathreshold contrast
+/////     prediction technologies and it is licensed to the W3 on a
+/////     limited basis for use in certain specific accessibility
+/////     guidelines for web content only. APCA may be used for 
+/////     predicting colors for web content use without royalty.
+/////
+/////     However, Any such license excludes other use cases
+/////     not related to web content. Prohibited uses include
+/////     medical, clinical evaluation, human safety related,
+/////     aerospace, transportation, military applications, 
+/////     and uses which are not specific to web based content
+/////     presented on self-illuminated displays or devices.
+/////
+////////////////////////////////////////////////////////////////////////////////
 
-
-    ////////////////////////////////////////////////////////////////////////////////
-    /////
-    /////   *****  SAPC BLOCK  *****
-    /////
-    /////   For Evaluations, this is referred to as: SAPC-8, D-series constants
-    /////                S-LUV Advanced Perceptual Contrast
-    /////   Copyright © 2019-2021 by Andrew Somers. All Rights Reserved.
-    /////
-    /////
-    /////   INCLUDED Extensions or Model Features:
-    /////       • SAPC-8 Core Contrast
-    /////       • SmoothScale™ scaling technique
-    /////       • SoftToe black level soft clamp
-    /////
-    /////   NOT INCLUDED — This Version Does NOT Have These Extensions:
-    /////       • Color Vision Module
-    /////       • Spatial Frequency Module
-    /////       • Light Adaptation Module
-    /////       • Dynamics Module
-    /////       • Alpha Module
-    /////       • Personalization Module
-    /////       • Multiway Module
-    /////       • DynaFont™ font display
-    /////       • ResearchMode middle contrast explorer
-    /////       • ResearchMode static target
-    /////       • CIE function suite
-    /////       • SAPColor listings and sorting suite
-    /////       • RGBcolor() colorString parsing
-    /////
-    /////
-    ////////////////////////////////////////////////////////////////////////////////
+//////////   APCA 0.98 G - 4g Constants   //////////////////////////////////////
 
 
-    ////////////////////////////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////////////////
-    /////  BEGIN SAPC/APCA CONTRAST BLOCK  \//////////////////////////////////////
-    ////                                    \////////////////////////////////////
-
-
-    ////////////////////////////////////////////////////////////////////////////
-    ///// SAPC Function with SmoothScale  \////////////////////////////////////
-    ////                                   \//////////////////////////////////
-    ///
-
-    ///// *** Polarity is Important: do not mix up background and text *** /////
-
-    /////  Input value must be integer in RGB order (RRGGBB for 0xFFFFFF)  /////
-
-                /////  DO NOT use a Y from any other method  /////
-
-
-    function APCAcontrast (background, text) {
-
-        let Rbg = (background & 0xFF0000) >> 16,
-            Gbg = (background & 0x00FF00) >> 8,
-            Bbg = (background & 0x0000FF);
-
-        let Rtxt = (text & 0xFF0000) >> 16,
-            Gtxt = (text & 0x00FF00) >> 8,
-            Btxt = (text & 0x0000FF);
-
-
-            /////  MAGICAL NUMBERS  ///////////////////////////////
-
-            /////  sRGB Conversion to Relative Luminance (Y)  /////
-
-      const mainTRC = 2.4; // Transfer Curve (aka "Gamma") for sRGB linearization
-                          // Simple power curve vs piecewise described in docs
-                         // Essentially, 2.4 best models actual display
-                        // characteristics in combination with the total method
-
-      const mainTRCencode = 0.41666666666666666667; // = 1.0/mainTRC;
-
-      const Rco = 0.2126729,        // sRGB Red Coefficient (from matrix)
-            Gco = 0.7151522,        // sRGB Green Coefficient (from matrix)
-            Bco = 0.0721750;        // sRGB Blue Coefficient (from matrix)
-
-
-            /////  For Finding Raw SAPC Contrast from Relative Luminance (Y)  /////
-
-      const normBG = 0.55,          // Constants for SAPC Power Curve Exponents
-            normTXT = 0.58,         // One pair for normal text, and one for reverse
-            revTXT = 0.57,          // These are the "beating heart" of SAPC
-            revBG = 0.62;
-
-
-            /////  For Clamping and Scaling Values  /////
-
-      const blkThrs = 0.03,         // Level that triggers the soft black clamp
-            blkClmp = 1.45,         // Exponent for the soft black clamp curve
-            deltaYmin = 0.0005,     // Lint trap
-            scaleBoW = 1.25,        // Scaling for dark text on light
-            scaleWoB = 1.25,        // Scaling for light text on dark
-            loConThresh = 0.078,    // Threshold for new simple offset scale
-            loConFactor = 12.82051282051282,    // = 1/0.078,
-            loConOffset = 0.06,     // The simple offset
-            loClip = 0.001;         // Output clip (lint trap #2)
-
-
-            // We are only concerned with Y at this point
-            // Ybg and Ytxt: divide sRGB to 0.0-1.0 range, linearize, 
-            // and then apply the standard coefficients and sum to Y.
-            // Note that the Y we create here is unique and designed
-            // exclusively for SAPC. Do not use Y from other methods.
+const mainTRC = 2.4; // 2.4 exponent emulates actual monitor perception
     
-        let Ybg =   Math.pow(Rbg/255.0, mainTRC) * Rco +
-                    Math.pow(Gbg/255.0, mainTRC) * Gco +
-                    Math.pow(Bbg/255.0, mainTRC) * Bco;
+const sRco = 0.2126729, 
+      sGco = 0.7151522, 
+      sBco = 0.0721750; // sRGB coefficients
 
-        let Ytxt =  Math.pow(Rtxt/255.0, mainTRC) * Rco +
-                    Math.pow(Gtxt/255.0, mainTRC) * Gco +
-                    Math.pow(Btxt/255.0, mainTRC) * Bco;
+const normBG = 0.56, 
+      normTXT = 0.57,
+      revTXT = 0.62,
+      revBG = 0.65;  // G-4g constants for use with 2.4 exponent
 
-        let SAPC = 0.0;             // For holding raw SAPC values
-        let outputContrast = 0.0;   // For weighted final values
-
-
-        ///// TUTORIAL  /////
-
-        // Take Y and soft clamp black, return 0 for very close luminances
-        // determine polarity, and calculate SAPC raw contrast
-        // Then apply the output scaling 
-
-        // Note that reverse contrast (white text on black)
-        // intentionally returns a negative number
-        // Proper polarity is important! 
+const blkThrs = 0.022,
+      blkClmp = 1.414, 
+      scaleBoW = 1.14,
+      scaleWoB = 1.14,
+      loBoWthresh = loWoBthresh = 0.035991,
+      loBoWfactor = loWoBfactor = 27.7847239587675,
+      loBoWoffset = loWoBoffset = 0.027,
+      loClip = 0.001,
+      deltaYmin = 0.0005;
 
 
-    //////////   BLACK SOFT CLAMP & INPUT CLIP  ////////////////////////////////
+////////// ƒ sRGBtoY() ///////////////////////////////////////////////
 
-            // Soft clamp Y when near black.
-            // Now clamping all colors to prevent crossover errors       
-        Ytxt = (Ytxt > blkThrs) ? Ytxt :
-                                  Ytxt + Math.pow(blkThrs - Ytxt, blkClmp);
+function sRGBtoY (sRGBcolor) {
+                  // send 8 bit-per-channel integer sRGB (0xFFFFFF)
 
-        Ybg = (Ybg > blkThrs) ? Ybg :
-                                Ybg + Math.pow(blkThrs - Ybg, blkClmp);
+  let r = (sRGBcolor & 0xFF0000) >> 16,
+      g = (sRGBcolor & 0x00FF00) >> 8,
+      b = (sRGBcolor & 0x0000FF);
+    
+  function simpleExp (chan) { return Math.pow(chan/255.0, mainTRC); }
+ 
+		 // linearize r, g, or b then apply coefficients
+		// and sum then return the resulting luminance
+    
+   return sRco * simpleExp(r) + sGco * simpleExp(g) + sBco * simpleExp(b);
+}
 
 
-            /////   Return 0 Early for extremely low ∆Y (lint trap #1) /////
-        if(Math.abs(Ybg - Ytxt) < deltaYmin){ return 0.0 }
+////////// ƒ APCAcontrast() //////////////////////////////////////////
 
-
-
-    //////////   SAPC CONTRAST   ///////////////////////////////////////////////
-
-        if ( Ybg > Ytxt ) {     // For normal polarity, black text on white
-
-                ///// Calculate the SAPC contrast value and scale
+function APCAcontrast (txtY,bgY) {
+                         // send linear Y (luminance) for text and background.
+                        // IMPORTANT: Do not swap, polarity is important.
         
-            SAPC = ( Math.pow(Ybg, normBG) - Math.pow(Ytxt, normTXT) ) * scaleBoW;
+  var SAPC = 0.0;            // For raw SAPC values
+  var outputContrast = 0.0; // For weighted final values
+  
+  // TUTORIAL
+  
+  // Use Y for text and BG, and soft clamp black,
+  // return 0 for very close luminances, determine
+  // polarity, and calculate SAPC raw contrast
+  // Then scale for easy to remember levels.
 
-                    ///// NEW! SAPC SmoothScale™
-                   // Low Contrast Smooth Scale Rollout to prevent polarity reversal
-                  // and also a low clip for very low contrasts (lint trap #2)
-                 // much of this is for very low contrasts, less than 10
-                // therefore for most reversing needs, only loConOffset is important
-            outputContrast = ( SAPC < loClip ) ? 0.0 :
-                             ( SAPC < loConThresh ) ?
-                               SAPC - SAPC * loConFactor * loConOffset :
-                               SAPC - loConOffset;
-             
+  // Note that reverse contrast (white text on black)
+  // intentionally returns a negative number
+  // Proper polarity is important!
 
-        } else {     // For reverse polarity, light text on dark
-                    // WoB should always return negative value.
+//////////   BLACK SOFT CLAMP   /////////////////////////////////////////
 
-            SAPC = ( Math.pow(Ybg, revBG) - Math.pow(Ytxt, revTXT) ) * scaleWoB;
+          // Soft clamps Y for either color if it is near black.
+  txtY = (txtY > blkThrs) ? txtY :
+                            txtY + Math.pow(blkThrs - txtY, blkClmp);
+  bgY = (bgY > blkThrs) ? bgY :
+                          bgY + Math.pow(blkThrs - bgY, blkClmp);
 
-            outputContrast = ( SAPC > -loClip ) ? 0.0 :
-                             ( SAPC > -loConThresh ) ?
-                               SAPC - SAPC * loConFactor * loConOffset :
-                               SAPC + loConOffset;
-        }
+       ///// Return 0 Early for extremely low ∆Y
+  if ( Math.abs(bgY - txtY) < deltaYmin ) { return 0.0; }
 
-        return  outputContrast * 100;
 
-    } // Close APCAcontrast()
+//////////   APCA/SAPC CONTRAST   ///////////////////////////////////////
 
-    ////\                            ///////////////////////////////////////////\
-    /////\  END OF SAPC/APCA BLOCK  /////////////////////////////////////////////\
-    //////////////////////////////////////////////////////////////////////////////\
-    ///////////////////////////////////////////////////////////////////////////////\
+  if ( bgY > txtY ) {  // For normal polarity, black text on white (BoW)
 
+           // Calculate the SAPC contrast value and scale
+      
+    SAPC = ( Math.pow(bgY, normBG) - Math.pow(txtY, normTXT) ) * scaleBoW;
+
+            // Low Contrast smooth rollout to prevent polarity reversal
+           // and also a low-clip for very low contrasts
+    outputContrast = (SAPC < loClip) ? 0.0 :
+                     (SAPC < loBoWthresh) ?
+                      SAPC - SAPC * loBoWfactor * loBoWoffset :
+                      SAPC - loBoWoffset;
+
+  } else {  // For reverse polarity, light text on dark (WoB)
+           // WoB should always return negative value.
+
+    SAPC = ( Math.pow(bgY, revBG) - Math.pow(txtY, revTXT) ) * scaleWoB;
+
+    outputContrast = (SAPC > -loClip) ? 0.0 :
+                     (SAPC > -loWoBthresh) ?
+                      SAPC - SAPC * loWoBfactor * loWoBoffset :
+                      SAPC + loWoBoffset;
+  }
+
+         // return Lc (lightness contrast) as a signed numeric value 
+        // It is permissible to round to the nearest whole number.
+       
+  return  outputContrast * 100.0;
+  
+} // End APCAcontrast()
+
+```
 
 ## TESTING YOUR IMPLEMENTATION
 
 If you've implemented the code and want a quick sanity check, Here are four keystone checks with no rounding, where the first colos is TEXT and the4 second color is BACKGROUND:
 
-    Test Values for the 0.98G 4g constants:
+```
+Test Values for the 0.98G 4g constants, normal and reverse values for each color pair.
+First number is TEXT second number is BACKGROUND.
 
-    #888 vs #fff • 63.056469930209424
-    #aaa vs #0 • -56.24113336839742
-    #def vs #123 • -93.06770049484275
-    #123 vs #234 • 1.7512243099356113
+    TEXT vs BKGND •  EXPECTED RESULT for 0.98 G-4g
 
+    #888 vs #fff  •  63.056469930209424
+    #fff vs #888  • -68.54146436644962  
 
+    #000 vs #aaa  •  58.146262578561334
+    #aaa vs #000  • -56.24113336839742
+    
+    #123 vs #def  •  91.66830811481631
+    #def vs #123  • -93.06770049484275
+
+    #123 vs #234  •   1.7512243099356113
+    #234 vs #123  •  -1.6349191031377903
+```
 
 Those should exercise the important constants.
 
-
+-----
 ## Miscellaneous
+
+### S-Luv Advanced Predictive Color (SAPC) model
+
+* S-Luv, is a L<sup>s</sup> u<sup>s</sup>v<sup>s</sup>-type colorspace for modeling vision and visual impairment perception of emissive displays and devices. 
+    * S-Luv is built around the concept of a standard-observer/standard-environment model.
+        * the standard observers for visual acuity (VA) with best correction, are grouped as: 
+            * 20/12 to 20/20: near-perfect human acuity 
+            * 20/20 to 20/40: normal impairment (can drive non-commercial)
+            * 20/40 to 20/70: substantial impairment (cannot drive)
+            * 20/80 to 20/200: Low Vision / disabling impairment
+            * 20/200 and above: legal definition of blind
+        * The standard observers for contrast sensitivity (CSF) are
+            * Pelli Robson 2 (normal, 1% threshold)  
+            * Pelli Robson 1.5 (impaired, 3% threshold)  
+            * Pelli Robson 1 (Low Vision, 10% threshold)
+        * The standard observers for Color Vision Deficiency (CVD) are
+            * A Protanope (no "red" L cones) is the primary CVD standard observer.
+                * Both Protan and Deutan are considered at the same time by using the Protan standard observer, this is because both have similar discrimination issues, but only protan has a significant spectral deficit toward red.
+            * Optional additional CVD obervers:
+                * A Deuteranope (no "green" M cones)
+                * A Tritanope (no "blue" S cones)
+                * Blue Cone Monochrmacy is evaluated as low vision / disabling impairment with photophobia and no color discrimination.
+* Readability Standard Observer
+    * It is important to remember that the listed VA, CSF, & CVD specify the threshold levels between legible and not legible
+    * Threshold legibility does not quantify the ideal readability conditions.
+        * The critical readability for VA is a stimulus that is 2.4 times larger than threshold acuity.
+        * The critical readability for CSF is a stimulus that has 10 times higher contrast than threshold.
+        * The critical readability for CVD is a stimulus that has 10 times higher contrast than achromatic threshold, ***after*** adjusting for loss of color discrimination.
+
+
+### SAPC Standard Observer Monitor and Environment
+These are the preliminary SAPC standard observer model. In particular, some further research and empirical studies that sample how users tend to set their monitor's brightness/contrast and the effect on the resultant display gamma/TRC are needed.
+
+_**The standard environmental model shall comprise**_
+* A desktop sRGB LCD screen that is
+  * A non-retina display in the sRGB colorspace
+  * IPS or equivelent technology such that off-axis viewing is not impacted. 
+* Monitor shall be calibrated using a hardware calibrator to:
+  * Max White (#FFF) Luminance no less than 160cd/m^2 
+  * Max White Luminance no more than 240cd/m^2 
+  * Black level target of 1 cd/m^2, and no more than 2 cd/m^2
+  * Preferred gamma target of 2.4
+     * An alternate gamma curve may be used for specific testing provided all results so specify.
+* Monitor's surrounding environmental conditions
+  * Background behind the monitor and within the users field of view should be neutral grey or white, at a luminance that is 20% of the monitor's maximum white.
+  * Ambient light of approximately 200 lux.
+    * The light should not _directly_ shine on the face of the monitor.
+    * The light should not shine into the eyes of the user while viewing the monitor.
+    * What is actually important is that the area within view surrounding the monitor be at 20% luminance of the monitor's max white level. _(If the monitor is surrounded by 80% white walls then it is those 80% walls that need to be at 20% luminance of the monitor's max white as calibrated.)_
+  * Ambient evaluation proceedure:  
+    * Send the sRGB monitor full screen grey at sRGB value #7C7C7C.
+    * The average luminance of the area in view around the monitor should be the same as the monitor grey at #7C7C7C.
+    * The monitor at #FFFFFF should measure a luminance approximately five times higher than that measures at #7C7C7C.
+  * Position monitor toward user in a way that minimizes reflections.
+* Standard observer positioning and desktop monitor resolution.
+  * Monitor resolution in ppi shall provide that at the observers view position that:
+    * a stimulus that is 18.8px high (CSS reference px) shall subtend 24' (minutes of arc) or 0.4° on the obverver's retina.
+      * One CSS reference px is 1.278 minutes of arc or 0.0213°
+      * An 18.8px stimulus means the actual size as measured and rendered on the display face.
+        * For instance, the glyphs in a font set to  ` font-size: 18.8px; ` does not render as 18px on screen. If the x-height ratio is 0.5, then that means the lower case letters render as only 9px on the display.
+        * If the x-height ratio of a font is 0.5875, then setting that font to 32px will result in lower case letters rendering as 18.8px on screen.
+      * 24' arc-min is the critical size for a viewer with 20/40 vision for best readability.
+      * To determine the critical reading size in arc-min for a given acuity, multiply the lower Snellen number by 0.6.
+        * For instance, for 20/70 vision, multiply 70 * 0.6 = 42' arc-min.
+      * To determine the actual font size based on acuity, if the font haas an x-height ratio of 0.5875, then multiply the lower Snellen number by 0.8
+        * For instance, for 20/60 vision, multiply 60 * 0.8 = 48px font.
+          * This isonly if that font has an x-height ratio of 0.5875,
+          * The lowercase letters of that 48px font then render to screen at about ~28px.
+    * As a quick rule of thumb: **a 16px standard font with an x-height ratio of 0.59 is the critical size for normal vision.**
+  * Observer is positioned based on the monitor resolution.
+    * For a mobile device, the observer is positioned such that the 1px = 1.278' arc-min relationship is maintained.
+    * For a 96ppi monitor, the observer shall be 28" away.
+  * For desktop, the monitor should be chosen such that the ppi allows:
+    * The observer to be no closer than 24" (60cm)
+    * The observer to be no farther than 36" (90cm)
+
+
+### THIS IS BETA
+Being developed for use with future web standards for accessibility. Those standards are under separate repositorieswith the W3/AGWG.
 
 There is an informal and unofficial repository of information on vision, contrast, design, impairments, and readability at the [Visual Contrast Subgroup Wiki] which includes "Whitepaper In Progress" materials.
 
@@ -565,48 +459,4 @@ Glossary
 -   **Spatial Frequency** — in a practical sense, this refers to the weight of a font, or the stroke width. A thinner font or narrower stroke width is a higher spatial frequency than a bolder or thicker stroke. Higher spatial frequencies require more luminance contrast to be visible than lower frequencies, such as a very bold large headline.
 
 
------
 
-### S-Luv/S-Lab
-
-* S-Luv, is a L<sup>s</sup> u<sup>s</sup>v<sup>s</sup>-type colorspace for modeling vision and visual impairment perception of emissive displays and devices. 
-    * S-Luv is built around the concept of a standard-observer/standard-environment model.
-        * the standard observers for visual acuity (VA) are grouped as: 
-            * 20/40 and better (near normal), 
-            * 20/40 through 20/80 (transitional impairment) and
-            * 20/80 to 20/200 (Low Vision)
-        * The standard observers for contrast sensitivity (CSF) are
-            * Pelli Robson 2 (normal, 1% threshold)  
-            * Pelli Robson 1.5 (impaired, 3% threshold)  
-            * Pelli Robson 1 (Low Vision, 10% threshold)
-        * The standard observers for Color Vision Deficiency are
-            * A Protanope (no red cones)
-            * A Deuteranope (no green cones)
-            * Both Protan and Deutan are addressed at the same time.
-            * The standard observers for contrast sensitivity are (under revision / TBD)
-        * It is important to remember that VA and CSF are the threshold levels between legible and not legible, but do not specify the idea readability conditions.
- 
-
-### SAPC Standard Observer Monitor (preliminary)
-These are preliminary thoughts for a standard observer model. In particular, some further research and empirical studies that sample how users tend to set their monitor's brightness/contrast and the effect on the resultant display gamma/TRC.
-
-* The standard environmental model is a desktop sRGB LCD screen calibrated for 
-   * Max White (#FFF) Luminance no less than 160cd/m^2 
-   * Max White Luminance no more than 240cd/m^2 
-   * Black level target of 1 cd/m^2, and no more than 2 cd/m^2
-   * Gamma curve of no less than 2.2, and no more than 2.5
-   * Preferred gamma target similar to L*, between 2.3 and 2.4
-   * Ambient light of approximately 200 lux.
-       * The light should not _directly_ shine on the face of the monitor.
-       * The light should not shine into the eyes of the user while viewing the monitor.
-       * The previous 18% greycard method was deleted as being problematic.
-       * What is actually important is that the area within view surrounding the monitor be at <sub>20% luminance of the monitor's max white level. If the monitor is surrounded by 80% white walls then it is those 80% walls that need to be at 20% luminance of the monitor's max white as calibrated.
-      * Send the sRGB monitor full screen grey at sRGB value #7C7C7C.
-      * The average luminance of the area in view around the monitor should be the same as the monitor grey at #7C7C7C.
-      * The monitor at #FFFFFF should measure a luminance approximately five times higher than that measures at #7C7C7C.
-   * Position monitor toward user in a way that minimizes reflections.
-   * Background behind the monitor within the users field of view should be neutral, and about 20% of the monitor's maximum white luminance.
-
-
-### THIS IS BETA
-Being developed for use with future web standards for accessibility. Those are under separate repositories.
