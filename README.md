@@ -3,7 +3,7 @@
 ## APCA Documentation and Quick Start
 See the [JS Documentation \(the ReadMe.md in the JS folder\)](JS/ReadMe.md) for information on using the API, which file is best suited for your needs, and a QuickStart tutorial.
 
-See [WHY APCA](WhyAPCA.md) for a brief explaination of the important differences for WCAG 3 vs the old WCAG 2.x/1.4.3 guidelines.
+See [WHY APCA](WhyAPCA.md) for a brief explaination of the important differences of APCA for WCAG 3 vs the old WCAG 2.x/1.4.3 contrast guidelines.
 
 ## SAPC/APCA CURRENT VERSION: 0.98G Constants: 4g
 
@@ -164,7 +164,7 @@ Basic APCA Math in LaTeX
 ---------------
 0.98G-4g (coming soon)
 
-![](images/APCAmathSAPC-0.98G-4g.png)
+![](images/APCA098G4g.svg)
 
 
 -----
