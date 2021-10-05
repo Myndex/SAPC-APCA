@@ -12,14 +12,11 @@ The base APCA with the 0.98G-4g constants is in the JS folder.
 
 JS File: APCA_0_98G_4g_minimal.js
 
-And the [SAPC dev site](https://www.myndex.com/SAPC/) has a live demo with a "research mode" and interactive experiments you can try out. 
-
 ### NEW CONSTANTS and NEW MATH:
 (October 1, 2021) the 0.98G-4g math and constants have been in use now for months, and by all accounts are working well as expected. The revised code is available in the JS folder. The present version improves tracking of contrast perception. (Doubling or halving the L<sup>c</sup> value results in a perceived doubling or halving of contrast.) Also, smoother results for low contrasts and dark color pairs.
 
-SAPC and APCA are live to play with. 
+### SAPC and APCA demo tools are live to play with.
 
-### What and Where
 **The basic simple version[ is the APCA page,](https://www.myndex.com/APCA/)** it includes the new scaling and the dynamic font matrix. The is the official WCAG3/Silver support version.
 
 **The development version[ is the SAPC page,](https://www.myndex.com/SAPC/)** and this version includes the new RESEARCH MODE, which has some different tools you can activate to investigate the nature of a color or colors, including a simplified version of the middle contrast experiment - on the SAPC app it's called "split contrast mode".
@@ -29,32 +26,28 @@ SAPC and APCA are live to play with.
 
 - **Uniformity Described:** For the majority of the range, doubling or halving the L<sup>c</sup> contrast number equates to a doubling or halving of the perceived contrast. (Based on the empirical data from the 2020 "Middle Contrast" experiments.)
 
-- **New Code and Constants:** If you have been working with the code, it has changed, and there are a whole new set of constants. Whagt was posted here today (Octover 1 2021) is what has been tested on the laive sites for several months.
+- **New Code and Constants:** If you have been working with the code, it has changed, and there are a whole new set of constants. What was posted here today (Octover 1 2021) is what has been tested on the live sites for several months.
 
 - **Rescaled Output:** This new version sets the levels a little differently, so what was 80 is now about 60, what was 90 is now 75, etc.
-    - **Rescaled lookup tables:** — to adjust to the newly scaled output, both the visual lookups, and the arrays in the code are updated to give accurate font minimums.
-    - NOTE: the auto mated lookup tables are not posted here, but are live on the APCA site.
-
-- **Full range is now standard** implemented via a new method that brings in the uniformity (doubling/halving). 
-    - And by full range, I mean all the way to zero, including a smooth crossing over zero. 
-    - While 8 bit monitors are too low in resolution for actual clinical accuracy, we are now measuring down to clinical threshold values. 
+    - **Rescaled lookup tables:** — to adjust to the newly scaled output, both the visual lookups, and the arrays in the code are being updated to give accurate font minimums. The d12e tables will suffice for the moment, the revised tables will be up soon.
+    - NOTE: the automated lookup tables are not posted here, but are live on the APCA site. 
 
 - Some of the changes have "improved" the accuracy of saturated colors, particularly red and blue, at least in terms of readability guidelines. 
-    - APCA is not specifically addressing the Helmholtz–Kohlrausch effect, as the focus for APCA is on readability, and chroma contrast does not help readability (in some cases it hinders it) — luminance contrast is the key for readability.
-    - I do have a separate color module, but not releasing it at the moment as it is more about aesthetics, not readability, and solving the readability issue was the key goal, which I believe is achieved. 
+    - APCA is not specifically addressing the Helmholtz–Kohlrausch effect, as the focus for APCA is on readability, and chroma contrast does not help readability for small body-text sized fonts (in some cases it hinders it) — luminance contrast is the key for readability, particularly for body text.
+    - I do have a separate color module, but not releasing it at the moment as it is more about aesthetics than readability, and solving the readability issue was the key goal. 
 
 - **Research Mode!** On the SAPC site only, there is a button under the font display for "Research Mode" which activates some additional tools for investigating colors and contrast.
 
-Comments welcome of course. 
+Comments welcome of course. I've opened the discussion tab here on GitHub if you want to have a discussion or questions without opening an issue. Some of the issues that were mainly questions are going to be moved to the discussion tab as well.
 
 Thank you!
 
 Andy
 
-_Andrew Somers<br>
-W3 Invited Expert<br>
-Myndex Color Science Researcher<br>
-Inventor of SAPC and APCA_
+_Andrew Somers_    
+_W3 Invited Expert_    
+_Myndex Color Science Researcher_    
+_Inventor of SAPC and APCA_
 
 -----
 
@@ -79,11 +72,11 @@ If you have been using any files from this repository, be sure to read the file 
 APCA is a set of contrast assessment methods for predicting perceived contrast between sRGB colors on a computer monitor. It has been developed as an assessment method for W3 Silver/WCAG3 accessibility standards relating to content for computer displays and mobile devices.
 
 ### FEATURES
-* NEW in v0.98: Incorporates Spatial Frequency & Stimulus Size directly in predictions (i.e. provides direct indication of minimum font size andf weight).
+* NEW in v0.98: Incorporates Spatial Frequency & Stimulus Size directly in predictions (i.e. provides direct indication of minimum font size and weight).
 * Spectral weighting of luminance based on sRGB coefficients.
 * Weighting for normal and reverse polarity (dark text on light background vs light text on dark.)
 * Estimation and weighting of light adaptation for perceptual uniformity in a common "standard observer" model.
-* Considers Bartleson Breneman surround effects, simultaneous contrast, and local adaptation based on a pre-estimation model.
+* Considers simultaneous contrast and local adaptation based on a pre-estimation model.
 * Spatial frequency considerations for font weight as part of calculations and further defined in a lookup table.
 * Lookup table can be customised for different languages/character sets.
 
@@ -107,13 +100,13 @@ NOTE: **The APCA site is using the current G constants**, if you want to compare
 ## IMPLEMENTATIONS
 The libraries are plain vanilla Javascript. Planned adds include PHP, <s>OpenOffice Calc (spreadsheet)</s> DONE!, and Python, as those cover the most likely use cases. Many of the available inputs to the functions can remain at their defaults, though these extra inputs can be used in more specialized situations (such as creating content specifically for daylight/outdoors, or specifically for dark nights, etc.). 
 
-A plain language walkthrough, LaTeX math, and pseudocode are below:
+A plain language walkthrough, LaTeX math, and most basic JS are below:
 
 -----
 
 ### Font Use Lookup Table
 
-Font lookup tables are under evaluation. Will post fresh one soon!
+Font lookup tables are under evaluation. Will post fresh one soon! (In the meantime, you can use LUT version d12e)
 
 [![](images/APCAtable98G4g.png)]
 
@@ -124,11 +117,13 @@ Font lookup tables are under evaluation. Will post fresh one soon!
 
 APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math assumes the use of the web standard sRGB colorspace.
 
+    0.98G-4g constants:
+    
     Exponents:	mainTRC: 2.4	normBG: 0.56	normTXT: 0.57	revTXT: 0.62	revBG: 0.65
     
     Clamps:	blkThrs: 0.022	blkClmp: 1.414	loClip: 0.001	deltaYmin: 0.0005
     
-    sRGB:       sRco = 0.2126729    sGco = 0.7151522    sBco = 0.0721750
+    sRGB:       sRco: 0.2126729    sGco: 0.7151522    sBco: 0.0721750
     
     Scalers:	Scale: 1.14	loBoWthresh: 0.035991	loBoWfactor: 27.7847239587675	loBoWoffset: 0.027	
     
@@ -168,9 +163,7 @@ Basic APCA Math in LaTeX
 
 ![](images/APCA098G4g.svg)
 
-
 -----
-
 ## Basic Javascript:
 In lieu of a pseudocode, here's the most basic JS version:
 
@@ -278,10 +271,8 @@ function APCAcontrast (txtY,bgY) {
 //////////   BLACK SOFT CLAMP   /////////////////////////////////////////
 
           // Soft clamps Y for either color if it is near black.
-  txtY = (txtY > blkThrs) ? txtY :
-                            txtY + Math.pow(blkThrs - txtY, blkClmp);
-  bgY = (bgY > blkThrs) ? bgY :
-                          bgY + Math.pow(blkThrs - bgY, blkClmp);
+  txtY = (txtY > blkThrs) ? txtY : txtY + Math.pow(blkThrs - txtY, blkClmp);
+  bgY = (bgY > blkThrs) ? bgY : bgY + Math.pow(blkThrs - bgY, blkClmp);
 
        ///// Return 0 Early for extremely low ∆Y
   if ( Math.abs(bgY - txtY) < deltaYmin ) { return 0.0; }
@@ -292,7 +283,6 @@ function APCAcontrast (txtY,bgY) {
   if ( bgY > txtY ) {  // For normal polarity, black text on white (BoW)
 
            // Calculate the SAPC contrast value and scale
-      
     SAPC = ( Math.pow(bgY, normBG) - Math.pow(txtY, normTXT) ) * scaleBoW;
 
             // Low Contrast smooth rollout to prevent polarity reversal
@@ -313,8 +303,9 @@ function APCAcontrast (txtY,bgY) {
                       SAPC + loWoBoffset;
   }
 
-         // return Lc (lightness contrast) as a signed numeric value 
-        // It is permissible to round to the nearest whole number.
+         // Return Lc (lightness contrast) as a signed numeric value.
+	// After multipluying by 100, range will be less than ±127,
+       // so it is permissible to round to the nearest whole integer.
        
   return  outputContrast * 100.0;
   
@@ -327,7 +318,7 @@ function APCAcontrast (txtY,bgY) {
 If you've implemented the code and want a quick sanity check, Here are some keystone checks with no rounding. The first color is **TEXT** and the second color is **BACKGROUND**:
 
 ```
-Test Values for the 0.98G 4g constants, normal and reverse values for each color pair.
+Test Values for the 0.98G 4g constants, normal and reverse float values for each color pair.
 First number is TEXT second number is BACKGROUND.
 
     TEXT vs BKGND •  EXPECTED RESULT for 0.98 G-4g
@@ -434,6 +425,26 @@ There is an informal and unofficial repository of information on vision, contras
 [Visual Contrast Subgroup Wiki]: https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup
 
 The author's website includes further background, including select experimental results and white-papers at https://www.myndex.com/WEB/Perception
+
+-----
+## DISCLAIMER
+
+_DISCLAIMER AND LIMITATIONS OF USE_
+APCA is an embodiment of certain suprathreshold contrast
+prediction technologies and it is licensed to the W3 on a
+limited basis for use in certain specific accessibility
+guidelines for web content only. APCA may be used for 
+predicting contrast for web content use without royalty.
+
+However, said license excludes other use cases
+not related to web content. Prohibited uses include
+medical, clinical evaluation, human safety related,
+aerospace, transportation, military applications, 
+and uses which are not specific to web-based content
+presented on self-illuminated displays or devices.
+
+-----
+
 
 Glossary
 --------
