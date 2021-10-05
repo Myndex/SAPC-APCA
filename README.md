@@ -429,14 +429,14 @@ The author's website includes further background, including select experimental 
 -----
 ## DISCLAIMER
 
-_DISCLAIMER AND LIMITATIONS OF USE_
+_DISCLAIMER AND LIMITATIONS OF USE:_     
 APCA is an embodiment of certain suprathreshold contrast
 prediction technologies and it is licensed to the W3 on a
 limited basis for use in certain specific accessibility
 guidelines for web content only. APCA may be used for 
 predicting contrast for web content use without royalty.
 
-However, said license excludes other use cases
+Said license excludes other use cases
 not related to web content. Prohibited uses include
 medical, clinical evaluation, human safety related,
 aerospace, transportation, military applications, 
