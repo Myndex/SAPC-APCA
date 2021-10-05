@@ -1,10 +1,9 @@
-### All Files Copyright (c) 2019-2020 by Andrew Somers. All Rights Reserved.
+### All Files Copyright (c) 2019-2021 by Myndex Research and Andrew Somers. All Rights Reserved.
 
 # — LICENSE —
 
 ### The Short Summary:
-The Majority of files in this repository are licensed under the AGPL v3 license. However, those files that have specifically "APCA" in the filename are licensed to the W3 under their cooperative agreement.
-
+The Majority of files currently in this repository that specifically have "APCA" in the filename are licensed to the W3 under their cooperative agreement for use with web-based content only, and not for any other use.
 
 ______________
 
@@ -21,14 +20,34 @@ All Files in this Repository that have "**APCA**" in the filename are licensed t
 - Contributions to Test Suites with "**APCA**" in the filename are made under the
 [W3C 3-clause BSD License](https://www.w3.org/Consortium/Legal/2008/03-bsd-license.html)
 
+-----
+## DISCLAIMER
 
-_________________
+_DISCLAIMER AND LIMITATIONS OF USE:_     
+APCA is an embodiment of certain suprathreshold contrast
+prediction technologies and it is licensed to the W3 on a
+limited basis for use in certain specific accessibility
+guidelines for web content only. APCA may be used for 
+predicting contrast for web content use without royalty.
 
-## NON-APCA FILES:
+Said license excludes other use cases
+not related to web content. Prohibited uses include
+medical, clinical evaluation, human safety related,
+aerospace, transportation, military applications, 
+and uses which are not specific to web-based content
+presented on self-illuminated displays or devices.
 
-All Other Files in this Repository that do not have "APCA" specifically in the filename are licensed under the AGPL v3 license. 
+Any APCA files in this repositiory may be used or incorporated only in tools for web-based content or web related content, under the AGPL v3 license.
 
-**EXAMPLE:** *APCAsRGB.js* is licensed to the W3 under their cooperative agreements above. However *LowConSAPCsRGB.js* is licensed under AGPL v3. Licensing information in the head of each document.
+### Licensing information in the head of each document.
+
+All Other Files _in this Repository_ that do not have "APCA" specifically in the filename, if they exist, may have different license terms specified in the header of said document. Files, code, or other assets related to SAPC, APCA, Perceptex, or Myndex Perception Research, that are not _currently_ in this repository are not available for license or use without a written agreement.
+
+## WITHDRAWN ASSETS
+As some code herein is early beta, and there is a clear interest to prevent obsolete verions from propogating, license for use is revoked when any such asset is removed from this repositiory. Please replace any stale assets with the revised assets herein as soon as practical.
+
+### Misc Licensing
+Any files that do not fall under the above categories are hereby licensed under AGPL v3.
 
 ### The AGPU v3 License
 ```
