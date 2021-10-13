@@ -15,16 +15,22 @@ If you want to dive in fast, or you want the bare basics, this is the file for y
 This APCA function takes two sRGB encoded colors, where each color is an integer in RGB order, (i.e. 0xRRGGBB or 16777216).
 
 ### API
-The API for "APCA_0_98G_4g_minimal" is trivially simple. Send text and background sRGB numeric values to the sRGBtoY() function, and send the resulting text-Y and background-Y to the APCAcontrast function, it returns a float with the numeric L<sup>c</sup> contrast result.
+The API for "APCA_0_98G_4g_minimal" is trivially simple. Send text and background sRGB numeric values to the sRGBtoY() function, and send the resulting text-Y and background-Y to the APCAcontrast function, it returns a signed float with the numeric L<sup>c</sup> contrast result.
 
-**` let contrast_Lc = APCAcontrast( sRGBtoY(textColor) , sRGBtoY(backgroundColor) ); `**
+The two inputs are TEXT color and BACKGROUND color in that order. Each must be a numeric NOT a string, as this simple version has no string parsing utilities. 
+### EXAMPLE:
+```
+     txtColor = 0x123456; // numeric color of the text, 0xRRGGBB, as will be rendered
+     bgColor  = 0xabcdef; // numberic color for the background, as will be rendered
 
-Each parameter input must be an 8bit per channel integer (or 0x) sRGB encoded color. White is either the integer 16777216 or the hex 0xffffff. A float is returned with a positive or negative value. Negative values mean light text and a dark background, positive values mean dark text and a light background. 60.0, or -60.0 is a contrast "sort of like" the old WCAG 2's 4.5:1. NOTE: the total range is now less than ± 115, so output can be rounded to a **signed INT** but DO NOT output absolute value as a visible result because negative polarity colors should return a negative number.
+     contrastLc = APCAcontrast( sRGBtoY(txtColor) , sRGBtoY(bgColor) );
+```
+Each color must be a 24bit color (8 bit per channel) as a single integer (or 0x) sRGB encoded color, i.e. White is either the integer 16777216 or the hex 0xffffff. A float is returned with a positive or negative value. Negative values mean light text and a dark background, positive values mean dark text and a light background. 60.0, or -60.0 is a contrast "sort of like" the old WCAG 2's 4.5:1. NOTE: the total range is now less than ± 110, so output can be rounded to a signed INT but DO NOT output an absolute value - light text on dark BG should return a negative number.
 
 ### IMPORTANT: Do Not Mix Up Text and Background inputs.
-**APCA is polarity dependent, and correct results require that the BG and TXT are processed via the correct inputs.**
+**APCA is polarity dependent, and correct results require that the TXT and BG are processed via the correct inputs.**
 
-**PARAMETER CHANGE:** The order in parameters is APCAcontrast(text,background) — THIS IS THE REVERSE OF THE PREVIOUS VERSIONS. This is because there will be additional background colors in a near future version, such as` APCAcontrast(text, BGlocal, BGsurround, BGpage...) ` and the intention is to follow visible layer order, as a stack from top to bottom.
+**PARAMETER CHANGE for 0.98G:** The order in parameters is APCAcontrast(text,background) — THIS IS THE REVERSE OF THE PREVIOUS VERSIONS. This is because there will be additional background colors in a near future version, such as` APCAcontrast(text, BGlocal, BGsurround, BGpage...) ` and the intention is to follow visible layer order, as a stack from top to bottom.
 
 -----
 
