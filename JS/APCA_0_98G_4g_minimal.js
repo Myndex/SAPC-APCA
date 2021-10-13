@@ -36,6 +36,7 @@
 /////   • Bruce Bailey of USAccessBoard for his encouragement, ideas, & feedback
 /////   • Chris Lilley of W3 for his early and continued comments & feedback.
 /////   • Chris Loiselle of Oracle for getting us back on track in a pandemic
+/////   • The many volunteer test subjects for participating in the studies.
 /////   • Principal research conducted at Myndex by A.Somers.
 /////
 ////////////////////////////////////////////////////////////////////////////////
@@ -75,8 +76,39 @@
 /////
 ////////////////////////////////////////////////////////////////////////////////
 
+//////////   APCA 0.98 G USAGE  ////////////////////////////////////////////////
+///
+///  The API for "APCA_0_98G_4g_minimal" is trivially simple.
+///  Send text and background sRGB numeric values to the sRGBtoY() function,
+///  and send the resulting text-Y and background-Y to the APCAcontrast function,
+///  it returns a signed float with the numeric Lc contrast result.
+///  
+///  The two inputs are TEXT color and BACKGROUND color in that order.
+///  Each must be a numeric NOT a string, as this simple version has
+///  no string parsing utilities. EXAMPLE:
+///  ________________________________________________________________________
+///
+///     txtColor = 0x123456; // color of the text, as will be rendered
+///     bgColor  = 0xabcdef; // color for the background, as will be rendered
+///
+///     contrastLc = APCAcontrast( sRGBtoY(txtColor) , sRGBtoY(bgColor) );
+///  ________________________________________________________________________
+///
+///                  **********   QUICK START   **********
+///
+///  Each color must be a 24bit color (8 bit per channel) as a single integer
+///  (or 0x) sRGB encoded color, i.e. White is either the integer 16777216 or
+///  the hex 0xffffff. A float is returned with a positive or negative value.
+///  Negative values mean light text and a dark background, positive values
+///  mean dark text and a light background. 60.0, or -60.0 is a contrast
+///  "sort of like" the old WCAG 2's 4.5:1. NOTE: the total range is now less
+///  than ± 110, so output can be rounded to a signed INT but DO NOT output
+///  an absolute value - light text on dark BG should return a negative number.
+///
+///     *****  IMPORTANT: Do Not Mix Up Text and Background inputs.  *****
+///     ****************   APCA is polarity dependent!   *****************
+///  
 //////////   APCA 0.98 G - 4g Constants   //////////////////////////////////////
-
 
 const mainTRC = 2.4; // 2.4 exponent emulates actual monitor perception
     
@@ -99,8 +131,7 @@ const blkThrs = 0.022,
       loClip = 0.001,
       deltaYmin = 0.0005;
 
-
-////////// ƒ sRGBtoY() ///////////////////////////////////////////////
+//////////  ƒ sRGBtoY()  ///////////////////////////////////////////////////////
 
 function sRGBtoY (sRGBcolor) {
                   // send 8 bit-per-channel integer sRGB (0xFFFFFF)
@@ -118,7 +149,7 @@ function sRGBtoY (sRGBcolor) {
 }
 
 
-////////// ƒ APCAcontrast() //////////////////////////////////////////
+//////////  ƒ APCAcontrast()  //////////////////////////////////////////////////
 
 function APCAcontrast (txtY,bgY) {
                          // send linear Y (luminance) for text and background.
@@ -183,4 +214,6 @@ function APCAcontrast (txtY,bgY) {
   
 } // End APCAcontrast()
 
-////////////////////////////////////////////////////////////////////////////////
+////\                             //////////////////////////////////////////////
+/////\  END 0.98G4g APCA BLOCK   //////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
