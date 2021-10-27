@@ -348,9 +348,14 @@ These exercise all the important constants.
         * the standard observers for visual acuity (VA) with best correction, are grouped as: 
             * 20/12 to 20/20: near-perfect human acuity 
             * 20/20 to 20/40: normal impairment (can drive non-commercial)
-            * 20/40 to 20/70: substantial impairment (cannot drive)
-            * 20/80 to 20/200: Low Vision / disabling impairment
-            * 20/200 and above: legal definition of blind
+            * 20/40 to 20/63: substantial impairment (cannot drive)
+            * 20/70 to 20/125+1: Low Vision / disabling impairment
+            * Unable to descern ANY character on the 20/100 line: legal definition of blind
+                * Note the US SSA allows for acuity testing on log charts which unlike Snellen, have lines between 20/100 and 20/200. The SSA defines statutory blind as unable to descern any character on the 20/100 line, so 20/125+1 (able to see one character on the 20/100 line) does not qualify as statuory blind.
+        * The standard observers for visual field (VF) using a III4e stimulus are
+            * Greater than 55° temporal and 35° nasal perimeter both eyes (near normal field)
+            * Less than 55° temporal and 35° nasal perimeter in either eye (reduced field)
+            * Less than 20° perimeter in both eyes, or a -22 dB MD (statutory blind)
         * The standard observers for contrast sensitivity (CSF) are
             * Pelli Robson 2 (normal, 1% threshold)  
             * Pelli Robson 1.5 (impaired, 3% threshold)  
@@ -371,7 +376,7 @@ These exercise all the important constants.
 
 
 ### SAPC Standard Observer Monitor and Environment
-this is the SAPC standard observer model. In particular, some further research and empirical studies that sample how users tend to set their monitor's brightness/contrast and the effect on the resultant display gamma/TRC are needed.
+This is the SAPC standard observer model. This is based on the currently available research and data. We are developing studies to collect additional data, in particular, sampling user settings of their monitor's brightness/contrast and the effect on the resultant display characteristics, and differences in manufacturer implementation of ambient light compensation.
 
 _**The standard environmental model shall comprise**_
 * A desktop sRGB LCD screen that is
@@ -380,9 +385,12 @@ _**The standard environmental model shall comprise**_
 * Monitor shall be calibrated using a hardware calibrator to:
   * Max White (#FFF) Luminance no less than 160cd/m^2 
   * Max White Luminance no more than 240cd/m^2 
-  * Black level target of 1 cd/m^2, and no more than 2 cd/m^2
-  * Preferred gamma target of 2.4
+  * Black level (#000) target of 1 cd/m^2 or less, and no more than 2 cd/m^2
+  * Preferred gamma target of 2.2, or the sRGB/displayP3 piecewise TRC
+     * This is for an actualphysical display. Math models may have a gamma add to compensate for the HVS gamma.
+     * This gamma based and the white level to be adjusted in accordance with the ambient levels shown below.
      * An alternate gamma curve may be used for specific testing provided all results so specify.
+     * HDR displays are not included in this specification.
 * Monitor's surrounding environmental conditions
   * Background behind the monitor and within the users field of view should be neutral grey or white, at a luminance that is 20% of the monitor's maximum white.
   * Ambient light of approximately 200 lux.
