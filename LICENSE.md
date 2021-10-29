@@ -26,10 +26,10 @@ The W3 license DOES NOT apply to any other files in this repositiory, most of wh
 ## DISCLAIMER
 
 _DISCLAIMER AND LIMITATIONS OF USE:_     
-APCA is an embodiment of certain suprathreshold contrast
+W3C_APCA is an embodiment of certain suprathreshold contrast
 prediction technologies and it is licensed to the W3 on a
 limited basis for use in certain specific accessibility
-guidelines for web content only. APCA may be used for 
+guidelines for web content only. W3C_APCA may be used for 
 predicting contrast for web content use without royalty.
 
 Said license excludes other use cases
@@ -39,11 +39,11 @@ aerospace, transportation, military applications,
 and uses which are not specific to web-based content
 presented on self-illuminated displays or devices.
 
-Any APCA files in this repositiory may be used or incorporated only in tools for web-based content or web related content, under the AGPL v3 license.
+Any W3C_APCA files in this repositiory may be used or incorporated only in tools for web-based content or web related content.
 
 ### Licensing information in the head of each document.
 
-All Other Files _in this Repository_ that do not have "APCA" specifically in the filename, if they exist, may have different license terms specified in the header of said document. Files, code, or other assets related to SAPC, APCA, Perceptex, or Myndex Perception Research, that are not _currently_ in this repository are not available for license or use without a written agreement.
+All Other Files _in this Repository_ that do not have "W3C" specifically in the filename, if they exist, may have different license terms specified in the header of said document. Files, code, or other assets related to SAPC, APCA, Perceptex, or Myndex Perception Research, that are not _currently_ in this repository are not available for license or use without a written agreement.
 
 ## WITHDRAWN ASSETS
 As some code herein is early beta, and there is a clear interest to prevent obsolete verions from propogating, license for use is revoked when any such asset is removed from this repositiory. Please replace any stale assets with the revised assets herein as soon as practical.
