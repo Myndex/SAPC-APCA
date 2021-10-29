@@ -7,20 +7,20 @@ The Majority of files currently in this repository that specifically have "APCA"
 
 ______________
 
-## APCA FILES:
+##  W3 LICENSE FOR W3 NAMED FILES ONLY:
 
-All Files in this Repository that have "**APCA**" in the filename are licensed to the W3.org under their cooperative license agreement(s):
+All Files in this Repository that have "**W3C**" in the filename are licensed to the W3.org under their cooperative license agreement(s):
 
-- Reports with "**APCA**" in the filename in this Repository are licensed under the
+- Reports with "**W3C**" in the filename in this Repository are licensed under the
 [W3C Software and Document License](http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document).
 
-- Contributions to Specifications with "**APCA**" in the filename are made under the
+- Contributions to Specifications with "**W3C**" in the filename are made under the
 [W3C CLA](https://www.w3.org/community/about/agreements/cla/).
 
-- Contributions to Test Suites with "**APCA**" in the filename are made under the
+- Contributions to Test Suites with "**W3C**" in the filename are made under the
 [W3C 3-clause BSD License](https://www.w3.org/Consortium/Legal/2008/03-bsd-license.html)
 
-The W3 liswcense DOES NOT apply to any other files in this repositiory, most of which are licensed under AGPU v3 License:
+The W3 license DOES NOT apply to any other files in this repositiory, most of which are licensed under the AGPU v3 License:
 
 -----
 ## DISCLAIMER
