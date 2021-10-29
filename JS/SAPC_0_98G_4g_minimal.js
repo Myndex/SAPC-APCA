@@ -1,11 +1,11 @@
 ///////////////////////////////////////////////////////////////////////////////
 /////
-/////    APCA - Advanced Perceptual Contrast Algorithm
+/////    SAPC APCA - Advanced Perceptual Contrast Algorithm
 /////           Beta 0.98G-4g • contrast function only
 /////           DIST: GH SE Revision date: Oct 1, 2021
 /////    Function to parse color values and determine Lc contrast
 /////    Copyright © 2019-2021 by Andrew Somers. All Rights Reserved.
-/////    LICENSE: APCA version to be licensed under W3 cooperative agrmnt.
+/////    LICENSE:  AGPU v3
 /////    CONTACT: For SAPC/APCA Please use the ISSUES tab at:
 /////    https://github.com/Myndex/SAPC-APCA/
 /////
