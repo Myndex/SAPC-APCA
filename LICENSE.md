@@ -3,7 +3,7 @@
 # — LICENSE —
 
 ### The Short Summary:
-The Majority of files currently in this repository that specifically have "APCA" in the filename are licensed to the W3 under their cooperative agreement for use with web-based content only, and not for any other use.
+The Majority of files currently in this repository that specifically have "W3C" in the filename are licensed to the W3 under their cooperative agreement for use with web-based content only, and not for any other use.
 
 ______________
 
