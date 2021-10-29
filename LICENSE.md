@@ -20,6 +20,8 @@ All Files in this Repository that have "**APCA**" in the filename are licensed t
 - Contributions to Test Suites with "**APCA**" in the filename are made under the
 [W3C 3-clause BSD License](https://www.w3.org/Consortium/Legal/2008/03-bsd-license.html)
 
+The W3 liswcense DOES NOT apply to any other files in this repositiory, most of which are licensed under AGPU v3 License:
+
 -----
 ## DISCLAIMER
 
