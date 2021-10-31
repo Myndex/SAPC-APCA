@@ -55,12 +55,34 @@ _Inventor of SAPC and APCA_
 See the [JS Documentation \(the ReadMe.md in the JS folder\)](JS/ReadMe.md) for information on using the API, which file is best suited for your needs, and a QuickStart tutorial.
 
 ## Important: 
-Files that are intended for supporting the Silver/WCAG 3 conformance model all have **APCA** in the file name. Files with SAPC in the name are part of ongoing research and should _NOT_ be used for developing conformance tools.
+Files that are intended for supporting the Silver/WCAG 3 conformance model all have **W3C** or **WCAG** in the file name.
+
+Files with **RESEARCH** or **DEV** in the name are part of ongoing research and should _NOT_ be used for developing conformance tools, and further are not licensed for use in distributed software, and should be considered experimental only.
+
+### THIS REPOSITORY IS THE ONLY CANONICAL SOURCE OF APPROVED APCA CODE.
+If you are integrating code, please check here for official changes. This code is considered beta, and will change periodically.
+
+There are some code listings on some legacy working drafts of Silver aka WCAG 3. These should not be used and are not compatible with the current or future versions. 
 
 ### Change Notices:
 [ImportantChangeNotices.md]: ImportantChangeNotices.md
 
 If you have been using any files from this repository, be sure to read the file "[ImportantChangeNotices.md]" for critical updates that may affect results.
+
+**Expected changes in a near future version:**
+- Change back to a standard linearization method
+    - APCA will then take pre-linearized luminance
+    - a param of the display color space also to indicate pre-shape
+    - this is being done to facilitate easy changing of multiple color spaces
+- New "WCAG 2.3+" mode - displays a 1.4.3 _compatible_ pass/fail indicator
+    - this will _NOT_ allow the false passes, so contrast will be improved across the board
+    - this will not correct all the false fails as that would not conform to WCAG 2.
+    - this mode will not be as design flexible as the native APCA
+    - font table will have a basic breakpoint, but extended to all weights
+- Replace the font lookup tables with a parameterized algorithim
+    - lookup table may still be used for defined languages
+- New improved, and possibly integrated, reverse contrast (target value)
+
 
 -----
 
@@ -84,7 +106,6 @@ APCA is a set of contrast assessment methods for predicting perceived contrast b
 Soon to be discussed
 
 ----- 
-
 ### [LIVE VERSION][APCAsite]
 There is a working version with examples and reference material on [the APCA site][APCAsite]
 
@@ -96,14 +117,12 @@ NOTE: **The APCA site is using the current G constants**, if you want to compare
 [APCAsite]: https://www.myndex.com/APCA/
 
 -----
-
 ## IMPLEMENTATIONS
 The libraries are plain vanilla Javascript. Planned adds include PHP, <s>OpenOffice Calc (spreadsheet)</s> DONE!, and Python, as those cover the most likely use cases. Many of the available inputs to the functions can remain at their defaults, though these extra inputs can be used in more specialized situations (such as creating content specifically for daylight/outdoors, or specifically for dark nights, etc.). 
 
 A plain language walkthrough, LaTeX math, and most basic JS are below:
 
 -----
-
 ### Font Use Lookup Table
 
 Font lookup tables are under evaluation. Will post fresh one soon! (In the meantime, you can use LUT version d12e)
@@ -437,18 +456,30 @@ The author's website includes further background, including select experimental 
 -----
 ## DISCLAIMER
 
-_DISCLAIMER AND LIMITATIONS OF USE:_     
-APCA is an embodiment of certain suprathreshold contrast
-prediction technologies and it is licensed to the W3 on a
-limited basis for use in certain specific accessibility
-guidelines for web content only. APCA may be used for 
-predicting contrast for web content use without royalty.
+_DISCLAIMER AND LIMITATIONS OF USE:_      
+APCA is an embodiment of certain suprathreshold contrast        
+prediction technologies. Versions marked as licensed to         
+the W3 are strictly limited to web content use only for        
+supporting certain accessibility guidelines.
 
-Said license excludes other use cases
-not related to web content. Prohibited uses include
-medical, clinical evaluation, human safety related,
-aerospace, transportation, military applications, 
-and uses which are not specific to web-based content
+APCA code listed here is provided as is, with no         
+warrantees expressed nor implied. We accept no         
+liability for any use or misuse of the code.         
+Suitability of  purpose resides with the         
+integrator or end user.
+
+Commercial use is prohibited without a written         
+and signed commercial license agreement.
+
+Non-commercial use is permitted only for         
+predicting contrast for web content, no         
+other use case is authorized.
+
+License excludes other use cases not related to web         
+content. Prohibited uses include and are not limited         
+to medical, clinical evaluation, human safety related,         
+aerospace, transportation, military applications, and         
+uses which are not specific to web-based content         
 presented on self-illuminated displays or devices.
 
 -----
