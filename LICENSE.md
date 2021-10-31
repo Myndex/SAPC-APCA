@@ -23,7 +23,7 @@ All Files in this Repository that have "**W3C**" in the filename are licensed to
 The W3 license DOES NOT apply to any other files in this repositiory, most of which are licensed under the AGPU v3 License:
 
 -----
-## DISCLAIMER
+## W3C VERSION DISCLAIMER
 
 _DISCLAIMER AND LIMITATIONS OF USE:_     
 W3C_APCA is an embodiment of certain suprathreshold contrast
@@ -40,6 +40,36 @@ and uses which are not specific to web-based content
 presented on self-illuminated displays or devices.
 
 Any W3C_APCA files in this repositiory may be used or incorporated only in tools for web-based content or web related content.
+
+
+## GENERAL DISCLAIMER
+
+_DISCLAIMER AND LIMITATIONS OF USE:_      
+APCA is an embodiment of certain suprathreshold contrast        
+prediction technologies. Versions marked as licensed to         
+the W3 are strictly limited to web content use only for        
+supporting certain accessibility guidelines.
+
+APCA code listed here is provided as is, with no         
+warrantees expressed nor implied. We accept no         
+liability for any use or misuse of the code.         
+Suitability of  purpose resides with the         
+integrator or end user.
+
+Commercial use is prohibited without a written         
+and signed commercial license agreement.
+
+Non-commercial use is permitted only for         
+predicting contrast for web content, no         
+other use case is authorized.
+
+License excludes other use cases not related to web         
+content. Prohibited uses include and are not limited         
+to medical, clinical evaluation, human safety related,         
+aerospace, transportation, military applications, and         
+uses which are not specific to web-based content         
+presented on self-illuminated displays or devices.
+
 
 ### Licensing information in the head of each document.
 
