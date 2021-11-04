@@ -1,4 +1,28 @@
 # _THE REVOLUTION WILL BE READABLE™_
+## APCA in a nutshell
+
+- APCA was developed independently as a part of the future WCAG 3 standard.
+    - APCA uses modern vision science and is perceptually uniform.
+    - Studies demonstrate that APCA for WCAG 3 works much better then WCAG 2.x.
+    - APCA can be used today, however, WCAG 3 is not the standard yet, and APCA it is _not_ backwards compatible with WCAG 2.x.
+        - This is mainly an issue if you have a law to follow that demands WCAG 2 AA as a web standard.
+        - Unfortunately WCAG 2 is substantially incorrect in certain areas of perception due to its basis on older standards and technologies. It is due to this that APCA was developed as the replacement for use in WCAG 3, but only partial backwards compatibility is possible.
+- The discussion tab is open here if you have questions or comments.
+- This repo has the basic APCA code, which returns a perceptually uniform contrast value.
+- This iteration has been stable since February, future iterations of course planned.
+    - While it is still pre-release beta, the general functioning is demonstratively useful.
+    - This version is set for sRGB, a next iteration will change the inputs to allow any additive colorspace.
+ - You _CAN_ use APCA simply to evaluate a perceived contrast (such as Lc75). But ALSO:
+     - There are a variety of lookup tables that can be used to relate a contrast to a font size and weight.
+     - Rounding the contrast to an integer is allowed, and interpolation can be used with a lookup table.
+ - For simplicity, you can also use the "simple key levels" method (Lc 45, 60, 75), which compares to WCAG 2 contrast (with one very light color) as:
+     - Lc 45 is "sort of" like 3:1
+     - Lc 60 is "sort of" like 4.5:1
+     - Lc 75 is "sort of" like 7:1
+ - Unlike WCAG 2, APCA is polarity aware, so the BG and TEXT colors _must_ be sent to the correct inputs.
+
+Please feel free to use the discussion area for any questions or comments.
+
 
 ## APCA Documentation and Quick Start
 See the [JS Documentation \(the ReadMe.md in the JS folder\)](JS/ReadMe.md) for information on using the API, which file is best suited for your needs, and a QuickStart tutorial.
