@@ -1,5 +1,5 @@
-# _THE REVOLUTION WILL BE READABLE™_
-## APCA in a nutshell
+# APCA _THE REVOLUTION WILL BE READABLE™_
+## Advanced Perceptual Contrast Algorithm in a nutshell
 
 - APCA was developed independently as a part of the future WCAG 3 standard.
     - APCA uses modern vision science and is perceptually uniform.
