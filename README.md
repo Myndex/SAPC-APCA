@@ -159,17 +159,17 @@ Font lookup tables are under evaluation. Will post fresh one soon! (In the meant
 ### APCA Math (new 0.98G 4g constants)
 
 APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math assumes the use of the web standard sRGB colorspace.
-
-    0.98G-4g constants:
+```javascript
+ 0.98G-4g constants:
     
-    Exponents:	mainTRC: 2.4	normBG: 0.56	normTXT: 0.57	revTXT: 0.62	revBG: 0.65
+  Exponents: mainTRC: 2.4	normBG: 0.56	        normTXT: 0.57	revTXT: 0.62	revBG: 0.65
     
-    Clamps:	blkThrs: 0.022	blkClmp: 1.414	loClip: 0.001	deltaYmin: 0.0005
+  Clamps:    blkThrs: 0.022	blkClmp: 1.414	        loClip: 0.001	deltaYmin: 0.0005
     
-    sRGB:       sRco: 0.2126729    sGco: 0.7151522    sBco: 0.0721750
+  sRGB:      sRco: 0.2126729    sGco: 0.7151522         sBco: 0.0721750
     
-    Scalers:	Scale: 1.14	loBoWthresh: 0.035991	loBoWfactor: 27.7847239587675	loBoWoffset: 0.027	
-    
+  Scalers:   Scale: 1.14	loBoWthresh: 0.035991	loBoWfactor: 27.7847239587675	loBoWoffset: 0.027	
+```    
 
 ### The Plain English Steps Are:
 
@@ -210,7 +210,7 @@ Basic APCA Math in LaTeX
 ## Basic Javascript:
 In lieu of a pseudocode, here's the most basic JS version:
 
-```
+```javascript
 ///////////////////////////////////////////////////////////////////////////////
 /////
 /////    APCA - Advanced Perceptual Contrast Algorithm
@@ -360,7 +360,7 @@ function APCAcontrast (txtY,bgY) {
 
 If you've implemented the code and want a quick sanity check, Here are some keystone checks with no rounding. The first color is **TEXT** and the second color is **BACKGROUND**:
 
-```
+```javascript
 Test Values for the 0.98G 4g constants, normal and reverse float values for each color pair.
 First number is TEXT second number is BACKGROUND.
 
