@@ -19,7 +19,7 @@ The API for "APCA_0_98G_4g_minimal" is trivially simple. Send text and backgroun
 
 The two inputs are TEXT color and BACKGROUND color in that order. Each must be a numeric NOT a string, as this simple version has no string parsing utilities. 
 ### EXAMPLE:
-```
+```js
      txtColor = 0x123456; // numeric color of the text, 0xRRGGBB, as will be rendered
      bgColor  = 0xabcdef; // numberic color for the background, as will be rendered
 
