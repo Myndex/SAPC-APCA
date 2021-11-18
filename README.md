@@ -134,13 +134,20 @@ Soon to be discussed
 ### [LIVE VERSION][APCAsite]
 There is a working version with examples and reference material on [the APCA site][APCAsite]
 
-NOTE: **The APCA site is using the current G constants**, if you want to compare the current to the old, you can add the word "legacy" to the URL to see legacy mode, which is the 2019/2020 version of APCA.
+-----
+### Font Use Lookup Table
+
+Latest Lookup Table: November 17 2021
 
 <img width="639" alt="Screen Shot 2021-11-18 at 2 26 32 AM" src="https://user-images.githubusercontent.com/42009457/142399918-60377fdf-39b9-4b80-b75a-01b6e61862dd.png">
 
 <img width="596" alt="Screen Shot 2021-11-18 at 2 33 34 AM" src="https://user-images.githubusercontent.com/42009457/142400008-101f5891-1cff-4d3a-b689-4679fc53cb53.png">
 
+-----
 
+NOTE: **The APCA site is using the current G 4g constants**, if you want to compare the current to the old, you can add the word "legacy" to the URL to see legacy mode, which is the 2019/2020 version of APCA.
+
+[![](images/APCAFontSelect.png)][APCAsite]
 
 [APCAsite]: https://www.myndex.com/APCA/
 
@@ -149,16 +156,6 @@ NOTE: **The APCA site is using the current G constants**, if you want to compare
 The libraries are plain vanilla Javascript. Planned adds include PHP, <s>OpenOffice Calc (spreadsheet)</s> DONE!, and Python, as those cover the most likely use cases. Many of the available inputs to the functions can remain at their defaults, though these extra inputs can be used in more specialized situations (such as creating content specifically for daylight/outdoors, or specifically for dark nights, etc.). 
 
 A plain language walkthrough, LaTeX math, and most basic JS are below:
-
------
-### Font Use Lookup Table
-
-Font lookup tables are under evaluation. Will post fresh one soon! (In the meantime, you can use LUT version d12e)
-
-[![](images/APCAtable98G4g.png)]
-
-[![](images/APCAtable98G4glegend.png)]
-
 
 ### APCA Math (new 0.98G 4g constants)
 
@@ -207,7 +204,7 @@ APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math
 
 Basic APCA Math in LaTeX
 ---------------
-0.98G-4g (coming soon)
+0.98G-4g
 
 ![](images/APCA098G4g.svg)
 
@@ -386,6 +383,7 @@ First number is TEXT second number is BACKGROUND.
 
 These exercise all the important constants.
 
+-----
 -----
 ## Miscellaneous
 
