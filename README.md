@@ -30,7 +30,8 @@ See the [JS Documentation \(the ReadMe.md in the JS folder\)](JS/ReadMe.md) for 
 See [WHY APCA](WhyAPCA.md) for a brief explaination of the important differences of APCA for WCAG 3 vs the old WCAG 2.x/1.4.3 contrast guidelines.
 
 ## SAPC/APCA CURRENT VERSION: 0.98G Constants: 4g
-
+### November 17, 2021
+Please see the new font lookup table (on this page, below)
 ### October 1, 2021
 The base APCA with the 0.98G-4g constants is in the JS folder. 
 
@@ -135,8 +136,11 @@ There is a working version with examples and reference material on [the APCA sit
 
 NOTE: **The APCA site is using the current G constants**, if you want to compare the current to the old, you can add the word "legacy" to the URL to see legacy mode, which is the 2019/2020 version of APCA.
 
+<img width="639" alt="Screen Shot 2021-11-18 at 2 26 32 AM" src="https://user-images.githubusercontent.com/42009457/142399918-60377fdf-39b9-4b80-b75a-01b6e61862dd.png">
 
-[![](images/APCAFontSelect.png)][APCAsite]
+<img width="596" alt="Screen Shot 2021-11-18 at 2 33 34 AM" src="https://user-images.githubusercontent.com/42009457/142400008-101f5891-1cff-4d3a-b689-4679fc53cb53.png">
+
+
 
 [APCAsite]: https://www.myndex.com/APCA/
 
