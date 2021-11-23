@@ -1,5 +1,5 @@
 <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="600px" height="1000px" style="vertical-align: -1100px; margin-bottom: -12px; background-color:#e8e0d0;" viewBox="0 -28849.1 34119 57195.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
-<title id="MathJax-SVG-1-Title">SAPC/APCA Contrast Prediction Equation 0.98G-4g-b2</title>
+<title id="MathJax-SVG-1-Title">SAPC/APCA Contrast Prediction Equation 0.0.98G-4g-b2</title>
 
 <defs aria-hidden="true">
 <path stroke-width="1" id="E1-MJMATHI-53" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"></path>
@@ -397,9 +397,12 @@
 <g transform="translate(13905,0)">
  <use xlink:href="#E1-MJMAIN-30"></use>
  <use xlink:href="#E1-MJMAIN-2E" x="500" y="0"></use>
- <use xlink:href="#E1-MJMAIN-39" x="779" y="0"></use>
- <use xlink:href="#E1-MJMAIN-38" x="1279" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-30" x="779" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-2E" x="1279" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-39" x="1558" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-38" x="2058" y="0"></use>
 </g>
+<g transform="translate(779,0)"> 
  <use xlink:href="#E1-MJMATHI-47" x="15685" y="0"></use>
  <use xlink:href="#E1-MJMAIN-2212" x="16693" y="0"></use>
  <use xlink:href="#E1-MJMAIN-34" x="17694" y="0"></use>
@@ -408,6 +411,7 @@
  <use xlink:href="#E1-MJMATHI-62" x="19898" y="0"></use>
  <use xlink:href="#E1-MJMAIN-32" x="20327" y="0"></use>
 </g>
+</g> 
 <g transform="translate(0,25294)">
 <g transform="translate(250,0)">
  <use xlink:href="#E1-MJMATHI-53" x="0" y="0"></use>
