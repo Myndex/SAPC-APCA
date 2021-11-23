@@ -1,8 +1,11 @@
+November 23, 2021
+Updated font LUT, and adding a **0.** for semantic versioning (0.0.98G)
+
 ### October 1, 2021:
-0.98G-4g is the current version. A minimal APCA version is in the JS folder.
+0.0.98G-4g is the current version. A minimal APCA version is in the JS folder.
 
 ### As of October 1, 2021 01:00 GMT
-# CURRENT VERSION: Beta 0.98G_g4
+# CURRENT VERSION: Beta 0.0.98G_g4
 
 **IMPORTANT:** If you are making a tool to predict contrast for the new W3 standards for Visual Contrast, ***use only the files named APCA.***
 
@@ -46,12 +49,12 @@ Substantial code changes, including math and scaling. Literally all constants ha
 #### Change Notice November 18, 2020 08:00 GMT
 IMPORTANT: Major reworking of the input objects, adding new methods including a complete CIE suite, piecewise sRGB processing, and much more. This file is _INCOMPATIBLE WITH ALL PREVIOUS VERSIONS_ due to new features, naming, and organizing of properties and methods.
 
-#### Change Notice October 22, 2020  0.97h2
+#### Change Notice October 22, 2020  0.0.97h2
 Only applies to the JS files with the input parsing.
 Fixed the "Zero Hex Bug" thanks to Mitch @mfishma issue #5 for pointing it out! 
 
 
-#### Change Notice October 21, 2020  0.97h
+#### Change Notice October 21, 2020  0.0.97h
 **Changes in the .JS files** mainly centered around adding new methods and also adding new parsing, including for alpha channels.
 
 New input feature: you only need to enter 2 hex digits to get a color, and it auto updates as you add more - 3,4,6,8 - if wen you enter two, such as e9, you are returned #e9e9e9. helpful for quickly toggling through greys.
@@ -62,7 +65,7 @@ New color object data returns include L* and methods for returning alpha data.
 
 Remember there's a lot of useful JS in the HTML documents as well, and the latest in terms of the new multi-level scoring model. The font samples section is subtantially cleaned up and revised to reflect the latest guidlines.
 
-#### Change Notice October 12, 2020  0.97g
+#### Change Notice October 12, 2020  0.0.97g
 **Fixed constant** for Green coefficient — should be: `const Gco = 0.7152;` and not 0.7156 (lingering typo does not materially affect results but was nevertheless wrong.)
 
 ALSO: Changed all power functions from the shorthand `**` to the more standard `Math.pow()` for better compatibility.
