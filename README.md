@@ -29,16 +29,18 @@ See the [JS Documentation \(the ReadMe.md in the JS folder\)](JS/ReadMe.md) for 
 
 See [WHY APCA](WhyAPCA.md) for a brief explaination of the important differences of APCA for WCAG 3 vs the old WCAG 2.x/1.4.3 contrast guidelines.
 
-## SAPC/APCA CURRENT VERSION: 0.98G Constants: 4g
+## SAPC/APCA CURRENT VERSION: 0.0.98G-4g-lut3 Constants: 4g
+### November 23, 2021
+Adopting semantic versioning, adding a first 0. so the current version is **0.0.98G**
 ### November 17, 2021
-Please see the new font lookup table (on this page, below)
+Please see the new font lookup table (LUT3) (on this page, below)
 ### October 1, 2021
-The base APCA with the 0.98G-4g constants is in the JS folder. 
+The base APCA with the 0.0.98G-4g constants is in the JS folder. 
 
 JS File: APCA_0_98G_4g_minimal.js
 
 ### NEW CONSTANTS and NEW MATH:
-(October 1, 2021) the 0.98G-4g math and constants have been in use now for months, and by all accounts are working well as expected. The revised code is available in the JS folder. The present version improves tracking of contrast perception. (Doubling or halving the L<sup>c</sup> value results in a perceived doubling or halving of contrast.) Also, smoother results for low contrasts and dark color pairs.
+(October 1, 2021) the 0.0.98G-4g math and constants have been in use now for months, and by all accounts are working well as expected. The revised code is available in the JS folder. The present version improves tracking of contrast perception. (Doubling or halving the L<sup>c</sup> value results in a perceived doubling or halving of contrast.) Also, smoother results for low contrasts and dark color pairs.
 
 ### SAPC and APCA demo tools are live to play with.
 
@@ -157,7 +159,7 @@ The libraries are plain vanilla Javascript. Planned adds include PHP, <s>OpenOff
 
 A plain language walkthrough, LaTeX math, and most basic JS are below:
 
-### APCA Math (new 0.98G 4g constants)
+### APCA Math (new 0.0.98G 4g constants)
 
 APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math assumes the use of the web standard sRGB colorspace.
 ```javascript
@@ -204,7 +206,7 @@ APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math
 
 Basic APCA Math in LaTeX
 ---------------
-0.98G-4g
+0.0.98G-4g
 
 ![](images/APCA098G4g.svg)
 
@@ -216,7 +218,7 @@ In lieu of a pseudocode, here's the most basic JS version:
 ///////////////////////////////////////////////////////////////////////////////
 /////
 /////    APCA - Advanced Perceptual Contrast Algorithm
-/////           Beta 0.98G-4g • contrast function only
+/////           Beta 0.0.98G-4g • contrast function only
 /////           DIST: GH SE Revision date: Oct 1, 2021
 /////    Function to parse color values and determine Lc contrast
 /////    Copyright © 2019-2021 by Andrew Somers. All Rights Reserved.
@@ -250,7 +252,7 @@ In lieu of a pseudocode, here's the most basic JS version:
 /////
 ////////////////////////////////////////////////////////////////////////////////
 
-//////////   APCA 0.98 G - 4g Constants   //////////////////////////////////////
+//////////   APCA 0.0.98 G - 4g Constants   ////////////////////////////////////
 
 
 const mainTRC = 2.4; // 2.4 exponent emulates actual monitor perception
@@ -363,10 +365,10 @@ function APCAcontrast (txtY,bgY) {
 If you've implemented the code and want a quick sanity check, Here are some keystone checks with no rounding. The first color is **TEXT** and the second color is **BACKGROUND**:
 
 ```text
-Test Values for the 0.98G 4g constants, normal and reverse float values for each color pair.
+Test Values for the 0.0.98G 4g constants, normal and reverse float values for each color pair.
 First number is TEXT second number is BACKGROUND.
 
-    TEXT vs BKGND •  EXPECTED RESULT for 0.98 G-4g
+    TEXT vs BKGND •  EXPECTED RESULT for 0.0.98 G-4g
 
     #888 vs #fff  •  63.056469930209424
     #fff vs #888  • -68.54146436644962  
