@@ -1,7 +1,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 /////
 /////    SAPC APCA - Advanced Perceptual Contrast Algorithm
-/////           Beta 0.98G-4g • contrast function only
+/////           Beta 0.0.98G-4g • contrast function only
 /////           DIST: GH SE Revision date: Oct 1, 2021
 /////    Function to parse color values and determine Lc contrast
 /////    Copyright © 2019-2021 by Andrew Somers. All Rights Reserved.
@@ -45,7 +45,7 @@
 /////
 /////   *****  SAPC BLOCK  *****
 /////
-/////   For Evaluations, refer to this as: SAPC-8, v0.98 G-series constant 4g
+/////   For Evaluations, refer to this as: SAPC-8, v0.0.98 G-series constant 4g
 /////            SAPC • S-LUV Advanced Predictive Color
 /////
 /////   SIMPLE VERSION — Only the basic APCA contrast predictor.
@@ -76,9 +76,9 @@
 /////
 ////////////////////////////////////////////////////////////////////////////////
 
-//////////   APCA 0.98 G USAGE  ////////////////////////////////////////////////
+//////////   APCA 0.0.98 G USAGE  //////////////////////////////////////////////
 ///
-///  The API for "APCA_0_98G_4g_minimal" is trivially simple.
+///  The API for "APCA_0_0_98G_4g_minimal" is trivially simple.
 ///  Send text and background sRGB numeric values to the sRGBtoY() function,
 ///  and send the resulting text-Y and background-Y to the APCAcontrast function,
 ///  it returns a signed float with the numeric Lc contrast result.
@@ -108,7 +108,7 @@
 ///     *****  IMPORTANT: Do Not Mix Up Text and Background inputs.  *****
 ///     ****************   APCA is polarity dependent!   *****************
 ///  
-//////////   APCA 0.98 G - 4g Constants   //////////////////////////////////////
+//////////   APCA 0.0.98 G - 4g Constants   ////////////////////////////////////
 
 const mainTRC = 2.4; // 2.4 exponent emulates actual monitor perception
     
