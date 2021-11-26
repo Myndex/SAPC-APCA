@@ -1,6 +1,12 @@
 # Compiled class file
 *.class
 
+# DEPRECATED
+DEPRECIATED/
+DEPRECATED/
+OBSOLETE/
+PendingDelete/
+
 # macOS DS file
 .DS_Store
 
