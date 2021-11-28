@@ -1,4 +1,4 @@
-NOTICE: THIS TABLE IS DEPRECIATED. LOOK FOR THE NEW G-4g TABLE.
+NOTICE: THIS TABLE IS DEPRECATED. LOOK FOR THE NEW G-4g TABLE (SOON).
 
 ////////////////////////////////////////////////////////////////////////////////
 ///// TAB DELIMITED TABLE //////////////////////////////////////////////////////
@@ -26,7 +26,7 @@ Size			APCA Contrast Value (Lc)
 
 ////////////////////////////////////////////////////////////////////////////////
 
-NOTICE: THIS TABLE IS DEPRECIATED.
+NOTICE: THIS TABLE IS DEPRECATED.
 
 ⊘	means no text this size or weight (decorative only)
 ©§™	means this size/weight can only be used for non-content like copyrights
