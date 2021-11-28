@@ -1,3 +1,7 @@
+## NEW! Got Questions? We Got Answers!
+- [**_Open a discussion today!_**](https://github.com/Myndex/SAPC-APCA/discussions)
+
+-----
 # APCA _THE REVOLUTION WILL BE READABLE™_
 ## Advanced Perceptual Contrast Algorithm in a nutshell
 
