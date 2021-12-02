@@ -1,7 +1,7 @@
-## NEW! _W3 Licensed Filles Moved_
-**All files that are part of and licensed to the W3 and AGWG, in support of WCAG are now in their own repository.**
+## NEW! _W3 Licensed Files Moved_
+**All files that are part of and licensed to the W3 and AGWG, in support of WCAG, are now in their own repository.**
 
-SEE: [**_APCA W3 Repository_**](https://github.com/Myndex/apca-w3) and please source all files for tools intended for WCAG 3 conformance at that specific repository.
+SEE: [**_APCA W3 Repository_**](https://github.com/Myndex/apca-w3) and please source all files for tools intended for WCAG 3 conformance from that specific repository. The files in this repositiory are part of other projects, and not necessary for WCAG 3 compliance.
 
 -----
 # APCA _THE REVOLUTION WILL BE READABLE™_
@@ -58,24 +58,44 @@ See the [JS Documentation \(the ReadMe.md in the JS folder\)](JS/ReadMe.md) for 
 
 See [WHY APCA](WhyAPCA.md) for a brief explaination of the important differences of APCA for WCAG 3 vs the old WCAG 2.x/1.4.3 contrast guidelines.
 
-## SAPC/APCA CURRENT VERSION: 0.0.98G-4g-lut3 Constants: 4g
-### December 1, 2021
-All W3 licensed files moved to their own repository, AND
-**A new npm package has been released (of the W3 version) to ease integration!!**
-### November 23, 2021
-Adopting semantic versioning, adding a first 0. so the current version is **0.0.98G**
-### November 17, 2021
-Please see the new font lookup table (LUT3) (on this page, below)
-### October 1, 2021
-The base APCA with the 0.0.98G-4g constants is in the JS folder. 
-### NEW CONSTANTS and NEW MATH:
-(October 1, 2021) the 0.0.98G-4g math and constants have been in use now for months, and by all accounts are working well as expected. The revised code is available in the JS folder. The present version improves tracking of contrast perception. (Doubling or halving the L<sup>c</sup> value results in a perceived doubling or halving of contrast.) Also, smoother results for low contrasts and dark color pairs.
-
 ### SAPC and APCA demo tools are live to play with.
 
 **The basic simple version[ is the APCA page,](https://www.myndex.com/APCA/)** it includes the new scaling and the dynamic font matrix. The is the official WCAG3/Silver support version.
 
 **The development version[ is the SAPC page,](https://www.myndex.com/SAPC/)** and this version includes the new RESEARCH MODE, which has some different tools you can activate to investigate the nature of a color or colors, including a simplified version of the middle contrast experiment - on the SAPC app it's called "split contrast mode".
+
+-----
+# What is SAPC/APCA?
+[![](images/Myndex_eye_cielabWide.png)](https://www.myndex.com/WEB/Perception)
+
+## APCA is the _Advanced Perceptual Contrast Algorithm_
+
+APCA is a set of contrast assessment methods for predicting perceived contrast between sRGB colors on a computer monitor. It has been developed as an assessment method for W3 Silver/WCAG3 accessibility standards relating to content for computer displays and mobile devices.
+
+### BASIC FEATURES
+* NEW in v0.98: Incorporates Spatial Frequency & Stimulus Size directly in predictions (i.e. provides direct indication of minimum font size and weight).
+* Spectral weighting of luminance based on sRGB coefficients.
+* Weighting for normal and reverse polarity (dark text on light background vs light text on dark.)
+* Estimation and weighting of light adaptation for perceptual uniformity in a common "standard observer" model.
+* Considers simultaneous contrast and local adaptation based on a pre-estimation model.
+* Spatial frequency considerations for font weight as part of calculations and further defined in a lookup table.
+* Lookup table can be customised for different languages/character sets.
+
+----- 
+### [LIVE VERSION][APCAsite]
+There is a working version with examples and reference material on [the APCA site][APCAsite]
+
+-----
+### Font Use Lookup Table
+
+Latest Lookup Table: November 17 2021
+
+<img width="639" alt="Screen Shot 2021-11-18 at 2 26 32 AM" src="https://user-images.githubusercontent.com/42009457/142399918-60377fdf-39b9-4b80-b75a-01b6e61862dd.png">
+
+<img width="596" alt="Screen Shot 2021-11-18 at 2 33 34 AM" src="https://user-images.githubusercontent.com/42009457/142400008-101f5891-1cff-4d3a-b689-4679fc53cb53.png">
+
+------
+------
 
 ## The New SAPC/APCA at a Glance
 - **Now substantially more accurate** in terms of perceptual uniformity — twice as accurate to perception as the APCA we released in 2020.
@@ -94,91 +114,49 @@ The base APCA with the 0.0.98G-4g constants is in the JS folder.
 
 - **Research Mode!** On the SAPC site only, there is a button under the font display for "Research Mode" which activates some additional tools for investigating colors and contrast.
 
-Comments welcome of course. I've opened the discussion tab here on GitHub if you want to have a discussion or questions without opening an issue. Some of the issues that were mainly questions are going to be moved to the discussion tab as well.
 
-Thank you!
+## SAPC/APCA CURRENT VERSION: 0.0.98G-4g-lut3 Constants: 4g
+### December 1, 2021
+All W3 licensed files moved to their own repository, AND
+**A new npm package has been released (of the W3 version) to ease integration!!**
+### November 23, 2021
+Adopting semantic versioning, adding a first 0. so the current version is **0.0.98G**
+### November 17, 2021
+Please see the new font lookup table (LUT3) (on this page, below)
+### October 1, 2021
+The base APCA with the 0.0.98G-4g constants is in the JS folder. 
+### NEW CONSTANTS and NEW MATH:
+(October 1, 2021) the 0.0.98G-4g math and constants have been in use now for months, and by all accounts are working well as expected. The revised code is available in the JS folder. The present version improves tracking of contrast perception. (Doubling or halving the L<sup>c</sup> value results in a perceived doubling or halving of contrast.) Also, smoother results for low contrasts and dark color pairs.
 
-Andy
-
-_Andrew Somers_    
-_W3 Invited Expert_    
-_Myndex Color Science Researcher_    
-_Inventor of SAPC and APCA_
 
 -----
-
-## Documentation and Quick Start
-See the [JS Documentation \(the ReadMe.md in the JS folder\)](JS/ReadMe.md) for information on using the API, which file is best suited for your needs, and a QuickStart tutorial.
-
-## Important: 
-Files that are intended for supporting the Silver/WCAG 3 conformance model all have **W3C** or **WCAG** in the file name.
-
 Files with **RESEARCH** or **DEV** in the name are part of ongoing research and should _NOT_ be used for developing conformance tools, and further are not licensed for use in distributed software, and should be considered experimental only.
 
-### THIS REPOSITORY IS THE ONLY CANONICAL SOURCE OF APPROVED APCA CODE.
-If you are integrating code, please check here for official changes. This code is considered beta, and will change periodically.
+### THIS REPOSITORY, [and apca-w3](https://github.com/Myndex/apca-w3) ARE THE ONLY CANONICAL SOURCES OF APPROVED APCA CODE.
+If you are integrating code, please check here for official changes, or at apca-w3 for the W3 licensed version. This code is considered beta, and will change periodically.
 
-There are some code listings on some legacy working drafts of Silver aka WCAG 3. These should not be used and are not compatible with the current or future versions. 
+**NOTICE: There are some obsolete code listings on some legacy working drafts of Silver aka WCAG 3. **These should not be used and are not compatible** with the current or future versions. If you developed code around these please let me know and I can help facilitate transitioning to the correct code and constants.**
 
 ### Change Notices:
 [ImportantChangeNotices.md]: ImportantChangeNotices.md
 
-If you have been using any files from this repository, be sure to read the file "[ImportantChangeNotices.md]" for critical updates that may affect results.
+If you have been using any files from _this_ repository, be sure to read the file "[ImportantChangeNotices.md]" for critical updates that may affect results.
 
-**Expected changes in a near future version:**
+**Expected changes or enhancements in near future version:**
 - Change back to a standard linearization method
     - APCA will then take pre-linearized luminance
     - a param of the display color space also to indicate pre-shape
     - this is being done to facilitate easy changing of multiple color spaces
-- New "WCAG 2.3+" mode - displays a 1.4.3 _compatible_ pass/fail indicator
-    - this will _NOT_ allow the false passes, so contrast will be improved across the board
+- New "WCAG 2.3+" mode - displays a 1.4.3 _backwards compatible_ pass/fail indicator
+    - this will _NOT_ allow the false passes of WCAG2 so contrast will be improved across the board
     - this will not correct all the false fails as that would not conform to WCAG 2.
-    - this mode will not be as design flexible as the native APCA
-    - font table will have a basic breakpoint, but extended to all weights
+    - as a result this mode will not be as design flexible as the native APCA
+    - font table will have a basic breakpoint, but extropolated/interpolated to all weights
 - Replace the font lookup tables with a parameterized algorithim
     - lookup table may still be used for defined languages
 - New improved, and possibly integrated, reverse contrast (target value)
+    - R&D is complete, just in the pipline to integrate
 
-
------
-
-# What is SAPC/APCA?
-[![](images/Myndex_eye_cielabWide.png)](https://www.myndex.com/WEB/Perception)
-
-## APCA is the _Advanced Perceptual Contrast Algorithm_
-
-APCA is a set of contrast assessment methods for predicting perceived contrast between sRGB colors on a computer monitor. It has been developed as an assessment method for W3 Silver/WCAG3 accessibility standards relating to content for computer displays and mobile devices.
-
-### FEATURES
-* NEW in v0.98: Incorporates Spatial Frequency & Stimulus Size directly in predictions (i.e. provides direct indication of minimum font size and weight).
-* Spectral weighting of luminance based on sRGB coefficients.
-* Weighting for normal and reverse polarity (dark text on light background vs light text on dark.)
-* Estimation and weighting of light adaptation for perceptual uniformity in a common "standard observer" model.
-* Considers simultaneous contrast and local adaptation based on a pre-estimation model.
-* Spatial frequency considerations for font weight as part of calculations and further defined in a lookup table.
-* Lookup table can be customised for different languages/character sets.
-
-### FEATURES IN DEVELOPMENT
-Soon to be discussed
-
------ 
-### [LIVE VERSION][APCAsite]
-There is a working version with examples and reference material on [the APCA site][APCAsite]
-
------
-### Font Use Lookup Table
-
-Latest Lookup Table: November 17 2021
-
-<img width="639" alt="Screen Shot 2021-11-18 at 2 26 32 AM" src="https://user-images.githubusercontent.com/42009457/142399918-60377fdf-39b9-4b80-b75a-01b6e61862dd.png">
-
-<img width="596" alt="Screen Shot 2021-11-18 at 2 33 34 AM" src="https://user-images.githubusercontent.com/42009457/142400008-101f5891-1cff-4d3a-b689-4679fc53cb53.png">
-
------
-
-NOTE: **The [APCA site][APCAsite] is using the current G 4g constants**, if you want to compare the current to the old, you can add the word "legacy" to the URL to see legacy mode, which is the 2019/2020 version of APCA.
-
-[APCAsite]: https://www.myndex.com/APCA/
 
 -----
 ## IMPLEMENTATIONS
@@ -186,11 +164,11 @@ The libraries are plain vanilla Javascript. Planned adds include PHP, <s>OpenOff
 
 A plain language walkthrough, LaTeX math, and most basic JS are below:
 
-### APCA Math (new 0.0.98G 4g constants)
+### APCA 0.0.98G 4g constants and math
 
-APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math assumes the use of the web standard sRGB colorspace.
+APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math below assumes the use of the web standard sRGB colorspace.
 ```javascript
- // 0.98G-4g constants:
+ // 0.98G-4g full range version constants:
     
   Exponents =  { mainTRC: 2.4,       normBG: 0.56,       normTXT: 0.57,     revTXT: 0.62,     revBG: 0.65, };
   
@@ -232,8 +210,8 @@ APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math
 -----
 
 Basic APCA Math in LaTeX
----------------
-0.0.98G-4g
+----------
+0.0.98G-4g-build-3
 
 ![](images/APCA_0.0.98G4g%2B3.svg)
 
@@ -354,11 +332,12 @@ _**The standard environmental model shall comprise**_
 ### THIS IS BETA
 Being developed for use with future web standards for accessibility. Those standards are under separate repositorieswith the W3/AGWG.
 
+## OTHER RESOURCES
 There is an informal and unofficial repository of information on vision, contrast, design, impairments, and readability at the [Visual Contrast Subgroup Wiki] which includes "Whitepaper In Progress" materials.
 
 [Visual Contrast Subgroup Wiki]: https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup
 
-The author's website includes further background, including select experimental results and white-papers at https://www.myndex.com/WEB/Perception
+The [author's website](https://www.myndex.com/WEB/Perception) includes further background, including select experimental results and white-papers.
 
 -----
 ## DISCLAIMER
