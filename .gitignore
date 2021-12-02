@@ -6,6 +6,7 @@ DEPRECIATED/
 DEPRECATED/
 OBSOLETE/
 PendingDelete/
+IGNORE/
 
 # macOS DS file
 .DS_Store
