@@ -1,8 +1,12 @@
-## NEW! Got Questions? We Got Answers!
-- [**_Open a discussion today!_**](https://github.com/Myndex/SAPC-APCA/discussions)
+## NEW! _W3 Licensed Filles Moved_
+**All files that are part of and licensed to the W3 and AGWG, in support of WCAG are now in their own repository.**
+
+SEE: [**_APCA W3 Repository_**](https://github.com/Myndex/apca-w3) and please source all files for tools intended for WCAG 3 conformance at that specific repository.
 
 -----
 # APCA _THE REVOLUTION WILL BE READABLE™_
+Got Questions? We Got Answers!
+- [**_Open a discussion today!_**](https://github.com/Myndex/SAPC-APCA/discussions)
 ## Advanced Perceptual Contrast Algorithm in a nutshell
 
 - APCA was developed independently as a part of the future WCAG 3 standard.
@@ -34,15 +38,15 @@ See the [JS Documentation \(the ReadMe.md in the JS folder\)](JS/ReadMe.md) for 
 See [WHY APCA](WhyAPCA.md) for a brief explaination of the important differences of APCA for WCAG 3 vs the old WCAG 2.x/1.4.3 contrast guidelines.
 
 ## SAPC/APCA CURRENT VERSION: 0.0.98G-4g-lut3 Constants: 4g
+### December 1, 2021
+All W3 licensed files moved to their own repository, AND
+**A new npm package has been released (of the W3 version) to ease integration!!**
 ### November 23, 2021
 Adopting semantic versioning, adding a first 0. so the current version is **0.0.98G**
 ### November 17, 2021
 Please see the new font lookup table (LUT3) (on this page, below)
 ### October 1, 2021
 The base APCA with the 0.0.98G-4g constants is in the JS folder. 
-
-JS File: APCA_0_98G_4g_minimal.js
-
 ### NEW CONSTANTS and NEW MATH:
 (October 1, 2021) the 0.0.98G-4g math and constants have been in use now for months, and by all accounts are working well as expected. The revised code is available in the JS folder. The present version improves tracking of contrast perception. (Doubling or halving the L<sup>c</sup> value results in a perceived doubling or halving of contrast.) Also, smoother results for low contrasts and dark color pairs.
 
@@ -151,9 +155,7 @@ Latest Lookup Table: November 17 2021
 
 -----
 
-NOTE: **The APCA site is using the current G 4g constants**, if you want to compare the current to the old, you can add the word "legacy" to the URL to see legacy mode, which is the 2019/2020 version of APCA.
-
-[![](images/APCAFontSelect.png)][APCAsite]
+NOTE: **The [APCA site][APCAsite] is using the current G 4g constants**, if you want to compare the current to the old, you can add the word "legacy" to the URL to see legacy mode, which is the 2019/2020 version of APCA.
 
 [APCAsite]: https://www.myndex.com/APCA/
 
@@ -212,158 +214,9 @@ Basic APCA Math in LaTeX
 ---------------
 0.0.98G-4g
 
-![](images/APCA098G4g.svg)
+![](images/APCA_0.0.98G4g%2B3.svg)
 
 -----
-## Basic Javascript:
-In lieu of a pseudocode, here's the most basic JS version:
-
-```javascript
-///////////////////////////////////////////////////////////////////////////////
-/////
-/////    APCA - Advanced Perceptual Contrast Algorithm
-/////           Beta 0.0.98G-4g • contrast function only
-/////           DIST: GH SE Revision date: Oct 1, 2021
-/////    Function to parse color values and determine Lc contrast
-/////    Copyright © 2019-2021 by Andrew Somers. All Rights Reserved.
-/////    LICENSE: APCA version to be licensed under W3 cooperative agrmnt.
-/////
-///////////////////////////////////////////////////////////////////////////////
-/////
-/////    USAGE:
-/////        Use sRGBtoY(color) to convert sRGB to Luminance (Y)
-/////        Then send Y-text and Y-background to APCAcontrast(Text, BG)
-/////
-/////    Lc = APCAcontrast( sRGBtoY(TEXTcolor) , sRGBtoY(BACKGNDcolor) );
-/////
-/////    Live Demonstrator at https://www.myndex.com/APCA/
-/////
-////////////////////////////////////////////////////////////////////////////////
-/////
-/////               DISCLAIMER AND LIMITATIONS OF USE
-/////     APCA is an embodiment of certain suprathreshold contrast
-/////     prediction technologies and it is licensed to the W3 on a
-/////     limited basis for use in certain specific accessibility
-/////     guidelines for web content only. APCA may be used for 
-/////     predicting colors for web content use without royalty.
-/////
-/////     However, Any such license excludes other use cases
-/////     not related to web content. Prohibited uses include
-/////     medical, clinical evaluation, human safety related,
-/////     aerospace, transportation, military applications, 
-/////     and uses which are not specific to web based content
-/////     presented on self-illuminated displays or devices.
-/////
-////////////////////////////////////////////////////////////////////////////////
-
-//////////   APCA 0.0.98 G - 4g Constants   ////////////////////////////////////
-
-
-const mainTRC = 2.4; // 2.4 exponent emulates actual monitor perception
-    
-const sRco = 0.2126729, 
-      sGco = 0.7151522, 
-      sBco = 0.0721750; // sRGB coefficients
-
-const normBG = 0.56, 
-      normTXT = 0.57,
-      revTXT = 0.62,
-      revBG = 0.65;  // G-4g constants for use with 2.4 exponent
-
-const blkThrs = 0.022,
-      blkClmp = 1.414, 
-      scaleBoW = 1.14,
-      scaleWoB = 1.14,
-      loBoWthresh = loWoBthresh = 0.035991,
-      loBoWfactor = loWoBfactor = 27.7847239587675,
-      loBoWoffset = loWoBoffset = 0.027,
-      loClip = 0.001,
-      deltaYmin = 0.0005;
-
-
-////////// ƒ sRGBtoY() ///////////////////////////////////////////////
-
-function sRGBtoY (sRGBcolor) {
-                  // send 8 bit-per-channel integer sRGB (0xFFFFFF)
-
-  let r = (sRGBcolor & 0xFF0000) >> 16,
-      g = (sRGBcolor & 0x00FF00) >> 8,
-      b = (sRGBcolor & 0x0000FF);
-    
-  function simpleExp (chan) { return Math.pow(chan/255.0, mainTRC); }
- 
-		 // linearize r, g, or b then apply coefficients
-		// and sum then return the resulting luminance
-    
-   return sRco * simpleExp(r) + sGco * simpleExp(g) + sBco * simpleExp(b);
-}
-
-
-////////// ƒ APCAcontrast() //////////////////////////////////////////
-
-function APCAcontrast (txtY,bgY) {
-                         // send linear Y (luminance) for text and background.
-                        // IMPORTANT: Do not swap, polarity is important.
-        
-  var SAPC = 0.0;            // For raw SAPC values
-  var outputContrast = 0.0; // For weighted final values
-  
-  // TUTORIAL
-  
-  // Use Y for text and BG, and soft clamp black,
-  // return 0 for very close luminances, determine
-  // polarity, and calculate SAPC raw contrast
-  // Then scale for easy to remember levels.
-
-  // Note that reverse contrast (white text on black)
-  // intentionally returns a negative number
-  // Proper polarity is important!
-
-//////////   BLACK SOFT CLAMP   /////////////////////////////////////////
-
-          // Soft clamps Y for either color if it is near black.
-  txtY = (txtY > blkThrs) ? txtY : txtY + Math.pow(blkThrs - txtY, blkClmp);
-  bgY = (bgY > blkThrs) ? bgY : bgY + Math.pow(blkThrs - bgY, blkClmp);
-
-       ///// Return 0 Early for extremely low ∆Y
-  if ( Math.abs(bgY - txtY) < deltaYmin ) { return 0.0; }
-
-
-//////////   APCA/SAPC CONTRAST   ///////////////////////////////////////
-
-  if ( bgY > txtY ) {  // For normal polarity, black text on white (BoW)
-
-           // Calculate the SAPC contrast value and scale
-    SAPC = ( Math.pow(bgY, normBG) - Math.pow(txtY, normTXT) ) * scaleBoW;
-
-            // Low Contrast smooth rollout to prevent polarity reversal
-           // and also a low-clip for very low contrasts
-    outputContrast = (SAPC < loClip) ? 0.0 :
-                     (SAPC < loBoWthresh) ?
-                      SAPC - SAPC * loBoWfactor * loBoWoffset :
-                      SAPC - loBoWoffset;
-
-  } else {  // For reverse polarity, light text on dark (WoB)
-           // WoB should always return negative value.
-
-    SAPC = ( Math.pow(bgY, revBG) - Math.pow(txtY, revTXT) ) * scaleWoB;
-
-    outputContrast = (SAPC > -loClip) ? 0.0 :
-                     (SAPC > -loWoBthresh) ?
-                      SAPC - SAPC * loWoBfactor * loWoBoffset :
-                      SAPC + loWoBoffset;
-  }
-
-         // Return Lc (lightness contrast) as a signed numeric value.
-	// After multipluying by 100, range will be less than ±127,
-       // so it is permissible to round to the nearest whole integer.
-       
-  return  outputContrast * 100.0;
-  
-} // End APCAcontrast()
-
-```
-
 ## TESTING YOUR IMPLEMENTATION
 
 If you've implemented the code and want a quick sanity check, Here are some keystone checks with no rounding. The first color is **TEXT** and the second color is **BACKGROUND**:
