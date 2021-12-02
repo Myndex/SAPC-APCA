@@ -5,6 +5,27 @@ SEE: [**_APCA W3 Repository_**](https://github.com/Myndex/apca-w3) and please so
 
 -----
 # APCA _THE REVOLUTION WILL BE READABLE™_
+<p align="center">
+  <a href="https://npmjs.org/package/apca-w3">
+    <img src="https://badgen.net/npm/v/apca-w3?color=3000c0&icon=npm" alt="version" />
+  </a> &nbsp;&nbsp;
+  <a href="https://npmjs.org/package/apca-w3">
+    <img src="https://badgen.net/npm/dt/apca-w3?color=6000b0&icon=npm" alt="downloads" />
+  </a> &nbsp;&nbsp;
+  <a href="https://github.com/Myndex/SAPC-APCA">
+    <img src="https://badgen.net/github/last-commit/Myndex/SAPC-APCA/?icon=github" alt="last commit" />
+  </a> &nbsp;&nbsp;
+  <a href="https://github.com/Myndex/SAPC-APCA/blob/master/LICENSE.md">
+    <img src="https://badgen.net/badge/license/Beta Non-Com?icon=github&color=BB5FD1" alt="license" />
+  </a> &nbsp;&nbsp;
+  <a href="https://twitter.com/MyndexResearch">
+    <img src="https://badgen.net/badge/@/MyndexResearch?icon=twitter" alt="twitter" />
+  </a> &nbsp;&nbsp;
+  <a href="">
+    <img src="https://badgen.net/badge/JS/Vanilla/889900" alt="CSS level 3" />
+  </a>
+</p>
+
 Got Questions? We Got Answers!
 - [**_Open a discussion today!_**](https://github.com/Myndex/SAPC-APCA/discussions)
 ## Advanced Perceptual Contrast Algorithm in a nutshell
