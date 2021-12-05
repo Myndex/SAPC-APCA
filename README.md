@@ -1,11 +1,6 @@
-## NEW! _W3 Licensed Files Moved_
-**All files that are part of and licensed to the W3 and AGWG, in support of WCAG, are now in their own repository.**
-
-SEE: [**_APCA W3 Repository_**](https://github.com/Myndex/apca-w3) and please source all files for tools intended for WCAG 3 conformance from that specific repository. The files in this repositiory are part of other projects, and not necessary for WCAG 3 compliance.
-
------
-# APCA _THE REVOLUTION WILL BE READABLE™_
 <p align="center">
+ <img src="images/APCAlogo.png"  alt="APCA The Revolution Will Be Readable"><br><br>
+  
   <a href="https://npmjs.org/package/apca-w3">
     <img src="https://badgen.net/npm/v/apca-w3?color=3000c0&icon=npm" alt="version" />
   </a> &nbsp;&nbsp;
@@ -26,10 +21,17 @@ SEE: [**_APCA W3 Repository_**](https://github.com/Myndex/apca-w3) and please so
   </a>
 </p>
 
-Got Questions? We Got Answers!
+# SAPC • APCA PRIMARY REPOSITORY
+
+## NEW! _W3 Licensed Files Moved_
+**All files that are part of and licensed to the W3 and AGWG, in support of WCAG, are now in their own repository.**
+
+SEE: [**_APCA W3 Repository_**](https://github.com/Myndex/apca-w3) and please source all files for tools intended for WCAG 3 conformance from that specific repository. The files in this repositiory are part of other projects, and not necessary for WCAG 3 compliance.
+
+-----
+### Got Questions? We Got Answers!
 - [**_Open a discussion today!_**](https://github.com/Myndex/SAPC-APCA/discussions)
 ## Advanced Perceptual Contrast Algorithm in a nutshell
-
 - APCA was developed independently as a part of the future WCAG 3 standard.
     - APCA uses modern vision science and is perceptually uniform.
     - Studies demonstrate that APCA for WCAG 3 works much better then WCAG 2.x.
@@ -51,7 +53,6 @@ Got Questions? We Got Answers!
  - Unlike WCAG 2, APCA is polarity aware, so the BG and TEXT colors _must_ be sent to the correct inputs.
 
 Please feel free to use the discussion area for any questions or comments.
-
 
 ## APCA Documentation and Quick Start
 See the [JS Documentation \(the ReadMe.md in the JS folder\)](JS/ReadMe.md) for information on using the API, which file is best suited for your needs, and a QuickStart tutorial.
