@@ -91,9 +91,9 @@ There is a working version with examples and reference material on [the APCA sit
 
 Latest Lookup Table: November 17 2021
 
-<img width="639" alt="Screen Shot 2021-11-18 at 2 26 32 AM" src="https://user-images.githubusercontent.com/42009457/142399918-60377fdf-39b9-4b80-b75a-01b6e61862dd.png">
+<img width="639" alt="APCA Lookup Table" src="images/0.0.98G4gLUT.png">
 
-<img width="596" alt="Screen Shot 2021-11-18 at 2 33 34 AM" src="https://user-images.githubusercontent.com/42009457/142400008-101f5891-1cff-4d3a-b689-4679fc53cb53.png">
+<img width="596" alt="APCA Lookup table legend" src="images/0.0.98G4gLUT-legenf.png">
 
 ------
 ------
