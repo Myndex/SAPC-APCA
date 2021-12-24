@@ -15,7 +15,7 @@ Let's begin with a general understanding of what color and contrast actually is 
 
 First, like color, contrast is not real. It is a perception. It is not a measure of the distance between two colors.
 
-Like all perceptions it is context sensitive. It is also substantially affected by spatial frequency, and is primarily a function of the luminance channel, while hue/chroma are far distant in effect, particularly as related to readability. High luminance contrast is required for fluent readability such that the text's words and letter-pairs are properly directed to and filtered by the Visual Word Form Area (VFWA) of the brain, leading into lexical processing.
+Like all perceptions it is context sensitive. It is also substantially affected by spatial frequency, and is primarily a function of the luminance channel, while hue/chroma are far distant in effect, particularly as related to readability. High luminance contrast is required for fluent readability, especially small body text, such that the text's words and letter-pairs are properly directed to and filtered by the Visual Word Form Area (VFWA) of the brain, leading into lexical processing.
 
 Above a certain amount, contrast constancy may come into effect wherein further increases in contrast as far as color distances does not have an effect on perception for readability. However, as spatial frequency increases (meaning smaller and thinner letters) perceived contrast drops rapidly, such that lightness distance must be increased to compensate for small thin fonts.
 
@@ -34,16 +34,15 @@ And finally, the problems of 4.5:1 are not only in accessibility, but fails for 
 
 
 ## The Solution
-
-APCA, the Advanced Perceptual Contrast Algorithm is a product of the larger SLUV Advanced Perceptual Color (SAPC) appearance model, which is specifically related to appearance on self illuminated RGB computer displays, and for modeling impairments.
+APCA, the Advanced Perceptual Contrast Algorithm is a part of the larger S-Luv Accessibility/Readability Color Appearance Model (SARCAM, formerly SAPC), which is specifically related to appearance on self-illuminated RGB computer displays, and for modeling impairments, with a focus on readability.
 
 ### Lightness contrast
-The APCA generates a contrast value based on a color pair, but this value is perceptually based: that is, regardless of how light or dark the colors are, a contrast value of 60 represents the same perceived readability contrast. This is absolutely not the case with WCAG 2.x, which far overstates contrast for dark colors to the point that 4.5:1 can be functionally unreadable.
+The APCA generates a contrast value based on a color pair, and this value is perceptually based: that is, regardless of how light or dark the colors are, a contrast value of 60 represents the same perceived readability contrast. This is absolutely not the case with WCAG 2.x, which far overstates contrast for dark colors to the point that 4.5:1 can be functionally unreadable.
 
 The APCA contrast value is perceptually uniform, and based on the point where the CS curve flattens due to contrast constancy. Halving or doubling the APCA value relates to a halving or doubling of the perceived contrast. 
 
 ### Spatial contrast
-The APCA then uses a lookup table to associate font size and weight to the readability contrast. The lookup tables shown thus far are for latin fonts. Different languages may want to have their own modified lookup tables specific to their needs.
+The APCA then uses a lookup table to associate font size and weight to the readability contrast. The lookup tables shown thus far are for latin fonts. Different languages may want to have their own modified lookup tables specific to their needs. After some further studies, we expect the lookup table to be replaced with a set of parametric curves.
 
 ### Pass/Fail
 A principal point here is that a strict pass/fail is not instructive, is arbitrary, and not necessarily solving a given user need. In fact user needs when it comes to contrast are conflicting in that what is good for one can be harmful to another. This is even true of font size. 
