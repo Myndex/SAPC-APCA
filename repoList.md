@@ -4,10 +4,9 @@
 
 - Main (This): https://github.com/Myndex/SAPC-APCA
 - W3 licensed APCA: https://github.com/Myndex/apca-w3
-- WCAG_2_PLUS version: 
+- WCAG_2_PLUS - aka Bridge-PCA: https://github.com/Myndex/bridge-pca
 - Full Range Non Commercial version: 
-- PRIVATE
-- PRIVATE
+- SARCAM:
 
 
 ## NPM
