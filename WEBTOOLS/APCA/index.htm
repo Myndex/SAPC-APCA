@@ -1,0 +1,2350 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121680439-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121680439-6');
+</script> 
+
+<!--ALL PAGES ON THIS SITE ARE COPYRIGHT © 1997-2021 by ANDREW SOMERS, ALL RIGHTS RESERVED
+The content on this page is PROPRIETARY AND NOT LICENSED FOR FURTHER USE. -->
+
+<meta charset="utf-8">
+
+  <title>APCA Basic</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <link rel="canonical" href="https://www.myndex.com/APCA/" />
+
+
+<META NAME="Description" CONTENT="The APCA Advanced Perceptual Contrast Algorithim SIMPLE VERSION.">
+<META NAME="Keywords" CONTENT="Myndex, Research and Development, RnD, R&amp;D, Engineer, Engineering, Systems Engineer, Industrial Design, Solidworks, FEA, CADCAM, drafting, 3D modeling, prototyping, software development, database development, IT">
+
+<meta property="fb:app_id" content="227594707878157" />
+
+<meta property="og:title" content="Myndex&trade; Perception Research" />
+<meta property="og:description" content="The APCA Advanced Perceptual Contrast Algorithim SIMPLE VERSION." />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.myndex.com/APCA/" />
+<meta property="og:site_name" content="Myndex&trade; APCA Tool" />
+
+<meta property="og:image" content="images/APCAlogo.png"/>
+<meta property="og:image:alt" content="APCA The Revolution Will Be Readable"/>
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="825" />
+<meta property="og:image:height" content="442" />
+
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicons2020/apple-touch-icon-60x60.png?ver=fav20">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicons2020/apple-touch-icon-76x76.png?ver=fav20">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicons2020/apple-touch-icon-120x120.png?ver=fav20">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicons2020/apple-touch-icon-152x152.png?ver=fav20">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons2020/apple-touch-icon-180x180.png?ver=fav20">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons2020/favicon-32x32.png?ver=fav20">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicons2020/favicon-16x16.png?ver=fav20">
+<link rel="manifest" href="/images/favicons2020/site.webmanifest?ver=fav20">
+<link rel="mask-icon" href="/images/favicons2020/safari-pinned-tab.svg?ver=fav20" color="#3300aa">
+<link rel="shortcut icon" href="/images/favicons2020/favicon.ico?ver=fav20">
+<meta name="msapplication-TileColor" content="#3300aa">
+<meta name="msapplication-config" content="/images/favicons2020/browserconfig.xml?ver=fav20">
+<meta name="theme-color" content="#3300aa">
+
+  <link rel="stylesheet" href="CSS/style.0.0.98-g.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <link href='https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet'>
+
+<style>
+
+:root {
+  --textColor: #123;
+  --textColorFlip: #abc;
+  --textColorMid: #449;
+  --textColorMono: #404;
+  --bgColor: #abc;
+  --bgColorFlip: #123;
+  --bgColorMid: #494;
+  --bgColorMono: #efe;
+  
+  --tickLabel: #30a;
+  
+  --slideLabelBG: #e50;
+  --slideLabelText: #222;
+  
+  --insideOutLo: #000;
+  --insideOutHi: #bcd;
+  --insideOutMidLo: #000;
+  --insideOutMidHi: #dcb;
+  --insideOutLoBG: #642;
+  --insideOutHiBG: #fff;
+  --insideOutMidLoBG: #248;
+  --insideOutMidHiBG: #fff;
+
+  --gradLo: #123;
+  --gradHi: #abc;
+}
+
+body {}
+
+.safari h3 { font-weight: 500; }
+ 
+ fieldset {outline: none; border: none;}
+  /* SVG GAMMA TARGETS */  
+ 
+.gammaBox,.gammaBoxB {
+  Position: Relative;
+  Margin: 10px auto;
+  Width: 700px;
+  Height: 216px;
+  border: 48px solid #378837;
+  border-radius: 24px;
+  }
+
+.gammaBoxL,.gammaBoxLB,.gammaBoxLM {
+  display: inline-block;
+  position: Relative;
+  margin: 10px 0 10px auto;
+  width: 700px;
+  height: 216px;
+  border: 48px solid #3737dd;
+  border-radius: 24px;
+  }
+.gammaBoxR,.gammaBoxRB,.gammaBoxRM {
+  display: inline-block;
+  position: Relative;
+  margin: 10px auto 10px 0;
+  width: 700px;
+  height: 216px;
+  border: 48px solid #dd3737;
+  border-radius: 24px;
+  }
+
+
+
+
+#gammaBox4 {/* target #a0 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%233f3f3f" /><rect x="1" y="1" width="1" height="1" fill="%233f3f3f" /><rect x="1" y="0" width="1" height="1" fill="%23d3d3d3" /><rect x="0" y="1" width="1" height="1" fill="%23d3d3d3" /></svg>') 0 0/4px 4px repeat;
+  border-color:#a0a0a0;
+  }
+#gammaBox4b {/* target #a0 b (sap) */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23282828" /><rect x="1" y="1" width="1" height="1" fill="%23282828" /><rect x="1" y="0" width="1" height="1" fill="%23d8d8d8" /><rect x="0" y="1" width="1" height="1" fill="%23d8d8d8" /></svg>') 0 0/4px 4px repeat;
+  border-color:#a0a0a0;
+  }
+/* *** NEW GAMMA TARGETS JAN 12 2021 *** */
+
+#gammaBox22p {/* target #22  Piecewise */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23000000" /><rect x="1" y="1" width="1" height="1" fill="%23000000" /><rect x="1" y="0" width="1" height="1" fill="%23323232" /><rect x="0" y="1" width="1" height="1" fill="%23323232" /></svg>') 0 0/4px 4px repeat;
+  border-color: #222;
+  }
+#gammaBox22d {/* target #22  SAPCd8 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23000000" /><rect x="1" y="1" width="1" height="1" fill="%23000000" /><rect x="1" y="0" width="1" height="1" fill="%232d2d2d" /><rect x="0" y="1" width="1" height="1" fill="%232d2d2d" /></svg>') 0 0/4px 4px repeat;
+  border-color: #222;
+  }
+
+#gammaBox33p {/* target #33  Piecewise */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23080808" /><rect x="1" y="1" width="1" height="1" fill="%23080808" /><rect x="1" y="0" width="1" height="1" fill="%23484848" /><rect x="0" y="1" width="1" height="1" fill="%23484848" /></svg>') 0 0/4px 4px repeat;
+  border-color: #333;
+  }
+#gammaBox33d {/* target #33  SAP d8 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23080808" /><rect x="1" y="1" width="1" height="1" fill="%23080808" /><rect x="1" y="0" width="1" height="1" fill="%23424242" /><rect x="0" y="1" width="1" height="1" fill="%23424242" /></svg>') 0 0/4px 4px repeat;
+  border-color: #333;
+  }
+
+#gammaBox44p {/* target #44  Piecewise */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23111111" /><rect x="1" y="1" width="1" height="1" fill="%23111111" /><rect x="1" y="0" width="1" height="1" fill="%235d5d5d" /><rect x="0" y="1" width="1" height="1" fill="%235d5d5d" /></svg>') 0 0/4px 4px repeat;
+  border-color: #444;
+  }
+#gammaBox44d {/* target #44  SAP d */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23111111" /><rect x="1" y="1" width="1" height="1" fill="%23111111" /><rect x="1" y="0" width="1" height="1" fill="%23595959" /><rect x="0" y="1" width="1" height="1" fill="%23595959" /></svg>') 0 0/4px 4px repeat;
+  border-color: #444;
+  }
+
+#gammaBox55p {/* target #55  Piecewise */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%231a1a1a" /><rect x="1" y="1" width="1" height="1" fill="%231a1a1a" /><rect x="1" y="0" width="1" height="1" fill="%236e6e6e" /><rect x="0" y="1" width="1" height="1" fill="%236e6e6e" /></svg>') 0 0/4px 4px repeat;
+  border-color: #555;
+  }
+#gammaBox55d {/* target #55  SAP d */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%231a1a1a" /><rect x="1" y="1" width="1" height="1" fill="%231a1a1a" /><rect x="1" y="0" width="1" height="1" fill="%236f6f6f" /><rect x="0" y="1" width="1" height="1" fill="%236f6f6f" /></svg>') 0 0/4px 4px repeat;
+  border-color: #555;
+  }
+
+#gammaBox80p {/* target #80  Piecewise */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23202020" /><rect x="1" y="1" width="1" height="1" fill="%23202020" /><rect x="1" y="0" width="1" height="1" fill="%23adadad" /><rect x="0" y="1" width="1" height="1" fill="%23adadad" /></svg>') 0 0/4px 4px repeat;
+  border-color: #808080;
+  }
+#gammaBox80d {/* target #80  SAP d */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23202020" /><rect x="1" y="1" width="1" height="1" fill="%23202020" /><rect x="1" y="0" width="1" height="1" fill="%23adadad" /><rect x="0" y="1" width="1" height="1" fill="%23adadad" /></svg>') 0 0/4px 4px repeat;
+  border-color: #808080;
+  }
+
+#gammaBoxA0d {/* target #a0 b (sapc 8 jan) */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%232b2b2b" /><rect x="1" y="1" width="1" height="1" fill="%232b2b2b" /><rect x="1" y="0" width="1" height="1" fill="%23d3d3d3" /><rect x="0" y="1" width="1" height="1" fill="%23d3d3d3" /></svg>') 0 0/4px 4px repeat;
+  border-color:#a0a0a0;
+  }
+
+
+.gammaLabel,.gammaLabelM {
+  display: block;
+  position:relative;
+  margin: -46px 0 0;
+  padding: 2px 0px 6px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  color: #000;
+  }
+.gammaLabelM {font-size: 1em;}
+
+
+.cGr0  { color: #000;}
+.cGr1  { color: #111;}
+.cGr2  { color: #222;}
+.cGr3  { color: #333;}
+.cGr4  { color: #444;}
+.cGr5  { color: #555;}
+.cGr6  { color: #666;}
+.cGr7  { color: #777;}
+.cGr8  { color: #888;}
+.cGr9  { color: #999;}
+.cGrA  { color: #AAA;}
+.cGrB  { color: #BBB;}
+.cGrC  { color: #CCC;}
+.cGrD  { color: #DDD;}
+.cGrE  { color: #EEE;}
+.cGrF  { color: #FFF;}
+
+
+   
+
+.head { font-weight: 500; }
+b { font-weight: 600; }
+em { font-weight: 600; font-style: italic; }
+
+.tb04 { tab-size: 4; }
+.tb05 { tab-size: 5; }
+.tb06 { tab-size: 6; }
+.tb07 { tab-size: 7; }
+.tb08 { tab-size: 8; }
+.tb09 { tab-size: 9; }
+.tb10 { tab-size: 10; }
+.tb11 { tab-size: 11; }
+.tb12 { tab-size: 12; }
+.tb13 { tab-size: 13; }
+.tb14 { tab-size: 14; }
+.tb15 { tab-size: 15; }
+.tb16 { tab-size: 16; }
+.tb17 { tab-size: 17; }
+.tb18 { tab-size: 18; }
+
+
+
+
+.codeBlock2 code {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inconsolata', Courier, Menlo, monospace;
+  }
+.codeBlock2 {
+  width: 390px;
+  margin: 4px 16px; 
+  padding: 8px 12px; 
+  white-space: nowrap; 
+  overflow: hidden;
+  border: 1px solid #008;
+  border-radius: 12px;
+  font-family: 'Inconsolata', Courier, Menlo, monospace;
+  font-size: 21px;
+  color: #009;
+  background-color: #7FB; 
+  box-shadow: inset 4px 4px 8px #2958;      
+  }
+.codeBlock2 code b {
+  font-weight: 900;
+  }
+.codeBlock2 code {
+  font-weight: 500;
+  }
+
+#contrast2 {
+  box-sizing: border-box;
+  position: relative;
+  width: 170px; 
+  margin: 8px auto 12px;
+  z-index: 2;
+  padding: 2px 2px 6px;
+  color: #30A; 
+  background-color: #DEF;
+  border: 1px solid #30A;
+  border-radius: 16px;
+  box-shadow: inset 3px 3px 6px #ABC;
+  }
+    
+.contrastResult2 {
+  position: relative;
+  text-align: center; 
+  padding: 2px; 
+  font-size: 1.8em;
+  font-weight: 700;
+  }
+  
+    #ampSamp, #ampSamp2, .ampSample  {
+      box-sizing: border-box;
+      position: relative; 
+      width: 180px;
+      margin: 0 auto;
+      padding: 0;
+      border: 8px solid #777;
+      border-radius: 24px;
+      box-shadow: none;     
+      }
+
+    #ampSamp2, .ampSample {
+      display: inline-block;
+      width: 540px;
+      margin: 24px auto 2px;
+      padding: 16px;
+      font-family: 'playfair display', serif;
+      border: 12px solid #777;    
+      }
+
+    .ampSample {
+      width: 100px;
+      top: 18px;
+      margin: 2px 12px 2px 0;
+      padding: 8px 0 0;
+      font-family: 'playfair display', serif;
+      border: none;   
+      }
+
+.conformScore td {
+  border-radius: 24px;
+  }
+  
+  
+#resultTable input { 
+  /* box-sizing: border-box; */
+  appearance: none;
+  position: relative; 
+  margin: 0; 
+  padding: 1px;
+  text-align: center; 
+  font-size: 4px; 
+  font-weight: 400; 
+  color: #444; 
+  background-color: #F00; 
+  border:none; 
+  border-radius: 4px; 
+  box-shadow: none;
+  }
+  
+#tableSamples input {
+  box-sizing: border-box;
+  color: #358;
+  box-shadow: inset 2px 2px 5px #553,inset 0 0 6px 22px #66d2;
+  }
+#tableSamples input:focus {
+  outline:none;
+  box-sizing: border-box;
+  color: #103; 
+  background-color: #def; 
+  border-color: #96f;
+  border-radius: 12px; 
+  box-shadow: inset 2px 2px 5px 2px #68B;
+  }
+
+#tableSamples #BGpicker, #tableSamples #BGpicker input:focus, 
+#tableSamples #TXTpicker, #tableSamples #TXTpicker input:focus {
+  border: none;
+  border-radius: 3px 3px 3px 26px;
+  box-shadow: none;
+  }
+#tableSamples #TXTpicker, #tableSamples #TXTpicker input:focus 
+{border-radius: 3px 3px 26px 3px;}
+
+
+#resultTable input:focus { 
+  outline:none;
+  color: #309; 
+  background-color: #def; 
+  border-color: #acf; 
+  box-shadow: none;
+  }
+#resultTable { 
+  position: relative;
+  height: 240px;
+  padding: 8px; 
+  }
+
+.inputLeft {
+  position: relative;
+  float: left;
+  }
+.inputRight {
+  position: relative;
+  float: right;
+  }
+
+
+
+a:link {
+  color: #006;
+  text-decoration: underline;
+  font-weight: inherit;
+  text-shadow: 0 0 0 #FFF0;
+/* ** Null Shadow as it needed to be present in LINK
+    to be accessible by the psudo elements ** */
+  }
+
+a:visited {
+  color: #408;
+  text-decoration: none;
+  font-weight: inherit;
+  text-shadow: 0 0 0 #FFF0;
+  }
+
+a:hover {
+  color: #54C;
+  text-decoration: none;
+  text-shadow: 0.07em 0.07em 0.12em #79B;
+  }
+
+a:visited:hover {
+  color: #73B;
+  text-decoration: none;
+  font-weight: inherit;
+  text-shadow: 0.05em 0.05em 0.1em #A98;
+  }
+
+a:active {
+  position: relative;
+  top: 0.1em;
+  color: #8ad;
+  text-decoration: none;
+  font-weight: inherit;
+  text-shadow: 0 0 0.18em #6ACA;
+  }
+  
+footer  a:link, footer a:hover,  footer a:visited, footer a:visited:hover
+  {
+    color: #ec4;
+  }
+  
+
+/* simple mode */
+
+#tableScore5,#tableScore3,#tableScore2,#tableScore1 {
+  display: none;
+  visibility: hidden;
+  }
+#weight1,#weight8,#weight9 {
+  display: none;
+  visibility: hidden; 
+  }
+  
+th.scoreHeader { font-weight: 600;}
+
+.weightWord {
+  display: inline-block;
+  font-size: inherit !important;
+  font-weight: inherit;
+  }
+.weightWord::before {
+  content: ' • ';
+  }
+
+/* These must be after the inputs */
+
+#BGresult, #textResult, #TXTresult,
+#BGresult2, #textResult2, #TXTresult2 {
+  appearance: none;
+  width: 100px;
+  height: 24px;
+  position: relative;
+  top: 1px;
+  padding: 1px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: none;
+  }
+#BGresultWrap, #TXTresultWrap {
+  appearance: none;
+  position: relative; 
+  margin: 6px 12px;
+  padding: 2px;
+  width: 120px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;   
+  background-color: #808080;
+  }
+
+  
+
+.setColor, div.setColor, span.setColor, p.setColor,
+div .setColor, div div.setColor, div span.setColor, div p.setColor
+{ color: var(--textColor, #123); }
+.setColorFlip, div.setColorFlip, span.setColorFlip, p.setColorFlip,
+div .setColorFlip, div div.setColorFlip, div span.setColorFlip, div p.setColorFlip
+{ color: var(--bgColor, #bad); }
+
+.setBGcolor, div.setBGcolor, span.setBGcolor, p.setBGcolor,
+div .setBGcolor, div div.setBGcolor, div span.setBGcolor, div p.setBGcolor
+{ background-color: var(--bgColor, #bad); }
+.setBGcolorFlip, div.setBGcolorFlip, span.setBGcolorFlip, p.setBGcolorFlip,
+div .setBGcolorFlip, div div.setBGcolorFlip, div span.setBGcolorFlip, div p.setBGcolorFlip
+{ background-color: var(--textColor, #123); }
+  
+
+.g4gVal35,.g4gVal40,.g4gVal50,.g4gVal55,
+.g4gVal65,.g4gVal70,.g4gVal80,.g4gVal85
+{color: #74c; background-color: #afd;}
+
+.g4gVal35,.g4gVal40 {color: #74c; background-color: #fda;}
+
+.bodyText {
+  position: relative;
+  color: #308;
+  background-color: #ddf;
+  }
+.bodyText::after {
+position: relative;
+  top: -10px;
+  content: 'B';
+  font-size: 0.6em;
+  }
+
+td.bodyText {
+  border: 5px solid #0bb;
+  }
+
+.ptText::after {
+position: relative;
+  top: 0px;
+  content: 'pt';
+  font-size: 0.6em;
+  }
+.pxText::after {
+position: relative;
+  top: 0px;
+  content: 'px';
+  font-size: 0.6em;
+  }
+  
+.g4gVal90,
+.g4gVal75, 
+.g4gVal60, 
+.g4gVal45, 
+.g4gVal30 { font-weight: bold;}
+
+.g4gLite, td.g4gLite {color: #a00; background-color: #fcc;border: 3px solid #e00;}
+  
+tr td.keyVal100, .g4gVal90 {color: #707; background-color: #add;}
+tr td.keyVal80, .g4gVal75 {background-color: #4f9;}
+tr td.keyVal60, .g4gVal60 {background-color: #afa;}
+tr td.keyVal40, .g4gVal45 {background-color: #7da;}
+tr td.keyVal30, .g4gVal30 {color: #fcc; background-color: #b48;}
+.g4gValNT {color: #fcc; background-color: #b62;}
+
+
+</style>
+
+  <!-- This Page Requires beta 0.98G or greater of the following file. -->
+  <script src="JS/DEV98G_SAPCsRGB.js"></script>
+
+<script>
+// User Agent Detection — place first in head
+// Set body tag: <body id="bodyid" onload="setBrowser()">
+
+  let browserName = "";
+function setBrowser() {
+  if(navigator.vendor.match(/google/i)) {
+    browserName = 'chrome/blink';
+    document.getElementById("bodyid").classList.add("chrome");
+  } else if(navigator.vendor.match(/apple/i)) {
+    browserName = 'safari/webkit';
+    document.getElementById("bodyid").classList.add("safari");
+  } else if(navigator.userAgent.match(/firefox\//i)) {
+    browserName = 'firefox/gecko';
+    document.getElementById("bodyid").classList.add("firefox");
+  } else if(navigator.userAgent.match(/edge?\//i)) {
+    browserName = 'edge/edgehtml';
+    document.getElementById("bodyid").classList.add("edge");
+  } else if(navigator.userAgent.match(/trident\//i)) {
+    browserName = 'ie/trident';
+    document.getElementById("bodyid").classList.add("IErecent");
+  } else if(navigator.userAgent.match(/MSIE\//i)) {
+    browserName = 'ie/IE';
+    document.getElementById("bodyid").classList.add("IElegacy");
+  } else {
+    browserName = navigator.userAgent + " by " + navigator.vendor;
+    document.getElementById("bodyid").classList.add("unknownAgent");
+  }
+//console.log(document.getElementById("bodyid").classList);
+}  
+
+
+////////////////////////////////////////////////////////////////////////////////
+//////////// PAGE CODE BETA 0.98g //////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////
+//////////// PAGE MAIN FUNCTIONS ///////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+// To do: work on reducing the use of globals!
+
+// Declare the two key variables
+let BG = new RGBcolor('2F4');
+let TXT = new RGBcolor('42F');
+
+function getCSScolor(sRGBstrg, type) {
+    // Call to primary color pre-process
+    // Returns RGBcolor OBJECT if good
+    // Sets page colors
+    
+  let thisColor = new RGBcolor(sRGBstrg);
+
+  if (thisColor.ok) {
+
+    switch (type) {
+
+    case 'BG':
+
+      BG = thisColor;
+
+      //  Clear Error warning colors
+        inputBG.style.backgroundColor = '#DFA';
+        BGpickerWrap.style.backgroundColor = '#808080';
+
+      // Set the input element and result element values to match 
+        inputBG.value = thisColor.cleaned;
+        BGpicker.value = thisColor.hexNoA();
+        
+      // Set the CSS BG colors
+        BGpicker.style.backgroundColor = cssVar('--bgColor',thisColor.hexNoA());
+
+
+      break;
+
+    case 'TXT':
+
+      TXT = thisColor;
+      
+      //  Clear Error warning colors
+      inputTXT.style.backgroundColor = '#DFA';
+      TXTpickerWrap.style.backgroundColor = '#808080';
+
+      // Set the input element and result element values to match       
+      inputTXT.value = thisColor.cleaned;
+      TXTpicker.value = thisColor.hexNoA();
+
+      // Set the CSS text colors // Background for result: it is the patch
+            
+      TXTpicker.style.backgroundColor =       
+      TXTpicker.style.Color = cssVar('--textColor',thisColor.hexNoA());       
+
+
+      break;
+
+    case 'MID':
+    
+      //MID = thisColor;
+      //cssVar('--textColorMid',MID.hexNoA()); 
+      //cssVar('--bgColorMid',MID.hexNoA()); 
+      
+      //return thisColor;  // jump out now for MID
+
+      break;
+    }
+
+
+    let colorValid = '<code><span class="dib ls0 m0 fs095 lh10 fwb">'
+      + thisColor.hexNoA2() + ' • ' + thisColor.RGBAstr();
+      
+  
+  // Report results to the results window to show info about the color
+
+    document.getElementById( type + 'validText' ).innerHTML = colorValid;
+
+
+    return thisColor;
+
+  } else {  // else when the color is an invalid entry.
+      
+    document.getElementById( type + 'validText' ).innerHTML =
+    '<code><span class="dib ls02 fs10 lh20 cR fwb"><b>INVALID COLOR</b></span></code>';
+    
+    switch (type) { // Set error warning colors
+      case 'BG':
+        inputBG.style.backgroundColor = '#F9A';
+        BGpickerWrap.style.backgroundColor = '#D00';
+        BG.ok = false;
+      break;
+
+      case 'TXT':
+        inputTXT.style.backgroundColor = '#F9A';
+        TXTpickerWrap.style.backgroundColor = '#D00';
+        TXT.ok = false;
+      break;
+      }
+    }
+  }
+
+
+////////////////////////////////////////////////////////////////////////////////
+/////////  MYNDEX FRAMEWORK FUNCTIONS  /////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+const cssVar = ( name, value ) => {
+  if(name.substr(0, 2) !== "--") {name = "--" + name; }
+  if(value) { document.documentElement.style.setProperty(name, value) }
+  return getComputedStyle(document.documentElement).getPropertyValue(name);
+}
+
+const byID = ( name, property, value, property2 ) => {
+
+    let tempObj = document.getElementById(name);
+    
+    if(property) {
+      tempObj = tempObj[property]; 
+      if(property2) {tempObj = tempObj[property];}      
+      if(value != null) {tempObj = value;}
+    }
+    return tempObj;         
+}
+  // Usage for byID()
+  // byID('thing'); // returns DOM thing
+  // byID('thing','innerHTML'); // returns thing's innerHTML
+  // byID('thing','style',null,'color');    // returns thing's color
+  // byID('thing','style','#777','color'); // sets thing's color to #777
+  // byID('thing','style','color: #777'); // replaces thing's style string
+
+
+const byQuery = ( selectors, styleProperty, value) => {
+
+    let tempAry = document.querySelectorAll(selectors).style;
+
+    if(value != null && styleProperty != null) {
+      tempAry.forEach((elementStyle) => {
+        elementStyle[property] = value;   
+      })
+    } else if(value != null) {
+      tempAry.forEach((elementStyle) => {
+        elementStyle = value;   
+      })
+    }
+
+    return tempAry;         
+}
+  // Usage for byQuery()
+  // byQuery('p.thing'); // returns array of "p.thing" elements
+  // byQuery('p.thing','color','#777'); // sets all p.things color to #777
+  // byQuery('p.thing',null,'color: #777'); // replaces p.thing's style string  
+
+
+const byClass = ( className, property, value, property2 ) => {
+
+  var theClasses = document.getElementsByClassName(className);
+  
+    if(value != null) {
+      theClasses.forEach((thisClass) => { 
+        if(property2) {
+          thisClass[property][property2] = value;
+        } else {
+          thisClass[property] = value;    
+        }
+    })
+    
+    return  theClasses;     
+  }
+}
+  // Usage for byClass()
+  // byClass('thing'); // returns array of thing classes    
+  // byClass('thing','innerHTML'); // set all thing classes innerHTML to empty
+  // byClass('thing','innerHTML','Hollow World');
+        // sets all thing classes innerHTML to "Hollow World"
+  
+  // byClass('thing','style','#777','color');
+        // sets all thing classes color to #777
+  
+  // byClass('thing','style','color: #777'); 
+        // Replaces all thing classes style string with 'color: #777'
+
+
+////////////////////////////////////////////////////////////////////////////////
+/////////  PAGE UTILITY FUNCTIONS  /////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+  function swapColors() {
+    
+    let BGtemp = inputBG.value;
+    getCSScolor(inputTXT.value,'BG');
+    getCSScolor(BGtemp, 'TXT');
+
+    testContrast();
+  }
+  
+  // getColorURL is the main page initializer
+  
+  function getColorURL() {
+
+    let urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('BG') && urlParams.has('TXT')) {
+      BG = getCSScolor(urlParams.get('BG'),'BG');
+      TXT = getCSScolor(urlParams.get('TXT'), 'TXT');
+
+      document.getElementById("URLresult").value = document.URL; 
+      document.getElementById("URLresult").select();
+
+    } else {
+
+      BG = getCSScolor('ea7439','BG'); // Default BG Color 
+      TXT = getCSScolor('fff', 'TXT'); // Default BG Color
+    } 
+
+    populateLabels();
+    testContrast();
+  }
+
+      //getCSScolor(TXT, 'TXT');
+      //getCSScolor(BG,'BG');
+
+      //console.log('1 ' + window.location.pathname); // Returns path only
+      //console.log('2 ' + window.location.href);
+      //console.log('3 ' + document.URL);
+
+
+  // Note the TXT param is now uppercase to be consistent with the vars
+  function createColorURL (elementID,BGstring,TXTstring) {
+    
+    if (BGstring && TXTstring) {
+      BG = new RGBcolor(BGstring);
+      TXT = new RGBcolor(TXTstring);
+    }
+  
+    if (BG.ok && TXT.ok) {  
+      let newURL = document.getElementById(elementID).href =
+        "https://www.myndex.com" + window.location.pathname
+        + "?BG=" + BG.hex()
+        + "&TXT=" + TXT.hex()
+        + "&DEV=98G4g"
+        //+ "&RSH=" + researchMode.toString()
+        //+ "&SEL=" + researchSelect        
+        + "&BUF=APCA-G";
+      navigator.clipboard.writeText(newURL);
+    } else {
+      document.getElementById('colorWarn').style.display='block'
+    }
+  }
+    
+    // Entry Key Cleanup for better UX with auto-enter
+    
+  function entryKeys(colorString,type,e) {
+    if (
+      (
+      (e.which >= 48 && e.which <= 57 && event.shiftKey == false) || // 0-9
+      (e.which >= 65 && e.which <= 90) ||  // a-z
+      (e.which >= 96 && e.which <= 105) // num keypad
+      ) ||
+      e.which === 13 || // enter
+      e.which === 9 || // tab key
+      e.which === 188 || // comma key
+      e.which === 194 || // comma num keypad key
+      //e.which === 8  || // backspace
+      //e.which === 17 || // ctrl
+      //e.which === 46 || // delete
+      //(e.which >= 91 && e.which <= 93) ||  // OS key
+      (e.which === 48 && event.shiftKey == true) // close parenthesis
+    ) {
+      getCSScolor(colorString,type);
+      testContrast();
+    }
+  }
+
+  function entryKeysNum(value,e) {
+    if ( /^-?\d\d?\d?$/.test(value) && // constrain input 
+      (
+        (e.which >= 48 && e.which <= 57 && event.shiftKey == false) ||
+        (e.which >= 96 && e.which <= 105) || // num keypad
+       
+        e.which === 13  || // enter
+        e.which === 9 || // tab key
+        e.which === 109 || // subtract
+        e.which === 173 || // minus
+        e.which === 189    // minus some user agents
+      ) 
+    ) {
+      setResearchOffset(value);
+    }
+  }
+////////////////////////////////////////////////////////////////////////////////
+/////////  END HEAD FUNCTIONS  •••  SEE AFTER FOOTER FOR MORE  /////////////////
+////////////////////////////////////////////////////////////////////////////////
+</script>
+</head>
+
+
+<!--  ********  ********   Begin Body ********  ********  -->
+<!--  ********  ********   Begin Body ********  ********  -->
+<!--  ********  ********   Begin Body ********  ********  -->
+
+
+
+<!--  ********  ********   Begin Body ********  ********  -->
+<!--  ********  ********   Begin Body ********  ********  -->
+<!--  ********  ********   Begin Body ********  ********  -->
+
+
+
+<!--  ********  ********   Begin Body ********  ********  -->
+<!--  ********  ********   Begin Body ********  ********  -->
+<!--  ********  ********   Begin Body ********  ********  -->
+
+
+
+<body id="bodyid" onload="setBrowser(); getColorURL();">
+<main class="wrapper">
+
+  <a href="https://www.myndex.com/WEB/Perception">
+  <header class="smallHeader sticky"> &nbsp; </header></a>
+<br>
+<br>
+  <h1 class="mastHead"  style="">APCA&nbsp;CONTRAST&nbsp;CALCULATOR</h1>
+  
+<div style="position: relative; Margin: 1em auto;">
+  <div id="null01" class="contrastChart pie">
+<table id="tableSamples" class='conformScore'>
+    <tr>  
+    <th class='colorPicker' id="TXTpickerWrap" rowspan='2' >
+    <input type="color" id="TXTpicker"
+            oninput="getCSScolor(this.value,'TXT'); inputTXT.value = this.value; testContrast();">
+        </th>
+    
+    <th class='tableTitle'colspan='3'>TEXT COLOR</th>
+
+        <th class='tableContrast' onclick="swapColors()" colspan='2' rowspan='2'><span style="font-size: 1em; letter-spacing: 0.1em;">APCA<span style="font-size: 0.6em;  letter-spacing: 0;"><br>CONTRAST<br></span><span style="font-family: 'Barlow Condensed'; font-size: 0.95em;font-weight: bold; line-height: 1.1;" id="contrastResultTable"></span><br><span class="helvetiFont" style="line-height: 1;">Click To Swap</span>
+        </th>
+
+    <th class='tableTitle'colspan='3'>BACKGROUND</th>
+    
+    <th class='colorPicker' id="BGpickerWrap"  rowspan='2' >
+    <input type="color" id="BGpicker"
+            oninput="getCSScolor(this.value,'BG'); inputBG.value = this.value; testContrast();">
+        </th>
+  </tr>
+  <tr>
+        <th class='tableTitle'colspan='3'>
+          <span class="TXTinput">
+          <input
+            id="inputTXT"
+            type="text"
+            value=""
+            onclick="this.select();"
+            onkeyup="entryKeys(this.value,'TXT',event);"
+            onblur="getCSScolor(this.value,'TXT'); testContrast();">
+        </span><br>
+        <span class="code" id="TXTvalidText"></span> 
+        </th>
+
+
+    <th class='tableTitle'colspan='3'><span class="TXTinput">
+          <input
+            id="inputBG"
+            type="text"
+            value=""
+            onclick="this.select();"
+            onkeyup="entryKeys(this.value,'BG',event);"
+            onblur="getCSScolor(this.value,'BG'); testContrast();">
+        </span><br>
+        <span class="code" id="BGvalidText"></span> 
+        </th>
+  </tr>
+      <tr id="scoreTableRowA">
+        <th class='tableTitle'colspan='10'>
+
+          All Font Sizes are in CSS px • Fonts Under 80px Shown With Colors at Actual Size &amp; Weight
+        </th>
+  </tr>
+
+  <tr class='weightHeader'>
+    <th class='scoreHeader'>LEVEL</th>
+      <th id="weight1" class="weight weight1">100</th>
+      <th id="weight2" class="weight weight2">200</th>
+      <th colspan='2' id="weight3" class="weight weight3">300<div class="weightWord">Light</div></th>
+      <th colspan='2' id="weight4" class="weight weight4">400<div class="weightWord">Normal</div></th>
+      <th id="weight5" class="weight weight5">500</th>
+      <th id="weight6" class="weight weight6">600</th>
+      <th colspan='2' id="weight7" class="weight weight7">700<div class="weightWord ">Bold</div></th>
+      <th id="weight8" class="weight weight8">800</th>
+      <th id="weight9" class="weight weight9">900</th>
+  </tr>
+
+  <tr id='tableScore5'>
+    <th>Preferred</th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr id='tableScore4'>
+    <th colspan='2'>SCORE 4</th>
+    <td></td>
+    <td></td>
+    <td colspan='2'></td>
+    <td colspan='2'></td>
+    <td></td>
+    <td></td>
+    <td colspan='2'></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr id='tableScore3'>
+    <th>SCORE 3</th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr id='tableScore2'>
+    <th>SCORE 2</th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr id='tableScore1'>
+    <th>SCORE 1</th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  
+</table>
+</div>
+</div> <!-- Close Main Interface -->
+
+
+<hr>
+
+<h2 class="mastHead fs20"  style="">SIMPLE VERSION for CONTENT CREATORS</h2>
+<h3>This version shows only score 4 fonts, and weights 200 thru 700.</h3>
+
+
+<div id="demoArea"> 
+  <h1 style="text-align: center;">APCA Visual&nbsp;Contrast Calculator</h1>
+  
+  
+  
+	<a id="colorURL" class="myndexButton flr tac" style="width: 35%; margin: 1em; padding: 0.3em 1em;" onclick="createColorURL('colorURL')">Generate a URL of This Color Pair</a>
+	<div id="colorWarn" class="" style="">
+		<div style=""><span class="colorWarnX" style="" onclick="document.getElementById('colorWarn').style.display='none'">&times;</span>
+		<h3 style="">Please Enter Valid Colors First!</h3>
+		</div>
+	</div>
+<script>
+  let dialog = document.getElementById('colorWarn');
+  window.onclick = function(event) {
+    if (event.target == dialog) {
+    dialog.style.display = "none";
+    }
+  }
+</script>
+
+    <input class="flr clr" type="text" id="URLresult" value="" onclick="this.select();">
+
+    <div class="textBox" style="">
+      <p>Click on a color patch next to "Text" or "Background" above to use the HTML5 color-picker (modern browsers). Otherwise enter color values in the text-box as a three or six digit hex value, the '#' is not necessary. Other valid entries are integer rgb(r,g,b) or an HTML color name (see bottom of page for list).</p>
+
+    </div>
+
+
+      <h2 class="mastHead"  style=""><em>APCA W3 PUBLIC BETA</em></h2>
+
+  <p class="p10">PROBLEMS? Try a "Forced Reload" on your browser, and/or clear the cache. For the public betas and experimental features, see the beta site: <a href="/SAPC/">SAPC BETA</a>. For comments or to report issues, please visit us on <a href="https://github.com/Myndex/SAPC-APCA">GitHub.</a>
+</div> <!--    ********    Close Demo Area ********    -->         
+    
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+   style="display:block; text-align:center;"
+   data-ad-layout="in-article"
+   data-ad-format="fluid"
+   data-ad-client="ca-pub-8528204478975741"
+   data-ad-slot="8819425657"></ins>
+<script async>
+   (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<div class="m20 p12 b08 br20 bcO PbgO cBr  fs11 fw5"><h2>About This Month's Default Color Pair</h2> The default pair of colors in the tool this month, to kick off the new year, is an orange <code>#ea7439</code> background and a white text. This is the color like the infamous <a href="https://www.bounteous.com/insights/2019/03/22/orange-you-accessible-mini-case-study-color-ratio/"> "orange button problem"</a> that originally brought our attention to the math issues in the old contrast method. As you can see above, APCA indicates a much more accurate contrast prediction based on perception. 
+    
+<br><br>A little different than the article, the color above <code>#ea7439</code> and white fails WCAG2 completely, yet if you replace the white with black, WCAG2 math gives it a 7:1 (!!!) Here, with the perceptually accurate SAPC/APCA G series, it passes with white, but black fails (as it should) for all but very large fonts. 
+  
+<br><br>(If you came to the site with a different color pair in the URL, <a href="" id="orangeProblem" onclick="createColorURL('orangeProblem','ea7439','ffffff');">click here to load the demo colors</a>.)<!-- e86826  #ea7439 -->
+
+  <br><br>
+Click the white patch to the left of the text color entry to bring up a color picker that should update live (most browsers) and slide down to black to see the display update recommended minimum font sizes in real time. Dragging all the way to black, you'll see the tool indicates a lower contrast as per perception.
+<br><br>
+It should be noted that those with most forms of CVD prefer the white text as well. Take a screenshot and view it on our <a href="/CVD/">CVD simulator</a> to see how contrast actually improves for white text on orange.
+  <br><br>
+  
+  <h2>For a more in depth look at this, please see<br>this <a href="https://gist.github.com/Myndex/1dadb6dcac596f1cd7a5686a076f697f">GitHub Gist</a> with colorful examples.</h2>
+  
+
+</div>
+
+<hr class="clb" style="">
+
+
+<section class="explainer">
+
+  <h1 class="h1Query" style="">Accessible Contrast </h1>
+  <h2 class="h2Query">Relative to Font Size and Weight</h2> 
+  <p>The table below is current as of January 2022, though as this is a public beta, there may be occasional discrepancies with the above automated font display above.</p>
+
+  <h2 class="Luv275 fw7">GENERAL GUIDELINES on LEVELS</h2>
+  <ul>
+    <li><b>90</b> • Preferred level for fluent text and columns of body text. Also a suggested minimum for extremely thin fonts. Lc 90 is a <em>suggested maximum</em> for <strong>very large and bold fonts</strong> (greater than 36px bold), and large areas of color.
+  
+    <li><b>75</b> • The <em>minimum</em> level for columns of body text. Also, should be used for any text where readability is important. "Sort of" like 6:1 to 7:1 relative to WCAG2.
+  
+    <li><b>60</b> • The <em>minimum</em> level recommended for readable content text, that is, text you want people to read. "Sort of" like the old 4.5:1 in WCAG2.
+  
+    <li><b>45</b> • The <em>minimum</em>  for larger text such as headlines, and large text that should be readably fluently. "Sort of" like the old 3:1 in WCAG2.
+  
+    <li><b>30</b> • The absolute minimum for any text, including text for spot reading such as placeholder text and disabled element text, and the minimum for "understandable" or "uniquely identifiable" non-text such as icons. Large discernible-only non-text content can be below this however.
+  
+    <li><b>15</b> • The absolute minimum for any non-text that needs to be discernible such as buttons, but does not include fine details. Designers should treat anything below this level as invisible, as it will not be visible for many users.
+  </ul>
+  
+  <h2 class="Luv265 fw7">Using the Lookup Table</h2>
+
+  <ul>
+    <li>Cross index reference font size (in CSS px) to CSS weight. 
+    <li>Reference fonts for comparison include Helvetica Neue, Helvetica, K2D, Fira Sans, Kanit, and Arial.
+    <li>APCA Contrast <span class="Lc"><sup>L<sup>c</sup></sup></span> value must meet or exceed the value listed, however, values may be interpolated between the two closest values.
+    <li>For light text on a dark background the APCA tool will show a negative <span class="Lc"><sup>L<sup>c</sup></sup></span> value. Simply use the absolute (positive) value. For example, if the APCA value is <span class="Lc"><sup>L<sup>c</sup></sup></span>-58, use <span class="Lc"><sup>L<sup>c</sup></sup></span>58.   
+    <li>A<span class="underWeightSpan"> &osol; </span>indicates that a larger font size (or heavier font weight) must be used. 
+  </ul>
+
+  <div style="overflow: scroll;">
+    <table class="TFtable visReadTable APCAtable">
+        <tr>
+          <th colspan="11" class="tableTitle" style="height: 2em; font-size: 1.5em;">APCA CONTRAST LOOKUP TABLE</th>
+        </tr>
+              <tr>
+          <th colspan="11" class="tableTitle" style="height: 1.1em; padding: 0 0 12px; font-size: 1em; font-weight: 300; vertical-align: top; letter-spacing: 0.2em;">Version 0.0.98-g-b4</th>
+        </tr> 
+        <tr>
+          <th colspan="2" class="tableTitle" style="font-size: 1em;"></th>
+          <th colspan="9" class="tableTitle" style="font-size: 1.2em; letter-spacing: 0.15em;">Reference Font Weight</th>
+        </tr>
+        <tr>
+          <th colspan="2" class="tableTitle" style="font-size: 1em;">Font<br>Size</th>
+          <th class="weight weight1">100</th>
+          <th class="weight weight2">200</th>
+          <th class="weight weight3">300</th>
+          <th class="weight weight4">400<div class="">Normal</div></th>
+          <th class="weight weight5">500</th>
+          <th class="weight weight6">600</th>
+          <th class="weight weight7">700<div class="">Bold</div></th>
+          <th class="weight weight8">800</th>
+          <th class="weight weight9">900</th>
+        </tr>
+        <tr style="">
+          <th class="tableTitle" style="color: #8af2ff; background-color: #066; font-size: 1.1em;">pt</th>
+          <th class="tableTitle" style="color: #fff; background-color: #28b; font-size: 1.1em;">px</th>     
+          <th colspan="9" class="tableTitle" style="font-size: 1.1em; letter-spacing: 0.15em; color: #FFF; background-color: #629;">APCA Contrast Value (L<sup>c</sup>)</th>
+        </tr>
+
+
+<tr>
+  <td class="ptText">7.5</td>
+  <td class="pxText">10</td>
+  <td class="underWeight">⊘</td>
+  <td class="underWeight">⊘</td>
+  <td class="underWeight">⊘</td>
+  <td class="copyOnly">60 ©§™</td>
+  <td class="copyOnly">60 ©§™</td>
+  <td class="copyOnly">60 ©§™</td>
+  <td class="copyOnly">60 ©§™</td>
+  <td class="underWeight">⊘</td>
+  <td class="underWeight">⊘</td>
+</tr>
+
+<tr>
+  <td class="ptText">8.25</td>
+  <td class="pxText">11</td>
+  <td class="underWeight">⊘</td>
+  <td class="underWeight">⊘</td>
+  <td class="underWeight">⊘</td>
+  <td class="copyOnly">60 ©§™</td>
+  <td class="copyOnly">60 ©§™</td>
+  <td class="copyOnly">60 ©§™</td>
+  <td class="copyOnly">60 ©§™</td>
+  <td class="underWeight">⊘</td>
+  <td class="underWeight">⊘</td>
+</tr>
+<tr>
+  <td class="ptText">9</td>
+  <td class="pxText">12</td>
+  <td class="underWeight">⊘</td>
+  <td class="underWeight">⊘</td>
+  <td class="copyOnly">75 ©§™</td>
+  <td class="bgOrLt">×90</td>
+  <td class="bgOrLt">×85</td>
+  <td class="bgOrLt">×80</td>
+  <td class="bgOrLt">×75</td>
+  <td class="underWeight">⊘</td>
+  <td class="underWeight">⊘</td>
+</tr>
+<tr>
+  <td class="ptText">10.5</td>
+  <td class="pxText">14</td>
+  <td class="underWeight">⊘</td>
+  <td class="underWeight">⊘</td>
+  <td class="copyOnly">75 ©§™</td>
+  <td class="g4gVal90 bodyText">90</td>
+  <td class="g4gVal85 bodyText">85</td>
+  <td class="g4gVal80 bodyText">80</td>
+  <td class="g4gVal75 bodyText">75</td>
+  <td class="underWeight">⊘</td>
+  <td class="underWeight">⊘</td>
+</tr>
+<tr>
+  <td class="ptText">12</td>
+  <td class="pxText">16</td>
+  <td class="underWeight">⊘</td>
+  <td class="copyOnly">75 ©§™</td>
+  <td class="g4gLite">95</td>
+  <td class="g4gVal80 bodyText">80</td>
+  <td class="g4gVal75 bodyText">75</td>
+  <td class="g4gVal70 bodyText">70</td>
+  <td class="g4gVal65 bodyText">65</td>
+  <td class="underWeight">⊘</td>
+  <td class="underWeight">⊘</td>
+</tr>
+<tr>
+  <td class="ptText">13.5</td>
+  <td class="pxText">18</td>
+  <td class="underWeight">⊘</td>
+  <td class="copyOnly">75 ©§™</td>
+  <td class="g4gVal90 bodyText">90</td>
+  <td class="g4gVal75 bodyText">75</td>
+  <td class="g4gVal70 bodyText">70</td>
+  
+  <td class="g4gVal65 bodyText">65</td>
+  <td class="g4gVal60 bodyText">60</td>
+  <td class="bgOrLt">×60</td>
+  <td class="underWeight">⊘</td>
+</tr>
+
+<tr>
+  <td class="ptText">15.8</td>
+  <td class="pxText">21</td>
+  <td class="underWeight">⊘</td>
+  <td class="g4gLite">95</td>
+  <td class="g4gVal85 bodyText">85</td>
+  <td class="g4gVal70 bodyText">70</td>
+  <td class="g4gVal65 bodyText">65</td>
+  
+  <td class="g4gVal60 bodyText">60</td>
+  <td class="g4gVal55 bodyText">55</td>
+  <td class="bgOrLt">×55</td>
+  <td class="bgOrLt">×55</td>
+</tr>
+<tr>
+  <td class="ptText">18</td>
+  <td class="pxText">24</td>
+  <td class="underWeight">⊘</td>
+  <td class="g4gVal90">90</td>
+  <td class="g4gVal75 bodyText">75</td>
+  <td class="g4gVal60 bodyText">60</td>
+  <td class="g4gVal55 bodyText">55</td>
+  
+  <td class="g4gVal50 bodyText">50</td>
+  <td class="g4gVal45 bodyText">45</td>
+  <td class="bgOrLt">×45</td>
+  <td class="bgOrLt">×45</td>
+</tr>
+<tr>
+  <td class="ptText">21</td>
+  <td class="pxText">28</td>
+  <td class="underWeight">⊘</td>
+  <td class="g4gVal85">85</td>
+  <td class="g4gVal70">70</td>
+  <td class="g4gVal55">55</td>
+  <td class="g4gVal50">50</td>
+  
+  <td class="g4gVal45">45</td>
+  <td class="g4gVal40">40</td>
+  <td class="g4gVal35">35</td>  
+  <td class="g4gVal30">30</td>
+</tr>
+
+
+<tr>
+  <td class="ptText">25</td>
+  <td class="pxText">34</td>
+  <td class="g4gLite">95</td>
+  <td class="g4gVal80">80</td>
+  <td class="g4gVal65">65</td>
+  <td class="g4gVal50">50</td>
+  <td class="g4gVal45">45</td>
+  
+  <td class="g4gVal40">40</td>
+  <td class="g4gVal35">35</td>  
+  <td class="g4gVal30">30</td>
+  <td class="g4gValNT">30</td>
+  
+</tr>
+<tr>
+  <td class="ptText">31.5</td>
+  <td class="pxText">42</td>
+  
+  <td class="g4gLite">90</td>
+  <td class="g4gVal75">75</td>
+  <td class="g4gVal60">60</td>
+  
+  <td class="g4gVal45">45</td>
+  <td class="g4gVal40">40</td>
+
+  <td class="g4gVal35">35</td>  
+  <td class="g4gVal30">30</td>
+  <td class="g4gValNT">30</td>
+  <td class="g4gValNT">30</td>
+</tr>
+
+<tr>
+  <td class="ptText">54</td>
+  <td class="pxText">72</td>
+  
+  <td class="g4gLite">75</td>
+  <td class="g4gVal60">60</td>
+  <td class="g4gVal45">45</td>
+  
+  <td class="g4gVal40">40</td>
+  <td class="g4gVal35">35</td>
+  
+  <td class="g4gVal30">30</td>
+  <td class="g4gValNT">30</td>
+  <td class="g4gValNT">30</td>
+  <td class="g4gValNT">30</td>
+</tr>
+<tr>
+  <td class="ptText">72</td>
+  <td class="pxText">96</td>
+  
+  <td class="g4gLite">60</td>
+  <td class="g4gVal50">50</td>
+  <td class="g4gVal40">40</td>
+  
+  <td class="g4gVal35">35</td>
+  <td class="g4gVal30">30</td>
+  
+  <td class="g4gValNT">30</td>
+  <td class="g4gValNT">30</td>
+  <td class="g4gValNT">30</td>
+  <td class="g4gValNT">30</td>
+</tr>
+</table>  
+<hr>
+    <p><b>About the colors in these tables:</b> The colors in these tables are designed to be discernible by all forms of color vision deficiency.</p>
+    
+      <ul class="fs09 por pol15 fso"><li>The warning colors are grouped in a hue category that separates them from other colors for all CVD types.
+        <li>Important color codes also have a symbol such as &times;, as color should never be the only coding for important information.
+        <li>Less important codes are directly related to the cell content, such as level 60, thus are self-symbolized.
+        <li>This follows into the accompanying legend.
+      </ul>
+    <hr>
+    
+    <table class="centeredTable" style="" >
+        <tr style="color: #FFF; background-color: #309;border: 1px solid #94B;">
+          <th colspan="1" class="tableTitle" style="text-align: center; height: 2em; font-size: 1.5em;border: 1px solid #94B;">APCA CONTRAST COLOR CODES</th>
+        </tr>
+        <tr>
+          <td class="colorCodes code01"><span style="font-size:1.8em; line-height:0.2;">⊘</span> — PROHIBITED Except for Decorative Purposes</td>
+        </tr>
+        <tr>
+          <td class="colorCodes code02"><span style="font-size:1.4em; font-weight:700;">©§™</span> — May be used for Copyright/ByLine ONLY</td>
+        </tr>
+        <tr>
+          <td class="colorCodes code03"><span style="font-size:1.8em; line-height:0.7;">&times;</span> — Do Not Use for Body Text (Blocks or Columns)</td>
+        </tr>
+        <tr>
+          <td class="colorCodes code04">Weight 100 Fonts Should be Avoided</td>
+        </tr>   
+        <tr>
+          <td class="colorCodes code05"><span style="font-size:1.4em; font-weight:700;">&gt;</span> — Minimum Contrast for Text</td>
+        </tr>
+        <tr>
+          <td class="colorCodes code06">APCA 75 — Similar to WCAG 7∶1 <span>for BG #ddd</span></td>
+        </tr>       
+        <tr>
+          <td class="colorCodes code07">APCA 60 — Similar to WCAG 4.5∶1 <span>for BG #d0d0d0</span></td>
+        </tr>
+        <tr>
+          <td class="colorCodes code08">APCA 45 — Similar to WCAG 3∶1 <span>for BG #ccc</span></td>
+    </tr>
+  </table>
+</div>
+  <ul>
+    <li>Values shown are for common sans-serif fonts (e.g., Helvetica, Arial, Verdana, Montserrat, Roboto, Calibri, Trebuchet).
+    <li>Many serif fonts should use values for the row above (e.g., Times, Georgia, Cambria, Courier), and especially should be compared in terms of x-height.
+    <li>Decorative, unusual, and very thin fonts should be avoided for columns of body text.  
+    <li>Due to the vast variety of font designs, designers should visually compare an unusual font to a standard font such as Helvetica, using the size and weight of Helvetica that most closesly matches the appearance of the tested font as a guide.
+    <li>Designers are cautioned that bypassing default font smoothing can drastically reduce contrast for small or thin fonts. For instance, the use of "webkit-font-smoothing: antialiasing" is strongly discouraged.  
+  </ul>
+
+</section><!-- ********    Close Guidlines Section     ********    -->
+
+<hr class="clb mb0" style=""> 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+   style="display:block; text-align:center;"
+   data-ad-layout="in-article"
+   data-ad-format="fluid"
+   data-ad-client="ca-pub-8528204478975741"
+   data-ad-slot="8819425657"></ins>
+<script async>
+   (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<hr class="clb mt0" style="">
+
+<section  class="explainer"> 
+  <h1 style="color: #206;">The Science Behind SAPC/APCA</h1>
+  <h3 class="h3Query" style="text-align: center;"><b>A</b>dvanced <b>P</b>erceptual <b>C</b>ontrast <b>A</b>lgorithm</h3>
+
+  <div>
+    <p class="dropCapSimple">For a brief overview and explanation of the SAPC math and methods, take a look at <a id="null02" href="/WEB/WCAG_CE17polarity">Experiment Results CE17</a>, one of the polarity experiments. The discussion includes graphs comparing SAPC to other contrast methods, and related discussions.</p>
+    <p>Also, as spatial frequency is one of the most important predictors of contrast perception and readability, see <a id="null03" href="/WEB/WCAG_CE14weight">Experiment Results CE14-weight</a> for further explanations.</p>
+    <p><span class="fw6">The "TL;DR" is:</span > like all human perceptions, color and contrast are extremely context dependent. In terms of readability, there is a "critical contrast" level, and that level is more dependent on spatial frequency, which relates to font weight, than a given color pair. </p>
+    <p>To accurately predict contrast perception, the Spatial <em>(font weight &amp; size)</em>, color <em>(perceived lightness difference between text and background)</em>, and context <em>(ambient light, surroundings, intended purpose of the text)</em> all need to be taken into account.</p>
+  <h3 class="h3Query" style="text-align: center;">What is the Contrast of This Page?</h3>
+    <p>Most of this page is set at over 120 in "old" APCA numbers, which now is approximately 90<span class="Lc"><sup>L<sup>c</sup></sup></span>. To help differentiate between dark text on a light background and light text on dark, the math reports the latter as a negative value. But for purposes of the font lookup table, ignore the minus sign and use the absolute value.</p>
+    
+    
+    <a id="null04" href="/WEB/Perception">
+    <button class="myndexButton queryButton fll" style="">
+    <div class="fll" style="padding: 0.4em 4px; font-family: 'Palatino', 'Georgia','Bookman', 'Times New Roman','Times','serif'; letter-spacing: 0.01em; line-height: 0.2; font-size: 2em; font-style: normal;">&Delta;&gamma; &nbsp;
+      </div>Myndex Perception Research Experimental Results Listing</button>
+    </a>
+  
+    <a id="null05" href="/CVD/">
+    <button class="myndexButton queryButton flr" style="padding: 0.3em;">
+    <img class="fll " style="margin: 0.3em; padding: 0" src="/CVD/faviconMasterSmall.jpg"  height="40">
+      <div class="flr" style="margin: 0.3em; padding:0;" >Myndex&nbsp;Color&nbsp;Vision <br>Deficiency&nbsp;Simulator</div></button>
+    </a> 
+  <div class="clearfix"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </div>
+  
+  </div>
+</section><!-- ********    Close Science Links Section     ********    -->
+ 
+<hr class="clb mb0" style="">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+   style="display:block; text-align:center;"
+   data-ad-layout="in-article"
+   data-ad-format="fluid"
+   data-ad-client="ca-pub-8528204478975741"
+   data-ad-slot="8819425657"></ins>
+
+<script async>
+   (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<hr class="clb mt0" style="">
+
+<div class="gammaContainer" style="Margin: 0;">
+  <h1 class="cW">MONITOR GAMMA CHECK</h1>
+   
+   <div class="centered gamma " style="">sRGB gamma target. Ideally the targets appear uniform (i.e. the thick border looks the same as the inner grid). It is important that the image be at 100% and not scaled - make sure your browser says "actual size".<br>
+
+<fieldset>
+<div id="gammaBox22d" class="gammaBoxR"><span class=" gammaLabel cGr6">Background Target Value #22 (d)</span></div>
+</fieldset>
+
+<fieldset>
+<div id="gammaBox33d" class="gammaBoxR"><span class=" gammaLabel cGr7">Background Target Value #33 (d)</span></div>
+</fieldset>
+
+<fieldset>
+<div id="gammaBox44d" class="gammaBoxR"><span class=" gammaLabel cGr8">Background Target Value #44 (d)</span></div>
+</fieldset>
+
+<fieldset>
+<div id="gammaBox55d" class="gammaBoxR"><span class="gammaLabel cGr9">Background Target Value #55 (d)</span></div>
+</fieldset>
+
+
+<fieldset>
+<div id="gammaBox80d" class="gammaBoxR"><span class="gammaLabel cGr3">Background Target Value #80 (d)</span></div>
+</fieldset>
+
+<fieldset>
+<div id="gammaBoxA0d" class="gammaBoxR"><span class="gammaLabel cGr6">Background Target Value #a0 (d)</span></div>
+</fieldset>
+
+
+
+   </div>
+</div>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+   style="display:block; text-align:center;"
+   data-ad-layout="in-article"
+   data-ad-format="fluid"
+   data-ad-client="ca-pub-8528204478975741"
+   data-ad-slot="8819425657"></ins>
+<script>
+   (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<footer>
+  <a id="null06" href="/CVD/"><button class="myndexButton flr mr20"><img class="fll " style="margin: 0 0.6em 0 0; padding: 0" src="/CVD/faviconMasterSmall.jpg"  height="60"><div class="flr" style="margin: 0.2em; padding:0;" >Myndex&nbsp;Color&nbsp;Vision <br>Deficiency&nbsp;Simulator</div></button></a>   
+    
+  <div style="font-size: 12px;">Copyright &copy; 2019 – 2021 by Andrew Somers. All Rights Reserved.
+    <br><b>THIS PAGE IS PROPRIETARY AND NOT LICENSED FOR THIRD PARTY USE.</b>
+    <br>Public License options at the SAPC/APCA Repository: <a href="https://github.com/Myndex/SAPC-APCA/">https://github.com/Myndex/SAPC-APCA/</a>
+    <br>This project is part of the <a href="https://www.myndex.com/WEB/Perception">Myndex Web Perception Experiment.</a>
+    
+  </div>
+
+
+
+  <div class="copyright fs07 lh10">Copyright &copy; 2019 – 2022 by MTI.  All Rights Reserved. •<br>
+        <i>"Myndex" and the Myndex Eye Logo are trademarks of Myndex Technologies.</i><br>
+
+
+  </div>
+  </div>
+</footer>
+</main>
+<script>
+
+////////////////////////////////////////////////////////////////////////////////
+/////////  FOOTER FUNCTIONS  ///////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+/////////  DEBUG AND COLOR ANALYSIS FUNCTIONS //////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+//~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/
+//~/~  RESEARCH ONLY ITEM: kitchenSink  ~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/
+//~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/~/
+
+//*  //  SWITCH A
+function kitchenSink(type) { 
+  
+  return '<div class="tac cW bgN br05 fs20 fw3 ">The Kitchen Sink is Leaking Again</div>';
+}
+// */ // END SWITCH A
+
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+/////////  CONFORMANCE SCORING CONSTANTS AND ARRAYS  \//////////////////////////
+////////                                              \/////////////////////////
+///////                                                \////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////////////
+/////////////  NEW D SERIES    \///////////////////////////////////////////
+
+  const scoreLevels1DD = [20,30,40,50,60,80,100];
+  const scoreLevels1DDlen = scoreLevels1DD.length;
+
+  const sansIndex = [0,1,2,3,4,5,6,];
+  const sansIndexLen = sansIndex.length;
+  const serifIndex = [false,1,2,3,4,5,6,];
+    
+    // for the score array needed for the original samples section
+function createScoreArray (aLevels,aLength,bLevels,bLength) {
+  
+  let tempArray = [[]];
+  let xDimLen = bLevels[0].length;
+  let xi = 0, ai = 0, bi = bLength - 1, ti = 0;
+
+  for (; xi < aLength; xi++) {  // instantiate tempArray
+    tempArray[xi] = bLevels[xi].slice(0,xDimLen);
+  }
+
+  for (; ai < aLength; ai++) { // Set tempArray values
+    bi = bLength - 1;
+    for (; bi > 0; bi-- ) {
+      if ( aLevels[ai] == bLevels[bi][0] ) {
+        ti = 0;
+        tempArray[ai][xDimLen - 1] = bLevels[bi][ti];
+        for (; ti < xDimLen - 1; ti++){
+          tempArray[ai][ti] = bLevels[bi][ti + 1];
+        }
+      } 
+    } 
+  } 
+          //console.log(tempArray);
+  return tempArray;
+}
+
+
+// For the following arrays, the Y axis is contrastArrayLen
+// The two x axis are weightArrayLen and scoreArrayLen
+
+const contrastArrayD = [200,110,100,90,80,70,60,55,50,45,40,35,30,25,20,15,12,11,7,0,];
+const contrastArrayLenD = contrastArrayD.length;
+
+const weightArray = [0,100,200,300,400,500,600,700,800,900];
+const weightArrayLen = weightArray.length;
+
+const scoreArray = [0,1,2,3,4,5];
+const scoreArrayLen = 6;
+
+
+ //////////////////////////////////////////////////////////////////////////
+/////  FONT TABLE DIALOGS  \//////////////////////////////////////////////
+
+
+const scoreColor = ['c00','b60','9a7900','08a','008d00','a0e'];
+
+const normalColspan = ''; // colspan="1"
+const simpleColspan = 'colspan="2"';
+const mobileColspan = 'colspan="2"';
+
+
+let mode = 'simple'; // 'normal' 'simple' 'mobile'
+let tableScore4 = document.getElementById('tableScore4');   
+let modeColspan = normalColspan;
+
+if (mode === 'simple') { tableScore4.style = 'height: 120px; max-height: 120px;'; }
+
+
+const scoreTextArray = ['<span class="fs25">&#x1F6AB</span>',
+          'SCORE<br><span class="fs20 fw7">1</span>',
+          'SCORE<br><span class="fs20 fw7">2</span>',
+          'SCORE<br><span class="fs20 fw7">3</span>',
+          'SCORE<br><span class="fs20 fw7">4</span>',
+          '<span class="dib fs13 fw5" style="font-family: \'Barlow Condensed\';">PREFERRED<br>(5)</span>',
+          '<span class="">SCORE</span>',];
+
+const scoreTextArraySimple = ['<span class="fs35">&#x1F6AB</span>',
+              '<span class="fs35 fw6">1</span>',
+              '<span class="fs35 fw6">2</span>',
+              '<span class="fs35 fw6">3</span>',
+              '<span class="fs35 fw6">4</span>',
+              '<span class="fs14 fw6">PREF</span>',
+              '<span class="fs12">LEVEL</span>',];
+
+const scoreTextArrayMobile = ['<span class="fs20">&#x1F6AB</span>',
+              '<span class="fs20 fw7">1</span>',
+              '<span class="fs20 fw7">2</span>',
+              '<span class="fs20 fw7">3</span>',
+              '<span class="fs20 fw7">4</span>',
+              '<span class="dib fs11 fw5" style="font-family: \'Barlow Condensed\';">PREF</span>',
+              '<span class="fs08 fw05">SCORE</span>',];
+    // depreciate
+const scoreTextProhibit = '<th><span class="fs20">&#x1F6AB</span></th>';
+
+
+
+function ampSampTable9x5partA(){ 
+    return  '<td colspan="9" rowspan="5" class="underWeightAll" style="color: var(--textColor, #123); background-color: var(--bgColor, #bad); padding: 12px; max-height: 388px; vertical-align: top;">';
+  }
+function ampSampTable9x5partAResearch(){ 
+    return  '<td colspan="9" rowspan="5" class="underWeightAll researchCell" style="color: var(--textColor, #123); background-color: var(--bgColor, #123); padding: 12px; max-height: 388px; vertical-align: top;">';
+  }
+
+
+function ampSampTable9x5noSymbol(){ 
+    return  '<span class="dib mt0 fs20 pr04 por pot04 lh05"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 120 120" width="100" height="100"><circle cx="60" cy="60" r="50" stroke=" var(--textColor, #123)" stroke-width="10" fill="none"/><line x1="28" y1="28" x2="92" y2="92" stroke=" var(--textColor, #123)" stroke-width="8"/></svg></span>';
+    }
+
+let ampSampTable9x5horsey = '<span class="dib fs20 pr02 por lh10" style="margin: -32px 24px 0 32px;  float: left;">♞<br>☻<br>⌚︎</span>';
+
+
+function ampSampTable9x5AmpSamp () { 
+    return  '<div id="ampSamp2" style="vertical-align: middle; font-size: 128px; color: var(--textColor, #123); border-color: var(--textColor, #123);">'
+    
+    + '<div class="montFont4 mb0" ><div class="dib por fs12 fw1" style="top:2px; left: -10px; font-family: Montserrat; letter-spacing:-0.16em;"><span class="fw9 ls02">I</span><span class="fw7 ls-04">I</span><span class="fw5 ls-07">I</span><span class="fw4 ls-09">II</span><span class="fw3 ls-11">III</span><span class="fw2 ls-14">IIII</span>IIIII</div>This is a NORMAL 12px Minimum Size TEXT EXAMPLE<div class="dib por fs12 fw1" style="top:2px; left: 12px; font-family: Montserrat; letter-spacing:-0.16em;">IIIII<span class="fw2 ls-14">IIII</span><span class="fw3 ls-11">III</span><span class="fw4 ls-07">II</span><span class="fw5 ls-03">I</span><span class="fw7 ls04">I</span><span class="fw9 ls05">I</span>&nbsp;</div></div>'
+    
+    + '<div class="montFont2 mb10" ><div class="dib por fs12 fw1" style="top:2px; left: -10px; font-family: Montserrat; letter-spacing:-0.16em;"><span class="fw9 ls02">I</span><span class="fw7 ls-04">I</span><span class="fw5 ls-07">I</span><span class="fw4 ls-09">II</span><span class="fw3 ls-11">III</span><span class="fw2 ls-14">IIII</span>IIIII</div>This is a THIN TEXT EXAMPLE<div class="dib por fs12 fw1" style="top:2px; left: 12px; font-family: Montserrat; letter-spacing:-0.16em;">IIIII<span class="fw2 ls-14">IIII</span><span class="fw3 ls-11">III</span><span class="fw4 ls-07">II</span><span class="fw5 ls-03">I</span><span class="fw7 ls04">I</span><span class="fw9 ls05">I</span>&nbsp;</div></div>'
+
+    + '<div class="montFont2 m00" ><div class="dib por fs14 fw1 m0a" style="top:-8px; font-family: Montserrat,Jost; letter-spacing:-0.16em;">|||||<span class="fw2 ls-14">||||</span><span class="fw3 ls-11">|||</span><span class="fw4 ls-07">||</span><span class="fw5 ls-03">|</span><span class="fw7 ls04">|</span><span class="fw9 ls05">|</span>&nbsp;<span class="fw9 ls02">|</span><span class="fw7 ls-04">|</span><span class="fw5 ls-07">|</span><span class="fw4 ls-09">||</span><span class="fw3 ls-11">|||</span><span class="fw2 ls-14">||||</span>|||||</div></div>'   
+
+    + '<div class="dib por fs07 fw1" style="top: -20px; right: 12px; font-family: Montserrat; letter-spacing: -16px;">III<span class="fw2">II</span><span class="fw3 ls-14">I</span><span class="fw4 ls-10">I</span><span class="fw5 ls-04">I</span><span class="fw7 ls04">I</span><span class="fw9 ls00">I</span>&nbsp;</div>'
+
+    + '&amp; <div class="dib por fs07 fw1" style="top: -20px; left: -14px; font-family: Montserrat; letter-spacing: -16px;"><span class="fw9 ls03">I</span><span class="fw7 ls-05">I</span><span class="fw5 ls-10">I</span><span class="fw4 ls-14">I</span><span class="fw3 ls-16">I</span><span class="fw2">II</span>III</div>'
+    
+    + '<div class="helvetiFont mt12">• This is a Small Bold Text Example — 12px at 700 Weight. • </div>'
+    + '</div>';
+  }   
+    
+let ampSampTable9x5frownyClose = '<span class="dib mt0 fs25 pl04 por pot03 lh05">&#9785;</span></span></td>';
+
+
+let ampSampTable9x5floatRight = '<span class="dib fs20 pr02 por lh10" style="margin: -32px 0 0 24px; float: right;">✈<br>☎︎<br>☯︎︎︎</span>';
+
+let ampSampTable9x5Close = '</span></td>';
+
+
+let loConMessage2Low = '<span class="dib mt01 fs09 p01 cR PbgR br05">&nbsp; &#9785; &#x1F6AB; Contrast Too Low for All &#x1F6AB; &#9785; &nbsp; </span>';
+
+let loConMessage2LowRow = '<span class="dib p02 cR PbgP br05" style="margin 0; padding:6px; ">&nbsp;&#9785; &#x1F6AB; <span class="dib por pob02 fs07 lh05">Contrast Too Low for This Score Level</span> &#x1F6AB; &#9785;&nbsp; </span>';
+
+let loConMessage2LowSimple = '<div style="position:relative; top: 0px;"><span class="dib m00 p02 cR PbgP br05" style="margin 0; padding:6px; ">&#x1F6AB; <span class="dib por fs08 lh10">Contrast<br>Too Low</span> &#x1F6AB;</span> '
+  + '<div class="dib por fs14 fw1 m0a lh01" style="top:-8px; font-family: Montserrat,Jost; letter-spacing:-0.16em;">|||||<span class="fw2 ls-14">||||</span><span class="fw3 ls-11">|||</span><span class="fw4 ls-07">||</span><span class="fw5 ls-03">|</span><span class="fw7 ls04">|</span><span class="fw9 ls05">|</span><span class="fs20 ampSample">&amp;</span><span class="fw9 ls02">|</span><span class="fw7 ls-04">|</span><span class="fw5 ls-07">|</span><span class="fw4 ls-09">||</span><span class="fw3 ls-11">|||</span><span class="fw2 ls-14">||||</span>|||||</div></div>' ;
+
+let loConMessageBadColor = '<span class="dib mt01 fs09 p01 cR PbgO br05">&nbsp;&#9785; &#x1F6AB; Invalid Color Entry &#x1F6AB; &#9785; </span>';
+
+
+function loConWarning9x5 () { 
+    return  ampSampTable9x5partA() + loConMessage2Low + '<br>'
+             + ampSampTable9x5noSymbol()
+             + ampSampTable9x5AmpSamp()
+             + ampSampTable9x5frownyClose;
+  }
+
+function badColorWarning9x5 () { 
+    return  ampSampTable9x5partA() + loConMessageBadColor + '<br>'
+             + ampSampTable9x5noSymbol()
+             + ampSampTable9x5AmpSamp()
+             + ampSampTable9x5frownyClose;
+  }
+
+function researchModeAlert9x5 () { 
+    return  ampSampTable9x5partAResearch() + researchModeAlert + '<br>'
+             + ampSampTable9x5horsey
+             + ampSampTable9x5AmpSamp()
+             + ampSampTable9x5floatRight
+             + ampSampTable9x5Close;
+  }
+
+let loConWarningRow9x1 =
+    '<td colspan="9" class="underWeight" style="background-color: #a04;">'
+            + loConMessage2LowRow + '</td>';
+
+function loConWarningRow8x1 () {
+    return '<td colspan="8" class="fs22" style="color: #'+globalTXTcolor+';background-color: #'+globalBGcolor+';">'
+            + loConMessage2LowSimple + '</td>';
+}
+
+function loConWarningRow9x1s () {
+    return '<td colspan="9" class="fs22" style="color: #'+globalTXTcolor+';background-color: #'+globalBGcolor+';">'
+            + loConMessage2LowSimple + '</td>';
+}
+
+let loConWarningRow6x1 =
+    '<td colspan="6" class="underWeight" style="background-color: #a04;">'
+            + loConMessage2LowRow + '</td>';
+
+function hiConAlertRow (scoreLev, columns) {
+
+  let useAbove = (scoreLev == 4) ? 'Use the Preferred Level' :
+                  'Use Score Level ' + (scoreLev + 1);
+  
+  return '<td colspan="'+columns+'" class="notApplicable NA'
+      + scoreLev + ' fs14 fw6">Above Minimums for Level '
+      + scoreLev + ', ' + useAbove + '</td>';
+  }
+
+
+
+
+////////////////////////////////////////////////////////////////////////////
+///// D-Series Arrays from Spreadsheet of Lookup Tables \///////////////////
+////   Based on empirical data collected 2019-2020   \//////////////////
+///
+//  D D D D D UPDATED JAN 5 2021
+//  (manual adjust for sc5)     
+//  SCORE LEVEL:    
+//  Master   1   2   3   4   5(aka: preferred)
+
+const scoreLevelsPreCalcD = [
+    [200,85.8,97.9,108.8,125,155,],
+    [110,67.7,85.8,97.9,108.8,110.0,],
+    [100,65.0,80.0,90.0,99.0,100.0,],
+    [90,61.7,73.8,81.9,89.2,95.0,],
+    [80,57.6,67.2,73.6,79.4,90.0,],
+    [70,52.9,60.2,65.1,69.5,80.0,],
+    [60,47.4,52.8,56.4,59.6,75.0,],
+    [55,44.4,49.0,52.0,54.7,70.0,],
+    [50,41.3,45.0,47.5,49.8,65.0,],
+    [45,37.9,41.0,43.0,44.8,60.0,],
+    [40,34.4,36.8,38.4,39.8,55.0,],
+    [35,30.7,32.6,33.8,34.9,50.0,],
+    [30,26.9,28.2,29.1,29.9,45.0,],
+    [25,22.8,23.8,24.4,24.9,40.0,],
+    [20,18.6,19.2,19.6,20.0,35.0,],
+    [15,14.2,14.6,14.8,15.0,30.0,],
+    [12,11.5,11.7,11.9,12.0,27.5,],
+    [11,10.6,10.8,10.9,11.0,25.0,],
+    [7,6.8,6.9,7.0,7.0,15.0,],
+    [0,0.0,0.0,0.0,0.0,0.0,],
+  ];
+            
+
+const scoreLevelsD = createScoreArray(scoreLevels1DD,scoreLevels1DDlen, scoreLevelsPreCalcD,contrastArrayLenD);
+
+
+    // D D D D D UPDATED JAN 5 2021         
+    // INTERPOLATED         
+    // SCORE LEVEL      
+    //  M 1 2 3 4 5
+const scoreDeltaD = [
+    [200,1.0,1.0,1.0,1.0,1.0,],
+    [110,1.0,1.0,1.0,1.0,1.0,],
+    [100,2.7,5.8,7.9,9.8,10.0,],
+    [90,3.4,6.2,8.1,9.8,5.0,],
+    [80,4.1,6.6,8.3,9.8,5.0,],
+    [70,4.8,7.0,8.5,9.9,10.0,],
+    [60,5.5,7.4,8.7,9.9,5.0,],
+    [55,3.0,3.9,4.4,4.9,5.0,],
+    [50,3.2,4.0,4.5,4.9,5.0,],
+    [45,3.3,4.1,4.5,5.0,5.0,],
+    [40,3.5,4.2,4.6,5.0,5.0,],
+    [35,3.7,4.3,4.6,5.0,5.0,],
+    [30,3.9,4.4,4.7,5.0,5.0,],
+    [25,4.0,4.5,4.7,5.0,5.0,],
+    [20,4.2,4.6,4.8,5.0,5.0,],
+    [15,4.4,4.7,4.8,5.0,5.0,],
+    [12,2.7,2.8,2.9,3.0,2.5,],
+    [11,0.9,1.0,1.0,1.0,2.5,],
+    [7,3.7,3.9,3.9,4.0,5.0,],
+    [0,1.0,1.0,1.0,1.0,1.0],
+  ];
+
+
+///// CONTRAST   FONT WEIGHT & SIZE ///////////////////////////////////
+
+// Font size interpolations. Here the chart was re-ordered to put
+// the main contrast levels each on one line, instead of font size per line.
+
+// D D D D D  UPDATED JAN 5 2021                  
+// ADJUSTED FOR D Interpolation                 
+
+// 999 = prohibited   888 = 'OK'   777 = nonTextOnly
+// D series for new exponents Jan 6 2021 
+
+// FW 100 200 300 400 500 600 700 800 900
+
+const fontMatrixD = [
+    [200,888,888,888,888,888,888,888,888,888,],
+    [110,42,18,14,12,11,10,10,12,14,],
+    [100,48,24,18,16,14,12,12,14,16,],
+    [90,60,30,21,17,15,13,12,14,16,],
+    [80,72,36,24,18,16,14,12,14,16,],
+    [70,96,48,30,21,17,15,13,14,16,],
+    [60,120,60,36,24,18,16,14,14,16,],
+    [55,777,72,42,30,24,18,16,15,16,],
+    [50,777,96,48,36,30,24,18,16,16,],
+    [45,777,108,60,42,33,27,21,17,17,],
+    [40,777,120,72,48,36,30,24,18,18,],
+    [35,777,777,96,72,60,48,36,30,24,],
+    [30,777,777,120,96,72,60,48,36,30,],
+    [25,777,777,777,120,96,72,60,48,36,],
+    [20,777,777,777,777,120,96,72,60,48,],
+    [15,777,777,777,777,777,120,96,72,60,],
+    [12,777,777,777,777,777,777,120,96,72,],
+    [11,777,777,777,777,777,777,777,120,96,],
+    [7,777,777,777,777,777,777,777,777,777,],
+    [0,999,999,999,999,999,999,999,999,999,],
+  ];
+
+
+
+// D D D D D  UPDATED JAN 6 2021                  
+// interpolation D  
+// FW 100 200 300 400 500 600 700 800 900
+  
+const fontDeltaD = [
+    [200,888,888,888,888,888,888,888,888,888,],
+    [110,0,0,0,0,0,0,0,0,0,],
+    [100,6,6,4,4,3,2,2,2,2,],
+    [90,12,6,3,1,1,1,0,0,0,],
+    [80,12,6,3,1,1,1,0,0,0,],
+    [70,24,12,6,3,1,1,1,0,0,],
+    [60,24,12,6,3,1,1,1,0,0,],
+    [55,0,12,6,6,6,2,2,1,0,],
+    [50,0,24,6,6,6,6,2,1,0,],
+    [45,0,12,12,6,3,3,3,1,1,],
+    [40,0,12,12,6,3,3,3,1,1,],
+    [35,0,0,24,24,24,18,12,12,6,],
+    [30,0,0,24,24,12,12,12,6,6,],
+    [25,0,0,0,24,24,12,12,12,6,],
+    [20,0,0,0,0,24,24,12,12,12,],
+    [15,0,0,0,0,0,24,24,12,12,],
+    [12,0,0,0,0,0,0,24,24,12,],
+    [11,0,0,0,0,0,0,0,24,24,],
+    [7,0,0,0,0,0,0,0,0,0,],
+    [0,0,0,0,0,0,0,0,0,0,],
+  ];
+
+/////  MINIMUMS ARRAYS  ///////////////////////////////////////////////////
+
+    // Minimum font size per score level and weight
+    // Weight S 1 2 3 4 5 6 7 8 9
+const fontMatrixDmin = [
+    ['sc0',32,16,12,10,9,8,8,10,12,],  // score: hard fail level
+    ['sc1',36,18,14,12,11,10,10,12,14,], // score 1
+    ['sc2',42,21,15,13,12,11,11,14,16,], // score 2
+    ['sc3',48,24,16,14,13,12,12,14,16,], // score 3
+    ['sc4',48,24,18,16,14,13,13,14,16,], // score 4
+    ['sc5',48,28,24,20,18,16,14,16,18,], // score 5
+  ];
+
+    // Minimum font size per use case and score level
+    // Score M 1 2 3 4 5
+const fontSizeDtype = [
+    ['maxBody',24,24,24,24,24,],    // MAX body text (not zoomed)
+    ['minBody',12,12,14,16,18,],    // Min body text 
+    ['maxContent',120,108,96,84,72,], // MAX content text
+    ['minContent',10,11,12,13,14,],   // Min content text
+    ['maxAny',144,120,120,96,96,],    // MAX anytext
+    ['minAny',9,10,11,12,13,],      // Min anytext (copyright etc)
+  ];
+  
+    // Contrast minimums per master level and score level
+    // score M 1 2 3 4 5
+const fontScoreDmin = [         // CONTRAST LEVELS
+    [100,110,105,100,100,100,],   // 0 MAX Large Headlines (> 48px & 500)
+    [80,67.4,72.8,76.4,79.6,85.0,], // 1 Min Cols of Body Text (manually set)
+    [60,47.4,52.8,56.4,59.6,75.0,], // 2 Min Content Text 
+    [40,34.4,36.8,38.4,39.8,55.0,], // 3 Min Large content text
+    [20,18.0,19.0,20.0,22.0,35.0,], // 4 Min Any text, large icons (manual)
+    [10,10.0,12.0,15.0,18.0,22.0,], // 5 Min for all (manually set)
+  ];
+
+const minScoreD = fontScoreDmin[5][1]; // Hard minimum contrast, all levels.
+
+let scoreLevel = 0;
+
+let scoreIndex = [0,1,2,3,4,5]; // holds score position
+
+  // holds the calculated minimum font sizes per level
+let interpolatedFonts = [ 
+    [0,0,0,0,0,0,0,0,0,0,],
+    [1,0,0,0,0,0,0,0,0,0,],
+    [2,0,0,0,0,0,0,0,0,0,],
+    [3,0,0,0,0,0,0,0,0,0,],
+    [4,0,0,0,0,0,0,0,0,0,],
+    [5,0,0,0,0,0,0,0,0,0,],
+  ];
+  
+    
+///////\                                                        ////////////////
+////////\                                                      /////////////////
+/////////\  END CONFORMANCE SCORING CONSTANTS AND ARRAYS END  //////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+/////////  DOM ACCESS VARIABLES  \//////////////////////////////////////////////
+////////                          \/////////////////////////////////////////////
+
+
+// Performance Improving Variables for DOM access
+
+let inputBG = document.getElementById('inputBG'),
+  BGpicker = document.getElementById('BGpicker'),
+  BGpickerWrap = document.getElementById('BGpickerWrap'),
+  BGvalidText = document.getElementById('BGvalidText');
+
+let inputTXT = document.getElementById('inputTXT'),
+  TXTpicker = document.getElementById('TXTpicker'),
+  TXTpickerWrap = document.getElementById('TXTpickerWrap'),
+  TXTvalidText = document.getElementById('TXTvalidText');
+
+let tableSamples = document.getElementById('tableSamples');
+
+let contrastResultTable = document.getElementById('contrastResultTable');
+let buttonSpecial = document.getElementById('buttonSpecial');
+
+let tableScoreDOMarray = [  'null',
+              document.getElementById('tableScore1'),
+              document.getElementById('tableScore2'),
+              document.getElementById('tableScore3'),
+              document.getElementById('tableScore4'),
+              document.getElementById('tableScore5'), ];
+
+let tsi = tableScoreDOMlen = tableScoreDOMarray.length;
+
+
+let LsNormLabel = Math.round(normBG*100);
+let LsRevLabel = Math.round(revBG*100);
+
+
+////////////////////////////////////////////////////////////////////////////////
+/////////  PAGE LOAD UTILITIES   \//////////////////////////////////////////////
+////////                          \/////////////////////////////////////////////
+
+    // For old samples section
+function populateLabels() {   
+// deprecated
+}
+
+
+ 
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+/////////  TEST CONTRAST FUNCTION  \////////////////////////////////////////////
+////////                            \///////////////////////////////////////////
+///////                              \//////////////////////////////////////////
+
+
+function testContrast(midAdjust=false) {
+
+  let contrast = 0.0;
+  //let contrastString = '';
+
+  if (BG.ok && TXT.ok) {
+
+    // Get Contrast. It's kinda like "Get Shorty" but without Danny DiVito
+    contrast = SAPCcontrast(TXT,BG);
+    //contrastString = APCAcontrast(BG,TXT,2);
+  
+    let absContrast = isNaN(contrast) ? 0 : Math.abs(parseFloat(contrast));
+    let contrastFixed = isNaN(contrast) ? contrast : contrast.toFixed(0);
+
+    contrastResultTable.innerHTML = "L<sup>c</sup>  " + contrastFixed;
+
+    let rowString = '';
+    let currentLevel = 0;
+
+    let tempAlertColor = '#F00';
+
+    let modeScoreArrayLen = scoreArrayLen;
+    let modeWeightArrayLen = weightArrayLen;
+
+    globalBGcolor = BG.hex();
+    globalTXTcolor = TXT.hex();
+  
+    if (mode === 'simple') {researchMode = false;}
+
+    let sampleText = 'SampleText';
+    let minimumText = 'MINIMUM';
+    let fontLevel28 = 28, fontLevel39 = 39, fontLevel79 = 79, fontLevelSamp = 28;
+
+
+    if (absContrast < minScoreD) {
+    
+    /////  FOR "ALL UNDER MINIMUM" MESSAGE  /////
+    
+        // alt for debug only
+    //if (absContrast < 120) { 
+    
+    if (mode === 'normal') {
+    
+      tsi = tableScoreDOMlen - 1;
+    
+      tableScoreDOMarray[tsi].innerHTML = '<th>'
+                    + scoreTextArray[0] + '</th>'
+                    + loConWarning9x5();
+        tsi--;
+      for (; tsi > 0; tsi--) {
+        tableScoreDOMarray[tsi].innerHTML = scoreTextProhibit;
+      }
+      
+    } else if (mode === 'simple') {
+      tableScoreDOMarray[4].innerHTML = '<th style="border-radius: 12px 36px 36px 12px;">'
+                    + scoreTextArray[0] + '</th>'
+                    + loConWarningRow9x1s();
+    } else if (mode === 'mobile') {
+      tableScoreDOMarray[4].innerHTML = '<th>'
+                    + scoreTextArray[0] + '</th>'
+                    + loConWarningRow6x1;
+    }
+      //  long samples
+    
+        let sai = 0;
+      for (; sai < scoreLevels1DDlen; sai++) {
+
+        currentLevel = scoreLevels1DD[sai];
+
+      } 
+
+    } else {  ///// Interpolate fonts and fill table  /////
+  
+      /////  Prep for interpolated fonts  /////
+
+      let si = 1;
+      let cl = 0;
+    
+      // this loop sets score index
+      for (; si < scoreArrayLen; ) {
+        cl = 0;
+        for (; cl < contrastArrayLenD; ) {
+
+          if (absContrast > scoreLevelsPreCalcD[cl][si]) {
+            scoreIndex[si] = cl;
+            si++;
+          } else {
+            cl++;
+          }
+        }
+      } 
+
+///////////////////////////////////////////////////////////////////////////
+/////////  Font and Score Interpolation  \////////////////////////////////
+////////                                  \//////////////////////////////
+
+      // Interpolation
+    let tempFont = 777;
+    let s = 1;
+    let w = 1;
+    let tempScoreAdj = 1.0;
+
+      // populate interpolatedFonts array with interpolated values
+    
+    for (; s < scoreArrayLen; s++) {
+      tempScoreAdj = (absContrast -
+              scoreLevelsPreCalcD[scoreIndex[s]][s]) /
+              scoreDeltaD[scoreIndex[s]][s];
+        w = 1;  
+      for (; w < weightArrayLen; w++) {
+      
+      tempFont = (absContrast < fontScoreDmin[5][s]) ? 999 : 
+             (absContrast < fontScoreDmin[4][s]) ? 777 : 
+            fontMatrixD[scoreIndex[s]][w];
+      
+        switch (tempFont) {
+          case 777:
+          case 888:
+          case 999:
+          case 0:
+            
+            interpolatedFonts[s][w] = tempFont;
+            
+            break;
+
+          default:  // INTERPOLATION OF FONT SIZE
+                // sets level for 0.5 size increments
+                // Note bitwise (n|0) instead of floor
+            (tempFont > 24) ?
+              interpolatedFonts[s][w] = 
+                tempFont -
+                ((fontDeltaD[scoreIndex[s]][w] *
+                tempScoreAdj) | 0)  :
+              interpolatedFonts[s][w] = 
+                tempFont -
+                ((2.0 * fontDeltaD[scoreIndex[s]][w] *
+                tempScoreAdj) | 0) * 0.5; // (n|0) is bw floor
+
+            /*  (Math.floor(2.0 * fontDeltaD[scoreIndex[s]][w] *
+              tempScoreAdj) / 2.0); */
+        }
+      }
+    }
+
+
+////////\                         ///////////////////////////////////////////
+/////////\  End Interpolation   ////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+/////////  Populate Table and Samples   \/////////////////////////////////
+////////                                 \///////////////////////////////
+  
+  
+  if (mode === 'simple') {
+      s = 4;
+      modeScoreArrayLen = 5;
+    } else {
+      s = 1;
+    }
+  
+  
+  for (; s < modeScoreArrayLen; s++) {
+    
+    if (mode === 'simple') {
+      w = 2;
+      modeWeightArrayLen = 8;
+      rowString = '<th style="border-radius: 12px 36px 36px 12px;" >' + scoreTextArraySimple[s] + '</th>';
+    } else {
+      w = 1;
+      rowString = '<th '+ normalColspan +' >' + scoreTextArray[s] + '</th>';
+    }
+
+    for (; w < modeWeightArrayLen; w++) {
+      
+      tempFont = interpolatedFonts[s][w];
+
+      switch (tempFont) {
+        case 999:
+          if (mode === 'simple') { 
+            rowString += loConWarningRow9x1s();
+          } else if (mode === 'mobile') { 
+            rowString += loConWarningRow6x1;
+          } else { 
+            rowString += loConWarningRow9x1;
+          }
+            
+            w = modeWeightArrayLen;  // end weight loop
+          break;
+        
+        case 888:
+          if (mode === 'normal') { 
+            rowString += hiConAlertRow(s, modeWeightArrayLen - 1);
+            w = modeWeightArrayLen;  // end weight loop
+          break;
+          } else if (mode === 'mobile') { 
+            rowString += hiConAlertRow(s, modeWeightArrayLen - 1);
+            w = modeWeightArrayLen;  // end weight loop
+          break;
+          }
+        
+        default:
+
+          tempFont = (tempFont <= fontMatrixDmin[s][w]) ?
+                      fontMatrixDmin[s][w] :
+                      tempFont;
+
+          if (mode === 'simple' && (w == 2 || w == 5 || w == 6)) {
+            modeColspan = normalColspan;
+            fontLevel79 = 79;
+            fontLevel39 = 39;
+            fontLevel28 = 32;
+            sampleText = 'SampleText';
+            minimumText = 'MINIMUM';
+          } else if (mode === 'simple') { 
+            modeColspan = simpleColspan;
+            fontLevel79 = 120;
+            fontLevel39 = 90;
+            fontLevel28 = 52;
+            sampleText = 'Sample Text &amp; 123';
+            minimumText = 'MINIMUM FONT SIZE';
+          } else if (mode === 'mobile') { 
+            modeColspan = mobileColspan;
+          } else { modeColspan = normalColspan;
+          }
+    
+    // Non Text
+        (tempFont > 120 && (w == 2 || w == 5 || w == 6) ) ?
+          rowString += '<td '+ modeColspan +' style="font-size: 54px; font-stretch: ultra-expanded; font-weight: 900; font-family:Montserrat; line-height:0.6; color:#'
+            + BG.hex() + '; background-color:#' 
+            + TXT.hex()
+            + '; border-width:'+ (w * 3) +'px; border-radius: 24px; border-color:#'
+            + BG.hex() + ';">N</td>' :
+    // Non Text
+        (tempFont > 120) ?
+          rowString += '<td '+ modeColspan +' style="font-size: 72px; font-stretch: ultra-expanded; font-weight: 900; font-family:Montserrat; line-height:0.6; color:#'
+            + BG.hex() + '; background-color:#' 
+            + TXT.hex()
+            + '; border-width:'+ (w * 3) +'px; border-radius: 36px; border-color:#'
+            + BG.hex() + ';">N</td>' :
+    // score colored
+        (tempFont > fontLevel79) ?
+          rowString += '<td '+ modeColspan +' style="font-size: 32px; font-weight: 500; color:#'
+            + scoreColor[s] + '; background-color: #eee;">' 
+            + tempFont + 'px</td>' :
+    // fs only
+        (tempFont > fontLevel39) ?  
+          rowString += '<td '+ modeColspan +' style="font-size:' 
+            + tempFont + 'px; font-weight:' 
+            + weightArray[w] + '; color:#'
+            + TXT.hex() + '; background-color:#'
+            + BG.hex() + '; line-height: 0.75;">' 
+            + tempFont + '</td>' :
+    // fspx only
+        (tempFont > fontLevel28) ?  
+          rowString += '<td '+ modeColspan +' style="font-size:' 
+            + tempFont + 'px; font-weight:' 
+            + weightArray[w] + '; color:#'
+            + TXT.hex() + '; background-color:#'
+            + BG.hex() + '; line-height: 0.75;">'
+            + tempFont + 'px</td>' :
+    // Minimum    
+        (tempFont == fontMatrixDmin[s][w]) ?  
+          rowString += '<td '+ modeColspan +' style="font-size:' 
+            + fontMatrixDmin[s][w] + 'px; font-weight:' 
+            + weightArray[w] + '; color:#'
+            + TXT.hex() + '; background-color:#'
+            + BG.hex() + '; line-height:'
+            + (2.2 - fontMatrixDmin[s][w] * 0.04) + ';">' 
+            + fontMatrixDmin[s][w]
+            + 'px &<br><span style=" font-size: '+fontMatrixDmin[s][w]
+            + 'px; letter-spacing: '
+            + ((18 - fontMatrixDmin[s][w]) * 0.42)
+            + 'px;">'+minimumText+'</span></td>' :
+    // Sample Text 
+        (tempFont > fontLevelSamp) ?
+          rowString += '<td '+ modeColspan +' style="font-size:' 
+            + tempFont + 'px; font-weight:' 
+            + weightArray[w] + '; color:#'
+            + TXT.hex() + '; background-color:#'
+            + BG.hex() + '; line-height: 1.0;">'
+            + tempFont + 'px<br>'+sampleText+'</td>' :
+            
+    // Sample Text Small
+          rowString += '<td '+ modeColspan +' style="font-size:' 
+            + tempFont + 'px; font-weight:' 
+            + weightArray[w] + '; color:#'
+            + TXT.hex() + '; background-color:#'
+            + BG.hex() + '; line-height:' 
+            + (2.2 - tempFont * 0.04) + ';">'
+            + tempFont + 'px<br>'+sampleText+'</td>';
+      } // end switch
+    } // end column for
+    document.getElementById('tableScore' + s).innerHTML = rowString;
+  } // end row for
+  
+////////
+    } 
+  } else {   /// !(BG.ok && TXT.ok) ///
+
+    contrast = 0;
+    contrastResultTable.innerHTML = '<div class="fs06 cR">IO ERROR</div>';
+    //contrastResult.innerHTML = '<div class="fs06 cR">INVALID<br>COLOR</div>';
+    //contrastResult2.innerHTML = '<div class="fs06 cR">INVALID<br>COLOR</div>';
+
+    tsi = tableScoreDOMlen - 1;
+    tableScoreDOMarray[tsi].innerHTML = scoreTextProhibit
+                      + badColorWarning9x5();
+      tsi--;
+    for (; tsi > 0; tsi--) {
+      tableScoreDOMarray[tsi].innerHTML = scoreTextProhibit;
+    }
+  }
+} // close testContrast()
+
+////////\                                    ///////////////////////////////////
+/////////\  END TEST CONTRAST FUNCTION END  ////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+</script>
+</body>
+</html>
