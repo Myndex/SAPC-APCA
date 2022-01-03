@@ -481,29 +481,31 @@ footer  a:link, footer  a:hover,  footer  a:visited,footer a:visited:hover
 /* ************************************************************************** */
 
 
-.visReadTable {
+.APCAtable {
     margin: 0 auto;
+    max-width: 620px;
     overflow: scroll;
-    border-collapse: collapse;
     font-size: 1.125em;
+    text-align: center;    
+    border-collapse: collapse;
     }
 
-.visReadTable td, .visReadTable th { text-align: center; }
+.APCAtable td, .APCAtable th { text-align: center; }
 
-.visReadTable td { 
+.APCAtable td { 
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 1.2em;
     padding: 4px 6px;
     border: 2px solid #BAD;
     }
 
-.visReadTable th.nullBG {background-color: #FFD;}
+.APCAtable th.nullBG {background-color: #FFD;}
 
-.visReadTable th.tableTitle {
+.APCAtable th.tableTitle {
     font-size: 1.3em;
     background-color: #EEF;
     }
-.visReadTable td.vBot, .visReadTable th.vBot, .visReadTable th .vBot, .vBot { 
+.APCAtable td.vBot, .APCAtable th.vBot, .APCAtable th .vBot, .vBot { 
     padding: 10px;
     vertical-align: bottom;
     border-color: #0F0;
@@ -526,7 +528,7 @@ footer  a:link, footer  a:hover,  footer  a:visited,footer a:visited:hover
     background-color: #206;
     }
 
-.APCAtable {text-align: center;}
+.APCAtable {}
     
 .APCAtable th.tableTitle {
     font-size: 1.3em;
@@ -561,9 +563,11 @@ th.weight8 { font-weight: 800; background-color: #CFCFCF;}
 th.weight9 { font-weight: 900; background-color: #C6C6C6;}
 
 .APCAtable td:nth-child(1) {
-    font-size: 1em;
+    width: 2.6em;
+	padding: 0;
+    font-size: 1.1em;
     font-weight: 400;
-    background-color: #5ac2c2aa;
+    background-color: #5ac2c288;
     }
 .APCAtable td:nth-child(2) {
     width: 2.6em;
@@ -645,11 +649,11 @@ td.keyVal12 { color: #220; background-color: #EF08;}
 
     /* provide some minimal visual accomodation for IE8 and below */
     /* Define the background color for all the ODD background rows  */
-.visReadTable tr, .visReadTable tr:nth-child(odd)
+.APCAtable tr, .APCAtable tr:nth-child(odd)
     { color: #204;background-color: #F0FFFF;}
     
     /* Define the background color for all the EVEN background rows  */
-.visReadTable tr:nth-child(even) {color: #102;background-color: #E0EEFF;}
+.APCAtable tr:nth-child(even) {color: #102;background-color: #E0EEFF;}
 
 
 
@@ -664,8 +668,7 @@ td.keyVal12 { color: #220; background-color: #EF08;}
     border: 3px solid #D55;
     }   
 
-.APCAtable td.bgOrLt,
-visReadTable td.bgOrLt { color: #30a; background-color: #FC0; }
+td.bgOrLt { color: #30a; background-color: #FC0; }
 
 .APCAtable .underWeight {
     font-size: 1.5em;
@@ -673,7 +676,7 @@ visReadTable td.bgOrLt { color: #30a; background-color: #FC0; }
     color: #D00;
     background-color: #F78A;    
     color: #fda;
-    background-color: #B00; 
+    background-color: #b00d; 
     }
     
 .underWeightSpan {
@@ -682,7 +685,7 @@ visReadTable td.bgOrLt { color: #30a; background-color: #FC0; }
     color: #c00;
     }   
     
-.APCAtable .copyOnly {
+.APCAtable .copyOnly, .copyOnly {
     padding:0;
     font-size: 1em;
     line-height: 0.2;
@@ -694,11 +697,7 @@ visReadTable td.bgOrLt { color: #30a; background-color: #FC0; }
     }   
     
     
-    
-    
-    
-    
-    
+
 .centeredTable {
     position: relative;
     margin: 0.5em auto;
@@ -733,6 +732,7 @@ visReadTable td.bgOrLt { color: #30a; background-color: #FC0; }
 .centeredTable .colorCodes.code07{color: #032; background-color: #c1d3ff;}
 .centeredTable .colorCodes.code08{color: #022; background-color: #9fc5f2;}
 
+.centeredTable .colorCodes.td, .centeredTable .colorCodes.td span { font-family: helvetica, 'Montserrat', sans-serif; }
 
 
 #colorDataTable table.colorData,
@@ -744,7 +744,7 @@ visReadTable td.bgOrLt { color: #30a; background-color: #FC0; }
     width: 1000;
     position: relative;
     margin: 1em ;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-size: 1em; 
     text-align: center;
     font-weight: 500;

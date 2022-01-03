@@ -11,10 +11,10 @@
   gtag('config', 'UA-121680439-6');
 </script> 
 
-<!--ALL PAGES ON THIS SITE ARE COPYRIGHT © 1997-2021 by ANDREW SOMERS, ALL RIGHTS RESERVED
+<!--ALL PAGES ON THIS SITE ARE COPYRIGHT © 1997-2022 by ANDREW SOMERS, ALL RIGHTS RESERVED
 The content on this page is PROPRIETARY AND NOT LICENSED FOR FURTHER USE. -->
 
-<meta charset="utf-8">
+<meta charset="utf-8" />
 
   <title>APCA Basic</title>
   
@@ -29,7 +29,7 @@ The content on this page is PROPRIETARY AND NOT LICENSED FOR FURTHER USE. -->
 <meta property="fb:app_id" content="227594707878157" />
 
 <meta property="og:title" content="Myndex&trade; Perception Research" />
-<meta property="og:description" content="The APCA Advanced Perceptual Contrast Algorithim SIMPLE VERSION." />
+<meta property="og:description" content="The APCA Advanced Perceptual Contrast Algorithim BASIC VERSION." />
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.myndex.com/APCA/" />
@@ -55,13 +55,12 @@ The content on this page is PROPRIETARY AND NOT LICENSED FOR FURTHER USE. -->
 <meta name="msapplication-config" content="/images/favicons2020/browserconfig.xml?ver=fav20">
 <meta name="theme-color" content="#3300aa">
 
+
   <link rel="stylesheet" href="CSS/style.0.0.98-g.css">
 
   <link rel="preconnect" href="https://fonts.gstatic.com"> 
-
   <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
   <link href='https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet'>
 
 <style>
@@ -94,7 +93,7 @@ The content on this page is PROPRIETARY AND NOT LICENSED FOR FURTHER USE. -->
   --gradHi: #abc;
 }
 
-body {}
+body { background-color:#ea4;}
 
 .safari h3 { font-weight: 500; }
  
@@ -507,9 +506,9 @@ div .setBGcolorFlip, div div.setBGcolorFlip, div span.setBGcolorFlip, div p.setB
 
 .g4gVal35,.g4gVal40,.g4gVal50,.g4gVal55,
 .g4gVal65,.g4gVal70,.g4gVal80,.g4gVal85
-{color: #74c; background-color: #afd;}
+{color: #74c; background-color: #7ed;}
 
-.g4gVal35,.g4gVal40 {color: #74c; background-color: #fda;}
+.g4gVal35,.g4gVal40 {color: #74c; background-color: #dca;}
 
 .bodyText {
   position: relative;
@@ -528,13 +527,13 @@ td.bodyText {
   }
 
 .ptText::after {
-position: relative;
+  position: relative;
   top: 0px;
   content: 'pt';
   font-size: 0.6em;
   }
 .pxText::after {
-position: relative;
+  position: relative;
   top: 0px;
   content: 'px';
   font-size: 0.6em;
@@ -548,12 +547,12 @@ position: relative;
 
 .g4gLite, td.g4gLite {color: #a00; background-color: #fcc;border: 3px solid #e00;}
   
-tr td.keyVal100, .g4gVal90 {color: #707; background-color: #add;}
-tr td.keyVal80, .g4gVal75 {background-color: #4f9;}
-tr td.keyVal60, .g4gVal60 {background-color: #afa;}
-tr td.keyVal40, .g4gVal45 {background-color: #7da;}
-tr td.keyVal30, .g4gVal30 {color: #fcc; background-color: #b48;}
-.g4gValNT {color: #fcc; background-color: #b62;}
+tr td.keyVal100, .g4gVal90 {color: #707; background-color: #0fd;}
+tr td.keyVal80, .g4gVal75 {background-color: #2fb;}
+tr td.keyVal60, .g4gVal60 {background-color: #8e6;}
+tr td.keyVal40, .g4gVal45 {background-color: #cd2;}
+tr td.keyVal30, .g4gVal30 {color: #fdc; background-color: #b85;}
+.g4gValNT {color: #fcc; background-color: #a62;}
 
 
 </style>
@@ -924,25 +923,28 @@ const byClass = ( className, property, value, property2 ) => {
   
 <div style="position: relative; Margin: 1em auto;">
   <div id="null01" class="contrastChart pie">
+
 <table id="tableSamples" class='conformScore'>
     <tr>  
     <th class='colorPicker' id="TXTpickerWrap" rowspan='2' >
     <input type="color" id="TXTpicker"
             oninput="getCSScolor(this.value,'TXT'); inputTXT.value = this.value; testContrast();">
         </th>
-    
+
     <th class='tableTitle'colspan='3'>TEXT COLOR</th>
 
         <th class='tableContrast' onclick="swapColors()" colspan='2' rowspan='2'><span style="font-size: 1em; letter-spacing: 0.1em;">APCA<span style="font-size: 0.6em;  letter-spacing: 0;"><br>CONTRAST<br></span><span style="font-family: 'Barlow Condensed'; font-size: 0.95em;font-weight: bold; line-height: 1.1;" id="contrastResultTable"></span><br><span class="helvetiFont" style="line-height: 1;">Click To Swap</span>
         </th>
 
     <th class='tableTitle'colspan='3'>BACKGROUND</th>
-    
+
     <th class='colorPicker' id="BGpickerWrap"  rowspan='2' >
     <input type="color" id="BGpicker"
             oninput="getCSScolor(this.value,'BG'); inputBG.value = this.value; testContrast();">
         </th>
   </tr>
+
+
   <tr>
         <th class='tableTitle'colspan='3'>
           <span class="TXTinput">
@@ -1062,14 +1064,11 @@ const byClass = ( className, property, value, property2 ) => {
 
 <hr>
 
-<h2 class="mastHead fs20"  style="">SIMPLE VERSION for CONTENT CREATORS</h2>
-<h3>This version shows only score 4 fonts, and weights 200 thru 700.</h3>
-
+<h2 class="mastHead fs20"  style="">BASIC VERSION for CONTENT CREATORS</h2>
+<h3>This version only shows score 4 fonts with weights 200 thru 700.</h3>
 
 <div id="demoArea"> 
   <h1 style="text-align: center;">APCA Visual&nbsp;Contrast Calculator</h1>
-  
-  
   
 	<a id="colorURL" class="myndexButton flr tac" style="width: 35%; margin: 1em; padding: 0.3em 1em;" onclick="createColorURL('colorURL')">Generate a URL of This Color Pair</a>
 	<div id="colorWarn" class="" style="">
@@ -1092,7 +1091,6 @@ const byClass = ( className, property, value, property2 ) => {
       <p>Click on a color patch next to "Text" or "Background" above to use the HTML5 color-picker (modern browsers). Otherwise enter color values in the text-box as a three or six digit hex value, the '#' is not necessary. Other valid entries are integer rgb(r,g,b) or an HTML color name (see bottom of page for list).</p>
 
     </div>
-
 
       <h2 class="mastHead"  style=""><em>APCA W3 PUBLIC BETA</em></h2>
 
@@ -1123,12 +1121,10 @@ It should be noted that those with most forms of CVD prefer the white text as we
   <br><br>
   
   <h2>For a more in depth look at this, please see<br>this <a href="https://gist.github.com/Myndex/1dadb6dcac596f1cd7a5686a076f697f">GitHub Gist</a> with colorful examples.</h2>
-  
 
 </div>
 
 <hr class="clb" style="">
-
 
 <section class="explainer">
 
@@ -1137,19 +1133,32 @@ It should be noted that those with most forms of CVD prefer the white text as we
   <p>The table below is current as of January 2022, though as this is a public beta, there may be occasional discrepancies with the above automated font display above.</p>
 
   <h2 class="Luv275 fw7">GENERAL GUIDELINES on LEVELS</h2>
+  <p>These general levels are appropriate for use without reference to the lookup table. </p>
   <ul>
-    <li><b>90</b> • Preferred level for fluent text and columns of body text. Also a suggested minimum for extremely thin fonts. Lc 90 is a <em>suggested maximum</em> for <strong>very large and bold fonts</strong> (greater than 36px bold), and large areas of color.
+    <li><b>90</b> • Preferred level for fluent text and columns of body text with a font no smaller than 14px, or non-body text with a font no smaller than 12px. Also a recommended minimum for extremely thin fonts (light weight) of any size. Lc 90 is a <em>suggested maximum</em> for <strong>very large and bold fonts</strong> (greater than 36px bold), and large areas of color.
   
-    <li><b>75</b> • The <em>minimum</em> level for columns of body text. Also, should be used for any text where readability is important. "Sort of" like 6:1 to 7:1 relative to WCAG2.
+    <li><b>75</b> • The <em>minimum</em> level for columns of body text with a font no smaller than 18px, or non-body text with a font no smaller than 14px. Also, should be used for any text where readability is important. This level is functionally similar to 6:1 ~ 7:1 relative to WCAG2.
   
-    <li><b>60</b> • The <em>minimum</em> level recommended for readable content text, that is, text you want people to read. "Sort of" like the old 4.5:1 in WCAG2.
+    <li><b>60</b> • The <em>minimum</em> level recommended for readable content text, that is, text you want people to read, and no smaller than 16px, and not used as body text. This level is functionally similar to the old 4.5:1 in WCAG2.
   
-    <li><b>45</b> • The <em>minimum</em>  for larger text such as headlines, and large text that should be readably fluently. "Sort of" like the old 3:1 in WCAG2.
+    <li><b>45</b> • The <em>minimum</em>  for larger text (larger than 24px normal weight or 19px bold) such as headlines, and large text that should be readably fluently. This is also the minimum for pictograms with fine details, or smaller outline icons. This level is functionally similar to the old 3:1 in WCAG2. 
   
-    <li><b>30</b> • The absolute minimum for any text, including text for spot reading such as placeholder text and disabled element text, and the minimum for "understandable" or "uniquely identifiable" non-text such as icons. Large discernible-only non-text content can be below this however.
-  
-    <li><b>15</b> • The absolute minimum for any non-text that needs to be discernible such as buttons, but does not include fine details. Designers should treat anything below this level as invisible, as it will not be visible for many users.
+    <li><b>30</b> • The <em>absolute minimum</em> for any text regardless of size or weight, including text for spot reading such as placeholder text and disabled element text, and the minimum for "understandable" or "uniquely identifiable" non-text elements such as "mostly solid" icons or pictograms. 
+    
+    <li><b>15</b> • The <em>absolute minimum</em> for any non-text that needs to be discernible and differentiable, such as dividers, and in some cases large buttons or thick focus visible outlines, but does not include fine details. Designers should treat anything below this level as invisible, as it will not be visible for many users. This minimum level should be avoided for items important to the use or interaction of the site.
   </ul>
+    <h2 class="Luv275 fw7">NOTES ON FONT SIZE </h2>
+<p>Font sizes listed above assume an x-height ratio of at least 0.52. Font weight is based on highly standardized reference fonts such as Helvetica or Arial. "px" means the CSS reference px not device pixels. The reference px is defined as 1.278 arc minutes of visual angle.
+
+    <h2 class="Luv275 fw7">NOTES ON WCAG_2 COMPATIBILITY </h2>
+
+  <p>To use the APCA tool for minimum Bridge-PCA conformance (backwards compatible for WCAG_2):
+    <ul>
+    <li><b>90</b> • Lc 90 replaces WCAG_2 7:1
+    <li><b>75</b> • Lc 75 replaces WCAG_2 4.5:1
+    <li><b>60</b> • Lc 60 replaces WCAG_2 3:1
+    <li><b>WoB</b> • For light text on a darker background, when the text is lighter than #eee, increase the minimum value by Lc 10. The dedicated Bridge-PCA tool takes this into account automatically.
+    </ul>
   
   <h2 class="Luv265 fw7">Using the Lookup Table</h2>
 
@@ -1159,16 +1168,17 @@ It should be noted that those with most forms of CVD prefer the white text as we
     <li>APCA Contrast <span class="Lc"><sup>L<sup>c</sup></sup></span> value must meet or exceed the value listed, however, values may be interpolated between the two closest values.
     <li>For light text on a dark background the APCA tool will show a negative <span class="Lc"><sup>L<sup>c</sup></sup></span> value. Simply use the absolute (positive) value. For example, if the APCA value is <span class="Lc"><sup>L<sup>c</sup></sup></span>-58, use <span class="Lc"><sup>L<sup>c</sup></sup></span>58.   
     <li>A<span class="underWeightSpan"> &osol; </span>indicates that a larger font size (or heavier font weight) must be used. 
+    <li>Cells marked with <span class="fwb fs15 bodyText"></span> may be used for body text. If the indicated contrast is lower that Lc 75, then add lc 15 to this minimum, OR increase up to Lc 75.
   </ul>
 
   <div style="overflow: scroll;">
-    <table class="TFtable visReadTable APCAtable">
+    <table class="APCAtable">
         <tr>
           <th colspan="11" class="tableTitle" style="height: 2em; font-size: 1.5em;">APCA CONTRAST LOOKUP TABLE</th>
         </tr>
               <tr>
-          <th colspan="11" class="tableTitle" style="height: 1.1em; padding: 0 0 12px; font-size: 1em; font-weight: 300; vertical-align: top; letter-spacing: 0.2em;">Version 0.0.98-g-b4</th>
-        </tr> 
+          <th colspan="11" class="tableTitle" style="height: 1.1em; padding: 0 0 12px; font-size: 1em; font-weight: 300; vertical-align: top; letter-spacing: 0.2em;">Public Beta 0.1.0 (G) • January 2022</th>
+        </tr>
         <tr>
           <th colspan="2" class="tableTitle" style="font-size: 1em;"></th>
           <th colspan="9" class="tableTitle" style="font-size: 1.2em; letter-spacing: 0.15em;">Reference Font Weight</th>
@@ -1191,17 +1201,16 @@ It should be noted that those with most forms of CVD prefer the white text as we
           <th colspan="9" class="tableTitle" style="font-size: 1.1em; letter-spacing: 0.15em; color: #FFF; background-color: #629;">APCA Contrast Value (L<sup>c</sup>)</th>
         </tr>
 
-
 <tr>
   <td class="ptText">7.5</td>
   <td class="pxText">10</td>
   <td class="underWeight">⊘</td>
   <td class="underWeight">⊘</td>
   <td class="underWeight">⊘</td>
-  <td class="copyOnly">60 ©§™</td>
-  <td class="copyOnly">60 ©§™</td>
-  <td class="copyOnly">60 ©§™</td>
-  <td class="copyOnly">60 ©§™</td>
+  <td class="copyOnly">©§™</td>
+  <td class="copyOnly"> ©§™</td>
+  <td class="copyOnly"> ©§™</td>
+  <td class="copyOnly"> ©§™</td>
   <td class="underWeight">⊘</td>
   <td class="underWeight">⊘</td>
 </tr>
@@ -1212,10 +1221,10 @@ It should be noted that those with most forms of CVD prefer the white text as we
   <td class="underWeight">⊘</td>
   <td class="underWeight">⊘</td>
   <td class="underWeight">⊘</td>
-  <td class="copyOnly">60 ©§™</td>
-  <td class="copyOnly">60 ©§™</td>
-  <td class="copyOnly">60 ©§™</td>
-  <td class="copyOnly">60 ©§™</td>
+  <td class="copyOnly"> ©§™</td>
+  <td class="copyOnly"> ©§™</td>
+  <td class="copyOnly"> ©§™</td>
+  <td class="copyOnly"> ©§™</td>
   <td class="underWeight">⊘</td>
   <td class="underWeight">⊘</td>
 </tr>
@@ -1224,7 +1233,7 @@ It should be noted that those with most forms of CVD prefer the white text as we
   <td class="pxText">12</td>
   <td class="underWeight">⊘</td>
   <td class="underWeight">⊘</td>
-  <td class="copyOnly">75 ©§™</td>
+  <td class="copyOnly"> ©§™</td>
   <td class="bgOrLt">×90</td>
   <td class="bgOrLt">×85</td>
   <td class="bgOrLt">×80</td>
@@ -1237,7 +1246,7 @@ It should be noted that those with most forms of CVD prefer the white text as we
   <td class="pxText">14</td>
   <td class="underWeight">⊘</td>
   <td class="underWeight">⊘</td>
-  <td class="copyOnly">75 ©§™</td>
+  <td class="copyOnly"> ©§™</td>
   <td class="g4gVal90 bodyText">90</td>
   <td class="g4gVal85 bodyText">85</td>
   <td class="g4gVal80 bodyText">80</td>
@@ -1249,7 +1258,7 @@ It should be noted that those with most forms of CVD prefer the white text as we
   <td class="ptText">12</td>
   <td class="pxText">16</td>
   <td class="underWeight">⊘</td>
-  <td class="copyOnly">75 ©§™</td>
+  <td class="copyOnly"> ©§™</td>
   <td class="g4gLite">95</td>
   <td class="g4gVal80 bodyText">80</td>
   <td class="g4gVal75 bodyText">75</td>
@@ -1262,7 +1271,7 @@ It should be noted that those with most forms of CVD prefer the white text as we
   <td class="ptText">13.5</td>
   <td class="pxText">18</td>
   <td class="underWeight">⊘</td>
-  <td class="copyOnly">75 ©§™</td>
+  <td class="copyOnly"> ©§™</td>
   <td class="g4gVal90 bodyText">90</td>
   <td class="g4gVal75 bodyText">75</td>
   <td class="g4gVal70 bodyText">70</td>
@@ -1313,7 +1322,7 @@ It should be noted that those with most forms of CVD prefer the white text as we
   <td class="g4gVal45">45</td>
   <td class="g4gVal40">40</td>
   <td class="g4gVal35">35</td>  
-  <td class="g4gVal30">30</td>
+  <td class="g4gVal30">>30</td>
 </tr>
 
 
@@ -1328,8 +1337,8 @@ It should be noted that those with most forms of CVD prefer the white text as we
   
   <td class="g4gVal40">40</td>
   <td class="g4gVal35">35</td>  
-  <td class="g4gVal30">30</td>
-  <td class="g4gValNT">30</td>
+  <td class="g4gVal30">>30</td>
+  <td class="g4gValNT">>30</td>
   
 </tr>
 <tr>
@@ -1344,9 +1353,9 @@ It should be noted that those with most forms of CVD prefer the white text as we
   <td class="g4gVal40">40</td>
 
   <td class="g4gVal35">35</td>  
-  <td class="g4gVal30">30</td>
-  <td class="g4gValNT">30</td>
-  <td class="g4gValNT">30</td>
+  <td class="g4gVal30">>30</td>
+  <td class="g4gValNT">>30</td>
+  <td class="g4gValNT">>30</td>
 </tr>
 
 <tr>
@@ -1360,10 +1369,10 @@ It should be noted that those with most forms of CVD prefer the white text as we
   <td class="g4gVal40">40</td>
   <td class="g4gVal35">35</td>
   
-  <td class="g4gVal30">30</td>
-  <td class="g4gValNT">30</td>
-  <td class="g4gValNT">30</td>
-  <td class="g4gValNT">30</td>
+  <td class="g4gVal30">>30</td>
+  <td class="g4gValNT">>30</td>
+  <td class="g4gValNT">>30</td>
+  <td class="g4gValNT">>30</td>
 </tr>
 <tr>
   <td class="ptText">72</td>
@@ -1374,12 +1383,12 @@ It should be noted that those with most forms of CVD prefer the white text as we
   <td class="g4gVal40">40</td>
   
   <td class="g4gVal35">35</td>
-  <td class="g4gVal30">30</td>
+  <td class="g4gVal30">>30</td>
   
-  <td class="g4gValNT">30</td>
-  <td class="g4gValNT">30</td>
-  <td class="g4gValNT">30</td>
-  <td class="g4gValNT">30</td>
+  <td class="g4gValNT">>30</td>
+  <td class="g4gValNT">>30</td>
+  <td class="g4gValNT">>30</td>
+  <td class="g4gValNT">>30</td>
 </tr>
 </table>  
 <hr>
@@ -1400,26 +1409,32 @@ It should be noted that those with most forms of CVD prefer the white text as we
           <td class="colorCodes code01"><span style="font-size:1.8em; line-height:0.2;">⊘</span> — PROHIBITED Except for Decorative Purposes</td>
         </tr>
         <tr>
-          <td class="colorCodes code02"><span style="font-size:1.4em; font-weight:700;">©§™</span> — May be used for Copyright/ByLine ONLY</td>
-        </tr>
-        <tr>
-          <td class="colorCodes code03"><span style="font-size:1.8em; line-height:0.7;">&times;</span> — Do Not Use for Body Text (Blocks or Columns)</td>
-        </tr>
-        <tr>
-          <td class="colorCodes code04">Weight 100 Fonts Should be Avoided</td>
+          <td class="colorCodes g4gLite cR" style="border-width: 8px 6px;">Weight 100 Fonts Should be Avoided</td>
         </tr>   
         <tr>
-          <td class="colorCodes code05"><span style="font-size:1.4em; font-weight:700;">&gt;</span> — Minimum Contrast for Text</td>
+          <td class="colorCodes copyOnly ffh"><span style="font-size:1.4em; font-weight:700;">©§™</span> — Placeholder/Disabled/Copyright ONLY</td>
         </tr>
         <tr>
-          <td class="colorCodes code06">APCA 75 — Similar to WCAG 7∶1 <span>for BG #ddd</span></td>
+          <td class="colorCodes bgOrLt"><span style="font-size:1.8em; line-height:0.7;">&times;</span> — Do Not Use for Body Text (Blocks or Columns)</td>
+        </tr>
+        <tr>
+          <td class="colorCodes bodyText" style="border-width: 10px 6px;">Block/Body Text Zone</td>
+        </tr>   
+        <tr>
+          <td class="colorCodes  g4gVal90">APCA Lc 90 — Similar to ISO 10∶1 </td>
+        </tr>     
+        <tr>
+          <td class="colorCodes  g4gVal75">APCA Lc 75 — Similar to WCAG 7∶1 </td>
         </tr>       
         <tr>
-          <td class="colorCodes code07">APCA 60 — Similar to WCAG 4.5∶1 <span>for BG #d0d0d0</span></td>
+          <td class="colorCodes  g4gVal60">APCA Lc 60 — Similar to WCAG 4.5∶1 </td>
         </tr>
         <tr>
-          <td class="colorCodes code08">APCA 45 — Similar to WCAG 3∶1 <span>for BG #ccc</span></td>
-    </tr>
+          <td class="colorCodes  g4gVal45">APCA Lc 45 — Similar to WCAG 3∶1 </td>
+        </tr>
+        <tr>
+          <td class="colorCodes g4gValNT"><span style="font-size:1.2em; font-weight:700;">&gt; 30</span> — Minimum Contrast for Any Text</td>
+        </tr>
   </table>
 </div>
   <ul>
@@ -1546,8 +1561,6 @@ It should be noted that those with most forms of CVD prefer the white text as we
     
   </div>
 
-
-
   <div class="copyright fs07 lh10">Copyright &copy; 2019 – 2022 by MTI.  All Rights Reserved. •<br>
         <i>"Myndex" and the Myndex Eye Logo are trademarks of Myndex Technologies.</i><br>
 
@@ -1583,7 +1596,6 @@ function kitchenSink(type) {
 /////////  CONFORMANCE SCORING CONSTANTS AND ARRAYS  \//////////////////////////
 ////////                                              \/////////////////////////
 ///////                                                \////////////////////////
-
 
 
 ////////////////////////////////////////////////////////////////////////////
@@ -1966,7 +1978,28 @@ let interpolatedFonts = [
     [5,0,0,0,0,0,0,0,0,0,],
   ];
   
-    
+
+
+//// G series, LUT-X12.
+
+let LUTx12 = [ ['fs-px',100,200,300,400,500,600,700,800,900],
+[10,'⊘','⊘','⊘','©§™','©§™','©§™','©§™','⊘','⊘'],
+[11,'⊘','⊘','⊘','©§™','©§™','©§™','©§™','⊘','⊘'],
+[12,'⊘','⊘','©§™','×90','×85','×80','×75','⊘','⊘'],
+[14,'⊘','⊘','©§™',90,85,80,75,'⊘','⊘'],
+[16,'⊘','©§™',95,80,75,70,65,'⊘','⊘'],
+[18,'⊘','©§™',90,75,70,65,60,'×60','⊘'],
+[21,'⊘',95,85,70,65,60,55,'×55','×55'],
+[24,'⊘',90,75,60,55,50,45,'×45','×45'],
+[28,'⊘',85,70,55,50,45,40,35,30],
+[34,95,80,65,50,45,40,35,30,30],
+[42,90,75,60,45,40,35,30,30,30],
+[72,75,60,45,40,35,30,30,30,30],
+[96,60,50,40,35,30,30,30,30,30], ];
+
+
+
+
 ///////\                                                        ////////////////
 ////////\                                                      /////////////////
 /////////\  END CONFORMANCE SCORING CONSTANTS AND ARRAYS END  //////////////////
@@ -2035,7 +2068,8 @@ function testContrast(midAdjust=false) {
   if (BG.ok && TXT.ok) {
 
     // Get Contrast. It's kinda like "Get Shorty" but without Danny DiVito
-    contrast = SAPCcontrast(TXT,BG);
+        
+    contrast = SAPCcontrast(TXT.LYP,BG.LYP);
     //contrastString = APCAcontrast(BG,TXT,2);
   
     let absContrast = isNaN(contrast) ? 0 : Math.abs(parseFloat(contrast));

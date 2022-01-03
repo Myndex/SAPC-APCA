@@ -224,23 +224,20 @@ function APCAcontrast (text, background, places = 2) {
 
 		// Sanity check that the colors are valid and send to SAPCcontrast()
 	if (bkgndObj.ok && txtObj.ok) {
-		return SAPCcontrast(txtObj,bkgndObj,places);
+		return SAPCcontrast(txtObj.LYP,bkgndObj.LYP,places);
 	} else {
 		return (places) ? 'RGBerror' : 0;
 	}
 }
 
 
-/////        Direct SAPC interface — send RGBcolor() object only        /////
+/////               Direct SAPC interface — send Ys only                 /////
 /////	*** Polarity is Important: do not reverse background & text *** /////
-
 
 //    In the following implementation, color sent as an RGBcolor() object
 
-function SAPCcontrast(TXT,BG,places=0) {
-	
-	var Ybg = BG.LYP, Ytxt = TXT.LYP;
-			
+function SAPCcontrast(Ytxt,Ybg,places = -1) {
+				
     var SAPC = 0.0; 			// For holding raw SAPC values
     var outputContrast = 0.0; 	// For weighted final values
     var polarity = "1";  		// for indicating "LOW" polarity
@@ -268,7 +265,7 @@ function SAPCcontrast(TXT,BG,places=0) {
 							Ybg + Math.pow(blkThrs - Ybg, blkClmp);
 
 		/////   Return 0 Early for extremely low ∆Y  /////
-	if(Math.abs(Ybg - Ytxt) < deltaYmin){ return (places == 0) ? 0.0 : "Y∆LOW";}
+	if(Math.abs(Ybg - Ytxt) < deltaYmin){ return (places == -1) ? 0.0 : "Y∆LOW";}
 
 //////////   SAPC CONTRAST MODULE       ////////////////////////////////////
 
@@ -302,8 +299,8 @@ function SAPCcontrast(TXT,BG,places=0) {
 
 			 // return a numeric value (float) if places == 0,
 			// otherwise return a string of number, rounded to places
-    return  (places == 0) ? outputContrast * 100 : (outputContrast != 0.0) ?
-    		(outputContrast * 100).toFixed(places) : polarity + "LOW";
+    return  (places == -1) ? outputContrast * 100.0 : (outputContrast != 0.0) ?
+    		(outputContrast * 100.0).toFixed(places) : polarity + "LOW";
 
 } // Close SAPCcontrast()
 
@@ -1796,8 +1793,6 @@ function CIE2sRGBstring( spaces = 0b0000, LstarY, caux, hbvy, outputType = 'arra
 ////\                                                          /////////////////
 /////\  END sRGB INPUT FORM AND PROCESSING BLOCK              //////////////////
 ////////////////////////////////////////////////////////////////////////////////
-} // closing bracket for when the following section is deleted.
-
 
 } // Close RGBcolor() object
 
