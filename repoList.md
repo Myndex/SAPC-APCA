@@ -11,7 +11,13 @@
 
 ## NPM
 
-- Package
+```JS
+    npm i apca-w3
+    
+    npm i bridge-pca
+    
+    npm i colorparsley
+```
 
 ## Myndex Technologies
 
