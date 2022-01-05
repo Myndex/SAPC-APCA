@@ -75,12 +75,12 @@ See [WHY APCA](WhyAPCA.md) for a brief explaination of the important differences
 APCA is a set of contrast assessment methods for predicting perceived contrast between sRGB colors on a computer monitor. It has been developed as an assessment method for W3 Silver/WCAG3 accessibility standards relating to content for computer displays and mobile devices.
 
 ### BASIC FEATURES
-* NEW in v0.98: Incorporates Spatial Frequency & Stimulus Size directly in predictions (i.e. provides direct indication of minimum font size and weight).
+* Incorporates Spatial Frequency & Stimulus Size directly in predictions.
 * Spectral weighting of luminance based on sRGB coefficients.
-* Weighting for normal and reverse polarity (dark text on light background vs light text on dark.)
-* Estimation and weighting of light adaptation for perceptual uniformity in a common "standard observer" model.
-* Considers simultaneous contrast and local adaptation based on a pre-estimation model.
-* Spatial frequency considerations for font weight as part of calculations and further defined in a lookup table.
+   - NEW: displayP3 added, AdobeRGB next.
+* Separate weighting for normal and reverse polarity (dark text on light background vs light text on dark, aka dark mode.)
+* Estimation and weighting of light adaptation for perceptual uniformity in a common "standard observer" model (see below).
+* Spatial frequency considerations for font weight as part of calculations and further defined in a lookup table. (I.e. values Lc 60 and higher are weighted for fonts less than 24px, values less than Lc60 are weighted for large fonts and non text).
 * Lookup table can be customised for different languages/character sets.
 
 ----- 
@@ -90,11 +90,11 @@ There is a working version with examples and reference material on [APCAsite](ht
 -----
 ### Font Use Lookup Table
 
-Latest Lookup Table: November 17 2021
+Latest Lookup Table: January 2 2022
 
-<img width="639" alt="APCA Lookup Table" src="images/0.0.98G4gLUT.png">
+<img width="639" alt="APCA Lookup Table" src="images/Jan2022LOOKUPTABLE.png">
 
-<img width="596" alt="APCA Lookup table legend" src="images/0.0.98G4gLUT-legenf.png">
+<img width="596" alt="APCA Lookup table legend" src="images/Jan2022LOOKUPTABLELEGEND.png">
 
 ------
 ------
@@ -124,20 +124,29 @@ Latest Lookup Table: November 17 2021
 If you have been using any files from _this_ repository, be sure to read the file "[ImportantChangeNotices.md]" for critical updates that may affect results.
 
 ## SAPC/APCA CURRENT VERSION: 0.0.98G-4g-lut3 Constants: 4g
+
+### January 2 2022
+Font lookup table revised, still for 4G constants.
+
 ### December 1, 2021
-All W3 licensed files moved to their own repository, AND
+All W3 licensed files moved to their own repository, AND     
 **A new npm package has been released (of the W3 version) to ease integration!!**
+
 ### November 23, 2021
 Adopting semantic versioning, adding a first 0. so the current version is **0.0.98G**
+
 ### November 17, 2021
 Please see the new font lookup table (LUT3) (on this page, below)
+
 ### October 1, 2021
 The base APCA with the 0.0.98G-4g constants is in the JS folder. 
+
 ### NEW CONSTANTS and NEW MATH:
 (October 1, 2021) the 0.0.98G-4g math and constants have been in use now for months, and by all accounts are working well as expected. The revised code is available in the JS folder. The present version improves tracking of contrast perception. (Doubling or halving the L<sup>c</sup> value results in a perceived doubling or halving of contrast.) Also, smoother results for low contrasts and dark color pairs.
 
 -----
 ### THIS REPOSITORY, [and apca-w3](https://github.com/Myndex/apca-w3) ARE THE ONLY CANONICAL SOURCES OF APPROVED APCA CODE.
+
 If you are integrating code, please check here for official changes, or at apca-w3 for the W3 licensed version. This code is considered beta, and will change periodically. The repo for WCAG_3 compliance is [apca-w3.](https://github.com/Myndex/apca-w3)
 
 Files with **RESEARCH** or **DEV** in the name are part of ongoing research and should _NOT_ be used for developing conformance tools, and further are not licensed for use in distributed software, and should be considered experimental only.
@@ -207,10 +216,10 @@ Basic APCA Math in LaTeX
 If you've implemented the code and want a quick sanity check, Here are some keystone checks with no rounding. The first color is **TEXT** and the second color is **BACKGROUND**:
 
 ```text
-Test Values for the 0.0.98G 4g constants, normal and reverse float values for each color pair.
+Test Values for APCA W3 using the G series constants, normal and reverse float values for each color pair.
 First number is TEXT second number is BACKGROUND.
 
-    TEXT vs BKGND •  EXPECTED RESULT for 0.0.98 G-4g
+    TEXT vs BKGND •  EXPECTED RESULT for APCA W3 to 0.1.0 (G-constants)
 
     #888 vs #fff  •  63.056469930209424
     #fff vs #888  • -68.54146436644962  
@@ -221,6 +230,10 @@ First number is TEXT second number is BACKGROUND.
     #123 vs #def  •  91.66830811481631
     #def vs #123  • -93.06770049484275
 
+    #123 vs #444  •   8.32326136957393
+    #234 vs #444  •  -7.526878460278154
+
+The below are only for certain experimental low-scale versions, these tests do *not* acpa-w3:
     #123 vs #234  •   1.7512243099356113
     #234 vs #123  •  -1.6349191031377903
 ```
@@ -231,7 +244,8 @@ These exercise all the important constants.
 -----
 ## Miscellaneous
 
-### S-Luv Advanced Predictive Color (SAPC) model
+### S-Luv Accessible Readable Color Appearance Model (SARCAM)
+_(Formerly known as SAPC)_
 
 * S-Luv, is a L<sup>s</sup> u<sup>s</sup>v<sup>s</sup>-type colorspace for modeling vision and visual impairment perception of emissive displays and devices. 
     * S-Luv is built around the concept of a standard-observer/standard-environment model.
@@ -381,4 +395,8 @@ Glossary
 -   **Visual Acuity** — acuity refers to the ability of the eye's optics to focus light onto the photoreceptors on the back of the eye.
     -   Poor acuity is usually understood as blurry vision or an inability to focus.
 -   **Spatial Frequency** — in a practical sense, this refers to the weight of a font, or the stroke width. A thinner font or narrower stroke width is a higher spatial frequency than a bolder or thicker stroke. Higher spatial frequencies require more luminance contrast to be visible than lower frequencies, such as a very bold large headline.
+
+_For giggles:_
+### More glossary of confusing terms and "bonus sciencey stuff" in [The Lighter Side of Light](https://gist.github.com/Myndex/b956e5320f77cfd5c3cf451f4ce0acb5#the-lighter-side-of-light)
+
 
