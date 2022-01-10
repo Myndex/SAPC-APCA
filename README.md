@@ -1,5 +1,5 @@
 <p align="center">
- <img src="images/APCAlogo.png" width="640" alt="APCA The Revolution Will Be Readable"><br><br>
+ <img src="images/APCAcolor4.png" width="640" alt="APCA The Revolution Will Be Readable"><br><br>
   
   <a href="https://npmjs.org/package/apca-w3">
     <img src="https://badgen.net/npm/v/apca-w3?color=3000c0&icon=npm" alt="version" />
