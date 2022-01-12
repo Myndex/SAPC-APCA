@@ -668,14 +668,15 @@ td.keyVal12 { color: #220; background-color: #EF08;}
     border: 3px solid #D55;
     }   
 
-td.bgOrLt { color: #30a; background-color: #FC0; }
+td.bgOrLt { color: #30a; background-color: #FC6; }
 
 .APCAtable .underWeight {
     font-size: 1.5em;
     line-height: 0.7;
-    color: #D00;
-    background-color: #F78A;    
     color: #fda;
+    background-color: #F78A;    
+    color: #D00;
+    color: #Da6;
     background-color: #b00d; 
     }
     
@@ -690,10 +691,10 @@ td.bgOrLt { color: #30a; background-color: #FC0; }
     font-size: 1em;
     line-height: 0.2;
     font-family: 'Barlow Condensed';
-    color: #FFF;
-    background-color: #B00A;    
     color: #600;
     background-color: #f94b;    
+    color: #FFF;
+    background-color: #B00A;    
     }   
     
     
@@ -1723,7 +1724,7 @@ input[type=color] {cursor: pointer;}
     opacity: 1;
     border-radius: 8px;
     box-shadow: inset -3px -3px 6px #0006,
-                        3px 3px 6px #777;                   
+                        3px 3px 6px #777;
     }
 .level1, .level0 {
     color: #fff;
@@ -1731,7 +1732,7 @@ input[type=color] {cursor: pointer;}
     font-weight: 700;
     box-shadow: inset 1px 1px 3px #F77, 
                 inset -3px -3px 6px #811,
-                        3px 3px 6px #866;           
+                        3px 3px 6px #866;
     text-shadow:    1px 1px 1px #F77, 
                     -1px -1px 1px #822; 
     }
