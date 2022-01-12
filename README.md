@@ -90,11 +90,11 @@ There is a working version with examples and reference material on [APCAsite](ht
 -----
 ### Font Use Lookup Table
 
-Latest Lookup Table: January 2 2022
+Latest Lookup Table: January 11 2022
 
-<img width="639" alt="APCA Lookup Table" src="images/Jan2022LOOKUPTABLE.png">
+<img width="639" alt="APCA Lookup Table" src="images/Jan2022LOOKUPTABLE.jpg">
 
-<img width="596" alt="APCA Lookup table legend" src="images/Jan2022LOOKUPTABLELEGEND.png">
+<img width="596" alt="APCA Lookup table legend" src="images/Jan2022LOOKUPTABLELEGEND.jpg">
 
 ------
 ------

@@ -1,5 +1,8 @@
 ## SAPC/APCA CURRENT VERSION: 0.0.98G-4g-lut3 Constants: 4g
 
+### January 11 2022
+Font lookup table revised, still for 4G constants. Now available as arrays in the DATA folder.
+
 ### January 2 2022
 Font lookup table revised, still for 4G constants.
 
