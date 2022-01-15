@@ -6,7 +6,7 @@ WCAG&nbsp;2.x contrast and 1.4.3 and the related understandings and guidelines w
 
 There are a number of reasons that WCAG&nbsp;2.x contrast is faulty, one of which is the binary pass/fail nature of the SC for a property that does not apply in a binary way across perception nor impairments. Humans are not binary computers, and it is important to understand the non-linear aspects of perception, and to set guidelines that correctly model perception as opposed to "brute forcing" arbitrary values that ultimately do more harm than good.
 
-Let's begin with a general understanding of color and contrast with the summary outlined below. For a deeper dice see the author's whitepaper ["Introduction to Color and Accessibility"](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance#introduction_to_color_and_accessibility) and also [the draft APCA white paper](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup/Whitepaper).
+Let's begin with a general understanding of color and contrast with the summary outlined below. For a deeper dive see the author's whitepaper ["Introduction to Color and Accessibility"](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance#introduction_to_color_and_accessibility) and also [the draft APCA white paper](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup/Whitepaper).
 
 
 ## What Is Readability Contrast?
@@ -36,7 +36,7 @@ The problems of 4.5:1 as a target for a guideline not only impact accessibility,
 
 **_Additional comparisons and discussions by this author:_**
 - [**What’s Red & Black & Also Not Read?**](https://atangledwebweweave.com/whats-red-black-also-not-read-573b9c0a97ed) on Tangled Web, which examines the nature of color insensitivity and readability.
-- [**A Contrast of Errors**](https://medium.com/tangledweb/a-contrast-of-errors-373c2665d42a) on Tangled Web, which looks at the history and the current international readability crisis.
+- [**A Contrast of Errors**](https://atangledwebweweave.com/a-contrast-of-errors-373c2665d42a) on Tangled Web, which looks at the history and the current international readability crisis.
 - Part I: [**Orange You Wondering About Contrast?**](https://gist.github.com/Myndex/1dadb6dcac596f1cd7a5686a076f697f) Answering some contrast questions, and demonstrating a real solution to the infamous orange conundrum.
 - Part II: [**The Lighter Side of Dark Backgrounds**](https://gist.github.com/Myndex/c30dba273aa5eca426ad9f5200917c9d) An article comparing some parts of APCA with the old WCAG&nbsp;2 contrast methods, demonstrating how WCAG&nbsp;2 contrast can cause poor results.
 - Part III: [**WCAG&nbsp;2 vs APCA Contrast Shootout**](https://gist.github.com/Myndex/069a4079b0de2930e72d5401bde9af98#wcag-2-vs-apca-contrast-shootout) Answering some recent questions regarding APCA, with comparisons and examples of the old (WCAG&nbsp;2 1.4.3) and the future WCAG&nbsp;3 / APCA.
@@ -63,7 +63,7 @@ This points to the importance of real user personalization, an area where the te
 ## Use-Case Ranges
 These general levels are appropriate for use by themselves, without the need to reference a lookup table. APCA reports contrast as an Lc&nbsp;value (lightness contrast) from **Lc&nbsp;0** to **Lc&nbsp;105+**. For accessibility, consider Lc&nbsp;15 the point of invisibility for many users, and Lc&nbsp;90 is preferred for body text.
 
-See [this on ranges](https://github.com/Myndex/SAPC-APCA/blob/master/DOCS/APCAinanutshell.md#use-case-ranges) for a more indepth look.
+See [this on ranges](./APCAinaNutshell.md#use-case-ranges) for a more indepth look.
 
 *   **Lc&nbsp;90** • Preferred level for fluent text and columns of body text with a font no smaller than 14px/weight 400 (normal).
 *   **Lc&nbsp;75** • The _minimum_ level for columns of body text with a font no smaller than 18px/400. Lc&nbsp;75 should be considered a minimum for text where readability is important.
@@ -99,6 +99,6 @@ _This document was written in plain language to the extent possible, with a targ
 
 ### _THE REVOLUTION WILL BE READABLE_<sup>™</sup>
 
- <img src="images/APCAcolor4.png" width="640" alt="APCA The Revolution Will Be Readable">
+ <img src="../images/APCAcolor4.png" width="640" alt="APCA The Revolution Will Be Readable">
 
 

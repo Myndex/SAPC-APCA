@@ -1,12 +1,14 @@
-# Repositories where certain versions of APCA are held:
+# _Myndex and APCA Repositories_
+
+- Myndex on GitHub: https://git.myndex.com/
 
 ## GitHub
 
 - Main (This): https://github.com/Myndex/SAPC-APCA
 - W3 licensed APCA: https://github.com/Myndex/apca-w3
-- WCAG_2_PLUS - aka Bridge-PCA: https://github.com/Myndex/bridge-pca
-- Full Range Non Commercial version: 
-- SARCAM:
+- Bridge-PCA: https://github.com/Myndex/bridge-pca
+- colorparsley: https://github.com/Myndex/colorparsley
+- SARCAM: ---
 
 
 ## NPM
@@ -21,10 +23,10 @@
 
 ## Myndex Technologies
 
-- General Info: https://www.myndex.com/WEB/Perception
 - Live Demo: https://www.myndex.com/APCA/
-- Research Tools: https://www.myndex.com/SAPC/
 - Color Vision Simulator: https://www.myndex.com/CVD/
+- General Info: https://www.myndex.com/WEB/Perception
+- Research Tools: https://www.myndex.com/SAPC/
 
 ## W3 / AGWG
 

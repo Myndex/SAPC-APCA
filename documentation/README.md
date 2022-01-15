@@ -1,5 +1,5 @@
 <p align="center">
- <img src="images/APCAcolor4.png" width="640" alt="APCA The Revolution Will Be Readable"><br><br>
+ <img src="../images/APCAcolor4.png" width="640" alt="APCA The Revolution Will Be Readable"><br><br>
   
   <a href="https://npmjs.org/package/apca-w3">
     <img src="https://badgen.net/npm/v/apca-w3?color=3000c0&icon=npm" alt="version" />
@@ -21,36 +21,42 @@
   </a>
 </p>
 
-# SAPC • APCA PRIMARY REPOSITORY
+# APCA • SAPC • SARCAM PRIMARY REPOSITORY
+Please make all comments or discussions here and not in the satellite repositories.
+
+## NEW! Bridge PCA
+Do you want to improve readability, but you are forced to used WCAG 2 contrast to the letter? Then Bridge PCA is for you. It is backward compatible with WCAG 2, but using APCA technology.
+SEE: [**_Bridge PCA Repository_**](https://github.com/Myndex/bridge-pca) 
 
 ## NEW! _W3 Licensed Files Moved_
-**All files that are part of and licensed to the W3 and AGWG, in support of WCAG_3, are now in their own repository.**
+**All files that are part of and licensed to the W3 and AGWG, in support of WCAG&nbsp;3, are now in their own repository.**
 
-SEE: [**_APCA W3 Repository_**](https://github.com/Myndex/apca-w3) and please source all files for tools intended for WCAG_3 conformance from that specific repository. The files in this repositiory are part of other projects, and not necessary for WCAG_3 compliance.
+SEE: [**_APCA W3 Repository_**](https://github.com/Myndex/apca-w3) and please source all files for tools intended for WCAG&nbsp;3 conformance from that specific repository. The files in this repositiory are part of other projects, and not necessary for WCAG&nbsp;3 compliance.
 
 -----
 ### Got Questions? We Got Answers!
 - [**_Open a discussion today!_**](https://github.com/Myndex/SAPC-APCA/discussions)
 ## Advanced Perceptual Contrast Algorithm in a nutshell
-- APCA was developed independently as a part of the future WCAG_3 standard.
-    - APCA uses modern vision science and is perceptually uniform.
-    - Studies demonstrate that APCA for WCAG_3 is superior to WCAG_2.x contrast methods.
-    - APCA can be used today as an independent standard to provide excellent guidance for contrasts for readability and understandability of web content.
-        - however, WCAG_3 is not an official standard yet, and it is useful to note that APCA it is _not_ backwards compatible with WCAG_2.x.
-        - This is mainly an issue if you have a contrasctual obligation or law to follow that demands WCAG 2 AA as a web standard.
-        - Unfortunately WCAG 2 is substantially incorrect in certain areas of perception due to its basis on older standards and technologies. It is due to this that APCA was developed as the replacement for use in WCAG_3, as a result complete backwards compatibility is not possible.
+APCA was developed independently as a part of the future WCAG&nbsp;3 standards, with the guidance and oversight of members of the W3 AGWG, Members of the US Access Board, and members of the accessibility community at large. All participants, beta testers, early adopters, are deeply thanked for their comments and contributions to the development of the APCA. Readability is for all!
+
+- APCA uses modern vision science and is perceptually uniform.
+- Studies demonstrate that APCA for WCAG&nbsp;3 is superior to WCAG&nbsp;2.x contrast methods.
+- APCA can be used today as an independent standard to provide excellent guidance for contrasts for readability and understandability of web content.
+    - however, WCAG&nbsp;3 is not an official standard yet, and it is useful to note that APCA it is _not_ backwards compatible with WCAG&nbsp;2.x.
+    - This is mainly an issue if you have a contrasctual obligation or law to follow that demands WCAG 2 AA as a web standard.
+    - Unfortunately WCAG 2 is substantially incorrect in certain areas of perception due to its basis on older standards and technologies. It is due to this that APCA was developed as the replacement for use in WCAG&nbsp;3, as a result complete backwards compatibility is not possible.
 - The discussion tab is open here if you have questions or comments.
 - This repo includes the basic APCA code, which returns a perceptually uniform contrast value.
 - This iteration has been stable since February, future iterations of course planned.
     - While it is still pre-release beta, the general functioning is demonstratively useful.
     - This version is set for sRGB, a next iteration will change the inputs to allow any additive colorspace.
- - You _CAN_ use APCA simply to evaluate a perceived contrast (such as Lc75). But ALSO:
+ - You _CAN_ use APCA simply to evaluate a perceived contrast (such as Lc&nbsp;75). But ALSO:
      - There are a variety of lookup tables that can be used to relate a contrast to a font size and weight.
      - Rounding the contrast to an integer is allowed, and interpolation can be used with a lookup table.
- - For simplicity, you can also use the "simple key levels" method (Lc 45, 60, 75), which compares to WCAG 2 contrast (with one very light color) as:
-     - Lc 45 is "sort of" like 3:1
-     - Lc 60 is "sort of" like 4.5:1
-     - Lc 75 is "sort of" like 7:1
+ - For simplicity, you can also use the "simple key levels" method (Lc&nbsp;45, 60, 75), which compares to WCAG 2 contrast (with one very light color) as:
+     - Lc&nbsp;45 is "sort of" like 3:1
+     - Lc&nbsp;60 is "sort of" like 4.5:1
+     - Lc&nbsp;75 is "sort of" like 7:1
  - Unlike WCAG_2, APCA is polarity aware, so the BG and TEXT colors _must_ be sent to the correct inputs.
 
 Please feel free to use the discussion area for any questions or comments.
@@ -58,7 +64,7 @@ Please feel free to use the discussion area for any questions or comments.
 ## APCA Documentation and Quick Start
 See the [JS Documentation \(the ReadMe.md in the JS folder\)](JS/ReadMe.md) for information on using the API, which file is best suited for your needs, and a QuickStart tutorial.
 
-See [WHY APCA](WhyAPCA.md) for a brief explaination of the important differences of APCA for WCAG_3 vs the old WCAG_2.x/1.4.3 contrast guidelines.
+See [WHY APCA](WhyAPCA.md) for a brief explaination of the important differences of APCA for WCAG&nbsp;3 vs the old WCAG&nbsp;2.x/1.4.3 contrast guidelines.
 
 ### SAPC and APCA demo tools are live to play with.
 
@@ -92,9 +98,9 @@ There is a working version with examples and reference material on [APCAsite](ht
 
 Latest Lookup Table: January 11 2022
 
-<img width="639" alt="APCA Lookup Table" src="images/Jan2022LOOKUPTABLE.jpg">
+<img width="639" alt="APCA Lookup Table" src="../images/Jan2022LOOKUPTABLE.jpg">
 
-<img width="596" alt="APCA Lookup table legend" src="images/Jan2022LOOKUPTABLELEGEND.jpg">
+<img width="596" alt="APCA Lookup table legend" src="../images/Jan2022LOOKUPTABLELEGEND.jpg">
 
 ------
 ------
@@ -123,7 +129,7 @@ Latest Lookup Table: January 11 2022
 
 If you have been using any files from _this_ repository, be sure to read the file "[ImportantChangeNotices.md]" for critical updates that may affect results.
 
-## SAPC/APCA CURRENT VERSION: 0.0.98G-4g-lut3 Constants: 4g
+## SAPC/APCA CURRENT VERSION: 0.1.1 Constants: 4g
 
 ### January 2 2022
 Font lookup table revised, still for 4G constants.
@@ -159,7 +165,7 @@ The base libraries are plain vanilla Javascript. Other languages may be in the "
 
 A plain language walkthrough, LaTeX math, and related supporting information is below:
 
-### APCA 0.0.98G 4g constants and math
+### APCA 0.1.1 4g constants and math
 
 APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math below assumes the use of the web standard sRGB colorspace.
 ```javascript
@@ -219,7 +225,7 @@ If you've implemented the code and want a quick sanity check, Here are some keys
 Test Values for APCA W3 using the G series constants, normal and reverse float values for each color pair.
 First number is TEXT second number is BACKGROUND.
 
-    TEXT vs BKGND •  EXPECTED RESULT for APCA W3 to 0.1.0 (G-constants)
+    TEXT vs BKGND •  EXPECTED RESULT for APCA W3 to 0.1.1 (G-constants)
 
     #888 vs #fff  •  63.056469930209424
     #fff vs #888  • -68.54146436644962  
@@ -398,5 +404,10 @@ Glossary
 
 _For giggles:_
 ### More glossary of confusing terms and "bonus sciencey stuff" in [The Lighter Side of Light](https://gist.github.com/Myndex/b956e5320f77cfd5c3cf451f4ce0acb5#the-lighter-side-of-light)
+
+
+### _THE REVOLUTION WILL BE READABLE_<sup>™</sup>
+
+ <img src="../images/APCAcolor4.png" width="640" alt="APCA The Revolution Will Be Readable">
 
 
