@@ -1,12 +1,12 @@
 # APCA & SAPC 
-## Frequently Asked Questions for the Advanced Perceptual Contrast Algorithm.
+## Frequently Asked Questions for the Accessible Perceptual Contrast Algorithm.
 _--THIS IS A WORK IN PROGRESS--_
 
 -----
 -----
 **APCA FAQ post #001**
 ### Q: What is APCA?
-A: It's the Advanced Perceptual Contrast Algorithm, a mini-appearance model, and a way to predict the perceived contrast for best readability. It is tuned specifically for readability of text on self-illuminated displays.
+A: It's the Accessible Perceptual Contrast Algorithm, a mini-appearance model, and a way to predict the perceived contrast for best readability. It is tuned specifically for readability of text on self-illuminated displays.
 
 
 -----
@@ -35,5 +35,3 @@ A: Visual contrast for readability is affected not only by a pair of colors, but
 -----
 WIP
 
-
- S-Luv Advanced Predictive Color model and the

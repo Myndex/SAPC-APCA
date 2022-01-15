@@ -36,7 +36,7 @@ SEE: [**_APCA W3 Repository_**](https://github.com/Myndex/apca-w3) and please so
 -----
 ### Got Questions? We Got Answers!
 - [**_Open a discussion today!_**](https://github.com/Myndex/SAPC-APCA/discussions)
-## Advanced Perceptual Contrast Algorithm in a nutshell
+## Accessible Perceptual Contrast Algorithm in a nutshell
 APCA was developed independently as a part of the future WCAG&nbsp;3 standards, with the guidance and oversight of members of the W3 AGWG, Members of the US Access Board, and members of the accessibility community at large. All participants, beta testers, early adopters, are deeply thanked for their comments and contributions to the development of the APCA. Readability is for all!
 
 - APCA uses modern vision science and is perceptually uniform.
@@ -76,7 +76,7 @@ See [WHY APCA](WhyAPCA.md) for a brief explaination of the important differences
 # What is SAPC/APCA?
 [![](images/Myndex_eye_cielabWide.png)](https://www.myndex.com/WEB/Perception)
 
-## APCA is the _Advanced Perceptual Contrast Algorithm_
+## APCA is the _Accessible Perceptual Contrast Algorithm_
 
 APCA is a set of contrast assessment methods for predicting perceived contrast between sRGB colors on a computer monitor. It has been developed as an assessment method for W3 Silver/WCAG3 accessibility standards relating to content for computer displays and mobile devices.
 
@@ -167,7 +167,7 @@ A plain language walkthrough, LaTeX math, and related supporting information is 
 
 ### APCA 0.1.1 4g constants and math
 
-APCA is the **A**dvanced **P**erceptual **C**ontrast **A**lgorithm. The math below assumes the use of the web standard sRGB colorspace.
+APCA is the **A**ccessible **P**erceptual **C**ontrast **A**lgorithm. The math below assumes the use of the web standard sRGB colorspace.
 ```javascript
  // 0.98G-4g full range version constants:
     

@@ -60,7 +60,7 @@ SEE: [**_APCA W3 Repository_**](https://github.com/Myndex/apca-w3) and please so
 - [**_Open a discussion today!_**](https://github.com/Myndex/SAPC-APCA/discussions)
 
 
-## Advanced Perceptual Contrast Algorithm in a nutshell
+## Accessible Perceptual Contrast Algorithm in a nutshell
 APCA was developed independently as a part of the future WCAG&nbsp;3 standards, with the guidance and oversight of members of the W3 AGWG, Members of the US Access Board, and members of the accessibility community at large. All participants, beta testers, early adopters, are deeply thanked for their comments and contributions to the development of the APCA. Readability is for all!
 
 ## OTHER RESOURCES
