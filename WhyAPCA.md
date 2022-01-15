@@ -86,9 +86,10 @@ _Myndex Color Science Researcher_
 _Inventor, SAPC and APCA_    
 
 **_NOTICE: Personal opinions expressed are mine and may or may not reflect those of the W3 or AGWG unless specifically stated so._** 
+_This document was written in plain language to the extent possible, with a target readability age of 16 to 18, and evaluated using the https://wooorm.com/readability/ tool. If you found any part of this essay difficult or confusing, please file an issue so we can imporve._
 
 ### _THE REVOLUTION WILL BE READABLE_
 
- <img src="images/APCAlogo.png" width="640" alt="APCA The Revolution Will Be Readable">
+ <img src="images/APCAcolor4.png" width="640" alt="APCA The Revolution Will Be Readable">
 
 
