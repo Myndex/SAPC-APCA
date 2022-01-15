@@ -4,18 +4,23 @@
   <a href="https://npmjs.org/package/apca-w3">
     <img src="https://badgen.net/npm/v/apca-w3?color=3000c0&icon=npm" alt="version" />
   </a> &nbsp;&nbsp;
+
   <a href="https://npmjs.org/package/apca-w3">
     <img src="https://badgen.net/npm/dt/apca-w3?color=6000b0&icon=npm" alt="downloads" />
   </a> &nbsp;&nbsp;
+
   <a href="https://github.com/Myndex/SAPC-APCA">
     <img src="https://badgen.net/github/last-commit/Myndex/SAPC-APCA/?icon=github" alt="last commit" />
   </a> &nbsp;&nbsp;
+<br>
   <a href="https://github.com/Myndex/SAPC-APCA/blob/master/LICENSE.md">
     <img src="https://badgen.net/badge/license/Beta Non-Com?icon=github&color=BB5FD1" alt="license" />
   </a> &nbsp;&nbsp;
+
   <a href="https://twitter.com/MyndexResearch">
     <img src="https://badgen.net/badge/@/MyndexResearch?icon=twitter" alt="twitter" />
   </a> &nbsp;&nbsp;
+
   <a href="">
     <img src="https://badgen.net/badge/JS/Vanilla/889900" alt="CSS level 3" />
   </a>
@@ -24,10 +29,12 @@
 # APCA • SAPC • SARCAM PRIMARY REPOSITORY
 Please make all comments or discussions here and not in the satellite repositories.
 
+-----
 ## NEW! Bridge PCA
 Do you want to improve readability, but you are forced to used WCAG 2 contrast to the letter? Then Bridge PCA is for you. It is backward compatible with WCAG 2, but using APCA technology.
 SEE: [**_Bridge PCA Repository_**](https://github.com/Myndex/bridge-pca) 
 
+-----
 ## NEW! _W3 Licensed Files Moved_
 **All files that are part of and licensed to the W3 and AGWG, in support of WCAG&nbsp;3, are now in their own repository.**
 
@@ -59,7 +66,7 @@ SEE: [**_APCA W3 Repository_**](https://github.com/Myndex/apca-w3) and please so
 ### Got Questions? We Got Answers!
 - [**_Open a discussion today!_**](https://github.com/Myndex/SAPC-APCA/discussions)
 
-
+-----
 ## Accessible Perceptual Contrast Algorithm in a nutshell
 APCA was developed independently as a part of the future WCAG&nbsp;3 standards, with the guidance and oversight of members of the W3 AGWG, Members of the US Access Board, and members of the accessibility community at large. All participants, beta testers, early adopters, are deeply thanked for their comments and contributions to the development of the APCA. Readability is for all!
 
