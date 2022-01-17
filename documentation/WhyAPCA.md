@@ -74,7 +74,7 @@ See [this on ranges](./APCAinaNutshell.md#use-case-ranges) for a more indepth lo
 
 These define the basic minimum levels, what you might think of as A/AA in the old WCAG&nbsp;2. For the equivelent to AAA, simply increase the contrast values by Lc&nbsp;15.
 
-### Range Based Scoring
+### Range-Based Scoring
 While the candidate for WCAG&nbsp;3 is still in development, it includes a range-based conformance system. While it considers multiple factors, it is simple enough to be fully automated, and does not rely on an arbitrary pass/fail binary scoring.
 
 The overall approach improves design flexibility and readability at the same time. Readability is improved by increasing contrast in blocks of body text where it is most needed, and design flexibility is achieved by relaxing contrast for large non-text elements which do not need brute-force contrast levels due to their larger size (resulting in a lower spatial frequency).
@@ -89,9 +89,9 @@ Thank you for reading,
 
 
 _Andrew Somers_    
-_Inventor of the APCA_      
 _Senior Color Science Researcher_      
 _Myndex PercepTex Reserch Project_     
+_Inventor of the APCA_      
 
 **_NOTICE: Personal opinions expressed are the author's and may or may not reflect those of the W3 or AGWG._** 
 
