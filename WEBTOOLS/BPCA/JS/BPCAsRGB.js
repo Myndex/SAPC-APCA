@@ -317,6 +317,34 @@ function BPCAcontrast(txtY,bgY,places = -1) {
 
 
 
+//////////  ƒ  bridgeRatio()  ////////////////////////////////////////////
+//export
+function bridgeRatio (contrastLc = 0, ratioStr = ' to 1', places = 1) {
+           // Takes the output of APCA (either a string or number)
+          // and makes it a WCAG2 ratio, returning a string '4.5 to 1'
+         // Jan 16 2022 constants   
+    let finalScale = 0.170;
+    let preScale = -0.078;
+    let powerShift = 3.14159;
+    let loThresh = 0.222;
+    let loExp = 0.890;
+
+    contrastLc = Math.pow(Math.max(0, Math.abs(parseFloat(contrastLc) * 0.01) +
+                 preScale), powerShift) + finalScale;
+    
+    contrastLc = (contrastLc > loThresh) ? contrastLc :
+                 contrastLc - Math.pow(loThresh - contrastLc, loExp);
+    
+    return ( contrastLc * 10.0 ).toFixed(places) + ratioStr;
+}        
+
+
+
+
+
+
+
+
 function YunClmp (YtoUnClamp = 1.0) {
 		YtoUnClamp = (YtoUnClamp > blkThrs) ? YtoUnClamp :
 					 (YtoUnClamp < blkClmpOut) ? 0.0 :
