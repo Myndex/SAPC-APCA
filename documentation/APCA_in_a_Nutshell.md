@@ -1,8 +1,8 @@
 # The Accessible Perceptual Contrast Algorithm
-APCA, is a new method for calculating and predicting readability contrast. APCA is a part of the larger S-Luv Accessibility/Readability Color Appearance Model known as SARCAM (formerly SAPC). These models are specifically related to color appearance on self-illuminated RGB computer displays & devices, and also for modeling impairments, with a focus on readability.
+APCA is a new method for calculating and predicting readability contrast. APCA is a part of the larger S-Luv Accessible Readability Color Appearance Model known as SARCAM (formerly SAPC). These models are specifically related to color appearance on self-illuminated RGB computer displays & devices, and also for modeling accessible user needs, with a focus on readability.
 
-## Lightness contrast
-The APCA generates a contrast value based on a color pair, and this value is perceptually based: that is, regardless of how light or dark the colors are, a contrast value of Lc&nbsp;60 represents the same _perceived_ readability contrast. This is absolutely not the case with WCAG&nbsp;2.x, which far overstates contrast for dark colors to the point that 4.5:1 can be functionally unreadable.
+## Lightness contrast L<sup>c</sup>
+The APCA generates a contrast value based on a color pair, and this value is perceptually based: that is, regardless of how light or dark the colors are, a contrast value of Lc&nbsp;60 represents the same _perceived_ readability contrast. This is absolutely not the case with WCAG&nbsp;2.x, which far overstates contrast for dark colors to the point that 4.5:1 can be functionally unreadable when a color is near black. As a result, WCAG&nbsp;2.x contrast cannot be used for guidance designing "dark mode".
 
 The APCA contrast value is perceptually uniform, and pivots near the point where the CS curve flattens due to contrast constancy. Halving or doubling the APCA value relates to a halving or doubling of the perceived contrast. There is a subtle weighting for higher contrasts to smaller, thinner fonts.
 
@@ -17,7 +17,7 @@ A key takeaway is that a strict pass/fail with a blanket contrast ratio is not i
 This points to the importance of real user personalization, an area where the technology is literally missing (and a work in progress). For the guidelines though, we can set ranges for targets and expectations toward making the web readable for all.
 
 
-## Use-Case Ranges
+## Use-Case & Size Ranges
 These general levels are appropriate for use by themselves, without the need to reference a lookup table. APCA reports contrast as an Lc&nbsp;value (lightness contrast) from **Lc&nbsp;0** to **Lc&nbsp;105+**. For accessibility, consider Lc&nbsp;15 the point of invisibility for many users, and Lc&nbsp;90 is preferred for body text.
 
 *   **Lc&nbsp;90** • Preferred level for fluent text and columns of body text with a font no smaller than 18px/weight 300 or 14px/weight 400 (normal), or non-body text with a font no smaller than 12px. Also a recommended minimum for extremely thin fonts with a minimum of 24px at weight 200. Lc&nbsp;90 is a _suggested maximum_ for **very large and bold fonts** (greater than 36px bold), and large areas of color.
