@@ -42,11 +42,11 @@ The problems of 4.5:1 as a target for a guideline not only impact accessibility,
 - Part III: [**WCAG&nbsp;2 vs APCA Contrast Shootout**](https://gist.github.com/Myndex/069a4079b0de2930e72d5401bde9af98#wcag-2-vs-apca-contrast-shootout) Answering some recent questions regarding APCA, with comparisons and examples of the old (WCAG&nbsp;2 1.4.3) and the future WCAG&nbsp;3 / APCA.
 
 -----
-## The Solution
-APCA, the Accessible Perceptual Contrast Algorithm is a new method for calculating and predicting readability contrast. APCA is a part of the larger S-Luv Accessibility/Readability Color Appearance Model known as SARCAM (formerly SAPC). These models are specifically related to color appearance on self-illuminated RGB computer displays & devices, and also for modeling impairments, with a focus on readability.
+## The Solution: APCA
+The Accessible Perceptual Contrast Algorithm (APCA) is a new method for calculating and predicting readability contrast. APCA is a part of the larger S-Luv Accessible Readability Color Appearance Model known as SARCAM (formerly SAPC). These models are specifically related to color appearance on self-illuminated RGB computer displays & devices, and also for modeling accessible user needs, with a focus on readability.
 
 ### Lightness contrast
-The APCA generates a contrast value based on a color pair, and this value is perceptually based: that is, regardless of how light or dark the colors are, a contrast value of Lc&nbsp;60 represents the same _perceived_ readability contrast. This is absolutely not the case with WCAG&nbsp;2.x, which far overstates contrast for dark colors to the point that 4.5:1 can be functionally unreadable.
+The APCA generates a contrast value based on a color pair, and this value is perceptually based: that is, regardless of how light or dark the colors are, a contrast value of Lc&nbsp;60 represents the same _perceived_ readability contrast. This is absolutely not the case with WCAG&nbsp;2.x, which far overstates contrast for dark colors to the point that 4.5:1 can be functionally unreadable when a color is near black. As a result, WCAG&nbsp;2.x contrast cannot be used for guidance designing "dark mode".
 
 The APCA contrast value is perceptually uniform, and pivots near the point where the CS curve flattens due to contrast constancy. Halving or doubling the APCA value relates to a halving or doubling of the perceived contrast. There is a subtle weighting for higher contrasts to smaller, thinner fonts.
 
@@ -74,7 +74,7 @@ See [this on ranges](./APCAinaNutshell.md#use-case-ranges) for a more indepth lo
 
 These define the basic minimum levels, what you might think of as A/AA in the old WCAG&nbsp;2. For the equivelent to AAA, simply increase the contrast values by Lc&nbsp;15.
 
-### Range Based Scoring
+### Range-Based Scoring
 While the candidate for WCAG&nbsp;3 is still in development, it includes a range-based conformance system. While it considers multiple factors, it is simple enough to be fully automated, and does not rely on an arbitrary pass/fail binary scoring.
 
 The overall approach improves design flexibility and readability at the same time. Readability is improved by increasing contrast in blocks of body text where it is most needed, and design flexibility is achieved by relaxing contrast for large non-text elements which do not need brute-force contrast levels due to their larger size (resulting in a lower spatial frequency).
@@ -89,9 +89,9 @@ Thank you for reading,
 
 
 _Andrew Somers_    
-_Inventor of the APCA_      
 _Senior Color Science Researcher_      
 _Myndex PercepTex Reserch Project_     
+_Inventor of the APCA_      
 
 **_NOTICE: Personal opinions expressed are the author's and may or may not reflect those of the W3 or AGWG._** 
 
