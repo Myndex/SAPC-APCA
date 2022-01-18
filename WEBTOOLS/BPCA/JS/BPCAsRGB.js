@@ -320,23 +320,36 @@ function BPCAcontrast(txtY,bgY,places = -1) {
 //////////  ƒ  bridgeRatio()  ////////////////////////////////////////////
 //export
 function bridgeRatio (contrastLc = 0, ratioStr = ' to 1', places = 1) {
+
            // Takes the output of APCA (either a string or number)
           // and makes it a WCAG2 ratio, returning a string '4.5 to 1'
          // Jan 16 2022 constants   
-    let finalScale = 0.170;
-    let preScale = -0.078;
-    let powerShift = 3.14159;
-    let loThresh = 0.222;
-    let loExp = 0.890;
+    const offsetA = 0.2693;
+    const preScale = -0.0561;
+    const powerShift = 4.537;
 
-    contrastLc = Math.pow(Math.max(0, Math.abs(parseFloat(contrastLc) * 0.01) +
-                 preScale), powerShift) + finalScale;
-    
-    contrastLc = (contrastLc > loThresh) ? contrastLc :
-                 contrastLc - Math.pow(loThresh - contrastLc, loExp);
-    
-    return ( contrastLc * 10.0 ).toFixed(places) + ratioStr;
-}        
+    const mainFactor = 1.113946;
+    const addTrim = 0.0837;
+
+    const loThresh = 0.3;
+    const loExp = 0.48;
+    const preEmph = 0.42;
+    const postDe = 0.6594;
+
+    contrastLc = Math.max(0, Math.abs(parseFloat(contrastLc) * 0.01));
+
+         // convert Lc into a WCAG ratio
+    let wcagContrast = (Math.pow( contrastLc + preScale, powerShift ) +
+                        offsetA) * mainFactor * contrastLc + addTrim;
+
+         // adjust WCAG ratios that are under  3 : 1
+    wcagContrast = (wcagContrast > loThresh) ?
+                10.0 * wcagContrast :
+                10.0 * wcagContrast -
+                (Math.pow( loThresh - wcagContrast + preEmph, loExp ) - postDe);
+
+    return (wcagContrast).toFixed(places) + ratioStr;
+}
 
 
 
