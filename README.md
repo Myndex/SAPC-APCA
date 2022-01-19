@@ -102,7 +102,6 @@ Basic APCA Math in LaTeX
 
 
 
-
 ### _THE REVOLUTION WILL BE READABLE_<sup>™</sup>
 
  <img src="./images/APCAcolor4.png" width="640" alt="APCA The Revolution Will Be Readable">

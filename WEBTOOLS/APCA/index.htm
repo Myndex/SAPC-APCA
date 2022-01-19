@@ -3,7 +3,7 @@
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121680439-6"></script>
-<script>
+<script async>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -589,7 +589,7 @@ tr td.keyVal30, .g4gVal30 {color: #fdc; background-color: #b85;}
   <!-- This Page Requires beta 0.98G or greater of the following file. -->
   <script src="JS/DEV98G_SAPCsRGB.js"></script>
 
-<script>
+<script async>
 // User Agent Detection — place first in head
 // Set body tag: <body id="bodyid" onload="setBrowser()">
 
@@ -697,7 +697,7 @@ function getCSScolor(sRGBstrg, type) {
     }
 
 
-    let colorValid = '<code><span class="dib ls0 m0 fs095 lh10 fwb">'
+    let colorValid = '<code><span class="dib ls0 m0 pt08 fs075 lh10 fwb">'
       + thisColor.hexNoA2() + ' • ' + thisColor.RGBAstr();
       
   
@@ -944,30 +944,30 @@ const byClass = ( className, property, value, property2 ) => {
 <body id="bodyid" onload="setBrowser(); getColorURL();">
 <main class="wrapper">
 
-  <a href="https://www.myndex.com/WEB/Perception">
+  <a href="https://www.myndex.com/WEB/Perception" aria-label="Go Back to Percepton Experiments">
   <header class="smallHeader sticky"> &nbsp; </header></a>
 <br>
 <br>
   <h1 class="mastHead"  style="">APCA&nbsp;CONTRAST&nbsp;CALCULATOR</h1>
   
-<div style="position: relative; Margin: 1em auto;">
+<div style="position: relative; Margin: 0.25em auto;">
   <div id="null01" class="contrastChart pie">
 
-<table id="tableSamples" class='conformScore'>
+<table id="tableSamples" class='conformScore fs14'>
     <tr>  
-    <th class='colorPicker' id="TXTpickerWrap" rowspan='2' >
+    <th class='colorPicker' id="TXTpickerWrap" rowspan='2'><label for="TXTpicker">Click</label>
     <input type="color" id="TXTpicker"
             oninput="getCSScolor(this.value,'TXT'); inputTXT.value = this.value; testContrast();">
         </th>
 
-    <th class='tableTitle'colspan='3'>TEXT COLOR</th>
+    <th colspan='3'class='tableTitle'><label for="inputTXT">TEXT COLOR</label></th>
 
-        <th class='tableContrast' onclick="swapColors()" colspan='2' rowspan='2'><span style="font-size: 1em; letter-spacing: 0.1em;">APCA<span style="font-size: 0.6em;  letter-spacing: 0;"><br>CONTRAST<br></span><span style="font-family: 'Barlow Condensed'; font-size: 0.95em;font-weight: bold; line-height: 1.1;" id="contrastResultTable"></span><br><span class="helvetiFont" style="line-height: 1;">Click To Swap</span>
-        </th>
+        <th class='tableContrast' colspan='2' rowspan='2' role="button" tabindex="0" onkeypress="if(event.keyCode==32||event.keyCode==13){swapColors()};" onclick="swapColors()" ><span style="font-size: 1em; letter-spacing: 0.1em;">APCA<span style="font-size: 0.6em;  letter-spacing: 0;"><br>CONTRAST<br></span><span style="font-family: 'Barlow Condensed'; font-size: 0.95em;font-weight: bold; line-height: 1.1;" id="contrastResultTable"></span><br><span class="helvetiFont" style="line-height: 1;">Click To Swap</span>
+        </button></th>
 
-    <th class='tableTitle'colspan='3'>BACKGROUND</th>
+    <th class='tableTitle'colspan='3'><label for="inputBG">BACKGROUND</label></th>
 
-    <th class='colorPicker' id="BGpickerWrap"  rowspan='2' >
+    <th class='colorPicker' id="BGpickerWrap"  rowspan='2' ><label for="BGpicker">Click</label>
     <input type="color" id="BGpicker"
             oninput="getCSScolor(this.value,'BG'); inputBG.value = this.value; testContrast();">
         </th>
@@ -1093,15 +1093,16 @@ const byClass = ( className, property, value, property2 ) => {
 
 <hr>
 
-<h2 class="mastHead fs20"  style="">BASIC VERSION for CONTENT CREATORS</h2>
-<h3>This version only shows score 4 fonts with weights 200 thru 700.</h3>
+<h2 class="mastHead fs20"  style="">BASIC DEMO for CONTENT CREATORS</h2>
+<h3>This demo only shows score 4 fonts with weights 200 thru 700.</h3>
 
 <div id="demoArea"> 
-  <h1 style="text-align: center;">APCA Visual&nbsp;Contrast Calculator</h1>
+  <h2 class="mastHead fs20"  style="text-align: center;">APCA Visual&nbsp;Contrast Calculator</h2>
   
-	<a id="colorURL" class="myndexButton flr tac" style="width: 35%; margin: 1em; padding: 0.3em 1em;" onclick="createColorURL('colorURL')">Generate a URL of This Color Pair</a>
+	<a id="colorURL" class="myndexButton flr tac " role="button" tabindex="0" onkeypress="if(event.keyCode==32||event.keyCode==13){createColorURL('colorURL')};" style="width: 45%; margin: 1em; padding: 0.3em 1em;" onclick="createColorURL('colorURL')">Generate a URL of This Color Pair</a>
 	<div id="colorWarn" class="" style="">
-		<div style=""><span class="colorWarnX" style="" onclick="document.getElementById('colorWarn').style.display='none'">&times;</span>
+		<div style=""><button class="colorWarnX" style="" onclick="document.getElementById('colorWarn').style.display='none'"
+		tabindex="0">&times;</button>
 		<h3 style="">Please Enter Valid Colors First!</h3>
 		</div>
 	</div>
@@ -1114,16 +1115,16 @@ const byClass = ( className, property, value, property2 ) => {
   }
 </script>
 
-    <input class="flr clr" type="text" id="URLresult" value="" onclick="this.select();">
+    <input class="flr clr p05" type="text" id="URLresult" value="" onclick="this.select();">
 
     <div class="textBox" style="">
-      <p>Click on a color patch next to "Text" or "Background" above to use the HTML5 color-picker (modern browsers). Otherwise enter color values in the text-box as a three or six digit hex value, the '#' is not necessary. Other valid entries are integer rgb(r,g,b) or an HTML color name (see bottom of page for list).</p>
+      <p>Click on a color patch next to "Text" or "Background" above to use the HTML5 color-picker (modern browsers). Otherwise enter color values in the text-box as a three or six digit hex value, the '#' is not necessary. Other valid entries are integer rgb(r,g,b) or an HTML or CSS color name such as "aliceblue".</p>
 
     </div>
 
       <h2 class="mastHead"  style=""><em>APCA W3 PUBLIC BETA</em></h2>
 
-  <p class="p10">PROBLEMS? Try a "Forced Reload" on your browser, and/or clear the cache. For the public betas and experimental features, see the beta site: <a href="/SAPC/">SAPC BETA</a>. For comments or to report issues, please visit us on <a href="https://github.com/Myndex/SAPC-APCA">GitHub.</a>
+  <p class="p10">PROBLEMS? Try a "Forced Reload" on your browser, and/or clear the cache. For the public beta and experimental features, including live interactive experiments that demonstrate the concepts, please see the beta site: <a href="/SAPC/">SAPC BETA</a>. For comments or to report issues, please visit us on <a href="https://github.com/Myndex/SAPC-APCA">GitHub.</a>
 </div> <!--    ********    Close Demo Area ********    -->         
     
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -1137,11 +1138,12 @@ const byClass = ( className, property, value, property2 ) => {
    (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
+<!-- 
 <div class="m20 p12 b08 br20 bcO PbgO cBr  fs11 fw5"><h2>About This Month's Default Color Pair</h2> The default pair of colors in the tool this month, to kick off the new year, is an orange <code>#ea7439</code> background and a white text. This is the color like the infamous <a href="https://www.bounteous.com/insights/2019/03/22/orange-you-accessible-mini-case-study-color-ratio/"> "orange button problem"</a> that originally brought our attention to the math issues in the old contrast method. As you can see above, APCA indicates a much more accurate contrast prediction based on perception. 
     
 <br><br>A little different than the article, the color above <code>#ea7439</code> and white fails WCAG2 completely, yet if you replace the white with black, WCAG2 math gives it a 7:1 (!!!) Here, with the perceptually accurate SAPC/APCA G series, it passes with white, but black fails (as it should) for all but very large fonts. 
   
-<br><br>(If you came to the site with a different color pair in the URL, <a href="" id="orangeProblem" onclick="createColorURL('orangeProblem','ea7439','ffffff');">click here to load the demo colors</a>.)<!-- e86826  #ea7439 -->
+<br><br>(If you came to the site with a different color pair in the URL, <a href="" id="orangeProblem" onclick="createColorURL('orangeProblem','ea7439','ffffff');">click here to load the demo colors</a>.)
 
   <br><br>
 Click the white patch to the left of the text color entry to bring up a color picker that should update live (most browsers) and slide down to black to see the display update recommended minimum font sizes in real time. Dragging all the way to black, you'll see the tool indicates a lower contrast as per perception.
@@ -1153,12 +1155,14 @@ It should be noted that those with most forms of CVD prefer the white text as we
 
 </div>
 
+-->
+
 <hr class="clb" style="">
 
 <section class="explainer">
 
-  <h1 id="accessible-contrast" class="h1Query" style="">Accessible Contrast </h1>
-  <h2 class="h2Query">Relative to Font Size and Weight</h2> 
+  <h2 id="accessible-contrast" class="h1Query" style="">Accessible Contrast </h2>
+  <h3 class="h2Query">Relative to Font Size and Weight</h3> 
   <p>The table below is current as of January 2022, though as this is a public beta, there may be occasional discrepancies with the above automated font display above.</p>
 
   <h2 class="Luv275 fw7">GENERAL GUIDELINES on LEVELS</h2>
@@ -1176,18 +1180,21 @@ It should be noted that those with most forms of CVD prefer the white text as we
     
     <li><b>15</b> • The <em>absolute minimum</em> for any non-text that needs to be discernible and differentiable, such as dividers, and in some cases large buttons or thick focus visible outlines, but does not include fine details. Designers should treat anything below this level as invisible, as it will not be visible for many users. This minimum level should be avoided for items important to the use or interaction of the site.
   </ul>
-    <h2 class="Luv275 fw7">NOTES ON FONT SIZE </h2>
+    <h3 class="Luv275 fw7">NOTES ON FONT SIZE </h3>
 <p>Font sizes listed above assume an x-height ratio of at least 0.52. Font weight is based on highly standardized reference fonts such as Helvetica or Arial. "px" means the CSS reference px not device pixels. The reference px is defined as 1.278 arc minutes of visual angle.
 
-    <h2 class="Luv275 fw7">NOTES ON WCAG_2 COMPATIBILITY </h2>
+    <h3 id="bridge-pca" class="Luv275 fw7">NOTES ON WCAG_2 COMPATIBILITY </h3>
 
   <p>To use the APCA tool for minimum Bridge-PCA conformance (backwards compatible for WCAG_2):
     <ul>
     <li><b>90</b> • Lc 90 replaces WCAG_2 7:1
     <li><b>75</b> • Lc 75 replaces WCAG_2 4.5:1
     <li><b>60</b> • Lc 60 replaces WCAG_2 3:1
-    <li><b>WoB</b> • For light text on a darker background, when the text is lighter than #eee, increase the minimum value by Lc 10. The dedicated Bridge-PCA tool takes this into account automatically.
+    <li><b>WoB</b> • For light text on a darker background, when the text is lighter than <cpde> #eee </code>, increase the minimum value by Lc 10. The dedicated Bridge-PCA tool takes this into account automatically.
     </ul>
+    <p><strong>NEW!!</strong> If you need to be backwards compatible, the new Bridge-PCA can help! <a href="/BPCA/">Bridge PCA</a> is backwards compatible with WCAG 2, shows contrast as both Lc value, <em>and</em> the traditional WCAG 2 ratios, but with a twist: The "ratios" shown on Bridge PCA are perceptually accurate!
+    <p>This is possible because Bridge PCA uses APCA technology to generate "ratios" that look and feel very much like those of WCAG 2.
+    
   
   <h2 class="Luv265 fw7">Using the Lookup Table</h2>
 
@@ -1200,7 +1207,7 @@ It should be noted that those with most forms of CVD prefer the white text as we
     <li>Cells marked with <span class="fwb fs15 bodyText"></span> may be used for body text. If the indicated contrast is lower that Lc 75, then add lc 15 to this minimum, OR increase up to Lc 75.
   </ul>
 
-  <div style="overflow: scroll;">
+  <div id="lookup-table" style="overflow: scroll;">
     <table class="APCAtable">
         <tr>
           <th colspan="11" class="tableTitle" style="height: 2em; font-size: 1.5em;">APCA CONTRAST LOOKUP TABLE</th>
@@ -1494,8 +1501,8 @@ It should be noted that those with most forms of CVD prefer the white text as we
 
 <hr class="clb mt0" style="">
 
-<section  class="explainer"> 
-  <h1 style="color: #206;">The Science Behind SAPC/APCA</h1>
+<section id="apca-science" class="explainer"> 
+  <h2 style="color: #206;">The Science Behind SAPC/APCA</h2>
   <h3 class="h3Query" style="text-align: center;"><b>A</b>dvanced <b>P</b>erceptual <b>C</b>ontrast <b>A</b>lgorithm</h3>
 
   <div>
@@ -1506,23 +1513,23 @@ It should be noted that those with most forms of CVD prefer the white text as we
   <h3 class="h3Query" style="text-align: center;">What is the Contrast of This Page?</h3>
     <p>Most of this page is set at over 120 in "old" APCA numbers, which now is approximately 90<span class="Lc"><sup>L<sup>c</sup></sup></span>. To help differentiate between dark text on a light background and light text on dark, the math reports the latter as a negative value. But for purposes of the font lookup table, ignore the minus sign and use the absolute value.</p>
     
-    
-    <a id="null04" href="/WEB/Perception">
-    <button class="myndexButton queryButton fll" style="">
-    <div class="fll" style="padding: 0.4em 4px; font-family: 'Palatino', 'Georgia','Bookman', 'Times New Roman','Times','serif'; letter-spacing: 0.01em; line-height: 0.2; font-size: 2em; font-style: normal;">&Delta;&gamma; &nbsp;
+  </div>
+</section><!-- ********    Close Science Links Section     ********    -->
+ <div class="m15" style="">   
+    <a id="null04" href="/WEB/Perception" aria-label="Go Back to Percepton Experiments">
+    <button class="myndexButton queryButton fll" style="min-width: 510px; max-height: 80px;">
+    <div class="fll" style="padding: 0.1em 4px; font-family: 'Palatino', 'Georgia','Bookman', 'Times New Roman','Times','serif'; letter-spacing: 0.01em; line-height: 0.2; font-size: 2em; font-style: normal;">&Delta;&gamma; &nbsp;
       </div>Myndex Perception Research Experimental Results Listing</button>
     </a>
   
-    <a id="null05" href="/CVD/">
+    <a id="null05" href="/CVD/" aria-label="Go Back to Percepton Experiments">
     <button class="myndexButton queryButton flr" style="padding: 0.3em;">
-    <img class="fll " style="margin: 0.3em; padding: 0" src="/CVD/faviconMasterSmall.jpg"  height="40">
+    <img class="fll " role="presentation" alt="icon" style="margin: 0.3em; padding: 0" src="/CVD/faviconMasterSmall.jpg"  height="40">
       <div class="flr" style="margin: 0.3em; padding:0;" >Myndex&nbsp;Color&nbsp;Vision <br>Deficiency&nbsp;Simulator</div></button>
     </a> 
   <div class="clearfix"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </div>
-  
-  </div>
-</section><!-- ********    Close Science Links Section     ********    -->
  
+ </div>
 <hr class="clb mb0" style="">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
@@ -1538,7 +1545,7 @@ It should be noted that those with most forms of CVD prefer the white text as we
 <hr class="clb mt0" style="">
 
 <div class="gammaContainer" style="Margin: 0;">
-  <h1 class="cW">MONITOR GAMMA CHECK</h1>
+  <h2 class="cW">MONITOR GAMMA CHECK</h2>
    
    <div class="centered gamma " style="">sRGB gamma target. Ideally the targets appear uniform (i.e. the thick border looks the same as the inner grid). It is important that the image be at 100% and not scaled - make sure your browser says "actual size".<br>
 
@@ -1567,8 +1574,6 @@ It should be noted that those with most forms of CVD prefer the white text as we
 <div id="gammaBoxA0d" class="gammaBoxR"><span class="gammaLabel cGr6">Background Target Value #a0 (d)</span></div>
 </fieldset>
 
-
-
    </div>
 </div>
 
@@ -1579,18 +1584,19 @@ It should be noted that those with most forms of CVD prefer the white text as we
    data-ad-format="fluid"
    data-ad-client="ca-pub-8528204478975741"
    data-ad-slot="8819425657"></ins>
-<script>
+<script async>
    (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
 
 <footer>
-  <a id="null06" href="/CVD/"><button class="myndexButton flr mr20"><img class="fll " style="margin: 0 0.6em 0 0; padding: 0" src="/CVD/faviconMasterSmall.jpg"  height="60"><div class="flr" style="margin: 0.2em; padding:0;" >Myndex&nbsp;Color&nbsp;Vision <br>Deficiency&nbsp;Simulator</div></button></a>   
+  <a id="null06" href="/CVD/" aria-label="Go to the Color Vision Simulator"><button class="myndexButton flr mr20 fs10"><img class="fll " style="margin: 0 0.6em 0 0; padding: 0" src="/CVD/faviconMasterSmall.jpg"  height="60"><div class="flr " style="margin: 0.2em; padding:0;" >Myndex&nbsp;Color&nbsp;Vision <br>Deficiency&nbsp;Simulator</div></button></a>   
     
-  <div style="font-size: 12px;">Copyright &copy; 2019 – 2021 by Andrew Somers. All Rights Reserved.
+  <div style="font-size: 12px;">Copyright &copy; 2019 – 2022 by Andrew Somers. All Rights Reserved.
     <br><b>THIS PAGE IS PROPRIETARY AND NOT LICENSED FOR THIRD PARTY USE.</b>
-    <br>Public License options at the SAPC/APCA Repository: <a href="https://github.com/Myndex/SAPC-APCA/">https://github.com/Myndex/SAPC-APCA/</a>
-    <br>This project is part of the <a href="https://www.myndex.com/WEB/Perception">Myndex Web Perception Experiment.</a>
+    <br>Public License options at the SAPC/APCA Repository:
+    <br><a href="https://github.com/Myndex/SAPC-APCA/">https://github.com/Myndex/SAPC-APCA/</a>
+    <br>This project is part of the <a href="https://www.myndex.com/WEB/Perception" aria-label="Go Back to Percepton Experiments">Myndex Web Perception Experiment.</a>
     
   </div>
 
