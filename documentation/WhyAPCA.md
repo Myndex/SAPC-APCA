@@ -29,7 +29,7 @@ Spot-reading-contrast has a lower requirement than fluent readability contrast. 
 
 No single figure such as 4.5:1 or 3:1 can be used as a blanket target for contrast between two colors, without considering the use case, size, thickness, etc. On this point, it has been demonstrated that WCAG&nbsp;2 contrast can pass colors that should fail as not readable, and sometimes that math fails a color pair that should pass as very readable. Some articles with visual comparisons and examples of this are:
 
-### _Comparitive Contrast Articles_ 
+### _Comparative Contrast Articles_ 
 
 The problems of 4.5:1 as a target for a guideline not only impact accessibility, but impacts standard vision. The inherent problems with the WCAG&nbsp;2 contrast math have been known for some time and [widely critisized](https://macwright.com/2019/03/30/color-contrast-is-a-problem.html). Including studies [by others showing that color insensitive types](https://www.bounteous.com/insights/2019/03/22/orange-you-accessible-mini-case-study-color-ratio/) are not well served. The WCAG&nbsp;2 contrast specs often cause enough problems for designers [that it is ignored](https://uxmovement.com/buttons/the-myths-of-color-contrast-accessibility/) and today, some 86% of websites are failing WCAG\_2 contrast—though some of these failures are not due to actually poor accessibility, but due to the incorrect math of WCAG\_2 contrast.
 
