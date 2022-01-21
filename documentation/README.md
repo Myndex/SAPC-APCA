@@ -96,11 +96,16 @@ There is a working version with examples and reference material on [APCAsite](ht
 -----
 ### Font Use Lookup Table
 
-Latest Lookup Table: January 11 2022
+Latest Lookup Table: January 19 2022
 
-<img width="639" alt="APCA Lookup Table" src="../images/Jan2022LOOKUPTABLE.jpg">
+Sorted by font size      
+<img width="500" alt="APCA Lookup Table" src="../images/Jan29_2022LUT_byFont.jpg">
 
-<img width="596" alt="APCA Lookup table legend" src="../images/Jan2022LOOKUPTABLELEGEND.jpg">
+<img width="500" alt="APCA Lookup table legend" src="../images/Jan29_2022LUT_legend.jpg">
+
+Sorted by contrast Lc value      
+<img width="500" alt="APCA Lookup Table" src="../images/Jan29_2022LUT_byLc.jpg">
+
 
 ------
 ------
@@ -130,6 +135,9 @@ Latest Lookup Table: January 11 2022
 If you have been using any files from _this_ repository, be sure to read the file "[ImportantChangeNotices.md]" for critical updates that may affect results.
 
 ## SAPC/APCA CURRENT VERSION: 0.1.1 Constants: 4g
+
+### January 18 2022
+Font lookup table revised, still for 4G constants. Much tighter conformance now. See the arrays in the data folder.
 
 ### January 2 2022
 Font lookup table revised, still for 4G constants.
