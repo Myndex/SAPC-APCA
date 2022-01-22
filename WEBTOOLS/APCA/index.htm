@@ -444,7 +444,9 @@ footer  a:link, footer a:hover,  footer a:visited, footer a:visited:hover
   {
     color: #ec4;
   }
-  
+
+.onWhiteSpace { 
+    margin: 12px 120px 6px; padding:0 12px; font-size: 18.7px; font-weight: 500;}
 
 /* simple mode */
 
@@ -513,16 +515,20 @@ div .setBGcolorFlip, div div.setBGcolorFlip, div span.setBGcolorFlip, div p.setB
 
 .g4gVal35,.g4gVal40,.g4gVal50,.g4gVal55,.g4gVal65,
 .g4gVal70,.g4gVal80,.g4gVal85,.g4gVal95,.g4gVal100
-{ color: #62b; background-color: #dffb; }
+{ color: #62b; background-color: #dff8; }
 
-.g4gVal35,.g4gVal40 {color: #84a; background-color: #eecb;}
+.g4gVal35,.g4gVal40 {color: #84a; background-color: #eec5;}
 
 
 
-.bodyText {
+
+
+
+
+.bodyText, td.bodyText2 {
   position: relative;
   color: #308;
-  background-color: #dff;
+  background-color: #dff8;
   }
 .bodyText::after {
 position: relative;
@@ -531,38 +537,10 @@ position: relative;
   font-size: 0.6em;
   }
 
-td.bodyText {
-  border: 4px solid #0bb;
+td.bodyText,td.bodyText2 {
+  border: 4px solid #0bb8;
   }
 
-
-
-.bodyTextPlus {
-  position: relative;
-  color: #206;
-  background-color: #ffe;
-  }
-.bodyTextPlus::after {
-  position: relative;
-  top: -10px;
-  content: '+15';
-  font-family: 'Saira Condensed', sans-serif;
-  font-size: 0.56em;
-  font-weight: 700;
-  }
-
-td.bodyTextPlus {
-  border: 4px solid #dc0;
-  }
-
-
-td.borderRight {border-right: 2px solid #70a7;}
-td.borderLeft {border-left: 3px solid #70a7;}
-td.borderTop {border-top: 3px solid #b06;}
-td.borderLeftTop {border-left: 3px solid #b06; border-top: 3px solid #b06;}
-
-td.borderNT {border: 4px solid #b06;}
-td.borderVisible {border: 4px solid #309; border-width: 1px 1px}
 
 
 .ptText::after {
@@ -578,24 +556,54 @@ td.borderVisible {border: 4px solid #309; border-width: 1px 1px}
   font-size: 0.6em;
   }
   
+
+
+.bodyTextPlus, td.bodyTextPlus2 {
+  position: relative;
+  color: #206;
+  background-color: #ffe8;
+  }
+.bodyTextPlus::after, .bodyTextPlus2::after {
+  position: relative;
+  top: -10px;
+  content: '+15';
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 0.56em;
+  font-weight: 700;
+  }
+
+td.bodyTextPlus, td.bodyTextPlus2 {
+  border: 4px solid #dc08;
+  }
+
+
+td.borderRight {border-right: 1px solid #3077;}
+td.borderLeft {border-left: 2px solid #3077;}
+td.borderTop {border-top: 3px solid #b06b;}
+td.borderLeftTop {border-left: 3px solid #b06b; border-top: 3px solid #b06;}
+
+td.borderNT {border: 4px solid #b06;}
+td.borderVisible {border: 4px solid #309; border-width: 1px 1px}
+
+
 .g4gVal90,
 .g4gVal75, 
 .g4gVal60, 
 .g4gVal45 { font-weight: 600; }
 
-.g4gLite, td.g4gLite { color: #b00; background-color: #fcd; border: 4.5px solid #e00a; }
   
-tr td.keyVal100,td.g4gVal90 {background-color: #8fea;}
-tr td.keyVal80, td.g4gVal75 {background-color: #9fca;}
-tr td.keyVal60, td.g4gVal60 {background-color: #afaa;}
-tr td.keyVal40, td.g4gVal45 {background-color: #be8a;}
-tr td.keyVal30, td.g4gVal30 {color: #b058; background-color: #fed8a088;}
+tr td.keyVal100,td.g4gVal90 {background-color: #8fe5;}
+tr td.keyVal80, td.g4gVal75 {background-color: #9fc5;}
+tr td.keyVal60, td.g4gVal60 {background-color: #afa5;}
+tr td.keyVal40, td.g4gVal45 {background-color: #be85;}
+tr td.keyVal30, td.g4gVal30, .minSize {color: #a05b; background-color: #fda4;}
                   .g4gValNT {color: #fcc; background-color: #a62;}
 
+.g4gLite, td.g4gLite { color: #b00; background-color: #fcd; border: 4.5px solid #e005; }
 .nonText {
   position: relative;
-  color: #ffe;
-  background-color: #b06a;
+  color: #624;
+  background-color: #b084;
   }
 .nonText::after {
   position: relative;
@@ -603,9 +611,108 @@ tr td.keyVal30, td.g4gVal30 {color: #b058; background-color: #fed8a088;}
   content: 'NT';
   font-size: 0.6em;
   }
+
+td.nonText2 {
+  position: relative;
+  font-size: 0.8em;
+  color:#624;
+  background: #b084;
+  }
+.nonText2::after {
+  position: relative;
+  top: -4px;
+  content: 'NT';
+  font-size: 1.1em;
+  font-weight: bold;
+  }  
+
+.empty { font-style: oblique; font-weight: 300; color: #37a;}
+
+.g4gLite, td.g4gLite , td.g4gLite2{ color:#624; background: #f352;}
+
+.g4gFontTbl90,.g4gFontTbl75,.g4gFontTbl60,.g4gFontTbl45 { font-weight: bold; }
+
+.centeredTable td.copyOnly, td.colorCodes.copyOnly { background: #a503;}
   
   
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+details > summary::marker { display: none; }
+details[open] details { display: none; }
+details summary { cursor: pointer; list-style: none; }
+details summary > svg { display: inline; }
+
+
+section details summary .h1Query,
+section details summary .h2Query,
+section details summary .h3Query {
+	margin-left: 36px;
+	text-decoration: none;
+	text-shadow: 2px 2px 4px #2062;
+	transition: text-shadow 0.4s, text-decoration 0.4s;
+	}
+	
+details summary .largerHeader {
+  font-size: 2.0em;
+  font-weight: 500;
+  }
   
+section details summary:hover .h1Query,
+section details[open] summary:hover .h1Query, 
+section details summary:hover .h2Query,
+section details[open] summary:hover .h2Query, 
+section details summary:hover .h3Query,
+section details[open] summary:hover .h3Query { 
+	text-decoration: underline;
+	text-shadow: 2px 2px 4px #89fc;
+	transition: text-shadow 0.25s, text-decoration 0.4s;
+	}
+	
+section details[open] summary .h1Query,
+section details[open] summary .h2Query,
+section details[open] summary .h3Query { 
+	text-decoration: none;
+	text-shadow: 2px 2px 4px #89f7;
+	transition: text-shadow 0.4s, text-decoration 0.4s;
+	}
+
+details .summaryTitle {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+details summary:focus { outline: none; }
+
+details summary:hover .twistUp svg {
+	transform: rotate(-90deg);
+	opacity: 1; 
+	transition: opacity 0.7s, transform 0.4s;
+	}
+details[open] summary:hover .twistUp svg {
+	transform: rotate(0deg);
+	opacity: 1; 
+	transition: opacity 0.7s, transform 0.4s;
+	}
+
+details .twistUp svg {
+	position: absolute;
+	display: inline;
+	opacity: 0.5;
+	transform: rotate(-90deg);
+	transition: opacity 0.7s, transform 0.4s;
+	}
+
+details[open] .twistUp svg {
+	transform: rotate(0deg);
+	opacity: 0.82;
+	transition: opacity: 1s, transform 0.4s; }
+
+
+
+
+
   
 </style>
 
@@ -1116,13 +1223,13 @@ const byClass = ( className, property, value, property2 ) => {
 
 <hr>
 
-<h2 class="mastHead fs20"  style="">BASIC DEMO for CONTENT CREATORS</h2>
-<h3>This demo only shows "score 4" fonts & weights 200 thru 700.</h3>
+<h2 class="mastHead fs20"  style="">APCA BASIC for CONTENT CREATORS</h2>
 
 <div id="demoArea"> 
-  <h2 class="mastHead fs20"  style="text-align: center;">APCA Visual&nbsp;Contrast Calculator</h2>
   
-	<a id="colorURL" class="myndexButton flr tac " role="button" tabindex="0" onkeypress="if(event.keyCode==32||event.keyCode==13){createColorURL('colorURL')};" style="width: 45%; margin: 1em; padding: 0.3em 1em;" onclick="createColorURL('colorURL')">Generate a URL of This Color Pair</a>
+    <div class="centered "><label class="tac por" for="URLresult">URL:&nbsp;&nbsp;&nbsp;</label><input class="tac por p05" type="text" id="URLresult" value="" onclick="this.select();"></div>
+	<a id="colorURL" class="myndexButton tac por" role="button" tabindex="0" onkeypress="if(event.keyCode==32||event.keyCode==13){createColorURL('colorURL')};" style="width: 95%; margin: 0.5em auto; padding: 0.3em 0.65em;" onclick="createColorURL('colorURL')">Generate a URL of This Color Pair</a>
+
 	<div id="colorWarn" class="" style="">
 		<div style=""><button class="colorWarnX" style="" onclick="document.getElementById('colorWarn').style.display='none'"
 		tabindex="0">&times;</button>
@@ -1137,19 +1244,12 @@ const byClass = ( className, property, value, property2 ) => {
     }
   }
 </script>
-
-    <input class="flr clr p05" type="text" id="URLresult" value="" onclick="this.select();">
-
-    <div class="textBox" style="">
-      <p>Click on a color patch next to "Text" or "Background" above to use the HTML5 color-picker (modern browsers). Otherwise enter color values in the text-box as a three or six digit hex value, the '#' is not necessary. Other valid entries are integer rgb(r,g,b) or an HTML or CSS color name such as "aliceblue".</p>
-
-    </div>
-
-      <h2 class="mastHead"  style=""><em>APCA W3 PUBLIC BETA</em></h2>
-
-  <p class="p10">PROBLEMS? Try a "Forced Reload" on your browser, and/or clear the cache. For the public beta and experimental features, including live interactive experiments that demonstrate the concepts, please see the beta site: <a href="/SAPC/">SAPC BETA</a>. For comments or to report issues, please visit us on <a href="https://github.com/Myndex/SAPC-APCA">GitHub.</a>
 </div> <!--    ********    Close Demo Area ********    -->         
-    
+
+<h2 class="mastHead h3Query"  style=""><em>APCA W3 PUBLIC BETA</em></h2>
+<p class="por onWhiteSpace" >We'd love to hear your comments, questions, or concerns—come visit the For comments or to report issues, please visit us on <a href="https://github.com/Myndex/SAPC-APCA/discussions">discussions forum at the GitHub repo.</a>
+
+<hr class="clb" style="">    
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
    style="display:block; text-align:center;"
@@ -1160,26 +1260,6 @@ const byClass = ( className, property, value, property2 ) => {
 <script async>
    (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-
-<!-- 
-<div class="m20 p12 b08 br20 bcO pbgO cBr  fs11 fw5"><h2>About This Month's Default Color Pair</h2> The default pair of colors in the tool this month, to kick off the new year, is an orange <code>#ea7439</code> background and a white text. This is the color like the infamous <a href="https://www.bounteous.com/insights/2019/03/22/orange-you-accessible-mini-case-study-color-ratio/"> "orange button problem"</a> that originally brought our attention to the math issues in the old contrast method. As you can see above, APCA indicates a much more accurate contrast prediction based on perception. 
-    
-<br><br>A little different than the article, the color above <code>#ea7439</code> and white fails WCAG2 completely, yet if you replace the white with black, WCAG2 math gives it a 7:1 (!!!) Here, with the perceptually accurate SAPC/APCA G series, it passes with white, but black fails (as it should) for all but very large fonts. 
-  
-<br><br>(If you came to the site with a different color pair in the URL, <a href="" id="orangeProblem" onclick="createColorURL('orangeProblem','ea7439','ffffff');">click here to load the demo colors</a>.)
-
-  <br><br>
-Click the white patch to the left of the text color entry to bring up a color picker that should update live (most browsers) and slide down to black to see the display update recommended minimum font sizes in real time. Dragging all the way to black, you'll see the tool indicates a lower contrast as per perception.
-<br><br>
-It should be noted that those with most forms of CVD prefer the white text as well. Take a screenshot and view it on our <a href="/CVD/">CVD simulator</a> to see how contrast actually improves for white text on orange.
-  <br><br>
-  
-  <h2>For a more in depth look at this, please see<br>this <a href="https://gist.github.com/Myndex/1dadb6dcac596f1cd7a5686a076f697f">GitHub Gist</a> with colorful examples.</h2>
-
-</div>
-
--->
-
 <hr class="clb" style="">
 
 <section class="explainer">
@@ -1189,7 +1269,10 @@ It should be noted that those with most forms of CVD prefer the white text as we
 
  <p>APCA reports contrast as an Lc&nbsp;value (lightness contrast) from <strong>Lc&nbsp;0</strong> to <strong>Lc&nbsp;105+</strong>. For accessibility, consider Lc&nbsp;15 the point of invisibility for many users, and Lc&nbsp;90 is preferred for body text.</p>
 
-<h3 class="h3Query" style="" id="general-guidelines-on-levels" class="Luv275 fw7">General Guidelines by Level</h3>
+<hr>
+<details>
+  <summary><span class="twistUp"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="none"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 4c4.41 0 8 3.59 8 8s-3.59 8-8 8-8-3.59-8-8 3.59-8 8-8m0-2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 13l-4-4h8z" stroke="#34028b" fill="#230167"/></svg></span>
+  <h3 style="font-weight: 400;" id="general-guidelines-on-levels" class="h1Query Luv275 pb00 mb00">General Guidelines<div style="margin: 0; padding: 0; font-style:oblique; font-size: 0.8em;">For Simple to Use Levels</div></h3></summary>
   <p>These general levels are appropriate for use without reference to the lookup table. The lookup table simply adds additional accuracy, which allows for greater flexibility.</p>
  
 <ul>
@@ -1201,13 +1284,14 @@ It should be noted that those with most forms of CVD prefer the white text as we
 <li><strong>Lc&nbsp;15</strong> • The <em>absolute minimum</em> for any non-text that needs to be <em>discernible</em> and differentiable, and is no less than 6px in its smallest dimention. This may include dividers, and in <em>some</em> cases large buttons or thick focus visible outlines, but does <em>not</em> include fine details which have a higher minimum. <strong>Designers should treat anything below this level as invisible</strong>, as it will not be visible for many users. This minimum level should be avoided for any items important to the use, understanding, or interaction of the site.</li>
 </ul>
 <p>These define the basic minimum levels, what you might think of as A/AA in the old WCAG&nbsp;2. For the equivelent to AAA, simply increase the contrast values by Lc&nbsp;15.</p>
-
+ </details>
 <hr>
-<h3 class="Luv275 fw7 h3Query" style="">NOTES ON FONT SIZE</h3>
+<details>
+  <summary><span class="twistUp"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="none"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 4c4.41 0 8 3.59 8 8s-3.59 8-8 8-8-3.59-8-8 3.59-8 8-8m0-2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 13l-4-4h8z" stroke="#34028b" fill="#230167"/></svg></span><h3 class="Luv275 fw6 h3Query" style="">NOTES ON FONT SIZE</h3></summary>
 <ul>
 <li>Font sizes listed above assume an x-height ratio of at least 0.52. Font weight is based on highly standardized reference fonts such as Helvetica or Arial. &quot;px&quot; means the CSS reference px, not device pixels. The reference px is defined as 1.278 arc minutes of visual angle.</li>
 <li>When selecting, or testing, a font size, all that needs to be done is to compare the x-height to the reference.<ul>
-<li>For instance Times New Roman has an x-height ratio of 0.45, so it needs to be increased about 16% in size.</li>
+<li>For instance, Times New Roman has an x-height ratio of 0.45, so it needs to be increased about 16% in size.</li>
 </ul>
 </li>
 <li>For font weight, simply set a line of test text in the reference Arial or Helvetical at 400 weight and then below that the same text text in the new font. Try different weights to find the closest match.<ul>
@@ -1218,8 +1302,11 @@ It should be noted that those with most forms of CVD prefer the white text as we
 </li>
 <li>Consider the font design as well as the basic size and weight, and the potential impact on readability. See <a href="https://www.researchgate.net/publication/338149302_Evaluating_Fonts_Font_Family_Selection_for_Accessibility_Display_Readability">this PDF <strong>&quot;Evaluating Fonts&quot;</strong></a> for general guidance and a comparison of a few dozen fonts for accessibility.</li>
 </ul>
+ </details>
+ 
+ <details>
 
-    <h3 id="bridge-pca" class="Luv275 fw7 h3Query" style="">NOTES ON WCAG&nbsp;2 COMPATIBILITY </h3>
+  <summary><span class="twistUp"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="none"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 4c4.41 0 8 3.59 8 8s-3.59 8-8 8-8-3.59-8-8 3.59-8 8-8m0-2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 13l-4-4h8z" stroke="#34028b" fill="#230167"/></svg></span><h3 id="bridge-pca" class="Luv275 fw6 h3Query" style="">NOTES ON WCAG&nbsp;2 COMPATIBILITY </h3></summary>
 
   <p>To use the APCA tool for minimum Bridge-PCA conformance (backwards compatible for WCAG&nbsp;2):
     <ul>
@@ -1230,9 +1317,14 @@ It should be noted that those with most forms of CVD prefer the white text as we
     </ul>
     <p><strong>NEW!!</strong> If you need to be backwards compatible, the new Bridge-PCA can help! <a href="/BPCA/">Bridge PCA</a> is backwards compatible with WCAG&nbsp;2, shows contrast as both Lc value, <em>and</em> the traditional WCAG&nbsp;2ratios, but with a twist: The "ratios" shown on Bridge PCA are perceptually accurate!
     <p>This is possible because Bridge PCA uses APCA technology to generate "ratios" that look and feel very much like those of WCAG 2.
-    
 
-  <h2 class="Luv265 fw7 h3Query" style="">Using the Lookup Table</h2>
+ </details>
+ 
+<hr>
+  <details>
+
+  <summary><span class="twistUp"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="none"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 4c4.41 0 8 3.59 8 8s-3.59 8-8 8-8-3.59-8-8 3.59-8 8-8m0-2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 13l-4-4h8z" stroke="#34028b" fill="#230167"/></svg></span><h2 class="h1Query Luv265 fw7 " style="">Using the Font Lookup Table for Greater Flexibility</h2></summary>
+
     <p>The table below is current as of January 19, 2022.</p>
 
   <ul>
@@ -1257,6 +1349,7 @@ It should be noted that those with most forms of CVD prefer the white text as we
           <th colspan="2" class="tableTitle" style="font-size: 1em;"></th>
           <th colspan="9" class="tableTitle" style="font-size: 1.2em; letter-spacing: 0.15em;">Reference Font Weight</th>
         </tr>
+        
         <tr>
           <th colspan="2" class="tableTitle" style="font-size: 1em;">Font<br>Size</th>
           <th class="weight weight1">100</th>
@@ -1403,8 +1496,8 @@ It should be noted that those with most forms of CVD prefer the white text as we
   <td class="ptText">24</td>
   <td class="pxText">32</td>
   
-  <td class="g4gLite">95</td>
-  <td class="g4gVal80">80</td>
+ <td class="underWeight">⊘</td>
+ <td class="g4gVal80">80</td>
   <td class="g4gVal65 bodyTextPlus">65</td>
   <td class="g4gVal50 bodyTextPlus">50</td>
   <td class="g4gVal45 bodyTextPlus borderRight">45</td>
@@ -1498,101 +1591,64 @@ It should be noted that those with most forms of CVD prefer the white text as we
   <td class="nonText">15</td>
 
 </tr>
+
 <tr><th colspan="11" class="tableTitle" style="	border-radius:  0 0 12px 12px;
  height: 0.75em; font-size: 0.5em; font-weight: 300;"> Copyright © 2022 by Myndex Research. All Right Reserved.</th></tr>
 </table>  
-<p class="fs08">The vertical line between weights 500 and 600 indicates the point that a user agent switches from "normal" to "bold" if the intermediate weights are not available.
 
-    <hr>
+
+<p class="fs08">The vertical line between weights 500 and 600 indicates the point that a user agent switches from "normal" to "bold" if the intermediate weights are not available.
     
-    <table class="centeredTable " style="background: #309; padding: 0; border-width: 4px; border-radius: 22px 22px 16px 16px ; border-collapse: separate; border-spacing: 0;" >
+    <hr>
+
+
+    <table class="centeredTable" style="background: #309; padding: 0; border-width: 4px; border-radius: 22px 22px 16px 16px ; border-collapse: separate; border-spacing: 0;" >
         <tr style="   color: #FFF; background-color: #309; border: 1px solid #94B; ">
           <th colspan="1" class="tableTitle" style="  text-align: center; height: 2em; font-size: 1.5em; border: 1px solid #94B; border-radius: 18px 18px 0 0;">APCA CONTRAST LEGEND</th>
         </tr>
-        <tr style="background-color: #def";>
-          <td class="colorCodes code01"><span style="font-size:1.8em; line-height:0.2;">⊘</span> — Prohibited Except for Decorative Purposes</td>
+        <tr style="background-color: #e8f5ff";>
+          <td class="colorCodes underWeight"><span style="font-size:1.8em; line-height:0.2;">⊘</span> — Prohibited Except for Decorative Purposes</td>
         </tr>
-        <tr style="background-color: #def";>
+        <tr style="background-color: #e8f5ff";>
           <td class="colorCodes nonText borderNT" tyle="border-width: 6px;"><span style="font-size:1.8em; line-height:0.7;"></span>Under Lc 30 is for non-text only.</td>
         </tr>        
-        <tr style="background-color: #def";>
+        <tr style="background-color: #e8f5ff";>
           <td class="colorCodes copyOnly ffh"><span style="font-size:1.4em; font-weight:700;">©§™</span> — Placeholder/Disabled/Copyright ONLY</td>
         </tr>
 <!--       <tr>
           <td class="colorCodes bgOrLt"><span style="font-size:1.8em; line-height:0.7;">&times;</span> — Do Not Use for Body Text (Blocks or Columns)</td>
         </tr>   -->
-        <tr style="background-color: #def";>
+        <tr style="background-color: #e8f5ff";>
           <td class="colorCodes g4gLite cR" style="border-width: 10px;">Weight 100 Fonts Should be Avoided</td>
         </tr>   
-         <tr style="background-color: #def";>
+         <tr style="background-color: #e8f5ff";>
           <td class="colorCodes bodyTextPlus" style="border-width: 9px;">To use as Block/Body Text, ADD Lc 15</td>
         </tr>         
-        <tr style="background-color: #def";>
+        <tr style="background-color: #e8f5ff";>
           <td class="colorCodes bodyText" style="border-width: 12px;">Block/Body Text Zone—okay minimum values</td>
         </tr>  
-        <tr style="background-color: #def";>
+        <tr style="background-color: #e8f5ff";>
           <td class="colorCodes  g4gVal90 borderVisible">APCA Lc 90 — "Similar" to ISO 10∶1 </td>
         </tr>     
-        <tr style="background-color: #def";>
+        <tr style="background-color: #e8f5ff";>
           <td class="colorCodes  g4gVal75 borderVisible">APCA Lc 75 — "Similar" to WCAG 7∶1 </td>
         </tr>       
-        <tr style="background-color: #def";>
+        <tr style="background-color: #e8f5ff";>
           <td class="colorCodes  g4gVal60 borderVisible">APCA Lc 60 — "Similar" to WCAG 4.5∶1 </td>
         </tr>
-        <tr style="background-color: #def";>
+        <tr style="background-color: #e8f5ff";>
           <td class="colorCodes  g4gVal45 borderVisible">APCA Lc 45 — "Similar" to WCAG 3∶1 </td>
         </tr>
-        <tr style="background-color: #def";>
+        <tr style="background-color: #e8f5ff";>
           <td class="colorCodes g4gVal30 borderVisible"><span style="font-size:1.2em; font-weight:700;">&gt; 30</span> — Minimum Contrast for Any Text</td>
         </tr>
      <tr><th class="colorCodes tableTitle" style="border-radius: 0 0 12px 12px; height: 0.75em; text-align: center; font-size: 0.6em; font-weight: 300; color: #fff; background: #309;"> Copyright © 2022 by Myndex Research. All Right Reserved.</th></tr>   
   </table>
 </div>
-  <ul>
-    <li>Values shown are for common sans-serif fonts (e.g., Helvetica, Arial, Verdana, Montserrat, Roboto, Calibri, Trebuchet).
-    <li>Many serif fonts should use values for the row above (e.g., Times, Georgia, Cambria, Courier), and especially should be compared in terms of x-height.
-    <li>Decorative, unusual, and very thin fonts should be avoided for fluently readable text and especially columns of body text.  
-    <li>Due to the vast variety of font designs, designers should visually compare an unusual font to a standard font such as Helvetica, using the size and weight of Helvetica that most closesly matches the appearance of the tested font as a guide.
-    <li>Designers are cautioned that bypassing default font smoothing can drastically reduce contrast for small or thin fonts. For instance, the use of "-webkit-font-smoothing: antialiasing" is strongly discouraged.  
-  </ul>
 <hr>
-
-<h2 class="mastHead h1Query"  style="" id="the-accessible-perceptual-contrast-algorithm">The Accessible Perceptual<br>Contrast Algorithm</h2>
-
-<p>APCA is a new method for calculating and predicting readability contrast. APCA is a part of the larger S-Luv Accessible Readability Color Appearance Model known as SARCAM (formerly SAPC). These models are specifically related to color appearance on self-illuminated RGB computer displays &amp; devices, and also for modeling accessible user needs, with a focus on readability.</p>
-
-<h3 class="h3Query" style="" id="lightness-contrast">Lightness contrast L<sup>c</sup></h3>
-
-<p>The APCA generates a contrast value based on a color pair, and this value is perceptually based: that is, regardless of how light or dark the colors are, a contrast value of Lc&nbsp;60 represents the same <em>perceived</em> readability contrast. This is absolutely not the case with WCAG&nbsp;2.x, which far overstates contrast for dark colors to the point that 4.5:1 can be functionally unreadable when a color is near black. As a result, WCAG&nbsp;2.x contrast cannot be used for guidance designing &quot;dark mode&quot;.</p>
-<p>The APCA contrast value is perceptually uniform, and pivots near the point where the CS curve flattens due to contrast constancy. Halving or doubling the APCA value relates to a halving or doubling of the perceived contrast. There is a subtle weighting for higher contrasts to smaller, thinner fonts.</p>
-
-<h3 class="h3Query" style="" id="different-uses-different-contrasts">Different Uses, Different Contrasts</h3>
-<p>The APCA has a set of levels related to use cases — for instance, Lc&nbsp;90 is <em>preferred</em> and Lc&nbsp;75 is the <em>minimum</em> for body text. This makes for an easy way to use ACPA, very similar to 1.4.3 in terms of ease of use.</p>
-<p>The APCA also has an <strong>optional</strong> lookup table to associate font size and weight to the readability contrast (Lc&nbsp;value). The lookup tables allow for even greater accuracy and therefore greater flexibility in design.</p>
-
-<h3 class="h3Query" style="" id="failing-pass-fail">Failing Pass/Fail</h3>
-<p>A key takeaway is that a strict pass/fail with a blanket contrast ratio is not instructive as a guideline, and does not necessarily solve a given user need. In fact, user needs when it comes to contrast are conflicting—what is good for one can be harmful to another. This is even true of font size. </p>
-<p>This points to the importance of real user personalization, an area where the technology is literally missing (and a work in progress). For the guidelines though, we can set ranges for targets and expectations toward making the web readable for all.</p>
-
-<hr>
-
-      <p><b>About the colors in these tables:</b> The colors in these tables are designed to be discernible by all forms of color vision deficiency.
-        Important color codes also have a symbol, as color should never be the only coding for important information.
-        Less important codes are directly related to the cell content such as level 60, thus thus are self-symbolized.
-        This follows into the accompanying legend.
-      </p>
-      
-  
-<style>
-.empty { background: #cde;}
-
-.g4gFontTbl90,.g4gFontTbl75,.g4gFontTbl60,.g4gFontTbl45  {font-weight: bold; background: #e0ffee;}
-
-</style>
-
 
   <div id="lookup-table" style="overflow: scroll;">
-    <table class="APCAtable">
+    <table class="APCAtable ">
         <tr>
           <th colspan="11" class="tableTitle" style="	border-radius: 18px 18px 0 0;
  height: 2em; font-size: 1.5em;">APCA Sorted by Contrast</th>
@@ -1623,182 +1679,182 @@ It should be noted that those with most forms of CVD prefer the white text as we
         </tr>
 
 <tr>
-<th>Lc</th><th>100</th>
-<td class="g4gLite  wgt100  pxText">32</td>
-<td class=" noBody  wgt200  pxText">21</td>
-<td class=" noBody wgt300  pxText">14</td>
-<td class="g4gFontTbl100 noBody  wgt400  pxText">12</td>
-<td class="g4gFontTbl100 noBody  borderRight  wgt500  pxText">12</td>
-<td class="g4gFontTbl100 noBody borderLeft wgt600  pxText">12</td>
-<td class="g4gFontTbl100 noBody  wgt700  pxText">12</td>
-<td class=" noBody pxText">16</td>
-<td class=" noBody pxText">18</td>
+<th style="font-weight: 600; text-align: right;">Lc</th><th style="font-size: 1.2em; text-align: left;">&nbsp;100</th>
+<td class="g4gLite2  wgt100  pxText">36</td>
+<td class=" noBody  wgt200  pxText minSize">21</td>
+<td class=" noBody wgt300  pxText minSize">14</td>
+<td class="g4gFontTbl100 noBody  wgt400  pxText minSize">12</td>
+<td class="g4gFontTbl100 noBody  borderRight  wgt500  pxText minSize">12</td>
+<td class="g4gFontTbl100 noBody borderLeft wgt600  pxText minSize">12</td>
+<td class="g4gFontTbl100 noBody  wgt700  pxText minSize">12</td>
+<td class=" noBody pxText minSize">16</td>
+<td class=" noBody pxText minSize">18</td>
 
 </tr>
 <tr>
-<th>Lc</th><th>95</th>
-<td class="g4gLite 95 wgt100  pxText">32</td>
+<th style="font-weight: 600; text-align: right;">Lc</th><th style="font-size: 1.2em; text-align: left;">&nbsp;95</th>
+<td class="g4gLite2  wgt100  pxText">36</td>
 <td class="g4gFontTbl95 noBody wgt200  pxText">21</td>
 <td class="g4gFontTbl95 noBody wgt300  pxText">16</td>
-<td class="g4gFontTbl95 bodyText wgt400  pxText">14</td>
+<td class="g4gFontTbl95 bodyText2 wgt400  pxText">14</td>
 <td class="g4gFontTbl95 noBody  borderRight wgt500  pxText">13</td>
 <td class="g4gFontTbl95 noBody borderLeft wgt600  pxText">12</td>
-<td class="g4gFontTbl95 noBody wgt700  pxText">12</td>
-<td class=" noBody pxText">16</td>
-<td class=" noBody pxText">18</td>
+<td class="g4gFontTbl95 noBody wgt700  pxText minSize">12</td>
+<td class=" noBody pxText minSize">16</td>
+<td class=" noBody pxText minSize">18</td>
 </tr>
 <tr>
-<th>Lc</th><th>90</th>
-<td class="g4gLite g4gFontTbl90 wgt100  pxText">36</td>
+<th style="font-weight: 600; text-align: right;">Lc</th><th style="font-size: 1.2em; text-align: left;">&nbsp;90</th>
+<td class="g4gLite2 g4gFontTbl90 wgt100  pxText">36</td>
 <td class="g4gFontTbl90 noBody wgt200  pxText">24</td>
-<td class="g4gFontTbl90 bodyText wgt300  pxText">18</td>
-<td class="g4gFontTbl90 bodyText wgt400  pxText">15</td>
-<td class="g4gFontTbl90 bodyText  borderRight  wgt500  pxText">14</td>
+<td class="g4gFontTbl90 bodyText2 wgt300  pxText">18</td>
+<td class="g4gFontTbl90 bodyText2 wgt400  pxText">15</td>
+<td class="g4gFontTbl90 bodyText2  borderRight  wgt500  pxText">14</td>
 <td class="g4gFontTbl90 noBody  borderLeft wgt600  pxText">13</td>
 <td class="g4gFontTbl90 noBody wgt700  pxText">12</td>
-<td class=" noBody pxText">16</td>
-<td class=" noBody pxText">18</td>
+<td class=" noBody pxText minSize">16</td>
+<td class=" noBody pxText minSize">18</td>
 </tr>
 <tr>
-<th>Lc</th><th>85</th>
-<td class="g4gLite g4gFontTbl85 wgt100  pxText">42</td>
+<th style="font-weight: 600; text-align: right;">Lc</th><th style="font-size: 1.2em; text-align: left;">&nbsp;85</th>
+<td class="g4gLite2 g4gFontTbl85 wgt100  pxText">42</td>
 <td class="g4gFontTbl85 wgt200  pxText">28</td>
-<td class="g4gFontTbl85 bodyText wgt300  pxText">21</td>
-<td class="g4gFontTbl85 bodyText wgt400  pxText">16</td>
-<td class="g4gFontTbl85 bodyText wgt500  pxText">15</td>
-<td class="g4gFontTbl85 bodyText   borderLeft wgt600  pxText">14</td>
-<td class="empty bodyText">13</td>
-<td class=" noBody pxText">16</td>
-<td class=" noBody pxText">18</td>
+<td class="g4gFontTbl85 bodyText2 wgt300  pxText">21</td>
+<td class="g4gFontTbl85 bodyText2 wgt400  pxText">16</td>
+<td class="g4gFontTbl85 bodyText2 borderRight wgt500  pxText">15</td>
+<td class="g4gFontTbl85 bodyText2   borderLeft wgt600  pxText">14</td>
+<td class="empty bodyText2">13</td>
+<td class=" noBody pxText minSize">16</td>
+<td class=" noBody pxText minSize">18</td>
 </tr>
 <tr>
-<th>Lc</th><th>80</th>
-<td class="g4gLite 80 wgt100  pxText">48</td>
+<th style="font-weight: 600; text-align: right;">Lc</th><th style="font-size: 1.2em; text-align: left;">&nbsp;80</th>
+<td class="g4gLite2 80 wgt100  pxText">48</td>
 <td class="g4gFontTbl80 wgt200  pxText">32</td>
-<td class="empty bodyText">22.5</td>
-<td class="empty  bodyText">17</td>
-<td class="g4gFontTbl80  borderRight bodyText  wgt500  pxText">16</td>
-<td class="empty  borderLeft  bodyText">14.5</td>
-<td class="empty  bodyText">13.5</td>
-<td class=" noBody pxText">16</td>
-<td class=" noBody pxText">18</td>
+<td class="empty bodyText2">22.5</td>
+<td class="empty  bodyText2">17</td>
+<td class="g4gFontTbl80  borderRight bodyText2  wgt500  pxText">16</td>
+<td class="empty  borderLeft  bodyText2">14.5</td>
+<td class="empty  bodyText2">13.5</td>
+<td class=" noBody pxText minSize">16</td>
+<td class=" noBody pxText minSize">18</td>
 </tr>
 <tr>
-<th>Lc</th><th>75</th>
-<td class="g4gLite g4gFontTbl75 wgt100  pxText">60</td>
+<th style="font-weight: 600; text-align: right;">Lc</th><th style="font-size: 1.2em; text-align: left;">&nbsp;75</th>
+<td class="g4gLite2 g4gFontTbl75 wgt100  pxText">60</td>
 <td class="g4gFontTbl75 wgt200  pxText">36</td>
-<td class="g4gFontTbl75 bodyText wgt300  pxText">24</td>
-<td class="g4gFontTbl75 bodyText wgt400  pxText">18</td>
-<td class="g4gFontTbl75 bodyText  borderRight wgt500  pxText">17</td>
-<td class="g4gFontTbl75 bodyText  borderLeft wgt600  pxText">15</td>
-<td class="g4gFontTbl75 bodyText wgt700  pxText">14</td>
-<td class=" noBody pxText">16</td>
-<td class=" noBody pxText">18</td>
+<td class="g4gFontTbl75 bodyText2 wgt300  pxText">24</td>
+<td class="g4gFontTbl75 bodyText2 wgt400  pxText">18</td>
+<td class="g4gFontTbl75 bodyText2  borderRight wgt500  pxText">17</td>
+<td class="g4gFontTbl75 bodyText2  borderLeft wgt600  pxText">15</td>
+<td class="g4gFontTbl75 bodyText2 wgt700  pxText">14</td>
+<td class=" noBody pxText minSize">16</td>
+<td class=" noBody pxText minSize">18</td>
 </tr>
 <tr>
-<th>Lc</th><th>70</th>
-<td class="g4gLite empty">72</td>
+<th style="font-weight: 600; text-align: right;">Lc</th><th style="font-size: 1.2em; text-align: left;">&nbsp;70</th>
+<td class="g4gLite2 empty">72</td>
 <td class=" wgt200  pxText">42</td>
-<td class="g4gFontTbl70 bodyText wgt300  pxText">28</td>
-<td class="g4gFontTbl70 bodyText wgt400  pxText">21</td>
-<td class="g4gFontTbl70 bodyText  borderRight  wgt500  pxText">18</td>
-<td class="g4gFontTbl70 bodyText  borderLeft  wgt600  pxText">16</td>
-<td class="empty bodyText">16</td>
-<td class=" noBody pxText">16</td>
-<td class=" noBody pxText">18</td>
+<td class="g4gFontTbl70 bodyText2 wgt300  pxText">28</td>
+<td class="g4gFontTbl70 bodyText2 wgt400  pxText">21</td>
+<td class="g4gFontTbl70 bodyText2  borderRight  wgt500  pxText">18</td>
+<td class="g4gFontTbl70 bodyText2  borderLeft  wgt600  pxText">16</td>
+<td class="empty bodyText2">16</td>
+<td class=" noBody pxText minSize">16</td>
+<td class=" noBody pxText minSize">18</td>
 </tr>
 <tr>
-<th>Lc</th><th>65</th>
-<td class="g4gLite empty">84</td>
+<th style="font-weight: 600; text-align: right;">Lc</th><th style="font-size: 1.2em; text-align: left;">&nbsp;65</th>
+<td class="g4gLite2 empty">84</td>
 <td class="g4gFontTbl65 wgt200  pxText">48</td>
-<td class="g4gFontTbl65 bodyTextPlus wgt300  pxText">32</td>
-<td class="empty bodyTextPlus">22.5</td>
-<td class="empty bodyTextPlus borderRight ">19.5</td>
-<td class="empty bodyTextPlus borderLeft ">17</td>
-<td class="empty bodyTextPlus">16</td>
-<td class=" noBody pxText">16</td>
-<td class=" noBody pxText">18</td>
+<td class="g4gFontTbl65 bodyTextPlus2 wgt300  pxText">32</td>
+<td class="empty bodyTextPlus2">22.5</td>
+<td class="empty bodyTextPlus2 borderRight ">19.5</td>
+<td class="empty bodyTextPlus2 borderLeft ">17</td>
+<td class="empty bodyTextPlus2">16</td>
+<td class=" noBody pxText minSize">16</td>
+<td class=" noBody pxText minSize">18</td>
 </tr>
 <tr>
-<th>Lc</th><th>60</th>
-<td class="g4gFontTbl60 g4gLite wgt100  pxText">96</td>
+<th style="font-weight: 600; text-align: right;">Lc</th><th style="font-size: 1.2em; text-align: left;">&nbsp;60</th>
+<td class="g4gFontTbl60 g4gLite2 wgt100  pxText">96</td>
 <td class="g4gFontTbl60 wgt200  pxText">60</td>
-<td class="g4gFontTbl60 wgt300  pxText">36</td>
-<td class="g4gFontTbl60 bodyTextPlus wgt400  pxText">24</td>
-<td class="g4gFontTbl60 bodyTextPlus  borderRight wgt500  pxText">21</td>
-<td class="g4gFontTbl60 bodyTextPlus  borderLeft wgt600  pxText">18</td>
-<td class="g4gFontTbl60 bodyTextPlus wgt700  pxText">16</td>
+<td class="g4gFontTbl60 bodyTextPlus2 wgt300  pxText">36</td>
+<td class="g4gFontTbl60 bodyTextPlus2 wgt400  pxText">24</td>
+<td class="g4gFontTbl60 bodyTextPlus2  borderRight wgt500  pxText">21</td>
+<td class="g4gFontTbl60 bodyTextPlus2  borderLeft wgt600  pxText">18</td>
+<td class="g4gFontTbl60 bodyTextPlus2 wgt700  pxText">16</td>
 <td class="g4gFontTbl60 noBody pxText">16</td>
-<td class="g4gFontTbl60 noBody pxText">18</td>
+<td class="g4gFontTbl60 noBody pxText ">18</td>
 </tr>
 <tr>
-<th>Lc</th><th>55</th>
-<td class="g4gLite empty">112</td>
+<th style="font-weight: 600; text-align: right;">Lc</th><th style="font-size: 1.2em; text-align: left;">&nbsp;55</th>
+<td class="g4gLite2 empty">112</td>
 <td class="g4gFontTbl55 wgt200  pxText">72</td>
 <td class="empty">42</td>
-<td class="g4gFontTbl55 bodyTextPlus wgt400  pxText">28</td>
-<td class="g4gFontTbl55 bodyTextPlus  borderRight  wgt500  pxText">24</td>
-<td class="empty bodyTextPlus borderLeft  ">19.5</td>
-<td class="g4gFontTbl55 bodyTextPlus wgt700  pxText">18</td>
+<td class="g4gFontTbl55 bodyTextPlus2 wgt400  pxText">28</td>
+<td class="g4gFontTbl55 bodyTextPlus2  borderRight  wgt500  pxText">24</td>
+<td class="empty bodyTextPlus2 borderLeft  ">19.5</td>
+<td class="g4gFontTbl55 bodyTextPlus2 wgt700  pxText">18</td>
 <td class="g4gFontTbl55 noBody pxText">18</td>
 <td class="g4gFontTbl55 noBody pxText">18</td>
 </tr>
 <tr>
-<th>Lc</th><th>50</th>
-<td class="nonText">138</td>
+<th style="font-weight: 600; text-align: right;">Lc</th><th style="font-size: 1.2em; text-align: left;">&nbsp;50</th>
+<td class="nonText2">138</td>
 <td class="empty">84</td>
 <td class="g4gFontTbl50 wgt300  pxText">48</td>
-<td class="g4gFontTbl50 bodyTextPlus wgt400  pxText">32</td>
-<td class="g4gFontTbl50 bodyTextPlus  wgt500  pxText">28</td>
-<td class="g4gFontTbl50 bodyTextPlus  borderLeft  wgt600  pxText">21</td>
-<td class="empty bodyTextPlus">19.5</td>
+<td class="g4gFontTbl50 bodyTextPlus2 wgt400  pxText">32</td>
+<td class="g4gFontTbl50 bodyTextPlus2  wgt500  pxText">28</td>
+<td class="g4gFontTbl50 bodyTextPlus2  borderLeft  wgt600  pxText">21</td>
+<td class="empty bodyTextPlus2">19.5</td>
 <td class="empty">19.5</td>
 <td class="empty">19.5</td>
 </tr>
 <tr>
-<th>Lc</th><th>45</th>
-<td class="nonText wgt100  pxText">144</td>
+<th style="font-weight: 600; text-align: right;">Lc</th><th style="font-size: 1.2em; text-align: left;">&nbsp;45</th>
+<td class="nonText2 wgt100  pxText">144</td>
 <td class="g4gFontTbl45 45 wgt200  pxText">96</td>
 <td class="g4gFontTbl45 wgt300  pxText">60</td>
-<td class="g4gFontTbl45 wgt400  pxText">36</td>
-<td class="g4gFontTbl45 bodyTextPlus  borderRight  wgt500  pxText">32</td>
-<td class="g4gFontTbl45 bodyTextPlus  borderLeft  wgt600  pxText">24</td>
-<td class="g4gFontTbl45 bodyTextPlus wgt700  pxText">21</td>
+<td class="g4gFontTbl45 bodyTextPlus2 wgt400  pxText">36</td>
+<td class="g4gFontTbl45 bodyTextPlus2  borderRight  wgt500  pxText">32</td>
+<td class="g4gFontTbl45 bodyTextPlus2  borderLeft  wgt600  pxText">24</td>
+<td class="g4gFontTbl45 bodyTextPlus2 wgt700  pxText">21</td>
 <td class="g4gFontTbl45 noBody pxText">21</td>
 <td class="g4gFontTbl45 noBody pxText">21</td>
 </tr>
 <tr>
-<th>Lc</th><th>40</th>
-<td class="nonText">168</td>
-<td class="nonText">112</td>
+<th style="font-weight: 600; text-align: right;">Lc</th><th style="font-size: 1.2em; text-align: left;">&nbsp;40</th>
+<td class="nonText2">168</td>
+<td class="nonText2">112</td>
 <td class="g4gFontTbl40 wgt300  pxText">72</td>
 <td class="g4gFontTbl40 wgt400  pxText">48</td>
 <td class="g4gFontTbl40  borderRight  wgt500  pxText">36</td>
-<td class="g4gFontTbl40   wgt600  pxText">28</td>
+<td class="g4gFontTbl40 borderLeft  wgt600  pxText">28</td>
 <td class="g4gFontTbl40  wgt700  pxText">28</td>
 <td class="g4gFontTbl40 noBody pxText">24</td>
 <td class="g4gFontTbl40 noBody pxText">24</td>
 </tr>
 <tr>
-<th>Lc</th><th>35</th>
-<td class="nonText">192</td>
-<td class="nonText">138</td>
+<th style="font-weight: 600; text-align: right;">Lc</th><th style="font-size: 1.2em; text-align: left;">&nbsp;35</th>
+<td class="nonText2">192</td>
+<td class="nonText2">138</td>
 <td class="g4gFontTbl35 wgt300  pxText">84</td>
 <td class="g4gFontTbl35 wgt400  pxText">60</td>
 <td class="g4gFontTbl35  borderRight wgt500  pxText">48</td>
-<td class="g4gFontTbl35  wgt600  pxText">36</td>
+<td class="g4gFontTbl35 borderLeft wgt600  pxText">36</td>
 <td class="g4gFontTbl35 wgt700  pxText">36</td>
 <td class="g4gFontTbl35  pxText">32</td>
 <td class="g4gFontTbl35  pxText">32</td>
 </tr>
 <tr>
-<th>Lc</th><th>30</th>
-<td class="nonText">216</td>
-<td class="nonText">144</td>
+<th style="font-weight: 600; text-align: right;">Lc</th><th style="font-size: 1.2em; text-align: left;">&nbsp;30</th>
+<td class="nonText2">216</td>
+<td class="nonText2">144</td>
 <td class="g4gFontTbl30  wgt300  pxText">96</td>
 <td class="g4gFontTbl30  wgt400  pxText">72</td>
 <td class="g4gFontTbl30  borderRight  wgt500  pxText">60</td>
-<td class="g4gFontTbl30  wgt600  pxText">48</td>
+<td class="g4gFontTbl30 borderLeft wgt600  pxText">48</td>
 <td class="g4gFontTbl30  wgt700  pxText">48</td>
 <td class="g4gFontTbl30  pxText">48</td>
 <td class="g4gFontTbl30  pxText">48</td>
@@ -1807,8 +1863,17 @@ It should be noted that those with most forms of CVD prefer the white text as we
  height: 0.75em; font-size: 0.5em; font-weight: 300;"> Copyright © 2022 by Myndex Research. All Right Reserved.</th></tr>
 </table>
     
-      
-      
+  </div>
+  <ul>
+    <li>Values shown are for common sans-serif fonts (e.g., Helvetica, Arial, Verdana, Montserrat, Roboto, Calibri, Trebuchet).
+    <li>Many serif fonts should use values for the row above (e.g., Times, Georgia, Cambria, Courier), and especially should be compared in terms of x-height.
+    <li>Decorative, unusual, and very thin fonts should be avoided for fluently readable text and especially columns of body text.  
+    <li>Due to the vast variety of font designs, designers should visually compare an unusual font to a standard font such as Helvetica, using the size and weight of Helvetica that most closesly matches the appearance of the tested font as a guide.
+    <li>Designers are cautioned that bypassing default font smoothing can drastically reduce contrast for small or thin fonts. For instance, the use of "-webkit-font-smoothing: antialiasing" is strongly discouraged.  
+  </ul>
+ </details>
+ 
+
 </section><!-- ********    Close Guidlines Section     ********    -->
 
 <hr class="clb mb0" style=""> 
@@ -1826,7 +1891,30 @@ It should be noted that those with most forms of CVD prefer the white text as we
 <hr class="clb mt0" style="">
 
 <section id="apca-science" class="explainer"> 
-  <h2 style="color: #206;">The Science Behind SAPC/APCA</h2>
+
+<details>
+
+  <summary><span class="twistUp"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="none"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 4c4.41 0 8 3.59 8 8s-3.59 8-8 8-8-3.59-8-8 3.59-8 8-8m0-2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 13l-4-4h8z" stroke="#34028b" fill="#230167"/></svg></span><h2 class="mastHead h1Query"  style="" id="the-accessible-perceptual-contrast-algorithm">The Accessible Perceptual Contrast Algorithm</h2></summary>
+
+<p>APCA is a new method for calculating and predicting readability contrast. APCA is a part of the larger S-Luv Accessible Readability Color Appearance Model known as SARCAM (formerly SAPC). These models are specifically related to color appearance on self-illuminated RGB computer displays &amp; devices, and also for modeling accessible user needs, with a focus on readability.</p>
+
+<h3 class="h3Query" style="" id="lightness-contrast">Lightness contrast L<sup>c</sup></h3>
+
+<p>The APCA generates a contrast value based on a color pair, and this value is perceptually based: that is, regardless of how light or dark the colors are, a contrast value of Lc&nbsp;60 represents the same <em>perceived</em> readability contrast. This is absolutely not the case with WCAG&nbsp;2.x, which far overstates contrast for dark colors to the point that 4.5:1 can be functionally unreadable when a color is near black. As a result, WCAG&nbsp;2.x contrast cannot be used for guidance designing &quot;dark mode&quot;.</p>
+<p>The APCA contrast value is perceptually uniform, and pivots near the point where the CS curve flattens due to contrast constancy. Halving or doubling the APCA value relates to a halving or doubling of the perceived contrast. There is a subtle weighting for higher contrasts to smaller, thinner fonts.</p>
+
+<h3 class="h3Query" style="" id="different-uses-different-contrasts">Different Uses, Different Contrasts</h3>
+<p>The APCA has a set of levels related to use cases — for instance, Lc&nbsp;90 is <em>preferred</em> and Lc&nbsp;75 is the <em>minimum</em> for body text. This makes for an easy way to use ACPA, very similar to 1.4.3 in terms of ease of use.</p>
+<p>The APCA also has an <strong>optional</strong> lookup table to associate font size and weight to the readability contrast (Lc&nbsp;value). The lookup tables allow for even greater accuracy and therefore greater flexibility in design.</p>
+
+<h3 class="h3Query" style="" id="failing-pass-fail">Failing Pass/Fail</h3>
+<p>A key takeaway is that a strict pass/fail with a blanket contrast ratio is not instructive as a guideline, and does not necessarily solve a given user need. In fact, user needs when it comes to contrast are conflicting—what is good for one can be harmful to another. This is even true of font size. </p>
+<p>This points to the importance of real user personalization, an area where the technology is literally missing (and a work in progress). For the guidelines though, we can set ranges for targets and expectations toward making the web readable for all.</p>
+
+    </details>
+<hr>      
+  <details>
+  <summary><span class="twistUp"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="none"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 4c4.41 0 8 3.59 8 8s-3.59 8-8 8-8-3.59-8-8 3.59-8 8-8m0-2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 13l-4-4h8z" stroke="#34028b" fill="#230167"/></svg></span><h2 class="h2Query" style="color: #308;">The Science Behind SAPC/APCA</h2></summary>
   <h3 class="h3Query" style="text-align: center;"><b>A</b>ccessible <b>P</b>erceptual <b>C</b>ontrast <b>A</b>lgorithm</h3>
 
   <div>
@@ -1836,18 +1924,18 @@ It should be noted that those with most forms of CVD prefer the white text as we
     <p>To accurately predict contrast perception, the Spatial <em>(font weight &amp; size)</em>, color <em>(perceived lightness difference between text and background)</em>, and context <em>(ambient light, surroundings, intended purpose of the text)</em> all need to be taken into account.</p>
   <h3 class="h3Query" style="text-align: center;">What is the Contrast of This Page?</h3>
     <p>Most of this page is set at over 120 in "old" APCA numbers, which now is approximately <span class="Lc">L<sup>c</sup></span>90. To help differentiate between dark text on a light background and light text on dark, the math reports the latter as a negative value. But for purposes of the font lookup table, ignore the minus sign and use the absolute value.</p>
-    
+    </details>
   </div>
 </section><!-- ********    Close Science Links Section     ********    -->
  <div class="m15" style="">   
     <a id="null04" href="/WEB/Perception" aria-label="Go Back to Percepton Experiments">
-    <button class="myndexButton queryButton fll" style="min-width: 510px; max-height: 80px;">
+    <button class="myndexButton queryButton m20 fll" style="min-width: 510px; max-height: 80px;">
     <div class="fll" style="padding: 0.1em 4px; font-family: 'Palatino', 'Georgia','Bookman', 'Times New Roman','Times','serif'; letter-spacing: 0.01em; line-height: 0.2; font-size: 2em; font-style: normal;">&Delta;&gamma; &nbsp;
       </div>Myndex Perception Research Experimental Results Listing</button>
     </a>
   
     <a id="null05" href="/CVD/" aria-label="Go Back to Percepton Experiments">
-    <button class="myndexButton queryButton flr" style="padding: 0.3em;">
+    <button class="myndexButton queryButton m20 flr" style="padding: 0.3em;">
     <img class="fll " role="presentation" alt="icon" style="margin: 0.3em; padding: 0" src="/CVD/faviconMasterSmall.jpg"  height="40">
       <div class="flr" style="margin: 0.3em; padding:0;" >Myndex&nbsp;Color&nbsp;Vision <br>Deficiency&nbsp;Simulator</div></button>
     </a> 
@@ -1868,10 +1956,10 @@ It should be noted that those with most forms of CVD prefer the white text as we
 </script>
 <hr class="clb mt0" style="">
 
-<div class="gammaContainer" style="Margin: 0;">
-  <h2 class="cW">MONITOR GAMMA CHECK</h2>
+<div class="gammaContainer" style="Margin: 0;"><details>
+  <summary><span class="twistUp"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="none"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 4c4.41 0 8 3.59 8 8s-3.59 8-8 8-8-3.59-8-8 3.59-8 8-8m0-2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 13l-4-4h8z" stroke="#ddeeff" fill="#ffffff"/></svg></span><h2 class=" tal ml25 cW">MONITOR GAMMA CHECK</h2></summary>
    
-   <div class="centered gamma " style="">sRGB gamma target. Ideally the targets appear uniform (i.e. the thick border looks the same as the inner grid). It is important that the image be at 100% and not scaled - make sure your browser says "actual size".<br>
+   <div class=" centered gamma " style="">sRGB gamma target. Ideally the targets appear uniform (i.e. the thick border looks the same as the inner grid). It is important that the image be at 100% and not scaled - make sure your browser says "actual size".<br>
 
 <fieldset>
 <div id="gammaBox22d" class="gammaBoxR"><span class=" gammaLabel cGr6">Background Target Value #22 (d)</span></div>
@@ -1898,7 +1986,7 @@ It should be noted that those with most forms of CVD prefer the white text as we
 <div id="gammaBoxA0d" class="gammaBoxR"><span class="gammaLabel cGr6">Background Target Value #a0 (d)</span></div>
 </fieldset>
 
-   </div>
+   </div><details>
 </div>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

@@ -517,7 +517,7 @@ footer  a:link, footer  a:hover,  footer  a:visited,footer a:visited:hover
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 1.2em;
     padding: 4px 0px;
-    border: 1px solid #BAD;
+    border: 1px solid #69b5;
     }
 
 .APCAtable th.nullBG {background-color: #FFD;}
@@ -553,7 +553,7 @@ footer  a:link, footer  a:hover,  footer  a:visited,footer a:visited:hover
     
 .APCAtable th.tableTitle {
     font-size: 1.3em;
-    color: #fff;
+    color: #def;
     background-color: #206;
     border: 2px solid #206;     
     }
@@ -578,8 +578,8 @@ th.weight2 { font-weight: 200; background-color: #F7F7F7; border-left: 2px solid
 th.weight3 { font-weight: 300; background-color: #F0F0F0; border-left: 2px solid #bbb; }
 th.weight4 { font-weight: 400; background-color: #EAEAEA; border-left: 2px solid #aaa; }
 th.weight5 { font-weight: 500; background-color: #E4E4E4; border-left: 2px solid #999;
-			border-right: 2px solid #969; }
-th.weight6 { font-weight: 600; background-color: #DDD;    border-left: 3px solid #858; }
+			border-right: 1px solid #969; }
+th.weight6 { font-weight: 600; background-color: #DDD;    border-left: 2px solid #858; }
 th.weight7 { font-weight: 700; background-color: #D7D7D7;border-left: 2px solid #777; }
 th.weight8 { font-weight: 800; background-color: #CFCFCF;border-left: 2px solid #666; }
 th.weight9 { font-weight: 900; background-color: #C6C6C6;border-left: 2px solid #555; }
@@ -692,14 +692,19 @@ td.keyVal12 { color: #220; background-color: #EF08;}
 
 td.bgOrLt { color: #30a; background-color: #FC6; }
 
-.APCAtable .underWeight {
+.APCAtable .underWeight{
     font-size: 1.5em;
     line-height: 0.7;
     color: #fda;
     background-color: #F78A;    
     color: #D00;
-    color: #f9e;
-    background-color: #b008; 
+    color: #916;
+    background-color: #c0a2; 
+    }
+
+.centeredTable .underWeight {
+    color: #916;
+    background-color: #c0a2; 
     }
     
 .underWeightSpan {
@@ -715,8 +720,8 @@ td.bgOrLt { color: #30a; background-color: #FC6; }
     font-family: 'Barlow Condensed';
     color: #600;
     background-color: #f94b;    
-    color: #FeF;
-    background-color: #B007;    
+    color: #808;
+    background-color: #a503;    
     }   
     
     
@@ -726,7 +731,7 @@ td.bgOrLt { color: #30a; background-color: #FC6; }
     margin: 0.5em auto;
     text-align: left;
     padding: 8px 12px;
-    background-color: #F4F9FF;
+    background-color: #d8f4ff;
     border: 6px solid #308;
     border-collapse: collapse;
     }
@@ -2037,12 +2042,13 @@ input[type=color] {cursor: pointer;}
 .h1Query, section .h1Query, .h2Query, section .h2Query,
 .h3Query, section .h3Query {
     margin: 16px 60px 0;
+    padding: 0 32px;
     text-align: left;
     color: #60a;
     font-size: 2.6em;
-    font-weight: 400;       
+    font-weight: 300;       
     }
-.h2Query, section .h2Query   {  margin: 18px 60px 6px; color: #60a; font-size: 2em; font-weight: 300;   }
+.h2Query, section .h2Query   {  margin: 18px 60px 6px; color: #60a; font-size: 2em; font-weight: 400;   }
 .h3Query, section .h3Query   {  margin: 18px 60px 6px;  font-size: 1.6em; font-weight: 500;   }
 
 section .h1Query + .h2Query, section .h2Query + .h3Query,
@@ -2314,7 +2320,7 @@ div.examples {
     }
     
 #URLresult {
-    max-width: 420px;
+    max-width: 560px;
     width: 60vw;
     font-size: 14px;
     }   
@@ -2841,7 +2847,7 @@ div.examples {
         border: 6px solid #30A;
         }   
     #URLresult {
-        max-width: 420px;
+        max-width: 560px;
         width: 60vw;
         font-size: 14px;
         }   
@@ -2868,7 +2874,7 @@ div.examples {
 @media (min-width: 1025px) {
 
     #URLresult {
-        max-width: 420px;
+        max-width: 560px;
         width: 60vw;
         font-size: 14px;
         }   
