@@ -30,12 +30,22 @@
 Please make all comments or discussions here and not in the satellite repositories.
 
 -----
+## NEW! •  <s>Advanced</s> ... Accessible Perceptual Contrast Algorithm
+The "Advanced" was originally part of an internal code name "SAPC" that eventually becasme "APCA"... and the word "advanced" moved along with that...  realized that first "A" should - almost has to — be "Accessibility." And it's shockingly obvious now, LOL.
+
+Thus, from here on, APCA stands for:
+
+### _Accessible_ <br> Perceptual <br> Contrast <br> Algorithm
+
+-----
+
+
 ## NEW! Bridge PCA
 Do you want to improve readability, but you are forced to used WCAG 2 contrast to the letter? Then Bridge PCA is for you. It is backward compatible with WCAG 2, but using APCA technology.
 SEE: [**_Bridge PCA Repository_**](https://github.com/Myndex/bridge-pca) 
 
 -----
-## NEW! _W3 Licensed Files Moved_
+## _W3 Licensed Files Moved_
 **All files that are part of and licensed to the W3 and AGWG, in support of WCAG&nbsp;3, are now in their own repository.**
 
 SEE: [**_APCA W3 Repository_**](https://github.com/Myndex/apca-w3) and please source all files for tools intended for WCAG&nbsp;3 conformance from that specific repository. The files in this repositiory are part of other projects, and not necessary for WCAG&nbsp;3 compliance.
