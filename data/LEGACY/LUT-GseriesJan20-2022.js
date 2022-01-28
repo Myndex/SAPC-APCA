@@ -126,6 +126,8 @@ const fontMatrixG = [  ///   Jan 19 2022
 lutG14xLcDelta = [
 ['Lc∆',
 
+// Each delta row is the delta of that row to the next lower Lc value row.
+// so row 100  3  is a delta of 3 between row 100 and row 95
 
 const fontDeltaG = [ ///Jan 19 2022
 [200,	0,	0,	0,	0,	0,	0,	0,	0,	0],

@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 /** @preserve
-/////   SAPC - S-Luv Advanced Perceptual Contrast - Beta Algorithm 0.98g
+/////   SAPC - S-Luv Accessible Perceptual Contrast - Beta Algorithm 0.98g
 /////           *** With the NEW full-scale extension ***
 /////        *** Optimized for the Font Select Extension ***
 /////

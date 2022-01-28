@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 /////
-/////    SAPC APCA - Advanced Perceptual Contrast Algorithm
+/////    SAPC APCA - Accessible Perceptual Contrast Algorithm
 /////           Beta 0.0.98G-4g • contrast function only
 /////           DIST: GH SE Revision date: Oct 1, 2021
 /////    Function to parse color values and determine Lc contrast

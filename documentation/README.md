@@ -61,8 +61,7 @@ APCA was developed independently as a part of the future WCAG&nbsp;3 standards, 
 
 Please feel free to use the discussion area for any questions or comments.
 
-## APCA Documentation and Quick Start
-See the [JS Documentation \(the ReadMe.md in the JS folder\)](JS/ReadMe.md) for information on using the API, which file is best suited for your needs, and a QuickStart tutorial.
+## Why APCA
 
 See [WHY APCA](WhyAPCA.md) for a brief explaination of the important differences of APCA for WCAG&nbsp;3 vs the old WCAG&nbsp;2.x/1.4.3 contrast guidelines.
 
@@ -72,9 +71,6 @@ See [WHY APCA](WhyAPCA.md) for a brief explaination of the important differences
 
 **The development version[ is the SAPC page,](https://www.myndex.com/SAPC/)** and this version includes the new RESEARCH MODE, which has some different tools you can activate to investigate the nature of a color or colors, including a simplified version of the middle contrast experiment - on the SAPC app it's called "split contrast mode".
 
------
-# What is SAPC/APCA?
-[![](images/Myndex_eye_cielabWide.png)](https://www.myndex.com/WEB/Perception)
 
 ## APCA is the _Accessible Perceptual Contrast Algorithm_
 
@@ -96,37 +92,19 @@ There is a working version with examples and reference material on [APCAsite](ht
 -----
 ### Font Use Lookup Table
 
-Latest Lookup Table: January 19 2022
+Latest Lookup Table: January 27 2022
 
 Sorted by font size      
-<img width="500" alt="APCA Lookup Table" src="../images/Jan29_2022LUT_byFont.jpg">
+<img width="400" alt="APCA Lookup Table" src="../images/Jan27_2022LUT_byFont.jpg">
 
-<img width="500" alt="APCA Lookup table legend" src="../images/Jan29_2022LUT_legend.jpg">
+<img width="400" alt="APCA Lookup table legend" src="../images/Jan27_2022LUT_legend.jpg">
 
 Sorted by contrast Lc value      
-<img width="500" alt="APCA Lookup Table" src="../images/Jan29_2022LUT_byLc.jpg">
+<img width="400" alt="APCA Lookup Table" src="../images/Jan27_2022LUT_byLc.jpg">
 
 
 ------
 ------
-<!--
-## The New SAPC/APCA at a Glance
-- **Now substantially more accurate** in terms of perceptual uniformity — twice as accurate to perception as the APCA alpha in 2020.
-
-- **Uniformity Described:** For the majority of the range, doubling or halving the L<sup>c</sup> contrast number equates to a doubling or halving of the perceived contrast. (Based on the empirical data from the 2020 "Middle Contrast" experiments.)
-
-- **New Code and Constants:** If you have been working with the code, it has changed, and there are a whole new set of constants. What was posted here today (Octover 1 2021) is what has been tested on the live sites for several months.
-
-- **Rescaled Output:** This new version sets the levels a little differently, so what was 80 is now about 60, what was 90 is now 75, etc.
-    - **Rescaled lookup tables:** — to adjust to the newly scaled output, both the visual lookups, and the arrays in the code are being updated to give accurate font minimums. The d12e tables will suffice for the moment, the revised tables will be up soon.
-    - NOTE: the automated lookup tables are not posted here, but are live on the APCA site. 
-
-- Some of the changes have "improved" the accuracy of saturated colors, particularly red and blue, at least in terms of readability guidelines. 
-    - APCA is not specifically addressing the Helmholtz–Kohlrausch effect, as the focus for APCA is on readability, and chroma contrast does not help readability for small body-text sized fonts (in some cases it hinders it) — luminance contrast is the key for readability, particularly for body text.
-    - I do have a separate color module, but not releasing it at the moment as it is more about aesthetics than readability, and solving the readability issue was the key goal. 
-
-- **Research Mode!** On the [SAPC site only](https://www.myndex.com/SAPC/), there is a button under the font display for "Research Mode" which activates some additional tools for investigating colors and contrast.
--->
 
 
 ### Change Notices:
@@ -136,8 +114,11 @@ If you have been using any files from _this_ repository, be sure to read the fil
 
 ## SAPC/APCA CURRENT VERSION: 0.1.1 Constants: 4g
 
+### January 27 2022
+Font lookup table revised, now LUT ver  0.1.5 G constants. New the arrays in the data folder. More uniform response across multiple font families, and improved acuity weighting.
+
 ### January 18 2022
-Font lookup table revised, still for 4G constants. Much tighter conformance now. See the arrays in the data folder.
+Font lookup table revised, still for 4G constants. Tighter conformance now. 
 
 ### January 2 2022
 Font lookup table revised, still for 4G constants.
