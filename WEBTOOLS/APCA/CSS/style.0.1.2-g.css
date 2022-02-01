@@ -19,7 +19,7 @@
 /* ************************************************************************** */
 
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 /* *****   The following only imports capitals for .dropCapSimple  ****** */
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&text=%20%26ABCDEFGHIJKLMNOPQRSTUVWXYZ&display=swap');
@@ -171,7 +171,7 @@ div.rightCol {
 
     padding: 1em;
     width: 98vw;
-    max-width: 755px;
+    max-width: 950px;
 
     color: #000;
     background: #777;
@@ -615,7 +615,6 @@ td.keyVal12, td.keyVal10 {font-weight: 800;}
 .APCAtable td.keyVal40, td.keyVal07 {font-weight: 700;}
 
 
-
 td.keyVal06 {font-weight: 600;}
 td.keyVal05 {font-weight: 500;}
 td.keyVal04 {font-weight: 400;}
@@ -776,8 +775,8 @@ td.bgOrLt { color: #30a; background-color: #FC6; }
     width: 1000;
     position: relative;
     margin: 1em ;
+    font-family: Barlow, Kanit, Poppins, sans-serif;
     font-family: 'Montserrat', sans-serif;
-    font-family: Kanit, Poppins, Barlow, sans-serif;
 
     font-size: 1em; 
     text-align: center;
@@ -985,8 +984,8 @@ div.overflowScroll {
     padding: 0;
     position: relative;
     font-family: 'Work Sans','Saira Condensed','Fira Sans', sans-serif;
-    font-family:  Montserrat,  Helvetica, Arial, sans-serif;   
     font-family: Poppins, Barlow, Kanit ,  sans-serif;
+    font-family: Montserrat,  Helvetica, Arial, sans-serif;   
 
     font-size: 1em; 
     text-align: center;
@@ -1011,19 +1010,37 @@ div.overflowScroll {
     color: #30A;
     }
     
+
     
 .conformScore td {
-    max-height: 72px;
-    height: 72px;
+    position:relative; 
+    max-height: 120px;
+    height: 120px;
     overflow: hidden;
+    white-space: nowrap; 
+    line-height: 1.25;
     margin: 0;
     padding: 0;
     font-family:  Montserrat,  Helvetica, Arial, sans-serif;
-    font-family: 'Fira Sans', 'Work Sans','Saira Condensed', sans-serif;
     font-family: Barlow, Poppins, Kanit,  sans-serif;
-
     border-radius: 16px;
     }
+    
+.conformScore td:nth-child(2),
+.conformScore td:nth-child(n+5):nth-child(-n+6) {
+    max-width:95px;
+    width:95px;
+    margin-right: 7px;
+	}
+
+.conformScore td:nth-child(n+3):nth-child(-n+4),
+.conformScore td:nth-child(7) {
+    max-width:194px;
+    width:194px;     
+    margin-right: 7px;
+	}
+
+	
 .conformScore tr:nth-child(1) th {
     padding: 6px 0 8px;
     font-size: 1.6em;
@@ -1215,9 +1232,9 @@ div.overflowScroll {
     border-radius: 0 16px 0 0;
     }
 .conformScore .notApplicable {
-    font-family: 'Work Sans','Fira Sans', sans-serif;
     font-family: Poppins, Barlow, Kanit ,  sans-serif;
-    font-family: Kanit, Barlow, Poppins, sans-serif;
+    font-family: 'Work Sans','Fira Sans', sans-serif;
+    font-family: Barlow, Poppins, sans-serif;
 
     font-size: 1.3em;
     line-height: 1;
@@ -1311,6 +1328,9 @@ div.overflowScroll {
     font-size: 3em;
     line-height: 0.9;
     }
+    
+    
+
     
     
     
@@ -1423,7 +1443,7 @@ ul, ol {
     line-height: 1.3;
     margin: 0.8em 1.2em 1.6em 1em;
     font-family: Montserrat,  Helvetica, Arial, sans-serif;
-    font-family: Poppins, Barlow, Kanit, sans-serif;
+    font-family: Barlow, Kanit, sans-serif;
     font-family: 'Work Sans','Fira Sans', sans-serif;
 
     font-weight: 500;
@@ -1768,7 +1788,7 @@ input[type=color] {cursor: pointer;}
     }       
 #demoArea p {
     font-family:  Montserrat,  Helvetica, Arial, sans-serif;
-    font-family: Poppins, Barlow, Kanit ,  sans-serif;
+    font-family: Barlow, Kanit ,  sans-serif;
     font-family: 'Work Sans','Fira Sans', sans-serif;
 
     font-size: 18.7px; 
@@ -2075,7 +2095,7 @@ section .h1Query + .h3Query
     top: 0.15em;
     margin: 0 0 -0.15em -0.25em;
     font-size: 0.85em;
-    }       
+    }
 
 
 /* ************************************************************************** */
@@ -2921,6 +2941,468 @@ div.examples {
 /* ************************************************************************** */
 /* *****   END MEDIA QUERIES   ********************************************** */
 /* ************************************************************************** */
+
+/*  From Index  */
+
+
+.codeBlock2 code {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inconsolata', Courier, Menlo, monospace;
+  }
+.codeBlock2 {
+  width: 390px;
+  margin: 4px 16px; 
+  padding: 8px 12px; 
+  white-space: nowrap; 
+  overflow: hidden;
+  border: 1px solid #008;
+  border-radius: 12px;
+  font-family: 'Inconsolata', Courier, Menlo, monospace;
+  font-size: 21px;
+  color: #009;
+  background-color: #7FB; 
+  box-shadow: inset 4px 4px 8px #2958;      
+  }
+.codeBlock2 code b {
+  font-weight: 900;
+  }
+.codeBlock2 code {
+  font-weight: 500;
+  }
+
+#contrast2 {
+  box-sizing: border-box;
+  position: relative;
+  width: 170px; 
+  margin: 8px auto 12px;
+  z-index: 2;
+  padding: 2px 2px 6px;
+  color: #30A; 
+  background-color: #DEF;
+  border: 1px solid #30A;
+  border-radius: 16px;
+  box-shadow: inset 3px 3px 6px #ABC;
+  }
+    
+.contrastResult2 {
+  position: relative;
+  text-align: center; 
+  padding: 2px; 
+  font-size: 1.8em;
+  font-weight: 700;
+  }
+  
+    #ampSamp, #ampSamp2, .ampSample  {
+      box-sizing: border-box;
+      position: relative; 
+      width: 180px;
+      margin: 0 auto;
+      padding: 0;
+      border: 8px solid #777;
+      border-radius: 24px;
+      box-shadow: none;     
+      }
+
+    #ampSamp2, .ampSample {
+      display: inline-block;
+      width: 540px;
+      margin: 24px auto 2px;
+      padding: 16px;
+      font-family: 'playfair display', serif;
+      border: 12px solid #777;    
+      }
+
+    .ampSample {
+      width: 100px;
+      top: 18px;
+      margin: 2px 12px 2px 0;
+      padding: 8px 0 0;
+      font-family: 'playfair display', serif;
+      border: none;   
+      }
+
+.conformScore td {
+  border-radius: 24px;
+  }
+  
+  
+#resultTable input { 
+  /* box-sizing: border-box; */
+  appearance: none;
+  position: relative; 
+  margin: 0; 
+  padding: 1px;
+  text-align: center; 
+  font-size: 4px; 
+  font-weight: 400; 
+  color: #444; 
+  background-color: #F00; 
+  border:none; 
+  border-radius: 4px; 
+  box-shadow: none;
+  }
+  
+#tableSamples input {
+  box-sizing: border-box;
+  color: #358;
+  box-shadow: inset 2px 2px 5px #553,inset 0 0 6px 22px #66d2;
+  }
+#tableSamples input:focus {
+  outline:none;
+  box-sizing: border-box;
+  color: #103; 
+  background-color: #def; 
+  border-color: #96f;
+  border-radius: 12px; 
+  box-shadow: inset 2px 2px 5px 2px #68B;
+  }
+
+#tableSamples #BGpicker, #tableSamples #BGpicker input:focus, 
+#tableSamples #TXTpicker, #tableSamples #TXTpicker input:focus {
+  border: none;
+  border-radius: 3px 3px 3px 26px;
+  box-shadow: none;
+  }
+#tableSamples #TXTpicker, #tableSamples #TXTpicker input:focus 
+{border-radius: 3px 3px 26px 3px;}
+
+
+#resultTable input:focus { 
+  outline:none;
+  color: #309; 
+  background-color: #def; 
+  border-color: #acf; 
+  box-shadow: none;
+  }
+#resultTable { 
+  position: relative;
+  height: 240px;
+  padding: 8px; 
+  }
+
+.inputLeft {
+  position: relative;
+  float: left;
+  }
+.inputRight {
+  position: relative;
+  float: right;
+  }
+
+
+
+a:link {
+  color: #006;
+  text-decoration: underline;
+  font-weight: inherit;
+  text-shadow: 0 0 0 #FFF0;
+/* ** Null Shadow as it needed to be present in LINK
+    to be accessible by the psudo elements ** */
+  }
+
+a:visited {
+  color: #408;
+  text-decoration: none;
+  font-weight: inherit;
+  text-shadow: 0 0 0 #FFF0;
+  }
+
+a:hover {
+  color: #54C;
+  text-decoration: none;
+  text-shadow: 0.07em 0.07em 0.12em #79B;
+  }
+
+a:visited:hover {
+  color: #73B;
+  text-decoration: none;
+  font-weight: inherit;
+  text-shadow: 0.05em 0.05em 0.1em #A98;
+  }
+
+a:active {
+  position: relative;
+  top: 0.1em;
+  color: #8ad;
+  text-decoration: none;
+  font-weight: inherit;
+  text-shadow: 0 0 0.18em #6ACA;
+  }
+  
+footer  a:link, footer a:hover,  footer a:visited, footer a:visited:hover
+  {
+    color: #ec4;
+  }
+
+.onWhiteSpace { 
+    margin: 12px 120px 6px; padding:0 12px; font-size: 18.7px; font-weight: 500;}
+
+/* simple mode */
+
+#tableScore5,#tableScore3,#tableScore2,#tableScore1 {
+  display: none;
+  visibility: hidden;
+  }
+#weight1,#weight8,#weight9 {
+  display: none;
+  visibility: hidden; 
+  }
+  
+th.scoreHeader { font-weight: 600;}
+
+.weightWord {
+  display: inline-block;
+  font-size: inherit !important;
+  font-weight: inherit;
+  }
+.weightWord::before {
+  content: ' • ';
+  }
+
+/* These must be after the inputs */
+
+#BGresult, #textResult, #TXTresult,
+#BGresult2, #textResult2, #TXTresult2 {
+  appearance: none;
+  width: 100px;
+  height: 24px;
+  position: relative;
+  top: 1px;
+  padding: 1px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: none;
+  }
+#BGresultWrap, #TXTresultWrap {
+  appearance: none;
+  position: relative; 
+  margin: 6px 12px;
+  padding: 2px;
+  width: 120px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;   
+  background-color: #808080;
+  }
+
+  
+
+.setColor, div.setColor, span.setColor, p.setColor,
+div .setColor, div div.setColor, div span.setColor, div p.setColor
+{ color: var(--textColor, #123); }
+.setColorFlip, div.setColorFlip, span.setColorFlip, p.setColorFlip,
+div .setColorFlip, div div.setColorFlip, div span.setColorFlip, div p.setColorFlip
+{ color: var(--bgColor, #bad); }
+
+.setBGcolor, div.setBGcolor, span.setBGcolor, p.setBGcolor,
+div .setBGcolor, div div.setBGcolor, div span.setBGcolor, div p.setBGcolor
+{ background-color: var(--bgColor, #bad); }
+.setBGcolorFlip, div.setBGcolorFlip, span.setBGcolorFlip, p.setBGcolorFlip,
+div .setBGcolorFlip, div div.setBGcolorFlip, div span.setBGcolorFlip, div p.setBGcolorFlip
+{ background-color: var(--textColor, #123); }
+  
+
+.g4gVal35,.g4gVal40,.g4gVal50,.g4gVal55,.g4gVal65,
+.g4gVal70,.g4gVal80,.g4gVal85,.g4gVal95,.g4gVal100
+{ color: #62b; background-color: #dff8; }
+
+.g4gVal35,.g4gVal40 {color: #84a; background-color: #eec5;}
+
+
+
+
+
+
+
+.bodyText, td.bodyText2 {
+  position: relative;
+  color: #308;
+  background-color: #dff8;
+  }
+.bodyText::after {
+position: relative;
+  top: -10px;
+  content: 'B';
+  font-size: 0.6em;
+  }
+
+td.bodyText,td.bodyText2 {
+  border: 4px solid #0bb8;
+  }
+
+
+
+.ptText::after {
+  position: relative;
+  top: 0px;
+  content: 'pt';
+  font-size: 0.65em;
+  }
+.pxText::after {
+  position: relative;
+  top: 0px;
+  content: 'px';
+  font-size: 0.6em;
+  }
+  
+
+
+.bodyTextPlus, td.bodyTextPlus2 {
+  position: relative;
+  color: #206;
+  background-color: #ffe8;
+  }
+.bodyTextPlus::after, .bodyTextPlus2::after {
+  position: relative;
+  top: -10px;
+  content: '+15';
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.56em;
+  font-weight: 700;
+  }
+
+td.bodyTextPlus, td.bodyTextPlus2 {
+  border: 4px solid #dc08;
+  }
+
+
+td.borderRight {border-right: 1px solid #3077;}
+td.borderLeft {border-left: 2px solid #3077;}
+td.borderTop {border-top: 3px solid #b06b;}
+td.borderLeftTop {border-left: 3px solid #b06b; border-top: 3px solid #b06;}
+
+td.borderNT {border: 4px solid #b06;}
+td.borderVisible {border: 4px solid #309; border-width: 1px 1px}
+
+
+.g4gVal90,
+.g4gVal75, 
+.g4gVal60, 
+.g4gVal45 { font-weight: 600; }
+
+  
+tr td.keyVal100,td.g4gVal90 {background-color: #8fe5;}
+tr td.keyVal80, td.g4gVal75 {background-color: #9fc5;}
+tr td.keyVal60, td.g4gVal60 {background-color: #afa5;}
+tr td.keyVal40, td.g4gVal45 {background-color: #be85;}
+tr td.keyVal30, td.g4gVal30, .minSize {color: #a05b; background-color: #fda4;}
+                  .g4gValNT {color: #fcc; background-color: #a62;}
+
+.g4gLite, td.g4gLite { color: #b00; background-color: #fcd; border: 4.5px solid #e005; }
+.nonText {
+  position: relative;
+  color: #624;
+  background-color: #b084;
+  }
+.nonText::after {
+  position: relative;
+  top: -8px;
+  content: 'NT';
+  font-size: 0.6em;
+  }
+
+td.nonText2 {
+  position: relative;
+  font-size: 0.8em;
+  color:#624;
+  background: #b084;
+  }
+.nonText2::after {
+  position: relative;
+  top: -4px;
+  content: 'NT';
+  font-size: 1.1em;
+  font-weight: bold;
+  }  
+
+.empty { font-style: oblique; font-weight: 300; color: #37a;}
+
+.g4gLite, td.g4gLite , td.g4gLite2{ color:#624; background: #f352;}
+
+.g4gFontTbl90,.g4gFontTbl75,.g4gFontTbl60,.g4gFontTbl45 { font-weight: bold; }
+
+.centeredTable td.copyOnly, td.colorCodes.copyOnly { background: #a503;}
+  
+  
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+details > summary::marker { display: none; }
+details[open] details { display: none; }
+details summary { cursor: pointer; list-style: none; }
+details summary > svg { display: inline; }
+
+
+section details summary .h1Query,
+section details summary .h2Query,
+section details summary .h3Query {
+	margin-left: 36px;
+	text-decoration: none;
+	text-shadow: 2px 2px 4px #2062;
+	transition: text-shadow 0.4s, text-decoration 0.4s;
+	}
+	
+details summary .largerHeader {
+  font-size: 2.0em;
+  font-weight: 500;
+  }
+  
+section details summary:hover .h1Query,
+section details[open] summary:hover .h1Query, 
+section details summary:hover .h2Query,
+section details[open] summary:hover .h2Query, 
+section details summary:hover .h3Query,
+section details[open] summary:hover .h3Query { 
+	text-decoration: underline;
+	text-shadow: 2px 2px 4px #89fc;
+	transition: text-shadow 0.25s, text-decoration 0.4s;
+	}
+	
+section details[open] summary .h1Query,
+section details[open] summary .h2Query,
+section details[open] summary .h3Query { 
+	text-decoration: none;
+	text-shadow: 2px 2px 4px #89f7;
+	transition: text-shadow 0.4s, text-decoration 0.4s;
+	}
+
+details .summaryTitle {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+details summary:focus { outline: none; }
+
+details summary:hover .twistUp svg {
+	transform: rotate(-90deg);
+	opacity: 1; 
+	transition: opacity 0.7s, transform 0.4s;
+	}
+details[open] summary:hover .twistUp svg {
+	transform: rotate(0deg);
+	opacity: 1; 
+	transition: opacity 0.7s, transform 0.4s;
+	}
+
+details .twistUp svg {
+	position: absolute;
+	display: inline;
+	opacity: 0.5;
+	transform: rotate(-90deg);
+	transition: opacity 0.7s, transform 0.4s;
+	}
+
+details[open] .twistUp svg {
+	transform: rotate(0deg);
+	opacity: 0.82;
+	transition: opacity: 1s, transform 0.4s; }
+
+
+
+
+
 
 
 
