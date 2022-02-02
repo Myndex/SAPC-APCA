@@ -30,7 +30,7 @@
 Please make all comments or discussions here and not in the satellite repositories.
 
 -----
-## NEW! •  <s>Advanced</s> ... Accessible Perceptual Contrast Algorithm
+## NEW! •  <s>Advanced</s> ... _Accessible_ Perceptual Contrast Algorithm
 The "Advanced" was originally part of an internal code name "SAPC" that eventually becasme "APCA"... and the word "advanced" moved along with that...  realized that first "A" should - almost has to — be "Accessibility." And it's shockingly obvious now, LOL.
 
 Thus, from here on, APCA stands for:
