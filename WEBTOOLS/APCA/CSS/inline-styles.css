@@ -1,0 +1,199 @@
+:root {
+  --textColor: #123;
+  --textColorFlip: #abc;
+  --textColorMid: #449;
+  --textColorMono: #404;
+  --bgColor: #abc;
+  --bgColorFlip: #123;
+  --bgColorMid: #494;
+  --bgColorMono: #efe;
+
+  --tickLabel: #30a;
+
+  --slideLabelBG: #e50;
+  --slideLabelText: #222;
+
+  --insideOutLo: #000;
+  --insideOutHi: #bcd;
+  --insideOutMidLo: #000;
+  --insideOutMidHi: #dcb;
+  --insideOutLoBG: #642;
+  --insideOutHiBG: #fff;
+  --insideOutMidLoBG: #248;
+  --insideOutMidHiBG: #fff;
+
+  --gradLo: #123;
+  --gradHi: #abc;
+}
+
+body { background-color:#abc;}
+
+.safari h3 { font-weight: 500; }
+
+  /* SVG GAMMA TARGETS */
+
+.gammaBox,.gammaBoxB {
+  display: inline-block;
+  Position: Relative;
+  Margin: 10px auto;
+  Width: 270px;
+  Height: 216px;
+  border: 48px solid #378837;
+  border-radius: 24px;
+  }
+
+ fieldset {outline: none; border: none;}
+
+
+#gammaBoxDith9B {/* target #9B manual calc 2.8 jan 27 2022 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23ffffff" /><rect x="0" y="1" width="1" height="3" fill="%23000000" /><rect x="1" y="0" width="1" height="1" fill="%23000000" /><rect x="1" y="1" width="1" height="1" fill="%23ffffff" /><rect x="1" y="2" width="1" height="2" fill="%23000000" /><rect x="2" y="0" width="1" height="2" fill="%23000000" /><rect x="2" y="2" width="1" height="1" fill="%23ffffff" /><rect x="2" y="3" width="1" height="1" fill="%23000000" /><rect x="3" y="0" width="1" height="3" fill="%23000000" /><rect x="3" y="3" width="1" height="1" fill="%23ffffff" /></svg>') 0 0/4px 4px repeat;
+  border-color:#9b9b9b;
+  }
+#gammaBoxDith96 {/* target #96 manual calc 2.6 jan 27 2022 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23ffffff" /><rect x="0" y="1" width="1" height="3" fill="%23000000" /><rect x="1" y="0" width="1" height="1" fill="%23000000" /><rect x="1" y="1" width="1" height="1" fill="%23ffffff" /><rect x="1" y="2" width="1" height="2" fill="%23000000" /><rect x="2" y="0" width="1" height="2" fill="%23000000" /><rect x="2" y="2" width="1" height="1" fill="%23ffffff" /><rect x="2" y="3" width="1" height="1" fill="%23000000" /><rect x="3" y="0" width="1" height="3" fill="%23000000" /><rect x="3" y="3" width="1" height="1" fill="%23ffffff" /></svg>') 0 0/4px 4px repeat;
+  border-color:#969696;
+  }
+#gammaBoxDith93 {/* target #93 manual calc 2.5 jan 27 2022 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23ffffff" /><rect x="0" y="1" width="1" height="3" fill="%23000000" /><rect x="1" y="0" width="1" height="1" fill="%23000000" /><rect x="1" y="1" width="1" height="1" fill="%23ffffff" /><rect x="1" y="2" width="1" height="2" fill="%23000000" /><rect x="2" y="0" width="1" height="2" fill="%23000000" /><rect x="2" y="2" width="1" height="1" fill="%23ffffff" /><rect x="2" y="3" width="1" height="1" fill="%23000000" /><rect x="3" y="0" width="1" height="3" fill="%23000000" /><rect x="3" y="3" width="1" height="1" fill="%23ffffff" /></svg>') 0 0/4px 4px repeat;
+  border-color:#939393;
+  }
+#gammaBoxDith8F {/* target #8f manual calc 2.4 jan 27 2022 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23ffffff" /><rect x="0" y="1" width="1" height="3" fill="%23000000" /><rect x="1" y="0" width="1" height="1" fill="%23000000" /><rect x="1" y="1" width="1" height="1" fill="%23ffffff" /><rect x="1" y="2" width="1" height="2" fill="%23000000" /><rect x="2" y="0" width="1" height="2" fill="%23000000" /><rect x="2" y="2" width="1" height="1" fill="%23ffffff" /><rect x="2" y="3" width="1" height="1" fill="%23000000" /><rect x="3" y="0" width="1" height="3" fill="%23000000" /><rect x="3" y="3" width="1" height="1" fill="%23ffffff" /></svg>') 0 0/4px 4px repeat;
+  border-color:#8f8f8f;
+  }
+
+
+#gammaBoxDith88 {/* target #88 manual calc 2.2 jan 27 2022 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23ffffff" /><rect x="0" y="1" width="1" height="3" fill="%23000000" /><rect x="1" y="0" width="1" height="1" fill="%23000000" /><rect x="1" y="1" width="1" height="1" fill="%23ffffff" /><rect x="1" y="2" width="1" height="2" fill="%23000000" /><rect x="2" y="0" width="1" height="2" fill="%23000000" /><rect x="2" y="2" width="1" height="1" fill="%23ffffff" /><rect x="2" y="3" width="1" height="1" fill="%23000000" /><rect x="3" y="0" width="1" height="3" fill="%23000000" /><rect x="3" y="3" width="1" height="1" fill="%23ffffff" /></svg>') 0 0/4px 4px repeat;
+  border-color:#888888;
+  }
+#gammaBoxDith7B {/* target #7b manual calc 1.9 jan 27 2022 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23ffffff" /><rect x="0" y="1" width="1" height="3" fill="%23000000" /><rect x="1" y="0" width="1" height="1" fill="%23000000" /><rect x="1" y="1" width="1" height="1" fill="%23ffffff" /><rect x="1" y="2" width="1" height="2" fill="%23000000" /><rect x="2" y="0" width="1" height="2" fill="%23000000" /><rect x="2" y="2" width="1" height="1" fill="%23ffffff" /><rect x="2" y="3" width="1" height="1" fill="%23000000" /><rect x="3" y="0" width="1" height="3" fill="%23000000" /><rect x="3" y="3" width="1" height="1" fill="%23ffffff" /></svg>') 0 0/4px 4px repeat;
+  border-color:#7b7b7b;
+  }
+
+
+
+
+#gammaBoxDithC7 {/* target #c7 manual calc 2.8 jan 27 2022 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23000000" /><rect x="1" y="1" width="1" height="1" fill="%23000000" /><rect x="1" y="0" width="1" height="1" fill="%23ffffff" /><rect x="0" y="1" width="1" height="1" fill="%23ffffff" /></svg>') 0 0/2px 2px  repeat;
+  border-color:#c7c7c7;
+  }
+#gammaBoxDithC3 {/* target #c3 manual calc 2.6 jan 27 2022 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23000000" /><rect x="1" y="1" width="1" height="1" fill="%23000000" /><rect x="1" y="0" width="1" height="1" fill="%23ffffff" /><rect x="0" y="1" width="1" height="1" fill="%23ffffff" /></svg>') 0 0/2px 2px  repeat;
+  border-color:#c3c3c3;
+  }
+#gammaBoxDithC1 {/* target #c1 manual calc 2.5 jan 27 2022 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23000000" /><rect x="1" y="1" width="1" height="1" fill="%23000000" /><rect x="1" y="0" width="1" height="1" fill="%23ffffff" /><rect x="0" y="1" width="1" height="1" fill="%23ffffff" /></svg>') 0 0/2px 2px  repeat;
+  border-color:#c1c1c1;
+  }
+#gammaBoxDithBF {/* target #bf manual calc 2.4 jan 27 2022 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23000000" /><rect x="1" y="1" width="1" height="1" fill="%23000000" /><rect x="1" y="0" width="1" height="1" fill="%23ffffff" /><rect x="0" y="1" width="1" height="1" fill="%23ffffff" /></svg>')0 0/2px 2px  repeat;
+  border-color:#bfbfbf;
+  }
+
+#gammaBoxDithBA {/* target #ba manual calc 2.2 jan 27 2022 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23000000" /><rect x="1" y="1" width="1" height="1" fill="%23000000" /><rect x="1" y="0" width="1" height="1" fill="%23ffffff" /><rect x="0" y="1" width="1" height="1" fill="%23ffffff" /></svg>') 0 0/2px 2px  repeat;
+  border-color:#bababa;
+  }
+#gammaBoxDithB1 {/* target #b1 manual calc 1.9 jan 27 2022 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23000000" /><rect x="1" y="1" width="1" height="1" fill="%23000000" /><rect x="1" y="0" width="1" height="1" fill="%23ffffff" /><rect x="0" y="1" width="1" height="1" fill="%23ffffff" /></svg>') 0 0/2px 2px  repeat;
+  border-color:#b1b1b1;
+  }
+
+
+
+  #gammaBoxDithE6 {/* target #e6 manual calc 2.8 jan 27 2022 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23000000" /><rect x="0" y="1" width="1" height="3" fill="%23ffffff" /><rect x="1" y="0" width="1" height="1" fill="%23ffffff" /><rect x="1" y="1" width="1" height="1" fill="%23000000" /><rect x="1" y="2" width="1" height="2" fill="%23ffffff" /><rect x="2" y="0" width="1" height="2" fill="%23ffffff" /><rect x="2" y="2" width="1" height="1" fill="%23000000" /><rect x="2" y="3" width="1" height="1" fill="%23ffffff" /><rect x="3" y="0" width="1" height="3" fill="%23ffffff" /><rect x="3" y="3" width="1" height="1" fill="%23000000" /></svg>') 0 0/4px 4px  repeat;
+  border-color:#e6e6e6;
+  }
+
+  #gammaBoxDithE4 {/* target #e4 manual calc 2.6 jan 27 2022 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23000000" /><rect x="0" y="1" width="1" height="3" fill="%23ffffff" /><rect x="1" y="0" width="1" height="1" fill="%23ffffff" /><rect x="1" y="1" width="1" height="1" fill="%23000000" /><rect x="1" y="2" width="1" height="2" fill="%23ffffff" /><rect x="2" y="0" width="1" height="2" fill="%23ffffff" /><rect x="2" y="2" width="1" height="1" fill="%23000000" /><rect x="2" y="3" width="1" height="1" fill="%23ffffff" /><rect x="3" y="0" width="1" height="3" fill="%23ffffff" /><rect x="3" y="3" width="1" height="1" fill="%23000000" /></svg>') 0 0/4px 4px  repeat;
+  border-color:#e4e4e4;
+  }
+
+  #gammaBoxDithE3 {/* target #e3 manual calc 2.5 jan 27 2022 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23000000" /><rect x="0" y="1" width="1" height="3" fill="%23ffffff" /><rect x="1" y="0" width="1" height="1" fill="%23ffffff" /><rect x="1" y="1" width="1" height="1" fill="%23000000" /><rect x="1" y="2" width="1" height="2" fill="%23ffffff" /><rect x="2" y="0" width="1" height="2" fill="%23ffffff" /><rect x="2" y="2" width="1" height="1" fill="%23000000" /><rect x="2" y="3" width="1" height="1" fill="%23ffffff" /><rect x="3" y="0" width="1" height="3" fill="%23ffffff" /><rect x="3" y="3" width="1" height="1" fill="%23000000" /></svg>') 0 0/4px 4px  repeat;
+  border-color:#e3e3e3;
+  }
+#gammaBoxDithE2 {/* target #e2 manual calc 2.4 jan 27 2022 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23000000" /><rect x="0" y="1" width="1" height="3" fill="%23ffffff" /><rect x="1" y="0" width="1" height="1" fill="%23ffffff" /><rect x="1" y="1" width="1" height="1" fill="%23000000" /><rect x="1" y="2" width="1" height="2" fill="%23ffffff" /><rect x="2" y="0" width="1" height="2" fill="%23ffffff" /><rect x="2" y="2" width="1" height="1" fill="%23000000" /><rect x="2" y="3" width="1" height="1" fill="%23ffffff" /><rect x="3" y="0" width="1" height="3" fill="%23ffffff" /><rect x="3" y="3" width="1" height="1" fill="%23000000" /></svg>') 0 0/4px 4px repeat;
+  border-color:#e2e2e2;
+  }
+
+  #gammaBoxDithE0 {/* target #e2 manual calc 2.2 jan 27 2022 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23000000" /><rect x="0" y="1" width="1" height="3" fill="%23ffffff" /><rect x="1" y="0" width="1" height="1" fill="%23ffffff" /><rect x="1" y="1" width="1" height="1" fill="%23000000" /><rect x="1" y="2" width="1" height="2" fill="%23ffffff" /><rect x="2" y="0" width="1" height="2" fill="%23ffffff" /><rect x="2" y="2" width="1" height="1" fill="%23000000" /><rect x="2" y="3" width="1" height="1" fill="%23ffffff" /><rect x="3" y="0" width="1" height="3" fill="%23ffffff" /><rect x="3" y="3" width="1" height="1" fill="%23000000" /></svg>') 0 0/4px 4px  repeat;
+  border-color:#e0e0e0;
+  }
+  #gammaBoxDithDB {/* target #db manual calc 1.9 jan 27 2022 */
+  background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none"  viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23000000" /><rect x="0" y="1" width="1" height="3" fill="%23ffffff" /><rect x="1" y="0" width="1" height="1" fill="%23ffffff" /><rect x="1" y="1" width="1" height="1" fill="%23000000" /><rect x="1" y="2" width="1" height="2" fill="%23ffffff" /><rect x="2" y="0" width="1" height="2" fill="%23ffffff" /><rect x="2" y="2" width="1" height="1" fill="%23000000" /><rect x="2" y="3" width="1" height="1" fill="%23ffffff" /><rect x="3" y="0" width="1" height="3" fill="%23ffffff" /><rect x="3" y="3" width="1" height="1" fill="%23000000" /></svg>') 0 0/4px 4px  repeat;
+  border-color:#dbdbdb;
+  }
+
+.gammaLabel,.gammaLabelM {
+  display: block;
+  position:relative;
+  margin: -46px 0 0;
+  padding: 2px 0px 6px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  color: #000;
+  }
+.gammaLabelM {font-size: 1em;}
+
+
+  {
+  2.5: E3
+  2.5: C1
+  2.5: 92 or 93
+
+
+  1.9: DB
+  1.9: B1
+  1.9: 7B
+  }
+
+
+.cGr0  { color: #000;}
+.cGr1  { color: #111;}
+.cGr2  { color: #222;}
+.cGr30 { color: #303030;}
+.cGr3  { color: #333;}
+.cGr4  { color: #444;}
+.cGr5  { color: #555;}
+.cGr6  { color: #666;}
+.cGr7  { color: #777;}
+.cGr8  { color: #888;}
+.cGr9  { color: #999;}
+.cGrA  { color: #AAA;}
+.cGrB  { color: #BBB;}
+.cGrC  { color: #CCC;}
+.cGrD  { color: #DDD;}
+.cGrE  { color: #EEE;}
+.cGrF  { color: #FFF;}
+
+
+
+
+
+.head { font-weight: 500; }
+b { font-weight: 600; }
+em { font-weight: 600; font-style: italic; }
+
+.tb04 { tab-size: 4; }
+.tb05 { tab-size: 5; }
+.tb06 { tab-size: 6; }
+.tb07 { tab-size: 7; }
+.tb08 { tab-size: 8; }
+.tb09 { tab-size: 9; }
+.tb10 { tab-size: 10; }
+.tb11 { tab-size: 11; }
+.tb12 { tab-size: 12; }
+.tb13 { tab-size: 13; }
+.tb14 { tab-size: 14; }
+.tb15 { tab-size: 15; }
+.tb16 { tab-size: 16; }
+.tb17 { tab-size: 17; }
+.tb18 { tab-size: 18; }
