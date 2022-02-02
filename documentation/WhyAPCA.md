@@ -89,9 +89,13 @@ Thank you for reading,
 
 
 _Andrew Somers_    
+_W3 AGWG Invited Expert_     
+_Research Lead and Creator of APCA_     
 _Senior Color Science Researcher_      
 _Myndex PercepTex Reserch Project_     
-_Inventor of the APCA_      
+
+### Study Volunteers Needed
+Would you like to help create a more readable world for all? Please let us know! We have several studies planned for 2022, and it requires minimal time on your part to participate. Please send an email to perceptex@myndex.com with "volunteer" in the subject line.
 
 **_NOTICE: Personal opinions expressed are the author's and may or may not reflect those of the W3 or AGWG._** 
 
