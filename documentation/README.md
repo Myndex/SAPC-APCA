@@ -203,7 +203,7 @@ Basic APCA Math in LaTeX
 ----------
 0.0.98G-4g-build-3
 
-![](images/APCA_0.0.98G4g%2B3.svg)
+![](../images/APCA_0.0.98G4g%2B3.svg)
 
 -----
 ## TESTING YOUR IMPLEMENTATION
