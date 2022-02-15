@@ -60,6 +60,10 @@ A key takeaway is that a strict pass/fail with a blanket contrast ratio is not i
 
 This points to the importance of real user personalization, an area where the technology is literally missing (and a work in progress). For the guidelines though, we can set ranges for targets and expectations toward making the web readable for all.
 
+## Visual Comparison
+In the following chart, we're showing minimum passing contrasts for APCA and for WCAG&nbsp;2. Notice WCAG&nbsp;2 examples become unreadable with dark colors.
+![chart showing a comparison of minimum passing contrasts for both APCA dn WCAG 2. WCAG 2 examples become unreadable in dark colors ](../images/ColumnCompareAll400.png)
+
 ## Use-Case Ranges
 These general levels are appropriate for use by themselves, without the need to reference a lookup table. APCA reports contrast as an Lc&nbsp;value (lightness contrast) from **Lc&nbsp;0** to **Lc&nbsp;105+**. For accessibility, consider Lc&nbsp;15 the point of invisibility for many users, and Lc&nbsp;90 is preferred for body text.
 
