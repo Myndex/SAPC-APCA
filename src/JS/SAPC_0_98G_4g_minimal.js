@@ -5,7 +5,7 @@
 /////           DIST: GH SE Revision date: Oct 1, 2021
 /////    Function to parse color values and determine Lc contrast
 /////    Copyright © 2019-2021 by Andrew Somers. All Rights Reserved.
-/////    LICENSE:  AGPU v3
+/////    LICENSE: Custom, based on the AGPL v3 (beta versions are revocable)
 /////    CONTACT: For SAPC/APCA Please use the ISSUES tab at:
 /////    https://github.com/Myndex/SAPC-APCA/
 /////
