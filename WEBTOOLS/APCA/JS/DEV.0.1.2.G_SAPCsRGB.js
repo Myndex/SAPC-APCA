@@ -6,7 +6,7 @@
 /////
 /////   Functions to parse color values and determine SAPC/APCA contrast
 /////   Copyright © 2019-2021 by Andrew Somers. All Rights Reserved.
-/////   LICENSE: GNU AGPL v3  https://www.gnu.org/licenses/
+/////   LICENSE: Non Commercial, Limited Use, Beta Versions Revokable
 /////   CONTACT: For SAPC/APCA Please use the ISSUES tab at:
 /////   https://github.com/Myndex/SAPC-APCA/
 // */
