@@ -67,7 +67,7 @@ In the following chart, we're showing minimum passing contrasts for APCA and for
 ## Use-Case Ranges
 These general levels are appropriate for use by themselves, without the need to reference a lookup table. APCA reports contrast as an Lc&nbsp;value (lightness contrast) from **Lc&nbsp;0** to **Lc&nbsp;105+**. For accessibility, consider Lc&nbsp;15 the point of invisibility for many users, and Lc&nbsp;90 is preferred for body text.
 
-See [this on ranges](./APCAinaNutshell.md#use-case-ranges) for a more indepth look.
+See [this on ranges](./APCA_in_a_Nutshell.md#use-case-ranges) for a more indepth look.
 
 *   **Lc&nbsp;90** • Preferred level for fluent text and columns of body text with a font no smaller than 14px/weight 400 (normal).
 *   **Lc&nbsp;75** • The _minimum_ level for columns of body text with a font no smaller than 18px/400. Lc&nbsp;75 should be considered a minimum for text where readability is important.
