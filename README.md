@@ -30,8 +30,12 @@
 Please make all comments or discussions here and not in the satellite repositories.
 
 
-<img width='300' alt="Poster: a picture of crash test dummies crashing out of a car, and text that says don't be a dummy! Stop using low contrast text. At the bottom it says APCA the world is reading" src='https://user-images.githubusercontent.com/42009457/161151275-7c4feea7-888a-43f1-a9c0-7504afaac258.png'>  <img  width='300' alt='Smokey the bear saying  ONLY YOU CAN STOP LOW CONTRAST' src='https://user-images.githubusercontent.com/42009457/161151536-a0add333-161e-482d-a99a-d1d076c75daf.png'>   <img  width='300' alt='Uncle Sam saying I want you to use high contrast text' src='https://user-images.githubusercontent.com/42009457/161151222-74fb81af-f87b-4d7c-a41c-756e1ee3056f.png'> 
+<img width='250' alt="Poster: a picture of crash test dummies crashing out of a car, and text that says don't be a dummy! Stop using low contrast text. At the bottom it says APCA the world is reading" src='https://user-images.githubusercontent.com/42009457/161151275-7c4feea7-888a-43f1-a9c0-7504afaac258.png'>  <img  width='230' alt='Smokey the bear saying  ONLY YOU CAN STOP LOW CONTRAST' src='https://user-images.githubusercontent.com/42009457/161151536-a0add333-161e-482d-a99a-d1d076c75daf.png'>   <img  width='200' alt='Uncle Sam saying I want you to use high contrast text' src='https://user-images.githubusercontent.com/42009457/161151222-74fb81af-f87b-4d7c-a41c-756e1ee3056f.png'> 
 
+-----
+## NEW! _Draft Accessibility Statement for Beta Sites_
+
+### This website is beta testing the APCA guidelines for determining text and non-text contrast. It is well known that WCAG 2 contrast maths are not relevant toward human perception, and automated testing using WCAG 2 math may incorrectly indicate errors in some color pairs. The APCA guidelines are a substantial improvement over WCAG 2 contrast criterions, and therefore compliant with the ADA and also 508 rules under the alternative methods section. Any automated testing done to determine conformance of this site needs to be conducted using a perceptually accurate method such as APCA.
 
 -----
 ## NEW! •  <s>Advanced</s> ... _Accessible_ Perceptual Contrast Algorithm
