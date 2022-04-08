@@ -35,8 +35,11 @@ Please make all comments or discussions here and not in the satellite repositori
 -----
 ## NEW! _Draft Accessibility Statement for Beta Sites_
 Beta testers may wish to include the following statement in their sites boilerplate:
-### This website is beta testing the APCA guidelines for determining text and non-text contrast. It is well known that WCAG 2 contrast maths are not relevant toward human perception, and automated testing using WCAG 2 math may incorrectly indicate errors in some color pairs. The APCA guidelines are a substantial improvement over WCAG 2 contrast criterions, and therefore compliant with the ADA and also 508 rules under the alternative methods section. Any automated testing done to determine conformance of this site needs to be conducted using a perceptually accurate method such as APCA.
 
+-----
+### This website is beta testing the APCA guidelines for determining text and non-text contrast. It is well known that WCAG 2 contrast maths are not accurate regarding human perception, and automated testing using WCAG 2 math may incorrectly indicate errors in some color pairs on this site. The APCA guidelines are a substantial improvement in accessibility over WCAG 2 contrast criterions, and therefore compliant with the ADA and also 508 rules under the alternative methods section. Any automated testing done to determine conformance of this site needs to be conducted using a perceptually accurate method such as APCA.
+
+-----
 -----
 ## NEW! •  <s>Advanced</s> ... _Accessible_ Perceptual Contrast Algorithm
 The "Advanced" was originally part of an internal code name "SAPC" that eventually becasme "APCA"... and the word "advanced" moved along with that...  realized that first "A" should - almost has to — be "Accessibility." And it's shockingly obvious now, LOL.
