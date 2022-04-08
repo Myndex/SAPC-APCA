@@ -121,9 +121,10 @@ Basic APCA Math in LaTeX
 
 ![](images/APCA_0.0.98G4g%2B3.svg)
 
-
+<sub>**Disclaimer:** _APCA is being evaluated as a replacement for WCAG 2 contrast math for future standards and guidelines, however, standards that will be incorporating APCA are still developmental. Because WCAG 2 contrast math does not accurately model human visual perception nor visual impairments, there will be discrepancies between WCAG 2 contrast math, and perceptually uniform models such as APCA. It is up to the end user to determine suitability of purpose for their region and conformance requirements._</sub>
 
 ### _THE REVOLUTION WILL BE READABLE_<sup>™</sup>
 
  <img src="./images/APCAcolor4.png" width="640" alt="APCA The Revolution Will Be Readable">
+
 
