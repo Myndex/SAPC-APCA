@@ -108,6 +108,8 @@ The problems of 4.5:1 as a target for a guideline not only impact accessibility,
 
 
 **_Additional comparisons and discussions by this author:_**
+- [**Better reading on the web**](https://uxdesign.cc/better-reading-on-the-web-c943c4cfc91a) published in UX Collective, this article discusses and demonstrates the problems with automated testing and WCAG 2 contrast.
+- [**Please Stop Using Grey Text**](https://atangledwebweweave.com/please-stop-using-grey-text-3d3e71acfca8) on Tangled Web, debunking one of the worst myths about design contrast.
 - [**What’s Red & Black & Also Not Read?**](https://atangledwebweweave.com/whats-red-black-also-not-read-573b9c0a97ed) on Tangled Web, which examines the nature of color insensitivity and readability.
 - [**A Contrast of Errors**](https://atangledwebweweave.com/a-contrast-of-errors-373c2665d42a) on Tangled Web, which looks at the history and the current international readability crisis.
 - Part I: [**Orange You Wondering About Contrast?**](https://gist.github.com/Myndex/1dadb6dcac596f1cd7a5686a076f697f) Answering some contrast questions, and demonstrating a real solution to the infamous orange conundrum.
