@@ -45,15 +45,15 @@ The problems of 4.5:1 as a target for a guideline not only impact accessibility,
 ## The Solution: APCA
 The Accessible Perceptual Contrast Algorithm (APCA) is a new method for calculating and predicting readability contrast. APCA is a part of the larger S-Luv Accessible Readability Color Appearance Model known as SARCAM (formerly SAPC). These models are specifically related to color appearance on self-illuminated RGB computer displays & devices, and also for modeling accessible user needs, with a focus on readability.
 
-### Lightness contrast
-The APCA generates a contrast value based on a color pair, and this value is perceptually based: that is, regardless of how light or dark the colors are, a contrast value of Lc&nbsp;60 represents the same _perceived_ readability contrast. This is absolutely not the case with WCAG&nbsp;2.x, which far overstates contrast for dark colors to the point that 4.5:1 can be functionally unreadable when a color is near black. As a result, WCAG&nbsp;2.x contrast cannot be used for guidance designing "dark mode".
+### Lightness contrast (L<sup>c</sup>)
+The APCA generates a contrast value based on a color pair, and this value is perceptually based: that is, regardless of how light or dark the colors are, a contrast value of L<sup>c</sup>&nbsp;60 represents the same _perceived_ readability contrast. This is absolutely not the case with WCAG&nbsp;2.x, which far overstates contrast for dark colors to the point that 4.5:1 can be functionally unreadable when a color is near black. As a result, WCAG&nbsp;2.x contrast cannot be used for guidance designing "dark mode".
 
 The APCA contrast value is perceptually uniform, and pivots near the point where the CS curve flattens due to contrast constancy. Halving or doubling the APCA value relates to a halving or doubling of the perceived contrast. There is a subtle weighting for higher contrasts to smaller, thinner fonts.
 
 ### Different Uses, Different Contrasts
-The APCA has a set of levels related to use cases — for instance, Lc&nbsp;90 is _preferred_ and Lc&nbsp;75 is the _minimum_ for body text. This makes for an easy way to use ACPA, very similar to 1.4.3 in terms of ease of use.
+The APCA has a set of levels related to use cases — for instance, L<sup>c</sup>&nbsp;90 is _preferred_ and L<sup>c</sup>&nbsp;75 is the _minimum_ for body text. This makes for an easy way to use ACPA, very similar to 1.4.3 in terms of ease of use.
 
-The APCA also has an **optional** lookup table to associate font size and weight to the readability contrast (Lc&nbsp;value). The lookup tables allow for even greater accuracy and therefore greater flexibility in design.
+The APCA also has an **optional** lookup table to associate font size and weight to the readability contrast (L<sup>c</sup>&nbsp;value). The lookup tables allow for even greater accuracy and therefore greater flexibility in design.
 
 ### Failing Pass/Fail
 A key takeaway is that a strict pass/fail with a blanket contrast ratio is not instructive as a guideline, and does not necessarily solve a given user need. In fact, user needs when it comes to contrast are conflicting—what is good for one can be harmful to another. This is even true of font size. 
@@ -65,18 +65,18 @@ In the following chart, we're showing minimum passing contrasts for APCA and for
 ![chart showing a comparison of minimum passing contrasts for both APCA dn WCAG 2. WCAG 2 examples become unreadable in dark colors ](../images/ColumnCompareAll400.png)
 
 ## Use-Case Ranges
-These general levels are appropriate for use by themselves, without the need to reference a lookup table. APCA reports contrast as an Lc&nbsp;value (lightness contrast) from **Lc&nbsp;0** to **Lc&nbsp;105+**. For accessibility, consider Lc&nbsp;15 the point of invisibility for many users, and Lc&nbsp;90 is preferred for body text.
+These general levels are appropriate for use by themselves, without the need to reference a lookup table. APCA reports contrast as an L<sup>c</sup>&nbsp;value (lightness contrast) from **L<sup>c</sup>&nbsp;0** to **L<sup>c</sup>&nbsp;105+**. For accessibility, consider L<sup>c</sup>&nbsp;15 the point of invisibility for many users, and L<sup>c</sup>&nbsp;90 is preferred for body text.
 
 See [this on ranges](./APCA_in_a_Nutshell.md#use-case-ranges) for a more indepth look.
 
-*   **Lc&nbsp;90** • Preferred level for fluent text and columns of body text with a font no smaller than 14px/weight 400 (normal).
-*   **Lc&nbsp;75** • The _minimum_ level for columns of body text with a font no smaller than 18px/400. Lc&nbsp;75 should be considered a minimum for text where readability is important.
-*   **Lc&nbsp;60** • The _minimum_ level recommended for content text that is not body, column, or block text. In other words, text you want people to read. The minimums: 24px normal weight (400) or 16px/700 (bold). These values based on the reference font Helvetica. 
-*   **Lc&nbsp;45** • The _minimum_ for larger, heavier text (36px normal weight or 24px bold) such as headlines. This is also the minimum for pictograms with fine details.
-*   **Lc&nbsp;30** • The _absolute minimum_ for any text not listed above. This includes placeholder text and disabled element text. This is also the minimum for large/solid semantic & understandable non-text elements.
-*   **Lc&nbsp;15** • The _absolute minimum_ for any non-text that needs to be _discernible_ and differentiable, and is no less than 6px in its smallest dimention. This may include disabled large buttons. **Designers should treat anything below this level as invisible**, as it will not be visible for many users. This minimum level should be avoided for any items important to the use, understanding, or interaction of the site.
+*   **L<sup>c</sup>&nbsp;90** • Preferred level for fluent text and columns of body text with a font no smaller than 14px/weight 400 (normal).
+*   **L<sup>c</sup>&nbsp;75** • The _minimum_ level for columns of body text with a font no smaller than 18px/400. L<sup>c</sup>&nbsp;75 should be considered a minimum for text where readability is important.
+*   **L<sup>c</sup>&nbsp;60** • The _minimum_ level recommended for content text that is not body, column, or block text. In other words, text you want people to read. The minimums: 24px normal weight (400) or 16px/700 (bold). These values based on the reference font Helvetica. 
+*   **L<sup>c</sup>&nbsp;45** • The _minimum_ for larger, heavier text (36px normal weight or 24px bold) such as headlines. This is also the minimum for pictograms with fine details.
+*   **L<sup>c</sup>&nbsp;30** • The _absolute minimum_ for any text not listed above. This includes placeholder text and disabled element text. This is also the minimum for large/solid semantic & understandable non-text elements.
+*   **L<sup>c</sup>&nbsp;15** • The _absolute minimum_ for any non-text that needs to be _discernible_ and differentiable, and is no less than 6px in its smallest dimention. This may include disabled large buttons. **Designers should treat anything below this level as invisible**, as it will not be visible for many users. This minimum level should be avoided for any items important to the use, understanding, or interaction of the site.
 
-These define the basic minimum levels, what you might think of as A/AA in the old WCAG&nbsp;2. For the equivelent to AAA, simply increase the contrast values by Lc&nbsp;15.
+These define the basic minimum levels, what you might think of as A/AA in the old WCAG&nbsp;2. For the equivelent to AAA, simply increase the contrast values by L<sup>c</sup>&nbsp;15.
 
 ### Range-Based Scoring
 While the candidate for WCAG&nbsp;3 is still in development, it includes a range-based conformance system. While it considers multiple factors, it is simple enough to be fully automated, and does not rely on an arbitrary pass/fail binary scoring.
