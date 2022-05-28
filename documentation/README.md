@@ -92,15 +92,14 @@ There is a working version with examples and reference material on [APCAsite](ht
 -----
 ### Font Use Lookup Table
 
-Latest Lookup Table: January 27 2022
+Latest Lookup Table: May 27 2022
 
-Sorted by font size      
-<img width="400" alt="APCA Lookup Table" src="../images/Jan27_2022LUT_byFont.jpg">
 
-<img width="400" alt="APCA Lookup table legend" src="../images/Jan27_2022LUT_legend.jpg">
+<img width="400" alt="APCA Lookup Table" src="../images/APCAlookupByFont.jpeg">
 
-Sorted by contrast Lc value      
-<img width="400" alt="APCA Lookup Table" src="../images/Jan27_2022LUT_byLc.jpg">
+<img width="400" alt="APCA Lookup table legend" src="../images/APCAtableLegend.jpeg">
+
+<img width="400" alt="APCA Lookup Table" src="../images/APCAlookupByContrast.jpeg">
 
 
 ------

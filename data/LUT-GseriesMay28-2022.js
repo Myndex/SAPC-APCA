@@ -21,7 +21,6 @@
 /////     for different use cases.
 // */
 
-// Array sizes and sort orders may be different than previous versions.
 // A few additional elements were added to accommodate a new use-case 
 // conformance method.
 
@@ -29,15 +28,22 @@
 // The natural sort order then is ascending for font size and weight,
 // And that then correlates with a descending contrast array.
 
+/////    However, if sorted to ascending, then
+////        Lc 45 * 0.2 = 9 
+///      and 9 is the index for the row for Lc 45
+
+
 
 /////     TABLE OF CONTENTS     /////
-
+//
 //   A) Prepared Javascript Arrays
 //     1) Index arrays - just 1D prototypes of the Y or X axis
 //     2) Font Lookup Sorted by font size
 //     3) Font Lookup Sorted by Contrast Lc
 //     4) 'MAX' Font Lookup Sorted by Contrast Lc
 //     5) Use Case Score Adjust array sorted by Contrast Lc
+//     6) Font Lookup ASCENDING SORT by Contrast, as needed for APCA-W3
+//        a) This includes the font interpolator function from APCA-W3
 //
 //   B) Prepared HTML Visual Tables
 //     1) Font Lookup Sorted by font size
@@ -48,7 +54,8 @@
 //     2) Font Lookup Sorted by Contrast Lc
 //     3) 'MAX' Font Lookup
 //     4) Use Case Score Adjust
-
+//
+//
 
 
 
@@ -68,8 +75,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-
-// Index arrays
+// INDEX ARRAYS
 // For the following arrays, the Y axis is contrastArrayLen
 // The two x axis are weightArrayLen and scoreArrayLen
 
@@ -456,6 +462,184 @@ const scoreDeltaG = [
 [10,1,1,1,1,1],
 [0,1,1,1,1,1],
 ];
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+//////////  ƒ  fontLookupAPCA()  0.1.7 (G)  //////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+
+export function fontLookupAPCA (contrast) {
+
+  // APCA CONTRAST FONT LOOKUP TABLES
+  // Copyright © 2022 by Myndex Research and Andrew Somers. All Rights Reserved
+  // Public Beta 0.1.7 (G) • MAY 28 2022
+  // For the following arrays, the Y axis is contrastArrayLen
+  // The two x axis are weightArrayLen and scoreArrayLen
+
+  // MAY 28 2022
+  
+  
+  const contrastArrayAscend = ['lc',0,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105,110,115,120,125,];
+  const contrastArrayLenAsc = contrastArrayAscend.length; // Y azis
+
+  const weightArray = [0,100,200,300,400,500,600,700,800,900];
+  const weightArrayLen = weightArray.length; // X axis
+
+  let returnArray = [contrast.toFixed(3),0,0,0,0,0,0,0,0,0,];
+  const returnArrayLen = returnArray.length; // X axis
+
+//// Lc 45 * 0.2 = 9, and 9 is the index for the row for Lc 45
+
+  contrast = Math.abs(contrast);
+  const factor = 0.2; // 1/5
+  let index = (contrast * factor) | 0 ; // n|0 is bw floor
+
+
+///////////////////////////////////////////////////////////////////////////////
+/////  CONTRAST * FONT WEIGHT & SIZE  //////////////////////////////////////
+
+// Font size interpolations. Here the chart was re-ordered to put
+// the main contrast levels each on one line, instead of font size per line.
+// First column is LC value, then each following column is font size by weight
+
+// G G G G G G  Public Beta 0.1.7 (G) • MAY 28 2022
+
+// Lc values under 70 should have Lc 15 ADDED if used for body text
+// All font sizes are in px and reference font is Barlow
+
+// 999: prohibited - too low contrast
+// 777: NON TEXT at this minimum weight stroke
+// 666 - this is for spot text, not fluent-Things like copyright or placeholder.
+// 5xx - minimum font at this weight for content, 5xx % 500 for font-size
+// 4xx - minimum font at this weight for any purpose], 4xx % 400 for font-size
+
+// MAIN FONT SIZE LOOKUP
+
+//// ASCENDING SORTED  Public Beta 0.1.7 (G) • MAY 28 2022  ////
+
+//// Lc 45 * 0.2 = 9 which is the index for the row for Lc 45
+
+// MAIN FONT LOOKUP May 25 2022 EXPANDED
+// Sorted by Lc Value
+// First row is standard weights 100-900
+// First column is font size in px
+// All other values are the Lc contrast 
+// 999 = too low. 777 = non-text and spot text only
+
+
+const fontMatrixAscend = [
+    ['Lc',100,200,300,400,500,600,700,800,900],
+    [0,999,999,999,999,999,999,999,999,999],
+    [10,999,999,999,999,999,999,999,999,999],
+    [15,777,777,777,777,777,777,777,777,777],
+    [20,777,777,777,777,777,777,777,777,777],
+    [25,777,777,777,120,120,108,96,96,96],
+    [30,777,777,120,108,108,96,72,72,72],
+    [35,777,120,108,96,72,60,48,48,48],
+    [40,120,108,96,60,48,42,32,32,32],
+    [45,108,96,72,42,32,28,24,24,24],
+    [50,96,72,60,32,28,24,21,21,21],
+    [55,80,60,48,28,24,21,18,18,18],
+    [60,72,48,42,24,21,18,16,16,18],
+    [65,68,46,32,21.75,19,17,15,16,18],
+    [70,64,44,28,19.5,18,16,14.5,16,18],
+    [75,60,42,24,18,16,15,14,16,18],
+    [80,56,38.25,23,17.25,15.81,14.81,14,16,18],
+    [85,52,34.5,22,16.5,15.625,14.625,14,16,18],
+    [90,48,32,21,16,15.5,14.5,14,16,18],
+    [95,45,28,19.5,15.5,15,14,13.5,16,18],
+    [100,42,26.5,18.5,15,14.5,13.5,13,16,18],
+    [105,39,25,18,14.5,14,13,12,16,18],
+    [110,36,24,18,14,13,12,11,16,18],
+    [115,34.5,22.5,17.25,12.5,11.875,11.25,10.625,14.5,16.5],
+    [120,33,21,16.5,11,10.75,10.5,10.25,13,15],
+    [125,32,20,16,10,10,10,10,12,14],
+    ];
+
+
+
+// ASCENDING SORTED  Public Beta 0.1.7 (G) • MAY 28 2022 ////
+
+// DELTA - MAIN FONT LOOKUP May 25 2022 EXPANDED
+//  EXPANDED  Sorted by Lc Value ••  DELTA
+// The pre-calculated deltas of the above array
+
+const fontDeltaAscend = [
+    ['∆Lc',100,200,300,400,500,600,700,800,900],
+    [0,0,0,0,0,0,0,0,0,0],
+    [10,0,0,0,0,0,0,0,0,0],
+    [15,0,0,0,0,0,0,0,0,0],
+    [20,0,0,0,0,0,0,0,0,0],
+    [25,0,0,0,12,12,12,24,24,24],
+    [30,0,0,12,12,36,36,24,24,24],
+    [35,0,12,12,36,24,18,16,16,16],
+    [40,12,12,24,18,16,14,8,8,8],
+    [45,12,24,12,10,4,4,3,3,3],
+    [50,16,12,12,4,4,3,3,3,3],
+    [55,8,12,6,4,3,3,2,2,0],
+    [60,4,2,10,2.25,2,1,1,0,0],
+    [65,4,2,4,2.25,1,1,0.5,0,0],
+    [70,4,2,4,1.5,2,1,0.5,0,0],
+    [75,4,3.75,1,0.75,0.188,0.188,0,0,0],
+    [80,4,3.75,1,0.75,0.188,0.188,0,0,0],
+    [85,4,2.5,1,0.5,0.125,0.125,0,0,0],
+    [90,3,4,1.5,0.5,0.5,0.5,0.5,0,0],
+    [95,3,1.5,1,0.5,0.5,0.5,0.5,0,0],
+    [100,3,1.5,0.5,0.5,0.5,0.5,1,0,0],
+    [105,3,1,0,0.5,1,1,1,0,0],
+    [110,1.5,1.5,0.75,1.5,1.125,0.75,0.375,1.5,1.5],
+    [115,1.5,1.5,0.75,1.5,1.125,0.75,0.375,1.5,1.5],
+    [120,1,1,0.5,1,0.75,0.5,0.25,1,1],
+    [125,0,0,0,0,0,0,0,0,0],
+    ];
+
+
+///////////////////////////////////////////////////////////////////////////
+/////////  Font and Score Interpolation  \////////////////////////////////
+
+  let tempFont = 777;
+  let scoreAdj = 0.1;
+  let w = 0;
+
+  // populate returnArray with interpolated values
+
+  // returnArray[w] = contrast;
+  scoreAdj = (contrast - fontMatrixAscend[index][w]) * factor;
+  w++;
+  
+  for (; w < weightArrayLen; w++) {
+
+    tempFont = fontMatrixAscend[index][w]; 
+
+    if (tempFont > 400) {
+        returnArray[w] = tempFont;
+    } else if (contrast < 41.0 ) {
+        returnArray[w] = 666;
+    } else {
+                // INTERPOLATION OF FONT SIZE
+               // sets level for 0.5 size increments of smaller fonts
+              // Note bitwise (n|0) instead of floor
+      (tempFont > 24) ?
+        returnArray[w] = 
+            Math.round(tempFont - (fontDeltaAscend[index][w] * scoreAdj)) :
+        returnArray[w] = 
+            tempFont - ((2.0 * fontDeltaAscend[index][w] * scoreAdj) | 0) * 0.5;
+                                                            // (n|0) is bw floor
+    }
+  }
+/////////\  End Interpolation   ////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+
+  return returnArray
+}
+
+////////\                            ///////////////////////////////////////////
+/////////\   End fontLookupAPCA()   ///////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+
+
+
 
 
 
