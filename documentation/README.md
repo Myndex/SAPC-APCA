@@ -225,7 +225,7 @@ First number is TEXT second number is BACKGROUND.
     #def vs #123  • -93.06770049484275
 
     #123 vs #444  •   8.32326136957393
-    #234 vs #444  •  -7.526878460278154
+    #444 vs #123  •  -7.526878460278154
 
 The below are only for certain experimental low-scale versions, these tests do *not* acpa-w3:
     #123 vs #234  •   1.7512243099356113
