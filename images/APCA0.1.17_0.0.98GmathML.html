@@ -1,0 +1,1645 @@
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle {\begin{aligned}\\\ \ \mathbf {APCA} \mathbf {\bullet W3} \ \ &amp;\mathbf {\scriptstyle version\ {0.1.7}\ {developed\ for\ WCAG\ 3\ contrast\ guidelines}} \\[0.66ex]{\scriptstyle Using:}\quad \quad \quad \quad &amp;\\\ \ {APCA}\ Contr&amp;ast\ {Prediction\ Equation\ \ 0.0.98G-4g-base}\\\\Result:\ &amp;{\begin{bmatrix}\hline {\scriptstyle Lightness\ Contrast}\\\quad L\!^{c}=\ S_{apc}\ {\boldsymbol {\times }}\ 100\quad \\\hline \end{bmatrix}}\\\\\textstyle Where:\quad &amp;\\\hline {\scriptstyle Clamp\ Mi}&amp;{\scriptstyle nimum\ Contrast\ Then\ Offset}\\[1.25ex]S_{apc}=&amp;{\begin{cases}0.0\ \ &amp;\vert C\vert <P_{out}\\C-W_{offset}\ \ &amp;\ C\ >0\\C+W_{offset}\ \ &amp;\ C\ <0\\\end{cases}}\\\hline {\scriptstyle Clamp\ No}&amp;{\scriptstyle ise\ Then\ Scale}\\[1.25ex]C=&amp;{\begin{cases}0.0\ \ &amp;{\bigg \vert }Y_{bg}-Y_{txt}{\bigg \vert }<P_{in}\\S_{norm}\times R_{scale}\ \ &amp;\ Y_{txt}<Y_{bg}\\S_{rev}\times R_{scale}\ \ &amp;\ Y_{txt}>Y_{bg}\\\end{cases}}\\\hline {\textstyle Find\ }&amp;{\textstyle Perceptual\ Lightness\ Difference}\\[0.75ex]&amp;{\scriptstyle Normal\ Polarity\ (dark\ text/light\ bg)}\\S_{norm}=&amp;\ Y_{bg}^{0.56}-Y_{txt}^{0.57}\quad \ _{Normal:\ Y_{bg}\ >\ Y_{txt}}\\[0.75ex]&amp;{\scriptstyle Reverse\ Polarity\ (light\ text/dark\ bg)}\\S_{rev}=&amp;\ Y_{bg}^{0.65}-Y_{txt}^{0.62}\quad \ _{Reverse:\ Y_{bg}\ <\ Y_{txt}}\\\hline {\scriptstyle Soft\ Clam}&amp;{\scriptstyle p\ Black\ Levels}\\[1.25ex]Y_{txt}=&amp;\ f_{clamp}(Y)\quad _{color\ of\ the\ text,\ symbol,\ or\ object.}^{where\ Y\ is\ derived\ from\ the}\\[1.1ex]Y_{bg}=&amp;\ f_{clamp}(Y)\quad _{color\ used\ for\ the\ background.}^{where\ Y\ is\ derived\ from\ the}\\[0.66ex]f_{clamp}(Y_{c})=&amp;{\begin{cases}Y_{c}\ \ &amp;Y_{c}>=B_{thrsh}\\Y_{c}+{\big (}B_{thrsh}-Y_{c}{\big )}^{Bexp}&amp;Y_{c}<B_{thrsh}\\\end{cases}}\\\hline {\scriptstyle Constants}&amp;{\scriptstyle \ for\ Clamps\ and\ Scalers}\\[1.25ex]&amp;{\begin{aligned}B_{exp}=&amp;\ 1.414&amp;R_{scale}=&amp;\ 1.14\\B_{thresh}=&amp;\ 0.022&amp;W_{offset}=&amp;\ 0.027\\P_{in}=&amp;\ 0.0005&amp;P_{out}=&amp;\ 0.1\\\end{aligned}}\\\hline {\scriptstyle Estimate\ }&amp;{\scriptstyle Screen\ Luminance}\\[1.25ex]\definecolor {DarkGreen}{rgb}{0,0.35,0}\definecolor {DarkRed}{rgb}{0.6,0,0}Y=\textstyle \sum &amp;{\begin{cases}{\color {DarkRed}(\mathbf {R} ^{\prime }\div 255.0)^{2.4}\times 0.2126729}\\{\color {DarkGreen}(\mathbf {G} ^{\prime }\div 255.0)^{2.4}\times 0.7151522}\\{\color {Blue}(\mathbf {B} ^{\prime }\div 255.0)^{2.4}\times 0.0721750}\\\end{cases}}\\[1.25ex]{\{\color {DarkRed}R^{\prime },\color {DarkGreen}G^{\prime },\color {Blue}B^{\prime }\}}&amp;\ {\in }\ \mathbf {s} RGB\\\hline \\\ GitHubRepo&amp;\Rrightarrow \mathrm {https:\!//apcaw3.myndex.com} \\[0.75ex]\\\end{aligned}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt 0.584em 0.3em 0.3em 0.3em 0.3em 0.3em 0.3em 0.837em 0.3em 0.837em 0.3em 0.623em 0.3em 0.623em 0.3em 0.3em 0.837em 0.773em 0.584em 0.3em 0.837em 0.3em 0.837em 0.837em 0.3em 0.3em 0.623em 0.3em" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowlines="none none none none none none none solid none solid none solid none none none none solid none none none solid none solid none none solid none" displaystyle="true">
+            <mtr>
+              <mtd></mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mtext>&nbsp;</mtext>
+                <mtext>&nbsp;</mtext>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mi mathvariant="bold">A</mi>
+                  <mi mathvariant="bold">P</mi>
+                  <mi mathvariant="bold">C</mi>
+                  <mi mathvariant="bold">A</mi>
+                </mrow>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo>∙<!-- ∙ --></mo>
+                  <mi mathvariant="bold">W</mi>
+                  <mn mathvariant="bold">3</mn>
+                </mrow>
+                <mtext>&nbsp;</mtext>
+                <mtext>&nbsp;</mtext>
+              </mtd>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mstyle displaystyle="false" scriptlevel="1">
+                    <mi mathvariant="bold">v</mi>
+                    <mi mathvariant="bold">e</mi>
+                    <mi mathvariant="bold">r</mi>
+                    <mi mathvariant="bold">s</mi>
+                    <mi mathvariant="bold">i</mi>
+                    <mi mathvariant="bold">o</mi>
+                    <mi mathvariant="bold">n</mi>
+                    <mtext mathvariant="bold">&nbsp;</mtext>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mn mathvariant="bold">0.1.7</mn>
+                    </mrow>
+                    <mtext mathvariant="bold">&nbsp;</mtext>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi mathvariant="bold">d</mi>
+                      <mi mathvariant="bold">e</mi>
+                      <mi mathvariant="bold">v</mi>
+                      <mi mathvariant="bold">e</mi>
+                      <mi mathvariant="bold">l</mi>
+                      <mi mathvariant="bold">o</mi>
+                      <mi mathvariant="bold">p</mi>
+                      <mi mathvariant="bold">e</mi>
+                      <mi mathvariant="bold">d</mi>
+                      <mtext mathvariant="bold">&nbsp;</mtext>
+                      <mi mathvariant="bold">f</mi>
+                      <mi mathvariant="bold">o</mi>
+                      <mi mathvariant="bold">r</mi>
+                      <mtext mathvariant="bold">&nbsp;</mtext>
+                      <mi mathvariant="bold">W</mi>
+                      <mi mathvariant="bold">C</mi>
+                      <mi mathvariant="bold">A</mi>
+                      <mi mathvariant="bold">G</mi>
+                      <mtext mathvariant="bold">&nbsp;</mtext>
+                      <mn mathvariant="bold">3</mn>
+                      <mtext mathvariant="bold">&nbsp;</mtext>
+                      <mi mathvariant="bold">c</mi>
+                      <mi mathvariant="bold">o</mi>
+                      <mi mathvariant="bold">n</mi>
+                      <mi mathvariant="bold">t</mi>
+                      <mi mathvariant="bold">r</mi>
+                      <mi mathvariant="bold">a</mi>
+                      <mi mathvariant="bold">s</mi>
+                      <mi mathvariant="bold">t</mi>
+                      <mtext mathvariant="bold">&nbsp;</mtext>
+                      <mi mathvariant="bold">g</mi>
+                      <mi mathvariant="bold">u</mi>
+                      <mi mathvariant="bold">i</mi>
+                      <mi mathvariant="bold">d</mi>
+                      <mi mathvariant="bold">e</mi>
+                      <mi mathvariant="bold">l</mi>
+                      <mi mathvariant="bold">i</mi>
+                      <mi mathvariant="bold">n</mi>
+                      <mi mathvariant="bold">e</mi>
+                      <mi mathvariant="bold">s</mi>
+                    </mrow>
+                  </mstyle>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mstyle displaystyle="false" scriptlevel="1">
+                    <mi>U</mi>
+                    <mi>s</mi>
+                    <mi>i</mi>
+                    <mi>n</mi>
+                    <mi>g</mi>
+                    <mo>:</mo>
+                  </mstyle>
+                </mrow>
+                <mspace width="1em"></mspace>
+                <mspace width="1em"></mspace>
+                <mspace width="1em"></mspace>
+                <mspace width="1em"></mspace>
+              </mtd>
+              <mtd></mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mtext>&nbsp;</mtext>
+                <mtext>&nbsp;</mtext>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mi>A</mi>
+                  <mi>P</mi>
+                  <mi>C</mi>
+                  <mi>A</mi>
+                </mrow>
+                <mtext>&nbsp;</mtext>
+                <mi>C</mi>
+                <mi>o</mi>
+                <mi>n</mi>
+                <mi>t</mi>
+                <mi>r</mi>
+              </mtd>
+              <mtd>
+                <mi>a</mi>
+                <mi>s</mi>
+                <mi>t</mi>
+                <mtext>&nbsp;</mtext>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mi>P</mi>
+                  <mi>r</mi>
+                  <mi>e</mi>
+                  <mi>d</mi>
+                  <mi>i</mi>
+                  <mi>c</mi>
+                  <mi>t</mi>
+                  <mi>i</mi>
+                  <mi>o</mi>
+                  <mi>n</mi>
+                  <mtext>&nbsp;</mtext>
+                  <mi>E</mi>
+                  <mi>q</mi>
+                  <mi>u</mi>
+                  <mi>a</mi>
+                  <mi>t</mi>
+                  <mi>i</mi>
+                  <mi>o</mi>
+                  <mi>n</mi>
+                  <mtext>&nbsp;</mtext>
+                  <mtext>&nbsp;</mtext>
+                  <mn>0.0.98</mn>
+                  <mi>G</mi>
+                  <mo>−<!-- − --></mo>
+                  <mn>4</mn>
+                  <mi>g</mi>
+                  <mo>−<!-- − --></mo>
+                  <mi>b</mi>
+                  <mi>a</mi>
+                  <mi>s</mi>
+                  <mi>e</mi>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd></mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mi>R</mi>
+                <mi>e</mi>
+                <mi>s</mi>
+                <mi>u</mi>
+                <mi>l</mi>
+                <mi>t</mi>
+                <mo>:</mo>
+                <mtext>&nbsp;</mtext>
+              </mtd>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mrow>
+                    <mo>[</mo>
+                    <menclose notation="top bottom">
+                      <mtable rowspacing="4pt" columnspacing="1em">
+                        <mtr>
+                          <mtd>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mstyle displaystyle="false" scriptlevel="1">
+                                <mi>L</mi>
+                                <mi>i</mi>
+                                <mi>g</mi>
+                                <mi>h</mi>
+                                <mi>t</mi>
+                                <mi>n</mi>
+                                <mi>e</mi>
+                                <mi>s</mi>
+                                <mi>s</mi>
+                                <mtext>&nbsp;</mtext>
+                                <mi>C</mi>
+                                <mi>o</mi>
+                                <mi>n</mi>
+                                <mi>t</mi>
+                                <mi>r</mi>
+                                <mi>a</mi>
+                                <mi>s</mi>
+                                <mi>t</mi>
+                              </mstyle>
+                            </mrow>
+                          </mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd>
+                            <mspace width="1em"></mspace>
+                            <mi>L</mi>
+                            <msup>
+                              <mspace width="negativethinmathspace"></mspace>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi>c</mi>
+                              </mrow>
+                            </msup>
+                            <mo>=</mo>
+                            <mtext>&nbsp;</mtext>
+                            <msub>
+                              <mi>S</mi>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi>a</mi>
+                                <mi>p</mi>
+                                <mi>c</mi>
+                              </mrow>
+                            </msub>
+                            <mtext>&nbsp;</mtext>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mo mathvariant="bold">×<!-- × --></mo>
+                            </mrow>
+                            <mtext>&nbsp;</mtext>
+                            <mn>100</mn>
+                            <mspace width="1em"></mspace>
+                          </mtd>
+                        </mtr>
+                      </mtable>
+                    </menclose>
+                    <mo>]</mo>
+                  </mrow>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd></mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mstyle displaystyle="false" scriptlevel="0">
+                  <mi>W</mi>
+                  <mi>h</mi>
+                  <mi>e</mi>
+                  <mi>r</mi>
+                  <mi>e</mi>
+                  <mo>:</mo>
+                  <mspace width="1em"></mspace>
+                </mstyle>
+              </mtd>
+              <mtd></mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mstyle displaystyle="false" scriptlevel="1">
+                    <mi>C</mi>
+                    <mi>l</mi>
+                    <mi>a</mi>
+                    <mi>m</mi>
+                    <mi>p</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>M</mi>
+                    <mi>i</mi>
+                  </mstyle>
+                </mrow>
+              </mtd>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mstyle displaystyle="false" scriptlevel="1">
+                    <mi>n</mi>
+                    <mi>i</mi>
+                    <mi>m</mi>
+                    <mi>u</mi>
+                    <mi>m</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>C</mi>
+                    <mi>o</mi>
+                    <mi>n</mi>
+                    <mi>t</mi>
+                    <mi>r</mi>
+                    <mi>a</mi>
+                    <mi>s</mi>
+                    <mi>t</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>T</mi>
+                    <mi>h</mi>
+                    <mi>e</mi>
+                    <mi>n</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>O</mi>
+                    <mi>f</mi>
+                    <mi>f</mi>
+                    <mi>s</mi>
+                    <mi>e</mi>
+                    <mi>t</mi>
+                  </mstyle>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>S</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>a</mi>
+                    <mi>p</mi>
+                    <mi>c</mi>
+                  </mrow>
+                </msub>
+                <mo>=</mo>
+              </mtd>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mrow>
+                    <mo>{</mo>
+                    <mtable columnalign="left left" rowspacing=".2em" columnspacing="1em" displaystyle="false">
+                      <mtr>
+                        <mtd>
+                          <mn>0.0</mn>
+                          <mtext>&nbsp;</mtext>
+                          <mtext>&nbsp;</mtext>
+                        </mtd>
+                        <mtd>
+                          <mo fence="false" stretchy="false">|</mo>
+                          <mi>C</mi>
+                          <mo fence="false" stretchy="false">|</mo>
+                          <mo>&lt;</mo>
+                          <msub>
+                            <mi>P</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>o</mi>
+                              <mi>u</mi>
+                              <mi>t</mi>
+                            </mrow>
+                          </msub>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>
+                          <mi>C</mi>
+                          <mo>−<!-- − --></mo>
+                          <msub>
+                            <mi>W</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>o</mi>
+                              <mi>f</mi>
+                              <mi>f</mi>
+                              <mi>s</mi>
+                              <mi>e</mi>
+                              <mi>t</mi>
+                            </mrow>
+                          </msub>
+                          <mtext>&nbsp;</mtext>
+                          <mtext>&nbsp;</mtext>
+                        </mtd>
+                        <mtd>
+                          <mtext>&nbsp;</mtext>
+                          <mi>C</mi>
+                          <mtext>&nbsp;</mtext>
+                          <mo>&gt;</mo>
+                          <mn>0</mn>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>
+                          <mi>C</mi>
+                          <mo>+</mo>
+                          <msub>
+                            <mi>W</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>o</mi>
+                              <mi>f</mi>
+                              <mi>f</mi>
+                              <mi>s</mi>
+                              <mi>e</mi>
+                              <mi>t</mi>
+                            </mrow>
+                          </msub>
+                          <mtext>&nbsp;</mtext>
+                          <mtext>&nbsp;</mtext>
+                        </mtd>
+                        <mtd>
+                          <mtext>&nbsp;</mtext>
+                          <mi>C</mi>
+                          <mtext>&nbsp;</mtext>
+                          <mo>&lt;</mo>
+                          <mn>0</mn>
+                        </mtd>
+                      </mtr>
+                    </mtable>
+                    <mo fence="true" stretchy="true" symmetric="true"></mo>
+                  </mrow>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mstyle displaystyle="false" scriptlevel="1">
+                    <mi>C</mi>
+                    <mi>l</mi>
+                    <mi>a</mi>
+                    <mi>m</mi>
+                    <mi>p</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>N</mi>
+                    <mi>o</mi>
+                  </mstyle>
+                </mrow>
+              </mtd>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mstyle displaystyle="false" scriptlevel="1">
+                    <mi>i</mi>
+                    <mi>s</mi>
+                    <mi>e</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>T</mi>
+                    <mi>h</mi>
+                    <mi>e</mi>
+                    <mi>n</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>S</mi>
+                    <mi>c</mi>
+                    <mi>a</mi>
+                    <mi>l</mi>
+                    <mi>e</mi>
+                  </mstyle>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mi>C</mi>
+                <mo>=</mo>
+              </mtd>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mrow>
+                    <mo>{</mo>
+                    <mtable columnalign="left left" rowspacing=".2em" columnspacing="1em" displaystyle="false">
+                      <mtr>
+                        <mtd>
+                          <mn>0.0</mn>
+                          <mtext>&nbsp;</mtext>
+                          <mtext>&nbsp;</mtext>
+                        </mtd>
+                        <mtd>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mo maxsize="2.047em" minsize="2.047em">|</mo>
+                            </mrow>
+                          </mrow>
+                          <msub>
+                            <mi>Y</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>b</mi>
+                              <mi>g</mi>
+                            </mrow>
+                          </msub>
+                          <mo>−<!-- − --></mo>
+                          <msub>
+                            <mi>Y</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>t</mi>
+                              <mi>x</mi>
+                              <mi>t</mi>
+                            </mrow>
+                          </msub>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mo maxsize="2.047em" minsize="2.047em">|</mo>
+                            </mrow>
+                          </mrow>
+                          <mo>&lt;</mo>
+                          <msub>
+                            <mi>P</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>i</mi>
+                              <mi>n</mi>
+                            </mrow>
+                          </msub>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>
+                          <msub>
+                            <mi>S</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>n</mi>
+                              <mi>o</mi>
+                              <mi>r</mi>
+                              <mi>m</mi>
+                            </mrow>
+                          </msub>
+                          <mo>×<!-- × --></mo>
+                          <msub>
+                            <mi>R</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>s</mi>
+                              <mi>c</mi>
+                              <mi>a</mi>
+                              <mi>l</mi>
+                              <mi>e</mi>
+                            </mrow>
+                          </msub>
+                          <mtext>&nbsp;</mtext>
+                          <mtext>&nbsp;</mtext>
+                        </mtd>
+                        <mtd>
+                          <mtext>&nbsp;</mtext>
+                          <msub>
+                            <mi>Y</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>t</mi>
+                              <mi>x</mi>
+                              <mi>t</mi>
+                            </mrow>
+                          </msub>
+                          <mo>&lt;</mo>
+                          <msub>
+                            <mi>Y</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>b</mi>
+                              <mi>g</mi>
+                            </mrow>
+                          </msub>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>
+                          <msub>
+                            <mi>S</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>r</mi>
+                              <mi>e</mi>
+                              <mi>v</mi>
+                            </mrow>
+                          </msub>
+                          <mo>×<!-- × --></mo>
+                          <msub>
+                            <mi>R</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>s</mi>
+                              <mi>c</mi>
+                              <mi>a</mi>
+                              <mi>l</mi>
+                              <mi>e</mi>
+                            </mrow>
+                          </msub>
+                          <mtext>&nbsp;</mtext>
+                          <mtext>&nbsp;</mtext>
+                        </mtd>
+                        <mtd>
+                          <mtext>&nbsp;</mtext>
+                          <msub>
+                            <mi>Y</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>t</mi>
+                              <mi>x</mi>
+                              <mi>t</mi>
+                            </mrow>
+                          </msub>
+                          <mo>&gt;</mo>
+                          <msub>
+                            <mi>Y</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>b</mi>
+                              <mi>g</mi>
+                            </mrow>
+                          </msub>
+                        </mtd>
+                      </mtr>
+                    </mtable>
+                    <mo fence="true" stretchy="true" symmetric="true"></mo>
+                  </mrow>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mstyle displaystyle="false" scriptlevel="0">
+                    <mi>F</mi>
+                    <mi>i</mi>
+                    <mi>n</mi>
+                    <mi>d</mi>
+                    <mtext>&nbsp;</mtext>
+                  </mstyle>
+                </mrow>
+              </mtd>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mstyle displaystyle="false" scriptlevel="0">
+                    <mi>P</mi>
+                    <mi>e</mi>
+                    <mi>r</mi>
+                    <mi>c</mi>
+                    <mi>e</mi>
+                    <mi>p</mi>
+                    <mi>t</mi>
+                    <mi>u</mi>
+                    <mi>a</mi>
+                    <mi>l</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>L</mi>
+                    <mi>i</mi>
+                    <mi>g</mi>
+                    <mi>h</mi>
+                    <mi>t</mi>
+                    <mi>n</mi>
+                    <mi>e</mi>
+                    <mi>s</mi>
+                    <mi>s</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>D</mi>
+                    <mi>i</mi>
+                    <mi>f</mi>
+                    <mi>f</mi>
+                    <mi>e</mi>
+                    <mi>r</mi>
+                    <mi>e</mi>
+                    <mi>n</mi>
+                    <mi>c</mi>
+                    <mi>e</mi>
+                  </mstyle>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd></mtd>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mstyle displaystyle="false" scriptlevel="1">
+                    <mi>N</mi>
+                    <mi>o</mi>
+                    <mi>r</mi>
+                    <mi>m</mi>
+                    <mi>a</mi>
+                    <mi>l</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>P</mi>
+                    <mi>o</mi>
+                    <mi>l</mi>
+                    <mi>a</mi>
+                    <mi>r</mi>
+                    <mi>i</mi>
+                    <mi>t</mi>
+                    <mi>y</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mo stretchy="false">(</mo>
+                    <mi>d</mi>
+                    <mi>a</mi>
+                    <mi>r</mi>
+                    <mi>k</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>t</mi>
+                    <mi>e</mi>
+                    <mi>x</mi>
+                    <mi>t</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mo>/</mo>
+                    </mrow>
+                    <mi>l</mi>
+                    <mi>i</mi>
+                    <mi>g</mi>
+                    <mi>h</mi>
+                    <mi>t</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>b</mi>
+                    <mi>g</mi>
+                    <mo stretchy="false">)</mo>
+                  </mstyle>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>S</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>n</mi>
+                    <mi>o</mi>
+                    <mi>r</mi>
+                    <mi>m</mi>
+                  </mrow>
+                </msub>
+                <mo>=</mo>
+              </mtd>
+              <mtd>
+                <mtext>&nbsp;</mtext>
+                <msubsup>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>b</mi>
+                    <mi>g</mi>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>0.56</mn>
+                  </mrow>
+                </msubsup>
+                <mo>−<!-- − --></mo>
+                <msubsup>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>t</mi>
+                    <mi>x</mi>
+                    <mi>t</mi>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>0.57</mn>
+                  </mrow>
+                </msubsup>
+                <mspace width="1em"></mspace>
+                <msub>
+                  <mtext>&nbsp;</mtext>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>N</mi>
+                    <mi>o</mi>
+                    <mi>r</mi>
+                    <mi>m</mi>
+                    <mi>a</mi>
+                    <mi>l</mi>
+                    <mo>:</mo>
+                    <mtext>&nbsp;</mtext>
+                    <msub>
+                      <mi>Y</mi>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi>b</mi>
+                        <mi>g</mi>
+                      </mrow>
+                    </msub>
+                    <mtext>&nbsp;</mtext>
+                    <mo>&gt;</mo>
+                    <mtext>&nbsp;</mtext>
+                    <msub>
+                      <mi>Y</mi>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi>t</mi>
+                        <mi>x</mi>
+                        <mi>t</mi>
+                      </mrow>
+                    </msub>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd></mtd>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mstyle displaystyle="false" scriptlevel="1">
+                    <mi>R</mi>
+                    <mi>e</mi>
+                    <mi>v</mi>
+                    <mi>e</mi>
+                    <mi>r</mi>
+                    <mi>s</mi>
+                    <mi>e</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>P</mi>
+                    <mi>o</mi>
+                    <mi>l</mi>
+                    <mi>a</mi>
+                    <mi>r</mi>
+                    <mi>i</mi>
+                    <mi>t</mi>
+                    <mi>y</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mo stretchy="false">(</mo>
+                    <mi>l</mi>
+                    <mi>i</mi>
+                    <mi>g</mi>
+                    <mi>h</mi>
+                    <mi>t</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>t</mi>
+                    <mi>e</mi>
+                    <mi>x</mi>
+                    <mi>t</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mo>/</mo>
+                    </mrow>
+                    <mi>d</mi>
+                    <mi>a</mi>
+                    <mi>r</mi>
+                    <mi>k</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>b</mi>
+                    <mi>g</mi>
+                    <mo stretchy="false">)</mo>
+                  </mstyle>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>S</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>r</mi>
+                    <mi>e</mi>
+                    <mi>v</mi>
+                  </mrow>
+                </msub>
+                <mo>=</mo>
+              </mtd>
+              <mtd>
+                <mtext>&nbsp;</mtext>
+                <msubsup>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>b</mi>
+                    <mi>g</mi>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>0.65</mn>
+                  </mrow>
+                </msubsup>
+                <mo>−<!-- − --></mo>
+                <msubsup>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>t</mi>
+                    <mi>x</mi>
+                    <mi>t</mi>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>0.62</mn>
+                  </mrow>
+                </msubsup>
+                <mspace width="1em"></mspace>
+                <msub>
+                  <mtext>&nbsp;</mtext>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>R</mi>
+                    <mi>e</mi>
+                    <mi>v</mi>
+                    <mi>e</mi>
+                    <mi>r</mi>
+                    <mi>s</mi>
+                    <mi>e</mi>
+                    <mo>:</mo>
+                    <mtext>&nbsp;</mtext>
+                    <msub>
+                      <mi>Y</mi>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi>b</mi>
+                        <mi>g</mi>
+                      </mrow>
+                    </msub>
+                    <mtext>&nbsp;</mtext>
+                    <mo>&lt;</mo>
+                    <mtext>&nbsp;</mtext>
+                    <msub>
+                      <mi>Y</mi>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi>t</mi>
+                        <mi>x</mi>
+                        <mi>t</mi>
+                      </mrow>
+                    </msub>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mstyle displaystyle="false" scriptlevel="1">
+                    <mi>S</mi>
+                    <mi>o</mi>
+                    <mi>f</mi>
+                    <mi>t</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>C</mi>
+                    <mi>l</mi>
+                    <mi>a</mi>
+                    <mi>m</mi>
+                  </mstyle>
+                </mrow>
+              </mtd>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mstyle displaystyle="false" scriptlevel="1">
+                    <mi>p</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>B</mi>
+                    <mi>l</mi>
+                    <mi>a</mi>
+                    <mi>c</mi>
+                    <mi>k</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>L</mi>
+                    <mi>e</mi>
+                    <mi>v</mi>
+                    <mi>e</mi>
+                    <mi>l</mi>
+                    <mi>s</mi>
+                  </mstyle>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>t</mi>
+                    <mi>x</mi>
+                    <mi>t</mi>
+                  </mrow>
+                </msub>
+                <mo>=</mo>
+              </mtd>
+              <mtd>
+                <mtext>&nbsp;</mtext>
+                <msub>
+                  <mi>f</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>c</mi>
+                    <mi>l</mi>
+                    <mi>a</mi>
+                    <mi>m</mi>
+                    <mi>p</mi>
+                  </mrow>
+                </msub>
+                <mo stretchy="false">(</mo>
+                <mi>Y</mi>
+                <mo stretchy="false">)</mo>
+                <msubsup>
+                  <mspace width="1em"></mspace>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>c</mi>
+                    <mi>o</mi>
+                    <mi>l</mi>
+                    <mi>o</mi>
+                    <mi>r</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>o</mi>
+                    <mi>f</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>t</mi>
+                    <mi>h</mi>
+                    <mi>e</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>t</mi>
+                    <mi>e</mi>
+                    <mi>x</mi>
+                    <mi>t</mi>
+                    <mo>,</mo>
+                    <mtext>&nbsp;</mtext>
+                    <mi>s</mi>
+                    <mi>y</mi>
+                    <mi>m</mi>
+                    <mi>b</mi>
+                    <mi>o</mi>
+                    <mi>l</mi>
+                    <mo>,</mo>
+                    <mtext>&nbsp;</mtext>
+                    <mi>o</mi>
+                    <mi>r</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>o</mi>
+                    <mi>b</mi>
+                    <mi>j</mi>
+                    <mi>e</mi>
+                    <mi>c</mi>
+                    <mi>t</mi>
+                    <mo>.</mo>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>w</mi>
+                    <mi>h</mi>
+                    <mi>e</mi>
+                    <mi>r</mi>
+                    <mi>e</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>Y</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>i</mi>
+                    <mi>s</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>d</mi>
+                    <mi>e</mi>
+                    <mi>r</mi>
+                    <mi>i</mi>
+                    <mi>v</mi>
+                    <mi>e</mi>
+                    <mi>d</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>f</mi>
+                    <mi>r</mi>
+                    <mi>o</mi>
+                    <mi>m</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>t</mi>
+                    <mi>h</mi>
+                    <mi>e</mi>
+                  </mrow>
+                </msubsup>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>b</mi>
+                    <mi>g</mi>
+                  </mrow>
+                </msub>
+                <mo>=</mo>
+              </mtd>
+              <mtd>
+                <mtext>&nbsp;</mtext>
+                <msub>
+                  <mi>f</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>c</mi>
+                    <mi>l</mi>
+                    <mi>a</mi>
+                    <mi>m</mi>
+                    <mi>p</mi>
+                  </mrow>
+                </msub>
+                <mo stretchy="false">(</mo>
+                <mi>Y</mi>
+                <mo stretchy="false">)</mo>
+                <msubsup>
+                  <mspace width="1em"></mspace>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>c</mi>
+                    <mi>o</mi>
+                    <mi>l</mi>
+                    <mi>o</mi>
+                    <mi>r</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>u</mi>
+                    <mi>s</mi>
+                    <mi>e</mi>
+                    <mi>d</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>f</mi>
+                    <mi>o</mi>
+                    <mi>r</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>t</mi>
+                    <mi>h</mi>
+                    <mi>e</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>b</mi>
+                    <mi>a</mi>
+                    <mi>c</mi>
+                    <mi>k</mi>
+                    <mi>g</mi>
+                    <mi>r</mi>
+                    <mi>o</mi>
+                    <mi>u</mi>
+                    <mi>n</mi>
+                    <mi>d</mi>
+                    <mo>.</mo>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>w</mi>
+                    <mi>h</mi>
+                    <mi>e</mi>
+                    <mi>r</mi>
+                    <mi>e</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>Y</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>i</mi>
+                    <mi>s</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>d</mi>
+                    <mi>e</mi>
+                    <mi>r</mi>
+                    <mi>i</mi>
+                    <mi>v</mi>
+                    <mi>e</mi>
+                    <mi>d</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>f</mi>
+                    <mi>r</mi>
+                    <mi>o</mi>
+                    <mi>m</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>t</mi>
+                    <mi>h</mi>
+                    <mi>e</mi>
+                  </mrow>
+                </msubsup>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>f</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>c</mi>
+                    <mi>l</mi>
+                    <mi>a</mi>
+                    <mi>m</mi>
+                    <mi>p</mi>
+                  </mrow>
+                </msub>
+                <mo stretchy="false">(</mo>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>c</mi>
+                  </mrow>
+                </msub>
+                <mo stretchy="false">)</mo>
+                <mo>=</mo>
+              </mtd>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mrow>
+                    <mo>{</mo>
+                    <mtable columnalign="left left" rowspacing=".2em" columnspacing="1em" displaystyle="false">
+                      <mtr>
+                        <mtd>
+                          <msub>
+                            <mi>Y</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>c</mi>
+                            </mrow>
+                          </msub>
+                          <mtext>&nbsp;</mtext>
+                          <mtext>&nbsp;</mtext>
+                        </mtd>
+                        <mtd>
+                          <msub>
+                            <mi>Y</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>c</mi>
+                            </mrow>
+                          </msub>
+                          <mo>&gt;=</mo>
+                          <msub>
+                            <mi>B</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>t</mi>
+                              <mi>h</mi>
+                              <mi>r</mi>
+                              <mi>s</mi>
+                              <mi>h</mi>
+                            </mrow>
+                          </msub>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>
+                          <msub>
+                            <mi>Y</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>c</mi>
+                            </mrow>
+                          </msub>
+                          <mo>+</mo>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mo maxsize="1.2em" minsize="1.2em">(</mo>
+                            </mrow>
+                          </mrow>
+                          <msub>
+                            <mi>B</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>t</mi>
+                              <mi>h</mi>
+                              <mi>r</mi>
+                              <mi>s</mi>
+                              <mi>h</mi>
+                            </mrow>
+                          </msub>
+                          <mo>−<!-- − --></mo>
+                          <msub>
+                            <mi>Y</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>c</mi>
+                            </mrow>
+                          </msub>
+                          <msup>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mo maxsize="1.2em" minsize="1.2em">)</mo>
+                              </mrow>
+                            </mrow>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>B</mi>
+                              <mi>e</mi>
+                              <mi>x</mi>
+                              <mi>p</mi>
+                            </mrow>
+                          </msup>
+                        </mtd>
+                        <mtd>
+                          <msub>
+                            <mi>Y</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>c</mi>
+                            </mrow>
+                          </msub>
+                          <mo>&lt;</mo>
+                          <msub>
+                            <mi>B</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>t</mi>
+                              <mi>h</mi>
+                              <mi>r</mi>
+                              <mi>s</mi>
+                              <mi>h</mi>
+                            </mrow>
+                          </msub>
+                        </mtd>
+                      </mtr>
+                    </mtable>
+                    <mo fence="true" stretchy="true" symmetric="true"></mo>
+                  </mrow>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mstyle displaystyle="false" scriptlevel="1">
+                    <mi>C</mi>
+                    <mi>o</mi>
+                    <mi>n</mi>
+                    <mi>s</mi>
+                    <mi>t</mi>
+                    <mi>a</mi>
+                    <mi>n</mi>
+                    <mi>t</mi>
+                    <mi>s</mi>
+                  </mstyle>
+                </mrow>
+              </mtd>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mstyle displaystyle="false" scriptlevel="1">
+                    <mtext>&nbsp;</mtext>
+                    <mi>f</mi>
+                    <mi>o</mi>
+                    <mi>r</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>C</mi>
+                    <mi>l</mi>
+                    <mi>a</mi>
+                    <mi>m</mi>
+                    <mi>p</mi>
+                    <mi>s</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>a</mi>
+                    <mi>n</mi>
+                    <mi>d</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>S</mi>
+                    <mi>c</mi>
+                    <mi>a</mi>
+                    <mi>l</mi>
+                    <mi>e</mi>
+                    <mi>r</mi>
+                    <mi>s</mi>
+                  </mstyle>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd></mtd>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+                    <mtr>
+                      <mtd>
+                        <msub>
+                          <mi>B</mi>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi>e</mi>
+                            <mi>x</mi>
+                            <mi>p</mi>
+                          </mrow>
+                        </msub>
+                        <mo>=</mo>
+                      </mtd>
+                      <mtd>
+                        <mtext>&nbsp;</mtext>
+                        <mn>1.414</mn>
+                      </mtd>
+                      <mtd>
+                        <msub>
+                          <mi>R</mi>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi>s</mi>
+                            <mi>c</mi>
+                            <mi>a</mi>
+                            <mi>l</mi>
+                            <mi>e</mi>
+                          </mrow>
+                        </msub>
+                        <mo>=</mo>
+                      </mtd>
+                      <mtd>
+                        <mtext>&nbsp;</mtext>
+                        <mn>1.14</mn>
+                      </mtd>
+                    </mtr>
+                    <mtr>
+                      <mtd>
+                        <msub>
+                          <mi>B</mi>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi>t</mi>
+                            <mi>h</mi>
+                            <mi>r</mi>
+                            <mi>e</mi>
+                            <mi>s</mi>
+                            <mi>h</mi>
+                          </mrow>
+                        </msub>
+                        <mo>=</mo>
+                      </mtd>
+                      <mtd>
+                        <mtext>&nbsp;</mtext>
+                        <mn>0.022</mn>
+                      </mtd>
+                      <mtd>
+                        <msub>
+                          <mi>W</mi>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi>o</mi>
+                            <mi>f</mi>
+                            <mi>f</mi>
+                            <mi>s</mi>
+                            <mi>e</mi>
+                            <mi>t</mi>
+                          </mrow>
+                        </msub>
+                        <mo>=</mo>
+                      </mtd>
+                      <mtd>
+                        <mtext>&nbsp;</mtext>
+                        <mn>0.027</mn>
+                      </mtd>
+                    </mtr>
+                    <mtr>
+                      <mtd>
+                        <msub>
+                          <mi>P</mi>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi>i</mi>
+                            <mi>n</mi>
+                          </mrow>
+                        </msub>
+                        <mo>=</mo>
+                      </mtd>
+                      <mtd>
+                        <mtext>&nbsp;</mtext>
+                        <mn>0.0005</mn>
+                      </mtd>
+                      <mtd>
+                        <msub>
+                          <mi>P</mi>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi>o</mi>
+                            <mi>u</mi>
+                            <mi>t</mi>
+                          </mrow>
+                        </msub>
+                        <mo>=</mo>
+                      </mtd>
+                      <mtd>
+                        <mtext>&nbsp;</mtext>
+                        <mn>0.1</mn>
+                      </mtd>
+                    </mtr>
+                  </mtable>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mstyle displaystyle="false" scriptlevel="1">
+                    <mi>E</mi>
+                    <mi>s</mi>
+                    <mi>t</mi>
+                    <mi>i</mi>
+                    <mi>m</mi>
+                    <mi>a</mi>
+                    <mi>t</mi>
+                    <mi>e</mi>
+                    <mtext>&nbsp;</mtext>
+                  </mstyle>
+                </mrow>
+              </mtd>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mstyle displaystyle="false" scriptlevel="1">
+                    <mi>S</mi>
+                    <mi>c</mi>
+                    <mi>r</mi>
+                    <mi>e</mi>
+                    <mi>e</mi>
+                    <mi>n</mi>
+                    <mtext>&nbsp;</mtext>
+                    <mi>L</mi>
+                    <mi>u</mi>
+                    <mi>m</mi>
+                    <mi>i</mi>
+                    <mi>n</mi>
+                    <mi>a</mi>
+                    <mi>n</mi>
+                    <mi>c</mi>
+                    <mi>e</mi>
+                  </mstyle>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mi>Y</mi>
+                <mo>=</mo>
+                <mstyle displaystyle="false" scriptlevel="0">
+                  <mo>∑<!-- ∑ --></mo>
+                </mstyle>
+              </mtd>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mrow>
+                    <mo>{</mo>
+                    <mtable columnalign="left left" rowspacing=".2em" columnspacing="1em" displaystyle="false">
+                      <mtr>
+                        <mtd>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle mathcolor="#990000">
+                              <mo stretchy="false">(</mo>
+                              <msup>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mi mathvariant="bold">R</mi>
+                                </mrow>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mi class="MJX-variant" mathvariant="normal">′<!-- ′ --></mi>
+                                </mrow>
+                              </msup>
+                              <mo>÷<!-- ÷ --></mo>
+                              <mn>255.0</mn>
+                              <msup>
+                                <mo stretchy="false">)</mo>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mn>2.4</mn>
+                                </mrow>
+                              </msup>
+                              <mo>×<!-- × --></mo>
+                              <mn>0.2126729</mn>
+                            </mstyle>
+                          </mrow>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle mathcolor="#005900">
+                              <mo stretchy="false">(</mo>
+                              <msup>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mi mathvariant="bold">G</mi>
+                                </mrow>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mi class="MJX-variant" mathvariant="normal">′<!-- ′ --></mi>
+                                </mrow>
+                              </msup>
+                              <mo>÷<!-- ÷ --></mo>
+                              <mn>255.0</mn>
+                              <msup>
+                                <mo stretchy="false">)</mo>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mn>2.4</mn>
+                                </mrow>
+                              </msup>
+                              <mo>×<!-- × --></mo>
+                              <mn>0.7151522</mn>
+                            </mstyle>
+                          </mrow>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle mathcolor="#2D2F92">
+                              <mo stretchy="false">(</mo>
+                              <msup>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mi mathvariant="bold">B</mi>
+                                </mrow>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mi class="MJX-variant" mathvariant="normal">′<!-- ′ --></mi>
+                                </mrow>
+                              </msup>
+                              <mo>÷<!-- ÷ --></mo>
+                              <mn>255.0</mn>
+                              <msup>
+                                <mo stretchy="false">)</mo>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mn>2.4</mn>
+                                </mrow>
+                              </msup>
+                              <mo>×<!-- × --></mo>
+                              <mn>0.0721750</mn>
+                            </mstyle>
+                          </mrow>
+                        </mtd>
+                      </mtr>
+                    </mtable>
+                    <mo fence="true" stretchy="true" symmetric="true"></mo>
+                  </mrow>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo fence="false" stretchy="false">{</mo>
+                  <mstyle mathcolor="#990000">
+                    <msup>
+                      <mi>R</mi>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi class="MJX-variant" mathvariant="normal">′<!-- ′ --></mi>
+                      </mrow>
+                    </msup>
+                    <mo>,</mo>
+                    <mstyle mathcolor="#005900">
+                      <msup>
+                        <mi>G</mi>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi class="MJX-variant" mathvariant="normal">′<!-- ′ --></mi>
+                        </mrow>
+                      </msup>
+                      <mo>,</mo>
+                      <mstyle mathcolor="#2D2F92">
+                        <msup>
+                          <mi>B</mi>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi class="MJX-variant" mathvariant="normal">′<!-- ′ --></mi>
+                          </mrow>
+                        </msup>
+                        <mo fence="false" stretchy="false">}</mo>
+                      </mstyle>
+                    </mstyle>
+                  </mstyle>
+                </mrow>
+              </mtd>
+              <mtd>
+                <mtext>&nbsp;</mtext>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo>∈<!-- ∈ --></mo>
+                </mrow>
+                <mtext>&nbsp;</mtext>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mi mathvariant="bold">s</mi>
+                </mrow>
+                <mi>R</mi>
+                <mi>G</mi>
+                <mi>B</mi>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd></mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mtext>&nbsp;</mtext>
+                <mi>G</mi>
+                <mi>i</mi>
+                <mi>t</mi>
+                <mi>H</mi>
+                <mi>u</mi>
+                <mi>b</mi>
+                <mi>R</mi>
+                <mi>e</mi>
+                <mi>p</mi>
+                <mi>o</mi>
+              </mtd>
+              <mtd>
+                <mi></mi>
+                <mo stretchy="false">⇛<!-- ⇛ --></mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mi mathvariant="normal">h</mi>
+                  <mi mathvariant="normal">t</mi>
+                  <mi mathvariant="normal">t</mi>
+                  <mi mathvariant="normal">p</mi>
+                  <mi mathvariant="normal">s</mi>
+                  <mo>:</mo>
+                  <mspace width="negativethinmathspace"></mspace>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo>/</mo>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo>/</mo>
+                  </mrow>
+                  <mi mathvariant="normal">a</mi>
+                  <mi mathvariant="normal">p</mi>
+                  <mi mathvariant="normal">c</mi>
+                  <mi mathvariant="normal">a</mi>
+                  <mi mathvariant="normal">w</mi>
+                  <mn>3.</mn>
+                  <mi mathvariant="normal">m</mi>
+                  <mi mathvariant="normal">y</mi>
+                  <mi mathvariant="normal">n</mi>
+                  <mi mathvariant="normal">d</mi>
+                  <mi mathvariant="normal">e</mi>
+                  <mi mathvariant="normal">x</mi>
+                  <mo>.</mo>
+                  <mi mathvariant="normal">c</mi>
+                  <mi mathvariant="normal">o</mi>
+                  <mi mathvariant="normal">m</mi>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd></mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}\\\ \ \mathbf {APCA} \mathbf {\bullet W3} \ \ &amp;\mathbf {\scriptstyle version\ {0.1.7}\ {developed\ for\ WCAG\ 3\ contrast\ guidelines}} \\[0.66ex]{\scriptstyle Using:}\quad \quad \quad \quad &amp;\\\ \ {APCA}\ Contr&amp;ast\ {Prediction\ Equation\ \ 0.0.98G-4g-base}\\\\Result:\ &amp;{\begin{bmatrix}\hline {\scriptstyle Lightness\ Contrast}\\\quad L\!^{c}=\ S_{apc}\ {\boldsymbol {\times }}\ 100\quad \\\hline \end{bmatrix}}\\\\\textstyle Where:\quad &amp;\\\hline {\scriptstyle Clamp\ Mi}&amp;{\scriptstyle nimum\ Contrast\ Then\ Offset}\\[1.25ex]S_{apc}=&amp;{\begin{cases}0.0\ \ &amp;\vert C\vert &lt;P_{out}\\C-W_{offset}\ \ &amp;\ C\ &gt;0\\C+W_{offset}\ \ &amp;\ C\ &lt;0\\\end{cases}}\\\hline {\scriptstyle Clamp\ No}&amp;{\scriptstyle ise\ Then\ Scale}\\[1.25ex]C=&amp;{\begin{cases}0.0\ \ &amp;{\bigg \vert }Y_{bg}-Y_{txt}{\bigg \vert }&lt;P_{in}\\S_{norm}\times R_{scale}\ \ &amp;\ Y_{txt}&lt;Y_{bg}\\S_{rev}\times R_{scale}\ \ &amp;\ Y_{txt}&gt;Y_{bg}\\\end{cases}}\\\hline {\textstyle Find\ }&amp;{\textstyle Perceptual\ Lightness\ Difference}\\[0.75ex]&amp;{\scriptstyle Normal\ Polarity\ (dark\ text/light\ bg)}\\S_{norm}=&amp;\ Y_{bg}^{0.56}-Y_{txt}^{0.57}\quad \ _{Normal:\ Y_{bg}\ &gt;\ Y_{txt}}\\[0.75ex]&amp;{\scriptstyle Reverse\ Polarity\ (light\ text/dark\ bg)}\\S_{rev}=&amp;\ Y_{bg}^{0.65}-Y_{txt}^{0.62}\quad \ _{Reverse:\ Y_{bg}\ &lt;\ Y_{txt}}\\\hline {\scriptstyle Soft\ Clam}&amp;{\scriptstyle p\ Black\ Levels}\\[1.25ex]Y_{txt}=&amp;\ f_{clamp}(Y)\quad _{color\ of\ the\ text,\ symbol,\ or\ object.}^{where\ Y\ is\ derived\ from\ the}\\[1.1ex]Y_{bg}=&amp;\ f_{clamp}(Y)\quad _{color\ used\ for\ the\ background.}^{where\ Y\ is\ derived\ from\ the}\\[0.66ex]f_{clamp}(Y_{c})=&amp;{\begin{cases}Y_{c}\ \ &amp;Y_{c}&gt;=B_{thrsh}\\Y_{c}+{\big (}B_{thrsh}-Y_{c}{\big )}^{Bexp}&amp;Y_{c}&lt;B_{thrsh}\\\end{cases}}\\\hline {\scriptstyle Constants}&amp;{\scriptstyle \ for\ Clamps\ and\ Scalers}\\[1.25ex]&amp;{\begin{aligned}B_{exp}=&amp;\ 1.414&amp;R_{scale}=&amp;\ 1.14\\B_{thresh}=&amp;\ 0.022&amp;W_{offset}=&amp;\ 0.027\\P_{in}=&amp;\ 0.0005&amp;P_{out}=&amp;\ 0.1\\\end{aligned}}\\\hline {\scriptstyle Estimate\ }&amp;{\scriptstyle Screen\ Luminance}\\[1.25ex]\definecolor {DarkGreen}{rgb}{0,0.35,0}\definecolor {DarkRed}{rgb}{0.6,0,0}Y=\textstyle \sum &amp;{\begin{cases}{\color {DarkRed}(\mathbf {R} ^{\prime }\div 255.0)^{2.4}\times 0.2126729}\\{\color {DarkGreen}(\mathbf {G} ^{\prime }\div 255.0)^{2.4}\times 0.7151522}\\{\color {Blue}(\mathbf {B} ^{\prime }\div 255.0)^{2.4}\times 0.0721750}\\\end{cases}}\\[1.25ex]{\{\color {DarkRed}R^{\prime },\color {DarkGreen}G^{\prime },\color {Blue}B^{\prime }\}}&amp;\ {\in }\ \mathbf {s} RGB\\\hline \\\ GitHubRepo&amp;\Rrightarrow \mathrm {https:\!//apcaw3.myndex.com} \\[0.75ex]\\\end{aligned}}}</annotation>
+  </semantics>
+</math></span>
+
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1627b5ae2a78cd7900d13ab081d974748b2f3939" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -70ex; width:75ex; height:140ex;" alt="{\displaystyle {\begin{aligned}\\\ \ \mathbf {APCA} \mathbf {\bullet W3} \ \ &amp;\mathbf {\scriptstyle version\ {0.1.7}\ {developed\ for\ WCAG\ 3\ contrast\ guidelines}} \\[0.66ex]{\scriptstyle Using:}\quad \quad \quad \quad &amp;\\\ \ {APCA}\ Contr&amp;ast\ {Prediction\ Equation\ \ 0.0.98G-4g-base}\\\\Result:\ &amp;{\begin{bmatrix}\hline {\scriptstyle Lightness\ Contrast}\\\quad L\!^{c}=\ S_{apc}\ {\boldsymbol {\times }}\ 100\quad \\\hline \end{bmatrix}}\\\\\textstyle Where:\quad &amp;\\\hline {\scriptstyle Clamp\ Mi}&amp;{\scriptstyle nimum\ Contrast\ Then\ Offset}\\[1.25ex]S_{apc}=&amp;{\begin{cases}0.0\ \ &amp;\vert C\vert <P_{out}\\C-W_{offset}\ \ &amp;\ C\ >0\\C+W_{offset}\ \ &amp;\ C\ <0\\\end{cases}}\\\hline {\scriptstyle Clamp\ No}&amp;{\scriptstyle ise\ Then\ Scale}\\[1.25ex]C=&amp;{\begin{cases}0.0\ \ &amp;{\bigg \vert }Y_{bg}-Y_{txt}{\bigg \vert }<P_{in}\\S_{norm}\times R_{scale}\ \ &amp;\ Y_{txt}<Y_{bg}\\S_{rev}\times R_{scale}\ \ &amp;\ Y_{txt}>Y_{bg}\\\end{cases}}\\\hline {\textstyle Find\ }&amp;{\textstyle Perceptual\ Lightness\ Difference}\\[0.75ex]&amp;{\scriptstyle Normal\ Polarity\ (dark\ text/light\ bg)}\\S_{norm}=&amp;\ Y_{bg}^{0.56}-Y_{txt}^{0.57}\quad \ _{Normal:\ Y_{bg}\ >\ Y_{txt}}\\[0.75ex]&amp;{\scriptstyle Reverse\ Polarity\ (light\ text/dark\ bg)}\\S_{rev}=&amp;\ Y_{bg}^{0.65}-Y_{txt}^{0.62}\quad \ _{Reverse:\ Y_{bg}\ <\ Y_{txt}}\\\hline {\scriptstyle Soft\ Clam}&amp;{\scriptstyle p\ Black\ Levels}\\[1.25ex]Y_{txt}=&amp;\ f_{clamp}(Y)\quad _{color\ of\ the\ text,\ symbol,\ or\ object.}^{where\ Y\ is\ derived\ from\ the}\\[1.1ex]Y_{bg}=&amp;\ f_{clamp}(Y)\quad _{color\ used\ for\ the\ background.}^{where\ Y\ is\ derived\ from\ the}\\[0.66ex]f_{clamp}(Y_{c})=&amp;{\begin{cases}Y_{c}\ \ &amp;Y_{c}>=B_{thrsh}\\Y_{c}+{\big (}B_{thrsh}-Y_{c}{\big )}^{Bexp}&amp;Y_{c}<B_{thrsh}\\\end{cases}}\\\hline {\scriptstyle Constants}&amp;{\scriptstyle \ for\ Clamps\ and\ Scalers}\\[1.25ex]&amp;{\begin{aligned}B_{exp}=&amp;\ 1.414&amp;R_{scale}=&amp;\ 1.14\\B_{thresh}=&amp;\ 0.022&amp;W_{offset}=&amp;\ 0.027\\P_{in}=&amp;\ 0.0005&amp;P_{out}=&amp;\ 0.1\\\end{aligned}}\\\hline {\scriptstyle Estimate\ }&amp;{\scriptstyle Screen\ Luminance}\\[1.25ex]\definecolor {DarkGreen}{rgb}{0,0.35,0}\definecolor {DarkRed}{rgb}{0.6,0,0}Y=\textstyle \sum &amp;{\begin{cases}{\color {DarkRed}(\mathbf {R} ^{\prime }\div 255.0)^{2.4}\times 0.2126729}\\{\color {DarkGreen}(\mathbf {G} ^{\prime }\div 255.0)^{2.4}\times 0.7151522}\\{\color {Blue}(\mathbf {B} ^{\prime }\div 255.0)^{2.4}\times 0.0721750}\\\end{cases}}\\[1.25ex]{\{\color {DarkRed}R^{\prime },\color {DarkGreen}G^{\prime },\color {Blue}B^{\prime }\}}&amp;\ {\in }\ \mathbf {s} RGB\\\hline \\\ GitHubRepo&amp;\Rrightarrow \mathrm {https:\!//apcaw3.myndex.com} \\[0.75ex]\\\end{aligned}}}"></span></dd></dl>
