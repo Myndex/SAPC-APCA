@@ -244,7 +244,7 @@ color: var(--modeTextColor, #000);
 --modePrtyatn: #440;
 --modePrtyatv: #D49;
 --modePrtydec: #2C2;
-
+ 
 
 
 
@@ -1506,7 +1506,7 @@ code strong, code b {
   padding: 0;
   font-family: "Inconsolata", Courier, Menlo, monospace;
 }
-.codeBlock {
+.codeBlock, .highlight {
   width: 280px;
   margin: 8px 0 0;
   padding: 8px 12px;
