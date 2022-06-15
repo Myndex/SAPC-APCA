@@ -1,6 +1,4 @@
----
-layout: simple
----
+
 
 <p align="center">
  <img src="../images/APCAcolor4.png" width="640" alt="APCA The Revolution Will Be Readable"><br><br>
