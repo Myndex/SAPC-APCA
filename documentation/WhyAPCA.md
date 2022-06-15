@@ -1,3 +1,7 @@
+---
+layout: simple
+---
+
 # Why the New Contrast Method APCA
 Readability is a critically important aspect of web content, affecting 99% of internet users. For years, the WCAG&nbsp;2.x contrast guidelines provided some guidance toward readability but are being replaced for the future WCAG&nbsp;3.0. Here is an overview of the need for this change and discussion of the candidate replacement, the _Accessible Perceptual Contrast Algorithm_ (APCA).
 
