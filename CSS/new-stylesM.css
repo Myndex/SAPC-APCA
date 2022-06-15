@@ -1,0 +1,283 @@
+.wrapper { padding: 4px 12px 12px; }
+
+#main_content { padding: 24px; }
+
+.headBanner {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 4px 12px;
+}
+.headBanner h1 {
+  margin: -12px 0 0;
+  text-align: left;
+  font-family: Audiowide, Oxanium, Montserrat, sans-serif;
+  font-size: 5.5em;
+  font-weight: 600;
+  color: #30a3;
+  }
+.headBanner h1 a, .headBanner h1 a:visited,
+.headBanner h1 a:link { text-align: left; font-size: 1em; text-decoration: none; color: #30a3;}
+.headBanner h1 a:hover { text-align: left; font-size: 1em; text-decoration: none; color: #30aa; }
+
+.headBanner h1.bglite {
+position: absolute;
+z-index: -2;
+margin: -32px;
+text-align: left;
+font-family: Audiowide, Oxanium, Montserrat, sans-serif;
+font-size: 11em;
+font-weight: 600;
+color: #e4e0dd;
+color: #3300aa0a;
+}
+
+
+section h1 {
+  margin: -12px 0;
+  text-align: center;
+  font-family: Audiowide, Oxanium, Montserrat, sans-serif;
+  font-size: 3em;
+  font-weight: 600;
+  color: #30ab;
+  }
+  
+#issue-threads--comments {font-size: 2.6em;}
+#accurate-contrastusing-the-apca { margin: -12px 0; font-size: 3em;}
+
+#myndex-articles--links > p {font-size: 1.4em; margin: 2px 42px 12px 24px; color: #206;}
+
+
+.headBanner h2 {
+  max-width: 620px;
+  margin: 0;
+  padding: 0 12px;
+  text-align: left;
+  line-height: 1.35;
+  font-family: Oxanium, Montserrat, sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  }
+  
+
+.perceptex {
+  padding: 0;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-weight: 200;
+  color: rgb(51, 0, 170);
+}
+
+.perceptex .he1 {
+  margin: 0 0 -15px;
+  padding: 0;
+  font-size: 46px;
+}
+.perceptex .he2 {
+  margin: 0;
+  padding: 0 0 0 1.5px;
+  font-size: 37px;
+}
+
+/* ************************************************************************** */
+/* *****   MEDIA QUERIES   ************************************************** */
+/* ************************************************************************** */
+/* ************************************************************************** */
+/* *****   MEDIA QUERIES   ************************************************** */
+/* ************************************************************************** */
+/* ************************************************************************** */
+/* *****   MEDIA QUERIES   ************************************************** */
+/* ************************************************************************** */
+
+
+@media (max-width: 899.99px) {
+  
+.wrapper { padding: 0.5vw 1vw 1vw; }
+
+#main_content { padding: 1vw; }
+
+.headBanner {
+  padding: 0.5vw 1vw;
+}
+.headBanner h1 {
+  margin: -1.5vw 0 0;
+  font-size: 12vw;
+  }
+
+.headBanner h1.bglite {
+margin: -3.5vw;
+font-size: 21vw;
+}
+
+section h1 {
+  margin: -1.5vw 0;
+  font-size: 6vw;
+  }
+  
+#issue-threads--comments {font-size: 6vw;}
+#accurate-contrastusing-the-apca { margin: -1.5vw 0; font-size: 6vw;}
+#myndex-articles--links > p {margin: 0.3vw 2vw 1.5vw 2vw;}
+
+.headBanner h2 {
+  max-width: 80vw;
+  margin: 0;
+  padding: 0 1vw;
+  font-size: 4vw;
+  }
+  
+  
+
+.perceptex .he1 {
+  margin: 0 0 -1.67vw;
+  padding: 0;
+  font-size: 5vw;
+}
+.perceptex .he2 {
+  margin: 0;
+  padding: 0 0 0 0.167vw;
+  font-size: 4vw;
+}
+
+  #svg16 {
+    display: none;
+  }
+ 
+}
+
+
+
+/* ************************************************************************** */
+/* *****   END MEDIA QUERIES   ********************************************** */
+/* ************************************************************************** */
+
+
+
+
+
+.flipH {
+display: inline-block;
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+
+
+
+
+
+
+/*** IMPORTED FROM SLIDERS ***/
+
+.colorSliders {}
+
+/***  END SLIDERS ***/
+
+
+.colorPicker {border-radius: 18px;}
+
+
+#inputTXT,
+#inputBG {
+  border-radius: 12px;
+  text-align: center;
+}
+
+.conformScore th.tableTitle {
+  position: relative;
+  font-weight: 600;
+}
+
+#tableSamples #BGpicker,
+#tableSamples #TXTpicker {
+  position: relative;
+  margin: auto;
+  width: 75px;
+  min-height: 75px;
+  border: 2px solid #a0a0a0;
+  border-radius: 12px;
+  z-index: 10;
+}
+
+
+.innerwrapper {
+  position: relative;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.infobox {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1rem 0 2rem 8rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.infobox div {
+  flex: 1 1 45%;
+}
+.infobox p {
+  margin: 0 0 0.75em;
+}
+
+
+
+.sciencelinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+.sciencelinks a {
+  color: #def;
+  text-decoration: none;
+  margin: 0;
+}
+.gammaContainer {
+  padding: 1rem;
+}
+
+
+.explainers {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem 1rem 1rem 16vw;
+  gap: 2rem;
+  padding: 12px;
+  max-width: 1100px;
+}
+
+.explainer h2 {
+  font-size: 1.65rem;
+}
+.explainer h3 {
+  font-size: 1.35rem;
+}
+
+
+.betanotice {
+  padding: 20px;
+  background: #fda;
+}
+.betanotice h3 {
+  margin: 0;
+}
+
+
+#demoArea { text-align: left; }
+
+footer .innerwrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+footer .innerwrapper div {
+  flex: 1 1 45%;
+}
