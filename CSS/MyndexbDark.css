@@ -5341,7 +5341,7 @@ section > h1 {
 /* ************************************************************************** */
 
 
-.flipH {
+.flipH, .reverse {
   display: inline-block;
   -moz-transform: scale(-1, 1);
   -webkit-transform: scale(-1, 1);
