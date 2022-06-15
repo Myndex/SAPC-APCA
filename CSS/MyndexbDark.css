@@ -1163,7 +1163,7 @@ img.centered {
   }
 
 a.myndexButton.top {
-  margin: 3.5em 0 -1.9em;
+  margin: 3.5em 0 0.5em;
   }
 
 .myndexButton:hover, a.myndexButton:hover, a.myndexButton:visited:hover {
@@ -5223,7 +5223,7 @@ section h1 {
 section > h1 {
   z-index: 20;
   position: relative;
-  margin: -88px 0 0;
+  margin: 0;
   text-align: left;
   font-size: 2.6em;
   }
