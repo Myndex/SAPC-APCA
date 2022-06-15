@@ -1,5 +1,5 @@
 ---
-layout: simple
+layout: default
 ---
 
 <p align="center">
