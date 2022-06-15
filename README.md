@@ -1,5 +1,5 @@
 ---
-layout: repoRoot
+layout: default
 ---
 
 <p align="center">
