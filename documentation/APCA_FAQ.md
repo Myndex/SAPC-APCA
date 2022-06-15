@@ -1,3 +1,7 @@
+---
+layout: simple
+---
+
 # APCA & SAPC 
 ## Frequently Asked Questions for the Accessible Perceptual Contrast Algorithm.
 _--THIS IS A WORK IN PROGRESS--_

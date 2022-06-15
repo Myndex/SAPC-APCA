@@ -26,18 +26,12 @@
   </a>
 </p>
 
-# APCA • SAPC • SARCAM PRIMARY REPOSITORY
+-----
+# APCA • SAPC • SACAM PRIMARY REPOSITORY
 Please make all comments or discussions here and not in the satellite repositories.
 
 
 <img width='250' alt="Poster: a picture of crash test dummies crashing out of a car, and text that says don't be a dummy! Stop using low contrast text. At the bottom it says APCA the world is reading" src='https://user-images.githubusercontent.com/42009457/161151275-7c4feea7-888a-43f1-a9c0-7504afaac258.png'>  <img  width='240' alt='Smokey the bear saying  ONLY YOU CAN STOP LOW CONTRAST' src='https://user-images.githubusercontent.com/42009457/161151536-a0add333-161e-482d-a99a-d1d076c75daf.png'>   <img  width='220' alt='Uncle Sam saying I want you to use high contrast text' src='https://user-images.githubusercontent.com/42009457/161151222-74fb81af-f87b-4d7c-a41c-756e1ee3056f.png'> 
-
------
-## _Accessibility Statement for Beta Sites_
-Beta testers may wish to include the following statement in their sites boilerplate:
-
------
-### This website is beta testing the APCA guidelines for determining text and non-text contrast. It is well known that WCAG 2 contrast maths are not accurate regarding human perception, and automated testing using WCAG 2 math may incorrectly indicate errors in some color pairs on this site. The APCA guidelines are a substantial improvement in accessibility over WCAG 2 contrast criterions, and therefore compliant with the ADA, and also 508 rules under the alternative methods section. Any automated or manual testing done to determine conformance of this site needs to be conducted using a perceptually accurate method such as APCA.
 
 -----
 -----
@@ -46,13 +40,13 @@ The "Advanced" was originally part of an internal code name "SAPC" that eventual
 
 Thus, from here on, APCA stands for:
 
-### _Accessible_ <br> Perceptual <br> Contrast <br> Algorithm
+### _Accessible_ Perceptual Contrast Algorithm
 
 -----
 
 
 ## Bridge PCA
-Do you want to improve readability, but you are forced to used WCAG 2 contrast to the letter? Then Bridge PCA is for you. It is backward compatible with WCAG 2, but using APCA technology. It is literally a drop-in replacement for the flawed WCAG 2 contrast maths.
+Do you want to improve readability, but you are forced to used WCAG 2 contrast to the letter for contractual or legal reasons in your region? Then Bridge PCA is for you. It is backward compatible with WCAG 2, but using APCA technology. It is literally a drop-in replacement for the flawed WCAG 2 contrast maths, and Bridge PCA calculates  dark mode correctly!
 SEE: [**_Bridge PCA Repository_**](https://github.com/Myndex/bridge-pca) 
 
 -----
@@ -73,6 +67,7 @@ SEE: [**_APCA W3 Repository_**](https://github.com/Myndex/apca-w3) and please so
 - [Why APCA?](./documentation/WhyAPCA.md)
 - [APCAinanutshell](./documentation/APCA_in_a_Nutshell.md)
 - [Main Readme Doc](./documentation/README.md)
+- [Standard Observer Model](./documentation/StandardObserverModel.md)
 - [RepoList](./documentation/repoList.md)
 - [ImportantChangeNotices](./documentation/ImportantChangeNotices.md)
 - [How to Contribute](./documentation/CONTRIBUTING.md)
@@ -101,15 +96,15 @@ For a deeper dive into color see the author's whitepaper ["Introduction to Color
 [Visual Contrast Subgroup Wiki]: https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup
 
 
-### _Third party and peer reviews of APCA_
-There have been several independent reviews that include demonstrations of functional superiority to existing methods.
-
-Here are four that are in english:
-
-- [It’s Time For A More Sophisticated Color Contrast Check](https://blog.datawrapper.de/color-contrast-check-data-vis-wcag-apca/)
-- [Color Contrast Is Not As Black And White As It Seems](https://medium.com/@think_ui/why-color-contrast-is-not-as-black-and-white-as-it-seems-94197a72b005)
-- [Adv. Perceptual Contrast Algorithm](https://typefully.com/u/DanHollick/t/sle13GMW2Brp)
-- [Improving accessibility with the new APCA](https://www.lightflows.co.uk/blog/improving-accessibility-with-apca/)
+## APCA Peer Review & Third Party Discussion
+### _Peer reviews of APCA and third party <br>comparisons of APCA vs WCAG&nbsp;2_
+There are several independent researchers evaluating APCA, and additional third party comparitive reviews that include demonstrations of the functional superiority to existing methods. The first two listed below are technical reviews by peers evaluating the APCA math and methods, and in comparison to WCAG 2 contrast methods and guidelines. APCA is open for peer review and discussion—please contact us if interested in performing an evaluation.
+- [Does the contrast ratio actually predict the legibility of website text? ](https://www.cedc.tools/article.html) A comparison of WCAG 2 math and APCA, by Sam Waller, a PhD at the Engineering Design Centre, University of Cambridge, UK.
+- [Color Contrast Is Not As Black And White As It Seems ](https://medium.com/@think_ui/why-color-contrast-is-not-as-black-and-white-as-it-seems-94197a72b005) by Roger Attrill, a technical analysis of some of the problems with WCAG 2 contrast math, and comparing and analysing APCA.
+- [It’s Time For A More Sophisticated Color Contrast Check ](https://blog.datawrapper.de/color-contrast-check-data-vis-wcag-apca/) A review of APCA and comparison to WCAG 2 contrast, in the use case of dataviz, by Lisa Charlotte Muth.
+- [Accessible Palette: stop using HSL for color systems ](https://wildbit.com/blog/accessible-palette-stop-using-hsl-for-color-systems) by Eugene Fedorenko, this is mostly a discussion of his new color pallette tool, but APCA figures into that, and he discusses the integration into the tool vs WCAG&nbsp;2 contrast.
+- [Adv. Perceptual Contrast Algorithm](https://typefully.com/u/DanHollick/t/sle13GMW2Brp) Don Hollick's review and discussion of APCA vs WCAG 2.
+- [Improving accessibility with the new APCA ](https://www.lightflows.co.uk/blog/improving-accessibility-with-apca/) A review of APCA by Nik Bailey.
 
 
 ### Comparing WCAG 2 Contrast: Discussion and Articles_ 
@@ -133,10 +128,21 @@ Basic APCA Math in LaTeX
 
 ![](images/APCA_0.0.98G4g%2B3.svg)
 
+-----
+## _Accessibility Statement for Beta Sites_
+Beta testers may wish to include the following statement in their sites boilerplate:
+
+-----
+### This website is beta testing the APCA guidelines for determining text and non-text contrast. It is well known that WCAG 2 contrast maths are not accurate regarding human perception, and automated testing using WCAG 2 math may incorrectly indicate errors in some color pairs on this site. The APCA guidelines are a substantial improvement in accessibility over WCAG 2 contrast criterions, and therefore compliant with the ADA, and also 508 rules under the alternative methods section. Any automated or manual testing done to determine conformance of this site needs to be conducted using a perceptually accurate method such as APCA.
+
+-----
+### _THE REVOLUTION WILL BE READABLE_<sup>™</sup>
+ <img src="./images/APCAcolor4.png" width="640" alt="APCA The Revolution Will Be Readable">
+ 
+-----
 <sub>**Disclaimer:** _APCA is being evaluated as a replacement for WCAG 2 contrast math for future standards and guidelines, however, standards that will be incorporating APCA are still developmental. Because WCAG 2 contrast math does not accurately model human visual perception nor visual impairments, there will be discrepancies between WCAG 2 contrast math, and perceptually uniform models such as APCA. It is up to the end user to determine suitability of purpose for their region and conformance requirements._</sub>
 
-### _THE REVOLUTION WILL BE READABLE_<sup>™</sup>
 
- <img src="./images/APCAcolor4.png" width="640" alt="APCA The Revolution Will Be Readable">
+
 
 

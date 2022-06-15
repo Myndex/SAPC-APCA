@@ -1,3 +1,7 @@
+---
+layout: simple
+---
+
 ## APCA Accessibility Statement
 _Beta testers and sites using APCA may wish to include the following statement in their site's boilerplate:_
 

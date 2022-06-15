@@ -1,3 +1,7 @@
+---
+layout: simple
+---
+
 # Contributing to APCA
 
 First, thank you for taking the time to contribute! Myndex is focused on the underlying perception research, and the needs of supporting developers is its own monumental task! Thank you for help and discussion on how best to serve the developer community.

@@ -1,3 +1,7 @@
+---
+layout: simple
+---
+
 # S-Luv Accessible Readable Color Appearance Model (SARCAM)
 _(Formerly known as SAPC)_
 

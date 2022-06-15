@@ -1,3 +1,7 @@
+---
+layout: simple
+---
+
 # _Myndex and APCA Repositories_
 
 - Myndex on GitHub: https://git.myndex.com/

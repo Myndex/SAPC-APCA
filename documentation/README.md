@@ -1,3 +1,7 @@
+---
+layout: repoSubfolder
+---
+
 <p align="center">
  <img src="../images/APCAcolor4.png" width="640" alt="APCA The Revolution Will Be Readable"><br><br>
   
@@ -21,7 +25,7 @@
   </a>
 </p>
 
-# APCA • SAPC • SARCAM PRIMARY REPOSITORY
+# APCA • SAPC • SACAM PRIMARY REPOSITORY
 Please make all comments or discussions here and not in the satellite repositories.
 
 ## NEW! Bridge PCA

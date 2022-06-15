@@ -1,6 +1,10 @@
+---
+layout: simple
+---
+# Regarding Exponents
 The TLDR is "For non-HDR displays, the colorspace is simply selected by the three coefficients, and the pre-processing exponent."
 
-Input Stage Notes
+## Input Stage Notes
 
 Technically, it does not convert to a traditional calculated luminance, and is not intended to. The first stage is a conversion to model of typical monitors in typical environmental settings. Included is consideration of surveys of case studies of monitors in real-world environments. This pre-processing stage also includes a soft clamp at black for initial monitor modeling. (Interestingly earlier today I was looking at the DICOM spec, which happens to model displays similarly.) The need for the soft clamp makes using the piecewise redundant, as that section near black is reshaped by the soft clamp to account for ambient flare.
 

@@ -1,3 +1,7 @@
+---
+layout: simple
+---
+
 # The Accessible Perceptual Contrast Algorithm
 APCA is a new method for calculating and predicting readability contrast. APCA is a part of the larger S-Luv Accessible Readability Color Appearance Model known as SARCAM (formerly SAPC). These models are specifically related to color appearance on self-illuminated RGB computer displays & devices, and also for modeling accessible user needs, with a focus on readability.
 
