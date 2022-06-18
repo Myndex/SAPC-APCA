@@ -6,9 +6,13 @@ The TLDR is "For non-HDR displays, the colorspace is simply selected by the thre
 
 ## Input Stage Notes
 
-Technically, it does not convert to a traditional calculated luminance, and is not intended to. The first stage is a conversion to model of typical monitors in typical environmental settings. Included is consideration of surveys of case studies of monitors in real-world environments. This pre-processing stage also includes a soft clamp at black for initial monitor modeling. (Interestingly earlier today I was looking at the DICOM spec, which happens to model displays similarly.) The need for the soft clamp makes using the piecewise redundant, as that section near black is reshaped by the soft clamp to account for ambient flare.
+Technically, the imput modules do not convert to a traditional calculated luminance, and is not intended to. They calculate a unique value "estimated screen luminance" denoted **Ys**. The first stage is a conversion to model of typical monitors in typical environmental settings. Included is consideration of surveys of case studies of monitors in real-world environments, and our own measurements and studies of various devices and displays.
 
-The contrast calculation stage then applies a different exponent to the BG, which drives local adaptation, and the stimuli (text) that is substantially affected by that adaptation.
+It is useful to point out that the defined peak outpuf in the IEC sRGB spec is 80 cd/m², and today's devices are capable of exceeding 1200 cd/m². The needed gamma setting for a display depends on the ambient lighting, which drives global adaptation, and the screen luminance which drives field and local adaptation. There is a user preference component in here too, resulting in a fairly wide range of gamma settings in use. For example, some calibration siftware can calibrate to L* which is about 2.35 to 2.4. 
+
+This pre-processing stage also includes a soft clamp at black for initial monitor modeling. As an interesting. The need for the soft clamp makes using the piecewise redundant, as that section near black is reshaped by the soft clamp to account for ambient flare and other factors.
+
+The contrast calculation stage then applies a different exponent to the background, which drives local adaptation, and another to the stimuli (text).
 
 The piecewise sRGB TRC is not an emulation of actual monitor behavior, having been created to prevent infinite slope at 0 to facilitate digital processing. The APCA is not about processing images and round trips, where using the piecewise curve is of benefit. It is useful to note that many ICC profiles (including those that ship with Adobe products) do not use the piecewise, and instead use the simple 2.2 gamma, which the piecewise was intended to emulate, and the IEC standard indicates the physical display being the simple gamma.
 
