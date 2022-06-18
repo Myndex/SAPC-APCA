@@ -63,20 +63,20 @@ SEE: [**_APCA W3 Repository_**](https://github.com/Myndex/apca-w3) and please so
 ## DIRECTORY
 
 ### Source and Data
-- JS arrays and tab-delimited data of the font Lookup tables is [in the data folder](./data/).
-- The APCA and BridgePCA web-tools are  [in the WEBTOOLS folder](./WEBTOOLS/).
-- There are ported versions [in the src/ported folder](./src/ported/).
+- JS arrays and tab-delimited data of the font Lookup tables is [in the data folder](/data/).
+- The APCA and BridgePCA web-tools are  [in the WEBTOOLS folder](/WEBTOOLS/).
+- There are ported versions [in the src/ported folder](/src/ported/).
 
 ### Documentation
-- [Why APCA?](./documentation/WhyAPCA.md)
-- [APCAinanutshell](./documentation/APCA_in_a_Nutshell.md)
-- [Main Readme Doc](./documentation/README.md)
-- [Standard Observer Model](./documentation/StandardObserverModel.md)
-- [RepoList](./documentation/repoList.md)
-- [ImportantChangeNotices](./documentation/ImportantChangeNotices.md)
-- [How to Contribute](./documentation/CONTRIBUTING.md)
-- [APCA FAQ](./documentation/APCA_FAQ.md)
-- [License](./documentation/LICENSE.md)
+- [Why APCA?](/documentation/WhyAPCA.md)
+- [APCAinanutshell](/documentation/APCA_in_a_Nutshell.md)
+- [Main Readme Doc](/documentation/README.md)
+- [Standard Observer Model](/documentation/StandardObserverModel.md)
+- [RepoList](/documentation/repoList.md)
+- [ImportantChangeNotices](/documentation/ImportantChangeNotices.md)
+- [How to Contribute](/documentation/CONTRIBUTING.md)
+- [APCA FAQ](/documentation/APCA_FAQ.md)
+- [License](/documentation/LICENSE.md)
 
 ### Related Repositories
 - [**_APCA W3 Repository_**](https://github.com/Myndex/apca-w3) The W3 version for web content
@@ -130,7 +130,7 @@ Basic APCA Math in LaTeX
 ----------
 0.0.98G-4g-base W3 (apca-w3 0.1.17)
 
-![](APCAw3_0.1.17_APCA0.0.98G.svg)
+![](/images/APCAw3_0.1.17_APCA0.0.98G.svg)
 
 -----
 ## _Accessibility Statement for Beta Sites_
@@ -141,7 +141,7 @@ Beta testers may wish to include the following statement in their sites boilerpl
 
 -----
 ### _THE REVOLUTION WILL BE READABLE_<sup>™</sup>
- <img src="./images/APCAcolor4.png" width="640" alt="APCA The Revolution Will Be Readable">
+ <img src="/images/APCAcolor4.png" width="640" alt="APCA The Revolution Will Be Readable">
  
 -----
 <sub>**Disclaimer:** _APCA is being evaluated as a replacement for WCAG 2 contrast math for future standards and guidelines, however, standards that will be incorporating APCA are still developmental. Because WCAG 2 contrast math does not accurately model human visual perception nor visual impairments, there will be discrepancies between WCAG 2 contrast math, and perceptually uniform models such as APCA. It is up to the end user to determine suitability of purpose for their region and conformance requirements._</sub>
