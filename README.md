@@ -128,9 +128,9 @@ The problems of 4.5:1 as a target for a guideline not only impact accessibility,
 
 Basic APCA Math in LaTeX
 ----------
-0.0.98G-4g-build-3
+0.0.98G-4g-base W3 (apca-w3 0.1.17)
 
-![](images/APCA_0.0.98G4g%2B3.svg)
+![](APCAw3_0.1.17_APCA0.0.98G.svg)
 
 -----
 ## _Accessibility Statement for Beta Sites_
