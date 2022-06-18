@@ -1,6 +1,6 @@
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="75ex" height="140ex" style="vertical-align: -70ex;" viewBox="-1500 -30500 32000 61000" role="img" focusable="false" aria-labelledby="MathJax-SVG-1-Title">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="750" height="1400" style="vertical-align: -700;" viewBox="-1500 -30500 32000 61000" role="img" focusable="false" aria-labelledby="MathJax-SVG-1-Title">
 
-<title id="MathJax-SVG-1-Title">{\displaystyle {\begin{aligned}\\\ \ \mathbf {APCA} \mathbf {\bullet W3} \ \ &amp;\mathbf {\scriptstyle version\ {0.1.7}\ {developed\ for\ WCAG\ 3\ contrast\ guidelines}} \\[0.66ex]{\scriptstyle Using:}\quad \quad \quad \quad &amp;\\\ \ {APCA}\ Contr&amp;ast\ {Prediction\ Equation\ \ 0.0.98G-4g-base}\\\\Result:\ &amp;{\begin{bmatrix}\hline {\scriptstyle Lightness\ Contrast}\\\quad L\!^{c}=\ S_{apc}\ {\boldsymbol {\times }}\ 100\quad \\\hline \end{bmatrix}}\\\\\textstyle Where:\quad &amp;\\\hline {\scriptstyle Clamp\ Mi}&amp;{\scriptstyle nimum\ Contrast\ Then\ Offset}\\[1.25ex]S_{apc}=&amp;{\begin{cases}0.0\ \ &amp;\vert C\vert &lt;P_{out}\\C-W_{offset}\ \ &amp;\ C\ &gt;0\\C+W_{offset}\ \ &amp;\ C\ &lt;0\\\end{cases}}\\\hline {\scriptstyle Clamp\ No}&amp;{\scriptstyle ise\ Then\ Scale}\\[1.25ex]C=&amp;{\begin{cases}0.0\ \ &amp;{\bigg \vert }Y_{bg}-Y_{txt}{\bigg \vert }&lt;P_{in}\\S_{norm}\times R_{scale}\ \ &amp;\ Y_{txt}&lt;Y_{bg}\\S_{rev}\times R_{scale}\ \ &amp;\ Y_{txt}&gt;Y_{bg}\\\end{cases}}\\\hline {\textstyle Find\ }&amp;{\textstyle Perceptual\ Lightness\ Difference}\\[0.75ex]&amp;{\scriptstyle Normal\ Polarity\ (dark\ text/light\ bg)}\\S_{norm}=&amp;\ Y_{bg}^{0.56}-Y_{txt}^{0.57}\quad \ _{Normal:\ Y_{bg}\ &gt;\ Y_{txt}}\\[0.75ex]&amp;{\scriptstyle Reverse\ Polarity\ (light\ text/dark\ bg)}\\S_{rev}=&amp;\ Y_{bg}^{0.65}-Y_{txt}^{0.62}\quad \ _{Reverse:\ Y_{bg}\ &lt;\ Y_{txt}}\\\hline {\scriptstyle Soft\ Clam}&amp;{\scriptstyle p\ Black\ Levels}\\[1.25ex]Y_{txt}=&amp;\ f_{clamp}(Y)\quad _{color\ of\ the\ text,\ symbol,\ or\ object.}^{where\ Y\ is\ derived\ from\ the}\\[1.1ex]Y_{bg}=&amp;\ f_{clamp}(Y)\quad _{color\ used\ for\ the\ background.}^{where\ Y\ is\ derived\ from\ the}\\[0.66ex]f_{clamp}(Y_{c})=&amp;{\begin{cases}Y_{c}\ \ &amp;Y_{c}&gt;=B_{thrsh}\\Y_{c}+{\big (}B_{thrsh}-Y_{c}{\big )}^{Bexp}&amp;Y_{c}&lt;B_{thrsh}\\\end{cases}}\\\hline {\scriptstyle Constants}&amp;{\scriptstyle \ for\ Clamps\ and\ Scalers}\\[1.25ex]&amp;{\begin{aligned}B_{exp}=&amp;\ 1.414&amp;R_{scale}=&amp;\ 1.14\\B_{thresh}=&amp;\ 0.022&amp;W_{offset}=&amp;\ 0.027\\P_{in}=&amp;\ 0.0005&amp;P_{out}=&amp;\ 0.1\\\end{aligned}}\\\hline {\scriptstyle Estimate\ }&amp;{\scriptstyle Screen\ Luminance}\\[1.25ex]\definecolor {DarkGreen}{rgb}{0,0.35,0}\definecolor {DarkRed}{rgb}{0.6,0,0}Y=\textstyle \sum &amp;{\begin{cases}{\color {DarkRed}(\mathbf {R} ^{\prime }\div 255.0)^{2.4}\times 0.2126729}\\{\color {DarkGreen}(\mathbf {G} ^{\prime }\div 255.0)^{2.4}\times 0.7151522}\\{\color {Blue}(\mathbf {B} ^{\prime }\div 255.0)^{2.4}\times 0.0721750}\\\end{cases}}\\[1.25ex]{\{\color {DarkRed}R^{\prime },\color {DarkGreen}G^{\prime },\color {Blue}B^{\prime }\}}&amp;\ {\in }\ \mathbf {s} RGB\\\hline \\\ GitHubRepo&amp;\Rrightarrow \mathrm {https:\!//apcaw3.myndex.com} \\[0.75ex]\\\end{aligned}}}</title>
+<title id="MathJax-SVG-1-Title">{\displaystyle {\begin{aligned}\\\ \ \mathbf {APCA} \mathbf {\bullet W3} \ \ &amp;\mathbf {\scriptstyle version\ {0.1.7}\ {developed\ for\ WCAG\ 3\ contrast\ guidelines}} \\[0.66ex]{\scriptstyle Using:}\quad \quad \quad \quad &amp;\\\ \ {APCA}\ Contr&amp;ast\ {Prediction\ Equation\ \ 0.0.98G-4g-base}\\\\Result:\ &amp;{\begin{bmatrix}\hline {\scriptstyle Lightness\ Contrast}\\\quad L\!^{c}=\ S_{apc}\ {\boldsymbol {\times }}\ 100\quad \\\hline \end{bmatrix}}\\\\\textstyle Where:\quad &amp;\\\hline {\scriptstyle Clamp\ Mi}&amp;{\scriptstyle nimum\ Contrast\ Then\ Offset}\\[1.25ex]S_{apc}=&amp;{\begin{cases}0.0\ \ &amp;\vert C\vert &lt;P_{out}\\C-W_{offset}\ \ &amp;\ C\ &gt;0\\C+W_{offset}\ \ &amp;\ C\ &lt;0\\\end{cases}}\\\hline {\scriptstyle Clamp\ No}&amp;{\scriptstyle ise\ Then\ Scale}\\[1.25ex]C=&amp;{\begin{cases}0.0\ \ &amp;{\bigg \vert }Y_{bg}-Y_{txt}{\bigg \vert }&lt;P_{in}\\S_{norm}\times R_{scale}\ \ &amp;\ Y_{txt}&lt;Y_{bg}\\S_{rev}\times R_{scale}\ \ &amp;\ Y_{txt}&gt;Y_{bg}\\\end{cases}}\\\hline {\textstyle Find\ }&amp;{\textstyle Perceptual\ Lightness\ Difference}\\[0.75ex]&amp;{\scriptstyle Normal\ Polarity\ (dark\ text/light\ bg)}\\S_{norm}=&amp;\ Y_{bg}^{0.56}-Y_{txt}^{0.57}\quad \ _{Normal:\ Y_{bg}\ &gt;\ Y_{txt}}\\[0.75ex]&amp;{\scriptstyle Reverse\ Polarity\ (light\ text/dark\ bg)}\\S_{rev}=&amp;\ Y_{bg}^{0.65}-Y_{txt}^{0.62}\quad \ _{Reverse:\ Y_{bg}\ &lt;\ Y_{txt}}\\\hline {\scriptstyle Soft\ Clam}&amp;{\scriptstyle p\ Black\ Levels}\\[1.25ex]Y_{txt}=&amp;\ f_{clamp}(Y)\quad _{color\ of\ the\ text,\ symbol,\ or\ object.}^{where\ Y\ is\ derived\ from\ the}\\[1.1ex]Y_{bg}=&amp;\ f_{clamp}(Y)\quad _{color\ used\ for\ the\ background.}^{where\ Y\ is\ derived\ from\ the}\\[0.66ex]f_{clamp}(Y_{c})=&amp;{\begin{cases}Y_{c}\ \ &amp;Y_{c}&gt;=B_{thrsh}\\Y_{c}+{\big (}B_{thrsh}-Y_{c}{\big )}^{Bexp}&amp;Y_{c}&lt;B_{thrsh}\\\end{cases}}\\\hline {\scriptstyle Constants}&amp;{\scriptstyle \ for\ Clamps\ and\ Scalers}\\[1.25ex]&amp;{\begin{aligned}B_{exp}=&amp;\ 1.414&amp;R_{scale}=&amp;\ 1.14\\B_{thresh}=&amp;\ 0.022&amp;W_{offset}=&amp;\ 0.027\\P_{in}=&amp;\ 0.0005&amp;P_{out}=&amp;\ 0.1\\\end{aligned}}\\\hline {\scriptstyle Estimate\ }&amp;{\scriptstyle Screen\ Luminance}\\[1.25ex]\definecolor {DarkGreen}{rgb}{0,0.35,0}\definecolor {DarkRed}{rgb}{0.6,0,0}Y_s=\textstyle \sum &amp;{\begin{cases}{\color {DarkRed}(\mathbf {R} ^{\prime }\div 255.0)^{2.4}\times 0.2126729}\\{\color {DarkGreen}(\mathbf {G} ^{\prime }\div 255.0)^{2.4}\times 0.7151522}\\{\color {Blue}(\mathbf {B} ^{\prime }\div 255.0)^{2.4}\times 0.0721750}\\\end{cases}}\\[1.25ex]{\{\color {DarkRed}R^{\prime },\color {DarkGreen}G^{\prime },\color {Blue}B^{\prime }\}}&amp;\ {\in }\ \mathbf {s} RGB\\\hline \\\ GitHubRepo&amp;\Rrightarrow \mathrm {https:\!//apcaw3.myndex.com} \\[0.75ex]\\\end{aligned}}}</title>
 <defs aria-hidden="true">
 <path stroke-width="1" id="E1-MJMAINB-41" d="M296 0Q278 3 164 3Q58 3 49 0H40V62H92Q144 62 144 64Q388 682 397 689Q403 698 434 698Q463 698 471 689Q475 686 538 530T663 218L724 64Q724 62 776 62H828V0H817Q796 3 658 3Q509 3 485 0H472V62H517Q561 62 561 63L517 175H262L240 120Q218 65 217 64Q217 62 261 62H306V0H296ZM390 237L492 238L440 365Q390 491 388 491Q287 239 287 237H390Z"/>
 <path stroke-width="1" id="E1-MJMAINB-50" d="M400 0Q376 3 226 3Q75 3 51 0H39V62H147V624H39V686H253Q435 686 470 685T536 678Q585 668 621 648T675 605T705 557T718 514T721 483T718 451T704 409T673 362T616 322T530 293Q500 288 399 287H304V62H412V0H400ZM553 475Q553 554 537 582T459 622Q451 623 373 624H298V343H372Q457 344 480 350Q527 362 540 390T553 475Z"/>
@@ -174,7 +174,7 @@
  <use xlink:href="#E1-MJMATHI-74" x="5609" y="0"/>
  <use xlink:href="#E1-MJMATHI-72" x="5971" y="0"/>
 </g>
-<g transform="translate(2610,21550)">
+<g transform="translate(1410,21350) scale(1.2)">
  <use xlink:href="#E1-MJMATHI-52" x="0" y="0"/>
  <use xlink:href="#E1-MJMATHI-65" x="759" y="0"/>
  <use xlink:href="#E1-MJMATHI-73" x="1226" y="0"/>
@@ -313,7 +313,10 @@
  <use transform="scale(0.707)" xlink:href="#E1-MJMATHI-65" x="3710" y="0"/>
 </g>
 <g transform="translate(3468,-21849)">
- <use xlink:href="#E1-MJMATHI-59" x="0" y="0"/>
+ <use xlink:href="#E1-MJMATHI-59" x="-100" y="0"/>
+
+ <use transform="scale(0.9)" xlink:href="#E1-MJMATHI-73" x="440" y="-250"/>
+
  <use xlink:href="#E1-MJMAIN-3D" x="1041" y="0"/>
  <use xlink:href="#E1-MJSZ1-2211" x="2097" y="0"/>
 </g>
@@ -486,7 +489,7 @@
  <use xlink:href="#E1-MJMATHI-65" x="17835" y="0"/>
 </g>
 </g>
-<g transform="translate(0,21550)">
+<g transform="translate(-1000,21250) scale(1.3)">
  <use xlink:href="#E1-MJSZ4-5B"/>
 <g transform="translate(583,0)">
 <g transform="translate(275,0)">
@@ -533,8 +536,8 @@
 </g>
 </g>
 </g>
-<line stroke-linecap="square" stroke-width="75" y2="37" y1="37" x1="37" x2="9653" transform="translate(0,1693)"/>
-<line stroke-linecap="square" stroke-width="75" y2="37" y1="37" x1="37" x2="9653" transform="translate(0,-1269)"/>
+<line stroke-linecap="square" stroke-width="75" y2="37" y1="37" x1="37" x2="9653" transform="translate(0,1673)"/>
+<line stroke-linecap="square" stroke-width="75" y2="37" y1="37" x1="37" x2="9653" transform="translate(0,-1249)"/>
 </g>
  <use xlink:href="#E1-MJSZ4-5D" x="10274" y="-1"/>
 </g>
@@ -1265,7 +1268,7 @@
  <use transform="scale(0.707)" xlink:href="#E1-MJMATHI-72" x="10368" y="0"/>
  <use transform="scale(0.707)" xlink:href="#E1-MJMATHI-73" x="10820" y="0"/>
 </g>
-<g transform="translate(0,-15977)">
+<g transform="translate(-3000,-15977)">
 <g transform="translate(167,0)">
 <g transform="translate(-11,0)">
 <g transform="translate(961,1344)">
@@ -1407,7 +1410,9 @@
  <use transform="scale(0.707)" xlink:href="#E1-MJMATHI-63" x="7626" y="0"/>
  <use transform="scale(0.707)" xlink:href="#E1-MJMATHI-65" x="8059" y="0"/>
 </g>
+
 <g transform="translate(0,-21849)">
+
 <g transform="translate(0,2089)">
  <use xlink:href="#E1-MJSZ4-23A7" x="0" y="-900"/>
 <g transform="translate(0,-974.9357158420796) scale(1,0.36635278405813365)">
@@ -1417,8 +1422,10 @@
 <g transform="translate(0,-2814.9013123087984) scale(1,0.36635278405813365)">
  <use xlink:href="#E1-MJSZ4-23AA"/>
 </g>
+
  <use xlink:href="#E1-MJSZ4-23A9" x="0" y="-2780"/>
 </g>
+
 <g transform="translate(1056,0)">
 <g transform="translate(-11,0)">
 <g transform="translate(0,1247)">
