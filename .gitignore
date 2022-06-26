@@ -1,6 +1,11 @@
 # Compiled class file
 *.class
 
+# OLD
+old*/
+XX_*
+*.*OLD
+
 # DEPRECATED
 DEPRECIATED/
 DEPRECATED/
