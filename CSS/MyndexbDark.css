@@ -334,7 +334,7 @@ color: var(--modeTextColor, #000);
   
       --modeBGcolor: #234;
       --modeTextColor: #dde8f8;
-      --modeBorderColor: var(--modeTextColor);
+      --modeBorderColor: #aac8d8;
       --modeTextShadow: #3337;
       --modeBoxShadow:  var(--modeTextShadow);
   
@@ -1161,6 +1161,10 @@ img.centered {
   border-radius: 0.75em;
   box-shadow: 0.125em 0.125em 0.25em #20a8;
   }
+
+.myndexButton.dib, a.myndexButton.dib, a.myndexButton.dib:link, a.myndexButton.dib:visited {
+  display: inline-block;
+}
 
 a.myndexButton.top {
   margin: 3.5em 0 0.5em;
