@@ -1194,9 +1194,9 @@ a.myndexButton.top {
   box-shadow: 3px 3px 8px #e900ff96;
   }
 
-.myndexButton.buttonRow {
+.myndexButton.buttonRow, a.myndexButton.buttonRow, a.myndexButton.buttonRow:link, a.myndexButton.buttonRow:visited  {
   display: inline-block;
-  max-width: 50%;
+  max-width: 45%;
   margin: 0.75em 0.75em 1em;
   }
 
