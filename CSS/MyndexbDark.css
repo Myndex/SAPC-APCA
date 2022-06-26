@@ -1196,11 +1196,14 @@ a.myndexButton.top {
 
 .myndexButton.buttonRow, a.myndexButton.buttonRow, a.myndexButton.buttonRow:link, a.myndexButton.buttonRow:visited  {
   display: inline-block;
-  margin: 0.5em 1em;
-  padding-left: 0.75em;
-  padding-right: 0.75em;
+  margin: 0.6em 1em;
+  padding-left: 1em;
+  padding-right: 1em;
   }
 
+.myndexButton.buttonRow + footer, a.myndexButton.buttonRow + footer  {
+  margin-top: 1em;
+  }
 
 /* for pop up dialog */
 
