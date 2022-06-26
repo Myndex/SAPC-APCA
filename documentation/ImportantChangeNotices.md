@@ -4,6 +4,9 @@ layout: simple
 
 ## SAPC/APCA CURRENT VERSION: 0.0.98G-4g-lut3 Constants: 4g
 
+### May 28 2022
+Font lookup table revised, still for 0.98G 4g constants. General (all use case) lookup table.
+
 ### January 11 2022
 Font lookup table revised, still for 4G constants. Now available as arrays in the DATA folder.
 
@@ -26,8 +29,8 @@ Updated font LUT, and adding a **0.** for semantic versioning (0.0.98G)
 
 **IMPORTANT:** If you are making a tool to predict contrast for the new W3 standards for Visual Contrast, ***use only the files named APCA.***
 
-## Change Notice October 1, 2021 01:00 GMT
-The new version of the basic APCA javascript file is uploaded, and the main directory readme.md has been updated with the lastest maths and code examples. Variable names and values have changed. The key constants (from March 2021) are:
+## Change Notice October 1, 2021 01:00 GMT (Februaru 15th constants)
+The new version of the basic APCA javascript file is uploaded, and the main directory readme.md has been updated with the lastest maths and code examples. Variable names and values have changed. The key constants have not changed since February 15, 2021, and they are:
 
     Exponents:      mainTRC: 2.4    normBG: 0.56     normTXT: 0.57      revTXT: 0.62     revBG: 0.65
     Scalers:        Scale: 1.14     loBoWthresh: 0.035991     loBoWoffset: 0.027         loBoWfactor: 27.7847239587675	
