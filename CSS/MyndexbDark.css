@@ -348,10 +348,10 @@ color: var(--modeTextColor, #000);
     /*  HEADINGS  */
 
       --modeH1color: #83a5ffba;
-        --modeH2color: var(--modeH1color);
-        --modeH3color: var(--modeH1color);
-        --modeH4color: var(--modeH1color);
-        --modeH5color: var(--modeH1color);
+        --modeH2color: #83a8ff;
+        --modeH3color: var(--modeH2color);
+        --modeH4color: var(--modeH2color);
+        --modeH5color: var(--modeH2color);
   
       --modeListColor:  var(--modeTextAlt);
       --modeQuoteColor:  var(--modeTextAlt);
