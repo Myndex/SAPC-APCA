@@ -17,10 +17,6 @@
 <a href="https://twitter.com/MyndexResearch">
 <img src="https://badgen.net/badge/@/MyndexResearch?icon=twitter" alt="twitter" />
 </a> &nbsp;&nbsp;
-
-<a href="">
-<img src="https://badgen.net/badge/JS/Vanilla/889900" alt="CSS level 3" />
-</a>
 </p>
 
 
@@ -67,3 +63,7 @@ Try out the Bridge PCA tool at Myndex
 Color insensitive vision simulation (aka colorblind). Includes deuteranopia, protanopia, tritanopia, and blue cone monochromacy/achromatopsia.
 ### [Myndex Perception Research](https://www.myndex.com/WEB/Perception)
 Demos and Experiments relating to the project.
+
+<a href="">
+<img src="https://badgen.net/badge/JS/Vanilla/889900" alt="CSS level 3" />
+</a>
