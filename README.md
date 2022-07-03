@@ -33,7 +33,7 @@
 
 </p>
 
-# APC<span class="flipH">A</span> GitHub Repo
+# [APC<span class="flipH">A</span> GitHub Repo](https://github.com/Myndex/SAPC-APCA)
 
 ## Welcome! 
 APCA is the **Accessible Perceptual Contrast Algorithm**, a new way to predict contrast for text and non-text for content on self illuminated displays.
