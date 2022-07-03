@@ -21,7 +21,7 @@
 
 <a href="">
 <img src="https://badgen.net/badge/JS/Vanilla/889900" alt="Plain Vanilla JS" />
-</a>
+</a> &nbsp;
   
 <a href="https://git.myndex.com">
 <img src="https://badgen.net/badge/Myndex/Research/3300aa" alt="Myndex" />
