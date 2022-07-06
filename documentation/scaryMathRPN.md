@@ -2,46 +2,45 @@
 
 $$
 \begin{align} \\
-\ \ \mathbf{APCA} \mathbf{\bullet W3}\ \  &\mathbf{\scriptstyle  version\  { 0.1.7}\ { developed\  for\  WCAG\  3\  contrast\  guidelines}} \\
-{\scriptstyle Using:} \quad  \quad  \quad \quad & \\
-\ \ {APCA}\   Contr&ast\ {Prediction\ Equation\ \ 0.0.98G-4g-base} \\
-\\
-Result:\  & \begin{Bmatrix} {\scriptstyle Lightness\ Contrast} \\
-\quad L^c  = \ S_{apc} \ \boldsymbol\times \ 100 \quad \\
-\end{Bmatrix} \\
+\mathbf{APCA}\ & \mathbf{\bullet \ W3}\ \ \mathbf{\scriptstyle  version\  { 0.1.9}\ { developed\  for\  WCAG\  3\  contrast\  guidelines}} \\
+{\scriptstyle Using:} & {\scriptstyle APCA\ Contrast\ Prediction\ Equation\ \ 0.0.98G-4g-base} \\\\[1.25ex]
+Result: \quad &
+ \begin{Bmatrix} {\scriptstyle Lightness\ Contrast} \\
+ \quad L^c  = \ S_{apc} \ \boldsymbol\times \ 100 \quad \\
+ \end{Bmatrix} \\
 \\
 \textstyle Where: \quad & \\\\[1.25ex]
 \hline
-{\scriptstyle Clamp\ Mi}&{\scriptstyle nimum\ Contrast\ Then\ Offset} \\
+{\scriptstyle Clamp\ Minimu}&{\scriptstyle m\ Contrast\ Then\ Offset} \\
 S_{apc} = & \begin{cases}
   0.0 \  \                                       &\vert C \vert < P_{out} \\
   C - W_{offset} \ \                                  &\  C\ > 0  \\
   C + W_{offset} \ \                                  &\  C\ < 0 \\
 \end{cases} \\\\[1.25ex]
 \hline 
-{\scriptstyle Clamp\ No}&{\scriptstyle ise\ Then\ Scale} \\
+{\scriptstyle Clamp\ Noise\ T}&{\scriptstyle hen\ Scale} \\
 C = &\begin{cases}
-  0.0  \ \                      &\bigg \vert Y_{bg} - Y_{txt} \bigg \vert  < P_{in} \\
+  0.0  \ \                      &\Big \vert Y_{bg} - Y_{txt} \Big \vert  < P_{in} \\
   S_{norm} \times R_{scale}  \ \  &\ Y_{txt}  < Y_{bg}  \\
   S_{rev}  \times R_{scale}  \ \  &\ Y_{txt}  > Y_{bg}  \\
-\end{cases}  \\\\[1.25ex]
+\end{cases}  \\\\[2.25ex]
 \hline 
-{\textstyle Find\ Perc}&{\textstyle eptual\ Lightness\ Difference} \\
+{\textstyle Find\ Perce}&{\textstyle ptual\ Lightness\ Difference} \\
 &{\scriptstyle Normal\ Polarity\ (dark\  text/light\ bg)} \\
-S_{norm} = &\ Y_{bg}^{0.56} - Y_{txt}^{0.57} \quad\ _{Normal:\ Y_{bg}\ >\ Y_{txt}} \\
+S_{norm} = &\ Y_{bg}^{0.56} - Y_{txt}^{0.57} \quad_{Normal:\ Y_{bg}\ >\ Y_{txt}} \\
 &{\scriptstyle Reverse\ Polarity\ (light\  text/dark\ bg)} \\
-S_{rev} = &\ Y_{bg}^{0.65} - Y_{txt}^{0.62}  \quad\ _{Reverse:\ Y_{bg}\ <\ Y_{txt}}  \\\\[1.25ex]
+S_{rev} = &\ Y_{bg}^{0.65} - Y_{txt}^{0.62}  \quad_{Reverse:\ Y_{bg}\ <\ Y_{txt}}  \\\\[2ex]
 \hline
-{\scriptstyle Soft\ Clam}&{\scriptstyle p\ Black\ Levels} \\
-Y_{txt} = &\ f_{clamp}(Y) \quad_{color\ of\ the\ text,\ symbol,\ or\ object.}^{where\ Y\ is\ derived\ from\  the} \\
-Y_{bg} = &\ f_{clamp}(Y) \quad_{color\ used\ for\ the\ background.}^{where\ Y\ is\ derived\ from\  the}
+{\scriptstyle Soft\ Clamp\ Bla}&{\scriptstyle ck\ Levels} \\
+Y_{txt} = &\ f_{clamp}(Y_s) \quad_{color\ of\ the\ text,\ symbol,\ or\ object.}^{where\ Y_s\ is\ derived\ from\  the} \\
+Y_{bg} = &\ f_{clamp}(Y_s) \quad_{color\ used\ for\ the\ background.}^{where\ Y_s\ is\ derived\ from\  the}
 \\
 f_{clamp}(Y_c) = &\begin{cases}
   Y_c  \ \                        & Y_c  >=  B_{thrsh} \\
   Y_c + \big ( B_{thrsh} - Y_c \big )^{Bexp} & Y_c  <  B_{thrsh} \\
 \end{cases}  \\\\[1.25ex]
 \hline
-{\scriptstyle Constants}&{\scriptstyle \ for\ Clamps\ and\ Scalers} \\
+{\scriptstyle Constants\ for\ }&{\scriptstyle Clamps\ and\ Scalers} \\
 B_{exp} =&\  1.414 \\
 R_{scale} = & \  1.14 \\
 B_{thresh} =&\  0.022 \\
@@ -60,7 +59,8 @@ Y_s = \displaystyle\sum &\begin{cases}
 \hline 
 \  GitHub Repo & \Rrightarrow \mathrm https://apcaw3.myndex.com  \\
 \\
-\end{align}$$
+\end{align}
+$$
 
 
 
