@@ -2,22 +2,21 @@
 
 **Here is some math!**
 
+This sentence uses `$` delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$
+
+
 ```math
 \sqrt{3}
 ```
 
+$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
 
 
-```math
-\begin{align}
-\\
-\ \ \mathbf{APCA} \mathbf{\bullet W3}\ \  &\mathbf{\scriptstyle  version\  { 0.1.7}\ { developed\  for\  WCAG\  3\  contrast\  guidelines}} \\[0.66ex]
-{\scriptstyle Using:} \quad  \quad  \quad \quad & \\
-\ \ {APCA}\   Contr&ast\ {Prediction\ Equation\ \ 0.0.98G-4g-base} \\
-\\
-Result:\  & \begin{bmatrix} \hline
-{\scriptstyle Lightness\ Contrast} \\
-\quad L\!^c  = \ S_{apc} \ \boldsymbol\times \ 100 \quad \\
+
+
+$$\begin{align}\\ \ \ \mathbf{APCA} \mathbf{\bullet W3}\ \  &\mathbf{\scriptstyle  version\  { 0.1.7}\ { developed\  for\  WCAG\  3\  contrast\  guidelines}} \\[0.66ex]
+{\scriptstyle Using:} \quad  \quad  \quad \quad & \\ \ \ {APCA}\   Contr&ast\ {Prediction\ Equation\ \ 0.0.98G-4g-base} \\ \\
+Result:\  & \begin{bmatrix} \hline {\scriptstyle Lightness\ Contrast} \\ \quad L\!^c  = \ S_{apc} \ \boldsymbol\times \ 100 \quad \\
 \hline \end{bmatrix} \\
 \\
 \textstyle Where: \quad & \\
@@ -72,8 +71,8 @@ Y_s = \textstyle \sum &\begin{cases}
 \hline \\
 \  GitHub Repo & \Rrightarrow \mathrm{https:\!//apcaw3.myndex.com}  \\[0.75ex]
 \\
-\end{align}
-```
+\end{align}$$
+
 
 
 Copyright © 2019-2022 by Andrew Somers. All Rights Reserved.
