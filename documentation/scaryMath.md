@@ -12,8 +12,6 @@ This sentence uses `$` delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$
 $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
 
 
-
-
 $$\begin{align}\\ \ \ \mathbf{APCA} \mathbf{\bullet W3}\ \  &\mathbf{\scriptstyle  version\  { 0.1.7}\ { developed\  for\  WCAG\  3\  contrast\  guidelines}} \\[0.66ex]
 {\scriptstyle Using:} \quad  \quad  \quad \quad & \\ \ \ {APCA}\   Contr&ast\ {Prediction\ Equation\ \ 0.0.98G-4g-base} \\ \\
 Result:\  & \begin{bmatrix} \hline {\scriptstyle Lightness\ Contrast} \\ \quad L\!^c  = \ S_{apc} \ \boldsymbol\times \ 100 \quad \\
@@ -45,7 +43,6 @@ S_{rev} = &\ Y_{bg}^{0.65} - Y_{txt}^{0.62}  \quad\ _{Reverse:\ Y_{bg}\ <\ Y_{tx
 Y_{txt} = &\ f_{clamp}(Y) \quad _{color\ of\ the\ text,\ symbol,\ or\ object.}^{where\ Y\ is\ derived\ from\  the} \\[1.1ex]
 Y_{bg} = &\ f_{clamp}(Y) \quad _{color\ used\ for\ the\ background.}^{where\ Y\ is\ derived\ from\  the}
 \\[0.66ex]
-
 f_{clamp}(Y_c) = &\begin{cases}
   Y_c  \ \                        & Y_c  >=  B_{thrsh} \\
   Y_c + \big ( B_{thrsh} - Y_c \big )^{Bexp} & Y_c  <  B_{thrsh} \\
@@ -56,9 +53,7 @@ f_{clamp}(Y_c) = &\begin{cases}
 B_{exp} =&\  1.414  &  R_{scale} = & \  1.14 \\
 B_{thresh} =&\  0.022 &  W_{offset} = & \  0.027 \\
 P_{in} =&\  0.0005 & P_{out} = & \  0.1 \\
-\end{align}\\
-
-\hline
+\end{align}\\ \hline
 {\scriptstyle Estimate\ }&{\scriptstyle Screen\ Luminance} \\[1.25ex]
 \definecolor{DarkGreen}{rgb}{0,0.35,0}
 \definecolor{DarkRed}{rgb}{0.6,0,0}
