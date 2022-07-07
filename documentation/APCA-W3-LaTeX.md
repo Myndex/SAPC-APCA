@@ -1,7 +1,8 @@
 # LaTeX of the APCA-W3 Base Formula
+The following is a trial of GitHub's new LaTeX and MathJax support. As you can see there ARE bugs at the moment.
 
-$$
-\begin{align} \\
+----
+$$\begin{align} \\
 \mathbf{APCA}\ & \mathbf{\bullet \ W3}\ \ \mathbf{\scriptstyle version\ { 0.1.9}\ { developed\ for\ WCAG\  3\ contrast\ guidelines}} \\
 {\scriptstyle Using:}\ &\ \mathit{\scriptstyle APCA\ Contrast\ Prediction\ Equation\ \ 0.0.98G-4g-base-W3} \\\\[4ex]
 &Perceptual\ Lightness\ Contrast = L^c \\\\[2.5ex]
@@ -20,7 +21,7 @@ S_{apc} = &\begin{cases}
 \big(\ Y_{bg}^{Rbg} - Y_{txt}^{Rtx}\ \big) \times W_{scale} \ \ &if\ \ Y_{bg} < Y_{txt}\ \Big(\ ^{\  Reverse\ Polarity}\_{(light\ text/dark\ bg)} \Big) \\
 \end{cases}  \\\\[2.25ex]
 \hline
-{\scriptstyle Soft\ Cl}&{\scriptstyle ip\ \\&amp;\ Clamp\ Black\ Levels} \\\\[1ex]
+{\scriptstyle Soft\ Cli} & {\scriptstyle p\ \\&amp;\ Clamp\ Black\ Levels} \\\\[1ex]
 Y_{txt}& = \ f_{softclp}(Ys) \quad_{of\ the\ text,\ symbol,\ or\ object.}^{Where\ Ys\ is\ derived\ from\ the\ color} \\\\[1.4ex]
 Y_{bg}& = \ f_{softclp}(Ys) \quad_{used\ for\ the\ adjacent\ background.}^{Where\ Ys\ is\ derived\ from\ the\ color} \\\\[1.4ex]
 Y_{fld}& = \ \mathrm{\scriptstyle Unused\ in\ W3\ version} \\\\[2ex]
@@ -30,7 +31,7 @@ f_{softclp}&(Y_c) = \begin{cases}
   Y_c   \ \quad                                \ &Otherwise \\
 \end{cases}  \\\\[1ex]
 \hline
-{\scriptstyle Estim}&{\scriptstyle ate\ Screen\ Luminance\ Using\ sRGB\ Coefficients} \\\\[1ex]
+{\scriptstyle Estimat} & {\scriptstyle e\ Screen\ Luminance\ Using\ sRGB\ Coefficients} \\\\[1ex]
 Ys &= \displaystyle\sum \begin{cases} 
 {\color{RubineRed}(\mathbf R^\prime \div 255.0)^{S_{TRC}} \times 0.2126729 } \\
 {\color{YellowGreen}(\mathbf G^\prime \div 255.0)^{S_{TRC}} \times 0.7151522} \\
@@ -47,17 +48,17 @@ S_{TRC} & = 2.4 \quad & \quad  B_{clip} & = \  1.414 \\
    Rbg & = 0.65 \quad & \quad  W_{clamp} & = \  0.1  \\
 \end{alignedat}  \\\\[1ex]
 \hline 
-IN&PUT:\ \ {\color{RubineRed}R^\prime}, G^\prime, {\color{Cerulean}B^\prime}\ \mathbf{\in\ sRGB} \ \ (Range: 0.0-255.0) \\\\[0.5ex]
+INPU&T:\ \ {\color{RubineRed}R^\prime}, G^\prime, {\color{Cerulean}B^\prime}\ \mathbf{\in\ sRGB} \ \ (Range: 0.0-255.0) \\\\[0.5ex]
 \hline 
 & \mathit{\scriptscriptstyle Copyright\ ©\ 2019-2022\ by\ Andrew\ Somers.\ All\ Rights\ Reserved.} \\
 \hline 
 \  Git&HubRepo\  \Rrightarrow\  \mathrm{https://apcaw3.myndex.com}  \\
 \\
-\end{align}
-$$
+\end{align}$$
 
+----
 
-
+See: [git.myndex.com](https://git.myndex.com) for more.
 
 Copyright © 2019-2022 by Andrew Somers. All Rights Reserved.
   
