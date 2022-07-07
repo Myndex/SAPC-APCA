@@ -1,5 +1,5 @@
 # LaTeX of the APCA-W3 Base Formula
-The following is a trial of GitHub's new LaTeX and MathJax support. As you can see there ARE bugs at the moment.
+The following is a trial of GitHub's new LaTeX and MathJax support. As you can see there are some bugs at the moment (browser dependent??) and there are some missing features or commands.
 
 ----
 $$\begin{align} \\
@@ -33,9 +33,9 @@ f_{softclp}&(Y_c) = \begin{cases}
 \hline
 {\scriptstyle Estimat} & {\scriptstyle e\ Screen\ Luminance\ Using\ sRGB\ Coefficients} \\\\[1ex]
 Ys &= \displaystyle\sum \begin{cases} 
-{\color{RubineRed}(\mathbf R^\prime \div 255.0)^{S_{TRC}} \times 0.2126729 } \\
-{\color{YellowGreen}(\mathbf G^\prime \div 255.0)^{S_{TRC}} \times 0.7151522} \\
-{\color{Cerulean}(\mathbf B^\prime \div 255.0)^{S_{TRC}} \times 0.0721750} \\ 
+{\color{#faa}(\mathbf R^\prime \div 255.0)^{S_{TRC}} \times 0.2126729 } \\
+{\color{#6f6}(\mathbf G^\prime \div 255.0)^{S_{TRC}} \times 0.7151522} \\
+{\color{#8bf}(\mathbf B^\prime \div 255.0)^{S_{TRC}} \times 0.0721750} \\ 
 \end{cases}  \\\\[1ex]
 \hline 
 Const&ants\ for\  \mathit0\mathit.\mathit0\mathit.\mathit9\mathit8G-\mathit4g-sRGB: \\
@@ -48,7 +48,7 @@ S_{TRC} & = 2.4 \quad & \quad  B_{clip} & = \  1.414 \\
    Rbg & = 0.65 \quad & \quad  W_{clamp} & = \  0.1  \\
 \end{alignedat}  \\\\[1ex]
 \hline 
-INPU&T:\ \ {\color{RubineRed}R^\prime}, G^\prime, {\color{Cerulean}B^\prime}\ \mathbf{\in\ sRGB} \ \ (Range: 0.0-255.0) \\\\[0.5ex]
+INPU&T:\ \ {\color{#faa}R^\prime}, G^\prime, {\color{#8bf}B^\prime}\ \mathbf{\in\ sRGB} \ \ (Range: 0.0-255.0) \\\\[0.5ex]
 \hline 
 & \mathit{\scriptscriptstyle Copyright\ ©\ 2019-2022\ by\ Andrew\ Somers.\ All\ Rights\ Reserved.} \\
 \hline 
@@ -58,7 +58,7 @@ INPU&T:\ \ {\color{RubineRed}R^\prime}, G^\prime, {\color{Cerulean}B^\prime}\ \m
 
 ----
 
-See: [git.myndex.com](https://git.myndex.com) for more.
+For more on APCA, please see: [git.myndex.com](https://git.myndex.com) for more.
 
 Copyright © 2019-2022 by Andrew Somers. All Rights Reserved.
   
