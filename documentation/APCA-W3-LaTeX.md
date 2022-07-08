@@ -1,7 +1,3 @@
----
-layout: simple
----
-
 # LaTeX of the APCA-W3 Base Formula
 The following is a trial of GitHub's new LaTeX and MathJax support. As you can see there are some bugs at the moment (browser dependent??) and there are some missing features or commands.
 
