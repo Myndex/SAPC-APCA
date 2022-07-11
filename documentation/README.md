@@ -26,8 +26,39 @@
 # APCA • SAPC • SACAM PRIMARY REPOSITORY
 Please make all comments or discussions here and not in the satellite repositories.
 
-## _Accessible_ Perceptual Contrast Algorithm
+## Accessible Perceptual Contrast Algorithm
 (Formerly the Advanced Perceptual Contrast Algorithm)
+
+### Source and Data
+- JS arrays and tab-delimited data of the font Lookup tables is [in the data folder](https://github.com/Myndex/SAPC-APCA/data/).
+- The APCA and BridgePCA web-tools are  [in the WEBTOOLS folder](https://github.com/Myndex/SAPC-APCA/WEBTOOLS/).
+- There are ported versions [in the src/ported folder](https://github.com/Myndex/SAPC-APCA/src/ported/).
+
+## _DOCUMENTATION_
+- [**Main Readme Doc** (THIS, HTML version)](https://git.apcacontrast.com/documentation/README)
+
+### _Simple Overview, Quickstart, and FAQ _
+- [**Why APCA?**](https://git.apcacontrast.com/documentation/WhyAPCA) A basic overview
+- [**APCA in a nutshell**](https://git.apcacontrast.com/documentation/APCA_in_a_Nutshell) The minimum user guide
+- [**APCA FAQ**](https://git.apcacontrast.com/documentation/APCA_FAQ)
+
+### _Sciencey Stuff!_
+- [Regarding Exponents](https://git.apcacontrast.com/documentation/regardingexponents)
+- [Standard Observer Model](https://git.apcacontrast.com/documentation/StandardObserverModel)
+- [Visual Contrast Draft Whitepaper](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup/Whitepaper) (Work in progress)
+
+### _For Developers_
+- [RepoList](https://git.apcacontrast.com/documentation/repoList)
+- [ImportantChangeNotices](https://git.apcacontrast.com/documentation/ImportantChangeNotices)
+- [How to Contribute](https://git.apcacontrast.com/documentation/CONTRIBUTING)
+- [License](https://git.apcacontrast.com/documentation/LICENSE)
+
+### _Related Repositories_
+- [**_APCA W3 Repository_**](https://github.com/Myndex/apca-w3) The W3 version for web content
+- [**_Bridge PCA Repository_**](https://github.com/Myndex/bridge-pca) Bridge&nbsp;PCA - the WCAG&nbsp;2 compatible version
+- [**_Color Parsley Repository_**](https://github.com/Myndex/colorparsley) Fast and easy color string parsing — a NodeJS dependency for many of the SAPC libraries.
+
+### THIS REPOSITORY, [and apca-w3](https://github.com/Myndex/apca-w3) ARE THE ONLY CANONICAL SOURCES OF APPROVED APCA CODE.
 
 ## Bridge PCA
 Do you want to improve readability, but you are forced to used WCAG 2 contrast to the letter? Then Bridge PCA is for you. It is backward compatible with WCAG 2, but using APCA technology.
@@ -106,26 +137,6 @@ Latest Lookup Table: May 27 2022
 
 <img width="400" alt="APCA Lookup Table" src="../images/APCAlookupByContrast.jpeg">
 
-### Source and Data
-- JS arrays and tab-delimited data of the font Lookup tables is [in the data folder](/data/).
-- The APCA and BridgePCA web-tools are  [in the WEBTOOLS folder](/WEBTOOLS/).
-- There are ported versions [in the src/ported folder](/src/ported/).
-
-### Documentation
-- [Why APCA?](/documentation/WhyAPCA.md)
-- [APCAinanutshell](/documentation/APCA_in_a_Nutshell.md)
-- [Main Readme Doc](/documentation/README.md)
-- [Standard Observer Model](/documentation/StandardObserverModel.md)
-- [RepoList](/documentation/repoList.md)
-- [ImportantChangeNotices](/documentation/ImportantChangeNotices.md)
-- [How to Contribute](/documentation/CONTRIBUTING.md)
-- [APCA FAQ](/documentation/APCA_FAQ.md)
-- [License](/documentation/LICENSE.md)
-
-### Related Repositories
-- [**_APCA W3 Repository_**](https://github.com/Myndex/apca-w3) The W3 version for web content
-- [**_Bridge PCA Repository_**](https://github.com/Myndex/bridge-pca) Bridge&nbsp;PCA - the WCAG&nbsp;2 compatible version
-- [**_Color Parsley Repository_**](https://github.com/Myndex/colorparsley) Fast and easy color string parsing — a NodeJS dependency for many of the SAPC libraries.
 
 ------
 
@@ -237,7 +248,10 @@ Being developed for use with future web standards for accessibility. Those stand
 ## OTHER RESOURCES
 
 ### _The Myndex [APCA Linktree_](https://linktr.ee/Myndex)
-- A bunch of [links](https://linktr.ee/Myndex) relating to APCA contrast and color. The more basic, plain language documents and articles at the top, and then lower on the link list, incresingly technical resources.
+- A small list of [links](https://linktr.ee/Myndex) relating to APCA contrast and color. The more basic, plain language documents and articles at the top, and then lower on the link list, incresingly technical resources.
+
+### The Myndex Color and Contrast [Resource Page]((https://git.myndex.com)
+- A much larger list than the linktree. How deep do you want to jump down this rabbit hole?
 
 ### [_Visual Contrast Subgroup Wiki_]: https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup
 - An informal and unofficial repository of information on vision, contrast, design, impairments, and readability at the [Visual Contrast Subgroup Wiki] which includes "Whitepaper In Progress" materials.
