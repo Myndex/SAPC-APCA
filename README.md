@@ -83,6 +83,15 @@ Smaller, selected link collection.
 ### [The SAPC APCA GitHub Main Repository](https://github.com/Myndex/SAPC-APCA#apca--sapc--sacam-primary-repository)
 You are here 🔽 this index page is served at the github repo.
 
+### [The APCA-W3 GitHub Repo](https://github.com/Myndex/apca-w3)
+Over there is the W3 licensed version, and it's the same as the published npm package.
+
+### [The Bridge-PCA GitHub Repo](https://github.com/Myndex/bridge-pca)
+The BridgePCA is backwards compatible with WCAG 2, and it's the same as the published npm package.
+
+### [The ColorParsley GitHub Repo](https://github.com/Myndex/colorparsley)
+ColorParsley is a micro library for auto parsing color strings of all kinds, also on npm.
+
 ---
 ## [APCA Contrast Calculator](https://www.myndex.com/APCA/)
 The canonical demo tool at Myndex
