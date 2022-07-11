@@ -41,11 +41,28 @@ APCA is the **Accessible Perceptual Contrast Algorithm**, a new way to predict c
 ### Questions? Ask in our [Discussions Forum](https://github.com/Myndex/SAPC-APCA/discussions)
 This is also where we discuss draft guidelines and proposals. Please post all comments or discussions here and not in the satellite repositories so they can be tracked and resolved.
 
+## _DOCUMENTATION_
+- [**Main Readme Doc**](https://git.apcacontrast.com/documentation/README) This page includes the math, code walkthroughs and links for developer related goodies. If you link to dive into the deep end, this is a good start.
+
+### _Simple Overview, Quickstart, and FAQ_
+These are intended for end users, and those interested in a plain language overview without a lot of the math & theory.
+- [**Why APCA?**](https://git.apcacontrast.com/documentation/WhyAPCA) A basic overview
+- [**APCA in a nutshell**](https://git.apcacontrast.com/documentation/APCA_in_a_Nutshell) The minimum user guide
+- [**APCA FAQ**](https://git.apcacontrast.com/documentation/APCA_FAQ)
+
+### _Sciency Stuff!_
+Maths! Vision Science! Photons on Parade!
+- [The base APCA-W3 formula](https://github.com/Myndex/SAPC-APCA/blob/master/documentation/APCA-W3-LaTeX.md) in LaTeX math for your viewing and calculating pleasure.
+- [Regarding Exponents](https://git.apcacontrast.com/documentation/regardingexponents) Is delta-gamma some kinda frat house? Nope... It's math.
+- [Standard Observer Model](https://git.apcacontrast.com/documentation/StandardObserverModel) The setting for a mathmatical eyeball.
+- [Visual Contrast Draft Whitepaper](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup/Whitepaper) Almost as tasty as a draft beer!
+
+
 <p align="center">
 <img width='220' alt="Poster: a picture of crash test dummies crashing out of a car, and text that says don't be a dummy! Stop using low contrast text. At the bottom it says APCA the world is reading" src='https://user-images.githubusercontent.com/42009457/161151275-7c4feea7-888a-43f1-a9c0-7504afaac258.png'>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img  width='207' alt='Smokey the bear saying  ONLY YOU CAN STOP LOW CONTRAST' src='https://user-images.githubusercontent.com/42009457/161151536-a0add333-161e-482d-a99a-d1d076c75daf.png'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img  width='193' alt='Uncle Sam saying I want you to use high contrast text' src='https://user-images.githubusercontent.com/42009457/161151222-74fb81af-f87b-4d7c-a41c-756e1ee3056f.png'> 
 <br>
 </p>
-  
+
 ---
 ### APCA [Resources, Articles, & Links](https://git.myndex.com)
 The main catalog of related articles, peer reviews, repositories, white papers, and more!
