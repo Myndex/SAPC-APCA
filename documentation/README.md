@@ -1,3 +1,6 @@
+---
+layout: simple
+---
 <p align="center">
  <img src="../images/APCAcolor4.png" width="640" alt="APCA The Revolution Will Be Readable"><br><br>
   
@@ -37,13 +40,16 @@ Please make all comments or discussions here and not in the satellite repositori
 ## _DOCUMENTATION_
 - [**Main Readme Doc** (THIS, HTML version)](https://git.apcacontrast.com/documentation/README)
 
-### _Simple Overview, Quickstart, and FAQ _
+### _Simple Overview, Quickstart, and FAQ_
+These are intended for end users, and those interested in a plain language overview without a lot of the math & theory.
 - [**Why APCA?**](https://git.apcacontrast.com/documentation/WhyAPCA) A basic overview
 - [**APCA in a nutshell**](https://git.apcacontrast.com/documentation/APCA_in_a_Nutshell) The minimum user guide
 - [**APCA FAQ**](https://git.apcacontrast.com/documentation/APCA_FAQ)
 
 ### _Sciencey Stuff!_
-- [Regarding Exponents](https://git.apcacontrast.com/documentation/regardingexponents)
+Maths! Vision Science! Photons on Parade!
+- [The base APCA-W3 formula](https://github.com/Myndex/SAPC-APCA/blob/master/documentation/APCA-W3-LaTeX.md) in LaTeX math for your viewing and calculating pleasure.
+- [Regarding Exponen- [Regarding Exponents](https://git.apcacontrast.com/documentation/regardingexponents)
 - [Standard Observer Model](https://git.apcacontrast.com/documentation/StandardObserverModel)
 - [Visual Contrast Draft Whitepaper](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup/Whitepaper) (Work in progress)
 
