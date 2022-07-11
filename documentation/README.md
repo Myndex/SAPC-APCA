@@ -256,7 +256,7 @@ Being developed for use with future web standards for accessibility. Those stand
 ### _The Myndex_ [_APCA Linktree_](https://linktr.ee/Myndex)
 - A small list of [links](https://linktr.ee/Myndex) relating to APCA contrast and color. The more basic, plain language documents and articles at the top, and then lower on the link list, incresingly technical resources.
 
-### _The Myndex Color and Contrast_ [_Resource Page_]((https://git.myndex.com)
+### _The Myndex Color and Contrast_ [_Resource Page_](https://git.myndex.com)
 - A much larger list than the linktree. How deep do you want to jump down this rabbit hole?
 
 ### [_Visual Contrast Subgroup Wiki_](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup)
