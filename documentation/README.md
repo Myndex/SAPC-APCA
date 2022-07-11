@@ -247,20 +247,18 @@ Being developed for use with future web standards for accessibility. Those stand
 
 ## OTHER RESOURCES
 
-### _The Myndex [APCA Linktree_](https://linktr.ee/Myndex)
+### _The Myndex_ [_APCA Linktree_](https://linktr.ee/Myndex)
 - A small list of [links](https://linktr.ee/Myndex) relating to APCA contrast and color. The more basic, plain language documents and articles at the top, and then lower on the link list, incresingly technical resources.
 
-### The Myndex Color and Contrast [Resource Page]((https://git.myndex.com)
+### _The Myndex Color and Contrast_ [_Resource Page_]((https://git.myndex.com)
 - A much larger list than the linktree. How deep do you want to jump down this rabbit hole?
 
-### [_Visual Contrast Subgroup Wiki_]: https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup
+### [_Visual Contrast Subgroup Wiki_](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup)
 - An informal and unofficial repository of information on vision, contrast, design, impairments, and readability at the [Visual Contrast Subgroup Wiki] which includes "Whitepaper In Progress" materials.
     - [Visual Contrast Whitepaper](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup/Whitepaper) (Work in progress)
     - [Resources: Glossary, Bibliography,](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup/Resources) and links to team member materials. Includes additional designer examples and guidance.
 
-<!--
-The [author's website](https://www.myndex.com/WEB/Perception) includes further background, including select experimental results and white-papers.
--->
+The [author's website](https://www.myndex.com/WEB/Perception) includes further background, including select experimental results and white-papers
 
 
 -----
