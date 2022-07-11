@@ -49,13 +49,13 @@ These are intended for end users, and those interested in a plain language overv
 ### _Sciencey Stuff!_
 Maths! Vision Science! Photons on Parade!
 - [The base APCA-W3 formula](https://github.com/Myndex/SAPC-APCA/blob/master/documentation/APCA-W3-LaTeX.md) in LaTeX math for your viewing and calculating pleasure.
-- [Regarding Exponen- [Regarding Exponents](https://git.apcacontrast.com/documentation/regardingexponents)
-- [Standard Observer Model](https://git.apcacontrast.com/documentation/StandardObserverModel)
+- [Regarding Exponents](https://git.apcacontrast.com/documentation/regardingexponents) Some notes and explaination regarding the powercurve exponents.
+- [Standard Observer Model](https://git.apcacontrast.com/documentation/StandardObserverModel) Draft standardized envirnment.
 - [Visual Contrast Draft Whitepaper](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup/Whitepaper) (Work in progress)
 
 ### _For Developers_
 - [RepoList](https://git.apcacontrast.com/documentation/repoList)
-- [ImportantChangeNotices](https://git.apcacontrast.com/documentation/ImportantChangeNotices)
+- [Important Change Notices](https://git.apcacontrast.com/documentation/ImportantChangeNotices)
 - [How to Contribute](https://git.apcacontrast.com/documentation/CONTRIBUTING)
 - [License](https://git.apcacontrast.com/documentation/LICENSE)
 
