@@ -22,10 +22,11 @@ Maths! Vision Science! Photons on Parade!
 - [Visual Contrast Draft Whitepaper](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup/Whitepaper) (Work in progress)
 
 ### _For Developers_
-- [RepoList](https://git.apcacontrast.com/documentation/repoList)
-- [Important Change Notices](https://git.apcacontrast.com/documentation/ImportantChangeNotices)
-- [How to Contribute](https://git.apcacontrast.com/documentation/CONTRIBUTING)
-- [License](https://git.apcacontrast.com/documentation/LICENSE)
+- [RepoList](https://git.apcacontrast.com/documentation/repoList) of the related satellite repositories.
+- [Important Change Notices](https://git.apcacontrast.com/documentation/ImportantChangeNotices) mainly breaking changes listed here.
+- [How to Contribute](https://git.apcacontrast.com/documentation/CONTRIBUTING) <span style="background-color:#cde;padding:3px;border-radius: 3px;">🎶</span>help us if you can<span style="background-color:#cde;padding:3px;border-radius: 3px;">🎵</span>
+- [A License](https://git.apcacontrast.com/documentation/LICENSE) to calc.
+- [Minimum compliance](https://git.apcacontrast.com/documentation/minimum_compliance) to use "APCA" and related trademarks.
 
 ### _Related Repositories_
 - [**_APCA W3 Repository_**](https://github.com/Myndex/apca-w3) The W3 version for web content
