@@ -2,7 +2,7 @@
 layout: repoSubfolder
 ---
 
-# APCA Documentation Index
+# APC<span class="flipH">A</span> Documentation Index
 
 ## Accessible Perceptual Contrast Algorithm
 
