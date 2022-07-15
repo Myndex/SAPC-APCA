@@ -2,10 +2,13 @@
 layout: simple
 ---
 
-## APCA Accessibility Statement
-_Beta testers and sites using APCA may wish to include the following statement in their site's boilerplate:_
+# APC<span class="flipH">A</span> Accessibility Statement
+_At their option, beta testers, early adopters, and sites using APCA to determine text and non-text contrast may wish to include the following statement in their site's boilerplate:_
 
 -----
-### This website is beta testing the APCA guidelines for determining text and non-text contrast. It is well known that WCAG 2 contrast maths are not accurate regarding human perception, and automated testing using WCAG 2 math may incorrectly indicate errors in some color pairs on this site. The APCA guidelines are a substantial improvement in accessibility over WCAG 2 contrast criterions, and therefore compliant with the ADA and also 508 rules under the alternative methods section. Any automated testing done to determine conformance of this site needs to be conducted using a perceptually accurate method such as APCA.
+## APCA Accessibility Statement v0.1.9
+**This website is beta testing the APCA guidelines for determining text and non-text contrast. It is well known that WCAG 2 contrast maths and methods are not accurate regarding human perception of text, as a result automated testing using WCAG 2 maths may incorrectly indicate errors in some color pairs on this site. The APCA guidelines are a substantial improvement in accessibility over WCAG 2 contrast criterions, and therefore compliant with the ADA. Compliance with US Access Board 508 rules is per the alternative methods section. Compliance in other jurisdictions subject to evaluation. Any automated testing done to determine conformance of this site must be conducted using a perceptually accurate method of predicting text contrast, such as APCA. WCAG 2.x math, methods, and success criterion are notwithstanding.**
+
+### This Site is Tested With APCA-W3 Version: <insert valid guidelines version here>
 
 -----
