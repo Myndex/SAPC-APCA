@@ -401,10 +401,10 @@ color: var(--modeTextColor, #000);
       --modeH1ShadowDescB: #cdf;
       --modeH1ShadowDescC: #4565;
 
-      --modeAlink: #cbf;
-      --modeAvisited: #cbd;
-      --modeAhover: #ddf;
-      --modeAvisitedhover: #fdf;
+    --modeAlink: #cbf;
+    --modeAvisited: #bbd;
+    --modeAhover: #ddf;
+    --modeAvisitedhover: #ddf;
       --modeAfocus: #aaf;
       --modeAaction: #aaf;
 
@@ -5349,13 +5349,51 @@ section > h1 {
 /* ************************************************************************** */
 
 
-.flipH, .reverse {
+
+.apca, span.apca, .audiowide {
+  position: relative;
+  font-family: Audiowide, Oxanium, Montserrat, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0;
+  }
+
+.flipH, .apca .flipH {
   display: inline-block;
+  margin:0;
   -moz-transform: scale(-1, 1);
   -webkit-transform: scale(-1, 1);
   -o-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
+}
+.audiowide sup {
+  font-size: 0.5em;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  line-height: 0.4;
+  baseline-shift: 0.4em;
+  }
+.apca:after {
+  position:relative;
+  top:-0.65em;
+  content: '™';
+  font-size: 0.5em;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  line-height: 0.2;
+  text-decoration: none;
+  }
+
+a .apca, a.apca {
+  position:relative;
+  text-decoration: none;
+  border: 1px solid currentColor;
+  border-width: 0 0 2px 0;
+}
+a:hover.apca, a.apca:hover {
+  position:relative;
+  text-decoration: none;
+  border: none;
 }
 
 
