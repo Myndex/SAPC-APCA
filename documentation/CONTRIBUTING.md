@@ -24,14 +24,14 @@ The following is a set of guidelines for contributing to APCA and its packages, 
   * [Your First Code Contribution](#your-first-code-contribution)
   * [Pull Requests](#pull-requests)
 
-[Styleguides](#styleguides)
-  * [JavaScript Styleguide](#javascript-styleguide)
-  * [Specs Styleguide](#specs-styleguide)
-  * [Documentation Styleguide](#documentation-styleguide)
+[Style-guides](#styleguides)
+  * [JavaScript Style-guide](#javascript-styleguide)
+  * [Specs Style-guide](#specs-styleguide)
+  * [Documentation Style-guide](#documentation-styleguide)
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by the [Myndex Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are entereing a "safe space" for exploration and development. Please keep that in mind.
+This project and everyone participating in it is governed by the [Myndex Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are entering a "safe space" for exploration and development. Please keep that in mind.
 
 ## I don't want to read this whole thing I just have a question!!!
 
@@ -57,7 +57,7 @@ Any changes to the functionality or results of the math, and math and constants 
 
 ### Reporting Bugs
 
-Regsardless of the repo, bugs should be reported in the https://github.com/Myndex/SAPC-APCA/issues tab.
+Regardless of the repo, bugs should be reported in the https://github.com/Myndex/SAPC-APCA/issues tab.
 
 > **Note:** If you find a **Closed** issue that seems like it is the same thing that you're experiencing, open a new issue and include a link to the original issue in the body of your new one.
 
@@ -126,21 +126,21 @@ The process described here has several goals:
 Please follow these steps to have your contribution considered by the maintainers:
 
 1. Follow all instructions in [the template](PULL_REQUEST_TEMPLATE.md)
-2. Follow the [styleguides](#styleguides)
+2. Follow the [style-guides](#styleguides)
 3. After you submit your pull request, verify that all [status checks](https://help.github.com/articles/about-status-checks/) are passing <details><summary>What if the status checks are failing?</summary>If a status check is failing, and you believe that the failure is unrelated to your change, please leave a comment on the pull request explaining why you believe the failure is unrelated. A maintainer will re-run the status check for you. If we conclude that the failure was a false positive, then we will open an issue to track that problem with our status check suite.</details>
 
 While the prerequisites above must be satisfied prior to having your pull request reviewed, the reviewer(s) may ask you to complete additional design work, tests, or other changes before your pull request can be ultimately accepted.
 
-## Styleguides
+## Style-guides
 
-### JavaScript Styleguide
+### JavaScript Style-guide
 
 All JavaScript code TBD
 
-### Specs Styleguide
+### Specs Style-guide
 
 
-### Documentation Styleguide
+### Documentation Style-guide
 
 * Use Markdown.
 

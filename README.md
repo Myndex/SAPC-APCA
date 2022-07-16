@@ -44,7 +44,7 @@ This is also where we discuss draft guidelines and proposals. Please post all co
 ## _DOCUMENTATION_
 - [**Main Readme Doc**](https://git.apcacontrast.com/documentation/README) This page includes the math, code walkthroughs and links for developer related goodies. If you'd like to dive into the deep end, this is a good start.
 
-### _Simple Overview, Quickstart, and FAQ_
+### _Simple Overview, QuickStart, and FAQ_
 These are intended for end users, and those interested in a plain language overview without a lot of the math & theory.
 - [**Why APCA?**](https://git.apcacontrast.com/documentation/WhyAPCA) A basic overview
 - [**APCA in a nutshell**](https://git.apcacontrast.com/documentation/APCA_in_a_Nutshell) The minimum user guide
@@ -54,7 +54,7 @@ These are intended for end users, and those interested in a plain language overv
 Maths! Vision Science! Photons on Parade!
 - [The base APCA-W3 formula](https://github.com/Myndex/SAPC-APCA/blob/master/documentation/APCA-W3-LaTeX.md) in LaTeX math for your viewing and calculating pleasure.
 - [Regarding Exponents](https://git.apcacontrast.com/documentation/regardingexponents) Is delta-gamma some kinda frat house? Nope... It's math.
-- [Standard Observer Model](https://git.apcacontrast.com/documentation/StandardObserverModel) The setting for a mathmatical eyeball.
+- [Standard Observer Model](https://git.apcacontrast.com/documentation/StandardObserverModel) The setting for a mathematical eyeball.
 - [Visual Contrast Draft Whitepaper](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup/Whitepaper) Almost as tasty as a draft beer!
 
 

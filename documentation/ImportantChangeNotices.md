@@ -30,8 +30,8 @@ Updated font LUT, and adding a **0.** for semantic versioning (0.0.98G)
 
 **IMPORTANT:** If you are making a tool to predict contrast for the new W3 standards for Visual Contrast, ***use only the files named APCA.***
 
-## Change Notice October 1, 2021 01:00 GMT (Februaru 15th constants)
-The new version of the basic APCA javascript file is uploaded, and the main directory readme.md has been updated with the lastest maths and code examples. Variable names and values have changed. The key constants have not changed since February 15, 2021, and they are:
+## Change Notice October 1, 2021 01:00 GMT (February 15th constants)
+The new version of the basic APCA javascript file is uploaded, and the main directory readme.md has been updated with the latest maths and code examples. Variable names and values have changed. The key constants have not changed since February 15, 2021, and they are:
 
     Exponents:      mainTRC: 2.4    normBG: 0.56     normTXT: 0.57      revTXT: 0.62     revBG: 0.65
     Scalers:        Scale: 1.14     loBoWthresh: 0.035991     loBoWoffset: 0.027         loBoWfactor: 27.7847239587675	
@@ -48,7 +48,7 @@ PREVIOUS
 -----
 
 ### Change Notice January 28, 2021 02:00 GMT
-The new version of the basic APCA javascript file is uploaded, and the main directory readme.md has been updated with the lastest maths and code examples. Variable names and values have changed. The key constants are now:
+The new version of the basic APCA javascript file is uploaded, and the main directory readme.md has been updated with the latest maths and code examples. Variable names and values have changed. The key constants are now:
 
     Exponents:	mainTRC: 2.4	normBG: 0.55	normTXT: 0.58	revTXT: 0.57	revBG: 0.62
     Scalers:	Scale: 1.25	loConThresh: 0.078	loConOffset: 0.06	loConFactor: 12.82051282051282
@@ -60,11 +60,11 @@ Also changed the R,G,B coefficients to the less rounded matrix versions for bett
     Bco = 0.0721750;
 
 #### Change Notice January 2021 General
-Substantial code changes, including math and scaling. Literally all constants have changed. Typicall the "equevelent colors" will be indicated 20 lower (more or less). The main takeawy here though is what was 100 is now 80, what was 80 is now 60 and what was 60 is now 40.
+Substantial code changes, including math and scaling. Literally all constants have changed. Typically the "equivalent colors" will be indicated 20 lower (more or less). The main takeaway here though is what was 100 is now 80, what was 80 is now 60 and what was 60 is now 40.
 
 80: The general target for columns of body text.
 
-60: The general traget for most content text.
+60: The general target for most content text.
 
 
 #### Change Notice November 18, 2020 08:00 GMT
@@ -78,13 +78,13 @@ Fixed the "Zero Hex Bug" thanks to Mitch @mfishma issue #5 for pointing it out!
 #### Change Notice October 21, 2020  0.0.97h
 **Changes in the .JS files** mainly centered around adding new methods and also adding new parsing, including for alpha channels.
 
-New input feature: you only need to enter 2 hex digits to get a color, and it auto updates as you add more - 3,4,6,8 - if wen you enter two, such as e9, you are returned #e9e9e9. helpful for quickly toggling through greys.
+New input feature: you only need to enter 2 hex digits to get a color, and it auto updates as you add more - 3,4,6,8 - if wen you enter two, such as e9, you are returned #e9e9e9. helpful for quickly toggling through grays.
 
 New color object data returns include L* and methods for returning alpha data.
 
 **Changes in the .HTML files**
 
-Remember there's a lot of useful JS in the HTML documents as well, and the latest in terms of the new multi-level scoring model. The font samples section is subtantially cleaned up and revised to reflect the latest guidlines.
+Remember there's a lot of useful JS in the HTML documents as well, and the latest in terms of the new multi-level scoring model. The font samples section is substantially cleaned up and revised to reflect the latest guidelines.
 
 #### Change Notice October 12, 2020  0.0.97g
 **Fixed constant** for Green coefficient — should be: `const Gco = 0.7152;` and not 0.7156 (lingering typo does not materially affect results but was nevertheless wrong.)
@@ -92,7 +92,7 @@ Remember there's a lot of useful JS in the HTML documents as well, and the lates
 ALSO: Changed all power functions from the shorthand `**` to the more standard `Math.pow()` for better compatibility.
 
 #### Change Notice October 11, 2020
-Added "APCAsRGBonly.js — this is the APCA algorithim only, suitable if you already have color parsing and just want to add the ACPA function. This version takes sRGB encoded 8 bit intergers from 0-255.
+Added "APCAsRGBonly.js — this is the APCA algorithm only, suitable if you already have color parsing and just want to add the ACPA function. This version takes sRGB encoded 8 bit integers from 0-255.
 
 Code cleanup in the JS files. The loConRamp moved to a separate function.
 HTML files have an improved UX for the manual color entry fields.

@@ -40,7 +40,7 @@ Please make all comments or discussions here and not in the satellite repositori
 ## _DOCUMENTATION_
 - [**Main Readme Doc** (THIS, HTML version)](https://git.apcacontrast.com/documentation/README)
 
-### _Simple Overview, Quickstart, and FAQ_
+### _Simple Overview, QuickStart, and FAQ_
 These are intended for end users, and those interested in a plain language overview without a lot of the math & theory.
 - [**Why APCA?**](https://git.apcacontrast.com/documentation/WhyAPCA) A basic overview
 - [**APCA in a nutshell**](https://git.apcacontrast.com/documentation/APCA_in_a_Nutshell) The minimum user guide
@@ -49,8 +49,8 @@ These are intended for end users, and those interested in a plain language overv
 ### _Sciencey Stuff!_
 Maths! Vision Science! Photons on Parade!
 - [The base APCA-W3 formula](https://github.com/Myndex/SAPC-APCA/blob/master/documentation/APCA-W3-LaTeX.md) in LaTeX math for your viewing and calculating pleasure.
-- [Regarding Exponents](https://git.apcacontrast.com/documentation/regardingexponents) Some notes and explaination regarding the powercurve exponents.
-- [Standard Observer Model](https://git.apcacontrast.com/documentation/StandardObserverModel) Draft standardized envirnment.
+- [Regarding Exponents](https://git.apcacontrast.com/documentation/regardingexponents) Some notes and explanation regarding the power-curve exponents.
+- [Standard Observer Model](https://git.apcacontrast.com/documentation/StandardObserverModel) Draft standardized environment.
 - [Visual Contrast Draft Whitepaper](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup/Whitepaper) (Work in progress)
 
 ### _For Developers_
@@ -86,7 +86,7 @@ APCA was developed independently as a part of the future WCAG&nbsp;3 standards, 
 - Studies demonstrate that APCA for WCAG&nbsp;3 is superior to WCAG&nbsp;2.x contrast methods.
 - APCA can be used today as an independent standard to provide excellent guidance for contrasts for readability and understandability of web content.
     - however, WCAG&nbsp;3 is not an official standard yet, and it is useful to note that APCA it is _not_ backwards compatible with WCAG&nbsp;2.x.
-    - This is mainly an issue if you have a contrasctual obligation or law to follow that demands WCAG 2 AA as a web standard.
+    - This is mainly an issue if you have a contractual obligation or law to follow that demands WCAG 2 AA as a web standard.
     - Unfortunately WCAG 2 is substantially incorrect in certain areas of perception due to its basis on older standards and technologies. It is due to this that APCA was developed as the replacement for use in WCAG&nbsp;3, as a result complete backwards compatibility is not possible.
 - The discussion tab is open here if you have questions or comments.
 - This repo includes the basic APCA code, which returns a perceptually uniform contrast value.
@@ -106,7 +106,7 @@ Please feel free to use the discussion area for any questions or comments.
 
 ## Why APCA
 
-See [WHY APCA](WhyAPCA.md) for a brief explaination of the important differences of APCA for WCAG&nbsp;3 vs the old WCAG&nbsp;2.x/1.4.3 contrast guidelines.
+See [WHY APCA](WhyAPCA.md) for a brief explanation of the important differences of APCA for WCAG&nbsp;3 vs the old WCAG&nbsp;2.x/1.4.3 contrast guidelines.
 
 ### SAPC and APCA demo tools are live to play with.
 
@@ -126,7 +126,7 @@ APCA is a set of contrast assessment methods for predicting perceived contrast b
 * Separate weighting for normal and reverse polarity (dark text on light background vs light text on dark, aka dark mode.)
 * Estimation and weighting of light adaptation for perceptual uniformity in a common "standard observer" model (see below).
 * Spatial frequency considerations for font weight as part of calculations and further defined in a lookup table. (I.e. values Lc 60 and higher are weighted for fonts less than 24px, values less than Lc60 are weighted for large fonts and non text).
-* Lookup table can be customised for different languages/character sets.
+* Lookup table can be customized for different languages/character sets.
 
 ----- 
 ### [LIVE VERSION](https://www.myndex.com/APCA/)
@@ -252,7 +252,7 @@ These exercise all the important constants.
 ## Miscellaneous
 
 ### THIS IS BETA
-Being developed for use with future web standards for accessibility. Those standards are under separate repositorieswith the W3/AGWG.
+Being developed for use with future web standards for accessibility. Those standards are under separate repositories with the W3/AGWG.
 
 ## OTHER RESOURCES
 
@@ -274,7 +274,7 @@ The [author's website](https://www.myndex.com/WEB/Perception) includes further b
 ## DISCLAIMER
 
 _DISCLAIMER AND LIMITATIONS OF USE:_      
-APCA is an embodiment of certain suprathreshold contrast        
+APCA is an embodiment of certain supra-threshold contrast        
 prediction technologies. Versions marked as licensed to         
 the W3 are strictly limited to web content use only for        
 supporting certain accessibility guidelines.

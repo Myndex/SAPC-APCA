@@ -8,7 +8,7 @@ layout: repoSubfolder
 
 - [**Main Readme Doc** (HTML version)](https://git.apcacontrast.com/documentation/README)
 
-### _Simple Overview, Quickstart, and FAQ_
+### _Simple Overview, QuickStart, and FAQ_
 These are intended for end users, and those interested in a plain language overview without a lot of the math & theory.
 - [**Why APCA?**](https://git.apcacontrast.com/documentation/WhyAPCA) A basic overview
 - [**APCA in a nutshell**](https://git.apcacontrast.com/documentation/APCA_in_a_Nutshell) The minimum user guide
@@ -17,8 +17,8 @@ These are intended for end users, and those interested in a plain language overv
 ### _Sciencey Stuff!_
 Maths! Vision Science! Photons on Parade!
 - [The base APCA-W3 formula](https://github.com/Myndex/SAPC-APCA/blob/master/documentation/APCA-W3-LaTeX.md) in LaTeX math for your viewing and calculating pleasure.
-- [Regarding Exponents](https://git.apcacontrast.com/documentation/regardingexponents) Some notes and explaination regarding the powercurve exponents.
-- [Standard Observer Model](https://git.apcacontrast.com/documentation/StandardObserverModel) Draft standardized envirnment.
+- [Regarding Exponents](https://git.apcacontrast.com/documentation/regardingexponents) Some notes and explanation regarding the power-curve exponents.
+- [Standard Observer Model](https://git.apcacontrast.com/documentation/StandardObserverModel) Draft standardized environment.
 - [Visual Contrast Draft Whitepaper](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup/Whitepaper) (Work in progress)
 
 ### _For Developers_
@@ -40,7 +40,7 @@ Maths! Vision Science! Photons on Parade!
 - [**_Open a discussion today!_**](https://github.com/Myndex/SAPC-APCA/discussions)
 
 ## W3 Licensed Version_
-[**APCA W3 Repository**](https://github.com/Myndex/apca-w3) Please source all files for tools intended for WCAG&nbsp;3 conformance from that specific repository. The files in this repositiory are part of other projects, and not necessary for WCAG&nbsp;3 compliance.
+[**APCA W3 Repository**](https://github.com/Myndex/apca-w3) Please source all files for tools intended for WCAG&nbsp;3 conformance from that specific repository. The files in this repository are part of other projects, and not necessary for WCAG&nbsp;3 compliance.
 
 
 ## Bridge PCA
