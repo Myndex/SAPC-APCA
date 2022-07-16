@@ -2,7 +2,7 @@
 layout: simple
 ---
 
-# _Myndex and APCA Repositories_
+# Myndex and APC<span class="flipH">A</span> Repositories
 
 - Myndex on GitHub: https://git.myndex.com/
 

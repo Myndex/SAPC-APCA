@@ -42,7 +42,7 @@ APCA is the **Accessible Perceptual Contrast Algorithm**, a new way to predict c
 This is also where we discuss draft guidelines and proposals. Please post all comments or discussions here and not in the satellite repositories so they can be tracked and resolved.
 
 ## _DOCUMENTATION_
-- [**Main Readme Doc**](https://git.apcacontrast.com/documentation/README) This page includes the math, code walkthroughs and links for developer related goodies. If you link to dive into the deep end, this is a good start.
+- [**Main Readme Doc**](https://git.apcacontrast.com/documentation/README) This page includes the math, code walkthroughs and links for developer related goodies. If you'd like to dive into the deep end, this is a good start.
 
 ### _Simple Overview, Quickstart, and FAQ_
 These are intended for end users, and those interested in a plain language overview without a lot of the math & theory.

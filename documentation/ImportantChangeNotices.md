@@ -1,8 +1,9 @@
 ---
 layout: simple
 ---
+# APC<span class="flipH">A</span> BASE
 
-## SAPC/APCA CURRENT VERSION: 0.0.98G-4g-lut3 Constants: 4g
+## SAPC/APCA BAS ALGORITHM CURRENT VERSION: 0.0.98G-4g-lut3 Constants: 4g
 
 ### May 28 2022
 Font lookup table revised, still for 0.98G 4g constants. General (all use case) lookup table.

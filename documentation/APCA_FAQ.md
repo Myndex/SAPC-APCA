@@ -2,7 +2,7 @@
 layout: simple
 ---
 
-# APCA & SAPC 
+# APC<span class="flipH">A</span> & SAPC 
 ## Frequently Asked Questions for the Accessible Perceptual Contrast Algorithm.
 _--THIS IS A WORK IN PROGRESS--_
 

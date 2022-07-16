@@ -2,7 +2,7 @@
 layout: simple
 ---
 
-# S-Luv Accessible Readable Color Appearance Model (SARCAM)
+# S-Luv Accessible Color Appearance Model (SAC<span class="flipH">A</span>M)
 _(Formerly known as SAPC)_
 
 ## Standard Observer (Draft)

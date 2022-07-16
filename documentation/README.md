@@ -26,7 +26,7 @@ layout: simple
 </p>
 
 -----
-# APCA • SAPC • SACAM PRIMARY REPOSITORY
+# APC<span class="flipH">A</span> • SAPC • SAC<span class="flipH">A</span>M PRIMARY REPOSITORY
 Please make all comments or discussions here and not in the satellite repositories.
 
 ## Accessible Perceptual Contrast Algorithm

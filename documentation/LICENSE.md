@@ -1,10 +1,11 @@
 ### All Files Copyright (c) 2019-2021 by Myndex Research and Andrew Somers. All Rights Reserved.
 
-# — LICENSE —
+# APC<span class="flipH">A</span> — LICENSE —
 
 ### The Short Summary:
 The files currently in this repository are presently considered pre-release, and as such do not have a permanent license attached. In this repositiory, all files present are under a time-barred beta license, and intended for use with web-based content only, and not for any other use without written permission.
 
+See also: [Minimum compliance](https://git.apcacontrast.com/documentation/minimum_compliance) to use "APCA" and related trademarks.
 ______________
 
 ##  W3 LICENSED FILES MOVED TO W3 REPO

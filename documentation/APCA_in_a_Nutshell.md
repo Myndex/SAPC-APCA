@@ -2,8 +2,8 @@
 layout: simple
 ---
 
-# The Accessible Perceptual Contrast Algorithm
-APCA is a new method for calculating and predicting readability contrast. APCA is a part of the larger S-Luv Accessible Readability Color Appearance Model known as SARCAM (formerly SAPC). These models are specifically related to color appearance on self-illuminated RGB computer displays & devices, and also for modeling accessible user needs, with a focus on readability.
+# APC<span class="flipH">A</span> in a Nutshell
+ Accessible Perceptual Contrast Algorithm is a new method for calculating and predicting readability contrast. APCA is a part of the larger S-Luv Accessible Color Appearance Model known as SACAM (formerly SAPC). These models are specifically related to color appearance on self-illuminated RGB computer displays & devices, and also for modeling accessible user needs, with a focus on readability.
 
 ## Lightness contrast L<sup>c</sup>
 The APCA generates a lightness/darkness contrast value based on a minimum font size and color pair, and this value is perceptually based: that is, regardless of how light or dark the colors are, a contrast value of L<sup>c</sup>&nbsp;60 represents the same _perceived_ readability contrast. This is absolutely not the case with WCAG&nbsp;2.x, which far overstates contrast for dark colors to the point that 4.5:1 can be functionally unreadable when a color is near black. As a result, WCAG&nbsp;2.x contrast cannot be used for guidance designing "dark mode".

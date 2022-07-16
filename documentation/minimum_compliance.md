@@ -2,8 +2,8 @@
 layout: simple
 ---
 
-# APCA™ MINIMUM INTEGRATION COMPLIANCE
-This brief document defines the minimum integrated features for a tool to be considered either _"APCA™ Compliant"_ or _"APCA™ Compatible"_ and other related issues. This document became necessary due to some unfortunate abuse and neglect in terms of properly presenting the technology.
+# APC<span class="flipH">A</span>™ INTEGRATION COMPLIANCE
+This brief document defines the minimum integrated features for a tool to be considered either _"APCA™ Compliant"_ or _"APCA™ Compatible"_ and other related issues. This document became necessary due to some unfortunate abuse and improper use of trademarks, code, and importantly in terms of properly presenting the technology.
 
 ## Compliance Levels Overview
 - **APCA™ Contrast Value:** Requires a correct implementation of the APCA base algorithm only, with disclaimers of use.
