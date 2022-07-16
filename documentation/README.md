@@ -213,6 +213,8 @@ Basic APCA Math in LaTeX
 
 ![](/images/APCAw3_0.1.17_APCA0.0.98G.svg)
 
+NOTICE: "APCA is a method for predicting text contrast on self-illuminated displays for web-based content. Some use-cases are prohibited by license, including the following: use in medical, clinical evaluation, human safety related, aerospace, transportation, military applications, are strictly prohibited without a specific license in writing granting such use."
+
 -----
 ## TESTING YOUR IMPLEMENTATION
 
