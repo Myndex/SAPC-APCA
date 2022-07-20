@@ -5,20 +5,20 @@ layout: simple
 # APC<span class="flipH">A</span>™ INTEGRATION COMPLIANCE
 This brief document defines the minimum integrated features for a tool to be considered either _"APCA™ Compliant"_ or _"APCA™ Compatible"_ and other related issues. This document became necessary due to some unfortunate abuse and improper use of trademarks, code, and importantly in terms of properly presenting the technology.
 
-## Compliance Levels Overview
+## Compatibility Levels Overview
 - **APCA™ Contrast Value:** Requires a correct implementation of the APCA base algorithm only, with disclaimers of use.
 - **APCA™ Compatible:** Same as "Contrast", adding in manual font lookup guidelines
-- **APCA™ Compliant:** Same as "Compatible" and including font calculations and guidelines.
-- **APCA™ Certified:** Same as "Compliant" and Requires evaluation and certification by Myndex Research.
-- **WCAG&nbsp;3 Compliant: _PROHIBITED_** until WCAG&nbsp;3 is an official recommendation.
-    - ***Important Notice:*** until WCAG&nbsp;3 is the official recommendation of the W3.org, use of the term _"WCAG&nbsp;3 Compliant"_ or similar terminology is strictly prohibited.
+- **APCA™ Compliant:** Same as "Compatible" but also including font calculations, and conforms to independent APCA™ design guidelines.
+- **APCA™ Certified:** Same as "Compliant" but also requires evaluation and certification by Myndex Research.
+- **WCAG&nbsp;3 Compliant: _Does not exist yet._** Until WCAG&nbsp;3 is an official recommendation  there is no such thing.
+    - ***Important Notice:*** until WCAG&nbsp;3 is the official recommendation of the W3.org, you cannot conform to the standard, therefore _"WCAG&nbsp;3 Compliant"_ or similar terminology cannot be used.
 
 ### _Conformance Failure Remediation_
-Unfortunately, due to abuse, tools that are not at least at the APCA minimum level "contrast value", and that make any claims of being APCA™ or SAPC™, shall be given notice with a reasonable period of time to comply, or shall be issued a DMCA takedown notice.
+Unfortunately, due to misuse, tools that are not at least at the APCA minimum level "contrast value", and that make any claims of being APCA™ or SAPC™, be notified and provided a reasonable period of time to remove the statements or update the implementation.
 
-We have hesitated to take stronger action such as this. Regrettably, tools that are improperly implementing the technology and/or that are improperly claiming WCAG&nbsp;3 compliance, are causing concerns within the AGWG and in the accessibility community at large. Also, there is sufficient misinformation regarding contrast on the internet today, there is a significant interest in correcting these issues.
+Regrettably, tools that are improperly implementing the technology and/or that are improperly claiming WCAG&nbsp;3 compliance, are causing concerns within the W3-AGWG and in the accessibility community at large. Also, there is sufficient misinformation regarding contrast on the internet today, that there is a significant interest in correcting these issues.
 
-Moreover, as the APCA™ is designed specifically for standards compliance, it is important that tools are unified regarding their application of the technology. As this is a developing standard, it is further important that tool developers follow changes in the APCA™ code or methods, and keep tools updated to prevent discordant results.
+As the APCA™ is designed specifically for use in a standard, it is important that tools are unified regarding their application of the technology. As this is a developing standard, it is further important that tool developers follow changes in the APCA™ code or methods, and keep tools updated to prevent discordant results.
 
 ### Use of Trademarks
 The terms "APCA", "SAPC", "SACAM", "Advanced Perceptual Contrast Algorithm", "Accessible Perceptual Contrast Algorithm", "APCA™ Contrast", "APCA™ Compatible", "APCA™ Compliant", "APCA™ Certified", are trademarks of Myndex Research and Andrew Somers, All Rights Reserved, use by limited permission only. Trademarks are not included as part of any open-source license, permission to use only per the limited restrictions listed in this document. 
@@ -26,7 +26,7 @@ The terms "APCA", "SAPC", "SACAM", "Advanced Perceptual Contrast Algorithm", "Ac
 **Permission to use revokable at any time for non-compliance per this document or future versions thereof, revocation made in writing to the email address of record of the trademark user.**
 
 ### Regarding WCAG 3.0
-The only language permitted at this time is: _"APCA™ is the candidate contrast method for WCAG&nbsp;3, and is currently in public beta. WCAG&nbsp;3 is still in development and subject to changes prior to adoption."_
+The only suitable language at this time is: _"APCA™ is the candidate contrast method for WCAG&nbsp;3, and is currently in public beta. WCAG&nbsp;3 is still in development and subject to changes prior to adoption."_
 
 ----
 ## Compliance Levels Defined
@@ -96,7 +96,7 @@ Use of the term "APCA™ Compliant" requires at a minimum:
 
 Everything as recited in "APCA™ Compatible" but further including:
 - A link to the font size/weight lookup tables and documentation (required).
-    - This should include the Bronze/Silver/Gold level descriptions (optional TFN).
+    - This should include the Bronze/Silver/Gold level descriptions (optional until WCAG&nbsp;3 is official).
 - In addition to the Lc output, additionally a visible output stating the minimum font size for weights 300, 400, and 700.
     - Additional weights may be included.
     - If a user settable variable weight is included, then only weight 400 and the variable weight need to be displayed.
@@ -115,7 +115,7 @@ Only APCA Certified apps will be permitted to use the trademarked "Powered by AP
 ### APCA Beta Testers
 APCA Beta sites may have different variations on the above requirements, determined on a case by case basis.
 
-To become "officially" involved in the APCA beta program, please send an email to "perceptex@myndex.com" with "APCA Beta" in the subject line.
+To become "officially" involved in the APCA beta program, please send an email to "legal@myndex.com" with "APCA Beta" in the subject line.
 
 
 ## Further Discussion
