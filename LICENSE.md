@@ -8,7 +8,7 @@ layout: simple
 Code and documentation in _THIS_ repository is copyright © 2019-2022 by Andrew Somers and/or Myndex™. All Rights Reserved.
 ## Permitted Use
 For THIS repo only:    
-_**Registered Beta Testers OR Personal use only is permitted**_ unless authorized in writing, and subject to the limitations described herein. But ask We're easy. We mainly want to ensure the code is maintained up to day and correctly implemented.
+_**Registered Beta Testers OR Personal use only is permitted**_ unless authorized in writing, and subject to the limitations described herein. But ask We're easy. We mainly want to ensure the code is maintained up to date and correctly implemented.
 
 See also: [Minimum compliance](https://git.apcacontrast.com/documentation/minimum_compliance) to use "APCA" and related trademarks.
 
