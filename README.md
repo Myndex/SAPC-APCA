@@ -71,9 +71,9 @@ Smaller, selected link collection.
 ### [Myndex Research](https://twitter.com/MyndexResearch) on Twitter
 ---
 ### Local Repo Documentation
-- [**Why APCA:**](/documentation/WhyAPCA) A brief plain language overview of APCA and readability contrast.
+- [**Why APCA:**](/documentation/WhyAPCA.md) A brief plain language overview of APCA and readability contrast.
 - [**APCA in a Nutshell:**](/documentation/APCA_in_a_Nutshell.md) Quick overview of levels, use cases, and font sizing.
-- [**APCA Main Documentation (READ ME):**](/documentation/README) The repo basic readme file for an overview and quickstart.
+- [**APCA Main Documentation (READ ME):**](/documentation/README.md) The repo basic readme file for an overview and quickstart.
 - [**APCA Documentation Index:**](/documentation/) An index of relevant APCA documentation.
 - [**APCA Formula 0.9.98g4g:**](https://github.com/Myndex/SAPC-APCA/blob/master/documentation/APCA-W3-LaTeX.md#latex-of-the-apca-w3-base-formula) The repo basic readme file for an overview and quickstart.
 - [**Repo List:**](/documentation/repoList.md) A list of specific versions of APCA, Bridge PCA, and support files.
@@ -81,18 +81,18 @@ Smaller, selected link collection.
 - [**Important Change Notices:**](/documentation/ImportantChangeNotices.md) General Change History (see individual repos for specifics)
 - [**Regarding Exponents:**](/documentation/regardingexponents.md) Notes on the exponents used in APCA.
 - [**Accessibility Statement:**](/documentation/accessibilitystatement.md) A statement for beta testers and early adopters to use place on sites using APCA 
-- [**APCA Minimum Compliance for Developers:**](/documentation/minimum_compliance) Just starting, so few QA yet.
-- [**APCA FAQ:**](/documentation/APCA_FAQ) Just starting, so few QA yet.
-### [The SAPC APCA GitHub Main Repository](https://github.com/Myndex/SAPC-APCA#apca--sapc--sacam-primary-repository)
+- [**APCA Minimum Compliance for Developers:**](/documentation/minimum_compliance.md) Standards for what can be called APCA™.
+- [**APCA FAQ:**](/documentation/APCA_FAQ.md) Just starting, so few QA yet.
+### [The SAPC APCA GitHub Main Repository](https://github.com/Myndex/SAPC-APCA/#apca--sapc--sacam-primary-repository)
 You are here 🔽 this index page is served at the github repo.
 
-### [The APCA-W3 GitHub Repo](https://github.com/Myndex/apca-w3)
+### [The APCA-W3 GitHub Repo](https://github.com/Myndex/apca-w3/)
 Over there is the W3 licensed version, and it's the same as the published npm package.
 
-### [The Bridge-PCA GitHub Repo](https://github.com/Myndex/bridge-pca)
+### [The Bridge-PCA GitHub Repo](https://github.com/Myndex/bridge-pca/)
 The BridgePCA is backwards compatible with WCAG 2, and it's the same as the published npm package.
 
-### [The ColorParsley GitHub Repo](https://github.com/Myndex/colorparsley)
+### [The ColorParsley GitHub Repo](https://github.com/Myndex/colorparsley/)
 ColorParsley is a micro library for auto parsing color strings of all kinds, also on npm.
 
 ---
