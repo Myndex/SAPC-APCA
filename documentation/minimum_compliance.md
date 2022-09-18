@@ -40,6 +40,7 @@ For the purposes of this document:
     - _**APCA Contrast Prediction Equation 0.0.98G-4g-base-W3**_
     - [0.0.98G-4g as LaTeX Math](https://github.com/Myndex/SAPC-APCA/blob/master/documentation/APCA-W3-LaTeX.md#latex-of-the-apca-w3-base-formula)
 
+---
 ### _ALL LEVELS—MINIMUM APCA COMPLIANCE_
 All compliance levels require the following:
 - Correct implementation of the current version of the base contrast algorithm (0.0.98G-4g-base-W3).
@@ -61,7 +62,7 @@ All compliance levels require the following:
 - In the associated documentation, and preferably linked on the interface screen near the Lc output, shall be a link to the "Why APCA" document: https://git.apcacontrast.com/documentation/WhyAPCA
 
 
-### APCA™ Contrast Value
+### APCA™ Contrast Value _(no guidelines, no examples)_
 Use of the term "APCA™ Contrast" requires at a minimum:
 - Minimum APCA compliance as listed above
 - **MAY NOT** present any example using the tested colors, nor present any font examples.
@@ -71,9 +72,10 @@ Use of the term "APCA™ Contrast" requires at a minimum:
     - **MUST present the value alone,** with no examples of the use of the colors or fonts whatsoever.
     - Use of visual font examples shall require adherance to "APCA™ Compatible" or better.
 - NO linking to any WCAG&nbsp;3 document at all (neither current nor expired), and no reference of any kind to WCAG&nbsp;3 nor WCAG&nbsp;3 compatibility nor WCAG&nbsp;3 compliance whatsoever.
-- Any examples shown must conform to the minimum APCA guideline levels, described below.
+- If any examples are to be shown, the tool must conform to one of the APCA guideline levels, described below.
 
-### APCA™ Compatible
+---
+### APCA™ Compatible _(basic guidelines and basic examples)_
 Use of the term "APCA™ Compatible" requires at a minimum:
 - Minimum APCA compliance
 - If an example is shown, it must show at least the minimum reference font size at normal weight for the fluent text use case, at the present Lc value.
@@ -89,7 +91,9 @@ Use of the term "APCA™ Compatible" requires at a minimum:
 - NO linking to any _expired_ WCAG&nbsp;3 document, and no claims of WCAG&nbsp;3 compliance.
     - Any reference to WCAG&nbsp;3 must include the <a href="#Regarding-WCAG-3.0">"permitted language"</a> described earlier.
     - Links to the WCAG&nbsp;3 document shall only be: https://www.w3.org/TR/wcag-3.0/#visual-contrast-of-text
-- In addition to linking to the "Why APCA" page, also provide a link to the discussion page, indicating it as a forum for questions, comments, or issues:
+- APCA compatible tools must link to the "Why APCA" page on the same page as the main tool interface:
+    - https://git.apcacontrast.com/documentation/WhyAPCA
+    - Also, at some reasonable place, provide a link to the discussion page, indicating it as a forum for questions, comments, or issues:
     - https://github.com/Myndex/SAPC-APCA/discussions
 
 - The output of the contrast value includes the term "Lc" such as "Lc 60"
@@ -106,7 +110,8 @@ Use of the term "APCA™ Compatible" requires at a minimum:
 - More complete explanations (or a link to) must be adjacent to the levels list.
 - A link to the full font size/weight lookup tables is optional but preferred.
 
-### APCA™ Compliant
+---
+### APCA™ Compliant _(more complete guidelines and examples)_
 Use of the term "APCA™ Compliant" requires at a minimum:
 
 Everything as recited in "APCA™ Compatible" but further including:
@@ -122,7 +127,7 @@ Pending Requirements in development:
 - Associated eye dropper tools to pick the native sRGB color.
 - Associated non-text guidelines chart.
 
-### APCA™ Certified
+### APCA™ Certified 
 For certification, a site or tool must meet the APCA Compliant standard above, and then have source code and implementation evaluated and certified by Myndex Research. The certification service will be available at the conclusion of the beta period.
 
 Only APCA Certified apps will be permitted to use the trademarked "Powered by APCA" or "APCA" official logos.
