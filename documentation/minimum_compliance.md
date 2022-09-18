@@ -40,7 +40,7 @@ For the purposes of this document:
     - _**APCA Contrast Prediction Equation 0.0.98G-4g-base-W3**_
     - [0.0.98G-4g as LaTeX Math](https://github.com/Myndex/SAPC-APCA/blob/master/documentation/APCA-W3-LaTeX.md#latex-of-the-apca-w3-base-formula)
 
-### _ALL LEVELS MINIMUM APCA COMPLIANCE_
+### _ALL LEVELS—MINIMUM APCA COMPLIANCE_
 All compliance levels require the following:
 - Correct implementation of the current version of the base contrast algorithm (0.0.98G-4g-base-W3).
     - Text and background color inputs clearly defined and maintained.
@@ -64,13 +64,28 @@ All compliance levels require the following:
 ### APCA™ Contrast Value
 Use of the term "APCA™ Contrast" requires at a minimum:
 - Minimum APCA compliance as listed above
+- **MAY NOT** present any example using the tested colors, nor present any font examples.
+    - The output of the tool must be _only_ the Lc value, and present no visual example.
 - May use the term "APCA Contrast Value" but may not use terms such as "APCA compliant" 
-    - May refer to the output as "APCA Lc Value" or "Lc", 
+    - May refer to the output as "APCA Lc Value" or "Lc"
+    - **MUST present the value alone,** with no examples of the use of the colors or fonts whatsoever.
+    - Use of visual font examples shall require adherance to "APCA™ Compatible" or better.
 - NO linking to any WCAG&nbsp;3 document at all (neither current nor expired), and no reference of any kind to WCAG&nbsp;3 nor WCAG&nbsp;3 compatibility nor WCAG&nbsp;3 compliance whatsoever.
+- Any examples shown must conform to the minimum APCA guideline levels, described below.
 
 ### APCA™ Compatible
 Use of the term "APCA™ Compatible" requires at a minimum:
 - Minimum APCA compliance
+- If an example is shown, it must show at least the minimum reference font size at normal weight for the fluent text use case, at the present Lc value.
+    - Reference font for this purpose is normal weight (400) Arial or Helvetica, normal aspect.
+    - Sizes per Lc level as listed, including the title:
+        - Fluent Text Minimum Reference Font Sizes at Normal Weight (Arial 400)
+        - Lc 90: 14px
+        - Lc 75: 16px
+        - Lc 60: 24px
+        - Lc 45: 42px
+        - Lc 30: must have warning saying "non-content text only"
+        - Lc 15: must have warning saying "certain non-text only"
 - NO linking to any _expired_ WCAG&nbsp;3 document, and no claims of WCAG&nbsp;3 compliance.
     - Any reference to WCAG&nbsp;3 must include the <a href="#Regarding-WCAG-3.0">"permitted language"</a> described earlier.
     - Links to the WCAG&nbsp;3 document shall only be: https://www.w3.org/TR/wcag-3.0/#visual-contrast-of-text
@@ -88,8 +103,8 @@ Use of the term "APCA™ Compatible" requires at a minimum:
     - Lc 45: Minimum Large text
     - Lc 30: Minimum Any text
     - Lc 15: Invisibility point
-- A link to more complete explanations is adjacent to the levels list.
-- A link to the font size/weight lookup tables is optional but preferred.
+- More complete explanations (or a link to) must be adjacent to the levels list.
+- A link to the full font size/weight lookup tables is optional but preferred.
 
 ### APCA™ Compliant
 Use of the term "APCA™ Compliant" requires at a minimum:
