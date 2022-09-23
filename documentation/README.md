@@ -105,7 +105,8 @@ APCA was developed independently as a part of the future WCAG&nbsp;3 standards, 
      - Lc&nbsp;45 is "sort of" like 3:1 (using a 32px normal weight font)
      - Lc&nbsp;60 is "sort of" like 4.5:1 (using a 24px normal weight font)
      - Lc&nbsp;75 is "sort of" like 7:1 (using an 18px normal weight font)
-     - _These are for comparison purposes only, and should not be used as conformance levels or design guidance._
+     - _**These are for comparison purposes only**, and should not be used as conformance levels or design guidance._
+     - See also the [WCAG2 to APCA comparison chart](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup/APCA_model#WCAG_2.x_to_Silver.2FAPCA_Comparison_Table).
  - Unlike WCAG_2, APCA is polarity aware, so the BG and TEXT colors _must_ be sent to the correct inputs.
 
 Please feel free to use the discussion area for any questions or comments.
