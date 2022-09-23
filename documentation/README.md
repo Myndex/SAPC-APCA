@@ -83,30 +83,36 @@ SEE: [**_APCA W3 Repository_**](https://github.com/Myndex/apca-w3) and please so
 APCA was developed independently as a part of the future WCAG&nbsp;3 standards, with the guidance and oversight of members of the W3 AGWG, Members of the US Access Board, and members of the accessibility community at large. All participants, beta testers, early adopters, are deeply thanked for their comments and contributions to the development of the APCA. Readability is for all!
 
 - APCA uses modern vision science and is perceptually uniform.
-- Studies demonstrate that APCA for WCAG&nbsp;3 is superior to WCAG&nbsp;2.x contrast methods.
+- Studies demonstrate that APCA provides a perceptually uniform value representing lightness contrast for text on self-illuminated displays.
 - APCA can be used today as an independent standard to provide excellent guidance for contrasts for readability and understandability of web content.
-    - however, WCAG&nbsp;3 is not an official standard yet, and it is useful to note that APCA it is _not_ backwards compatible with WCAG&nbsp;2.x.
-    - This is mainly an issue if you have a contractual obligation or law to follow that demands WCAG 2 AA as a web standard.
-    - Unfortunately WCAG 2 is substantially incorrect in certain areas of perception due to its basis on older standards and technologies. It is due to this that APCA was developed as the replacement for use in WCAG&nbsp;3, as a result complete backwards compatibility is not possible.
-- The discussion tab is open here if you have questions or comments.
-- This repo includes the basic APCA code, which returns a perceptually uniform contrast value.
-- This iteration has been stable since February, future iterations of course planned.
+    - however, WCAG&nbsp;3 is not an official standard yet, and it is useful to note that APCA is _not_ backwards compatible with WCAG&nbsp;2.x.
+    - This is mainly an issue if you have a contractual obligation or strict law to follow that demands WCAG&nbsp;2 **AA** as a web standard.
+    - ACPA guidelines fully exceed WCAG&nbsp;2 **A** level.
+    - Unfortunately WCAG&nbsp;2 contrast math is substantially inaccurate in relation to human perception.
+        - This is because WCAG&nbsp;2 is based on now obsolete standards and technologies.
+        - It is due to this that APCA was developed as the replacement for use in WCAG&nbsp;3.
+        - As a result complete backwards compatibility is not possible.
+- The [discussion tab](https://github.com/Myndex/SAPC-APCA/discussions) is open here if you have questions or comments.
+- This repo includes the basic APCA code, which returns a perceptually uniform contrast value, and supporting functions, as a public beta for non-commercial use and testing only.
+    - The [apca-w3 repo](https://github.com/Myndex/apca-w3) has the pre-release public beta which is intended to eventually be licensed under the W3C license.
+- This iteration has been stable since February 2021, future iterations are planned and in development.
     - While it is still pre-release beta, the general functioning is demonstratively useful.
     - This version is set for sRGB, a next iteration will change the inputs to allow any additive colorspace.
  - You _CAN_ use APCA simply to evaluate a perceived contrast (such as Lc&nbsp;75). But ALSO:
-     - There are a variety of lookup tables that can be used to relate a contrast to a font size and weight.
+     - There are a variety of lookup tables that can be used to relate a contrast to a recommended font size and weight.
      - Rounding the contrast to an integer is allowed, and interpolation can be used with a lookup table.
- - For simplicity, you can also use the "simple key levels" method (Lc&nbsp;45, 60, 75), which compares to WCAG 2 contrast (with one very light color) as:
-     - Lc&nbsp;45 is "sort of" like 3:1
-     - Lc&nbsp;60 is "sort of" like 4.5:1
-     - Lc&nbsp;75 is "sort of" like 7:1
+ - For a simple comparison to WCAG&nbsp;2 contrast, using a very light background, and font sizes as noted:
+     - Lc&nbsp;45 is "sort of" like 3:1 (using a 32px normal weight font)
+     - Lc&nbsp;60 is "sort of" like 4.5:1 (using a 24px normal weight font)
+     - Lc&nbsp;75 is "sort of" like 7:1 (using an 18px normal weight font)
+     - _These are for comparison purposes only, and should not be used as conformance levels or design guidance._
  - Unlike WCAG_2, APCA is polarity aware, so the BG and TEXT colors _must_ be sent to the correct inputs.
 
 Please feel free to use the discussion area for any questions or comments.
 
 ## Why APCA
 
-See [WHY APCA](WhyAPCA.md) for a brief explanation of the important differences of APCA for WCAG&nbsp;3 vs the old WCAG&nbsp;2.x/1.4.3 contrast guidelines.
+See [WHY APCA](WhyAPCA.md) for a brief plain language explanation of the important differences of APCA for WCAG&nbsp;3 vs the old WCAG&nbsp;2.x/1.4.3 contrast guidelines.
 
 ### SAPC and APCA demo tools are live to play with.
 
@@ -122,18 +128,18 @@ APCA is a set of contrast assessment methods for predicting perceived contrast b
 ### BASIC FEATURES
 * Incorporates Spatial Frequency & Stimulus Size directly in predictions.
 * Spectral weighting of luminance based on sRGB coefficients.
-   - NEW: displayP3 added, AdobeRGB next.
+   - DisplayP3 and AdobeRGB input modules available.
 * Separate weighting for normal and reverse polarity (dark text on light background vs light text on dark, aka dark mode.)
-* Estimation and weighting of light adaptation for perceptual uniformity in a common "standard observer" model (see below).
+* Estimation and weighting of typical light adaptation for perceptual uniformity in a common "standard observer" model (see below).
 * Spatial frequency considerations for font weight as part of calculations and further defined in a lookup table. (I.e. values Lc 60 and higher are weighted for fonts less than 24px, values less than Lc60 are weighted for large fonts and non text).
 * Lookup table can be customized for different languages/character sets.
 
 ----- 
 ### [LIVE VERSION](https://www.myndex.com/APCA/)
-There is a working version with examples and reference material on [APCAsite](https://www.myndex.com/APCA/)
+There is a working version with examples and reference material on [APCA site](https://www.myndex.com/APCA/)
 
 -----
-### Font Use Lookup Table
+### Font Use Lookup Tables
 
 Latest Lookup Table: May 27 2022
 
@@ -336,7 +342,7 @@ Glossary
 
 If you have been using any files from _this_ repository, be sure to read the file "[ImportantChangeNotices.md]" for critical updates that may affect results.
 
-## SAPC/APCA CURRENT VERSION: 0.1.1 Constants: 4g
+## SAPC/APCA CURRENT VERSION: 0.1.9 Constants: 0.0.98G-4g
 
 ### January 27 2022
 Font lookup table revised, now LUT ver  0.1.5 G constants. New the arrays in the data folder. More uniform response across multiple font families, and improved acuity weighting.

@@ -9,10 +9,19 @@ layout: simple
 ## GitHub
 
 - Main (This): https://github.com/Myndex/SAPC-APCA
+    - Canonical repository for discussion, documentation, issues, etc.
 - W3 licensed APCA: https://github.com/Myndex/apca-w3
+    - The specific iteration designed for supporting WCAG&nbsp;3.0
 - Bridge-PCA: https://github.com/Myndex/bridge-pca
-- colorparsley: https://github.com/Myndex/colorparsley
-- SARCAM: ---
+    - A version that is backwards compatible to WCAG&nbsp;2
+- ColorParsley: https://github.com/Myndex/colorparsley
+    - A lightweight but versatile color string parsing function
+- SeeStars: https://github.com/Myndex/seestars
+    - A very lightweight luminance and L\* converter.
+- DeltaPhiStar: https://github.com/Myndex/deltaphistar
+    - A simplified perceptually uniform contrast metric.
+- SACAM: ---
+    - A full color model using the technology that is the foundation for APCA.
 
 
 ## NPM
@@ -23,6 +32,10 @@ layout: simple
     npm i bridge-pca
     
     npm i colorparsley
+
+    npm i seestars
+
+    npm i deltaphistar
 ```
 
 ## Myndex Technologies
