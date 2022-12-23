@@ -36,7 +36,7 @@
 # [APC<span class="flipH">A</span> GitHub Repo](https://github.com/Myndex/SAPC-APCA)
 
 ## Welcome! 
-APCA is the **Accessible Perceptual Contrast Algorithm**, a new way to predict contrast for text and non-text for content on self illuminated displays.
+APCA™ is the **Accessible Perceptual Contrast Algorithm**, a new way to predict contrast for text and non-text for content on self illuminated displays.
 
 ### Questions? Ask in our [Discussions Forum](https://github.com/Myndex/SAPC-APCA/discussions)
 This is also where we discuss draft guidelines and proposals. Please post all comments or discussions here and not in the satellite repositories so they can be tracked and resolved.
@@ -64,9 +64,9 @@ Maths! Vision Science! Photons on Parade!
 </p>
 
 ---
-### APCA [Resources, Articles, & Links](https://git.myndex.com)
+### APCA™ [Resources, Articles, & Links](https://git.myndex.com)
 The main catalog of related articles, peer reviews, repositories, white papers, and more!
-### APCA [Linktree](https://linktr.ee/Myndex)
+### APCA™ [Linktree](https://linktr.ee/Myndex)
 Smaller, selected link collection.
 ### [Myndex Research](https://twitter.com/MyndexResearch) on Twitter
 ---
