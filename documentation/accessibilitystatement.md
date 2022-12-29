@@ -28,7 +28,7 @@ Naturally it is up to the designer/developer/site owner to determine the means &
 **This site's visually-readable primary content is designed to meet or exceed the conformance level of: _`<insert bronze/silver/gold>`_ as defined in version: _`<insert APCAversion>`_ of the beta APCA Readability Design Guidelines (RDG), which provide improved visual readability, enhancing the _actual_ accessibility for users of this website. If you have questions, concerns, or problems, please contact the accessibility manager at _`<insert Accessibility manager's contact info here>`_**
 
 
-# 🔚 _END_
+# 🔚  &nbsp; &larr; &nbsp; _END_
 
 ---
 • • • • • • • • • • • • • • • • • • • • 
@@ -61,7 +61,7 @@ Therefore, incorporating APCA guidelines herein is a best practice for _actual_ 
 And to learn more about contrast and color theory, here's a catalog of resources, including bibliographies of the peer-reviewed research and scientific-consensus colorimetry that laid the foundation for these breakthroughs: [git.apcacontrast.com](https://git.apcacontrast.com)
 
 
-# 🔚 _END_
+# 🔚  &nbsp; &larr; &nbsp; _END_
 
 ---
 • • • • • • • • • • • • • • • • • • • • 
@@ -104,10 +104,17 @@ But the needs of the accessibility and design communities cannot wait any longer
 To learn more about contrast and color theory, here's a catalog of resources, including bibliographies of the peer-reviewed research and scientific-consensus colorimetry that laid the foundation for these groundbreaking new methods: [git.apcacontrast.com](https://git.apcacontrast.com)
 
 
-# 🔚 _END_
+# 🔚  &nbsp; &larr; &nbsp; _END_
 
+
+---
+• • • • • • • • • • • • • • • • • • • • 
 
 
 ---
 ## APCA Notes
+Blank
 
+---
+# _START_ &nbsp; &darr; &nbsp; (tools or libraries)
+# 🔚  &nbsp; &larr; &nbsp; _END_
