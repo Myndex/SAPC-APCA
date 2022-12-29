@@ -8,7 +8,7 @@ _Contents_
 - ALT long form [site statement](#apca-accessibility-statement-v020-b--alternatemethod-replacing-wcag2) (discusses supplanting WCAG 2)
 - Tool or library [site statement](#apca-accessibility-statement-v020-c--for-inclusion-with-tools-or-libraries) (for adding the source code to live tools or libraries)
 
-_At their option, beta testers, early adopters, and sites using APCA to provide design guidance, may wish to include one of the following statements in their site's boilerplate, Terms of Service document, or as part of an accessibility statement._
+_At their option, beta testers, early adopters, and sites using APCA to provide design guidance, may wish to include one of the following statements in their site's boilerplate, Terms of Service document, or as part of an accessibility statement._     
 
 - See also [INTEGRATION COMPLIANCE](./minimum_compliance#regarding-wcag-30)
 
@@ -17,18 +17,18 @@ _At their option, beta testers, early adopters, and sites using APCA to provide 
 
 ---
 ## APCA Accessibility Statement v0.2.0 (A) •• short&nbsp;form
-This simple, short statement should be fine for most sites in most regions.
-Naturally it is up to the designer/developer/site owner to determine the means & methods of any contractual or legal obligations they are required to maintain. 
+> This simple, short statement should be fine for most sites in most regions.
+> Naturally it is up to the designer/developer/site owner to determine the means & methods of any contractual or legal obligations they are required to maintain. 
 
 ---
-### _START_ &nbsp; &darr; &nbsp; (Short)
+> # _START_ &nbsp; &darr; &nbsp; (Short)
 
 #### This website is using the [APCA](https://git.apcacontrast.com/documentation/WhyAPCA)™ readability guidelines for determining visual contrast of text and non-text elements.
 
 **This site's visually-readable primary content is designed to meet or exceed the conformance level of: _`<insert bronze/silver/gold>`_ as defined in version: _`<insert APCAversion>`_ of the beta APCA Readability Design Guidelines (RDG), which provide improved visual readability, enhancing the _actual_ accessibility for users of this website. If you have questions, concerns, or problems, please contact the accessibility manager at _`<insert Accessibility manager's contact info here>`_**
 
 
-### 🔚  &nbsp; &larr; &nbsp; _END_
+> # 🔚  &nbsp; &larr; &nbsp; _END_
 
 ---
 • •
@@ -40,7 +40,7 @@ Naturally it is up to the designer/developer/site owner to determine the means &
 This, more complete statement, is aimed at sites that wish to more thoroughly promote readability and enhance actual accessibility, and for sites that may have some concerns or ambiguities regarding the replacement of WCAG&nbsp;2 contrast criteria.
 
 
-### _START_ &nbsp; &darr; &nbsp; (Supplant WCAG 2)
+> # _START_ &nbsp; &darr; &nbsp; (Supplant WCAG 2)
 
 
 #### This website is using the [APCA](https://git.apcacontrast.com/documentation/WhyAPCA)™ readability guidelines for determining visual contrast of text and non-text elements.
@@ -63,7 +63,7 @@ Therefore, incorporating APCA guidelines herein is a best practice for _actual_ 
 And to learn more about contrast and color theory, here's a catalog of resources, including bibliographies of the peer-reviewed research and scientific-consensus colorimetry that laid the foundation for these breakthroughs: [git.apcacontrast.com](https://git.apcacontrast.com)
 
 
-### 🔚  &nbsp; &larr; &nbsp; _END_
+> # 🔚  &nbsp; &larr; &nbsp; _END_
 
 ---
 • •
@@ -75,7 +75,7 @@ And to learn more about contrast and color theory, here's a catalog of resources
 If you have a live tool or color system that uses APCA, or if you are putting together a library or framework that will have APCA code in it for others to integrate, then below is the accessibility statement that you would want to associate with those projects. See also [INTEGRATION COMPLIANCE](./minimum_compliance#regarding-wcag-30).
 
 ---
-### _START_ &nbsp; &darr; &nbsp; (tools or libraries)
+> # _START_ &nbsp; &darr; &nbsp; (tools or libraries)
 
 
 **This _`<contrast tool / color system / library / framework>`_ is using the [APCA](https://git.apcacontrast.com/documentation/WhyAPCA)™ algorithm and readability guidelines for determining visual contrast of text and non-text elements.**
@@ -108,7 +108,7 @@ But the needs of the accessibility and design communities cannot wait any longer
 To learn more about contrast and color theory, here's a catalog of resources, including bibliographies of the peer-reviewed research and scientific-consensus colorimetry that laid the foundation for these groundbreaking new methods: [git.apcacontrast.com](https://git.apcacontrast.com)
 
 
-### 🔚  &nbsp; &larr; &nbsp; _END_
+> # 🔚  &nbsp; &larr; &nbsp; _END_
 
 
 ---
@@ -122,5 +122,5 @@ To learn more about contrast and color theory, here's a catalog of resources, in
 Blank
 
 ---
-### _START_ &nbsp; &darr; &nbsp; (Blank)
-### 🔚  &nbsp; &larr; &nbsp; _END_
+> # _START_ &nbsp; &darr; &nbsp; (Blank)
+> # 🔚  &nbsp; &larr; &nbsp; _END_
