@@ -31,9 +31,9 @@ Naturally it is up to the designer/developer/site owner to determine the means &
 ### 🔚  &nbsp; &larr; &nbsp; _END_
 
 ---
-•
+• •
 • • • • • • • • • • • • • • • • • • • • 
-•
+• •
 
 ---
 ## APCA Accessibility Statement v0.2.0 (B) •• alternate&nbsp;method, replacing WCAG&nbsp;2
@@ -66,9 +66,9 @@ And to learn more about contrast and color theory, here's a catalog of resources
 ### 🔚  &nbsp; &larr; &nbsp; _END_
 
 ---
-•
+• •
 • • • • • • • • • • • • • • • • • • • • 
-•
+• •
 
 ---
 ## APCA Accessibility Statement v0.2.0 (C) •• For inclusion with tools or libraries
@@ -97,7 +97,7 @@ But the needs of the accessibility and design communities cannot wait any longer
     - [**APCA in a Nutshell**](https://git.apcacontrast.com/documentation/APCA_in_a_Nutshell) Overview of using APCA basic use.
     - [**APCA Use Cases**](https://github.com/Myndex/SAPC-APCA/discussions/39) APCA Use Cases, Conformance, Research, and Glossary
     - [**Match a Font**](https://github.com/Myndex/SAPC-APCA/discussions/28#discussioncomment-1610289) How to match to a reference font for gold level compliance
-    - [** in-line links**](https://github.com/Myndex/SAPC-APCA/discussions/65) draft guidance on how to handle in-line text link
+    - [**In-line links**](https://github.com/Myndex/SAPC-APCA/discussions/65) draft guidance on how to handle in-line text link
 2. ***Bridge PCA*** if you absolutely positively have to be backwards compatible to WCAG_2 ***by the numbers***, then you can [use Bridge PCA](https://www.myndex.com/BPCA/), and the Bridge PCA guidelines to give you better readability but also to match when WCAG_2 ncorrectly rejects.
     - Situations where you would be ***required*** to endure to the absolute letter of WCAG_2 contrast, appear to be fairly rare, as WCAG_2 is a voluntary guideline in most areas of the world.
     - Nevertheless it is important to recognize if you're in a region that does have such a requirement, and either use Bridge PCA, or use a WCAG_2 contrast checker alongside APCA to make sure that nothing slips by.
@@ -112,9 +112,9 @@ To learn more about contrast and color theory, here's a catalog of resources, in
 
 
 ---
-•
+• •
 • • • • • • • • • • • • • • • • • • • • 
-•
+• •
 
 
 ---
