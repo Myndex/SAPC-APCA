@@ -116,5 +116,5 @@ To learn more about contrast and color theory, here's a catalog of resources, in
 Blank
 
 ---
-# _START_ &nbsp; &darr; &nbsp; (tools or libraries)
+# _START_ &nbsp; &darr; &nbsp; (Blank)
 # 🔚  &nbsp; &larr; &nbsp; _END_
