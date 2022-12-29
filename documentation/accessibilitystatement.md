@@ -78,9 +78,18 @@ Of course, the compliance requirements for sites in different regions or jurisdi
 
 ***REGARDING WCAG 3.0:*** **"APCA™ is still the candidate contrast method for WCAG&nbsp;3**, and is currently in public beta. WCAG&nbsp;3 is still in very early development and subject to changes prior to adoption. Importantly, the current draft at W3C of WCAG&nbsp;3 does not yet contain the _current_ guidelines developed under APCA, as updating that draft is a very slow process—WCAG&nbsp;3 is some years away at this point.
 
-But the needs of the accessibility and design communities cannot wait any longer, so the [***APCA: Accessible Perceptual Contrast Algorithm***](APCA)™ is _also_ being developed as an independent set of guidelines. Accessibility advocates, designers, and developers can access this technology now as the public beta, with some minor caveats.
+But the needs of the accessibility and design communities cannot wait any longer, so the [***APCA: Accessible Perceptual Contrast Algorithm***](APCA)™ is _also_ being developed as an independent set of guidelines. Accessibility advocates, designers, and developers can access this technology now as the public beta, with some minor caveats:
 
-### *Use only the guidelines at the canonical Myndex repos.*
+1. ***Use only the guidelines at the canonical Myndex repos.***
+    - [**APCAcontrast.com**](https://apcacontrast.com) The official contrast calculator for APCA
+    - [**APCA in a Nutshell**](https://git.apcacontrast.com/documentation/APCA_in_a_Nutshell) Overview of using APCA basic use.
+    - [**APCA Use Cases**](https://github.com/Myndex/SAPC-APCA/discussions/39) APCA Use Cases, Conformance, Research, and Glossary
+    - [**Match a Font**](https://github.com/Myndex/SAPC-APCA/discussions/28#discussioncomment-1610289) How to match to a reference font for gold level compliance
+    - [** in-line links**](https://github.com/Myndex/SAPC-APCA/discussions/65) draft guidance on how to handle in-line text link
+2. ***Bridge PCA*** if you absolutely positively have to be backwards compatible to WCAG_2 ***by the numbers***, then you can [use Bridge PCA](https://www.myndex.com/BPCA/), and the Bridge PCA guidelines to give you better readability but also to match when WCAG_2 ncorrectly rejects.
+    - Situations where you would be ***required*** to endure to the absolute letter of WCAG_2 contrast, appear to be fairly rare, as WCAG_2 is a voluntary guideline in most areas of the world.
+    - Nevertheless it is important to recognize if you're in a region that does have such a requirement, and either use Bridge PCA, or use a WCAG_2 contrast checker alongside APCA to make sure that nothing slips by.
+
 
 ***COMMENTS WELCOME:*** APCA is presently in public beta, won't you join us in building a more readable future? Please let us know about any problems, questions, or concerns related to readability and perceptual contrast at the [APCA readability discussion forum.](https://github.com/Myndex/SAPC-APCA/discussions) 
 
@@ -91,4 +100,6 @@ To learn more about contrast and color theory, here's a catalog of resources, in
 
 
 
+---
+## APCA Notes
 
