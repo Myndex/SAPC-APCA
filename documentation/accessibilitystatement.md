@@ -5,9 +5,9 @@ layout: simple
 # APC<span class="flipH">A</span> Accessibility Statement
 _Contents_
 - Short form [site statement](#apca-accessibility-statement-v020-a--shortform) (WCAG 2 is not mentioned)
-- ALT long form [site statement](#start--supplant-wcag-2) (discusses supplanting WCAG 2)
+- ALT long form [site statement](#apca-accessibility-statement-v020-b--alternatemethod-replacing-wcag2) (discusses supplanting WCAG 2)
 - Tool or library [site statement](#apca-accessibility-statement-v020-c--for-inclusion-with-tools-or-libraries) (for adding the source code to live tools or libraries)
-- 
+
 _At their option, beta testers, early adopters, and sites using APCA to provide design guidance, may wish to include one of the following statements in their site's boilerplate, Terms of Service document, or as part of an accessibility statement._
 
 - See also [INTEGRATION COMPLIANCE](./minimum_compliance#regarding-wcag-30)
