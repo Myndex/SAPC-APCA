@@ -74,7 +74,7 @@ In this case 100px Helvetica would measure an x-height of about 52px. Determine 
 ### 52/45 = 1.156 
 _(round to at least two significant digits, three is shown here)_
 
-So for example, an APCA value of L<sup>C</sup>#nbsp;75 specifies and 18px reference font. To use the example of Times New Roman, multiply 18px by 1.156 to arrive at a minimum font size of 20.8px, or 21px rounded.
+So for example, an APCA value of L<sup>C</sup>&nbsp;75 specifies and 18px reference font. To use the example of Times New Roman, multiply 18px by 1.156 to arrive at a minimum font size of 20.8px, or 21px rounded.
 
 ### Why List Cursive?
 Make the fallback font-family after the test and reference fonts something very different, such as "cursive". This way if the browser does not load the font properly, it is immediately obvious, as in this example:
@@ -91,7 +91,7 @@ In the example below, were using the common reference font Arial, at the standar
 
 We'll make a few lines to compare different weights, and one with high contrast, and another set with very low contrast to help exacerbate the differences.  
 
-The test text is `Il 400 & IcyATOMsizedgap `, using an uppercase I & lowercase l as these make it easy to compare the vertical stroke widths. The sample text "& IcyATOMsizedgap" is short yet demonstrates most of the common design differences in a font. 
+The test text is `Il 400 & IcyATOMsizedgap`, using an uppercase I & lowercase l as these make it easy to compare the vertical stroke widths. The sample text "&IcyATOMsizedgap" is short yet demonstrates most of the common design differences in a font. 
 
 
 ### Part II.a - Setup
@@ -99,7 +99,7 @@ The test text is `Il 400 & IcyATOMsizedgap `, using an uppercase I & lowercase l
     - suitable reference fonts are Helvetica or Arial.
 2. Make a test webpage with several lines comparing several weight examples of the test font to the 400 and 700 weight reference.
     - The test font's size must be normalized so that the test and reference x Heights are equivalent.
-3. Create one test area for high contrast around L<sup>C</sup>#nbsp;90 and a second test area for low contrast around L<sup>C</sup>#nbsp;30.
+3. Create one test area for high contrast around L<sup>C</sup>&nbsp;90 and a second test area for low contrast around L<sup>C</sup>&nbsp;30.
 4. Use a consistent line of sample text for each line, and include the weight that is being tested for each line. 
     - An example is "&IcyATOMsizedgap".
     - Include the weight that is being tested in each line.
@@ -279,7 +279,7 @@ So here, find the closest visual match in terms of weight. If we look at a scree
 
 <img width="735" alt="this is a series of weight test patches design for visual comparison between a reference font and a test font at various weights." src="https://user-images.githubusercontent.com/42009457/222089662-11c221b6-c2fa-4cf0-b9ee-32f599b3650f.png">
 
-We see that Raleway is clearly lighter than Arial 400. Absent a variable font, we would say that Raleway 500 is close to Arial 400. As Raleway is available as a variable font, we can find tune and find that Raleway 520 is a close match to aerial 400. Therefore, the offset for a 400 white font for Raleway is +120.
+We see that Raleway is clearly lighter than Arial 400. Absent a variable font, we would say that Raleway 500 is close to Arial 400. As Raleway is available as a variable font, we can find tune and find that Raleway 520 is a close match to aerial 400. Therefore, the offset for a 400 weight font for Raleway is +120.
 
 Raleway bold is also lighter than Arial 700, but here the difference is not as great. Using the variable, Raleway 730 matches Ariel 700, so the offset for Raleway is +30.
 
