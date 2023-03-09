@@ -5,9 +5,9 @@ layout: simple
 # APC<span class="flipH">A</span>™ INTEGRATION COMPLIANCE
 This document is an extension of the licensing agreement.
 
-This brief document defines the minimum integrated features for a tool to be considered either _"APCA™ Compliant"_ or _"APCA™ Compatible"_ and other related issues. This document became necessary due to some unfortunate abuse and improper use of trademarks, code, and importantly in terms of properly presenting the technology. If you have questions, please reach out to legal@myndex.com — we're easy to talk to!
+This brief document defines the minimum integrated features for a tool to be considered either _"APCA™ Compliant"_ or _"APCA™ Compatible"_ and other related issues. This document became necessary due to some unfortunate abuse and improper use of trademarks, code, and importantly in terms of properly presenting the technology. If you have questions, please reach out to info@readtech.org — we're easy to talk to!
 
-## Compatibility Levels Overview
+## Compatibility Level/Permissible Identification Overview
 - **Generic Perceptual Contrast:** covers use of the algorithm in nonstandard applications and/or without brand identification.
 - **APCA™ Contrast Value:** Requires a correct implementation of the APCA base algorithm only, with disclaimers of use.
 - **APCA™ Compatible:** Same as "Contrast", adding in manual font lookup guidelines
