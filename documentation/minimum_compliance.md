@@ -49,6 +49,7 @@ All compliance levels require the following:
 - Correct implementation of the current version of the base contrast algorithm (0.0.98G-4g-base-W3).
     - Text and background color inputs clearly defined and maintained.
     - Use of the sRGB colorspace as default.
+- For use in polarity sensitive mode:
     - Lc output value must indicate polarity (dark mode or light mode)
     - Polarity must be indicated with one of:
         - A negative value for dark mode (light text on dark) i.e. "-60" OR
@@ -59,6 +60,7 @@ All compliance levels require the following:
             - this method in particular should have a warning indicating to users not to exchange the colors without rechecking.
         - Failure to correctly indicate polarity is a conformance failure.
     - Lc value may optionally be rounded to the nearest whole number.
+- For use in non-polar mode, indication that values are non-polar with $L^C_{np}$ or informally **Lnp**
 - Use of other features or color spaces in the apca-w3 package are correctly implemented per the current APCA version.
 - Color space is clearly identified when it is not sRGB.
 - Use of own features do not change the correct results of the current APCA version.
