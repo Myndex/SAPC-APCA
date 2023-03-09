@@ -52,6 +52,8 @@ All compliance levels require the following:
         - A text identifier for _BOTH_ light mode and dark mode, example:
              - BoW (meaning black on white, i.e. dark text on a light BG)
              - WoB (meaning white on black, i.e. light text on a dark BG)
+        - clearly and **_unambiguously_** indicating which color is for text and which color is for the background.
+            - this method in particular should have a warning indicating to users not to exchange the colors without rechecking.
         - Failure to correctly indicate polarity is a conformance failure.
     - Lc value may optionally be rounded to the nearest whole number.
 - Use of other features or color spaces in the apca-w3 package are correctly implemented per the current APCA version.
