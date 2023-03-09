@@ -3,9 +3,12 @@ layout: simple
 ---
 
 # APC<span class="flipH">A</span>™ INTEGRATION COMPLIANCE
+This document is an extension of the licensing agreement.
+
 This brief document defines the minimum integrated features for a tool to be considered either _"APCA™ Compliant"_ or _"APCA™ Compatible"_ and other related issues. This document became necessary due to some unfortunate abuse and improper use of trademarks, code, and importantly in terms of properly presenting the technology. If you have questions, please reach out to legal@myndex.com — we're easy to talk to!
 
 ## Compatibility Levels Overview
+- **Generic Perceptual Contrast:** covers use of the algorithm in nonstandard applications and/or without brand identification.
 - **APCA™ Contrast Value:** Requires a correct implementation of the APCA base algorithm only, with disclaimers of use.
 - **APCA™ Compatible:** Same as "Contrast", adding in manual font lookup guidelines
 - **APCA™ Compliant:** Same as "Compatible" but also including font calculations, and conforms to independent APCA™ design guidelines.
@@ -41,7 +44,7 @@ For the purposes of this document:
     - [0.0.98G-4g as LaTeX Math](https://github.com/Myndex/SAPC-APCA/blob/master/documentation/APCA-W3-LaTeX.md#latex-of-the-apca-w3-base-formula)
 
 ---
-### _ALL LEVELS—MINIMUM APCA COMPLIANCE_
+### _ALL LEVELS—MINIMUM APCA CONFORMANCE_
 All compliance levels require the following:
 - Correct implementation of the current version of the base contrast algorithm (0.0.98G-4g-base-W3).
     - Text and background color inputs clearly defined and maintained.
@@ -59,27 +62,40 @@ All compliance levels require the following:
 - Use of other features or color spaces in the apca-w3 package are correctly implemented per the current APCA version.
 - Color space is clearly identified when it is not sRGB.
 - Use of own features do not change the correct results of the current APCA version.
-- Any view the APCA math or base algorithm is shown in a human readable form, the following disclaimer must be attached:
-    - "APCA is a method for predicting text contrast on self-illuminated displays for web-based content. Some use-cases are prohibited by license, including the following: use in medical, clinical evaluation, human safety related, aerospace, transportation, military applications, are strictly prohibited without a specific license in writing granting such use."
-- In the associated documentation, and preferably linked on the interface screen near the Lc output, shall be a link to the "Why APCA" document: https://git.apcacontrast.com/documentation/WhyAPCA
+- Any view where the APCA math or base algorithm is shown in a human readable form, the following disclaimer must be attached:
+    - "APCA is a method for predicting text contrast on self-illuminated displays for web-based content. Some use-cases are prohibited by license, including the following: use in medical, clinical evaluation, human safety related, aerospace, transportation, automotive, military applications, are strictly prohibited without a specific license in writing granting such use."
+- In the associated documentation, and preferably linked on the interface screen near the Lc output, shall be a _link_ to the "Why APCA" document: https://git.apcacontrast.com/documentation/WhyAPCA
+    - this or other documentation may be hosted locally with source code provided that there is always a live link to the canonical source here.
+
+
+### Use _Without_ Identification
+Unidentified use of the APCA algorithm or math is permitted, subject to the restrictions listed in _MINIMUM APCA CONFORMANCE_, provided:
+    - code used is as provided in the apca–w3 repository, 
+    - code is unmodified except as needed for porting to a given language and/or use case.
+    - that there is no use of the term "APCA" or protected terms or trademarks, and
+    - is only identified generically as _"perceptual contrast"_ as far as the specific implementation, _EXCEPT_
+    - if there is documentation related to the code, that it 
+        - lists the link to the above noted WhyAPCA document,
+        - indicates the above license exclusions or prohibited uses
+        - in this case may be identified as _"perceptual contrast based on APCA but not APCA compliant"_
 
 
 ### APCA™ Contrast Value _(no guidelines, no examples)_
-Use of the term "APCA™ Contrast" requires at a minimum:
-- Minimum APCA compliance as listed above
+Use of the term "APCA™ Lc Value" requires at a minimum:
+- Minimum APCA compliance as listed in _MINIMUM APCA CONFORMANCE_
 - **MAY NOT** present any example using the tested colors, nor present any font examples.
     - The output of the tool must be _only_ the Lc value, and present no visual example.
-- May use the term "APCA Contrast Value" but may not use terms such as "APCA compliant" 
+- May use the term "APCA Contrast Value" but MUST NOT use terms such as "APCA compliant" 
     - May refer to the output as "APCA Lc Value" or "Lc"
     - **MUST present the value alone,** with no examples of the use of the colors or fonts whatsoever.
     - Use of visual font examples shall require adherance to "APCA™ Compatible" or better.
 - NO linking to any WCAG&nbsp;3 document at all (neither current nor expired), and no reference of any kind to WCAG&nbsp;3 nor WCAG&nbsp;3 compatibility nor WCAG&nbsp;3 compliance whatsoever.
-- If any examples are to be shown, the tool must conform to one of the APCA guideline levels, described below.
+- If any examples are to be shown, the tool MUST conform to one of the APCA guideline levels, described below.
 
 ---
 ### APCA™ Compatible _(basic guidelines and basic examples)_
 Use of the term "APCA™ Compatible" requires at a minimum:
-- Minimum APCA compliance
+- _MINIMUM APCA CONFORMANCE_
 - If an example is shown, it must show at least the minimum reference font size at normal weight for the fluent text use case, at the present Lc value.
     - Reference font for this purpose is normal weight (400) Arial or Helvetica, normal aspect.
     - Sizes per Lc level as listed, including the title:
@@ -116,7 +132,7 @@ Use of the term "APCA™ Compatible" requires at a minimum:
 ### APCA™ Compliant _(more complete guidelines and examples)_
 Use of the term "APCA™ Compliant" requires at a minimum:
 
-Everything as recited in "APCA™ Compatible" but further including:
+Everything as recited in "APCA™ Compatible" above, but further including:
 - A link to the font size/weight lookup tables and documentation (required).
     - This should include the Bronze/Silver/Gold level descriptions (optional until WCAG&nbsp;3 is official).
 - In addition to the Lc output, additionally a visible output stating the minimum font size for weights 300, 400, and 700.
@@ -130,14 +146,14 @@ Pending Requirements in development:
 - Associated non-text guidelines chart.
 
 ### APCA™ Certified 
-For certification, a site or tool must meet the APCA Compliant standard above, and then have source code and implementation evaluated and certified by Myndex Research. The certification service will be available at the conclusion of the beta period.
+For certification, a site or tool must meet the "APCA Compliant" standard above, and then have source code and implementation evaluated and certified by Myndex Research or Accessible Reading Technologies. The certification service will be available at a future date, following the conclusion of the beta period.
 
-Only APCA Certified apps will be permitted to use the trademarked "Powered by APCA" or "APCA" official logos.
+Only APCA Certified apps will be permitted to use the trademarked **"Powered by APCA" or "APCA™" official logos.**
 
 ### APCA Beta Testers
-APCA Beta sites may have different variations on the above requirements, determined on a case by case basis.
+APCA Beta sites may have different variations on the above requirements, permitted on a case by case basis, under the experimental use case temporary exception.
 
-To become "officially" involved in the APCA beta program, please send an email to "legal@myndex.com" with "APCA Beta" in the subject line.
+To become officially involved in the APCA beta program, please send an email to "info@readtech.org" with "APCA Beta" in the subject line.
 
 
 ## Further Discussion
