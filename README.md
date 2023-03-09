@@ -33,20 +33,23 @@
 
 </p>
 
-# [APC<span class="flipH">A</span> GitHub Repo](https://github.com/Myndex/SAPC-APCA)
+# [APC<span class="flipH">A</span> Documentation Repo](https://github.com/Myndex/SAPC-APCA)
 
 ## Welcome! 
-APCA™ is the **Accessible Perceptual Contrast Algorithm**, a new way to predict contrast for text and non-text for content on self illuminated displays.
+APCA™ is the **Accessible Perceptual Contrast Algorithm**, a new way to predict contrast for text and non-text for content on self illuminated displays. This repository is for the documentation, for issue tracking, and for the discussion forum.
 
+### _CODE_
 The correct code to use is [***apca-w3***](https://github.com/Myndex/apca-w3/) which is in its own satellite repository, and is also available at `npm i apca-w3` That is the only code that should be used for any development purposes. 
 
-The draft [**APCA Readability Criterion**](https://readtech.org/ARC/) is up as a work in progress, still sections to be added and/or adjusted.
+### _DESIGN GUIDELINES_
+The draft independent [**APCA Readability Criterion**](https://readtech.org/ARC/) is up as a work in progress, still sections to be added and/or adjusted.
 
+### _FORUMS_
 For comments or questions on the _guidelines_, use the [ARC forum](https://github.com/A11yReadTech/ARC/discussions), that is where we discuss the draft standards & guidelines, and discuss legal & conformance issues. 
 
 For comments or questions on _theory, math, or the APCA algorithm_ itself, use the [SAPC-APCA forum](https://github.com/Myndex/SAPC-APCA/discussions) here, please post all comments, questions, or discussions regarding theory, math, code, third-party tools,third-party tools, and so forth, here and not in the satellite repositories, so they can be tracked and resolved.
 
-
+-----
 ## _DOCUMENTATION_
 - [**Main Readme Doc**](https://git.apcacontrast.com/documentation/README) This page includes the math, code walkthroughs and links for developer related goodies. If you'd like to dive into the deep end, this is a good start.
 
