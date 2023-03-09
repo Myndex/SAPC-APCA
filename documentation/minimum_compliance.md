@@ -33,7 +33,7 @@ The only suitable language at this time is: _"APCA™ is the candidate contrast 
 
 ----
 ## Compliance Levels Defined
-For the purposes of this document: 
+For the purposes of this document:
 - "APCA" and "APCA code" refers to
     - the npm package ` npm i apca-w3 ` and
     - the specific GitHub repo: [/Myndex/apca-w3](https://github.com/Myndex/apca-w3)
@@ -71,28 +71,26 @@ All compliance levels require the following:
 
 
 ### Use _Without_ Identification
-Unidentified use of the APCA algorithm or math is permitted, subject to the restrictions listed in _MINIMUM APCA CONFORMANCE_, provided:
-    - code used is as provided in the apca–w3 repository, 
+Unidentified use of the APCA algorithm or math is permitted: 
+- Use subject to the restrictions listed in _MINIMUM APCA CONFORMANCE_, provided:
+    - code used is as provided at the apca–w3 repository, 
     - code is unmodified except as needed for porting to a given language and/or use case.
-    - that there is no use of the term "APCA" or protected terms or trademarks, and
-    - is only identified generically as _"perceptual contrast"_ as far as the specific implementation, _EXCEPT_
-    - if there is documentation related to the code, that it 
-        - lists the link to the above noted WhyAPCA document,
-        - indicates the above license exclusions or prohibited uses
-        - in this case may be identified as _"perceptual contrast based on APCA but not APCA compliant"_
-
+    - that there is **_no use_** of the term "APCA" or protected terms or trademarks, and
+    - **no implied endorsement by Myndex™ nor Accessible Reading Technologies™**
+    - is only identified generically as _"perceptual contrast"_ for the specific implementation
 
 ### APCA™ Contrast Value _(no guidelines, no examples)_
 Use of the term "APCA™ Lc Value" requires at a minimum:
 - Minimum APCA compliance as listed in _MINIMUM APCA CONFORMANCE_
 - **MAY NOT** present any example using the tested colors, nor present any font examples.
     - The output of the tool must be _only_ the Lc value, and present no visual example.
-- May use the term "APCA Contrast Value" but MUST NOT use terms such as "APCA compliant" 
-    - May refer to the output as "APCA Lc Value" or "Lc"
+- May use the term "APCA Lc Value" but MUST NOT use terms such as "APCA compliant" 
+    - May refer to the output as "Perceptual Lc Value" or "Lc"
+    - May be identified as _"perceptual contrast based on APCA but not APCA compliant"_
     - **MUST present the value alone,** with no examples of the use of the colors or fonts whatsoever.
     - Use of visual font examples shall require adherance to "APCA™ Compatible" or better.
-- NO linking to any WCAG&nbsp;3 document at all (neither current nor expired), and no reference of any kind to WCAG&nbsp;3 nor WCAG&nbsp;3 compatibility nor WCAG&nbsp;3 compliance whatsoever.
-- If any examples are to be shown, the tool MUST conform to one of the APCA guideline levels, described below.
+- NO linking to any WCAG&nbsp;3 document at all (neither current nor expired), and no reference of any kind to WCAG&nbsp;3 nor WCAG&nbsp;3 compatibility nor WCAG&nbsp;3 compliance _whatsoever_.
+- If any **examples** are to be shown, the tool MUST conform to one of the APCA guideline levels, described below.
 
 ---
 ### APCA™ Compatible _(basic guidelines and basic examples)_
