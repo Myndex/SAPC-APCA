@@ -38,8 +38,14 @@
 ## Welcome! 
 APCA™ is the **Accessible Perceptual Contrast Algorithm**, a new way to predict contrast for text and non-text for content on self illuminated displays.
 
-### Questions? Ask in our [Discussions Forum](https://github.com/Myndex/SAPC-APCA/discussions)
-This is also where we discuss draft guidelines and proposals. Please post all comments or discussions here and not in the satellite repositories so they can be tracked and resolved.
+The correct code to use is [***apca-w3***](https://github.com/Myndex/apca-w3/) which is in its own satellite repository, and is also available at `npm i apca-w3` That is the only code that should be used for any development purposes. 
+
+The draft [**APCA Readability Criterion**](https://readtech.org/ARC/) is up as a work in progress, still sections to be added and/or adjusted.
+
+For comments or questions on the _guidelines_, use the [ARC forum](https://github.com/A11yReadTech/ARC/discussions), that is where we discuss the draft standards & guidelines, and discuss legal & conformance issues. 
+
+For comments or questions on _theory, math, or the APCA algorithm_ itself, use the [SAPC-APCA forum](https://github.com/Myndex/SAPC-APCA/discussions) here, please post all comments, questions, or discussions regarding theory, math, code, third-party tools,third-party tools, and so forth, here and not in the satellite repositories, so they can be tracked and resolved.
+
 
 ## _DOCUMENTATION_
 - [**Main Readme Doc**](https://git.apcacontrast.com/documentation/README) This page includes the math, code walkthroughs and links for developer related goodies. If you'd like to dive into the deep end, this is a good start.
