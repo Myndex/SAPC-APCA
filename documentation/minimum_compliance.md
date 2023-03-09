@@ -76,8 +76,9 @@ Unidentified use of the APCA algorithm or math is permitted:
     - code used is as provided at the apca–w3 repository, 
     - code is unmodified except as needed for porting to a given language and/or use case.
     - that there is **_no use_** of the term "APCA" or protected terms or trademarks, and
-    - **no implied endorsement by Myndex™ nor Accessible Reading Technologies™**
-    - is only identified generically as _"perceptual contrast"_ for the specific implementation
+    - **no implied endorsement by Myndex™ nor Accessible Reading Technologies™ (ART)**
+    - is only identified generically as _"perceptual contrast"_
+    - for professional use only, Myndex and/or ART™ accept no liability whatsoever for any use or misuse of any code or related technologies.
 
 ### APCA™ Contrast Value _(no guidelines, no examples)_
 Use of the term "APCA™ Lc Value" requires at a minimum:
