@@ -2,6 +2,6 @@
 
 ### _INDEX_
 
-- LUT-GseriesMat28-2022.js - these are JS arrays of the current LUTs for font size and weight. Please check here regularly for updates during the public beta period.
+- LUT-GseriesMay28-2022.js - these are JS arrays of the current LUTs for font size and weight. Please check here regularly for updates during the public beta period.
 
 
