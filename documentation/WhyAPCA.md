@@ -10,7 +10,7 @@ WCAG&nbsp;2.x contrast and 1.4.3 and the related understandings and guidelines w
 
 There are a number of reasons that WCAG&nbsp;2.x contrast is faulty, one of which is the binary pass/fail nature of the SC for a property that does not apply in a binary way across perception nor impairments. Humans are not binary computers, and it is important to understand the non-linear aspects of perception, and to set guidelines that correctly model perception as opposed to "brute forcing" arbitrary values that ultimately do more harm than good.
 
-Let's begin with a general understanding of color and contrast with the summary outlined below. For a deeper dive see the author's whitepaper ["Introduction to Color and Accessibility"](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance#introduction_to_color_and_accessibility) and also [the draft APCA white paper](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup/Whitepaper).
+Let's begin with a general understanding of color and contrast with the summary outlined below. For a deeper dive see the author's whitepaper ["Introduction to Color and Accessibility"](https://AndySomers.com) and also this comprehensive overview ["The Realities And Myths Of Contrast And Color"](https://www.smashingmagazine.com/2022/09/realities-myths-contrast-color/).
 
 
 ## What Is Readability Contrast?
@@ -128,6 +128,7 @@ _This document was written in plain language to the extent possible, with a targ
 - [Improving accessibility with the new APCA ](https://www.lightflows.co.uk/blog/improving-accessibility-with-apca/) A review of APCA by Nik Bailey.
 
 ### _Articles & Gists_
+- ["The Realities And Myths Of Contrast And Color"](https://www.smashingmagazine.com/2022/09/realities-myths-contrast-color/) A plain language, in-depth primer to vision, color, and contrast for design, with an emphasis on typography and readability needs. Published in Smashing Magazine.
 - [**Better reading on the web**](https://uxdesign.cc/better-reading-on-the-web-c943c4cfc91a) Published by _UX Collective_ (uxdesign.cc). This article discusses and demonstrates issues with automated testing and WCAG 2 contrast math, methods, and guidelines.
 
 - **On _Tangled Web_** (TangledWeb.xyz):
