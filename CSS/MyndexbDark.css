@@ -5356,6 +5356,26 @@ section > h1 {
   font-weight: 600;
   letter-spacing: 0;
   }
+  
+h1 a:link {
+  text-decoration: none;
+  border: 2px solid currentColor;
+  border width: 0 0 2px 0;
+}
+h1 a:visited {
+  border: none;
+}
+h1 a:hover {
+  border: none;
+}
+h1 a:visited:hover {
+  border: none;
+}
+h1 a:active {
+  border: none;
+}
+
+
 
 .flipH, .apca .flipH {
   display: inline-block;
