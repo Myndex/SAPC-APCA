@@ -5357,21 +5357,20 @@ section > h1 {
   letter-spacing: 0;
   }
   
-h1 a:link {
+section h1 a:link {
   text-decoration: none;
   border: 2px solid currentColor;
-  border width: 0 0 2px 0;
+  border-width: 0 0 2px 0;
 }
-h1 a:visited {
+section h1 a:visited {
+}
+section h1 a:hover {
   border: none;
 }
-h1 a:hover {
+section h1 a:visited:hover {
   border: none;
 }
-h1 a:visited:hover {
-  border: none;
-}
-h1 a:active {
+section h1 a:active {
   border: none;
 }
 
