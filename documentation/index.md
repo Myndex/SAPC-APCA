@@ -7,6 +7,9 @@ layout: repoSubfolder
 ## Accessible Perceptual Contrast Algorithm
 
 - [**Main Readme Doc** (HTML version)](https://git.apcacontrast.com/documentation/README)
+- [**Color and Contrast Tools Listing**](https://git.apcacontrast.com/documentation/thirdpartytools)
+
+
 
 ### _Simple Overview, QuickStart, and FAQ_
 These are intended for end users, and those interested in a plain language overview without a lot of the math & theory.
