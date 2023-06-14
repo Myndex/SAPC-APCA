@@ -34,6 +34,9 @@ Please make all comments or discussions here and not in the satellite repositori
 
 APCA™ is a new way to predict contrast for text and non-text for content on self illuminated displays. This repository is for the documentation, for issue tracking, and for the discussion forum.
 
+### _TOOLS_
+- [**Color and Contrast Tools Listing**](https://git.apcacontrast.com/documentation/thirdpartytools)
+
 ### _CODE_
 The correct code to use is [***apca-w3***](https://github.com/Myndex/apca-w3/) which is in its own satellite repository, and is also available at `npm i apca-w3` That is the only code that should be used for any development purposes. 
 
