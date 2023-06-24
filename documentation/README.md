@@ -67,6 +67,7 @@ Maths! Vision Science! Photons on Parade!
 - [Regarding Exponents](https://git.apcacontrast.com/documentation/regardingexponents) Some notes and explanation regarding the power-curve exponents.
 - [Standard Observer Model](https://git.apcacontrast.com/documentation/StandardObserverModel) Draft standardized environment.
 - [Visual Contrast Draft Whitepaper](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup/Whitepaper) (Work in progress)
+- [Color Vision Links & Resources](https://git.apcacontrast.com/documentation/color-vision-links)
 
 ### _For Developers_
 - [RepoList](https://git.apcacontrast.com/documentation/repoList) of the related satellite repositories.
