@@ -74,9 +74,9 @@ In the following chart, we're showing minimum passing contrasts for APCA and for
 
 
 ## Use-Case Ranges
-These general levels are appropriate for use by themselves, without the need to reference a lookup table. APCA reports contrast as an L<sup>c</sup>&nbsp;value (lightness contrast) from **L<sup>c</sup>&nbsp;0** to **L<sup>c</sup>&nbsp;105+**. For accessibility, consider L<sup>c</sup>&nbsp;15 the point of invisibility for many users, and L<sup>c</sup>&nbsp;90 is preferred for body text.
+These general levels are appropriate for use by themselves, without the need to reference a lookup table. APCA reports contrast as an L<sup>c</sup>&nbsp;value (lightness contrast) from **L<sup>c</sup>&nbsp;0** to **L<sup>c</sup>&nbsp;105+**. For accessibility, consider L<sup>c</sup>&nbsp;15 the point of invisibility for many users, particularly for thin lines, and L<sup>c</sup>&nbsp;90 is preferred for body text.
 
-See [this on ranges](./APCA_in_a_Nutshell#use-case-ranges) for a more in-depth look.
+See [this on ranges](./APCA_in_a_Nutshell#use-case--size-ranges) for a more in-depth look.
 
 *   **L<sup>c</sup>&nbsp;90** • Preferred level for fluent text and columns of body text with a font no smaller than 14px/weight 400 (normal).
 *   **L<sup>c</sup>&nbsp;75** • The _minimum_ level for columns of body text with a font no smaller than 18px/400. L<sup>c</sup>&nbsp;75 should be considered a minimum for text where readability is important.
@@ -92,7 +92,7 @@ While the candidate for WCAG&nbsp;3 is still in development, it includes a range
 
 The overall approach improves design flexibility and readability at the same time. Readability is improved by increasing contrast in blocks of body text where it is most needed, and design flexibility is achieved by relaxing contrast for large non-text elements which do not need brute-force contrast levels due to their larger size (resulting in a lower spatial frequency).
 
-For demonstration purposes, the example tool provides real-time updates of minimum font size and weight vs contrast: https://www.myndex.com/APCA/ click on the color patches to bring up a color-picker.
+For demonstration purposes, the example tool provides real-time updates of minimum font size and weight vs contrast: [apcacontrast.com](https://apcacontrast.com) click on the color patches to bring up a color-picker.
 
 We hope this clarifies the useful differences of a perceptually accurate range-based model as the guideline for a future of best readability.
 
@@ -102,7 +102,7 @@ Thank you for reading,
 
 _Andrew Somers_    
 _W3 AGWG Invited Expert_     
-_Research Lead and Creator of APCA_     
+_Research Lead & Creator of APCA_     
 _Senior Color Science Researcher_      
 _Myndex PercepTex Research Project_     
 
@@ -117,7 +117,7 @@ _Myndex PercepTex Research Project_
 _This document was written in plain language to the extent possible, with a target readability age of about a high school senior. Readability evaluations were made using the https://wooorm.com/readability/ tool. If you found any part of this essay difficult or confusing, please [file an issue or discuss here](https://github.com/Myndex/SAPC-APCA/discussions) so we can improve._
 
 ### _Study Volunteers Needed_
-Would you like to help create a more readable world for all? Please let us know! We have several studies planned for 2022, and it requires minimal time on your part to participate. Please send an email to perceptex@myndex.com with "volunteer" in the subject line.
+Would you like to help create a more readable world for all? Please let us know! We have several studies planned for 2023, and it requires minimal time on your part to participate. Please send an email to perceptex@myndex.com with "volunteer" in the subject line.
 
 **_NOTICE: Personal opinions expressed are the author's and may or may not reflect those of the W3 or AGWG._** 
 
@@ -130,34 +130,25 @@ Would you like to help create a more readable world for all? Please let us know!
 - [**Catalog of APCA Resources and Links**](https://git.myndex.com)
 
 ### _APCA Readability Criterion_
-[**Draft Guidelines**](https://readtech.org/ARC/) for implementing APCA and related technologies.
+- [**Draft Guidelines**](https://readtech.org/ARC/) for implementing APCA and related technologies.
 
-### Links To Tools and Toolmakers
+### _Links To Tools and Toolmakers_
 - [**APCA Demo**](https://apcacontrast.com), the official technology demonstrator of APCA. 
 - [**Tools and systems**](https://git.apcacontrast.com/documentation/thirdpartytools) that have adopted APCA.
 
 ### _APCA Discussion Forum_
 - [**Readability Forum**](https://github.com/Myndex/SAPC-APCA/discussions/)   questions and comments welcome.
+    - [**DISCUSS: Using APCA with other fonts** ](https://github.com/Myndex/SAPC-APCA/discussions/28#discussioncomment-1610289) Draft method for font weight conformance.
+    - [**DISCUSS: Inline text links theory and practice** ](https://github.com/Myndex/SAPC-APCA/discussions/65) Draft guidance regarding link identification.
 
-- [**DISCUSS: Using APCA with other fonts** ](https://github.com/Myndex/SAPC-APCA/discussions/28#discussioncomment-1610289) Draft method for font weight conformance.
-
-- [**DISCUSS: Inline text links theory and practice** ](https://github.com/Myndex/SAPC-APCA/discussions/65) Draft guidance regarding link identification.
-
-
-## APCA Peer Review & Third Party Discussion
+### _APCA Peer Review & Third Party Discussion_
 Listing of [**third party and peer reviews**](https://git.myndex.com/#apca-peer-review--third-party-discussion) of APCA.
 
-### _Articles & Gists_
+### _Articles on Color and Contrast by A.Somers_
 - ["The Realities And Myths Of Contrast And Color"](https://www.smashingmagazine.com/2022/09/realities-myths-contrast-color/) A plain language, in-depth primer to vision, color, and contrast for design, with an emphasis on typography and readability needs. Published in Smashing Magazine.
-- [**Better reading on the web**](https://uxdesign.cc/better-reading-on-the-web-c943c4cfc91a) Published by _UX Collective_ (uxdesign.cc). This article discusses and demonstrates issues with automated testing and WCAG 2 contrast math, methods, and guidelines.
+- [**Better reading on the web**](https://uxdesign.cc/better-reading-on-the-web-c943c4cfc91a) Published by _UX Collective_, this article discusses and demonstrates issues with automated testing and WCAG 2 contrast math, methods, and guidelines.
 
 - **On _Tangled Web_** (TangledWeb.xyz):
     - [**Please Stop Using Grey Text**](https://tangledweb.xyz/please-stop-using-grey-text-3d3e71acfca8) This popular article debunks one of the worst myths regarding design contrast.
-    - [**What’s Red & Black & Also Not Read?**](https://tangledweb.xyz/whats-red-black-also-not-read-573b9c0a97ed) on Tangled Web, which examines the nature of color insensitivity and readability.
-    - [**A Contrast of Errors**](https://atangledwebweweave.com/a-contrast-of-errors-373c2665d42a) on Tangled Web, which looks at the history and the current international readability crisis.
-    - 
-- **_GitHub Gists_** on [contrast and color](https://gist.github.com/Myndex)
-- **_Gists Specific to APCA_**:
-    - Part I: [**Orange You Wondering About Contrast?**](https://gist.github.com/Myndex/1dadb6dcac596f1cd7a5686a076f697f) Answering some contrast questions, and demonstrating a real solution to the infamous orange conundrum.
-    - Part II: [**The Lighter Side of Dark Backgrounds**](https://gist.github.com/Myndex/c30dba273aa5eca426ad9f5200917c9d) An article comparing some parts of APCA with the old WCAG&nbsp;2 contrast methods, demonstrating how WCAG&nbsp;2 contrast can cause poor results.
-    - Part III: [**WCAG&nbsp;2 vs APCA Contrast Shootout**](https://gist.github.com/Myndex/069a4079b0de2930e72d5401bde9af98#wcag-2-vs-apca-contrast-shootout) Answering some recent questions regarding APCA, with comparisons and examples of the old (WCAG&nbsp;2 1.4.3) and the future WCAG&nbsp;3 / APCA.
+    - [**What’s Red & Black & Also Not Read?**](https://tangledweb.xyz/whats-red-black-also-not-read-573b9c0a97ed) examines the nature of color insensitivity and readability.
+    - [**A Contrast of Errors**](https://atangledwebweweave.com/a-contrast-of-errors-373c2665d42a) looks at the history and the current international readability crisis.
