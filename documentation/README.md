@@ -30,7 +30,7 @@ layout: simple
 Please make all comments or discussions here and not in the satellite repositories.
 
 ## Accessible Perceptual Contrast Algorithm
-(Formerly the Advanced Perceptual Contrast Algorithm)
+(Formerly the _Advanced_ Perceptual Contrast Algorithm)
 
 APCA™ is a new way to predict contrast for text and non-text for content on self illuminated displays. This repository is for the documentation, for issue tracking, and for the discussion forum.
 
@@ -44,7 +44,7 @@ The correct code to use is [***apca-w3***](https://github.com/Myndex/apca-w3/) w
 The draft independent [**APCA Readability Criterion**](https://readtech.org/ARC/) is up as a work in progress, still sections to be added and/or adjusted.
 
 ### _FORUMS_
-For comments or questions on the _guidelines_, use the [ARC forum](https://github.com/A11yReadTech/ARC/discussions), that is where we discuss the draft standards & guidelines, and discuss legal & conformance issues. 
+<!-- For comments or questions on the _guidelines_, use the [ARC forum](https://github.com/A11yReadTech/ARC/discussions), that is where we discuss the draft standards & guidelines, and discuss legal & conformance issues. -->
 
 For comments or questions on _theory, math, or the APCA algorithm_ itself, use the [SAPC-APCA forum](https://github.com/Myndex/SAPC-APCA/discussions) here, please post all comments, questions, or discussions regarding theory, math, code, third-party tools,third-party tools, and so forth, here and not in the satellite repositories, so they can be tracked and resolved.
 
@@ -57,9 +57,11 @@ Please do not use anything in the legacy branch without contacting us first. All
 
 ### _Simple Overview, QuickStart, and FAQ_
 These are intended for end users, and those interested in a plain language overview without a lot of the math & theory.
-- [**Why APCA?**](https://git.apcacontrast.com/documentation/WhyAPCA) A basic overview
-- [**APCA in a nutshell**](https://git.apcacontrast.com/documentation/APCA_in_a_Nutshell) The minimum user guide
-- [**APCA FAQ**](https://git.apcacontrast.com/documentation/APCA_FAQ)
+- [**Easy Intro to APCA?** ](https://git.apcacontrast.com/documentation/APCAeasyIntro) This is the simple plain-language introduction to APCA that you've been looking for. This is a simpler version of _WhyAPCA_ below.
+- [**Why APCA?** ](https://git.apcacontrast.com/documentation/WhyAPCA) This brief introduction into APCA describes how it solves the problems of WCAG_2 contrast. See _Easy Intro to APCA?_ for the plain language version. 
+- [**APCA in a Nutshell** ](https://git.apcacontrast.com/documentation/APCA_in_a_Nutshell) Basic overview for using APCA, including simple use-case based conformance levels.
+- [**APCA FAQ**](https://git.apcacontrast.com/documentation/APCA_FAQ) APCA Frequenty Asked Questions (in development)
+
 
 ### _Sciencey Stuff!_
 Maths! Vision Science! Photons on Parade!
