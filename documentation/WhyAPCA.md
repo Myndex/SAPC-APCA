@@ -101,18 +101,18 @@ Thank you for reading,
 
 
 _Andrew Somers_    
-_W3 AGWG Invited Expert_     
+_W3C AGWG Invited Expert_     
 _Research Lead & Creator of APCA_     
 _Senior Color Science Researcher_      
 _Myndex PercepTex Research Project_     
 
 
 ### _Definitions of Terms Used In This Document_
-- Spatial or spatially: relating to size or thickness.
-- Hue: the uniqueness of a given color vs other colors, i.e. blue vs red.
-- Chroma/saturation: the intensity or purity of a color vs no color.
-- Luminance: a physical measure of light.
-- Lightness: the human perception of a given luminance. Also darkness and brightness.
+- **Spatial or spatially:** relating to size or thickness.
+- **Hue:** the uniqueness of a given color vs other colors, i.e. blue vs red.
+- **Chroma/saturation:** the intensity or purity of a color vs no color.
+- **Luminance:** a physical measure of light, disregarding hue.
+- **Lightness:** the human perception of a given luminance. Also darkness and brightness.
 
 _This document was written in plain language to the extent possible, with a target readability age of about a high school senior. Readability evaluations were made using the https://wooorm.com/readability/ tool. If you found any part of this essay difficult or confusing, please [file an issue or discuss here](https://github.com/Myndex/SAPC-APCA/discussions) so we can improve._
 
