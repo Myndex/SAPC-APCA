@@ -45,13 +45,14 @@ Above a certain amount, critical  contrast constancy may come into effect. This 
 
 -   Spot readability means readable without significant effort. Spot reading is the lowest readable level, where the contrast needs to be three times the JND. This low level is useful for disabled controls, copyright bugs, and other non-content.
 
-These factors define the area of "supra-threshold critical contrast for readability." We refer to this as "readability contrast" for simplicity. There's a critical font size for acuity, and weight, for spatially-driven contrast.
+These factors define the area of _"supra-threshold critical contrast for readability."_ We refer to this as "readability contrast" for simplicity. There's a critical _font size_ for _acuity_, and a critical $`Lc`$ value with _font weight_ for spatially-driven lightness-contrast.
 
 The size of a font relates to a person's ability to focus (defined by a number like 20/20 or 6/6 on an eye exam chart). Both the size and weight of that font defines contrast sensitivity. Contributing to contrast is white space, letter & line spacing, font aspect ratio, etc.
 
 The following chart demonstrates the spatial nature of human contrast sensitivity. The text samples connect the abstract science of the CS curve to practical reality.
 
 <img width="648" alt="This is a chart of the human contrast sensitivity curve. A blue line curves down to the right where the Y axis is contrast sensitivity, and the X access is spatial frequency, increasing toward the right. An increase in spatial frequency means elements are smaller and thinner. On the right of this info graphic are samples of text from very large and bold to very thin and small, with red lead lines indicating approximately where those samples fall on the contrast sensitivity curve. All of the text samples are at the exact same CSS color of #c7c7c7, the top very large and bold headline is legible but as the fonts become thinner and smaller they literally fade out as if becoming lighter gray, even though they are all at the exact same color." src="/images/contrastSensitivityGraph5sameColor.png">
+
 ### Use Cases
 
 Spot-reading-contrast has a lower requirement than fluent readability contrast. Non-text object contrast, such as for a solid icon, may have a lower contrast need. Color (hue or saturation) is important for coding information, such as dataviz. Even so, luminance contrast is still required for visual details.
@@ -128,20 +129,21 @@ The approach improves design flexibility _and_ readability _at the same time_. *
 
 The demonstrator tool provides real-time updates of minimum font size & weight vs $`Lc`$ lightness-contrast. [**apcacontrast.com**](https://apcacontrast.com/) The tool has several ways to enter a color. Click on the color patches to bring up a color-picker, enter a hex value or an RGB value, or use the sliders. The text color supports alpha. A negative $`Lc`$ value, such as $`Lc -60`$ means the text is lighter than the background. A positive value $`Lc 60`$ means the text is darker than the background (light mode).
 
-We hope this clarifies the advantages of a perceptually uniform range-based contrast model. APCA enables content with improved visual readability---we can make reading fun again!
+We hope this clarifies the advantages of a perceptually uniform range-based contrast model. APCA enables content with improved visual readability—we can make reading fun again!
 
 Thank you for reading,
 
 
 _Andrew Somers_    
-_W3C AGWG Invited Expert_     
-_Research Lead & Creator of APCA_     
-_Senior Color Science Researcher_      
-_Myndex PercepTex Research Project_     
+_Myndex Research • Color Scientist_     
+_W3C AGWG Invited Expert • WCAG 3_     
+_Research Lead & Creator of APCA_   
 
+----
+## _THE WORLD IS READING_<sup>™</sup>
 
-### _Definitions of Terms Used In This Document_
-- **Spatial or spatially:** relating to size or thickness.
+### Definitions of Terms Used In This Document
+- **Spatial or spatially:** relating to size, weight, or thickness.
 - **Hue:** the uniqueness of a given color vs other colors, i.e. blue vs red.
 - **Chroma/saturation:** the intensity or purity of a color vs no color.
 - **Luminance:** a physical measure of light, disregarding hue.
@@ -149,38 +151,49 @@ _Myndex PercepTex Research Project_
 
 _This document was written in basic plain language using the [Hemingway app](https://hemingwayapp.com)._
 
-### _Study Volunteers Needed_
+### Study Volunteers Needed
 Would you like to help create a more readable world for all? Please let us know! We have several studies planned for 2023, and it requires minimal time on your part to participate. Please send an email to perceptex@myndex.com with "volunteer" in the subject line.
 
 **_NOTICE: Personal opinions expressed are the author's and may or may not reflect those of the W3 or AGWG._** 
 
-## _THE WORLD IS READING_<sup>™</sup>
-
  <img src="/images/APCAcolor4.png" width="420" alt="APCA The Revolution Will Be Readable">
 
-## Appendix: Additional Reading
-- [**Catalog of APCA Resources and Links**](https://git.myndex.com)
+## APPENDIX: _Additional Reading_
+- [**Linktree of Selected Resources**](https://linktr.ee/Myndex) A good place to start.
+- [**Main Catalog of APCA Resources and Links**](https://git.myndex.com) For the much deeper divers.
 
-### _APCA Readability Criterion_
-- [**Draft Guidelines**](https://readtech.org/ARC/) for implementing APCA and related technologies.
+### APCA Readability Criterion
+_Maintained by Inclusive Reading Technologies Inc., a California Non-Profit_.
+- [**Draft ARC Guidelines**](https://readtech.org/ARC/) for implementing APCA and related technologies.
+- [**Bronze Simple Mode**](https://readtech.org/ARC/tests/bronze-simple-mode/?tn=intro)  is designed as an introductory mode that does not require look-up tables or matching to a reference font. Instead it's designed as a simple set of threshold levels, similar to how WCAG&nbsp;2 works but using perceptually uniform math.
 
-### _Links To Tools and Toolmakers_
-- [**APCA Demo**](https://apcacontrast.com), the official technology demonstrator of APCA. 
-- [**Tools and Systems**](https://git.apcacontrast.com/documentation/thirdpartytools) that have adopted APCA.
+### Links To APCA and Related Tools
+- [**APCA Calculator**](https://apcacontrast.com), the official technology demonstrator for APCA, includes explainers. 
+- Listing of [**Third Party Tools and Systems**](https://git.apcacontrast.com/documentation/thirdpartytools) that have adopted APCA.
+- An [**Accurate Colorblind Simulator**](https://myndex.com/CVD/) based on the well respected, peer-reviewed, Brettel et alia model.
 
-### _APCA Discussion Forum_
-- [**Readability Forum**](https://github.com/Myndex/SAPC-APCA/discussions/)   questions and comments welcome.
+### Discussion Forum
+- [**Readability Forum**](https://github.com/Myndex/SAPC-APCA/discussions/) questions and comments welcome.
     - [**DISCUSS: Using APCA with other fonts** ](https://github.com/Myndex/SAPC-APCA/discussions/28#discussioncomment-1610289) Draft method for font weight conformance.
     - [**DISCUSS: Inline text links theory and practice** ](https://github.com/Myndex/SAPC-APCA/discussions/65) Draft guidance regarding link identification.
+    - [**DISCUSS: Draft Dark Mode Guidance**](https://github.com/Myndex/SAPC-APCA/discussions/74#discussioncomment-6646215) Draft guidance regarding darkmode from light mode, and more.
+    - [**DISCUSS: Legal Issues of WCAG2 vs APCA**](https://github.com/Myndex/SAPC-APCA/discussions/68#discussion-3980510) Discussion of current and future legal status and incorporation into legislation.
 
-### _APCA Peer Review & Third Party Discussion_
-Listing of [**third party and peer reviews**](https://git.myndex.com/#apca-peer-review--third-party-discussion) of APCA.
+### Peer Review & Third Party Discussion of APCA 
+A listing of [**third party and peer reviews**](https://git.myndex.com/#apca-peer-review--third-party-discussion) of APCA and related technologies. This directory includes journal-published peer-reviews, trade-published evaluations, and less formal comparative analysis, covering the usage, math, efficacy, implementation/integration, workflows, and more.
 
-### _Articles on Color and Contrast by A.Somers_
-- ["The Realities And Myths Of Contrast And Color"](https://www.smashingmagazine.com/2022/09/realities-myths-contrast-color/) A plain language, in-depth primer to vision, color, and contrast for design, with an emphasis on typography and readability needs. Published in Smashing Magazine.
-- [**Better reading on the web**](https://uxdesign.cc/better-reading-on-the-web-c943c4cfc91a) Published by _UX Collective_, this article discusses and demonstrates issues with automated testing and WCAG 2 contrast math, methods, and guidelines.
+### Published Articles on Color & Contrast by A.Somers
+- [**The Realities And Myths Of Contrast And Color**](https://www.smashingmagazine.com/2022/09/realities-myths-contrast-color/) Published by _Smashing Magazine_. A brief but comprehensive primer to vision, color, and contrast for design, with an emphasis on typography, readability, and visual accessibility needs. 
+- [**Better Reading on the Web**](https://uxdesign.cc/better-reading-on-the-web-c943c4cfc91a) Published by _UX Collective_, this article discusses and demonstrates issues with automated testing and WCAG 2 contrast math, methods, and guidelines.
 
-- **On _Tangled Web_** (TangledWeb.xyz):
+- **The _Tangled Web_ tech blog** (TangledWeb.xyz):
     - [**Please Stop Using Grey Text**](https://tangledweb.xyz/please-stop-using-grey-text-3d3e71acfca8) This popular article debunks one of the worst myths regarding design contrast.
     - [**What’s Red & Black & Also Not Read?**](https://tangledweb.xyz/whats-red-black-also-not-read-573b9c0a97ed) examines the nature of color insensitivity and readability.
+    - [**Busy Background Breaks Bulletin**](https://tangledweb.xyz/busy-background-breaks-bulletin-f4ff4bf67e5a) Examples of how to destroy readability by choosing the wrong image as a background. And also, how to fix it.
+    - [**Hats off to ALL CAPS**](https://tangledweb.xyz/hats-off-to-all-caps-c0a43a2c30d4) myth-busting misunderstandings regarding dyslexia, are special dyslexia fonts even useful, and the shift from using ALL UPPERCASE LETTERS for various text elements.
     - [**A Contrast of Errors**](https://atangledwebweweave.com/a-contrast-of-errors-373c2665d42a) looks at the history and the current international readability crisis.
+    - [**Contrasting Theories**](https://tangledweb.xyz/hi-roger-f51bde490a56) Background on the first two years of R&D.
+
+
+
+ 
