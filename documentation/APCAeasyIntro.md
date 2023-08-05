@@ -45,7 +45,7 @@ Above a certain amount, critical  contrast constancy may come into effect. This 
 
 -   Spot readability means readable without significant effort. Spot reading is the lowest readable level, where the contrast needs to be three times the JND. This low level is useful for disabled controls, copyright bugs, and other non-content.
 
-These factors define the area of _"supra-threshold critical contrast for readability."_ We refer to this as "readability contrast" for simplicity. There's a critical _font size_ for _acuity_, and a critical $`Lc`$ value with _font weight_ for spatially-driven lightness-contrast.
+These factors define the area of _"supra-threshold critical contrast for readability."_ We refer to this as "readability contrast" for simplicity. There's a critical _font size_ for _acuity_, and a critical **_Lc_** value with _font weight_ for spatially-driven lightness-contrast.
 
 The size of a font relates to a person's ability to focus (defined by a number like 20/20 or 6/6 on an eye exam chart). Both the size and weight of that font defines contrast sensitivity. Contributing to contrast is white space, letter & line spacing, font aspect ratio, etc.
 
@@ -69,21 +69,21 @@ APCA is a new method for calculating and predicting readability contrast. An acr
 
 ### Lightness contrast (Lc)
 
-APCA generates a lightness contrast value for a minimum font weight, size, and color pair. This value is uniform to lightness/darkness perception. Regardless of how light or dark the two colors are, a given contrast value is visually consistent. Thus, $`Lc\ 60`$ represents the same perceived contrast, for the range of available colors.
+APCA generates a lightness contrast value for a minimum font weight, size, and color pair. This value is uniform to lightness/darkness perception. Regardless of how light or dark the two colors are, a given contrast value is visually consistent. Thus, **_Lc 60_** represents the same perceived contrast, for the range of available colors.
 
 This is absolutely not the case with WCAG&nbsp;2.x, which far overstates contrast for dark colors. The WCAG 4.5:1 ratio can be functionally unreadable when a color is near black. As a result, WCAG&nbsp;2.x contrast cannot provide useful guidance when designing "dark mode". This deficiency also creates problems for color vision deficiency (sometimes called colorblind).
 
-The APCA lightness contrast value $`(Lc)`$ is perceptually uniform. The $`Lc`$ value has a direct relationship to the spatial contrast sensitivity curve. Halving or doubling the APCA value relates to a similar change in perceived contrast. There is a subtle weighting for higher contrasts with smaller, thinner fonts. There is also a mild contrast boost for very dark colors, to offset common ambient lighting.
+The APCA lightness contrast value **_(Lc)_** is perceptually uniform. The **_Lc_** value has a direct relationship to the spatial contrast sensitivity curve. Halving or doubling the APCA value relates to a similar change in perceived contrast. There is a subtle weighting for higher contrasts with smaller, thinner fonts. There is also a mild contrast boost for very dark colors, to offset common ambient lighting.
 
 ### Different Uses, Different Contrasts
 
-The APCA Readability Criteria has a basic set of levels, related to use cases. For instance, $`Lc\ 90`$ is preferred and $`Lc 75`$ is the minimum for body text. This makes it easy to use APCA, very much like WCAG guideline 1.4.3 for ease of use.
+The APCA Readability Criteria has a basic set of levels, related to use cases. For instance, **_Lc 90_** is preferred and **_Lc 75_** is the minimum for body text. This makes it easy to use APCA, very much like WCAG guideline 1.4.3 for ease of use.
 
 APCA also has an optional lookup table, associating font weight to the contrast value. The lookup tables allow for greater accuracy and thus greater flexibility in design.
 
 ### Failing Pass/Fail
 
-One lesson learned, is a strict pass/fail with a blanket contrast ratio is not instructive as a guideline. The lack of uniformity leads to forced thresholds, serving neither user nor designer. In fact, user needs when it comes to contrast are often conflicting---what is good for one can be harmful to another. This is even true of font size and weight.
+One lesson learned, is a strict pass/fail with a blanket contrast ratio is not instructive as a guideline. The lack of uniformity leads to forced thresholds, serving neither user nor designer. In fact, user needs when it comes to contrast are often conflicting—what is good for one can be harmful to another. This is even true of font size and weight.
 
 This points to the importance of real user personalization. Today, the automated technology for personalization is in its infancy. The introduction of perceptual uniformity in color and contrast serves an automated workflow. APCA's uniformity, spatial awareness, and polarity sensitivity, combine to serve automated workflows.
 
@@ -127,7 +127,7 @@ APCA as the candidate for WCAG&nbsp;3 is still in development. It includes a ran
 
 The approach improves design flexibility _and_ readability _at the same time_. **Readability is improved** by increasing contrast for body text, where it is most needed. **Design flexibility is achieved** by relaxing contrast for large non-text elements. Large/thick elements do not need brute-force contrast levels, due to their larger size.
 
-The demonstrator tool provides real-time updates of minimum font size & weight vs $`Lc`$ lightness-contrast. [**apcacontrast.com**](https://apcacontrast.com/) The tool has several ways to enter a color. Click on the color patches to bring up a color-picker, enter a hex value or an RGB value, or use the sliders. The text color supports alpha. A negative $`Lc`$ value, such as $`Lc -60`$ means the text is lighter than the background. A positive value $`Lc 60`$ means the text is darker than the background (light mode).
+The demonstrator tool provides real-time updates of minimum font size & weight vs **_Lc_** lightness-contrast. [**apcacontrast.com**](https://apcacontrast.com/) The tool has several ways to enter a color. Click on the color patches to bring up a color-picker, enter a hex value or an RGB value, or use the sliders. The text color supports alpha. A negative **_Lc_** value, such as **_Lc -60_** means the text is lighter than the background. A positive value **_Lc 60_** means the text is darker than the background (light mode).
 
 We hope this clarifies the advantages of a perceptually uniform range-based contrast model. APCA enables content with improved visual readability—we can make reading fun again!
 
