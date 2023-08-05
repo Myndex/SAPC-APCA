@@ -1,3 +1,8 @@
+---
+layout: simple
+---
+
+
 # The Easy Intro to the APCA Contrast Method
 
 Visual readability is a key part of web content, affecting 99% of internet users. For years, the WCAG_2.x contrast standard provided basic guidance for designers. Today, WCAG_2.x contrast is out of step with modern technology, and needs a replacement. Here is an overview of the need for this change, and the candidate replacement.
@@ -16,7 +21,7 @@ Let's review the basics of color and contrast with the summary below. For a deep
 
 ## REVIEW: Vision and impairments
 
-There are many kinds of visual impairment we may experience over the curse of our lives. Different impairments can affect our acuity, contrast, or color perception in varying amounts. Impairments can arise from genetics, disease, medications, injury, fatigue, age, and envirnmental conditions. These factors can create problems anywhere from the eye's lens, the light sensitive retina, through to the brain.
+There are many kinds of visual impairment we may experience over the course of our lives. Different impairments can affect our acuity, contrast, or color perception in varying amounts. Impairments can arise from genetics, disease, medications, injury, fatigue, age, and environmental conditions. These factors can create problems anywhere from the eye's lens, the light sensitive retina, through to the brain.
 
 -   Visual Acuity (VA). VA refers to the ability to focus the eyes on a small item, to a sharp clear image. An acuity impairment limits how small an item we can focus on. An eye doctor can prescribe glasses or contacts, or perform surgery, to improve acuity. One way we can help accommodate acuity problems is to make things bigger.
 
