@@ -133,11 +133,11 @@ We hope this clarifies the advantages of a perceptually uniform range-based cont
 
 Thank you for reading,
 
-
-_Andrew Somers_    
+**_Andrew Somers_**    
 _Myndex Research • Color Scientist_     
 _W3C AGWG Invited Expert • WCAG 3_     
-_Research Lead & Creator of APCA_   
+_Research Lead & Creator of APCA_     
+
 
 ----
 ## _THE WORLD IS READING_<sup>™</sup>
