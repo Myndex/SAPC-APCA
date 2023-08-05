@@ -624,7 +624,7 @@ footer a {
 
 .head { font-weight: 500; }
 b { font-weight: 600; }
-em { font-weight: 600; font-style: italic; }
+em { /* font-weight: 500; */ font-style: italic; }
 
 
 div.leftCol {
