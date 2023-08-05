@@ -194,6 +194,6 @@ A listing of [**third party and peer reviews**](https://git.myndex.com/#apca-pee
     - [**A Contrast of Errors**](https://atangledwebweweave.com/a-contrast-of-errors-373c2665d42a) looks at the history and the current international readability crisis.
     - [**Contrasting Theories**](https://tangledweb.xyz/hi-roger-f51bde490a56) Background on the first two years of R&D.
 
-
+<img  width='420' alt='Uncle Sam saying I want you to use high contrast text' src='https://user-images.githubusercontent.com/42009457/161151222-74fb81af-f87b-4d7c-a41c-756e1ee3056f.png'> 
 
  
