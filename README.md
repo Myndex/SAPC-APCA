@@ -36,7 +36,7 @@
 # [APC<span class="flipH">A</span> Documentation Repo](https://github.com/Myndex/SAPC-APCA)
 
 ## Welcome! 
-APCA™ is the **Accessible Perceptual Contrast Algorithm**, a new way to predict contrast for text and non-text for content on self illuminated displays. This repository is for the documentation, for issue tracking, and for the discussion forum.
+APCA™ is the **Accessible Perceptual Contrast Algorithm**, a new way to predict contrast for text and non-text for content on self-illuminated displays. This repository is for the documentation, for issue tracking, and for the discussion forum.
 
 ### _TOOLS_
 - [**Color and Contrast Tools Listing**](https://git.apcacontrast.com/documentation/thirdpartytools)
@@ -76,10 +76,10 @@ Maths! Vision Science! Photons on Parade!
 </p>
 
 ---
+### APCA™ [Linktree](https://linktr.ee/Myndex)
+Curated link collection—an ideal starting point.
 ### APCA™ [Resources, Articles, & Links](https://git.myndex.com)
 The main catalog of related articles, peer reviews, repositories, white papers, and more!
-### APCA™ [Linktree](https://linktr.ee/Myndex)
-Smaller, selected link collection.
 ### [Myndex Research](https://twitter.com/MyndexResearch) on Twitter
 ---
 ### Local Repo Documentation
@@ -108,14 +108,17 @@ The BridgePCA is backwards compatible with WCAG 2, and it's the same as the publ
 ColorParsley is a micro library for auto parsing color strings of all kinds, also on npm.
 
 ---
-## [APCA Contrast Calculator](https://www.myndex.com/APCA/)
+### [APCA Contrast Calculator](https://www.myndex.com/APCA/)
 The canonical demo tool at Myndex
 ### [Bridge PCA Contrast Calculator](https://www.myndex.com/BPCA/)
 Try out the Bridge PCA tool at Myndex
 ### [Myndex CVD Simulator](https://www.myndex.com/CVD/)
 Color insensitive vision simulation (aka colorblind). Includes deuteranopia, protanopia, tritanopia, and blue cone monochromacy/achromatopsia.
-### [Myndex Perception Research](https://www.myndex.com/WEB/Perception)
-Demos and Experiments relating to the project.
+### [Inclusive Readig Technologies Inc.](https://readtech.org/ARC/)
+IRT is a California nonprofit, dedicated to developing tecnologies to improve visual accessibility for all, and home to the APCA Readability Criterion.
+
+### [Basic APCA Math in LaTeX](https://github.com/Myndex/SAPC-APCA/blob/master/documentation/APCA-W3-LaTeX.md#latex-of-the-apca-w3-base-formula)
+The APCA base color-pair formula, in math notation. 0.0.98G-4g
 
 <br><br>
 <img src="/images/APCAcolor4.png" width="480" alt="APCA The Revolution Will Be Readable">
