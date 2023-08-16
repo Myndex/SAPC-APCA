@@ -81,6 +81,7 @@ Curated link collection—an ideal starting point.
 ### APCA™ [Resources, Articles, & Links](https://git.myndex.com)
 The main catalog of related articles, peer reviews, repositories, white papers, and more!
 ### [Myndex Research](https://twitter.com/MyndexResearch) on Twitter
+
 ---
 ### Local Repo Documentation
 - [**Why APCA:**](/documentation/WhyAPCA.md) A brief plain language overview of APCA and readability contrast.
@@ -95,17 +96,24 @@ The main catalog of related articles, peer reviews, repositories, white papers, 
 - [**Accessibility Statement:**](/documentation/accessibilitystatement.md) A statement for beta testers and early adopters to use place on sites using APCA 
 - [**APCA Minimum Compliance for Developers:**](/documentation/minimum_compliance.md) Standards for what can be called APCA™.
 - [**APCA FAQ:**](/documentation/APCA_FAQ.md) Just starting, so few QA yet.
-### [The SAPC APCA GitHub Main Repository](https://github.com/Myndex/SAPC-APCA/#apca--sapc--sacam-primary-repository)
+### [The SAPC APCA Documentation Repository](https://github.com/Myndex/SAPC-APCA/#apca--sapc--sacam-primary-repository)
 You are here 🔽 this index page is served at the github repo.
 
 ### [The APCA-W3 GitHub Repo](https://github.com/Myndex/apca-w3/)
-Over there is the W3 licensed version, and it's the same as the published npm package.
+Over there is the **APCA W3 version**, and it's the same as the published npm package "apca-w3".
 
 ### [The Bridge-PCA GitHub Repo](https://github.com/Myndex/bridge-pca/)
-The BridgePCA is backwards compatible with WCAG 2, and it's the same as the published npm package.
+The **BridgePCA** is backwards compatible with WCAG 2, and it's the same as the published npm package "bridge-pca".
 
 ### [The ColorParsley GitHub Repo](https://github.com/Myndex/colorparsley/)
-ColorParsley is a micro library for auto parsing color strings of all kinds, also on npm.
+**ColorParsley** is a micro library for auto parsing color strings of all kinds, also on npm.
+
+### [The SeeStars GitHub Repo](https://github.com/Myndex/seestars/)
+**SeeStars** is a micro library for creating CIE Lstar $`(L*)`$, also on npm.
+
+### [The ColorParsley GitHub Repo](https://github.com/Myndex/deltaphistar/)
+**DeltaPhiStar** is an ultra simple general purpose contrast equation.
+
 
 ---
 ### [APCA Contrast Calculator](https://www.myndex.com/APCA/)
@@ -114,11 +122,36 @@ The canonical demo tool at Myndex
 Try out the Bridge PCA tool at Myndex
 ### [Myndex CVD Simulator](https://www.myndex.com/CVD/)
 Color insensitive vision simulation (aka colorblind). Includes deuteranopia, protanopia, tritanopia, and blue cone monochromacy/achromatopsia.
-### [Inclusive Readig Technologies Inc.](https://readtech.org/ARC/)
-IRT is a California nonprofit, dedicated to developing tecnologies to improve visual accessibility for all, and home to the APCA Readability Criterion.
+### [Inclusive Reading Technologies, Inc.](https://readtech.org/ARC/)
+**IRT is a California nonprofit**, dedicated to developing tecnologies to improve visual accessibility for all, and home to the **APCA Readability Criterion**.
 
 ### [Basic APCA Math in LaTeX](https://github.com/Myndex/SAPC-APCA/blob/master/documentation/APCA-W3-LaTeX.md#latex-of-the-apca-w3-base-formula)
 The APCA base color-pair formula, in math notation. 0.0.98G-4g
 
+<br>
+
+[<img src="/images/APCAcolor4.png" width="480" alt="APCA The Revolution Will Be Readable">](https://apcacontrast.com)
+
+<br>
+
+[<img width="480" alt="Apkah Happy ReadCow" src="https://github.com/Myndex/SAPC-APCA/assets/42009457/5da85f55-1bcf-4198-9492-483f67e697ea">](https://readtech.org/ARC/)
+
+<br>
+
+[<img width="480" alt="link to Delta Phi Star repo" src="https://github.com/Myndex/SAPC-APCA/assets/42009457/6f39969f-f737-49cb-8d73-4818b77279d2">](https://github.com/Myndex/deltaphistar)
+
+<br>
+
+[<img width="480" alt="IRT logo link to IRT" src="https://github.com/Myndex/SAPC-APCA/assets/42009457/4456b77c-42d4-46ed-b322-29a725a93224">](https://readtech.org/ARC/)
+
+<br>
+
+[<img width="480" alt="link to COLOR a twitter community" src="https://github.com/Myndex/SAPC-APCA/assets/42009457/2141ba7a-9be0-4d32-9548-7bced4d939f5">](https://twitter.com/i/communities/1500595480790593537)
+
+<br>
+
+[<img width="520" alt="link to IRT" src="https://github.com/Myndex/SAPC-APCA/assets/42009457/2d955f53-7438-4519-a7e3-6e21993eea6b">](https://readtech.org/ARC/)
+
 <br><br>
-<img src="/images/APCAcolor4.png" width="480" alt="APCA The Revolution Will Be Readable">
+
+
