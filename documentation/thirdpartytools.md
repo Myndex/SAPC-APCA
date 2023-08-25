@@ -3,13 +3,15 @@ layout: simple
 ---
 
 # APC<span class="flipH">A</span> Tools & Apps
-As APCA popularity increases, there is a rapidly growing list of tools. Please post a message in the [tools discussion]() to have your tool added to this list!
+As APCA popularity increases, there is a rapidly growing list of tools. Please post a message in the [tools discussion](https://github.com/Myndex/SAPC-APCA/discussions/51) to have your tool added to this list, or send me a message—my DMs open on Twitter and Linkedin.
 
-Take note that some of these tools are works in progress, and not all of them have been fully analyzed for accuracy or conformance to APCA standards. We will be starting qualification testing in the near future.
+Take note that some of these tools are works in progress, and not all of them have been fully analyzed for accuracy or conformance to APCA standards. We will be starting qualification testing in the near future. When in doubt, check values with the [canonical APCA tool](https://apcacontrast.com). 
+
+For Bridge PCA, use the [canonical BPCA tool](https://bridgepca.com).
 
 
 ## _Third Party APCA Tools—Systems_
-**Design System or Pallette Generation tools**
+**Design Systems or Pallette Generation tools**
 
 
 ### [Tailwind](https://uicolors.app/create)
@@ -47,11 +49,10 @@ Take note that some of these tools are works in progress, and not all of them ha
 
 ### [Polypane Color Contrast](https://colorcontrast.app/#fg=%23107db5&bg=%23fff&level=aa&format=rgb&algo=APCA&filter=none)
 - Killian's Contrast app, can show either WCAG2 or APCA.
-    - _(Killian was the key designer behind the updated APCA demo tool at Myndex.)_
+    - _(Also to mention, Killian was the key designer behind the updated APCA demo tool at Myndex.)_
 
 ### [Cliam's Contrast](https://cliambrown.com/contrast/)
 - A neat color checker that allows you to click to find a given contrast level.
-
 
 ### [contrast-suggester.com](https://contrast-suggester.com) 
 Also a [GitHub repo too](https://github.com/Munawwar/apca-color-contrast)
@@ -128,11 +129,13 @@ Also, [the GitHib repo](https://github.com/shunito/apca-calculator-ja)
 - a typescript library
 
 ### [Colorspace r-forge](http://colorspace.r-forge.r-project.org/reference/contrast_ratio.html)
-- an r library
+- an R library
 
 ### [OxyProps/BrickProps](https://docs.oxyprops.com/en/features/global-colors/)
 - this is the design system plug-in for WordPress, I'm not quite sure how they're integrating a PCA but they do mention in the docs.
 
+### [[Accessibility: Color-Contrast Models](https://observablehq.com/@ijlyttle/apca-w3-color-contrast)
+- Ian Lyttle's library on ObservableHQ
 
 ## _Works in Progress_
 These are some works in progress, functionality was not complete at the last time I checked, and or may have math or implementation errors. If your tool is on this portion of the list, please feel free to reach out, I'm more than happy to assist.
@@ -210,13 +213,14 @@ _NPM Install:_   ` npm i colorparsley `
 ### https://linktr.ee/Myndex
 This is a linktree of articles and information regarding APCA.
 
-
-### [Why APCA](https://git.apcacontrast.com/documentation/WhyAPCA)™ 
+### [Easy Intro to APCA](https://git.apcacontrast.com/documentation/APCAeasyIntro) 
 A brief overview of APCA. This is a good place to start if you are new to perceptually uniform contrast.
 
+### [APCA Readability Criterion](https://readtech.org/ARC/) 
+Publisck Workging Draft of the developing guidelines for using APCA and related systems and technologies.
 
 ### [Myndex Color & Contrast Resources](https://git.myndex.com/)
-A catalog of contrast and color resources.
+A large catalog of contrast and color resources.
 
 
 ----
@@ -226,9 +230,9 @@ A catalog of contrast and color resources.
 There are additional versions in the [Accessibility Statements file](https://github.com/Myndex/SAPC-APCA/blob/master/documentation/accessibilitystatement.md)
 
 -----
-### This website is using the [APCA](https://git.apcacontrast.com/documentation/WhyAPCA)™ readability guidelines for determining visual contrast of text and non-text elements.
+### This website is using the [APCA](https://git.apcacontrast.com/documentation/APCAeasyIntro)™ readability guidelines for determining visual contrast of text and non-text elements.
 
-This site's visually-readable primary content is designed to meet or exceed the conformance level of: <insert bronze/silver/gold> as defined in version: <insert APCAversion> of the beta [APCA Readability Criteria (ARC)](https://readtech.org/ARC/), which provide improved visual readability, enhancing the actual accessibility for users of this website. If you have questions, concerns, or problems, please contact the accessibility manager at <insert Accessibility manager's contact info here>
+This site's visually-readable primary content is designed to meet or exceed the ***Bronze Simple*** conformance level, as defined in version: (Public Beta Working Draft 2023), of the [APCA Readability Criteria (ARC)](https://readtech.org/ARC/), which provides improved visual readability, enhancing the actual accessibility for users of this website. If you have questions, concerns, or problems, please contact the accessibility manager or webmaster of this site. The APCA Readability Criteria is designed to substantial exceed WCAG 2.1, SC 1.4.3 and 1.4.11 guidelines for actual accessibility. If you find you are experiencing a functional problem with text contrast on this site, please forward to the URL to _bugreport_ at _readtech.org_
 
 -----
 
