@@ -232,7 +232,7 @@ There are additional versions in the [Accessibility Statements file](https://git
 -----
 ### This website is using the [APCA](https://git.apcacontrast.com/documentation/APCAeasyIntro)™ readability guidelines for determining visual contrast of text and non-text elements.
 
-This site's visually-readable primary content is designed to meet or exceed the ***Bronze Simple*** conformance level, as defined in version: (Public Beta Working Draft 2023), of the [APCA Readability Criteria (ARC)](https://readtech.org/ARC/), which provides improved visual readability, enhancing the actual accessibility for users of this website. If you have questions, concerns, or problems, please contact the accessibility manager or webmaster of this site. The APCA Readability Criteria is designed to substantial exceed WCAG 2.1, SC 1.4.3 and 1.4.11 guidelines for actual accessibility. If you find you are experiencing a functional problem with text contrast on this site, please forward to the URL to _bugreport_ at _readtech.org_
+This site's visually-readable primary content is designed to meet or exceed the ***Bronze Simple*** conformance level, as defined in version: (Public Beta Working Draft 2023), of the [APCA Readability Criteria (ARC)](https://readtech.org/ARC/), which provides improved visual readability, enhancing the actual accessibility for users of this website. If you have questions, concerns, or problems, please contact the accessibility manager or webmaster of this site. The APCA Readability Criteria is designed to substantially exceed WCAG 2.1, SC 1.4.3 and 1.4.11 guidelines for actual accessibility. If you find you are experiencing a functional problem with text contrast on this site, please forward to the URL to _bugreport_ at _readtech.org_
 
 -----
 
