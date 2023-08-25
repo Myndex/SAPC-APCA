@@ -7,9 +7,9 @@ layout: simple
 _Contents_
 - Short form A [site statement](#apca-accessibility-statement-v030-a--shortform) (WCAG&nbsp;2 is not mentioned)
 - Short form B [site statement](#apca-accessibility-statement-v030-b--shortform) (Same as version A but WCAG&nbsp;2 is specifically mentioned)
-- Long form C [site statement](#apca-accessibility-statement-v030-c--alternate-method-replacing-wcag_2) (discusses supplanting WCAG&nbsp;2)
-- Tool or library D [library/source code statement](#apca-accessibility-statement-v030-d--for-inclusion-with-tools-or-libraries) (for adding to the source code of live tools or libraries)
-- Tool or library E [library/source code  statement](#apca-accessibility-statement-v030-e--for-inclusion-with-tools-or-libraries) (for adding to the source code of live tools or libraries)
+- Long form C [site statement](#apca-accessibility-statement-v030-c--alternatemethod-replacing-wcag2) (discusses supplanting WCAG&nbsp;2)
+- Tool or library D [library/source code statement](#apca-accessibility-statement-v030-d--short-for-tools-or-libraries) (for adding to the source code of live tools or libraries)
+- Tool or library E [library/source code  statement](#apca-accessibility-statement-v030-e--long-for-tools-or-libraries) (for adding to the source code of live tools or libraries)
 
 _At their option, beta testers, early adopters, and sites using APCA to provide design guidance, may wish to include one of the following statements in their site's boilerplate, Terms of Service document, or as part of a larger accessibility statement._     
 
