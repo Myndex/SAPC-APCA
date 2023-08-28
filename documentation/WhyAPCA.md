@@ -100,10 +100,10 @@ We hope this clarifies the useful differences of a perceptually accurate range-b
 Thank you for reading,
 
 **_Andrew Somers_**    
-_Director of Research_
-_Myndex Technologies_
+_Director of Research_    
+_Myndex Technologies_    
 _W3C Invited Expert_     
-_APCA Research Lead_   
+_APCA Research Lead_    
 
 ----
 ## _THE WORLD IS READING_<sup>™</sup>
