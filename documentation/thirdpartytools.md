@@ -134,7 +134,7 @@ Also, [the GitHib repo](https://github.com/shunito/apca-calculator-ja)
 ### [OxyProps/BrickProps](https://docs.oxyprops.com/en/features/global-colors/)
 - this is the design system plug-in for WordPress, I'm not quite sure how they're integrating a PCA but they do mention in the docs.
 
-### [[Accessibility: Color-Contrast Models](https://observablehq.com/@ijlyttle/apca-w3-color-contrast)
+### [Accessibility: Color-Contrast Models](https://observablehq.com/@ijlyttle/apca-w3-color-contrast)
 - Ian Lyttle's library on ObservableHQ
 
 ## _Works in Progress_
@@ -154,7 +154,7 @@ Basically looks like a work in progress, does not show polarity in the results.
 - Does not seem to work correctly??
 
 
-### https://jolly-feynman-28ea37.netlify.app
+### [jolly-feynman-28ea37.netlify.app](https://jolly-feynman-28ea37.netlify.app)
 - https://github.com/tomreinert/contrast-calculator-2
 
 -----
@@ -210,7 +210,7 @@ _NPM Install:_   ` npm i colorparsley `
 ----
 ## Other Resources
 
-### https://linktr.ee/Myndex
+### [linktr.ee/Myndex]([url](https://linktr.ee/Myndex))
 This is a linktree of articles and information regarding APCA.
 
 ### [Easy Intro to APCA](https://git.apcacontrast.com/documentation/APCAeasyIntro) 
