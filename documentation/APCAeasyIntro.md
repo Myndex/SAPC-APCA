@@ -195,9 +195,8 @@ A listing of [**third party and peer reviews**](https://git.myndex.com/#apca-pee
     - [**A Contrast of Errors**](https://atangledwebweweave.com/a-contrast-of-errors-373c2665d42a) looks at the history and the current international readability crisis.
     - [**Contrasting Theories**](https://tangledweb.xyz/hi-roger-f51bde490a56) Background on the first two years of R&D.
 
-<img  width='420' alt='Uncle Sam saying I want you to use high contrast text' src='https://user-images.githubusercontent.com/42009457/161151222-74fb81af-f87b-4d7c-a41c-756e1ee3056f.png'> 
 
- <p align="center">
+<p align="center">
 <img width='420' alt="Poster: a picture of crash test dummies crashing out of a car, and text that says don't be a dummy! Stop using low contrast text. At the bottom it says APCA the world is reading" src='https://user-images.githubusercontent.com/42009457/161151275-7c4feea7-888a-43f1-a9c0-7504afaac258.png'>  
 <br>
 </p>
