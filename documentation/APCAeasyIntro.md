@@ -134,9 +134,10 @@ We hope this clarifies the advantages of a perceptually uniform range-based cont
 Thank you for reading,
 
 **_Andrew Somers_**    
-_Myndex Research • Color Scientist_     
-_W3C AGWG Invited Expert • WCAG 3_     
-_Research Lead & Creator of APCA_     
+_Director of Research_
+_Myndex Technologies_
+_W3C Invited Expert_     
+_APCA Research Lead_     
 
 
 ----
@@ -196,4 +197,8 @@ A listing of [**third party and peer reviews**](https://git.myndex.com/#apca-pee
 
 <img  width='420' alt='Uncle Sam saying I want you to use high contrast text' src='https://user-images.githubusercontent.com/42009457/161151222-74fb81af-f87b-4d7c-a41c-756e1ee3056f.png'> 
 
- 
+ <p align="center">
+<img width='420' alt="Poster: a picture of crash test dummies crashing out of a car, and text that says don't be a dummy! Stop using low contrast text. At the bottom it says APCA the world is reading" src='https://user-images.githubusercontent.com/42009457/161151275-7c4feea7-888a-43f1-a9c0-7504afaac258.png'>  
+<br>
+</p>
+
