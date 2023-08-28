@@ -134,8 +134,8 @@ We hope this clarifies the advantages of a perceptually uniform range-based cont
 Thank you for reading,
 
 **_Andrew Somers_**    
-_Director of Research_
-_Myndex Technologies_
+_Director of Research_    
+_Myndex Technologies_    
 _W3C Invited Expert_     
 _APCA Research Lead_     
 
