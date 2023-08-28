@@ -99,56 +99,71 @@ We hope this clarifies the useful differences of a perceptually accurate range-b
 
 Thank you for reading,
 
+**_Andrew Somers_**    
+_Director of Research_
+_Myndex Technologies_
+_W3C Invited Expert_     
+_APCA Research Lead_   
 
-_Andrew Somers_    
-_W3C AGWG Invited Expert_     
-_Research Lead & Creator of APCA_     
-_Senior Color Science Researcher_      
-_Myndex PercepTex Research Project_     
+----
+## _THE WORLD IS READING_<sup>™</sup>
 
-
-### _Definitions of Terms Used In This Document_
-- **Spatial or spatially:** relating to size or thickness.
+### Definitions of Terms Used In This Document
+- **Spatial or spatially:** relating to size, weight, or thickness.
 - **Hue:** the uniqueness of a given color vs other colors, i.e. blue vs red.
 - **Chroma/saturation:** the intensity or purity of a color vs no color.
 - **Luminance:** a physical measure of light, disregarding hue.
 - **Lightness:** the human perception of a given luminance. Also darkness and brightness.
 
-_This document was written in plain language to the extent possible, with a target readability age of about a high school senior. Readability evaluations were made using the https://wooorm.com/readability/ tool. If you found any part of this essay difficult or confusing, please [file an issue or discuss here](https://github.com/Myndex/SAPC-APCA/discussions) so we can improve._
+_This document was written in basic plain language using the [Hemingway app](https://hemingwayapp.com)._
 
-### _Study Volunteers Needed_
+### Study Volunteers Needed
 Would you like to help create a more readable world for all? Please let us know! We have several studies planned for 2023, and it requires minimal time on your part to participate. Please send an email to perceptex@myndex.com with "volunteer" in the subject line.
 
 **_NOTICE: Personal opinions expressed are the author's and may or may not reflect those of the W3 or AGWG._** 
 
-
-## _THE WORLD IS READING_<sup>™</sup>
-
  <img src="/images/APCAcolor4.png" width="420" alt="APCA The Revolution Will Be Readable">
 
-## Appendix: Additional Reading
-- [**Catalog of APCA Resources and Links**](https://git.myndex.com)
+## APPENDIX: _Additional Reading_
+- [**Linktree of Selected Resources**](https://linktr.ee/Myndex) A good place to start.
+- [**Main Catalog of APCA Resources and Links**](https://git.myndex.com) For the much deeper divers.
 
-### _APCA Readability Criterion_
-- [**Draft Guidelines**](https://readtech.org/ARC/) for implementing APCA and related technologies.
+### APCA Readability Criterion
+_Maintained by Inclusive Reading Technologies Inc., a California Non-Profit_.
+- [**Draft ARC Guidelines**](https://readtech.org/ARC/) for implementing APCA and related technologies.
+- [**Bronze Simple Mode**](https://readtech.org/ARC/tests/bronze-simple-mode/?tn=intro)  is designed as an introductory mode that does not require look-up tables or matching to a reference font. Instead it's designed as a simple set of threshold levels, similar to how WCAG&nbsp;2 works but using perceptually uniform math.
 
-### _Links To Tools and Toolmakers_
-- [**APCA Demo**](https://apcacontrast.com), the official technology demonstrator of APCA. 
-- [**Tools and systems**](https://git.apcacontrast.com/documentation/thirdpartytools) that have adopted APCA.
+### Links To APCA and Related Tools
+- [**APCA Calculator**](https://apcacontrast.com), the official technology demonstrator for APCA, includes explainers. 
+- Listing of [**Third Party Tools and Systems**](https://git.apcacontrast.com/documentation/thirdpartytools) that have adopted APCA.
+- An [**Accurate Colorblind Simulator**](https://myndex.com/CVD/) based on the well respected, peer-reviewed, Brettel et alia model.
 
-### _APCA Discussion Forum_
-- [**Readability Forum**](https://github.com/Myndex/SAPC-APCA/discussions/)   questions and comments welcome.
+### Discussion Forum
+- [**Readability Forum**](https://github.com/Myndex/SAPC-APCA/discussions/) questions and comments welcome.
     - [**DISCUSS: Using APCA with other fonts** ](https://github.com/Myndex/SAPC-APCA/discussions/28#discussioncomment-1610289) Draft method for font weight conformance.
     - [**DISCUSS: Inline text links theory and practice** ](https://github.com/Myndex/SAPC-APCA/discussions/65) Draft guidance regarding link identification.
+    - [**DISCUSS: Draft Dark Mode Guidance**](https://github.com/Myndex/SAPC-APCA/discussions/74#discussioncomment-6646215) Draft guidance regarding darkmode from light mode, and more.
+    - [**DISCUSS: Legal Issues of WCAG2 vs APCA**](https://github.com/Myndex/SAPC-APCA/discussions/68#discussion-3980510) Discussion of current and future legal status and incorporation into legislation.
 
-### _APCA Peer Review & Third Party Discussion_
-Listing of [**third party and peer reviews**](https://git.myndex.com/#apca-peer-review--third-party-discussion) of APCA.
+### Peer Review & Third Party Discussion of APCA 
+A listing of [**third party and peer reviews**](https://git.myndex.com/#apca-peer-review--third-party-discussion) of APCA and related technologies. This directory includes journal-published peer-reviews, trade-published evaluations, and less formal comparative analysis, covering the usage, math, efficacy, implementation/integration, workflows, and more.
 
-### _Articles on Color and Contrast by A.Somers_
-- ["The Realities And Myths Of Contrast And Color"](https://www.smashingmagazine.com/2022/09/realities-myths-contrast-color/) A plain language, in-depth primer to vision, color, and contrast for design, with an emphasis on typography and readability needs. Published in Smashing Magazine.
-- [**Better reading on the web**](https://uxdesign.cc/better-reading-on-the-web-c943c4cfc91a) Published by _UX Collective_, this article discusses and demonstrates issues with automated testing and WCAG 2 contrast math, methods, and guidelines.
+### Published Articles on Color & Contrast by A.Somers
+- [**The Realities And Myths Of Contrast And Color**](https://www.smashingmagazine.com/2022/09/realities-myths-contrast-color/) Published by _Smashing Magazine_. A brief but comprehensive primer to vision, color, and contrast for design, with an emphasis on typography, readability, and visual accessibility needs. 
+- [**Better Reading on the Web**](https://uxdesign.cc/better-reading-on-the-web-c943c4cfc91a) Published by _UX Collective_, this article discusses and demonstrates issues with automated testing and WCAG 2 contrast math, methods, and guidelines.
 
-- **On _Tangled Web_** (TangledWeb.xyz):
+- **The _Tangled Web_ tech blog** (TangledWeb.xyz):
     - [**Please Stop Using Grey Text**](https://tangledweb.xyz/please-stop-using-grey-text-3d3e71acfca8) This popular article debunks one of the worst myths regarding design contrast.
     - [**What’s Red & Black & Also Not Read?**](https://tangledweb.xyz/whats-red-black-also-not-read-573b9c0a97ed) examines the nature of color insensitivity and readability.
+    - [**Busy Background Breaks Bulletin**](https://tangledweb.xyz/busy-background-breaks-bulletin-f4ff4bf67e5a) Examples of how to destroy readability by choosing the wrong image as a background. And also, how to fix it.
+    - [**Hats off to ALL CAPS**](https://tangledweb.xyz/hats-off-to-all-caps-c0a43a2c30d4) myth-busting misunderstandings regarding dyslexia, are special dyslexia fonts even useful, and the shift from using ALL UPPERCASE LETTERS for various text elements.
     - [**A Contrast of Errors**](https://atangledwebweweave.com/a-contrast-of-errors-373c2665d42a) looks at the history and the current international readability crisis.
+    - [**Contrasting Theories**](https://tangledweb.xyz/hi-roger-f51bde490a56) Background on the first two years of R&D.
+
+ <p align="center">
+<img  width='420' alt='Smokey the bear saying  ONLY YOU CAN STOP LOW CONTRAST' src='https://user-images.githubusercontent.com/42009457/161151536-a0add333-161e-482d-a99a-d1d076c75daf.png'>
+<br>
+</p>
+
+
+
