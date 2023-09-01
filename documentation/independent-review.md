@@ -33,18 +33,18 @@ The first listed below are technical reviews by peers evaluating the APCA math a
 The problems of 4.5:1 as a target for a guideline not only impact those with impairments, but impact standard vision as well. WCAG&nbsp;2 contrast SCs affect 100% of sighted users. The inherent problems with the WCAG&nbsp;2 contrast math have been known for some time and [widely critisized](https://macwright.com/2019/03/30/color-contrast-is-a-problem.html). Including studies [by others showing that color insensitive types](https://www.bounteous.com/insights/2019/03/22/orange-you-accessible-mini-case-study-color-ratio/) are not well served. The WCAG&nbsp;2 contrast specs often cause enough problems for designers [that it is ignored](https://uxmovement.com/buttons/the-myths-of-color-contrast-accessibility/) and today, some 86% of websites are failing WCAG\_2 contrast per an automated survey—though some of these failures are not due to poor actual accessibility, but due to the perceptual inaccuracies of WCAG\_2 contrast.
 
 ## More About APCA
-- [_**Easy Intro to APCA**_]([url](https://git.apcacontrast.com/documentation/APCAeasyIntro)) is a good a quick start
-- [**_Linktree of essential resources_**]([url](https://linktr.ee/Myndex)https://linktr.ee/Myndex) a short, curated list of links
+- [_**Easy Intro to APCA**_](https://git.apcacontrast.com/documentation/APCAeasyIntro) is a good a quick start
+- [**_Linktree of essential resources_**](https://linktr.ee/Myndex) a short, curated list of links
 - [**The Realities And Myths Of Contrast And Color**](https://www.smashingmagazine.com/2022/09/realities-myths-contrast-color/) Published by _Smashing Magazine_. A brief but comprehensive primer to vision, color, and contrast for design, with an emphasis on typography, readability, and visual accessibility needs. 
 
 ### More WCAG 2 Comparisons
-The following articles and blog posts make comparisons between APCA and WCAG 2, all written by the APCA Lead Researcher:
+The following articles and blog posts make comparisons between APCA and WCAG 2, all written by APCA Lead Researcher A.Somers:
 
 - [**Better Reading on the Web**](https://uxdesign.cc/better-reading-on-the-web-c943c4cfc91a) Published by _UX Collective_, this article discusses and demonstrates issues with automated testing and WCAG 2 contrast math, methods, and guidelines.
-- **The _Tangled Web_ tech blog** (TangledWeb.xyz):
+- **The _Tangled Web_ tech blog** _(TangledWeb.xyz)_:
     - [**Please Stop Using Grey Text**](https://tangledweb.xyz/please-stop-using-grey-text-3d3e71acfca8) This popular article debunks one of the worst myths regarding design contrast.
     - [**What’s Red & Black & Also Not Read?**](https://tangledweb.xyz/whats-red-black-also-not-read-573b9c0a97ed) examines the nature of color insensitivity and readability.
-    - [**A Contrast of Errors**](https://atangledwebweweave.com/a-contrast-of-errors-373c2665d42a) looks at the history and the current international readability crisis.
+    - [**A Contrast of Errors**](https://atangledwebweweave.com/a-contrast-of-errors-373c2665d42a) looks at the history of WCAG 2 and the current international readability crisis.
     - [**Contrasting Theories**](https://tangledweb.xyz/hi-roger-f51bde490a56) Background on the first two years of APCA R&D.
 
 <p align="center">
