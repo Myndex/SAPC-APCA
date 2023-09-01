@@ -59,8 +59,8 @@ For instance, look at the following examples of minimum compliance for content f
 - [**The Realities And Myths Of Contrast And Color**](https://www.smashingmagazine.com/2022/09/realities-myths-contrast-color/) Published by _Smashing Magazine_. A brief but comprehensive primer to vision, color, and contrast for design, with an emphasis on typography, readability, and visual accessibility needs. 
 
 
-### More WCAG&nbsp;2 Comparisons
-The following articles and blogs written by APCA Lead Researcher A.Somers make technical and functional comparisons between APCA and WCAG&nbsp;2.
+### Comparisons to WCAG&nbsp;2 by APCA's Creator
+The following articles, blogs, gists, and documentation written by APCA Lead Researcher A.Somers examine technical and functional differences between APCA and WCAG&nbsp;2.
 
 - [**Better Reading on the Web**](https://uxdesign.cc/better-reading-on-the-web-c943c4cfc91a) Published by _UX Collective_, this article discusses and demonstrates issues with automated testing and WCAG&nbsp;2 contrast math, methods, and guidelines.
 - **The _Tangled Web_ tech blog** _(TangledWeb.xyz)_:
@@ -68,10 +68,11 @@ The following articles and blogs written by APCA Lead Researcher A.Somers make t
     - [**What’s Red & Black & Also Not Read?**](https://tangledweb.xyz/whats-red-black-also-not-read-573b9c0a97ed) examines the nature of color insensitivity and readability.
     - [**A Contrast of Errors**](https://atangledwebweweave.com/a-contrast-of-errors-373c2665d42a) looks at the history of WCAG&nbsp;2 and the current international readability crisis.
     - [**Contrasting Theories**](https://tangledweb.xyz/hi-roger-f51bde490a56) Background on the first two years of APCA R&D.
-- **GitHub Repo** _(apca-introduction)_:
+- **GitHub Repos**:
     - [apca-intro comparison discussion](https://github.com/Myndex/apca-introduction#readme) This is the corrected fork with detailed discussion.
+    - [SAPC-APCA Main Documentation Repo](https://github.com/Myndex/SAPC-APCA) This is the primary repo for documentation and discussion.
 - **GitHub Gists** _(gist.github.com/Myndex)_:
-      - Part I: [**Orange You Wondering About Contrast?** ](https://gist.github.com/Myndex/1dadb6dcac596f1cd7a5686a076f697f) Answering some contrast questions, and demonstrating a real solution to the infamous orange conundrum.
+    - Part I: [**Orange You Wondering About Contrast?** ](https://gist.github.com/Myndex/1dadb6dcac596f1cd7a5686a076f697f) Answering some contrast questions, and demonstrating a real solution to the infamous orange conundrum.
     - Part II: [**The Lighter Side of Dark Backgrounds** ](https://gist.github.com/Myndex/c30dba273aa5eca426ad9f5200917c9d) An article comparing some parts of APCA with the old WCAG&nbsp;2 contrast methods, demonstrating how WCAG_2 contrast does not help color vision types.
     - Part III: [**WCAG&nbsp;2 vs APCA Contrast Shootout** ](https://gist.github.com/Myndex/069a4079b0de2930e72d5401bde9af98#wcag-2-vs-apca-contrast-shootout) Answering some recent questions regarding APCA, with comparisons and examples of the old (WCAG&nbsp;2 1.4.3) and the future WCAG&nbsp;3 / APCA.
 
