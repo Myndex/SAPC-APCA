@@ -423,7 +423,7 @@ color: var(--modeTextColor, #000);
         --modeHeaderA: var(--modeTextHeader);
 
       --modeBGfooter: #459;
-      --modeTextFooter: #9af;
+      --modeTextFooter: #ccf;
         --modeFooterA: var(--modeTextFooter);
 
     /*  Images  */
