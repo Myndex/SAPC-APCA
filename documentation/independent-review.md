@@ -55,7 +55,7 @@ Public comment and discussion is encouraged. The [**APCA discussion forum**](htt
 
 ----
 ## More About APCA, Direct from the Creators
-**The easy quickstart to becomming an expert in perceptually uniform contrast guidelines.**
+**The easy quickstart to becoming an expert in perceptually uniform contrast guidelines.**
 - [_**Easy Intro to APCA**_](https://git.apcacontrast.com/documentation/APCAeasyIntro) is a good a quick start
 - [**_Linktree of essential resources_**](https://linktr.ee/Myndex) a short, curated list of links
 - [**The Realities And Myths Of Contrast And Color**](https://www.smashingmagazine.com/2022/09/realities-myths-contrast-color/) Published by _Smashing Magazine_. A brief but comprehensive primer to vision, color, and contrast for design, with an emphasis on typography, readability, and visual accessibility needs. 
@@ -65,25 +65,28 @@ Public comment and discussion is encouraged. The [**APCA discussion forum**](htt
 The following articles, blogs, gists, and documentation written by APCA Lead Researcher A.Somers, examine the technical and functional differences between APCA and WCAG&nbsp;2. Note that some of these may be work-in-progress pre-prints relating to ongoing research.
 
 - [**Better Reading on the Web**](https://uxdesign.cc/better-reading-on-the-web-c943c4cfc91a) Published by _UX Collective_, this article discusses and demonstrates issues with automated testing and WCAG&nbsp;2 contrast math, methods, and guidelines.
+
 - **The _Tangled Web_ tech blog** _(TangledWeb.xyz)_:
     - [**Please Stop Using Grey Text**](https://tangledweb.xyz/please-stop-using-grey-text-3d3e71acfca8) This popular article debunks one of the worst myths regarding design contrast.
     - [**What’s Red & Black & Also Not Read?**](https://tangledweb.xyz/whats-red-black-also-not-read-573b9c0a97ed) examines the nature of color insensitivity and readability.
     - [**A Contrast of Errors**](https://atangledwebweweave.com/a-contrast-of-errors-373c2665d42a) looks at the history of WCAG&nbsp;2 and the current international readability crisis.
     - [**Contrasting Theories**](https://tangledweb.xyz/hi-roger-f51bde490a56) Background on the first two years of APCA R&D.
+
 - **GitHub Gists** _(gist.github.com/Myndex)_:
     - Part I: [**Orange You Wondering About Contrast?** ](https://gist.github.com/Myndex/1dadb6dcac596f1cd7a5686a076f697f) Answering some contrast questions, and demonstrating a real solution to the infamous orange conundrum.
     - Part II: [**The Lighter Side of Dark Backgrounds** ](https://gist.github.com/Myndex/c30dba273aa5eca426ad9f5200917c9d) An article comparing some parts of APCA with the old WCAG&nbsp;2 contrast methods, demonstrating how WCAG_2 contrast does not help color vision types.
     - Part III: [**WCAG&nbsp;2 vs APCA Contrast Shootout** ](https://gist.github.com/Myndex/069a4079b0de2930e72d5401bde9af98#wcag-2-vs-apca-contrast-shootout) Answering some recent questions regarding APCA, with comparisons and examples of the old (WCAG&nbsp;2 1.4.3) and the future WCAG&nbsp;3 / APCA.
+
 - **GitHub Repos**:
     - [**SAPC-APCA** Main Documentation Repo](https://github.com/Myndex/SAPC-APCA) This is the primary repo for documentation, discussion, posting issues.
     - [**IRT ARC** - Inclusive Reading Technologies](https://github.com/A11yReadTech/ARC) The IRT GitHub repo for the APCA Readability Criterion.
     - [**apca-intro** comparison discussion](https://github.com/Myndex/apca-introduction#readme) This is the corrected fork with detailed discussion.
     - [**apca-w3**](https://github.com/Myndex/apca-w3) The APCA version to be licensed for use with public guidelines such as IRT-RC, WCAG3, and others.
     - [**BridgePCA**](https://github.com/Myndex/bridge-pca) A simplified version of the APCA math to bridge from WCAG_2 contrast math to the future, while being 100% backwards compatible with WCAG_2 contrast.
-    - [**DPS Contrast **aka deltaPhiStar](https://github.com/Myndex/deltaphistar) 𝜟𝜱✴︎ or Delta Phi Star is a variant method of determining lightness contrast, and a sibling of APCA and SACAM. It is a simplified version using easily invertible standardized maths
+    - [**DPS Contrast** aka deltaPhiStar](https://github.com/Myndex/deltaphistar) 𝜟𝜱✴︎  (Delta Phi Star) is a variant method of determining lightness contrast, and a sibling of APCA and SACAM. It is a simplified version using easily invertible standardized maths
     - [**ColorParsley**](https://github.com/Myndex/colorparsley) A lightweight but versatile Myndex MicroColor Library, to parse color strings, objects, or numbers, returning a simple rgba array, and related string utilities. This was developed as part of the basic APCA package.
     - [**SeeStars**](https://github.com/Myndex/seestars) SeeStars is a Myndex MicroColor Library. This has standard functions for the standard (piecewise) IEC conversion of sRGB to Y, and the CIE standard Y to L* (Lstar) and back again. The math & constants here reference those of CSS 4 for compatibility.
-    - [**MaxContrast**](https://github.com/Myndex/max-contrast) Send it the background color, returns black or white whichever is maximum Lc value. See also [**FancyFontFlipping**](https://github.com/Myndex/fancyfontflipping) an interactive experiment.
+    - [**MaxContrast**](https://github.com/Myndex/max-contrast) Send it the background color, returns black or white whichever is maximum Lc value. See also [**FancyFontFlipping**](https://github.com/Myndex/fancyfontflipping) for the related interactive experiment.
 
 
 
