@@ -247,10 +247,10 @@ APCA is the **A**ccessible **P**erceptual **C**ontrast **A**lgorithm. The ma
 Basic APCA Math in LaTeX
 ----------
 0.0.98G-4g-base W3 (apca-w3 0.1.19d) Reverse (bottom up) Notation
-<a target="_blank" rel="noopener noreferrer" href="/Myndex/SAPC-APCA/blob/master/images/APCAlatex019dr.png"><img src="/Myndex/SAPC-APCA/raw/master/images/APCAlatex019dr.png" alt="The APCA 0.0.98G4g math in LaTeX" style="max-width: 540px;"></a>
+<a target="_blank" rel="noopener noreferrer" href="../images/APCAlatex019dr.png"><img src="../images/APCAlatex019dr.png" alt="The APCA 0.0.98G4g math in LaTeX" width="540"></a>
 
 0.0.98G-4g-base W3 (apca-w3 0.1.19d) Standard (top down) Notation
-<a target="_blank" rel="noopener noreferrer" href="/Myndex/SAPC-APCA/blob/master/images/APCAlatex019df.png"><img src="/Myndex/SAPC-APCA/raw/master/images/APCAlatex019df.png" alt="The APCA 0.0.98G4g math in LaTeX" style="max-width: 540px;"></a>
+<a target="_blank" rel="noopener noreferrer" href="../images/APCAlatex019df.png"><img src="../images/APCAlatex019df.png" alt="The APCA 0.0.98G4g math in LaTeX"  width="540"></a>
 
 NOTICE: "APCA is a method for predicting text contrast on self-illuminated displays for web-based content. Some use-cases are prohibited by license, including the following: use in medical, clinical evaluation, human safety related, aerospace, transportation, military applications, are strictly prohibited without a specific license in writing granting such use."
 
