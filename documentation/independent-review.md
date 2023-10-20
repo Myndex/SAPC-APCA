@@ -4,7 +4,7 @@ layout: simple
 
 # APC<span class="flipH">A</span> Reviewed
 
-## _Independent Peer Reviews of APCA and<br>Third Party Comparisons vs WCAG&nbsp;2_
+## _Independent Peer Reviews of APCA and<br>Third Party Comparisons vs WCAG&nbsp;2 & More_
 There are several independent researchers evaluating APCA, and additional third party comparative reviews that include demonstrations of the functional superiority to existing methods. The first few listed below are technical reviews by peers evaluating the APCA math and methods, including journal published peer reviewed papers. Some in comparison to WCAG&nbsp;2 contrast methods and guidelines. 
 
 APCA has been developed in the open for open peer review and discussion, and the reviews listed below were performed independently, the majority were completed without consulting the APCA developers. Reviews listed first are peer or academically oriented, and deal with theory, while reviews listed later are targeted more toward practicioners, designers, and developers.
@@ -16,9 +16,11 @@ APCA has been developed in the open for open peer review and discussion, and the
      - Then @ [1:21:30 are comparisons](https://youtu.be/Da1Jmi7wgCY?t=4350)
      - APCA is [specifically reviewed @ 1:26:40](https://youtu.be/Da1Jmi7wgCY?t=5190)
 - [Does the contrast ratio actually predict the legibility of website text?](https://www.cedc.tools/article.html)  by Sam Waller PhD, a researcher within the Inclusive Design Group, University of Cambridge, UK & published at the Engineering Design Centre, University of Cambridge, UK. April 2022. Paper is a comparison of WCAG&nbsp;2 math and APCA math, with interactive examples. 
+- **NEW!!** [The Eternal Sunshine of Accessible Colors](https://www.buildo.io/blog/the-eternal-sunshine-of-accessible-colors) Nice and thorough examination of APCA by Agnese Ragucci Sept. 2023 at Buildio
 - [Color Contrast Is Not As Black And White As It Seems ](https://medium.com/@think_ui/why-color-contrast-is-not-as-black-and-white-as-it-seems-94197a72b005) by Roger Attrill, UX Specialist for Linguamatics, Dec. 2021. A technical analysis of some of the problems with WCAG&nbsp;2 contrast math, and comparing and analyzing APCA math methods.
 - [It’s Time For A More Sophisticated Color Contrast Check ](https://blog.datawrapper.de/color-contrast-check-data-vis-wcag-apca/) by dataviz expert and author Lisa Charlotte Muth, Jan 2022. A review of APCA and comparison to WCAG&nbsp;2 contrast, for the use case of dataviz.
 - [Don't rely on WCAG&nbsp;2's contrast calculation, try APCA](https://zhuanlan-zhihu-com.translate.goog/p/555769196?_x_tr_sl=zh-CN&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=sc) Comparative peer-review of APCA by Gu Wei of the Yunjiang Design and Research Factory in China. This is a Google translate link (Original is Mandarin), you may need to clear a dialog that pops up. Many comparisons and real-world examples.
+- [Colour contrast takeaways: UX Scotland](https://www.pdms.com/latest/colour-contrast-takeaways-ux-scotland/)
 - [The Hubris of Contrast Ratio](https://community.canvaslms.com/t5/The-Product-Blog/The-Hubris-of-Contrast-Ratio/ba-p/536389) by DLyons, in Canvas LMS, Aug. 2022 — a further discussion of APCA, citing Dan Hollick's review, by Silicon Valley based research scientist/author Richard Lyons.
 - [Start optimising UI designs for readability instead of old-school WCAG 2 contrast](https://www.linkedin.com/pulse/start-optimising-ui-designs-readability-instead-wcag2-andy-pillip) by Andy Pillip, February 18, 2023. Discussion of APCA tools for designers, and practical considerations for integrating APCA into workflows.
 - [3 Reasons Why the WCAG&nbsp;2.1 Color Contrast Guidelines Don't Work](https://blog.devkrishna.in/3-reasons-why-the-wcag-21-color-contrast-guidelines-dont-work) by Shimanta Krishna Bhuyan, Nov. 2022. Well written, in-depth comparative analysis. 
@@ -29,6 +31,10 @@ APCA has been developed in the open for open peer review and discussion, and the
 - [Improving accessibility with the new APCA ](https://www.lightflows.co.uk/blog/improving-accessibility-with-apca/) A review of APCA by Nik Bailey, Lightflows, Jan. 2022
 - [Adv. Perceptual Contrast Algorithm](https://typefully.com/u/DanHollick/t/sle13GMW2Brp) Don Hollick's review and discussion of APCA vs WCAG&nbsp;2. Typefully, Dec. 2021
 - [Accessible Palette: stop using HSL for color systems ](https://wildbit.com/blog/accessible-palette-stop-using-hsl-for-color-systems) by Eugene Fedorenko, this is largely a discussion of his new color pallette tool, but APCA figures into that, and he discusses the integration into the tool vs WCAG&nbsp;2 contrast.
+
+### APCA Featured in Print
+- **Book:** [A11Y Unraveled:](https://www.amazon.com/A11Y-Unraveled-Become-Accessibility-Ninja/dp/1484290844) Become a Web Accessibility Ninja ― by Dimitris Georgakas 2003     
+- **Book:** [Practical UI:](https://www.practical-ui.com) Quick and practical UI design guidelines - by Adham Dannaway 2003
 
 
 ## _Known Issues With WCAG&nbsp;2 Contrast_
