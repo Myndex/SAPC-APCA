@@ -46,6 +46,9 @@ For Bridge PCA, use the [canonical BPCA tool](https://bridgepca.com).
 ## _Third Party APCA Tools-Calculators_
 **Calculators and Technology Demos**
 
+### [a11ycolor.tools](https://a11ycolor.tools)
+- Nice tool, compares WCAG2 and APCA Bronze Simple mode, and conveniently allows multiple color swatches.
+
 ### [Achecks APCA Contrast Checker](https://www.achecks.org/apca-wcag-3-accessible-colour-contrast-checker/) 
 - Nice simple APCA checker. Has a dynamic lookup table that updates with new contrasts.
 
