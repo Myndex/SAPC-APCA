@@ -113,7 +113,7 @@ Maths! Vision Science! Photons on Parade!
 - [**APCA FAQ:**](/documentation/APCA_FAQ) Just starting, so few Q/A yet.
 
 ### [The SAPC APCA Documentation Repository](https://github.com/Myndex/SAPC-APCA/#apca--sapc--sacam-primary-repository)
-**You are here ** 🎯 this index page is served at the github APCA documentation repo.
+**You are here** 🎯 this index page is served at the github APCA documentation repo.
 
 ### [The APCA-W3 GitHub Repo](https://github.com/Myndex/apca-w3/)
 Over there is the **APCA W3 version**, and it's the same as the published npm package "apca-w3".
