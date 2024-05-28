@@ -38,22 +38,22 @@
 ## Welcome! 
 APCA™ is the **Accessible Perceptual Contrast Algorithm**, a new way to predict contrast for text and non-text content on self-illuminated displays. This repository is for the documentation, for issue tracking, and for the discussion forum. The code, apps, variants, and supporting libraries, are in separate repos.
 
-### _Simple Overview, QuickStart, and FAQ_
+### _Simple Overview & QuickStart_
 These are intended for end users, and those interested in a plain language overview without a lot of the math & theory.
 - [**Easy Intro to APCA?**](https://git.apcacontrast.com/documentation/APCAeasyIntro) A plain-language introduction to perceptually uniform contrast.
 - [**Bronze Simple Mode**](https://readtech.org/ARC/tests/bronze-simple-mode/?tn=criterion) A "most basic" design guideline, intended for users migrating from WCAG 2 contrast.
 
 ### _Additional documentation_
-- **APCA™ [Linktree](https://linktr.ee/Myndex)** Curated link collection—an ideal starting point.
-- **APCA™ [Catalog of Resources, Articles, & Links](https://git.myndex.com)** The main catalog of related articles, peer reviews, repositories, white papers, and more!
-- [**Main Readme Doc**](https://git.apcacontrast.com/documentation/README) This page includes the math, code walkthroughs, and links to developer related goodies. If you'd like to dive into the deep end, you could try here—but deep waters can be murky...
-- [**Why APCA?**](https://git.apcacontrast.com/documentation/WhyAPCA) A basic overview—this is the shallow end of the pool.
+- **APCA™ [Linktree](https://linktr.ee/Myndex)** Brief curated link collection—an ideal starting point.
+- **APCA™ [Catalog of Resources, Articles, & Links](https://git.myndex.com)** Large main catalog of articles, repos, white papers, and more!
+- [**Main Readme Doc**](https://git.apcacontrast.com/documentation/README) This page includes a discussion of the math, code walkthroughs, and links to developer related goodies. If you'd like to dive into the deep end, you could jump in here—but deep waters can be murky...
+- [**Why APCA?**](https://git.apcacontrast.com/documentation/WhyAPCA) A basic overview at the shallow end of the pool.
 - [**APCA in a nutshell**](https://git.apcacontrast.com/documentation/APCA_in_a_Nutshell) An early _minimum user guide_, largely superceeded by [APC-RC](https://readtech.org/ARC/tests/bronze-simple-mode/?tn=criterion)
 - [**APCA FAQ**](https://git.apcacontrast.com/documentation/APCA_FAQ) Frequently Asked Questions (work in progress)
 
 ### _DESIGN GUIDELINES_
 - The draft independent [**APCA Readability Criterion**](https://readtech.org/ARC/) is up as a work in progress, still sections to be added and/or adjusted.
-- **Direct links to:**
+- **Direct links to subpages:**
     - [**Bronze Simple Mode**](https://readtech.org/ARC/tests/bronze-simple-mode/?tn=criterion) A "most basic" design guideline, intended for users migrating from WCAG 2 contrast.
     - [**Visual Readability Contrast**](https://readtech.org/ARC/tests/visual-readability-contrast/?tn=criterion) The multi-level conform guideline: Bronze, Silver, Gold, for basic to enhanced accessibility.
     - [**Non Text Contrast**]() PLACEHOLDER for the non-text guidelines (coming soon!) 
@@ -62,13 +62,14 @@ These are intended for end users, and those interested in a plain language overv
     - [**Design Guide: Non Text Contrast**]() PLACEHOLDER Practical design advice with examples.
 
 ### _FORUMS_
-For comments or questions see the [**SAPC-APCA forum**](https://github.com/Myndex/SAPC-APCA/discussions) here, please post all comments, questions, or discussions regarding theory, math, code, third-party tools, third-party tools, and so forth, here and not in the satellite repositories, so they can be tracked and resolved.
+For comments or questions see the [**SAPC-APCA forum**](https://github.com/Myndex/SAPC-APCA/discussions) here, please post all comments, questions, or discussions regarding theory, math, code, third-party tools, etc., here and not in the satellite repositories, so they can be tracked and resolved. Discussion here may eventually become part of the FAQ and guidelines.
 
 ### _TOOLS_
 - [**Color and Contrast Tools Listing**](https://git.apcacontrast.com/documentation/thirdpartytools) Many third party tools, as well as canonical technology demonstrators.
 
 ### _CODE_
-The correct code to use is [***apca-w3***](https://github.com/Myndex/apca-w3/) which is in its own satellite repository, and is also available at `npm i apca-w3` That is the only code that should be used for any development purposes. 
+- [***apca-w3***](https://github.com/Myndex/apca-w3/) This satellite repository is the approved code intended for public guidelines, and is the only code that should be used for any development purpose. 
+- The code is also available as a package at **`npm i apca-w3`**
 
 ### _Sciency Stuff!_
 Maths! Vision Science! Photons on Parade!
@@ -103,7 +104,7 @@ Maths! Vision Science! Photons on Parade!
 - [**APCA Main Documentation (READ ME):**](/documentation/README) The repo basic readme file for an overview and quickstart.
 - [**APCA Documentation Index:**](/documentation/) An index of relevant APCA documentation.
 - [**APCA Formula 0.9.98g4g:**](https://github.com/Myndex/SAPC-APCA/blob/master/documentation/APCA-W3-LaTeX.md#latex-of-the-apca-w3-base-formula) LaTeX of the APCA formula.
-- [**Repo List:**](/documentation/repoList) A list of specific versions of APCA, Bridge PCA, and support files.
+- [**Repo List:**](/documentation/repoList) A list of specific versions of APCA, Bridge PCA, and support libraries.
 - [**Standard Observer Model:**](/documentation/StandardObserverModel) Draft Standard Observer.
 - [**Important Change Notices:**](/documentation/ImportantChangeNotices) General Change History (see individual repos for specifics)
 - [**Regarding Exponents:**](/documentation/regardingexponents) Notes on the exponents used in APCA.
@@ -112,7 +113,7 @@ Maths! Vision Science! Photons on Parade!
 - [**APCA FAQ:**](/documentation/APCA_FAQ) Just starting, so few Q/A yet.
 
 ### [The SAPC APCA Documentation Repository](https://github.com/Myndex/SAPC-APCA/#apca--sapc--sacam-primary-repository)
-You are here 🎯 this index page is served at the github APCA documentation repo.
+**You are here ** 🎯 this index page is served at the github APCA documentation repo.
 
 ### [The APCA-W3 GitHub Repo](https://github.com/Myndex/apca-w3/)
 Over there is the **APCA W3 version**, and it's the same as the published npm package "apca-w3".
