@@ -99,18 +99,19 @@ Maths! Vision Science! Photons on Parade!
 
 ---
 ## Local Repo Documentation
-- [**Why APCA:**](/documentation/WhyAPCA) A brief plain language overview of APCA and readability contrast.
-- [**APCA in a Nutshell:**](/documentation/APCA_in_a_Nutshell) Quick overview of levels, use cases, and font sizing.
-- [**APCA Main Documentation (READ ME):**](/documentation/README) The repo basic readme file for an overview and quickstart.
+- [**Why APCA:**](/documentation/WhyAPCA.md) A brief plain language overview of APCA and readability contrast.
+- [**Peer and Third Party Review:**](/documentation/independent-review.md) APCA and APC-RC in real world testing and review.
+- [**APCA in a Nutshell:**](/documentation/APCA_in_a_Nutshell.md) Quick overview of levels, use cases, and font sizing.
+- [**APCA Main Documentation (READ ME):**](/documentation/README.md) The repo basic readme file for an overview and quickstart.
 - [**APCA Documentation Index:**](/documentation/) An index of relevant APCA documentation.
 - [**APCA Formula 0.9.98g4g:**](https://github.com/Myndex/SAPC-APCA/blob/master/documentation/APCA-W3-LaTeX.md#latex-of-the-apca-w3-base-formula) LaTeX of the APCA formula.
-- [**Repo List:**](/documentation/repoList) A list of specific versions of APCA, Bridge PCA, and support libraries.
-- [**Standard Observer Model:**](/documentation/StandardObserverModel) Draft Standard Observer.
-- [**Important Change Notices:**](/documentation/ImportantChangeNotices) General Change History (see individual repos for specifics)
-- [**Regarding Exponents:**](/documentation/regardingexponents) Notes on the exponents used in APCA.
-- [**Accessibility Statement:**](/documentation/accessibilitystatement) A statement for beta testers and early adopters to use place on sites using APCA 
-- [**APCA Minimum Compliance for Developers:**](/documentation/minimum_compliance) Standards for what can be called APCA™.
-- [**APCA FAQ:**](/documentation/APCA_FAQ) Just starting, so few Q/A yet.
+- [**Repo List:**](/documentation/repoList.md) A list of specific versions of APCA, Bridge PCA, and support libraries.
+- [**Standard Observer Model:**](/documentation/StandardObserverModel.md) Draft Standard Observer.
+- [**Important Change Notices:**](/documentation/ImportantChangeNotices.md) General Change History (see individual repos for specifics)
+- [**Regarding Exponents:**](/documentation/regardingexponents.md) Notes on the exponents used in APCA.
+- [**Accessibility Statement:**](/documentation/accessibilitystatement.md) A statement for beta testers and early adopters to use place on sites using APCA 
+- [**APCA Minimum Compliance for Developers:**](/documentation/minimum_compliance.md) Standards for what can be called APCA™.
+- [**APCA FAQ:**](/documentation/APCA_FAQ.md) Just starting, so few Q/A yet.
 
 ### [The SAPC APCA Documentation Repository](https://github.com/Myndex/SAPC-APCA/#apca--sapc--sacam-primary-repository)
 **You are here** 🎯 this index page is served at the github APCA documentation repo.
