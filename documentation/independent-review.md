@@ -6,10 +6,10 @@ layout: simple
 
 ## _Independent Reviews of APCA_
 
-> [!NOTE]
-> APCA has been developed in the open for open peer review and discussion.
-> The reviews listed below were performed independently.
-> The vast majority were completed without consulting the APCA developers.
+
+_APCA has been developed in the open for open peer review and discussion._
+_The reviews listed below were performed independently._
+_The vast majority were completed without consulting the APCA developers._
 
 
 ### Formal and Semi-Formal Papers
