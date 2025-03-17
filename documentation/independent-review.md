@@ -61,7 +61,7 @@ _The vast majority were completed without consulting the APCA developers._
 - [Demystifying the APCA (Accessible Perceptual Contrast Algorithm)](https://www.deque.com/axe-con/sessions/demystifying-the-apca-advanced-perceptual-contrast-algorithm/)
   - AxeCon Video Presentation by James Sullivan • Willowtree • 2024 AxeCon
 
-- [APCA: A new era in Digital Color Accessibility](https://www.youtube.com/live/Z5SX-4-NYbU?si=Fttz1nuT6Qtqmunr&t=4554)
+- [APCA: A new era in Digital Color Accessibility](https://www.youtube.com/live/Z5SX-4-NYbU?si=Fttz1nuT6Qtqmunr&t=4554) This presentation includes some live user testing examples, snd references to relevant research.
   - Presentation by UX Belgium • February 11, 2025
 
 ### Exploratory or Open Discussions
