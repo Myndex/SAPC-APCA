@@ -4,6 +4,17 @@ layout: simple
 
 # APC<span class="flipH">A</span> Reviewed
 
+- [Formal and Semi-Formal Papers](#formal-and-semi-formal-papers)
+- [Conference Presentations](#conference-presentations)
+- [Exploratory or Open Discussions](#exploratory-or-open-discussions)
+- [Case Studies](#case-studies)
+- [Comparative Evaluations](#comparative-evaluations)
+- [A Three Part Series](#a-three-part-series)
+- [Introductory Articles](#introductory-articles)
+- [APCA Featured in Print](#apca-featured-in-print)
+- [Known Issues With WCAG&nbsp;2 Contrast](#known-issues-with-wcag2-contrast)
+- [Prima Facia Evidence and Public Comment](#prima-facia-evidence-and-public-comment)
+- [More About APCA, Direct from the Creators](#more-about-apca-direct-from-the-creators)
 
 
 ## _Independent Reviews of APCA_
@@ -258,7 +269,7 @@ Public comment and discussion is encouraged. The [**APCA discussion forum**](htt
 - [**The Realities And Myths Of Contrast And Color**](https://www.smashingmagazine.com/2022/09/realities-myths-contrast-color/) Published by _Smashing Magazine_. A brief but comprehensive primer to vision, color, and contrast for design, with an emphasis on typography, readability, and visual accessibility needs. 
 
 
-### Andrew's Discussions on WCAG 2 and APCA 
+### Lead Researcher's Discussions on WCAG 2 and APCA 
 The following articles, blogs, gists, and documentation written by APCA Lead Researcher A.Somers, examine the technical and functional differences between APCA and WCAG&nbsp;2. Note that some of these may be work-in-progress pre-prints relating to ongoing research.
 
 - [**Better Reading on the Web**](https://uxdesign.cc/better-reading-on-the-web-c943c4cfc91a) Published by _UX Collective_, this article discusses and demonstrates issues with automated testing and WCAG&nbsp;2 contrast math, methods, and guidelines.
