@@ -4,6 +4,8 @@ layout: simple
 
 # APC<span class="flipH">A</span> Reviewed
 
+
+
 ## _Independent Reviews of APCA_
 
 
@@ -116,6 +118,10 @@ _The vast majority were completed without consulting the APCA developers._
 
 
 ### Comparative Evaluations
+
+- [Accessible Perceptual Contrast Algorithm (APCA) Should we start using the APCA algorithm to measure contrast now? What tools do we have?](https://olgacarreras-blogspot-com.translate.goog/2025/03/accessible-perceptual-contrast.html?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp) (translated link)
+  - thorough disscussion of key aspects of accessible contrast and APCA
+  - Olga Carreras Montoto • UseableAccessible • March 25, 2025
 
 - [The Eternal Sunshine of Accessible Colors](https://www.buildo.io/blog/the-eternal-sunshine-of-accessible-colors)
   - Nice and thorough examination of APCA
