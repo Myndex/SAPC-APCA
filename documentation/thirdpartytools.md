@@ -215,7 +215,7 @@ _NPM Install:_   ` npm i colorparsley `
 ----
 ## Other Resources
 
-### [linktr.ee/Myndex]([url](https://linktr.ee/Myndex))
+### [linktr.ee/Myndex](https://linktr.ee/Myndex)
 This is a linktree of articles and information regarding APCA.
 
 ### [Easy Intro to APCA](https://git.apcacontrast.com/documentation/APCAeasyIntro) 
