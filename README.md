@@ -35,6 +35,7 @@
 
 # [APC<span class="flipH">A</span> Documentation Repo](https://github.com/Myndex/SAPC-APCA)
 
+### APCA tool is now at APCAcontrast.com
 ## Welcome! 
 APCA™ is the **Accessible Perceptual Contrast Algorithm**, a new way to predict contrast for text and non-text content on self-illuminated displays. This repository is for the documentation, for issue tracking, and for the discussion forum. The code, apps, variants, and supporting libraries, are in separate repos.
 
