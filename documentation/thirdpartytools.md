@@ -142,6 +142,9 @@ Also, [the GitHib repo](https://github.com/shunito/apca-calculator-ja)
 ### [Accessibility: Color-Contrast Models](https://observablehq.com/@ijlyttle/apca-w3-color-contrast)
 - Ian Lyttle's library on ObservableHQ
 
+### [Vue-Dev-Tools-Accessibility](https://vue-dev-tools-accessibility.github.io)
+- A plugin for the officially recommended Vite-Vue-DevTools, for Vue.js developers. Scans for accessibility issues in your app. Includes options for APCA Bronze and Silver conformance levels.
+
 ## _Works in Progress_
 These are some works in progress, functionality was not complete at the last time I checked, and or may have math or implementation errors. If your tool is on this portion of the list, please feel free to reach out, I'm more than happy to assist.
 
