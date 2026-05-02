@@ -2,8 +2,7 @@
 layout: simple
 ---
 # Regarding APC<span class="flipH">A</span> Exponents
-#### The TLDR is "For non-HDR displays, the colorspace is simply selected by the three coefficients, and the pre-processing exponent."
-
+Stub for discussion on the exponent and coefficients.
 ## To Go Here
 - Input Stage Notes
 
